@@ -1,0 +1,7 @@
+p, div, h1, h2, h3 {
+	font-family: ui-sans-serif;
+}
+
+pre, code {
+	font-family: ui-monospace !important;
+}

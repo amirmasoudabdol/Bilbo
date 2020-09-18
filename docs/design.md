@@ -7,7 +7,7 @@ nav_order: 3
 Design
 ======
 
-In the [previous section](introduction.html#intro-research-process), I
+In the [previous section](introduction.md#intro-research-process), I
 listed some of the main components and entities involving in different
 stages of a research, e.g., Experiment Setup, Experiment, Researcher,
 Submission, and Journal. *In the abstraction*, each component is a
@@ -143,7 +143,7 @@ initialization phase, `ExperimentSetup` will stay intact in the code and
 will be used as a reference point in different stages.
 
 Below is a list of variables and methods of `ExperimentSetup`, read more
-[here](configuration-file.html#config-file-experiment-parameters) and
+[here](configuration-file.md#config-file-experiment-parameters) and
 `data-strategies`{.interpreted-text role="doc"}:
 
 -   `nc`, the number of conditions

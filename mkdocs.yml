@@ -21,18 +21,11 @@ nav:
     - Misc:
         - about.md
         - contact.md
+extra_css: [custom.css]
 
 
 # Configuration
 theme:
   name: readthedocs
-  language: en
-  # palette:
-  #   primary: indigo
-  #   accent: indigo
-  # font:
-  #   text: -ui-sans-serif
-  #   code: -ui-monospace
-  # features:
-  #   - tabs
-  #   - instant
+  include_homepage_in_sidebar: false
+  highlightjs: true
