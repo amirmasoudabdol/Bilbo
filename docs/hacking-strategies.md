@@ -133,15 +133,11 @@ available parameters. For instance, you can implement an *extreme*
 optional stopping by setting `num = 1` and using large values for
 `attempts` and `max_attempts`.
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!! note
 
-As discussed in the `data-strategies`{.interpreted-text role="ref"}
-section, optional stopping utilizes the `DataStrategy` for generating
-new data points.
-:::
+    As discussed in the `data-strategies`{.interpreted-text role="ref"}
+    section, optional stopping utilizes the `DataStrategy` for generating
+    new data points.
 
 Outliers Removal
 ----------------

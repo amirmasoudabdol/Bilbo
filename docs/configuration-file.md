@@ -183,26 +183,19 @@ Y{0.2}
 |                     |          |   strategy.                         |
 +---------------------+----------+-------------------------------------+
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!! note
 
-Each `Data`, `Test`, or `Effect` strategy might carry its own set of
-parameters. See, `design`{.interpreted-text role="doc"},
-doc:[data-strategy]{.title-ref}, doc:[test-strategy]{.title-ref},
-doc:[effect-strategy]{.title-ref} for more info.
-:::
+    Each `Data`, `Test`, or `Effect` strategy might carry its own set of
+    parameters. See, `design`{.interpreted-text role="doc"},
+    doc:[data-strategy]{.title-ref}, doc:[test-strategy]{.title-ref},
+    doc:[effect-strategy]{.title-ref} for more info.
 
-::: {.important}
-::: {.title}
-Important
-:::
+!!! warning
 
-The size of an given `array` or `matrix` must agree with the number of
-conditions, dependant variables, and items, otherwise an error will
-occur.
-:::
+    The size of an given `array` or `matrix` must agree with the number of
+    conditions, dependant variables, and items, otherwise an error will
+    occur.
+
 
 Researcher Parameters
 ---------------------
@@ -251,15 +244,11 @@ Y{0.2}
   `selection_strategy`   `string`   The `SelectionStrategy` of the journal.
   ------------------------------------------------------------------------------
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!! note
 
-Parameters like `pub_bias`, `alpha` or `side` can be set based on the
-`SelectionStrategy` of user\'s choice. See,
-`selection-strategy`{.interpreted-text role="doc"} for more info.
-:::
+    Parameters like `pub_bias`, `alpha` or `side` can be set based on the
+    `SelectionStrategy` of user\'s choice. See,
+    `selection-strategy`{.interpreted-text role="doc"} for more info.
 
 ### Crash Course on JSON
 

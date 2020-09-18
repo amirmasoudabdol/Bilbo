@@ -22,10 +22,67 @@ nav:
         - about.md
         - contact.md
 extra_css: [custom.css]
-
+repo_name: GitHub
+repo_url: https://github.com/amirmasoudabdol/sampp
+edit_uri: ""
 
 # Configuration
 theme:
-  name: readthedocs
+  name: material
   include_homepage_in_sidebar: false
   highlightjs: true
+  font:
+    text: -ui-sans-serif
+    code: -ui-monospace
+  logo:
+    img/logo.svg
+  favicon:
+    img/favicon.ico
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - tab
+    - instant
+    - header.hide
+  palette:
+    scheme: preference
+    primary: black
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/amirmasoudabdol
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  #- pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
+  - pymdownx.snippets:
+      base_path: docs
+      check_paths: true
+  - plantuml_markdown:
+      format: svg
+
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML

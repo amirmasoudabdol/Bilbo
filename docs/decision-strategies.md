@@ -79,13 +79,9 @@ various results from various *p*-hacking paths that s/he took.
 A "honest researcher" always reports the pre-registered result and will
 not apply any *p*-hacking methods on the Experiment.
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!! note
 
-This is the default *decision making* method.
-:::
+    This is the default *decision making* method.
 
 ### Impatient Decision Maker
 

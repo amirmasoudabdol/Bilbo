@@ -14,7 +14,7 @@ different components. This chapter describes each subprocess in more
 details.
 
 ![Overall execution flowchart of
-SAM](figures/main-routine.png){.align-center}
+SAM](figures/main-routine.png)
 
 Initialization
 --------------
@@ -23,7 +23,7 @@ During the initialization phase, SAMs loads a configuration file and
 initializes different compartments based on configuration parameters.
 You can read more about the parameters [here](configuration-file.md).
 
-![](figures/initialization.png){.align-center}
+![](figures/initialization.png)
 
 After reading user parameters, SAM proceeds with initializing each of
 its components. Initialization mainly prepares the internal
@@ -41,7 +41,7 @@ this stage, the `Researcher` uses the information provided in the
 group/condition/dv using the `DataStrategy` module.
 
 ![Steps involving preparing the
-research](figures/prepare-research.png){.align-center}
+research](figures/prepare-research.png)
 
 Performing the Research
 -----------------------
@@ -64,7 +64,7 @@ stopping, the researcher --- after each phase of addition --- can decide
 whether the outcome is satisfactory or not.
 
 ![Steps involving performing the
-research](figures/perform-research.png){.align-center}
+research](figures/perform-research.png)
 
 Publishing the Research
 -----------------------
@@ -86,4 +86,4 @@ criteria defined in its `SelectionStrategy` routine. If accepted,
 analysis or adjustment of its `SelectionStrategy`, if necessary.
 
 ![Steps involving publishing a
-research](figures/publish-research.png){.align-center}
+research](figures/publish-research.png)

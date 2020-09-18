@@ -1,7 +1,17 @@
-p, div, h1, h2, h3 {
-	font-family: ui-sans-serif;
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold !important;
+}
+
+p {
+	font-weight: 500 !important;
+	text-align: justify;
 }
 
 pre, code {
 	font-family: ui-monospace !important;
+	font-weight: 500 !important;
+}
+
+.md-content {
+	margin: 0% 4% 0% 4%;
 }

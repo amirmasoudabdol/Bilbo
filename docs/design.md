@@ -27,7 +27,7 @@ interact with each other in order to simulate as much as the scientific
 process, as possible.
 
 ![SAM's components and their
-interactions](figures/components.png){.align-center}
+interactions](figures/components.png)
 
 SAM's Main Components
 ---------------------
@@ -78,32 +78,31 @@ The list below briefly introduces each component and its role.
         acting as a *scientific paper*, *a manuscript*. When it gets
         accepted by the *Journal*, it will be a publication.
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!! note
 
-Unlike a real scientific journal that covers a wide range of research
-tracks, SAM's Journal in its current implementation assumes that all
-submitted publications are from one research track. In other words,
-SAM's journals are mainly acting as a pool for related studies.
-:::
+    Unlike a real scientific journal that covers a wide range of research
+    tracks, SAM's Journal in its current implementation assumes that all
+    submitted publications are from one research track. In other words,
+    SAM's journals are mainly acting as a pool for related studies.
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!! note
 
-SAM uses several object-oriented principles and design patterns to
-achieve the level of flexibility that is offering. Since all components
-of SAM are technically C++ classes, from now on, I may refer to them as
-objects, e.g., Experiment object, and they will appear in monospace
-font.
-:::
+    SAM uses several object-oriented principles and design patterns to
+    achieve the level of flexibility that is offering. Since all components
+    of SAM are technically C++ classes, from now on, I may refer to them as
+    objects, e.g., Experiment object, and they will appear in monospace
+    font.
 
 ### Experiment
 
-![](figures/experiment-stack.png){.align-right width="50.0%"}
+<!-- ![](figures/experiment-stack.png){: align=right} -->
+
+<picture>
+  <source 
+    srcset="../figures/journal-stack.png" 
+    media="(prefers-color-scheme: dark)">
+  <img src="../figures/experiment-stack.png">
+</picture>
 
 As mentioned, `Experiment` object acts as an umbrella for everything
 related to an actual experiment. This includes metadata (a.k.a
@@ -207,7 +206,7 @@ List of available effect strategies:
 
 ### Journal
 
-![](figures/journal-stack.png){.align-right width="50.0%"}
+![](figures/journal-stack.png){: align=right}
 
 In SAM, a `Journal` is often a container for *accepted* publications.
 `Journal` is designed to mimic the reviewing process. Therefore, it can
@@ -272,18 +271,14 @@ finding(s).
 \- `side`, the side of the effect, positive or negative .. -
 `more … exhale_class_class_submission`{.interpreted-text role="ref"}
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!! note
 
-`Submission` is an abstract representation of the manuscript and it does
-not try to closely resembles a full publication.
-:::
+    `Submission` is an abstract representation of the manuscript and it does
+    not try to closely resembles a full publication.
 
 ### Researcher
 
-![](figures/researcher-stack.png){.align-right width="50.0%"}
+![](figures/researcher-stack.png){: align=right}
 
 `Researcher` object is the main player in the simulation. It\'s a
 central piece of the research, it uses the `ExperimentSetup` to prepare
@@ -361,17 +356,13 @@ Main variables and methods of `DecisionStrategy` are:
 `more … <exhale_class_class_experiment_setup>`{.interpreted-text
 role="ref"}
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!! note
 
-The decision strategy is one of the more complicated pieces of SAM. It
-engages in different stages of conducting the research by researcher and
-different hacking strategies. This process will be clarified in
-`flow`{.interpreted-text role="doc"} and
-`decision-strategies`{.interpreted-text role="doc"} chapters.
-:::
+    The decision strategy is one of the more complicated pieces of SAM. It
+    engages in different stages of conducting the research by researcher and
+    different hacking strategies. This process will be clarified in
+    `flow`{.interpreted-text role="doc"} and
+    `decision-strategies`{.interpreted-text role="doc"} chapters.
 
 #### Hacking Strategy-(ies)
 

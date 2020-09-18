@@ -7,6 +7,7 @@ nav_order: 5
 Data Strategies
 ===============
 
+
 > *Data Strategy is the source of data, i.e., population. It knows the
 > underlying model, and its properties.*
 
@@ -81,31 +82,27 @@ row of the covariance matrix.
 
   : Parameters of the Linear Model
 
-::: {.important}
-::: {.title}
-Important
-:::
+!!! warning
 
-Length of all parameters should complies with the given size of the
-study. For instance, if you are planning to run a study with 2 dependent
-variables and 2 conditions, you need to specify an array of 4 for the
-mean of each group.
-:::
+    Length of all parameters should complies with the given size of the
+    study. For instance, if you are planning to run a study with 2 dependent
+    variables and 2 conditions, you need to specify an array of 4 for the
+    mean of each group.
 
-::: {.admonition}
-Example
 
-``` {.json}
-{
-    "data_strategy": {
-        "name": "LinearModel",
-        "means": [0, 0.2],
-        "covs": 0.0,
-        "stddevs": 1.0,
+!!! example
+
+    ``` {.json}
+    {
+        "data_strategy": {
+            "name": "LinearModel",
+            "means": [0, 0.2],
+            "covs": 0.0,
+            "stddevs": 1.0,
+        }
     }
-}
-```
-:::
+    ```
+
 
 Graded Response Model
 ---------------------
