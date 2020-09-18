@@ -1,6 +1,7 @@
 ---
 title: Decision Strategies
 layout: default
+nav_order: 9
 ---
 
 Decision Strategies

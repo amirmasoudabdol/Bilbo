@@ -1,6 +1,7 @@
 ---
 title: Introduction
 layout: default
+nav_order: 2
 ---
 
 Introduction
@@ -20,14 +21,14 @@ Scientific Research Process
 The *process* of producing a scientific research/study is often a
 cumbersome and complicated process. Despite all different ways of
 conducting a research, a typical scientific study starts by formulating
-a hypothesis when the [Researcher](design.rst#design-researcher) jots
+a hypothesis when the [Researcher](design.md#design-researcher) jots
 down his/her ideas about how a certain process explains a certain
 phenomenon or how s/he thinks a complicated system works. To test this
 hypothesis, s/he *prepares an experiment* to test the underlying
 parameters, compromises or criteria of his/her theory.
 
-After the [Experiment Setup](design.rst#design-experiment-setup) is
-finalized, an [Experiment](design.rst#design-experiment) is being
+After the [Experiment Setup](design.md#design-experiment-setup) is
+finalized, an [Experiment](design.md#design-experiment) is being
 conducted by which the researcher collects certain types and amount of
 data in order to test his/her hypothesis., e.g., censors data, images,
 etc.
@@ -37,8 +38,8 @@ data and finally coming up with a conclusion regarding the initial
 hypothesis. If results are informative --- regardless of agreeing or
 disagreeing with the *initial hypothesis*, i.e., *pre-registered
 hypothesis* --- the researcher selects a
-[Journal](design.rst#design-journal) and submit his/her findings in the
-form of a [Manuscript](design.rst#design-submission), to be reviewed
+[Journal](design.md#design-journal) and submit his/her findings in the
+form of a [Manuscript](design.md#design-submission), to be reviewed
 according to the journal's criteria. Finally, the Journal will decide if
 the submitted manuscript worth publishing or not. .. \--
 

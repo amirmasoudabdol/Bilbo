@@ -1,6 +1,7 @@
 ---
 title: Data Strategies
 layout: default
+nav_order: 5
 ---
 
 Data Strategies
@@ -11,7 +12,7 @@ Data Strategies
 
 `DataStrategy` populates the `Experiment`\'s `measurements` variables. A
 `Researcher`, during the [preperation
-process](flow.rst#flow-prepare-research), reaches to `DataStrategy`
+process](flow.md#flow-prepare-research), reaches to `DataStrategy`
 object and based on the underlying model and parameters
 populates/generates/collects data for the experiment.
 
@@ -19,7 +20,7 @@ Since `DataStrategy` is aware of all the underlying models, parameters
 and distributions, it can provide data at any points during the
 simulation. One important implication of this is during the hacking
 process. As mentioend, methods like [optional
-stopping](hacking-strategies.rst#hacking-strategies-optional-stoppin)
+stopping](hacking-strategies.md#hacking-strategies-optional-stoppin)
 needs to add new data points to the already existing measurements.
 Requiring data strategies to produce *new* data points helps with
 implementation of such hacking strategies.

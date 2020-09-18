@@ -1,6 +1,7 @@
 ---
 title: Flow
 layout: default
+nav_order: 3
 ---
 
 Flow
@@ -20,7 +21,7 @@ Initialization
 
 During the initialization phase, SAMs loads a configuration file and
 initializes different compartments based on configuration parameters.
-You can read more about the parameters [here](configuration-file.rst).
+You can read more about the parameters [here](configuration-file.md).
 
 ![](figures/initialization.png){.align-center}
 

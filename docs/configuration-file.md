@@ -1,6 +1,7 @@
 ---
 title: Configuration File
 layout: default
+nav_order: 4
 ---
 
 Configuration File
@@ -148,8 +149,8 @@ Experiment Parameters
 ---------------------
 
 This section lists necessary parameters of the [Experiment
-Setup](design.rst#design-experiment-setup) and
-[Experiment](design.rst#design-experiment).
+Setup](design.md#design-experiment-setup) and
+[Experiment](design.md#design-experiment).
 
 ::: {.tabularcolumns}
 Y{0.2}
@@ -226,7 +227,7 @@ Y{0.2}
                                         analysis.
 
   `pre_processing_methods`   `list`     Similar to `p_hacking_methods`. See
-                                        [Pre-processing](hacking-strategies.rst#hacking-pre-processing)
+                                        [Pre-processing](hacking-strategies.md#hacking-pre-processing)
 
   `decision_strategy`        `dict`     Specification of a `DecisionStrategy`. See more
                                         `decision-strategies`{.interpreted-text role="doc"}.

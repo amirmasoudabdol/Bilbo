@@ -1,6 +1,7 @@
 ---
 title: Hacking Strategies
 layout: default
+nav_order: 8
 ---
 
 Hacking Strategies
@@ -13,13 +14,13 @@ SAM can execute a complicated set of hacking strategies on a given
 `Experiment`. A list of hacking strategies will be applied one-by-one
 and in the given order. `Researcher` can observe their influences on all
 outcome variables and decides when to stop, and what to report. See
-[here](design.rst#design-hacking-strategy) and
-[here](flow.rst#flow-perform-research).
+[here](design.md#design-hacking-strategy) and
+[here](flow.md#flow-perform-research).
 
 The configuration below shows how you can define a chain of hacking
 strategies. The `p_hacking_methods` is a *list of list of JSON objects*,
 see [crash course on
-JSON](configuration-file.rst#config-file-crash-course-on-json). You can
+JSON](configuration-file.md#config-file-crash-course-on-json). You can
 define several groups of hacking strategies, each listing different
 hacking strategies with different orders and parameters. Since JSON
 arrays' are ordered objects, this setup is suitable for controlling the
@@ -61,7 +62,7 @@ strategies with different numbers of methods in each.
 
 A JSON object defines the specifications of each hacking strategy. The
 code below defines *H1* hacking with three parameters. During the
-[initialization phase](flow.rst#flow-initialization), SAM reads the
+[initialization phase](flow.md#flow-initialization), SAM reads the
 specification and prepares the hacking strategy accordingly.
 
 ``` {.json}

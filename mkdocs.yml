@@ -1,0 +1,38 @@
+site_name: SAM
+nav:
+    - Home: index.md
+    - Design:
+        - introduction.md
+        - design.md
+        - flow.md
+        - configuration-file.md
+        - data-strategies.md
+        - test-strategies.md
+        - effect-strategies.md
+        - hacking-strategies.md
+        - decision-strategies.md
+        - journal.md
+    - Examples:
+        - examples/index.md
+        - examples/baker_et_al_2012.md
+    - Extras:
+        - extending-sam.md
+        - SAMoo.md
+    - Misc:
+        - about.md
+        - contact.md
+
+
+# Configuration
+theme:
+  name: readthedocs
+  language: en
+  # palette:
+  #   primary: indigo
+  #   accent: indigo
+  # font:
+  #   text: -ui-sans-serif
+  #   code: -ui-monospace
+  # features:
+  #   - tabs
+  #   - instant

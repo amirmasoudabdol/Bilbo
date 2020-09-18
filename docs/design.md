@@ -1,6 +1,7 @@
 ---
 title: Design
 layout: default
+nav_order: 3
 ---
 
 Design
@@ -107,7 +108,7 @@ font.
 As mentioned, `Experiment` object acts as an umbrella for everything
 related to an actual experiment. This includes metadata (a.k.a
 `ExperimentSetup`), raw data, method/model for generating the data,
-e.g., [Linear Model](data-strategies.rst#data-strategies-linear-model),
+e.g., [Linear Model](data-strategies.md#data-strategies-linear-model),
 and methods of testing the hypothesis, and calculating the effect. The
 `Researcher` object has the complete control over every aspects of an
 `Experiment` **with one exception**: it can only read and not change the
@@ -166,7 +167,7 @@ In most cases, an instance of `DataStrategy` object uses a statistical
 distribution to sample number of data points and populates the
 `measurements` variable, but this differs for different model. With
 certain *p*-hacking methods, e.g., [optional
-stopping](hacking-strategies.rst#optional-stopping), the data strategy
+stopping](hacking-strategies.md#optional-stopping), the data strategy
 should be able to provide a routine for generating *extra* data points
 as requested by the optional stopping.
 
@@ -230,7 +231,7 @@ Below is the list of some of the variables and methods of `Journal`.
 :   publications.
 
 You can set these parameters using
-[journal_parameters](configuration-file.rst#config-file-journal-parameters)
+[journal_parameters](configuration-file.md#config-file-journal-parameters)
 section of the configuration file.
 
 #### Selection Strategy
