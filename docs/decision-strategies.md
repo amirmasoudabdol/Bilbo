@@ -90,7 +90,7 @@ significant result. This could be before, during or after applying
 *p*-hacking methods. You can specify an *impatient decision maker* by
 setting the `decision_strategy` value, as follow:
 
-``` {.json}
+```json
 {
   "name": "ImpatientDecisionMaker",
   "preference": "MinPvalue"
@@ -108,7 +108,7 @@ For instance, the specification below defines a researcher who --- after
 applying all hacking methods --- reports the outcome with largest effect
 size, `MaxEffect`.
 
-``` {.json}
+```json
 {
   "name": "PatientDecisionMaker",
   "preference": "MaxEffect"

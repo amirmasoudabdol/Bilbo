@@ -28,7 +28,7 @@ order in which each group, and method in each group will be applied on
 the `Experiment`. The example below defines 3 groups of hacking
 strategies with different numbers of methods in each.
 
-``` {.json}
+```json
 {
   "is_hacker": true,
   "p_hacking_methods": [
@@ -65,7 +65,7 @@ code below defines *H1* hacking with three parameters. During the
 [initialization phase](flow.md#flow-initialization), SAM reads the
 specification and prepares the hacking strategy accordingly.
 
-``` {.json}
+```json
 {
   "name": "H1",
   "param_1": 1,
@@ -91,7 +91,7 @@ scenarios as possible.
 In order to add optional stopping to your list of hacking, you must
 replace one of the hacking methods, $h_i$ with the code block below.
 
-``` {.json}
+```json
 {
   "name": "Optional Stopping",
   "num": 3,
@@ -106,9 +106,7 @@ often a researcher performs multiple attempts to achieve significance.
 Here, `attempts` defines the number of attempts and `num` specifies the
 number of items --- to be added --- in each attempt.
 
-::: {.tabularcolumns}
-Y{0.2}
-:::
+
 
   -----------------------------------------------------------------------
   **Parameters**          **Type**                **Description**
@@ -153,7 +151,7 @@ sample mean. One common method is to compare the distance of a value to
 different multiplier of standard deviation. This type of outliers
 removal can be deployed by defining the following parameters.
 
-``` {.json}
+```json
 {
   "name": "SD Outlier Removal",
   "num": 2,
@@ -172,9 +170,7 @@ performs *t* attempts to remove *n* outliers from a dataset based on
 given multipliers, $\sigma_i$. The algorithm will advance if there is no
 item left to be removed at $i < n$ attempts, or after *n* attempts.
 
-::: {.tabularcolumns}
-Y{0.2}
-:::
+
 
   -----------------------------------------------------------------------
   **Parameters**          **Type**                **Details**
@@ -217,7 +213,7 @@ one *new* group and compare the newly formed treatment group with the
 control group. Group pooling can be applied by adding the following JSON
 object to the list of hacking methods.
 
-``` {.json}
+```json
 {
   "name": "Group Pooling",
   "num": 2
@@ -231,9 +227,7 @@ create a new group. When, s/he collected all the combinations, s/he will
 then ask the `DecisionStrategy` for its `verdict` and consequently
 checks the significance of every new group.
 
-::: {.tabularcolumns}
-Y{0.2}
-:::
+
 
   **Parameters**   **Type**   **Details**
   ---------------- ---------- ------------------------------------------------------

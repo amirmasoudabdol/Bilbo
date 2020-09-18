@@ -40,7 +40,7 @@ condition, $n_d$. After knowing the number of groups, each group is
 being populated by $n_o$ observations based on the given model,
 specified in `data_strategy`.
 
-``` {.json}
+```json
 {
 "experiment_parameters": {
         "n_conditions": 2,
@@ -92,7 +92,7 @@ row of the covariance matrix.
 
 !!! example
 
-    ``` {.json}
+    ```json
     {
         "data_strategy": {
             "name": "LinearModel",
@@ -128,18 +128,16 @@ After calculating all responses of person $j$ to all items, the sum
 score of all answers is calcuated for each person by adding all the item
 scores \[from, Marjan 2014\].
 
-::: {.admonition}
-Example
+!!! example
 
-``` {.json}
-{
-    "name": "GradedResponseModel"
-    "data_strategy": {
-        "n_categories": 4,
-        "n_items": 3,
-        "abilities": [0, 0.2],
-        "difficulties": 0,
+    ```json
+    {
+        "name": "GradedResponseModel"
+        "data_strategy": {
+            "n_categories": 4,
+            "n_items": 3,
+            "abilities": [0, 0.2],
+            "difficulties": 0,
+        }
     }
-}
-```
-:::
+    ```

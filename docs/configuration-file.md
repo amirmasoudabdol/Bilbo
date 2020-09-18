@@ -110,9 +110,7 @@ This section specifies general parameters of the simulation. These
 parameters are not necessarily influencing SAM components\'. They define
 the overall behavior of SAM regarding input and output.
 
-::: {.tabularcolumns}
-Y{0.2}
-:::
+
 
   ------------------------------------------------------------------------
   **Parameter**     **Type**   **Description**
@@ -152,9 +150,7 @@ This section lists necessary parameters of the [Experiment
 Setup](design.md#design-experiment-setup) and
 [Experiment](design.md#design-experiment).
 
-::: {.tabularcolumns}
-Y{0.2}
-:::
+
 
 +---------------------+----------+-------------------------------------+
 | **Parameter**       | **Type** | **Description**                     |
@@ -202,9 +198,7 @@ Researcher Parameters
 
 This section defines the behavior of the `Researcher`.
 
-::: {.tabularcolumns}
-Y{0.2}
-:::
+
 
   -------------------------------------------------------------------------------------------------------
   **Parameter**              **Type**   **Description**
@@ -231,9 +225,7 @@ Journal Parameters
 
 This section specifies the properties of the `Journal`.
 
-::: {.tabularcolumns}
-Y{0.2}
-:::
+
 
   ------------------------------------------------------------------------------
   **Parameter**          **Type**   **Description**
