@@ -108,23 +108,12 @@ number of items --- to be added --- in each attempt.
 
 
 
-  -----------------------------------------------------------------------
-  **Parameters**          **Type**                **Description**
-  ----------------------- ----------------------- -----------------------
-  `num`                   *n*, `int`              Number of observations
-                                                  to be added on each
-                                                  attempt.
-
-  `attempts`              *t*, `int`              Number of attempts
-                                                  before stopping the
-                                                  process.
-
-  `max_attempts`          *m*, `int`              Maximum number of
-                                                  attempts
-
-                          "dvs"                   Adding new values to
-                                                  dependent variables.
-  -----------------------------------------------------------------------
+| **Parameters** | **Type**         | **Description**                                |
+|:---------------|:-----------------|:-----------------------------------------------|
+| `num`          | *n*, `int` to at | Number of observations be added on each tempt. |
+| `attempts`     | *t*, `int` be pr | Number of attempts fore stopping the ocess.    |
+| `max_attempts` | *m*, `int` at    | Maximum number of tempts                       |
+| "d             | vs" Ad de        | ding new values to pendent variables.          |
 
 You can control the intensity of optional stopping by alternating the
 available parameters. For instance, you can implement an *extreme*
@@ -172,32 +161,14 @@ item left to be removed at $i < n$ attempts, or after *n* attempts.
 
 
 
-  -----------------------------------------------------------------------
-  **Parameters**          **Type**                **Details**
-  ----------------------- ----------------------- -----------------------
-  `num`                   *n*, `int`              Number of items to be
-                                                  removed at each attempt
-
-  `n_attempts`            *t*, `int`              Number of attempts to
-                                                  remove outliers for
-                                                  each multiplier
-
-  `max_attempts`          `int`                   Maximum number of
-                                                  iterations before
-                                                  stopping the process.
-
-  `min_observations`      `int`                   The minimum number of
-                                                  observations. Outliers
-                                                  removal stops removing
-                                                  values when a group
-                                                  reaches
-                                                  `min_observation`.
-
-  `multipliers`           `array`                 A list of multipliers
-                                                  to be used.
-
-  `order`                 max first, random       
-  -----------------------------------------------------------------------
+| **Parameters**     | **Type**              | **Details**                                                                                                |
+|:-------------------|:----------------------|:-----------------------------------------------------------------------------------------------------------|
+| `num`              | *n*, `int` re         | Number of items to be moved at each attempt                                                                |
+| `n_attempts`       | *t*, `int` re ea      | Number of attempts to move outliers for ch multiplier                                                      |
+| `max_attempts`     | `int` it st           | Maximum number of erations before opping the process.                                                      |
+| `min_observations` | `int` ob re va re \`m | The minimum number of servations. Outliers moval stops removing lues when a group aches in\_observation\`. |
+| `multipliers`      | `array` to            | A list of multipliers be used.                                                                             |
+| `order`            | max first, random     |                                                                                                            |
 
 You can achieve different variants of outliers removal method by
 modifying its parameters. For instance, setting `num = 1` and choosing
@@ -229,9 +200,9 @@ checks the significance of every new group.
 
 
 
-  **Parameters**   **Type**   **Details**
-  ---------------- ---------- ------------------------------------------------------
-  `num`            `int`      Indicates the number of groups to be pooled together
+| **Parameters** | **Type** | **Details**                                          |
+|:---------------|:---------|:-----------------------------------------------------|
+| `num`          | `int`    | Indicates the number of groups to be pooled together |
 
 Pre-processing
 --------------

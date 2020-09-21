@@ -37,44 +37,44 @@ SAM consists of 3 main components, *Experiment, Researcher* and
 that are discussed in the `introduction`{.interpreted-text role="doc"}.
 The list below briefly introduces each component and its role.
 
--   The `design-experiment`{.interpreted-text role="ref"} comprises of
+- The `design-experiment`{.interpreted-text role="ref"} comprises of
     several parts, each dealing with different aspects of a research,
     e.g., setup, data, test, effect.
-    -   `design-experiment-setup`{.interpreted-text role="ref"} holds
+    - `design-experiment-setup`{.interpreted-text role="ref"} holds
         the specification of the design. Researcher can only set these
         parameters once, at the start of an experiment. In fact, the
         *ExperimentSetup* implementation tries to mimic the concept of
         *pre-registration* as closed as possible.
-        -   `design-data-strategy`{.interpreted-text role="ref"} is a
+        - `design-data-strategy`{.interpreted-text role="ref"} is a
             routine used to generate the data based on the specified
             parameters in the *ExperimentSetup*.
-        -   `design-test-strategy`{.interpreted-text role="ref"} is the
+        - `design-test-strategy`{.interpreted-text role="ref"} is the
             statistical method of choice in the *ExperimentSetup* for
             testing the result of an *Experiment*.
-        -   `design-effect-strategy`{.interpreted-text role="ref"} is
+        - `design-effect-strategy`{.interpreted-text role="ref"} is
             the forumla for calculating effect sizes in an experiment.
--   The `design-researcher`{.interpreted-text role="ref"} object
+- The `design-researcher`{.interpreted-text role="ref"} object
     imitates the behaviors of a researcher, including possible
     questionable research practices conducted by him/her. The researcher
     will define the *ExperimentSetup*, generate and collect the data,
     run the statistical test, decides whether to preform any QRPs,
     prepare the *Submission* record, and finally submit its finding(s)
     to the *Journal* of her/his choice.
-    -   `decision-strategies`{.interpreted-text role="ref"} is the
+    - `decision-strategies`{.interpreted-text role="ref"} is the
         underling logic of selecting outcome variables between all
         available variables in an experiment.
-    -   `hacking-strategies`{.interpreted-text role="ref"} is a list of
+    - `hacking-strategies`{.interpreted-text role="ref"} is a list of
         questionable research practices in researcher's arsenal. In the
         case where the researcher decides to hack his/her way through
         finding significant results, he/she can use these methods.
--   The `design-journal`{.interpreted-text role="ref"} is a container
+- The `design-journal`{.interpreted-text role="ref"} is a container
     for `design-submission`{.interpreted-text role="ref"}(s), i.e.,
     published results. The Journal keeps track of its publications and
     can utilize different metrics to adapts its selection strategy.
-    -   `selection-strategy`{.interpreted-text role="ref"} is the
+    - `selection-strategy`{.interpreted-text role="ref"} is the
         internal algorithm by which the journal decides whether a
         submission will be accepted, or not.
-    -   `submission`{.interpreted-text role="ref"} is a short report,
+    - `submission`{.interpreted-text role="ref"} is a short report,
         acting as a *scientific paper*, *a manuscript*. When it gets
         accepted by the *Journal*, it will be a publication.
 
@@ -116,17 +116,17 @@ implement the concept of pre-registration.
 
 Below is a short list of variables and methods of `Experiment`.
 
--   `Data` object
-    -   `measurements`, a dataset of all data points for each group
-    -   `nobs`, the number of observations in each group
-    -   `means`, the mean of each group
-    -   `vars`, the variance of each group
-    -   `ses`, the standard error of each group
-    -   `statistics`, test statistic of each group, e.g. student-t
-    -   `pvalue`, p-value of the corresponding test
-    -   `effects`, the effect size of each group
-    -   `sign`, an indicator of significance for each group
--   `setup`, a reference to the
+- `Data` object
+    - `measurements`, a dataset of all data points for each group
+    - `nobs`, the number of observations in each group
+    - `means`, the mean of each group
+    - `vars`, the variance of each group
+    - `ses`, the standard error of each group
+    - `statistics`, test statistic of each group, e.g. student-t
+    - `pvalue`, p-value of the corresponding test
+    - `effects`, the effect size of each group
+    - `sign`, an indicator of significance for each group
+- `setup`, a reference to the
     `design-experiment-setup`{.interpreted-text role="ref"}.
 
 A full list of available parameters are listed in the
@@ -145,13 +145,13 @@ Below is a list of variables and methods of `ExperimentSetup`, read more
 [here](configuration-file.md#config-file-experiment-parameters) and
 `data-strategies`{.interpreted-text role="doc"}:
 
--   `nc`, the number of conditions
--   `nd`, the number of dependent variables
--   `dataStrategy`, a pointer to the selected
+- `nc`, the number of conditions
+- `nd`, the number of dependent variables
+- `dataStrategy`, a pointer to the selected
     `data-strategies`{.interpreted-text role="doc"}.
--   `testStrategy`, a pointer to the selected
+- `testStrategy`, a pointer to the selected
     `test-strategies`{.interpreted-text role="doc"}.
--   `effectStrategy`, a pointer to the selected
+- `effectStrategy`, a pointer to the selected
     `effect-strategies`{.interpreted-text role="doc"}.
 
 #### Data Strategy
@@ -182,10 +182,10 @@ restricted to only modifying relevant variables, e.g.,
 
 There are several test strategies already implemented:
 
--   T-Test
--   F-Test
--   Yuen T-Test
--   Wilcoxn Test
+- T-Test
+- F-Test
+- Yuen T-Test
+- Wilcoxn Test
 
 More details about will be discussed in
 `test-strategies`{.interpreted-text role="doc"} chapter.
@@ -199,10 +199,10 @@ able to define their own effect strategy. This will be discussed in
 
 List of available effect strategies:
 
-> -   Cohen\'s D
-> -   Hedge\'s G
-> -   Odd Ratio
-> -   Mean Difference
+> - Cohen\'s D
+> - Hedge\'s G
+> - Odd Ratio
+> - Mean Difference
 
 ### Journal
 
@@ -215,15 +215,15 @@ accepted or not.
 
 Below is the list of some of the variables and methods of `Journal`.
 
--   `max_pubs`, maximum number of publications before journal stops
+- `max_pubs`, maximum number of publications before journal stops
     accepting new publications
--   `pub_bias`, the publication bias rate
--   `alpha`, the significance $\alpha$. **Note:** This can differ from
+- `pub_bias`, the publication bias rate
+- `alpha`, the significance $\alpha$. **Note:** This can differ from
     `TestStrategy`'s $\alpha$.
--   `selectionStrategy`, journal's
+- `selectionStrategy`, journal's
     `design-selection-strategy`{.interpreted-text role="ref"}.
--   `isStillAccepting()`, a function returning the state of the journal.
--   `review()`, `accept()`, `reject()`,
+- `isStillAccepting()`, a function returning the state of the journal.
+- `review()`, `accept()`, `reject()`,
 
 \- `submissionList`, a list of accepted submissions, i.e.,
 
@@ -259,14 +259,14 @@ finding(s).
 
 `Submission`'s variables are:
 
--   `nobs`, the number of observations
--   `yi`, the mean of the selected outcome
--   `vi`, the variance of the selected outcome
--   `estimator`, effect size estimator of choice
--   `ei`, the effect size of the select outcome
--   `statistics`, the test statistics value
--   `pvalue`, the *p*-value of the test
--   `sig`, a boolean value indicating the significance of the test
+- `nobs`, the number of observations
+- `yi`, the mean of the selected outcome
+- `vi`, the variance of the selected outcome
+- `estimator`, effect size estimator of choice
+- `ei`, the effect size of the select outcome
+- `statistics`, the test statistics value
+- `pvalue`, the *p*-value of the test
+- `sig`, a boolean value indicating the significance of the test
 
 \- `side`, the side of the effect, positive or negative .. -
 `more … exhale_class_class_submission`{.interpreted-text role="ref"}
@@ -297,18 +297,18 @@ role="doc"} chapter.
 
 Below is a list of main methods and variables of `Researcher`.
 
--   `experiment`, an instance of `design-experiment`{.interpreted-text
+- `experiment`, an instance of `design-experiment`{.interpreted-text
     role="ref"}
--   `journal`, an instance of `design-journal`{.interpreted-text
+- `journal`, an instance of `design-journal`{.interpreted-text
     role="ref"}
--   `decisionStrategy`, an instance of
+- `decisionStrategy`, an instance of
     `design-decision-strategy`{.interpreted-text role="ref"}.
--   *isHacker*, a flag indicating whether the researcher will perform
+- *isHacker*, a flag indicating whether the researcher will perform
     any p-hacking methods on the data
--   `hackingStrategies`, a list of
+- `hackingStrategies`, a list of
     `hacking-strategies`{.interpreted-text role="doc"}.
--   `prepareResearch()`, a method to initialize the experiment
--   `performResearch()`, a method to calculate the necessary statistics,
+- `prepareResearch()`, a method to initialize the experiment
+- `performResearch()`, a method to calculate the necessary statistics,
     running the tests, and applying p-hacking methods (if applicable).
 
 \- `publishResearch()`, a method to prepare the final
@@ -324,10 +324,10 @@ list below shows a few available options. The default is always
 `PreRegisteredOutcome` which means the `Researcher` always selects the
 pre-registered outcome regardless of its significance.
 
--   `PreRegisteredOutcome`
--   `MinPvalue`
--   `MaxEffect`
--   `MaxEffectMinPvalue`
+- `PreRegisteredOutcome`
+- `MinPvalue`
+- `MaxEffect`
+- `MaxEffectMinPvalue`
 
 `Researcher` can consult his *Decision Strategy* in different stages of
 the research. **1)** Just before applying any hacking strategies, a
@@ -342,14 +342,14 @@ result that is going to be submitted in the form of `Submission`.
 
 Main variables and methods of `DecisionStrategy` are:
 
--   *isStillHacking*, a flag indicating whether the `Researcher` should
+- *isStillHacking*, a flag indicating whether the `Researcher` should
     continue with the hacking procedure, or the result is already
     satisfactory
--   `isPublishable()`, a method indicating if the selected outcome is
+- `isPublishable()`, a method indicating if the selected outcome is
     significant or not
--   `submissionsPool`, a history of all `Submission` records during the
+- `submissionsPool`, a history of all `Submission` records during the
     research
--   `experimentsPool`, a history of all modified versions of
+- `experimentsPool`, a history of all modified versions of
     `Experiment` during the research.
 
 \- `verdict(Experiment, DecisionStage)` .. - `finalSubmission`, .. -

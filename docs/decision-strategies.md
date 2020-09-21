@@ -51,14 +51,14 @@ minimal *p*-values, or other criteria.
 SAM comes with a set of pre-defined parameters, `DecisionPreference`, as
 follows:
 
--   `PreRegisteredOutcome`. Only reporting the pre-registered outcome
--   `MinPvalue`. Selecting the outcome with minimum *p*-value.
--   `MinSigPvalue`.
--   `RandomSigPvalue`.
--   `MaxSigPvalue`.
--   `MaxSigEffect`.
--   `MaxEffect`. Selecting the outcome with maximum effect size.
--   `MinPvalueMaxEffect`. Selecting the *significant* outcome with
+- `PreRegisteredOutcome`. Only reporting the pre-registered outcome
+- `MinPvalue`. Selecting the outcome with minimum *p*-value.
+- `MinSigPvalue`.
+- `RandomSigPvalue`.
+- `MaxSigPvalue`.
+- `MaxSigEffect`.
+- `MaxEffect`. Selecting the outcome with maximum effect size.
+- `MinPvalueMaxEffect`. Selecting the *significant* outcome with
     maximum effect size.
 
 In the case or `PreRegisteredOutcome`, the Researcher always reports the

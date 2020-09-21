@@ -15,6 +15,9 @@ nav:
     - Examples:
         - examples/index.md
         - examples/baker_et_al_2012.md
+        - examples/baker_et_al_2014.md
+        - examples/esther_first_year.md
+        - examples/frankenbach.md
     - Extras:
         - extending-sam.md
         - SAMoo.md
@@ -25,6 +28,14 @@ extra_css: [custom.css]
 repo_name: GitHub
 repo_url: https://github.com/amirmasoudabdol/sampp
 edit_uri: ""
+
+
+plugins:
+  - img2fig
+  - bibtex:
+      bib_file: "refs.bib"
+      cite_style: "pandoc"
+
 
 # Configuration
 theme:
@@ -82,6 +93,7 @@ markdown_extensions:
       check_paths: true
   - plantuml_markdown:
       format: svg
+  - footnotes
 
 
 extra_javascript:

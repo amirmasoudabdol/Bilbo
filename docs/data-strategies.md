@@ -54,11 +54,11 @@ specified in `data_strategy`.
 }
 ```
 
-  **Parameters**   **Value** / **Type**
-  ---------------- ----------------------
-  `n_conditions`   $n_c$, `int`
-  `n_dep_vars`     $n_d$, `int`
-  `n_obs`          $n_o$, `int`
+| **Parameters** | **Value** / **Type**     |
+|:---------------|:-------------------------|
+| `n_conditions` | $n_c$, `int` |
+| `n_dep_vars`   | $n_d$, `int` |
+| `n_obs`        | $n_o$, `int` |
 
   : General `ExperimentSetup` parameters
 
@@ -74,11 +74,11 @@ For example, in order to set up an experiment with no covariance, you
 may set the `covs` to `0`. This will prompt SAM to only use the diagonal
 row of the covariance matrix.
 
-  **Parameters**   **Value** / **Type**
-  ---------------- ---------------------------------
-  `means`          $\mu$, `double` or `array`
-  `stddevs`        $\sigma^2$, `double` or `array`
-  `covs`           $\Sigma$, `double`, `matrix`
+| **Parameters** | **Value** / **Type**                 |
+|:---------------|:-------------------------------------|
+| `means`        | *μ*, `double` or `array`             |
+| `stddevs`      | *σ^2*2, `double` or `array` |
+| `covs`         | *Σ*, `double`, `matrix`              |
 
   : Parameters of the Linear Model
 
@@ -113,14 +113,14 @@ item $i$ correctly, $Pr(X_{ij} = 1)$, can be calculated based on the
 difficulty $\beta$ of the item $i$ and the ability $\theta$ of a person
 $j$ with the following model \[from Marjan\]:
 
-$$Pr(X_{ij} = 1) = \frac{exp(\theta_j - \beta_i)}{1 + exp(\theta_j - \beta_i)}$$
+$$ Pr(X_{ij} = 1) = \frac{exp(\theta_j - \beta_i)}{1 + exp(\theta_j - \beta_i)} $$
 
-  **Parameters**   **Value** / **Type**
-  ---------------- -------------------------------
-  `n_categories`   `int`
-  `n_items`        `int`
-  `abilities`      $\theta$, `double` or `array`
-  `difficulties`   $\beta$, `double` or `array`
+| **Parameters** | **Value** / **Type**     |
+|:---------------|:-------------------------|
+| `n_categories` | `int`                    |
+| `n_items`      | `int`                    |
+| `abilities`    | *θ*, `double` or `array` |
+| `difficulties` | *β*, `double` or `array` |
 
   : Parameters of the Graded Response Model
 

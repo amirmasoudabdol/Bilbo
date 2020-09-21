@@ -112,36 +112,16 @@ the overall behavior of SAM regarding input and output.
 
 
 
-  ------------------------------------------------------------------------
-  **Parameter**     **Type**   **Description**
-  ----------------- ---------- -------------------------------------------
-  `debug`           `bool`     Runs SAM in debug mode.
-
-  `verbose`         `bool`     Causes SAM to be verbose, announcing the
-                               execution of dfiferent processes.
-
-  `progress`        `bool`     Shows the progress bar.
-
-  `master_seed`     `int`      An integer for initiating seed's of the
-                               *main random number generator stream*. All
-                               other necessary streams will be seeded
-                               based on the given seed. Setting this to
-                               `"random"` tells SAM to use the clock to
-                               randomize the random seed. (default: `42`)
-
-  `n_sims`          `int`      Number of simulation repeated simulation
-                               for given parameters.
-
-  `save_output`     `bool`     Tells SAM to export the simulation data to
-                               a CSV file
-
-  `output_path`     `string`   A path for output files.
-
-  `output_prefix`   `string`   A prefix to be added to output filenames.
-                               {: .label} Raw simulation data files ends
-                               with `_sim.csv`, and meta-analysis data
-                               files ends with `_meta.csv`
-  ------------------------------------------------------------------------
+| **Parameter**   | **Type**               | **Description**                                                                                                                                                                                                                              |
+|:----------------|:-----------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `debug`         | `bool`                 | Runs SAM in debug mode.                                                                                                                                                                                                                      |
+| `verbose`       | `bool` ex              | Causes SAM to be verbose, announcing the ecution of dfiferent processes.                                                                                                                                                                     |
+| `progress`      | `bool`                 | Shows the progress bar.                                                                                                                                                                                                                      |
+| `master_seed`   | `int` \*m ot ba \`" ra | An integer for initiating seed’s of the ain random number generator stream\*. All her necessary streams will be seeded sed on the given seed. Setting this to random"`tells SAM to use the clock to ndomize the random seed. (default:`42\`) |
+| `n_sims`        | `int` fo               | Number of simulation repeated simulation r given parameters.                                                                                                                                                                                 |
+| `save_output`   | `bool` a               | Tells SAM to export the simulation data to CSV file                                                                                                                                                                                          |
+| `output_path`   | `string`               | A path for output files.                                                                                                                                                                                                                     |
+| `output_prefix` | `string` {: wi fi      | A prefix to be added to output filenames. .label} Raw simulation data files ends th `_sim.csv`, and meta-analysis data les ends with `_meta.csv`                                                                                             |
 
 Experiment Parameters
 ---------------------
@@ -152,32 +132,15 @@ Setup](design.md#design-experiment-setup) and
 
 
 
-+---------------------+----------+-------------------------------------+
 | **Parameter**       | **Type** | **Description**                     |
-+=====================+==========+=====================================+
-| `n_conditions`      | `int`    | Nu                                  |
-|                     |          | mber of treatment conditions, `nc`. |
-|                     |          |                                     |
-|                     |          | :   *Excluding the control group.*  |
-+---------------------+----------+-------------------------------------+
-| `n_dep_vars`        | `int`    | Number of dependent variables in    |
-|                     |          | each condition, `nd`.               |
-+---------------------+----------+-------------------------------------+
-| `n_items`           | `int`    | Number of items. Only applicable    |
-|                     |          | for Latent Model, `ni`.             |
-+---------------------+----------+-------------------------------------+
-| `n_obs`             | `int`,   | Number of observation per group.    |
-|                     | `array`  |                                     |
-+---------------------+----------+-------------------------------------+
-| `test_strategy`     | `string` | Specify the underlying test         |
-|                     |          | strategy.                           |
-+---------------------+----------+-------------------------------------+
-| `data_strategy`     | `string` | Specify the underlying data         |
-|                     |          | strategy.                           |
-+---------------------+----------+-------------------------------------+
-| `effect_strategy`   | `string` | | Specify the underlying effect     |
-|                     |          |   strategy.                         |
-+---------------------+----------+-------------------------------------+
+|:--------------------|:---------|:------------------------------------|
+| `n_conditions`      | `int`    | Number of treatment conditions, `nc`. *Excluding the control group.*  |
+| `n_dep_vars`        | `int`    | Number of dependent variables in each condition, `nd`.               |
+| `n_items`           | `int`    | Number of items. Only applicable for Latent Model, `ni`.             |
+| `n_obs`             | `int`, `array`   | Number of observation per group.    |
+| `test_strategy`     | `string` | Specify the underlying test strategy.                           |
+| `data_strategy`     | `string` | Specify the underlying data strategy.                           |
+| `effect_strategy`   | `string` | Specify the underlying effect strategy.                         |
 
 !!! note
 
@@ -200,25 +163,14 @@ This section defines the behavior of the `Researcher`.
 
 
 
-  -------------------------------------------------------------------------------------------------------
-  **Parameter**              **Type**   **Description**
-  -------------------------- ---------- -----------------------------------------------------------------
-  `is_phacker`               `bool`     Indicates whether the `Researcher` is a *hacker* or not, if
-                                        `true`, the list of hacking strategies will be applied on the
-                                        `Experiment`.
+| **Parameter**            | **Type** | **Description**                                                                                                                         |
+|:-------------------------|:---------|:----------------------------------------------------------------------------------------------------------------------------------------|
+| `is_phacker`             | `bool`   | Indicates whether the `Researcher` is a *hacker* or not, if `true`, the list of hacking strategies will be applied on the `Experiment`. |
+| `p_hacking_methods`      | `list`   | A list of `list`, each indicating a chain of `HackingStrategy`.                                                                         |
+| `is_pre_processing`      | `bool`   | Indicates whether any pre-processing procedure is being performed on the data before passing the data to the researcher for analysis.   |
+| `pre_processing_methods` | `list`   | Similar to `p_hacking_methods`. See [Pre-processing]: hacking-strategies.md#hacking-pre-processing                                                                                  |
+| `decision_strategy`      | `dict`   | Specification of a `DecisionStrategy`. See more `decision-strategies`.                                                                  |
 
-  `p_hacking_methods`        `list`     A list of `list`, each indicating a chain of `HackingStrategy`.
-
-  `is_pre_processing`        `bool`     Indicates whether any pre-processing procedure is being performed
-                                        on the data before passing the data to the researcher for
-                                        analysis.
-
-  `pre_processing_methods`   `list`     Similar to `p_hacking_methods`. See
-                                        [Pre-processing](hacking-strategies.md#hacking-pre-processing)
-
-  `decision_strategy`        `dict`     Specification of a `DecisionStrategy`. See more
-                                        `decision-strategies`{.interpreted-text role="doc"}.
-  -------------------------------------------------------------------------------------------------------
 
 Journal Parameters
 ------------------
@@ -227,14 +179,10 @@ This section specifies the properties of the `Journal`.
 
 
 
-  ------------------------------------------------------------------------------
-  **Parameter**          **Type**   **Description**
-  ---------------------- ---------- --------------------------------------------
-  `max_pubs`             `double`   Maximum number of publications that will be
-                                    accepted by the `Journal`.
-
-  `selection_strategy`   `string`   The `SelectionStrategy` of the journal.
-  ------------------------------------------------------------------------------
+| **Parameter**        | **Type**    | **Description**                                                      |
+|:---------------------|:------------|:---------------------------------------------------------------------|
+| `max_pubs`           | `double` ac | Maximum number of publications that will be cepted by the `Journal`. |
+| `selection_strategy` | `string`    | The `SelectionStrategy` of the journal.                              |
 
 !!! note
 
