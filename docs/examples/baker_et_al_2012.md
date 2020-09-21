@@ -94,7 +94,13 @@ strategies 2, and 4,
         replications.*
 
 <figure>
-<img src="/figures/baker_2012/Marjan_2012_QRP_Large.png" id="fig:qrp_large" alt="Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable." /><figcaption aria-hidden="true">Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable.</figcaption>
+    <picture>
+      <source 
+        srcset="/figures/baker_2012/Marjan_2012_QRP_Large_Dark.png" 
+        media="(prefers-color-scheme: dark)">
+      <img src="/figures/baker_2012/Marjan_2012_QRP_Large.png" id="fig:qrp_large" alt="Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable." />
+    </picture>
+<figcaption aria-hidden="true">Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable.</figcaption>
 </figure>
 
 <figure>

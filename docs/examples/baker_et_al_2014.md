@@ -55,7 +55,7 @@ The reproduction simulation is in fact simulating the behavior of the
 researcher who dynamically reducing *k* until she finds a significant
 result. As stated by Bakker, this should be equivalent to calculating
 the subjective Type I Error from the posterior of the non-subjective
-simulation.[1]
+simulation.[^1]
 
 <figure>
 <img src="/figures/baker_2014/Marjan_2014_Flowchart.png" id="fig:strategies_flowchart" alt="Simulation Design" /><figcaption aria-hidden="true">Simulation Design</figcaption>
@@ -79,6 +79,7 @@ right columns, *β* = 3.
 <img src="/figures/baker_2014/Side-by-Side.png" id="fig:subjective_vs_non_subjective_type_i_error" alt="Non-Subjective (left panel) and Subjective (right panel) Type I Error" /><figcaption aria-hidden="true">Non-Subjective (left panel) and Subjective (right panel) Type I Error</figcaption>
 </figure>
 
-[1] While for the most configurations, the estimate is quite accurate, I
-am not yet convinced that both approach always lead to the same level of
-Type I Error.
+[^1]:
+    While for the most configurations, the estimate is quite accurate, I
+    am not yet convinced that both approach always lead to the same level of
+    Type I Error.
