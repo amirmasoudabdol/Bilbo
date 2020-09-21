@@ -7,19 +7,9 @@ nav_order: 4
 Configuration File
 ==================
 
-SAM uses a [JSON](https://www.json.org) file to load and save all
-simulation parameters. The code block below shows a general
-configuration file used by SAM to prepare the simulation and all its
-components. As it\'s shown, the file is separated into 4 different
-sections, each corresponding to one of SAM's components. After
-customizing your own configuration file, you can load it to SAM using
-`./SAMpp --config=your-configuration-file.json`. This will start the
-simulation as described in the `flow`{.interpreted-text role="doc"}
-section.
+SAM uses a [JSON](https://www.json.org) file to load and save all simulation parameters. The code block below shows a general configuration file used by SAM to prepare the simulation and all its components. As it\'s shown, the file is separated into 4 different sections, each corresponding to one of SAM's components. After customizing your own configuration file, you can load it to SAM using `./SAMpp --config=your-configuration-file.json`. This will start the simulation as described in the `flow`{.interpreted-text role="doc"} section.
 
-While most parameters are self-explanatory, this section goes into more
-details on how SAM will process and interpret them during the
-initialization phase.
+While most parameters are self-explanatory, this section goes into more details on how SAM will process and interpret them during the initialization phase.
 
 ```json
 {
@@ -106,9 +96,7 @@ initialization phase.
 Simulation Parameters
 ---------------------
 
-This section specifies general parameters of the simulation. These
-parameters are not necessarily influencing SAM components\'. They define
-the overall behavior of SAM regarding input and output.
+This section specifies general parameters of the simulation. These parameters are not necessarily influencing SAM components\'. They define the overall behavior of SAM regarding input and output.
 
 
 
@@ -127,9 +115,7 @@ the overall behavior of SAM regarding input and output.
 Experiment Parameters
 ---------------------
 
-This section lists necessary parameters of the [Experiment
-Setup](design.md#experiment-setup) and
-[Experiment](design.md#experiment).
+This section lists necessary parameters of the [Experiment Setup](design.md#experiment-setup) and [Experiment](design.md#experiment).
 
 
 
@@ -145,16 +131,11 @@ Setup](design.md#experiment-setup) and
 
 !!! note
 
-    Each `Data`, `Test`, or `Effect` strategy might carry its own set of
-    parameters. See, `design`{.interpreted-text role="doc"},
-    doc:[data-strategy]{.title-ref}, doc:[test-strategy]{.title-ref},
-    doc:[effect-strategy]{.title-ref} for more info.
+    Each `Data`, `Test`, or `Effect` strategy might carry its own set of     parameters. See, `design`{.interpreted-text role="doc"},     doc:[data-strategy]{.title-ref}, doc:[test-strategy]{.title-ref},     doc:[effect-strategy]{.title-ref} for more info.
 
 !!! warning
 
-    The size of an given `array` or `matrix` must agree with the number of
-    conditions, dependant variables, and items, otherwise an error will
-    occur.
+    The size of an given `array` or `matrix` must agree with the number of     conditions, dependant variables, and items, otherwise an error will     occur.
 
 
 Researcher Parameters
@@ -185,13 +166,8 @@ This section specifies the properties of the `Journal`.
 
 !!! note
 
-    Parameters like `pub_bias`, `alpha` or `side` can be set based on the
-    `SelectionStrategy` of user\'s choice. See,
-    `selection-strategy`{.interpreted-text role="doc"} for more info.
+    Parameters like `pub_bias`, `alpha` or `side` can be set based on the     `SelectionStrategy` of user\'s choice. See,     `selection-strategy`{.interpreted-text role="doc"} for more info.
 
 !!! info "Crash Course on JSON"
 
-    A JSON object is an *unordered* set of name/value pairs inserted
-    between two curly brackets, `{"name": "S.A.M"}`. A JSON list/array is
-    an ordered set of values between two brackets,
-    `[1, "blue", {"name": "S.A.M"}]`
+    A JSON object is an *unordered* set of name/value pairs inserted     between two curly brackets, `{"name": "S.A.M"}`. A JSON list/array is     an ordered set of values between two brackets,     `[1, "blue", {"name": "S.A.M"}]`
