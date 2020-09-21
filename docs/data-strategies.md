@@ -13,7 +13,7 @@ Data Strategies
 
 `DataStrategy` populates the `Experiment`\'s `measurements` variables. A
 `Researcher`, during the [preperation
-process](flow.md#flow-prepare-research), reaches to `DataStrategy`
+process](flow.md#prepare-research), reaches to `DataStrategy`
 object and based on the underlying model and parameters
 populates/generates/collects data for the experiment.
 
@@ -26,7 +26,7 @@ needs to add new data points to the already existing measurements.
 Requiring data strategies to produce *new* data points helps with
 implementation of such hacking strategies.
 
-You can select the type of model by setting `_name` variables of the
+You can select the type of model by setting `name` variables of the
 `data_strategy` parameter in the config file. Two available options are
 `data-strategies-linear`{.interpreted-text role="ref"} and
 `data-strategies-grm`{.interpreted-text role="ref"}. Based on your model
@@ -56,11 +56,9 @@ specified in `data_strategy`.
 
 | **Parameters** | **Value** / **Type**     |
 |:---------------|:-------------------------|
-| `n_conditions` | $n_c$, `int` |
-| `n_dep_vars`   | $n_d$, `int` |
-| `n_obs`        | $n_o$, `int` |
-
-  : General `ExperimentSetup` parameters
+| `n_conditions` | $n_c$, `int`             |
+| `n_dep_vars`   | $n_d$, `int`             |
+| `n_obs`        | $n_o$, `int`             |
 
 Linear Model
 ------------
@@ -77,10 +75,8 @@ row of the covariance matrix.
 | **Parameters** | **Value** / **Type**                 |
 |:---------------|:-------------------------------------|
 | `means`        | *μ*, `double` or `array`             |
-| `stddevs`      | *σ^2*2, `double` or `array` |
+| `stddevs`      | *σ^2*2, `double` or `array`          |
 | `covs`         | *Σ*, `double`, `matrix`              |
-
-  : Parameters of the Linear Model
 
 !!! warning
 
@@ -121,8 +117,6 @@ $$ Pr(X_{ij} = 1) = \frac{exp(\theta_j - \beta_i)}{1 + exp(\theta_j - \beta_i)} 
 | `n_items`      | `int`                    |
 | `abilities`    | *θ*, `double` or `array` |
 | `difficulties` | *β*, `double` or `array` |
-
-  : Parameters of the Graded Response Model
 
 After calculating all responses of person $j$ to all items, the sum
 score of all answers is calcuated for each person by adding all the item

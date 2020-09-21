@@ -19,18 +19,18 @@ The Scientific Research Process
 
 The *process* of producing a scientific research/study is often a
 cumbersome and complicated process. Despite all different ways of
-conducting a research, a typical scientific study starts by *formulating a hypothesis* when the [Researcher](design.md#design-researcher) jots
+conducting a research, a typical scientific study starts by *formulating a hypothesis* when the [Researcher](design.md#researcher) jots
 down her ideas about how a certain process explains a certain
 phenomenon or how she thinks a complicated system works. To test this
 hypothesis, she *prepares an experiment* in order to define the underlying parameters, and boundaries of her theory.
 
-After the [Experiment Setup](design.md#design-experiment-setup) is
-finalized, an [Experiment](design.md#design-experiment) is being
+After the [Experiment Setup](design.md#experiment-setup) is
+finalized, an [Experiment](design.md#experiment) is being
 conducted by which the researcher collects certain types — and amount — of data in order to test her hypothesis., e.g., censors data, images, etc. The next step is a mixture of (pre-)processing and analyzing the data, and consequently coming up with a conclusion evaluating the initial
 hypothesis. If results are informative — regardless of agreeing or
 disagreeing with the *initial hypothesis*, i.e., *pre-registered
-hypothesis* — the researcher selects a [Journal](design.md#design-journal) and submits her findings in the
-form of a [Manuscript (design.md#design-submission), to be reviewed according to the journal's criteria. Finally, the Journal will decide whether the submitted manuscript worth publishing or not.
+hypothesis* — the researcher selects a [Journal](design.md#journal) and submits her findings in the
+form of a [Manuscript](design.md#submission), to be reviewed according to the journal's criteria. Finally, the Journal will decide whether the submitted manuscript worth publishing or not.
 
 ### Meta-analysis
 

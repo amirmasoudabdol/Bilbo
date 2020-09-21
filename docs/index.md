@@ -17,6 +17,6 @@ offers number of conventional and recognized *p*-hacking methods out of
 the box; in addition, a user is able to implement new methods according to his/her need, e.g., a specific type of group pooling.
 
 In this vignette, I'll describe underlying design principles and list of the main features of SAM alongside some examples. In the
-`introduction`{.interpreted-text role="doc"} section, I'll describe types
+[Introduction](introduction.md) section, I'll describe types
 of problems that SAM is trying to solve and how are we going to approach them. After setting the ground rules, we can dive into different
 components of SAM and the process of designing your own simulation.

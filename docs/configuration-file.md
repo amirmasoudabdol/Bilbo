@@ -123,12 +123,13 @@ the overall behavior of SAM regarding input and output.
 | `output_path`   | `string`               | A path for output files.                                                                                                                                                                                                                     |
 | `output_prefix` | `string` {: wi fi      | A prefix to be added to output filenames. .label} Raw simulation data files ends th `_sim.csv`, and meta-analysis data les ends with `_meta.csv`                                                                                             |
 
+
 Experiment Parameters
 ---------------------
 
 This section lists necessary parameters of the [Experiment
-Setup](design.md#design-experiment-setup) and
-[Experiment](design.md#design-experiment).
+Setup](design.md#experiment-setup) and
+[Experiment](design.md#experiment).
 
 
 
@@ -162,7 +163,6 @@ Researcher Parameters
 This section defines the behavior of the `Researcher`.
 
 
-
 | **Parameter**            | **Type** | **Description**                                                                                                                         |
 |:-------------------------|:---------|:----------------------------------------------------------------------------------------------------------------------------------------|
 | `is_phacker`             | `bool`   | Indicates whether the `Researcher` is a *hacker* or not, if `true`, the list of hacking strategies will be applied on the `Experiment`. |
@@ -178,7 +178,6 @@ Journal Parameters
 This section specifies the properties of the `Journal`.
 
 
-
 | **Parameter**        | **Type**    | **Description**                                                      |
 |:---------------------|:------------|:---------------------------------------------------------------------|
 | `max_pubs`           | `double` ac | Maximum number of publications that will be cepted by the `Journal`. |
@@ -190,9 +189,9 @@ This section specifies the properties of the `Journal`.
     `SelectionStrategy` of user\'s choice. See,
     `selection-strategy`{.interpreted-text role="doc"} for more info.
 
-### Crash Course on JSON
+!!! info "Crash Course on JSON"
 
-> A JSON object is an *unordered* set of name/value pairs inserted
-> between two curly brackets, `{"name": "S.A.M"}`. A JSON list/array is
-> an ordered set of values between two brackets,
-> `[1, "blue", {"name": "S.A.M"}]`
+    A JSON object is an *unordered* set of name/value pairs inserted
+    between two curly brackets, `{"name": "S.A.M"}`. A JSON list/array is
+    an ordered set of values between two brackets,
+    `[1, "blue", {"name": "S.A.M"}]`

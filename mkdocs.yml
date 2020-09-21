@@ -5,6 +5,7 @@ nav:
         - introduction.md
         - design.md
         - flow.md
+        - research-workflow.md
         - configuration-file.md
         - data-strategies.md
         - test-strategies.md
@@ -40,6 +41,9 @@ plugins:
 # Configuration
 theme:
   name: material
+  palette:
+    scheme: preference
+    primary: black
   include_homepage_in_sidebar: false
   highlightjs: true
   font:
@@ -55,9 +59,6 @@ theme:
     - tab
     - instant
     - header.hide
-  palette:
-    scheme: preference
-    primary: black
 
 extra:
   social:

@@ -88,10 +88,10 @@ strategies 2, and 4,
         appropriate outcome from the pool of outcomes collected from all
         replications.
 
-    - *Strategy 3 follows the same logic with the only difference that
+    - _Strategy 3 follows the same logic with the only difference that
         each replication doesn’t go through the QRP routine, but, the
         researcher will **still** review her finding after performing 5
-        replications.*
+        replications._
 
 <figure>
     <picture>
@@ -106,6 +106,17 @@ strategies 2, and 4,
 <figure>
 <img src="/figures/baker_2012/Marjan_2012_QRP_Small.png" id="fig:qrp_small" alt="Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts." /><figcaption aria-hidden="true">Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts.</figcaption>
 </figure>
+
+
+SAM Configuration
+-----------------
+
+
+### Strategy 1, and 3 (Without QRPs)
+
+
+### Strategy 2, and 4 (With QRPs)
+
 
 Results
 -------

@@ -98,16 +98,13 @@ The list below briefly introduces each component and its role.
 <!-- ![](figures/experiment-stack.png){: align=right} -->
 
 <picture>
-  <source 
-    srcset="../figures/journal-stack.png" 
-    media="(prefers-color-scheme: dark)">
-  <img src="../figures/experiment-stack.png">
+  <img src="../figures/experiment-stack.png" width="300" align="right">
 </picture>
 
 As mentioned, `Experiment` object acts as an umbrella for everything
 related to an actual experiment. This includes metadata (a.k.a
 `ExperimentSetup`), raw data, method/model for generating the data,
-e.g., [Linear Model](data-strategies.md#data-strategies-linear-model),
+e.g., [Linear Model](data-strategies.md#linear-model),
 and methods of testing the hypothesis, and calculating the effect. The
 `Researcher` object has the complete control over every aspects of an
 `Experiment` **with one exception**: it can only read and not change the
@@ -142,7 +139,7 @@ initialization phase, `ExperimentSetup` will stay intact in the code and
 will be used as a reference point in different stages.
 
 Below is a list of variables and methods of `ExperimentSetup`, read more
-[here](configuration-file.md#config-file-experiment-parameters) and
+[here](configuration-file.md#experiment-parameters) and
 `data-strategies`{.interpreted-text role="doc"}:
 
 - `nc`, the number of conditions
@@ -230,7 +227,7 @@ Below is the list of some of the variables and methods of `Journal`.
 :   publications.
 
 You can set these parameters using
-[journal_parameters](configuration-file.md#config-file-journal-parameters)
+[journal_parameters](configuration-file.md#journal-parameters)
 section of the configuration file.
 
 #### Selection Strategy
