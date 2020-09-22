@@ -19,7 +19,7 @@ As described by Bakker, the simulation study is concerned about 4 distinct strat
 > - **Strategy 2.** Perform one large study and use some of the QRPs most popular in psychology (John et al., 2012). These QRPs may be performed sequentially until a significant result is found:
 >  - Test a second dependent variable that is correlated with the primary dependent variable (for which John et al. found a 65% admittance rate)
 >  - Add 10 subjects (sequential testing; 57% admittance rate)
->  - Remove outliers (\|*Z* > 2\|) and rerun analysis (41% admittance rate)
+>  - Remove outliers (\|*Z* > 2\|) and rerun analysis (41% admittance rate)
 > 
 > - **Strategy 3.** Perform, at most, five small studies each with (N/5) as sample size. Players may stop data collection when they find a significant result in the expected direction and only publish the desired result (the other studies are denoted “failed”; 48% admittance rate).
 > 

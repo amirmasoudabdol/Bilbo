@@ -9,12 +9,11 @@ Design
 
 In the [previous section](introduction.md#intro-research-process), I listed some of the main components and entities involving in different stages of a research, e.g., Experiment Setup, Experiment, Researcher, Submission, and Journal. *In the abstraction*, each component is a semi-independent entity while the whole system and process, i.e., scientific research, is defined through their interactions.
 
-One of our main design goals with SAM was to achieve a level of flexibility where we could relatively easily change different aspects of this process. To achieve this, we decoupled the system to smaller --- but conceptually meaningful --- routines and entities. Figure 1. shows SAM\'s components, and their dependencies and interactions with each other.
+One of our main design goals with SAM was to achieve a level of flexibility where we could relatively easily change different aspects of this process. To achieve this, we decoupled the system to smaller --- but conceptually meaningful --- routines and entities. Figure 1. shows SAM's components, and their dependencies and interactions with each other.
 
 This section will clarify the design principles behind each component, what they try to resemble in the real world and how they work and interact with each other in order to simulate as much as the scientific process, as possible.
 
-![SAM's components and their
-interactions](figures/components.png)
+![SAM's main components and their interactions](../figures/components-revised.png)
 
 SAM's Main Components
 ---------------------
@@ -106,14 +105,18 @@ More details about will be discussed in `test-strategies`{.interpreted-text role
 
 List of available effect strategies:
 
-> - Cohen\'s D
-> - Hedge\'s G
-> - Odd Ratio
-> - Mean Difference
+- Cohen's D
+- Hedge's G
+- Odd Ratio
+- Mean Difference
 
 ### Journal
 
-![](figures/journal-stack.png){: align=right}
+<!-- ![](../figures/journal-stack.png){: align=right} -->
+
+<picture>
+  <img src="../figures/journal-stack.png" width="300" align="right">
+</picture>
 
 In SAM, a `Journal` is often a container for *accepted* publications. `Journal` is designed to mimic the reviewing process. Therefore, it can use any arbitrary algorithms for deciding whether a submission will be accepted or not.
 
@@ -158,9 +161,13 @@ After performing the test and choosing the outcome variable, the `Researcher` pu
 
 ### Researcher
 
-![](figures/researcher-stack.png){: align=right}
+<!-- ![](../figures/researcher-stack.png){: align=right} -->
 
-`Researcher` object is the main player in the simulation. It\'s a central piece of the research, it uses the `ExperimentSetup` to prepare the `Experiment` and send the final outcome to the `Journal` for reviewing process.
+<picture>
+  <img src="../figures/researcher-stack.png" width="300" align="right">
+</picture>
+
+`Researcher` object is the main player in the simulation. It's a central piece of the research, it uses the `ExperimentSetup` to prepare the `Experiment` and send the final outcome to the `Journal` for reviewing process.
 
 After the initialization of the `ExperimentSetup`, `Researcher` will prepare the `Experiment` object by collecting data through the data strategy, testing the hypothesis via the test strategy, and calculating the effect sizes using the effect strategy. Then, if programmed to, it applies different *p*-hacking methods on the dataset and hacks its way through a significant result. In the end, the researcher prepares a `Submission` record and send it to the `Journal` for review. This process is discussed in more detailed in `flow`{.interpreted-text role="doc"} chapter.
 

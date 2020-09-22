@@ -32,7 +32,7 @@ research](figures/prepare-research.png)
 Performing the Research
 -----------------------
 
-At this stage, the `Researcher` uses `TestStrategy` (of the `Experiment`) to run the test and populates relevant parameters, e.g., `statistic, pvalue, sig, side`. The next step is to check whether or not the `Researcher` is satisfied with test results. This is being done by passing the `Experiment` to the `DecisionStrategy`. `Researcher` relies on deicsion strategy\'s verdict to decide whether to proceed with the current Submission or to continue applying one or more hacking strategies on the experiment before submitting the study for the review.
+At this stage, the `Researcher` uses `TestStrategy` (of the `Experiment`) to run the test and populates relevant parameters, e.g., `statistic, pvalue, sig, side`. The next step is to check whether or not the `Researcher` is satisfied with test results. This is being done by passing the `Experiment` to the `DecisionStrategy`. `Researcher` relies on deicsion strategy's verdict to decide whether to proceed with the current Submission or to continue applying one or more hacking strategies on the experiment before submitting the study for the review.
 
 As mentioned, Researcher can have access to a list of hacking methods. For each hacking strategy, **h**, a copy of experiment is passed to the hacking strategy. Based on the type of hacking strategy, `Researcher` reaches to the `DecisionStrategy` on whether it should continue or stop the process of altering the result. For instance, with optional stopping, the researcher --- after each phase of addition --- can decide whether the outcome is satisfactory or not.
 

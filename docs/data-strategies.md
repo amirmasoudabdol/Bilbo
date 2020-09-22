@@ -8,37 +8,15 @@ Data Strategies
 ===============
 
 
-> *Data Strategy is the source of data, i.e., population. It knows the
-> underlying model, and its properties.*
+> *Data Strategy is the source of data, i.e., population. It knows the underlying model, and its properties.*
 
-`DataStrategy` populates the `Experiment`\'s `measurements` variables. A
-`Researcher`, during the [preperation
-process](flow.md#prepare-research), reaches to `DataStrategy`
-object and based on the underlying model and parameters
-populates/generates/collects data for the experiment.
+`DataStrategy` populates the `Experiment`'s `measurements` variables. A `Researcher`, during the [preperation process](flow.md#prepare-research), reaches to `DataStrategy` object and based on the underlying model and parameters populates/generates/collects data for the experiment.
 
-Since `DataStrategy` is aware of all the underlying models, parameters
-and distributions, it can provide data at any points during the
-simulation. One important implication of this is during the hacking
-process. As mentioend, methods like [optional
-stopping](hacking-strategies.md#hacking-strategies-optional-stoppin)
-needs to add new data points to the already existing measurements.
-Requiring data strategies to produce *new* data points helps with
-implementation of such hacking strategies.
+Since `DataStrategy` is aware of all the underlying models, parameters and distributions, it can provide data at any points during the simulation. One important implication of this is during the hacking process. As mentioend, methods like [optional stopping](hacking-strategies.md#hacking-strategies-optional-stoppin) needs to add new data points to the already existing measurements. Requiring data strategies to produce *new* data points helps with implementation of such hacking strategies.
 
-You can select the type of model by setting `name` variables of the
-`data_strategy` parameter in the config file. Two available options are
-`data-strategies-linear`{.interpreted-text role="ref"} and
-`data-strategies-grm`{.interpreted-text role="ref"}. Based on your model
-of choice, you must provide different set of variables.
+You can select the type of model by setting `name` variables of the `data_strategy` parameter in the config file. Two available options are `data-strategies-linear`{.interpreted-text role="ref"} and `data-strategies-grm`{.interpreted-text role="ref"}. Based on your model of choice, you must provide different set of variables.
 
-Parameters of the `DataStrategy` are intertwined with the
-`ExperimentSetup` parameters. SAM determines the total number of groups,
-$n_g$ (internal variable), by multiplying the number of treatment
-conditions, $n_c$, by the number of dependent variables in each
-condition, $n_d$. After knowing the number of groups, each group is
-being populated by $n_o$ observations based on the given model,
-specified in `data_strategy`.
+Parameters of the `DataStrategy` are intertwined with the `ExperimentSetup` parameters. SAM determines the total number of groups, $n_g$ (internal variable), by multiplying the number of treatment conditions, $n_c$, by the number of dependent variables in each condition, $n_d$. After knowing the number of groups, each group is being populated by $n_o$ observations based on the given model, specified in `data_strategy`.
 
 ```json
 {
