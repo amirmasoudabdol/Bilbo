@@ -6,24 +6,23 @@ This report discusses the reproduction process of the simulation study conducted
 Experiment Setup
 ================
 
-The original study is testing the effects of removing outliers in two
-different scenarios:
+The original study is testing the effects of removing outliers in two different scenarios:
 
--   **Non-Subjective Outliers Removal**, in which the effect of removing outliers with \|*Z* &gt; *k*\|, for a fixed *k*, is being measured.
+- **Non-Subjective Outliers Removal**, in which the effect of removing outliers with \|*Z* > *k*\|, for a fixed *k*, is being measured.
 
--   **Subjective Outliers Removal**, in which the effect of removing outliers with a variable *k* ∈ {3, 2.5, 2} is being measured.
+- **Subjective Outliers Removal**, in which the effect of removing outliers with a variable *k* ∈ {3, 2.5, 2} is being measured.
 
 The data is generated based on *Graded Response Model* with:
 
--   different number of items, *i* ∈ {2, 5, 10, 20, 40}
+- different number of items, *i* ∈ {2, 5, 10, 20, 40}
 
--   different number of options per items, *j* ∈ {1, 5}
+- different number of options per items, *j* ∈ {1, 5}
 
--   different difficulty levels, *β* ∈ {0, 3}
+- different difficulty levels, *β* ∈ {0, 3}
 
--   different sample sizes, *N* ∈ {20, 40, 100, 500}
+- different sample sizes, *N* ∈ {20, 40, 100, 500}
 
--   and one ability level, *α* ∈ 0
+- and one ability level, *α* ∈ 0
 
 fianlly, item scores are being calculated based on the Rasch Model:
 
@@ -44,7 +43,7 @@ The reproduction simulation is in fact simulating the behavior of the researcher
 Results
 =======
 
-Figure <a href="#fig:subjective_vs_non_subjective_type_i_error" data-reference-type="ref" data-reference="fig:subjective_vs_non_subjective_type_i_error">2</a> shows the result of the reproduction simulation. I did not try to reproduce the entire simulation and every parameters combinations. However, the reproduction simulation agrees with the original results when parameters are crossing. The SUbjective Type I Error is larger in most cases, and between simulations with similar parameters, those with harder items affected more drastically by subjectively removing of the outliers, Figure <a href="#fig:subjective_vs_non_subjective_type_i_error" data-reference-type="ref" data-reference="fig:subjective_vs_non_subjective_type_i_error">2</a>, right columns, *β* = 3.
+Figure <a href="#fig:subjective_vs_non_subjective_type_i_error" data-reference-type="ref" data-reference="fig:subjective_vs_non_subjective_type_i_error">2</a> shows the result of the reproduction simulation. I did not try to reproduce the entire simulation and every parameters combinations. However, the reproduction simulation agrees with the original results when parameters are crossing. The SUbjective Type I Error is larger in most cases, and between simulations with similar parameters, those with harder items affected more drastically by subjectively removing of the outliers, Figure <a href="#fig:subjective_vs_non_subjective_type_i_error" data-reference-type="ref" data-reference="fig:subjective_vs_non_subjective_type_i_error">2</a>, right columns, *β* = 3.
 
 <figure>
 <img src="/figures/baker_2014/Side-by-Side.png" id="fig:subjective_vs_non_subjective_type_i_error" alt="Non-Subjective (left panel) and Subjective (right panel) Type I Error" /><figcaption aria-hidden="true">Non-Subjective (left panel) and Subjective (right panel) Type I Error</figcaption>

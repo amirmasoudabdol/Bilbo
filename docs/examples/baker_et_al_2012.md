@@ -83,7 +83,7 @@ Figure <a href="#fig:original_vs_reproduced" data-reference-type="ref" data-ref
 
 ### Extended Simulation
 
-This section discuss the results of an extended simulation, where I explored the effect of different values of *α* ∈ {0.0005, 0.005, 0.05} on the observed ES bias. The main body of the simulation is itenditcal to the original simulation performed by Bakker.
+This section discuss the results of an extended simulation, where I explored the effect of different values of *α* ∈ {0.0005, 0.005, 0.05} on the observed ES bias. The main body of the simulation is itenditcal to the original simulation performed by Bakker.
 
 Figure <a href="#fig:extended_sim_proportion_plot" data-reference-type="ref" data-reference="fig:extended_sim_proportion_plot">4</a> shows the chance of finding at least one significant result. As expected, from left to right, the chane of finding significant result — in all cases — increases as we increase the *α* but not so drastically. Check Figure <a href="#fig:extended_sim_proportion_vs_bias" data-reference-type="ref" data-reference="fig:extended_sim_proportion_vs_bias">6</a> for more clear comparison.
 

@@ -17,7 +17,7 @@ Initialization
 
 During the initialization phase, SAMs loads a configuration file and initializes different compartments based on configuration parameters. You can read more about the parameters [here](configuration-file.md).
 
-![](figures/initialization.png)
+![](../figures/initialization.png)
 
 After reading user parameters, SAM proceeds with initializing each of its components. Initialization mainly prepares the internal specifications of each compartment. At the end of initialization stage, `Researcher` is aware of all parameters and is ready to conduct the --- already defined --- `Experiment`.
 
