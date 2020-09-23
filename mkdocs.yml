@@ -41,14 +41,15 @@ plugins:
 # Configuration
 theme:
   name: material
+  font: false
+  font:
+    code: ui-monospace
+    # text: -ui-sans-serif
   palette:
     scheme: preference
     primary: black
   include_homepage_in_sidebar: false
   highlightjs: true
-  font:
-    text: -ui-sans-serif
-    code: -ui-monospace
   logo:
     img/logo.svg
   favicon:
