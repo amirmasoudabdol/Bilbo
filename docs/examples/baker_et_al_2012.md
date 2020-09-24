@@ -19,13 +19,28 @@ As described by Bakker, the simulation study is concerned about 4 distinct strat
 > 
 > <p style="text-align:right">  — Bakker et al., 2012</p>
 
-Two main distinguishing factors in the simulation are sample size, *N*, and whether the pre-defined set of QRPs are applied on the study or not. When it comes to sample sizes, Bakker defines two size class, small and large. Number of observations in small studies can be a value from $\{5, 10, 20\}$, and number of observation in large studies can be either of $\{25, 50, 100\}$. 
+Two main distinguishing factors in the simulation are sample size, *N*, and whether the pre-defined set of QRPs are applied on the study or not. When it comes to sample sizes, Bakker defines two size class, small and large. Number of observations in small studies can be a value from $\{5, 10, 20\}$, and number of observation in large studies can be either of $\{25, 50, 100\}$. In fact, large studies are 5 times larger than small studies.
 
-One key difference between *small*, and *large* studies is the repetitive nature of conducting *small* studies as described in Strategy 3 and 4. Each small study is **almost** an exact replication of the main study — that might or might not go through the QRP procedure. In **Strategy 3**, and **4**, the final outcome is being chosen from total of 5 replicated small studies. 
+Another difference between *small*, and *large* studies is the repetitive nature of conducting *small* studies. In strategy 3 and 4, each trial is **almost** an exact replication of the main study — that might or might not have been gone through the QRP procedure. Results from these trials will be collected and at the end, the researcher will get a chance to report the most desirable outcome.
 
-Figure <a href="#fig:qrp_large" data-reference-type="ref" data-reference="fig:qrp_large">1</a> and <a href="#fig:qrp_small" data-reference-type="ref" data-reference="fig:qrp_small">2</a> are showcasing the simulation setup as described by Bakker. Figure 1 is equivalent of the Strategy 2 while Figure 2 showcases the strategy 4.
+Figure <a href="#fig:qrp_large" data-reference-type="ref" data-reference="fig:qrp_large">1</a> and <a href="#fig:qrp_small" data-reference-type="ref" data-reference="fig:qrp_small">2</a> are showcasing the simulation setup as described by Bakker. Figure 1 is equivalent of Strategies 1 and 2 while Figure 2 showcases Strategies 3 and 4.
 
-There are several QRPs are involved in both cases. Mainly, regarding the strategies 2, and 4,
+<figure>
+	<picture>
+	  <source 
+    srcset="/figures/baker_2012/Marjan_2012_QRP_Large_Dark.png" 
+        media="(prefers-color-scheme: dark)">
+	  <img src="/figures/baker_2012/Marjan_2012_QRP_Large.png" id="fig:qrp_large" alt="Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable." />
+	</picture>
+	<figcaption aria-hidden="true"><b>Figure 1.</b> Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable.</figcaption>
+</figure>
+
+<figure>
+	<img src="/figures/baker_2012/Marjan_2012_QRP_Small.png" id="fig:qrp_small" alt="Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts." />
+	<figcaption aria-hidden="true"><b>Figure 2.</b> Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts.</figcaption>
+</figure>
+
+There are several QRPs involved in strategies 2 and 4.
 
 - Every *small* or *large* study **might** go under the *Selective Reporting* process in which the researcher evaluates and reports the secondary outcome, if she does not find the primary outcome satisfactory.
 
@@ -37,34 +52,20 @@ There are several QRPs are involved in both cases. Mainly, regarding the strateg
 
     - later in the simulation, as shown in Fig 2., she will select the appropriate outcome from the pool of outcomes collected from all replications.
 
-    - _Strategy 3 follows the same logic with the only difference that each replication doesn’t go through the QRP routine, but, the researcher will **still** review her finding after performing 5 exact replications._
+    - _Strategy 3 follows the same logic with the only difference that each replication doesn’t go through the QRP routine, however, the researcher will **still** review her finding after performing 5 exact replications._
 
-<figure>
-    <picture>
-      <source 
-        srcset="/figures/baker_2012/Marjan_2012_QRP_Large_Dark.png" 
-        media="(prefers-color-scheme: dark)">
-      <img src="/figures/baker_2012/Marjan_2012_QRP_Large.png" id="fig:qrp_large" alt="Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable." />
-    </picture>
-<figcaption aria-hidden="true"><b>Figure 1.</b> Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable.</figcaption>
-</figure>
-
-<figure>
-<img src="/figures/baker_2012/Marjan_2012_QRP_Small.png" id="fig:qrp_small" alt="Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts." /><figcaption aria-hidden="true"><b>Figure 2.</b> Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts.</figcaption>
-</figure>
-
+The rest of this article focuses on simulating Bakker’s study using SAM, and consequently comparing two approach with each other.
 
 ## SAM Configuration
 
-In order to recreate Bakker's simulation using SAM, we start by planning [Researcher's Workflow](research-workflow.md) and translate that into a [configuration file](configuration-file.md).
-
+In order to recreate Bakker's simulation using SAM, we start by planning [Researcher's Workflow](research-workflow.md) and translating that into a [configuration file](configuration-file.md).
 
 <picture>
 	<img width="300px" align="right" src="/examples/Bakker_2012/Marjan_2012_Expriment_Design_Light.png" id="fig:marjan_2012_design"/>
 <picture>
 
 
-Bakker's experiment is a 2x2 factorial design consists of two groups, Control (C) and Treatment (T) each measuring two dependent variables, as shown in Figure x. The sample population is a multivariate normal distribution with mean of $\hat{0}$ and $\hat{\mu}$, respectively, and standard deviation of $1$, and $0.5$ covarinace between dependent variables. Therefore, $\hat{x} \in MN(\hat{\mu}, \Sigma)$ where $\hat{\mu} = (0, 0, \mu, \mu)$ and 
+Bakker's experiment is a 2x2 factorial design consists of two groups, Control (C) and Treatment (T) each measuring two dependent variables, as shown in Figure x. The sample population is a multivariate normal distribution with mean of $\hat{0}$ and $\hat{\mu}$, respectively, and standard deviation of $1$, and $0.5$ covarinace between dependent variables. Therefore, $\hat{DV} \in MN(\hat{\mu}, \Sigma)$ where $\hat{\mu} = (0, 0, \mu, \mu)$ and 
 
 
 $$
@@ -78,8 +79,7 @@ $$
 $$
 
 
-This design can be expressed in the following json
-
+This design can be expressed using a Linear Model data strategy as follow: 
 
 ??? example "Configuration: _Data Strategy_"
     ```json
@@ -104,7 +104,7 @@ This design can be expressed in the following json
     }
     ```
 
-Bakker's Researcher uses TTest to asses the significant of its findings, in order to 
+Bakker's Researcher uses TTest to asses the significant of its findings. This choice can be expressed in the Test Strategy setting as follow:
 
 
 ??? example "Configuration: _Test Strategy_"
@@ -124,9 +124,19 @@ Bakker's Researcher uses TTest to asses the significant of its findings, in orde
     }
     ```
 
+After setting Experiment parameters, we can start implementing Decision Strategy and Hacking Strategies.
 
 ### Strategy 1, and 3 (Without QRPs)
 
+#### Hacking Strategy
+
+In these strategies, researchers will not commit any QRPs, therefore the `probability_of_being_a_hacker` should be set to `0`. 
+
+#### Decision Strategies
+
+Following the workflow depicted in Figure 1, we will able to set different decision and selection policies in place for the researcher to achieve the exact path described by Bakker.
+
+The researcher always starts by checking the primary outcome, if the selected outcome is not significant and doesn’t have a positive effect (i.e.`"initial_selection_policies": [["id == 2"]]`), she continues with the first hacking strategy. Since in strategies 1 and 3, we are not performing any QRPs, this path will not be taken. In the case of small studies, the researcher will replicate 5 exact studies, and consequently choose the most desirable outcome among them. Her preferences can be seen under `between_replications_selection_policies` parameter.
 
 ??? example "Configuration: _Decision Strategy_"
     ```json
@@ -140,6 +150,7 @@ Bakker's Researcher uses TTest to asses the significant of its findings, in orde
           "initial_selection_policies": [
             ["id == 2"]
           ],
+          "will_start_hacking_decision_policies": ["effect < 0", "!sig"],
           "between_hacks_selection_policies": [
             ["effect > 0", "min(pvalue)"],
             ["effect < 0", "max(pvalue)"]
@@ -151,7 +162,6 @@ Bakker's Researcher uses TTest to asses the significant of its findings, in orde
             ["effect < 0", "max(pvalue)"]
           ],
           "will_continue_replicating_decision_policy": [""],
-          "will_start_hacking_decision_policies": ["effect < 0", "!sig"],
           "submission_decision_policies": [""],
         }
       ...
@@ -159,42 +169,14 @@ Bakker's Researcher uses TTest to asses the significant of its findings, in orde
     }
     ```
 
+> Mention the difference between `will_continue_replicating_decision_policy` in small and large studies.
 
 
 ### Strategy 2, and 4 (With QRPs)
 
+#### Hacking Strategies
 
-??? example "Configuration File: _Decision Strategy_"
-    ```json
-    {
-      ...
-      "researcher_parameters": {
-        ...
-        "probability_of_being_a_hacker": 1,
-        "decision_strategy": {
-          "name": "DefaultDecisionMaker",
-          "between_hacks_selection_policies": [
-            ["effect > 0","min(pvalue)"],
-            ["effect < 0","max(pvalue)"]
-          ],
-          "between_replications_selection_policies": [
-            ["effect > 0", "sig", "first"],
-            ["effect > 0", "min(pvalue)"],
-            ["effect < 0", "max(pvalue)"]],
-          "initial_selection_policies": [
-            ["id == 2", "sig", "effect > 0"],
-            ["id == 3", "sig", "effect > 0"]
-          ],
-          "stashing_policy": ["all"],
-          "submission_decision_policies": [""],
-          "will_continue_replicating_decision_policy": [""],
-          "will_start_hacking_decision_policies": ["effect < 0", "!sig"]
-        }
-      ...
-      }
-    }
-    ```
-
+In Strategy 2 and 4, researcher will execute at least one of the listed strategies. After each QRP, the researcher gets to select an outcome from the altered Experiment, after her selection, she can decide on whether she is going to stop there, or applies the next hacking strategy. In Bakker’s case, the *selection → decision* is simple. The researcher selects the outcome with positive effect and minimum *p*-value; then, she checks the desirability of the selected outcome, if the outcome is not desirable, she will execute the next QRP. These settings are highlighted in the following configuration.
 
 ??? example "Configuration: _Hacking Strategy_"
     ```json
@@ -233,9 +215,44 @@ Bakker's Researcher uses TTest to asses the significant of its findings, in orde
         ]
       }
     }
-
     ```
+    
+#### Decision Strategy
 
+In Bakker’s simulation, the decision making process between strategies with and without QRPs are very similar. The main research workflow stays intact as shown in Figure 1, and 2. However, now that researchers can commit any QRPs, they will need to choose between all altered outcomes. Bakker’s players tend to collect their findings — regardless of being QRPed or not — throughout the simulation, and select the most desirable one at the end of their research. This process is shown in Figure 1 with dashed lines transferring results to a temporary dataset, and finally reaching for the most desirable one inside it.
+
+As discussed, this process can be simulated in SAM as well. The  `stashing_policy` parameter indicates which of the outcomes will be collected by the researcher during its expedition. The `between_hacks_selection_policies` parameter indicates how is she going to select between those ..........
+
+??? example "Configuration File: _Decision Strategy_"
+    ```json
+    {
+      ...
+      "researcher_parameters": {
+        ...
+        "probability_of_being_a_hacker": 1,
+        "decision_strategy": {
+          "name": "DefaultDecisionMaker",
+          "between_hacks_selection_policies": [
+            ["effect > 0","min(pvalue)"],
+            ["effect < 0","max(pvalue)"]
+          ],
+          "between_replications_selection_policies": [
+            ["effect > 0", "sig", "first"],
+            ["effect > 0", "min(pvalue)"],
+            ["effect < 0", "max(pvalue)"]],
+          "initial_selection_policies": [
+            ["id == 2", "sig", "effect > 0"],
+            ["id == 3", "sig", "effect > 0"]
+          ],
+          "stashing_policy": ["all"],
+          "submission_decision_policies": [""],
+          "will_continue_replicating_decision_policy": [""],
+          "will_start_hacking_decision_policies": ["effect < 0", "!sig"]
+        }
+      ...
+      }
+    }
+    ```
 
 # Results
 
