@@ -213,3 +213,4 @@ Main variables and methods of `DecisionStrategy` are:
 As mentioned in `design-researcher`{.interpreted-text role="ref"} section, a `Researcher` instance can be equipped with a list **hackingStrategies**. If more than one hacking strategy is registered, `Researcher` performs all hacking methods on different copies of the original experiment and stores the result in `submissionsPool` and `experimentsPool`. After applying all methods, `Researcher` will ask the `DecisionStrategy` for its *final verdict*, and choose among all results before preparing the *final submission*.
 
 The `hacking-strategies`{.interpreted-text role="doc"} chapter will shine more light on details of each hacking strategy.
+

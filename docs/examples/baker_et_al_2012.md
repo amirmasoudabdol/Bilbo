@@ -1,37 +1,31 @@
----
-Title: Baker et al., 2012
-layout: default
-parent: Examples
----
+# Baker et al., 2012
 
-Baker et al., 2012
-====================
+In this report, we will attempt to discuss the replication and reproduction of the simulation study conducted by Baker et al., 2012[@Bakker_2012]. The simulation is designed to recreate a common routine of applying a set of questionable research practices, and consequently evaluate their effects on the observed effect size bias, and chance of finding significance results.
 
-In this report, I will attempt to discuss the replication and reproduction of the simulation study conducted by Bakker et al, 2012. The simulation designed to recreate a common routine of applying a set of questionable research practices, and evaluate their effects on the observed effect size bias, and chance of finding significance results.
-
-Experiment Design / Model Description
--------------------------------------
+## Experiment Design / Model Description
 
 As described by Bakker, the simulation study is concerned about 4 distinct strategies as follow:
 
-> - **Strategy 1.** Perform one large study (with N as the sample size) with sufficient power and publish it.
+> **Strategy 1.** Perform one large study (with N as the sample size) with sufficient power and publish it.
 > 
-> - **Strategy 2.** Perform one large study and use some of the QRPs most popular in psychology (John et al., 2012). These QRPs may be performed sequentially until a significant result is found:
->  - Test a second dependent variable that is correlated with the primary dependent variable (for which John et al. found a 65% admittance rate)
+> **Strategy 2.** Perform one large study and use some of the QRPs most popular in psychology (John et al., 2012). These QRPs may be performed sequentially until a significant result is found:
+> - Test a second dependent variable that is correlated with the primary dependent variable (for which John et al. found a 65% admittance rate)
 >  - Add 10 subjects (sequential testing; 57% admittance rate)
 >  - Remove outliers (\|*Z* > 2\|) and rerun analysis (41% admittance rate)
 > 
-> - **Strategy 3.** Perform, at most, five small studies each with (N/5) as sample size. Players may stop data collection when they find a significant result in the expected direction and only publish the desired result (the other studies are denoted “failed”; 48% admittance rate).
+> **Strategy 3.** Perform, at most, five small studies each with (N/5) as sample size. Players may stop data collection when they find a significant result in the expected direction and only publish the desired result (the other studies are denoted “failed”; 48% admittance rate).
 > 
-> - **Strategy 4.** Perform, at most, five small studies and apply the QRPs described above in each of these small studies if the need arises. Players may report only the first study that “worked.”
+> **Strategy 4.** Perform, at most, five small studies and apply the QRPs described above in each of these small studies if the need arises. Players may report only the first study that “worked.”
 > 
 > <p style="text-align:right">  — Bakker et al., 2012</p>
 
-Two main distinguishing factors in the simulation are sample size, *N*, and whether the pre-defined set of QRPs are applied on the study or not. Another important key difference between *small*, and *large* studies is the repetitive nature of conducting *small* studies. Each small study is almost a replication of the main study — that might or might not go through the QRP procedure. Figure <a href="#fig:qrp_large" data-reference-type="ref" data-reference="fig:qrp_large">1</a> and <a href="#fig:qrp_small" data-reference-type="ref" data-reference="fig:qrp_small">2</a> are showcasing the simulation setup as described by Bakker. Figure 1 is equivalent of the Strategy 2 while Figure 2 showcases the strategy 4.
+Two main distinguishing factors in the simulation are sample size, *N*, and whether the pre-defined set of QRPs are applied on the study or not. Another important key difference between *small*, and *large* studies is the repetitive nature of conducting *small* studies. Each small study is *almost* a replication of the main study — that might or might not go through the QRP procedure. 
+
+Figure <a href="#fig:qrp_large" data-reference-type="ref" data-reference="fig:qrp_large">1</a> and <a href="#fig:qrp_small" data-reference-type="ref" data-reference="fig:qrp_small">2</a> are showcasing the simulation setup as described by Bakker. Figure 1 is equivalent of the Strategy 2 while Figure 2 showcases the strategy 4.
 
 There are several QRPs are involved in both cases. Mainly, regarding the strategies 2, and 4,
 
-- Every *small* or *large* study **might** go under the *Selective Reporting* process in which the researcher evaluates and reports the secondonary outcome, if she does not find the primary outcome satisfactory.
+- Every *small* or *large* study **might** go under the *Selective Reporting* process in which the researcher evaluates and reports the secondary outcome, if she does not find the primary outcome satisfactory.
 
 - Every *small* or *large* study **might** go under the *Optional Stopping* routine in which the researcher adds 10 new subjects to each DV, and re-calculates her statistics in a quest to find a desirable result.
 
@@ -50,26 +44,200 @@ There are several QRPs are involved in both cases. Mainly, regarding the strateg
         media="(prefers-color-scheme: dark)">
       <img src="/figures/baker_2012/Marjan_2012_QRP_Large.png" id="fig:qrp_large" alt="Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable." />
     </picture>
-<figcaption aria-hidden="true">Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable.</figcaption>
+<figcaption aria-hidden="true"><b>Figure 1.</b> Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable.</figcaption>
 </figure>
 
 <figure>
-<img src="/figures/baker_2012/Marjan_2012_QRP_Small.png" id="fig:qrp_small" alt="Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts." /><figcaption aria-hidden="true">Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts.</figcaption>
+<img src="/figures/baker_2012/Marjan_2012_QRP_Small.png" id="fig:qrp_small" alt="Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts." /><figcaption aria-hidden="true"><b>Figure 2.</b> Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts.</figcaption>
 </figure>
 
 
-SAM Configuration
------------------
+## SAM Configuration
+
+In order to recreate Bakker's simulation using SAM, we start by planning [Researcher's Workflow](research-workflow.md) and translate that into a [configuration file](configuration-file.md).
+
+
+<picture>
+	<img width="300px" align="right" src="/examples/Bakker_2012/Marjan_2012_Expriment_Design_Light.png" id="fig:marjan_2012_design"/>
+<picture>
+
+
+Bakker's experiment is a 2x2 factorial design consists of two groups, Control (C) and Treatment (T) each measuring two dependent variables, as shown in Figure x. The sample population is a multivariate normal distribution with mean of $\hat{O}$ and $\hat{\mu}$, respectively, and standard deviation of $1$, and $0.5$ covarinace between dependent variables.
+
+$$
+\hat{x} \in MN(\hat{\mu}, \Sigma)
+
+where \hat{\mu} = (0, 0, \mu, \mu) and 
+
+\begin{bmatrix}
+1 & 0.5 & 0 & 0 \\
+0.5 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0.5 \\
+0 & 0 & 0.5 & 1 \\
+\end{bmatrix}
+$$
+
+
+This design can be expressed in the following json
+
+
+??? example "Configuration: _Data Strategy_"
+    ```json
+    {
+      ...
+      "experiment_parameters": {
+        "n_obs": 20,
+        "n_conditions": 2,
+        "n_dep_vars": 2,
+        "data_strategy": {
+          "name": "LinearModel",
+          "measurements": {
+              "dist": "mvnorm_distribution",
+              "means": [0, 0, μ, μ],
+              "sigma": [[1.0,   0.5,   0.0,   0.0],
+                        [0.5,   1.0,   0.0,   0.0],
+                        [0.0,   0.0,   1.0,   0.5],
+                        [0.0,   0.0,   0.5,   1.0]]
+        }
+      }
+      ...
+    }
+    ```
+
+Bakker's Researcher uses TTest to asses the significant of its findings, in order to 
+
+
+??? example "Configuration: _Test Strategy_"
+    ```json
+    {
+      ...
+      "experiment_parameters": {
+        ...
+        "test_strategy": {
+          "name": "TTest",
+          "alpha": 0.05,
+          "alternative": "TwoSided",
+          "var_equal": true
+        }
+      }
+      ...
+    }
+    ```
 
 
 ### Strategy 1, and 3 (Without QRPs)
 
 
+??? example "Configuration: _Decision Strategy_"
+    ```json
+    {
+      ...
+      "researcher_parameters": {
+        ...
+        "probability_of_being_a_hacker": 0,
+        "decision_strategy": {
+          "name": "DefaultDecisionMaker",
+          "initial_selection_policies": [
+            ["id == 2"]
+          ],
+          "between_hacks_selection_policies": [
+            ["effect > 0", "min(pvalue)"],
+            ["effect < 0", "max(pvalue)"]
+          ],
+          "stashing_policy": ["all"],
+          "between_replications_selection_policies": [
+            ["effect > 0", "sig", "first"],
+            ["effect > 0", "min(pvalue)"],
+            ["effect < 0", "max(pvalue)"]
+          ],
+          "will_continue_replicating_decision_policy": [""],
+          "will_start_hacking_decision_policies": ["effect < 0", "!sig"],
+          "submission_decision_policies": [""],
+        }
+      ...
+      }
+    }
+    ```
+
+
+
 ### Strategy 2, and 4 (With QRPs)
 
 
-Results
--------
+??? example "Configuration File: _Decision Strategy_"
+    ```json
+    {
+      ...
+      "researcher_parameters": {
+        ...
+        "probability_of_being_a_hacker": 1,
+        "decision_strategy": {
+          "name": "DefaultDecisionMaker",
+          "between_hacks_selection_policies": [
+            ["effect > 0","min(pvalue)"],
+            ["effect < 0","max(pvalue)"]
+          ],
+          "between_replications_selection_policies": [
+            ["effect > 0", "sig", "first"],
+            ["effect > 0", "min(pvalue)"],
+            ["effect < 0", "max(pvalue)"]],
+          "initial_selection_policies": [
+            ["id == 2", "sig", "effect > 0"],
+            ["id == 3", "sig", "effect > 0"]
+          ],
+          "stashing_policy": ["all"],
+          "submission_decision_policies": [""],
+          "will_continue_replicating_decision_policy": [""],
+          "will_start_hacking_decision_policies": ["effect < 0", "!sig"]
+        }
+      ...
+      }
+    }
+    ```
+
+
+??? example "Configuration: _Hacking Strategy_"
+    ```json
+    {
+      "researcher_parameters": {
+        "hacking_strategies": [
+          [
+            {
+              "name": "OptionalStopping",
+              "target": "Both",
+              "max_attempts": 1,
+              "n_attempts": 1,
+              "num": 10
+            },
+            [
+              ["effect > 0", "min(pvalue)" ]
+            ],
+            ["effect < 0", "!sig"]
+          ],
+          [
+            {
+              "name": "OutliersRemoval",
+              "target": "Both",
+              "max_attempts": 1,
+              "min_observations": 1,
+              "multipliers": [2],
+              "n_attempts": 1,
+              "num": 100,
+              "order": "random"
+            },
+            [
+              ["effect > 0", "min(pvalue)" ]
+            ],
+            ["effect < 0", "!sig"]
+          ]
+        ]
+      }
+    }
+
+    ```
+
+
+# Results
 
 The first part of the result section compares the result from the original simulation with the simulation performed by SAM. In the rest of the section, I extended the original simulation by evaluting the effect of *α* on the observed bias.
 
@@ -114,3 +282,6 @@ While we can see a clear change in the probility of finding a significant result
 <figure>
 <img src="/figures/baker_2012/Marjan et al 2012 - QRP - noQRP - Extended - ES Bias - Heatmap.png" id="fig:extended_sim_heatmap_bias" alt="Heatmap of the ES Bias" /><figcaption aria-hidden="true">Heatmap of the ES Bias</figcaption>
 </figure>
+
+
+\bibliography

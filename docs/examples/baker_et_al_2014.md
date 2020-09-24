@@ -1,7 +1,7 @@
 Introduction
 ============
 
-This report discusses the reproduction process of the simulation study conducted by Bakker et al, 2014. The simulation aims to study the effects of removing outliers on Type I error on studies based on Graded Response Model. The original study also explores alternative tests but I will not address those in this report.
+This report discusses the reproduction process of the simulation study conducted by Bakker et al, 2014[@Bakker_2014]. The simulation aims to study the effects of removing outliers on Type I error on studies based on Graded Response Model. The original study also explores alternative tests but I will not address those in this report.
 
 Experiment Setup
 ================
@@ -34,7 +34,7 @@ Figure <a href="#fig:strategies_flowchart" data-reference-type="ref" data-refer
 
 > <p style="text-align:right">  — Bakker et al., 2012, page 5.</p>
 
-The reproduction simulation is in fact simulating the behavior of the researcher who dynamically reducing *k* until she finds a significant result. As stated by Bakker, this should be equivalent to calculating the subjective Type I Error from the posterior of the non-subjective simulation.[^1]
+The reproduction simulation is in fact simulating the behavior of the researcher who dynamically reducing *k* until she finds a significant result. As stated by Bakker, this should be equivalent to calculating the subjective Type I Error from the posterior of the non-subjective simulation. (While for the most configurations, the estimate is quite accurate, I am not yet convinced that both approach always lead to the same level of Type I Error.)
 
 <figure>
 <img src="/figures/baker_2014/Marjan_2014_Flowchart.png" id="fig:strategies_flowchart" alt="Simulation Design" /><figcaption aria-hidden="true">Simulation Design</figcaption>
@@ -49,5 +49,4 @@ Figure <a href="#fig:subjective_vs_non_subjective_type_i_error" data-reference-
 <img src="/figures/baker_2014/Side-by-Side.png" id="fig:subjective_vs_non_subjective_type_i_error" alt="Non-Subjective (left panel) and Subjective (right panel) Type I Error" /><figcaption aria-hidden="true">Non-Subjective (left panel) and Subjective (right panel) Type I Error</figcaption>
 </figure>
 
-[^1]:
-    While for the most configurations, the estimate is quite accurate, I     am not yet convinced that both approach always lead to the same level of     Type I Error.
+\bibliography
