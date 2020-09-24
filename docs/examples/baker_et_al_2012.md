@@ -19,7 +19,9 @@ As described by Bakker, the simulation study is concerned about 4 distinct strat
 > 
 > <p style="text-align:right">  — Bakker et al., 2012</p>
 
-Two main distinguishing factors in the simulation are sample size, *N*, and whether the pre-defined set of QRPs are applied on the study or not. Another important key difference between *small*, and *large* studies is the repetitive nature of conducting *small* studies. Each small study is *almost* a replication of the main study — that might or might not go through the QRP procedure. 
+Two main distinguishing factors in the simulation are sample size, *N*, and whether the pre-defined set of QRPs are applied on the study or not. When it comes to sample sizes, Bakker defines two size class, small and large. Number of observations in small studies can be a value from $\{5, 10, 20\}$, and number of observation in large studies can be either of $\{25, 50, 100\}$. 
+
+One key difference between *small*, and *large* studies is the repetitive nature of conducting *small* studies as described in Strategy 3 and 4. Each small study is **almost** an exact replication of the main study — that might or might not go through the QRP procedure. In **Strategy 3**, and **4**, the final outcome is being chosen from total of 5 replicated small studies. 
 
 Figure <a href="#fig:qrp_large" data-reference-type="ref" data-reference="fig:qrp_large">1</a> and <a href="#fig:qrp_small" data-reference-type="ref" data-reference="fig:qrp_small">2</a> are showcasing the simulation setup as described by Bakker. Figure 1 is equivalent of the Strategy 2 while Figure 2 showcases the strategy 4.
 
@@ -29,13 +31,13 @@ There are several QRPs are involved in both cases. Mainly, regarding the strateg
 
 - Every *small* or *large* study **might** go under the *Optional Stopping* routine in which the researcher adds 10 new subjects to each DV, and re-calculates her statistics in a quest to find a desirable result.
 
-- Also, every study **might** go under the *Outliers Removal* process in which the researcher attempts to remove all subjects farther than 2 standard deviation from the sample mean in a quest to find a desirable result.
+- Every study **might** go under the *Outliers Removal* process in which the researcher attempts to remove all subjects farther than 2 standard deviation from the sample mean in a quest to find a desirable result.
 
-- In *large* studies, a simulation will stop as soon as the researcher find a significant result with positive effect. However, in *small* studies, while the researcher reports her finding after performing the set of QRPs (”QRP Procedure” in Fig. 1), she continues to repeat the same routine for 5 times, and collect the final outcome of each replication,
+- In *large* studies, a simulation will stop as soon as the researcher find a significant result with positive effect. However, in *small* studies, while the researcher reports her finding after performing the set of QRPs (”QRP Procedure” in Fig. 1), she continues to repeat the same routine 5 times, and collects the outcome of each replication,
 
     - later in the simulation, as shown in Fig 2., she will select the appropriate outcome from the pool of outcomes collected from all replications.
 
-    - _Strategy 3 follows the same logic with the only difference that each replication doesn’t go through the QRP routine, but, the researcher will **still** review her finding after performing 5 replications._
+    - _Strategy 3 follows the same logic with the only difference that each replication doesn’t go through the QRP routine, but, the researcher will **still** review her finding after performing 5 exact replications._
 
 <figure>
     <picture>
@@ -62,18 +64,16 @@ In order to recreate Bakker's simulation using SAM, we start by planning [Resear
 <picture>
 
 
-Bakker's experiment is a 2x2 factorial design consists of two groups, Control (C) and Treatment (T) each measuring two dependent variables, as shown in Figure x. The sample population is a multivariate normal distribution with mean of $\hat{O}$ and $\hat{\mu}$, respectively, and standard deviation of $1$, and $0.5$ covarinace between dependent variables.
+Bakker's experiment is a 2x2 factorial design consists of two groups, Control (C) and Treatment (T) each measuring two dependent variables, as shown in Figure x. The sample population is a multivariate normal distribution with mean of $\hat{0}$ and $\hat{\mu}$, respectively, and standard deviation of $1$, and $0.5$ covarinace between dependent variables. Therefore, $\hat{x} \in MN(\hat{\mu}, \Sigma)$ where $\hat{\mu} = (0, 0, \mu, \mu)$ and 
+
 
 $$
-\hat{x} \in MN(\hat{\mu}, \Sigma)
-
-where \hat{\mu} = (0, 0, \mu, \mu) and 
-
+\Sigma =
 \begin{bmatrix}
 1 & 0.5 & 0 & 0 \\
 0.5 & 1 & 0 & 0 \\
 0 & 0 & 1 & 0.5 \\
-0 & 0 & 0.5 & 1 \\
+0 & 0 & 0.5 & 1
 \end{bmatrix}
 $$
 
