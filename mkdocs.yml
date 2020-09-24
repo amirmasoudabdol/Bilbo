@@ -32,6 +32,7 @@ edit_uri: ""
 
 
 plugins:
+  - search
   - img2fig
   - bibtex:
       bib_file: "refs.bib"
