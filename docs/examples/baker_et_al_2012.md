@@ -81,7 +81,7 @@ $$
 
 This design can be expressed using a Linear Model data strategy as follow: 
 
-??? example "Configuration: _Data Strategy_"
+??? datastrategy "Configuration: _Data Strategy_"
     ```json
     {
       ...
@@ -107,7 +107,7 @@ This design can be expressed using a Linear Model data strategy as follow:
 Bakker's Researcher uses TTest to asses the significant of its findings. This choice can be expressed in the Test Strategy setting as follow:
 
 
-??? example "Configuration: _Test Strategy_"
+??? teststrategy "Configuration: _Test Strategy_"
     ```json
     {
       ...
@@ -138,7 +138,7 @@ Following the workflow depicted in Figure 1, we will able to set different decis
 
 The researcher always starts by checking the primary outcome, if the selected outcome is not significant and doesn’t have a positive effect (i.e.`"initial_selection_policies": [["id == 2"]]`), she continues with the first hacking strategy. Since in strategies 1 and 3, we are not performing any QRPs, this path will not be taken. In the case of small studies, the researcher will replicate 5 exact studies, and consequently choose the most desirable outcome among them. Her preferences can be seen under `between_replications_selection_policies` parameter.
 
-??? example "Configuration: _Decision Strategy_"
+??? decisionstrategy "Configuration: _Decision Strategy_"
     ```json
     {
       ...
@@ -178,7 +178,7 @@ The researcher always starts by checking the primary outcome, if the selected ou
 
 In Strategy 2 and 4, researcher will execute at least one of the listed strategies. After each QRP, the researcher gets to select an outcome from the altered Experiment, after her selection, she can decide on whether she is going to stop there, or applies the next hacking strategy. In Bakker’s case, the *selection → decision* is simple. The researcher selects the outcome with positive effect and minimum *p*-value; then, she checks the desirability of the selected outcome, if the outcome is not desirable, she will execute the next QRP. These settings are highlighted in the following configuration.
 
-??? example "Configuration: _Hacking Strategy_"
+??? hackingstrategy "Configuration: _Hacking Strategy_"
     ```json
     {
       "researcher_parameters": {
@@ -223,7 +223,7 @@ In Bakker’s simulation, the decision making process between strategies with an
 
 As discussed, this process can be simulated in SAM as well. The  `stashing_policy` parameter indicates which of the outcomes will be collected by the researcher during its expedition. The `between_hacks_selection_policies` parameter indicates how is she going to select between those ..........
 
-??? example "Configuration File: _Decision Strategy_"
+??? decisionstrategy "Configuration File: _Decision Strategy_"
     ```json
     {
       ...
