@@ -9,7 +9,7 @@ p {
 
 pre, code {
 	/*font-family: ui-monospace !important;*/
-	font-weight: 500 !important;
+	font-weight: 600 !important;
 }
 
 .md-content {
@@ -26,15 +26,17 @@ figcaption {
 	text-align: left;
 }
 
+blockquote {
+  font-family: ui-rounded, ui-serif;
+  font-size: 98%;
+}
+
 
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #141414;
   }
-/*  p {
-    color: white !important;
-  }*/
-  a:focus, a:hover, .md-nav__link:focus, .md-nav__link:hover{
+  a:focus, a:hover, .md-nav__link:focus, .md-nav__link:hover {
     color: #aaaaaa !important;
   }
 }
@@ -44,10 +46,7 @@ figcaption {
   body {
     background-color: #fafafa;
   }
-/*  p {
-    color: black !important;
-  }
-*/  a:focus, a:hover, .md-nav__link:focus, .md-nav__link:hover {
+    a:focus, a:hover, .md-nav__link:focus, .md-nav__link:hover {
     color: #aaaaaa !important;
   }
 }
