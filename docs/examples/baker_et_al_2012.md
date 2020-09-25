@@ -27,9 +27,6 @@ Figure <a href="#fig:qrp_large" data-reference-type="ref" data-reference="fig:q
 
 <figure>
 	<picture>
-	  <source 
-    srcset="/figures/baker_2012/Marjan_2012_QRP_Large_Dark.png" 
-        media="(prefers-color-scheme: dark)">
 	  <img src="/figures/baker_2012/Marjan_2012_QRP_Large.png" id="fig:qrp_large" alt="Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable." />
 	</picture>
 	<figcaption aria-hidden="true"><b>Figure 1.</b> Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable.</figcaption>
