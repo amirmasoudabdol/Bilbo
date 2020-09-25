@@ -251,23 +251,57 @@ As discussed, this process can be simulated in SAM as well. The  `stashing_polic
     }
     ```
 
-# Results
+## Results
 
-The first part of the result section compares the result from the original simulation with the simulation performed by SAM. In the rest of the section, I extended the original simulation by evaluting the effect of *α* on the observed bias.
+We start by comparing results between the original simulation and the reproduced study. In the rest of the section, we will extend the original simulation by taking advantages of SAM's flexibility.
 
 ### Original vs. Reproduction
 
-Figure <a href="#fig:original_vs_reproduced" data-reference-type="ref" data-reference="fig:original_vs_reproduced">3</a> compares the results from the original study and the results from the reproduced simulation. As it can be seen, the reproduction simulation — distinguished using points — are mainly agreeing with the original simulation with exception of some minor discrepancies in *small* studies. In all cases, the reproduction simulation captures more bias in small studies with QRPs.
+Figure <a href="#fig:original_vs_reproduced" data-reference-type="ref" data-reference="fig:original_vs_reproduced">3</a> compares the results from the original study and the results from the reproduced simulation. As it can be seen, the reproduction simulation — distinguished by points — are mainly agreeing with the original simulation with exception of some minor discrepancies in *small* studies. In all cases, the reproduction simulation captures more bias in small studies with QRPs.
 
 <figure>
-<img src="/figures/baker_2012/Marjan et al 2012 - Reproduction vs. Original - Comparison.png" id="fig:original_vs_reproduced" alt="Comparison between original and reproduced results (using SAM)." /><figcaption aria-hidden="true">Comparison between original and reproduced results (using SAM).</figcaption>
+  <picture>
+    <source 
+        srcset="/examples/Bakker_2012/Comparison_with_Original_Simulation_dark.png" 
+        media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Comparison_with_Original_Simulation_light.png" id="fig:original_vs_reproduced" alt="Comparison between original and reproduced results (using SAM)." /><figcaption aria-hidden="true">Comparison between original and reproduced results (using SAM).</figcaption>
+  </picture>
+</figure>
+
+Further investigation leads to the finding of a minor bug in Bakker et al., simulation where a typo resulted in incorrect calculation of *p*-value in *small* simulation. Figure x, shows the comparison of results from the patched script, and SAM's results. 
+
+<figure>
+  <picture>
+    <source 
+        srcset="/examples/Bakker_2012/Comparison_with_Patched_Simulation_dark.png" 
+        media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Comparison_with_Patched_Simulation_light.png" id="fig:original_vs_reproduced" alt="Comparison between original and reproduced results (using SAM)." /><figcaption aria-hidden="true">Comparison between results from the patched script and results from SAM.</figcaption>
+  </picture>
 </figure>
 
 ### Extended Simulation
 
-This section discuss the results of an extended simulation, where I explored the effect of different values of *α* ∈ {0.0005, 0.005, 0.05} on the observed ES bias. The main body of the simulation is itenditcal to the original simulation performed by Bakker.
+This section discuss the results of an extended simulation, where we explored the effect of different values of *α* ∈ {0.0005, 0.005, 0.05} on the observed effect size bias, *ES Bias*. The main body of the simulation is identical to the original simulation performed by Bakker. In order to enforce different level of alpha, the only parameters that needs to be changes is `test_alpha`. 
 
-Figure <a href="#fig:extended_sim_proportion_plot" data-reference-type="ref" data-reference="fig:extended_sim_proportion_plot">4</a> shows the chance of finding at least one significant result. As expected, from left to right, the chane of finding significant result — in all cases — increases as we increase the *α* but not so drastically. Check Figure <a href="#fig:extended_sim_proportion_vs_bias" data-reference-type="ref" data-reference="fig:extended_sim_proportion_vs_bias">6</a> for more clear comparison.
+??? teststrategy "Configuration: _Test Strategy_"
+    ```json hl_lines="7"
+    {
+      ...
+      "experiment_parameters": {
+        ...
+        "test_strategy": {
+          "name": "TTest",
+          "alpha": 0.05,
+          "alternative": "TwoSided",
+          "var_equal": true
+        }
+      }
+      ...
+    }
+    ```
+		
+
+Figure <a href="#fig:extended_sim_proportion_plot" data-reference-type="ref" data-reference="fig:extended_sim_proportion_plot">4</a> shows the chance of finding at least one significant result. As expected, from left to right, the chance of finding significant result — in all cases — increases as we increase *α* but not so drastically. Check Figure <a href="#fig:extended_sim_proportion_vs_bias" data-reference-type="ref" data-reference="fig:extended_sim_proportion_vs_bias">6</a> for more clear comparison.
 
 Figure <a href="#fig:extended_sim_bias_plot" data-reference-type="ref" data-reference="fig:extended_sim_bias_plot">5</a> shows the level of bias in the estimated effect. The effect of lowering the *α* on ES bias is not as obvious as it is on the chance of finding significant results. In almost all cases, the largest *α* leads to less bias in the effect as the true effect size increases. In strategy 4, where the researcher commits a set of QRPs on *small* studies, the bias rises even more drastically as we increase *α*. This is shown more clearly in Figure <a href="#fig:extended_sim_proportion_vs_bias" data-reference-type="ref" data-reference="fig:extended_sim_proportion_vs_bias">6</a>.
 
@@ -296,6 +330,9 @@ While we can see a clear change in the probility of finding a significant result
 <figure>
 <img src="/figures/baker_2012/Marjan et al 2012 - QRP - noQRP - Extended - ES Bias - Heatmap.png" id="fig:extended_sim_heatmap_bias" alt="Heatmap of the ES Bias" /><figcaption aria-hidden="true">Heatmap of the ES Bias</figcaption>
 </figure>
+
+
+## Further Extension: Influence of Publication Bias
 
 
 \bibliography

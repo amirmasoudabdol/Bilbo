@@ -84,6 +84,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      linenums_style: pymdownx.inline
   - pymdownx.magiclink
   - pymdownx.mark
   #- pymdownx.smartsymbols
