@@ -268,7 +268,7 @@ Figure <a href="#fig:original_vs_reproduced" data-reference-type="ref" data-ref
   </picture>
 </figure>
 
-Further investigation leads to the finding of a minor bug in Bakker et al., simulation where a typo resulted in incorrect calculation of *p*-value in *small* simulation. Figure x, shows the comparison of results from the patched script, and SAM's results. 
+Further investigation led to the finding of a minor bug in Bakker et al., code where a typo resulted in insertion of a wrong study in the replication pool of  *small* simulation. Figure x, shows the comparison of results from the patched script, and SAM's results. 
 
 <figure>
   <picture>
@@ -279,9 +279,11 @@ Further investigation leads to the finding of a minor bug in Bakker et al., simu
   </picture>
 </figure>
 
-### Extended Simulation
+## First Extension: α‘s Role
 
-This section discuss the results of an extended simulation, where we explored the effect of different values of *α* ∈ {0.0005, 0.005, 0.05} on the observed effect size bias, *ES Bias*. The main body of the simulation is identical to the original simulation performed by Bakker. In order to enforce different level of alpha, the only parameters that needs to be changes is `test_alpha`. 
+Building on top of Bakker’s simulation and using SAM’s flexibility we can extend their simulation to study the observed effect size bias, *ES Bias*, under different values of *α* ∈ {0.0005, 0.005, 0.05}.
+
+The main body of the simulation is identical to the original simulation performed by Bakker. Therefore, we start from the final configuration file and in order to enforce different alpha levels, the only parameters that needs to be changes is `test_alpha`. 
 
 ??? teststrategy "Configuration: _Test Strategy_"
     ```json hl_lines="7"
@@ -300,12 +302,13 @@ This section discuss the results of an extended simulation, where we explored th
     }
     ```
 		
+By running the simulation under selected range of parameters, listed [here], we will be able summarize our results for different levels of alpha in Figure X. Here we can follow the effect of alpha on probability of finding significance and the amount of induced biased under Bakker’s rules. 
 
 Figure <a href="#fig:extended_sim_proportion_plot" data-reference-type="ref" data-reference="fig:extended_sim_proportion_plot">4</a> shows the chance of finding at least one significant result. As expected, from left to right, the chance of finding significant result — in all cases — increases as we increase *α* but not so drastically. Check Figure <a href="#fig:extended_sim_proportion_vs_bias" data-reference-type="ref" data-reference="fig:extended_sim_proportion_vs_bias">6</a> for more clear comparison.
 
 Figure <a href="#fig:extended_sim_bias_plot" data-reference-type="ref" data-reference="fig:extended_sim_bias_plot">5</a> shows the level of bias in the estimated effect. The effect of lowering the *α* on ES bias is not as obvious as it is on the chance of finding significant results. In almost all cases, the largest *α* leads to less bias in the effect as the true effect size increases. In strategy 4, where the researcher commits a set of QRPs on *small* studies, the bias rises even more drastically as we increase *α*. This is shown more clearly in Figure <a href="#fig:extended_sim_proportion_vs_bias" data-reference-type="ref" data-reference="fig:extended_sim_proportion_vs_bias">6</a>.
 
-It’s worth mentioning that the researcher has not adoptted his strategies to the adjusted values of *α*. In all cases, she still adds 10 new subjects and removes subjects with values further than 2 standard deviations. Another extension to this model could investigate the effect of more aggressive QRPs when stricter *α*’s are introduced.
+It’s worth mentioning that the researcher has not adoptted his strategies to the adjusted values of *α*. In all cases, she still adds 10 new subjects and removes subjects with values further than 2 standard deviations.
 
 <figure>
 <img src="/figures/baker_2012/Marjan et al 2012 - QRP - noQRP - Extended - Proportion Plot.png" id="fig:extended_sim_proportion_plot" alt="Chance of finding a significant result with regards to different values of \alpha." /><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
@@ -331,8 +334,19 @@ While we can see a clear change in the probility of finding a significant result
 <img src="/figures/baker_2012/Marjan et al 2012 - QRP - noQRP - Extended - ES Bias - Heatmap.png" id="fig:extended_sim_heatmap_bias" alt="Heatmap of the ES Bias" /><figcaption aria-hidden="true">Heatmap of the ES Bias</figcaption>
 </figure>
 
+## Second Extension: More Aggressive QRPs
 
-## Further Extension: Influence of Publication Bias
+Another extension to this model could investigate the effect of more aggressive QRPs when stricter *α*’s are introduced. For instance, we could adjust the Optional Stopping such that the Researcher adds the new subjects one by one until she finds a significance result. Moreover, the Outliers Removal can be replaced by a Subjective Outliers Removal where the research lowers the threshold gradually until she finds a significant result. 
+
+These two changes can be added to the configuration file in the following way. 
+
+??? hackingstrategy “Hacking Strategy: Aggressive Hacker”
+		add the config file here
+
+ 
+
+
+## Third Extension: Influence of Publication Bias
 
 
 \bibliography
