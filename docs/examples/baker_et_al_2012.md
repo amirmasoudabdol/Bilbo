@@ -329,10 +329,6 @@ It’s worth mentioning that the researcher has not adoptted his strategies to t
   </picture>
 </figure>
 
-<figure>
-<img src="/figures/baker_2012/Marjan et al 2012 - Extended - Proportion vs Bias.png" id="fig:extended_sim_proportion_vs_bias" alt="Chance of finding a significant results, and level of ES bias with regards to different values of \alpha." /><figcaption aria-hidden="true">Chance of finding a significant results, and level of ES bias with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
-</figure>
-
 The effect of *α* on the chance of finding a significant result and ES bias can be visualized using a heatmap as well. Figure <a href="#fig:extended_sim_heatmap_prop" data-reference-type="ref" data-reference="fig:extended_sim_heatmap_prop">7</a> and <a href="#fig:extended_sim_heatmap_bias" data-reference-type="ref" data-reference="fig:extended_sim_heatmap_bias">8</a> showcase the trends and oatterns more vividly. With regards to *chance of finding a significant result*, as discussed before, we can see a clear decline as we decrease *α*. This can be seen by the movement of the dark region (lower probablitiy) to the right side (higher effects).
 
 While we can see a clear change in the probility of finding a significant result, the heatmap of ES bias looks very scattered and with no clear patterns or trends. This is the indication of a non-linear relation between *α* and ES bias. While decreasing alpha makes it harder to find a significant results, a weak experiment design carries its bias with it anyway.
