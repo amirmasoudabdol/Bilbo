@@ -310,12 +310,23 @@ Figure <a href="#fig:extended_sim_bias_plot" data-reference-type="ref" data-ref
 
 It’s worth mentioning that the researcher has not adoptted his strategies to the adjusted values of *α*. In all cases, she still adds 10 new subjects and removes subjects with values further than 2 standard deviations.
 
+
 <figure>
-<img src="/figures/baker_2012/Marjan et al 2012 - QRP - noQRP - Extended - Proportion Plot.png" id="fig:extended_sim_proportion_plot" alt="Chance of finding a significant result with regards to different values of \alpha." /><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+  <picture>
+    <source 
+        srcset="/examples/Bakker_2012/First_Extension_Different_Alpha_Levels_Sig_dark.png" 
+        media="(prefers-color-scheme: dark)">
+  <img src="/examples/Bakker_2012/First_Extension_Different_Alpha_Levels_Sig_light.png" id="fig:extended_sim_proportion_plot" alt="Chance of finding a significant result with regards to different values of \alpha." /><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+  </picture> 
 </figure>
 
 <figure>
-<img src="/figures/baker_2012/Marjan et al 2012 - QRP - noQRP - Extended - ES Bias.png" id="fig:extended_sim_bias_plot" alt="ES Bias with regards to different values of \alpha." /><figcaption aria-hidden="true">ES Bias with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+  <picture>
+    <source 
+        srcset="/examples/Bakker_2012/First_Extension_Different_Alpha_Levels_ES_dark.png" 
+        media="(prefers-color-scheme: dark)">
+  <img src="/examples/Bakker_2012/First_Extension_Different_Alpha_Levels_ES_light.png" id="fig:extended_sim_bias_plot" alt="ES Bias with regards to different values of \alpha." /><figcaption aria-hidden="true">ES Bias with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+  </picture>
 </figure>
 
 <figure>
@@ -326,13 +337,6 @@ The effect of *α* on the chance of finding a significant result and ES bias can
 
 While we can see a clear change in the probility of finding a significant result, the heatmap of ES bias looks very scattered and with no clear patterns or trends. This is the indication of a non-linear relation between *α* and ES bias. While decreasing alpha makes it harder to find a significant results, a weak experiment design carries its bias with it anyway.
 
-<figure>
-<img src="/figures/baker_2012/Marjan et al 2012 - QRP - noQRP - Extended - Proportion Plot - Heatmap.png" id="fig:extended_sim_heatmap_prop" alt="Heatmap of the chance of finding significant result" /><figcaption aria-hidden="true">Heatmap of the chance of finding significant result</figcaption>
-</figure>
-
-<figure>
-<img src="/figures/baker_2012/Marjan et al 2012 - QRP - noQRP - Extended - ES Bias - Heatmap.png" id="fig:extended_sim_heatmap_bias" alt="Heatmap of the ES Bias" /><figcaption aria-hidden="true">Heatmap of the ES Bias</figcaption>
-</figure>
 
 ## Second Extension: More Aggressive QRPs
 
