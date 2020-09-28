@@ -10,7 +10,11 @@ nav:
         - data-strategies.md
         - test-strategies.md
         - effect-strategies.md
-        - hacking-strategies.md
+        - Hacking Strategies:
+            - hacking-strategies.md
+            - hacking_strategies/optional-stopping.md
+            - hacking_strategies/outliers-removal.md
+            - hacking_strategies/subjective-outliers-removal.md
         - decision-strategies.md
         - journal.md
     - Examples:

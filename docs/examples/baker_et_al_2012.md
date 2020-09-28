@@ -19,22 +19,21 @@ As described by Bakker, the simulation study is concerned about 4 distinct strat
 > 
 > <p style="text-align:right">  — Bakker et al., 2012</p>
 
-Two main distinguishing factors in the simulation are sample size, *N*, and whether the pre-defined set of QRPs are applied on the study or not. When it comes to sample sizes, Bakker defines two size class, small and large. Number of observations in small studies can be a value from $\{5, 10, 20\}$, and number of observation in large studies can be either of $\{25, 50, 100\}$. In fact, large studies are 5 times larger than small studies.
+Two main distinguishing factors in the simulation are sample size, *N*, and whether the pre-defined set of QRPs are applied on the study or not. When it comes to sample sizes, Bakker defines two size class, small and large. Number of observations in small studies can be a value from {5, 10, 20}, and number of observation in large studies can be either of {25, 50, 100}. Basically, large studies are 5 times larger than small studies.
 
 Another difference between *small*, and *large* studies is the repetitive nature of conducting *small* studies. In strategy 3 and 4, each trial is **almost** an exact replication of the main study — that might or might not have been gone through the QRP procedure. Results from these trials will be collected and at the end, the researcher will get a chance to report the most desirable outcome.
 
-Figure <a href="#fig:qrp_large" data-reference-type="ref" data-reference="fig:qrp_large">1</a> and <a href="#fig:qrp_small" data-reference-type="ref" data-reference="fig:qrp_small">2</a> are showcasing the simulation setup as described by Bakker. Figure 1 is equivalent of Strategies 1 and 2 while Figure 2 showcases Strategies 3 and 4.
+Following flowcharts are visualizing the simulation workflow designed by Bakker et al., 
+Figure <a href="#fig:qrp_large" data-reference-type="ref" data-reference="fig:qrp_large">1</a> is equivalent of Strategies 1 and 2 while <a href="#fig:qrp_small" data-reference-type="ref" data-reference="fig:qrp_small">2</a> showcases Strategies 3 and 4. Notice the "Perform the QRP Procedure" step in Figure 2 where a study goes through the entire process described in Figure 1 labeled as "QRP Procedure".
 
 <figure>
-	<picture>
-	  <img src="/figures/baker_2012/Marjan_2012_QRP_Large.png" id="fig:qrp_large" alt="Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable." />
-	</picture>
-	<figcaption aria-hidden="true"><b>Figure 1.</b> Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable.</figcaption>
+  <img src="/figures/baker_2012/Marjan_2012_QRP_Large.png" id="fig:qrp_large" alt="Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable." />
+  <figcaption aria-hidden="true"><b>Figure 1.</b> Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable.</figcaption>
 </figure>
 
 <figure>
-	<img src="/figures/baker_2012/Marjan_2012_QRP_Small.png" id="fig:qrp_small" alt="Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts." />
-	<figcaption aria-hidden="true"><b>Figure 2.</b> Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts.</figcaption>
+  <img src="/figures/baker_2012/Marjan_2012_QRP_Small.png" id="fig:qrp_small" alt="Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts." />
+  <figcaption aria-hidden="true"><b>Figure 2.</b> Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts.</figcaption>
 </figure>
 
 There are several QRPs involved in strategies 2 and 4.
@@ -51,6 +50,7 @@ There are several QRPs involved in strategies 2 and 4.
 
     - _Strategy 3 follows the same logic with the only difference that each replication doesn’t go through the QRP routine, however, the researcher will **still** review her finding after performing 5 exact replications._
 
+
 The rest of this article focuses on simulating Bakker’s study using SAM, and consequently comparing two approach with each other.
 
 ## SAM Configuration
@@ -58,7 +58,7 @@ The rest of this article focuses on simulating Bakker’s study using SAM, and c
 In order to recreate Bakker's simulation using SAM, we start by planning [Researcher's Workflow](research-workflow.md) and translating that into a [configuration file](configuration-file.md).
 
 <picture>
-	<img width="300px" align="right" src="/examples/Bakker_2012/Marjan_2012_Expriment_Design_Light.png" id="fig:marjan_2012_design"/>
+  <img width="300px" align="right" src="/examples/Bakker_2012/Marjan_2012_Expriment_Design_Light.png" id="fig:marjan_2012_design"/>
 <picture>
 
 
@@ -301,7 +301,7 @@ The main body of the simulation is identical to the original simulation performe
       ...
     }
     ```
-		
+    
 By running the simulation under selected range of parameters, listed [here], we will be able summarize our results for different levels of alpha in Figure X. Here we can follow the effect of alpha on probability of finding significance and the amount of induced biased under Bakker’s rules. 
 
 Figure <a href="#fig:extended_sim_proportion_plot" data-reference-type="ref" data-reference="fig:extended_sim_proportion_plot">4</a> shows the chance of finding at least one significant result. As expected, from left to right, the chance of finding significant result — in all cases — increases as we increase *α* but not so drastically. Check Figure <a href="#fig:extended_sim_proportion_vs_bias" data-reference-type="ref" data-reference="fig:extended_sim_proportion_vs_bias">6</a> for more clear comparison.
@@ -336,17 +336,160 @@ While we can see a clear change in the probility of finding a significant result
 
 ## Second Extension: More Aggressive QRPs
 
-Another extension to this model could investigate the effect of more aggressive QRPs when stricter *α*’s are introduced. For instance, we could adjust the Optional Stopping such that the Researcher adds the new subjects one by one until she finds a significance result. Moreover, the Outliers Removal can be replaced by a Subjective Outliers Removal where the research lowers the threshold gradually until she finds a significant result. 
+Another extension of this model could investigate the effect of more aggressive QRPs when stricter *α*’s are introduced. For instance, we could adjust the Optional Stopping such that the Researcher adds new subjects one by one until she finds a significance result. Furthermore, the Outliers Removal procedure can be replaced by a Subjective Outliers Removal method where the research continuously lowers *k* and remove corresponding outliers until she finds a significant results.
 
-These two changes can be added to the configuration file in the following way. 
+These two changes can be added to the configuration file as following: 
 
-??? hackingstrategy “Hacking Strategy: Aggressive Hacker”
-		add the config file here
+??? hackingstrategy "Hacking Strategy: _Advance Hacker_"
+    ```json linenums="1" hl_lines="13 29"
+    {
+      ...
+      "hacking_strategies": [
+        [
+          {
+            "name": "OptionalStopping",
+            "target": "Both",
+            "prevalence": 0.1,
+            "defensibility": 0.1,
+            "max_attempts": 1,
+            "n_attempts": 10,
+            "num": 1,
+            "stopping_condition": ["sig"]
+          },
+          [
+            ["effect > 0", "min(pvalue)" ]
+          ],
+          ["effect < 0", "!sig"]
+        ],
+        [
+          {
+            "name": "SubjectiveOutlierRemoval",
+            "min_observations": 5,
+            "range": [2, 4],
+            "step_size": 0.5,
+            "target": "Both",
+            "prevalence": 0.1,
+            "defensibility": 0.1,
+            "stopping_condition": ["sig"]
+          },
+          [
+            ["effect > 0", "min(pvalue)" ]
+          ],
+          ["effect < 0", "!sig"]
+        ]
+      ]
+    ...
+    }
+    ```
+    
 
+<figure>
+  <picture>
+    <source 
+        srcset="/examples/Bakker_2012/Second_Extension_Different_Alpha_Levels_Sig_dark.png" 
+        media="(prefers-color-scheme: dark)">
+  <img src="/examples/Bakker_2012/Second_Extension_Different_Alpha_Levels_Sig_light.png" id="fig:extended_sim_proportion_plot" alt="Chance of finding a significant result with regards to different values of \alpha." /><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+  </picture> 
+</figure>
+
+<figure>
+  <picture>
+    <source 
+        srcset="/examples/Bakker_2012/Second_Extension_Different_Alpha_Levels_ES_dark.png" 
+        media="(prefers-color-scheme: dark)">
+  <img src="/examples/Bakker_2012/Second_Extension_Different_Alpha_Levels_ES_light.png" id="fig:extended_sim_bias_plot" alt="ES Bias with regards to different values of \alpha." /><figcaption aria-hidden="true">ES Bias with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+  </picture>
+</figure>
  
 
 
 ## Third Extension: Influence of Publication Bias
+
+
+In our last extension, we will explore the effect of publication bias on the level effect size bias, as well as demonstrating the power of Egger's [cite]. 
+
+As discussed](journal.md), a Journal can be equiped with different [Selection Strategies](journal.md#selection-strategies); therefore, in order to simulate the publication bias process, we can utilize the built-in SignificantSelection selection model, as follow:
+
+
+??? journal "Journal: _Publication Bias_"
+    ```json linenums="1" hl_lines="5-10"
+    {
+      ...
+      "journal_parameters": {
+        "max_pubs": k,
+        "selection_strategy": {
+            "name": "SignificantSelection",
+            "pub_bias": p,
+            "alpha": ɑ,
+            "side": 0,
+        },
+        "meta_analysis_metrics": [
+            {
+                "name": "RandomEffectEstimator",
+                "estimator": "DL"
+            },
+            {
+                "name": "EggersTestEstimator",
+                "alpha": 0.1
+            }
+        ]
+      }
+      ...
+    }
+    ```
+
+In this setup, we would like to run our meta analysis methods on different publication pool sizes. This can be done by setting  `max_pubs` parameters. We are going to set two sizes, *k = 8*, and *k = 24*. In this configuation, after journal max-ed out its publications list, it will calculate `RandomEffectEstimator` and `EggersTestEstimator`, and writes the results into different files for further analysis. 
+
+Starting by our general plots, we can observer the effect of publication bias on proportion of signifcance results in our publications pool, Figure x, and also the level of bias induced by increasing publication bias, Figure y.
+
+    
+    
+
+<!-- === "Sig. Mean"
+
+    <video width="100%" height="auto" controls>
+      <source src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+=== "ES Bias"
+
+    <video width="100%" height="auto" controls>
+      <source src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark.mp4" type="video/mp4"
+        media="(prefers-color-scheme: dark)">
+      <source src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video> -->
+
+
+Furthermore, we can plot the power of Egger's test in our current setup.
+
+
+<!-- === "K = 8"
+
+    <video width="100%" height="auto" controls>
+      <source 
+        srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_vs_Pub_Bias_8_dark.mp4" 
+        media="(prefers-color-scheme: dark)">
+      <source src="/examples/Bakker_2012/Third_Extension_Eggers_Test_vs_Pub_Bias_8_light.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+=== "K = 24"
+
+    <video width="100%" height="auto" controls>
+      <source 
+        srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_vs_Pub_Bias_24_dark.mp4" 
+        media="(prefers-color-scheme: dark)">
+      <source src="/examples/Bakker_2012/Third_Extension_Eggers_Test_vs_Pub_Bias_24_light.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video> -->
+
+
+
+## Conclusion
+
+In this example, we discussed the process of translating an existing project into SAM. We started by replicating the original simulation, fine-tunning our configuration and comparing our results. Consequently, after successfully replicating the original results, we have tried to build on top Bakker's simulation and demonstrate the process of extending SAM's configuration. 
 
 
 \bibliography
