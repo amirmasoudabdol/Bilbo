@@ -1,8 +1,0 @@
-title: SAM
-
-theme: "just-the-docs"
-remote_theme: pmarsceill/just-the-docs
-
-exclude: ["mkdocs.yml"]
-
-
