@@ -445,45 +445,309 @@ Starting by our general plots, we can observer the effect of publication bias on
     
     
 
-<!-- === "Sig. Mean"
+=== "0.0"
 
-    <video width="100%" height="auto" controls>
-      <source src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0001.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0001.png"/>
+    </picture> 
 
-=== "ES Bias"
+=== "0.1"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0001.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0001.png"/>
+    </picture> 
 
-    <video width="100%" height="auto" controls>
-      <source src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark.mp4" type="video/mp4"
-        media="(prefers-color-scheme: dark)">
-      <source src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video> -->
+=== "0.2"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0002.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0002.png"/>
+    </picture> 
+
+=== "0.3"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0003.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0003.png"/>
+    </picture> 
+
+=== "0.4"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0004.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0004.png"/>
+    </picture> 
+
+=== "0.5"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0005.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0005.png"/>
+    </picture> 
+
+=== "0.6"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0006.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0006.png"/>
+    </picture> 
+
+=== "0.7"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0007.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0007.png"/>
+    </picture> 
+
+=== "0.8"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0008.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0008.png"/>
+    </picture> 
+
+=== "0.9"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0009.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0009.png"/>
+    </picture> 
+
+=== "1.0"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0010.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0010.png"/>
+    </picture> 
+
+
+Bias 
+
+=== "0.0"
+
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0001.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0001.png"/>
+    </picture> 
+
+=== "0.1"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0001.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0001.png"/>
+    </picture> 
+
+=== "0.2"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0002.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0002.png"/>
+    </picture> 
+
+=== "0.3"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0003.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0003.png"/>
+    </picture> 
+
+=== "0.4"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0004.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0004.png"/>
+    </picture> 
+
+=== "0.5"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0005.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0005.png"/>
+    </picture> 
+
+=== "0.6"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0006.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0006.png"/>
+    </picture> 
+
+=== "0.7"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0007.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0007.png"/>
+    </picture> 
+
+=== "0.8"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0008.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0008.png"/>
+    </picture> 
+
+=== "0.9"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0009.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0009.png"/>
+    </picture> 
+
+=== "1.0"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0010.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0010.png"/>
+    </picture>
 
 
 Furthermore, we can plot the power of Egger's test in our current setup.
 
 
-<!-- === "K = 8"
+=== "0.0"
 
-    <video width="100%" height="auto" controls>
+    <picture>
       <source 
-        srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_vs_Pub_Bias_8_dark.mp4" 
-        media="(prefers-color-scheme: dark)">
-      <source src="/examples/Bakker_2012/Third_Extension_Eggers_Test_vs_Pub_Bias_8_light.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0001.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0001.png"/>
+    </picture> 
 
-=== "K = 24"
-
-    <video width="100%" height="auto" controls>
+=== "0.1"
+    
+    <picture>
       <source 
-        srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_vs_Pub_Bias_24_dark.mp4" 
-        media="(prefers-color-scheme: dark)">
-      <source src="/examples/Bakker_2012/Third_Extension_Eggers_Test_vs_Pub_Bias_24_light.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video> -->
+          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0001.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0001.png"/>
+    </picture> 
+
+=== "0.2"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0002.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0002.png"/>
+    </picture> 
+
+=== "0.3"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0003.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0003.png"/>
+    </picture> 
+
+=== "0.4"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0004.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0004.png"/>
+    </picture> 
+
+=== "0.5"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0005.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0005.png"/>
+    </picture> 
+
+=== "0.6"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0006.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0006.png"/>
+    </picture> 
+
+=== "0.7"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0007.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0007.png"/>
+    </picture> 
+
+=== "0.8"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0008.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0008.png"/>
+    </picture> 
+
+=== "0.9"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0009.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0009.png"/>
+    </picture> 
+
+=== "1.0"
+    
+    <picture>
+      <source 
+          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0010.png" 
+          media="(prefers-color-scheme: dark)">
+    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0010.png"/>
+    </picture>
 
 
 
