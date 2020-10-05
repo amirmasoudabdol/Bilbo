@@ -545,7 +545,7 @@ Starting by our general plots, we can observer the effect of publication bias on
     </picture> 
 
 
-Bias 
+Moreover, level of the effect size bias can be 
 
 === "0.0"
 
@@ -654,99 +654,99 @@ Furthermore, we can plot the power of Egger's test in our current setup.
 
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0001.png" 
+          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0001.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0001.png"/>
+    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0001.png"/>
     </picture> 
 
 === "0.1"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0001.png" 
+          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0001.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0001.png"/>
+    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0001.png"/>
     </picture> 
 
 === "0.2"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0002.png" 
+          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0002.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0002.png"/>
+    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0002.png"/>
     </picture> 
 
 === "0.3"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0003.png" 
+          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0003.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0003.png"/>
+    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0003.png"/>
     </picture> 
 
 === "0.4"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0004.png" 
+          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0004.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0004.png"/>
+    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0004.png"/>
     </picture> 
 
 === "0.5"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0005.png" 
+          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0005.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0005.png"/>
+    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0005.png"/>
     </picture> 
 
 === "0.6"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0006.png" 
+          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0006.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0006.png"/>
+    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0006.png"/>
     </picture> 
 
 === "0.7"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0007.png" 
+          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0007.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0007.png"/>
+    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0007.png"/>
     </picture> 
 
 === "0.8"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0008.png" 
+          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0008.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0008.png"/>
+    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0008.png"/>
     </picture> 
 
 === "0.9"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0009.png" 
+          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0009.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0009.png"/>
+    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0009.png"/>
     </picture> 
 
 === "1.0"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Eggers_Test_Pub_Bias_dark_0010.png" 
+          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0010.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Eggers_Test_Pub_Bias_light_0010.png"/>
+    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0010.png"/>
     </picture>
 
 
