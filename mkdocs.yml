@@ -19,8 +19,8 @@ nav:
         - journal.md
     - Examples:
         - examples/index.md
-        - examples/baker_et_al_2012.md
-        - examples/baker_et_al_2014.md
+        - examples/bakker_et_al_2012.md
+        - examples/bakker_et_al_2014.md
         - examples/frankenbach_et_al_2019.md
         - examples/esther_first_year.md
     - Extras:
@@ -66,6 +66,7 @@ theme:
     - tab
     - instant
     - header.hide
+    # - navigation.tabs
 
 extra:
   social:

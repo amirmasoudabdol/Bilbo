@@ -1,10 +1,12 @@
-Introduction
-============
+---
+title: Bakker et al., 2014
+---
+
+# Outlier removal, sum scores, and the inflation of the type i error rate in independent samples t tests: the power of alternatives and recommendations
 
 This report discusses the reproduction process of the simulation study conducted by Bakker et al, 2014[@Bakker_2014]. The simulation aims to study the effects of removing outliers on Type I error on studies based on Graded Response Model. The original study also explores alternative tests but I will not address those in this report.
 
-Experiment Setup
-================
+## Experiment Setup
 
 The original study is testing the effects of removing outliers in two different scenarios:
 
@@ -37,16 +39,15 @@ Figure <a href="#fig:strategies_flowchart" data-reference-type="ref" data-refer
 The reproduction simulation is in fact simulating the behavior of the researcher who dynamically reducing *k* until she finds a significant result. As stated by Bakker, this should be equivalent to calculating the subjective Type I Error from the posterior of the non-subjective simulation. (While for the most configurations, the estimate is quite accurate, I am not yet convinced that both approach always lead to the same level of Type I Error.)
 
 <figure>
-<img src="/figures/baker_2014/Marjan_2014_Flowchart.png" id="fig:strategies_flowchart" alt="Simulation Design" /><figcaption aria-hidden="true">Simulation Design</figcaption>
+<img src="/examples/figures/bakker_2014/Marjan_2014_Flowchart.png" id="fig:strategies_flowchart" alt="Simulation Design" /><figcaption aria-hidden="true">Simulation Design</figcaption>
 </figure>
 
-Results
-=======
+## Results
 
 Figure <a href="#fig:subjective_vs_non_subjective_type_i_error" data-reference-type="ref" data-reference="fig:subjective_vs_non_subjective_type_i_error">2</a> shows the result of the reproduction simulation. I did not try to reproduce the entire simulation and every parameters combinations. However, the reproduction simulation agrees with the original results when parameters are crossing. The SUbjective Type I Error is larger in most cases, and between simulations with similar parameters, those with harder items affected more drastically by subjectively removing of the outliers, Figure <a href="#fig:subjective_vs_non_subjective_type_i_error" data-reference-type="ref" data-reference="fig:subjective_vs_non_subjective_type_i_error">2</a>, right columns, *β* = 3.
 
 <figure>
-<img src="/figures/baker_2014/Side-by-Side.png" id="fig:subjective_vs_non_subjective_type_i_error" alt="Non-Subjective (left panel) and Subjective (right panel) Type I Error" /><figcaption aria-hidden="true">Non-Subjective (left panel) and Subjective (right panel) Type I Error</figcaption>
+<img src="/examples/figures/bakker_2014/Side-by-Side.png" id="fig:subjective_vs_non_subjective_type_i_error" alt="Non-Subjective (left panel) and Subjective (right panel) Type I Error" /><figcaption aria-hidden="true">Non-Subjective (left panel) and Subjective (right panel) Type I Error</figcaption>
 </figure>
 
 \bibliography

@@ -1,7 +1,3 @@
----
-title: Examples
-layout: default
-has_children: true
----
+# Introduction
 
-# Examples
+These are exmaples

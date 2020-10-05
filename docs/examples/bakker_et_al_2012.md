@@ -1,4 +1,8 @@
-# Baker et al., 2012
+---
+title: Bakker et al., 2012
+---
+
+# The Rules of the Game Called Psychological Science
 
 In this report, we will attempt to discuss the replication and reproduction of the simulation study conducted by Baker et al., 2012[@Bakker_2012]. The simulation is designed to recreate a common routine of applying a set of questionable research practices, and consequently evaluate their effects on the observed effect size bias, and chance of finding significance results.
 
@@ -27,12 +31,12 @@ Following flowcharts are visualizing the simulation workflow designed by Bakker 
 Figure <a href="#fig:qrp_large" data-reference-type="ref" data-reference="fig:qrp_large">1</a> is equivalent of Strategies 1 and 2 while <a href="#fig:qrp_small" data-reference-type="ref" data-reference="fig:qrp_small">2</a> showcases Strategies 3 and 4. Notice the "Perform the QRP Procedure" step in Figure 2 where a study goes through the entire process described in Figure 1 labeled as "QRP Procedure".
 
 <figure>
-  <img src="/figures/baker_2012/Marjan_2012_QRP_Large.png" id="fig:qrp_large" alt="Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable." />
+  <img src="/examples/figures/Bakker_2012/Marjan_2012_QRP_Large.png" id="fig:qrp_large" alt="Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable." />
   <figcaption aria-hidden="true"><b>Figure 1.</b> Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable.</figcaption>
 </figure>
 
 <figure>
-  <img src="/figures/baker_2012/Marjan_2012_QRP_Small.png" id="fig:qrp_small" alt="Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts." />
+  <img src="/examples/figures/Bakker_2012/Marjan_2012_QRP_Small.png" id="fig:qrp_small" alt="Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts." />
   <figcaption aria-hidden="true"><b>Figure 2.</b> Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts.</figcaption>
 </figure>
 
@@ -55,10 +59,10 @@ The rest of this article focuses on simulating Bakker’s study using SAM, and c
 
 ## SAM Configuration
 
-In order to recreate Bakker's simulation using SAM, we start by planning [Researcher's Workflow](research-workflow.md) and translating that into a [configuration file](configuration-file.md).
+In order to recreate Bakker's simulation using SAM, we start by planning [Researcher's Workflow](../research-workflow.md) and translating that into a [configuration file](../configuration-file.md).
 
 <picture>
-  <img width="300px" align="right" src="/examples/Bakker_2012/Marjan_2012_Expriment_Design_Light.png" id="fig:marjan_2012_design"/>
+  <img width="300px" align="right" src="/examples/figures/Bakker_2012/Marjan_2012_Expriment_Design_Light.png" id="fig:marjan_2012_design"/>
 <picture>
 
 
@@ -262,9 +266,9 @@ Figure <a href="#fig:original_vs_reproduced" data-reference-type="ref" data-ref
 <figure>
   <picture>
     <source 
-        srcset="/examples/Bakker_2012/Comparison_with_Original_Simulation_dark.png" 
+        srcset="/examples/figures/Bakker_2012/Comparison_with_Original_Simulation_dark.png" 
         media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Comparison_with_Original_Simulation_light.png" id="fig:original_vs_reproduced" alt="Comparison between original and reproduced results (using SAM)." /><figcaption aria-hidden="true">Comparison between original and reproduced results (using SAM).</figcaption>
+    <img src="/examples/figures/Bakker_2012/Comparison_with_Original_Simulation_light.png" id="fig:original_vs_reproduced" alt="Comparison between original and reproduced results (using SAM)." /><figcaption aria-hidden="true">Comparison between original and reproduced results (using SAM).</figcaption>
   </picture>
 </figure>
 
@@ -273,9 +277,9 @@ Further investigation led to the finding of a minor bug in Bakker et al., code w
 <figure>
   <picture>
     <source 
-        srcset="/examples/Bakker_2012/Comparison_with_Patched_Simulation_dark.png" 
+        srcset="/examples/figures/Bakker_2012/Comparison_with_Patched_Simulation_dark.png" 
         media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Comparison_with_Patched_Simulation_light.png" id="fig:original_vs_reproduced" alt="Comparison between original and reproduced results (using SAM)." /><figcaption aria-hidden="true">Comparison between results from the patched script and results from SAM.</figcaption>
+    <img src="/examples/figures/Bakker_2012/Comparison_with_Patched_Simulation_light.png" id="fig:original_vs_reproduced" alt="Comparison between original and reproduced results (using SAM)." /><figcaption aria-hidden="true">Comparison between results from the patched script and results from SAM.</figcaption>
   </picture>
 </figure>
 
@@ -314,18 +318,18 @@ It’s worth mentioning that the researcher has not adoptted his strategies to t
 <figure>
   <picture>
     <source 
-        srcset="/examples/Bakker_2012/First_Extension_Different_Alpha_Levels_Sig_dark.png" 
+        srcset="/examples/figures/Bakker_2012/First_Extension_Different_Alpha_Levels_Sig_dark.png" 
         media="(prefers-color-scheme: dark)">
-  <img src="/examples/Bakker_2012/First_Extension_Different_Alpha_Levels_Sig_light.png" id="fig:extended_sim_proportion_plot" alt="Chance of finding a significant result with regards to different values of \alpha." /><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+  <img src="/examples/figures/Bakker_2012/First_Extension_Different_Alpha_Levels_Sig_light.png" id="fig:extended_sim_proportion_plot" alt="Chance of finding a significant result with regards to different values of \alpha." /><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
   </picture> 
 </figure>
 
 <figure>
   <picture>
     <source 
-        srcset="/examples/Bakker_2012/First_Extension_Different_Alpha_Levels_ES_dark.png" 
+        srcset="/examples/figures/Bakker_2012/First_Extension_Different_Alpha_Levels_ES_dark.png" 
         media="(prefers-color-scheme: dark)">
-  <img src="/examples/Bakker_2012/First_Extension_Different_Alpha_Levels_ES_light.png" id="fig:extended_sim_bias_plot" alt="ES Bias with regards to different values of \alpha." /><figcaption aria-hidden="true">ES Bias with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+  <img src="/examples/figures/Bakker_2012/First_Extension_Different_Alpha_Levels_ES_light.png" id="fig:extended_sim_bias_plot" alt="ES Bias with regards to different values of \alpha." /><figcaption aria-hidden="true">ES Bias with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
   </picture>
 </figure>
 
@@ -386,18 +390,18 @@ These two changes can be added to the configuration file as following:
 <figure>
   <picture>
     <source 
-        srcset="/examples/Bakker_2012/Second_Extension_Different_Alpha_Levels_Sig_dark.png" 
+        srcset="/examples/figures/Bakker_2012/Second_Extension_Different_Alpha_Levels_Sig_dark.png" 
         media="(prefers-color-scheme: dark)">
-  <img src="/examples/Bakker_2012/Second_Extension_Different_Alpha_Levels_Sig_light.png" id="fig:extended_sim_proportion_plot" alt="Chance of finding a significant result with regards to different values of \alpha." /><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+  <img src="/examples/figures/Bakker_2012/Second_Extension_Different_Alpha_Levels_Sig_light.png" id="fig:extended_sim_proportion_plot" alt="Chance of finding a significant result with regards to different values of \alpha." /><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
   </picture> 
 </figure>
 
 <figure>
   <picture>
     <source 
-        srcset="/examples/Bakker_2012/Second_Extension_Different_Alpha_Levels_ES_dark.png" 
+        srcset="/examples/figures/Bakker_2012/Second_Extension_Different_Alpha_Levels_ES_dark.png" 
         media="(prefers-color-scheme: dark)">
-  <img src="/examples/Bakker_2012/Second_Extension_Different_Alpha_Levels_ES_light.png" id="fig:extended_sim_bias_plot" alt="ES Bias with regards to different values of \alpha." /><figcaption aria-hidden="true">ES Bias with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+  <img src="/examples/figures/Bakker_2012/Second_Extension_Different_Alpha_Levels_ES_light.png" id="fig:extended_sim_bias_plot" alt="ES Bias with regards to different values of \alpha." /><figcaption aria-hidden="true">ES Bias with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
   </picture>
 </figure>
  
@@ -408,7 +412,7 @@ These two changes can be added to the configuration file as following:
 
 In our last extension, we will explore the effect of publication bias on the level effect size bias, as well as demonstrating the power of Egger's [cite]. 
 
-As discussed](journal.md), a Journal can be equiped with different [Selection Strategies](journal.md#selection-strategies); therefore, in order to simulate the publication bias process, we can utilize the built-in SignificantSelection selection model, as follow:
+[As discussed](../journal.md), a Journal can be equiped with different [Selection Strategies](../journal.md#selection-strategies); therefore, in order to simulate the publication bias process, we can utilize the built-in SignificantSelection selection model, as follow:
 
 
 ??? journal "Journal: _Publication Bias_"
@@ -449,99 +453,99 @@ Starting by our general plots, we can observer the effect of publication bias on
 
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0001.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0001.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0001.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0001.png"/>
     </picture> 
 
 === "0.1"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0001.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0001.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0001.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0001.png"/>
     </picture> 
 
 === "0.2"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0002.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0002.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0002.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0002.png"/>
     </picture> 
 
 === "0.3"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0003.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0003.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0003.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0003.png"/>
     </picture> 
 
 === "0.4"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0004.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0004.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0004.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0004.png"/>
     </picture> 
 
 === "0.5"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0005.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0005.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0005.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0005.png"/>
     </picture> 
 
 === "0.6"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0006.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0006.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0006.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0006.png"/>
     </picture> 
 
 === "0.7"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0007.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0007.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0007.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0007.png"/>
     </picture> 
 
 === "0.8"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0008.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0008.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0008.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0008.png"/>
     </picture> 
 
 === "0.9"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0009.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0009.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0009.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0009.png"/>
     </picture> 
 
 === "1.0"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0010.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0010.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0010.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0010.png"/>
     </picture> 
 
 
@@ -551,99 +555,99 @@ Moreover, level of the effect size bias can be
 
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0001.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0001.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0001.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0001.png"/>
     </picture> 
 
 === "0.1"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0001.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0001.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0001.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0001.png"/>
     </picture> 
 
 === "0.2"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0002.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0002.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0002.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0002.png"/>
     </picture> 
 
 === "0.3"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0003.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0003.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0003.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0003.png"/>
     </picture> 
 
 === "0.4"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0004.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0004.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0004.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0004.png"/>
     </picture> 
 
 === "0.5"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0005.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0005.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0005.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0005.png"/>
     </picture> 
 
 === "0.6"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0006.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0006.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0006.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0006.png"/>
     </picture> 
 
 === "0.7"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0007.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0007.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0007.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0007.png"/>
     </picture> 
 
 === "0.8"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0008.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0008.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0008.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0008.png"/>
     </picture> 
 
 === "0.9"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0009.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0009.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0009.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0009.png"/>
     </picture> 
 
 === "1.0"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0010.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0010.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0010.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0010.png"/>
     </picture>
 
 
@@ -654,99 +658,99 @@ Furthermore, we can plot the power of Egger's test in our current setup.
 
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0001.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0001.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0001.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0001.png"/>
     </picture> 
 
 === "0.1"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0001.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0001.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0001.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0001.png"/>
     </picture> 
 
 === "0.2"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0002.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0002.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0002.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0002.png"/>
     </picture> 
 
 === "0.3"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0003.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0003.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0003.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0003.png"/>
     </picture> 
 
 === "0.4"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0004.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0004.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0004.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0004.png"/>
     </picture> 
 
 === "0.5"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0005.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0005.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0005.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0005.png"/>
     </picture> 
 
 === "0.6"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0006.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0006.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0006.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0006.png"/>
     </picture> 
 
 === "0.7"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0007.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0007.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0007.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0007.png"/>
     </picture> 
 
 === "0.8"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0008.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0008.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0008.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0008.png"/>
     </picture> 
 
 === "0.9"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0009.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0009.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0009.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0009.png"/>
     </picture> 
 
 === "1.0"
     
     <picture>
       <source 
-          srcset="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0010.png" 
+          srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0010.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0010.png"/>
+    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0010.png"/>
     </picture>
 
 
