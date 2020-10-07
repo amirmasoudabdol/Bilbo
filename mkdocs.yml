@@ -12,6 +12,7 @@ nav:
         - effect-strategies.md
         - Hacking Strategies:
             - hacking-strategies.md
+            - hacking_strategies/selective-reporting.md
             - hacking_strategies/optional-stopping.md
             - hacking_strategies/outliers-removal.md
             - hacking_strategies/subjective-outliers-removal.md
@@ -21,8 +22,8 @@ nav:
         - examples/index.md
         - examples/bakker_et_al_2012.md
         - examples/bakker_et_al_2014.md
-        - examples/frankenbach_et_al_2019.md
         - examples/esther_first_year.md
+        - examples/frankenbach_et_al_2019.md
     - Extras:
         - extending-sam.md
         - SAMoo.md
