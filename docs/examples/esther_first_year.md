@@ -19,7 +19,7 @@ Beyond fixed- and random-effects estimators, the list of publication bias tests 
 
 ## Simulation Design
 
-Maassen has included a range of parameters in her study. The simulation study has been conducted on all combination of parameters from the listed below.
+Maassen has included a range of parameters in her study. The simulation study has been conducted on all combination of parameters from the list below.
 
 | **Parameter**          | **Values**                                                             |
 |:-----------------------|:-----------------------------------------------------------------------|
@@ -35,7 +35,9 @@ Starting from the top, the simulation study concerns itself with two main *Exper
 
 ![Maassen's Experiment Design](/examples/figures/Esther_FYP/Esthers_Experiment_Design.png)
 
-In terms of QRPs, two main methods have been utilized, [Selective Reporting](hacking_strategies/selective-reporting.md), and [Optional Stopping](hacking_strategies/optional-stopping.md). While the optional stopping has been applied on both study designs (at most 3 times), the selective reporting can only be applied on the design with 5 conditions. Finally, at the end of each simulation, Maassen applied both meta-analytic methods, and publication bias estimators on pools of studies with different sizes, *K*, and reported their performance.
+In terms of QRPs, two main methods have been utilized, [Selective Reporting](hacking_strategies/selective-reporting.md), and [Optional Stopping](hacking_strategies/optional-stopping.md). While the optional stopping has been applied on both study designs (at most 3 times, adding ⅓ ⨉ N new observations), the selective reporting can only be applied on the design with 5 conditions (selecting the outcome with minimum *p*-value). 
+
+Finally, after simulating *K* stduiesstudies, Maassen applied both meta-analytic methods, and publication bias estimators, and reported their performance.
 
 ## SAM's Configuration
 
@@ -47,7 +49,7 @@ As discussed in other examples, visualizing the simulation flow helps us transla
 
 As we discussed, selective reporting is being applied using the decision strategy module. The Researcher will either select the only available outcome if there is only one primary outcome (ie., no selective reporting), or she will select an outcome with minimum *p*-value in the presence of selective reporting, line 4. 
 
-In cases where the Researcher is equipped with optional stopping, she will decide to apply the method if the selected outcome is not significant, line 5. Finally, if optional stopping has been applied more than once on a study, the last results will be selected, line 6.
+In cases where the Researcher is equipped with optional stopping, she will decide to apply the method if the selected outcome is not significant, line 5. Finally, if optional stopping has been applied more than once on a study, the last result will be selected, line 6.
 
 !!! decisionstrategy "Configuration: _Decision Strategy_"
     === "2 Conditions"
@@ -302,9 +304,18 @@ Figure 3, 4, 5, 6 illustrate our results in the form of contour plots. The x-axi
 <figure>
   <picture>
     <source 
+        srcset="/examples/figures/Esther_FYP/Esther_FYP_RandomEffect_Bias_Counter_Filled_dark.png" 
+        media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Esther_FYP/Esther_FYP_RandomEffect_Bias_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 4.</b> Random Effect Estimate's Bias</figcaption>
+  </picture> 
+</figure>
+
+<figure>
+  <picture>
+    <source 
         srcset="/examples/figures/Esther_FYP/Esther_FYP_Eggers_Test_Counter_Filled_dark.png" 
         media="(prefers-color-scheme: dark)">
-  <img src="/examples/figures/Esther_FYP/Esther_FYP_Eggers_Test_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 4.</b> Power of Egger's Test</figcaption>
+  <img src="/examples/figures/Esther_FYP/Esther_FYP_Eggers_Test_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 5.</b> Power of Egger's Test</figcaption>
   </picture> 
 </figure>
 
@@ -313,7 +324,7 @@ Figure 3, 4, 5, 6 illustrate our results in the form of contour plots. The x-axi
     <source 
         srcset="/examples/figures/Esther_FYP/Esther_FYP_RankCorrelation_Test_Counter_Filled_dark.png" 
         media="(prefers-color-scheme: dark)">
-  <img src="/examples/figures/Esther_FYP/Esther_FYP_RankCorrelation_Test_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 5.</b> Power of Begg's Rank Correlation Test</figcaption>
+  <img src="/examples/figures/Esther_FYP/Esther_FYP_RankCorrelation_Test_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 6.</b> Power of Begg's Rank Correlation Test</figcaption>
   </picture> 
 </figure>
 
@@ -322,7 +333,7 @@ Figure 3, 4, 5, 6 illustrate our results in the form of contour plots. The x-axi
     <source 
         srcset="/examples/figures/Esther_FYP/Esther_FYP_TES_Counter_Filled_dark.png" 
         media="(prefers-color-scheme: dark)">
-  <img src="/examples/figures/Esther_FYP/Esther_FYP_TES_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 6.</b> Power of Test of Excess of Significant Findings.</figcaption>
+  <img src="/examples/figures/Esther_FYP/Esther_FYP_TES_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 7.</b> Power of Test of Excess of Significant Findings.</figcaption>
   </picture> 
 </figure>
 
