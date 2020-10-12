@@ -35,7 +35,7 @@ Starting from the top, the simulation study concerns itself with two main *Exper
 
 ![Maassen's Experiment Design](/examples/figures/Esther_FYP/Esthers_Experiment_Design.png)
 
-In terms of QRPs, two main methods have been utilized, [Selective Reporting](hacking_strategies/selective-reporting.md), and [Optional Stopping](hacking_strategies/optional-stopping.md). While the optional stopping has been applied on both study designs (at most 3 times, adding ⅓ ⨉ N new observations), the selective reporting can only be applied on the design with 5 conditions (selecting the outcome with minimum *p*-value). 
+In terms of QRPs, two main methods have been utilized, [Selective Reporting](hacking-strategies/selective-reporting.md), and [Optional Stopping](hacking-strategies/optional-stopping.md). While the optional stopping has been applied on both study designs (at most 3 times, adding ⅓ ⨉ N new observations), the selective reporting can only be applied on the design with 5 conditions (selecting the outcome with minimum *p*-value). 
 
 Finally, after simulating *K* stduiesstudies, Maassen applied both meta-analytic methods, and publication bias estimators, and reported their performance.
 

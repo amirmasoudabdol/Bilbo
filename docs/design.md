@@ -1,92 +1,87 @@
 ---
 title: Design
-layout: default
-nav_order: 3
 ---
 
-Design
-======
+# Design
 
-In the [previous section](introduction.md#intro-research-process), I listed some of the main components and entities involving in different stages of a research, e.g., Experiment Setup, Experiment, Researcher, Submission, and Journal. *In the abstraction*, each component is a semi-independent entity while the whole system and process, i.e., scientific research, is defined through their interactions.
+In the [previous section](introduction.md#intro-research-process), we listed some of the main components and entities involved in different stages of conducting a  research, e.g., Experiment Setup, Experiment, Researcher, Submission, and Journal. *In the abstraction*, each component is a semi-independent entity while the whole system and processes (i.e. conducting a scientific research) are defined through their interactions.
 
-One of our main design goals with SAM was to achieve a level of flexibility where we could relatively easily change different aspects of this process. To achieve this, we decoupled the system to smaller --- but conceptually meaningful --- routines and entities. Figure 1. shows SAM's components, and their dependencies and interactions with each other.
-
-This section will clarify the design principles behind each component, what they try to resemble in the real world and how they work and interact with each other in order to simulate as much as the scientific process, as possible.
+One of our main design goals with SAM was to achieve a level of flexibility where we could change different aspects of every component. In order to achieve this, we decoupled the system to smaller — but conceptually meaningful — routines and entities. Figure 1. shows these components, and their dependencies and interactions with each other.
 
 ![SAM's main components and their interactions](../figures/components-revised.png)
 
-SAM's Main Components
----------------------
 
-SAM consists of 3 main components, *Experiment, Researcher* and *Journal*. Each component mimics one of the subprocesses or entities that are discussed in the `introduction`{.interpreted-text role="doc"}. The list below briefly introduces each component and its role.
+!!! attention
+		Throughout this document, we use the color assigned to each module in Figure 1. to refer to each module in different sections. 
 
-- The `design-experiment`{.interpreted-text role="ref"} comprises of several parts, each dealing with different aspects of a research, e.g., setup, data, test, effect.
-    - `design-experiment-setup`{.interpreted-text role="ref"} holds the specification of the design. Researcher can only set these parameters once, at the start of an experiment. In fact, the *ExperimentSetup* implementation tries to mimic the concept of *pre-registration* as closed as possible.
-        - `design-data-strategy`{.interpreted-text role="ref"} is a routine used to generate the data based on the specified parameters in the *ExperimentSetup*.
-        - `design-test-strategy`{.interpreted-text role="ref"} is the statistical method of choice in the *ExperimentSetup* for testing the result of an *Experiment*.
-        - `design-effect-strategy`{.interpreted-text role="ref"} is the forumla for calculating effect sizes in an experiment.
-- The `design-researcher`{.interpreted-text role="ref"} object imitates the behaviors of a researcher, including possible questionable research practices conducted by him/her. The researcher will define the *ExperimentSetup*, generate and collect the data, run the statistical test, decides whether to preform any QRPs, prepare the *Submission* record, and finally submit its finding(s) to the *Journal* of her/his choice.
-    - `decision-strategies`{.interpreted-text role="ref"} is the underling logic of selecting outcome variables between all available variables in an experiment.
-    - `hacking-strategies`{.interpreted-text role="ref"} is a list of questionable research practices in researcher's arsenal. In the case where the researcher decides to hack his/her way through finding significant results, he/she can use these methods.
-- The `design-journal`{.interpreted-text role="ref"} is a container for `design-submission`{.interpreted-text role="ref"}(s), i.e., published results. The Journal keeps track of its publications and can utilize different metrics to adapts its selection strategy.
-    - `selection-strategy`{.interpreted-text role="ref"} is the internal algorithm by which the journal decides whether a submission will be accepted, or not.
-    - `submission`{.interpreted-text role="ref"} is a short report, acting as a *scientific paper*, *a manuscript*. When it gets accepted by the *Journal*, it will be a publication.
+This section will clarify the design principles behind each component, what they try to resemble in real world and how they work and interact with each others to collectively simulate as much as of the process of producing a scientific research, as possible.
+
+## SAM's Main Components
+
+SAM consists of 3 main components, *Experiment, Researcher* and *Journal*. Each component mimics one of the subprocesses or entities that are discussed in the [Introduction](introduction.md) section. The list below briefly introduces each component alongside their roles.
+
+- The *[Experiment](#experiment)* comprises of several parts, each dealing with different aspects of a research, e.g., setup, data, test, effect.
+    - *[Experiment Setup](#experiment-setup)* holds the specification of the design. Researcher can only set these parameters once, at the start of an experiment. In fact, the *Experiment Setup* implementation tries to mimic the concept of *pre-registration* as closed as possible.
+        - *[Data Strategy](#data-strategy)* is a routine used to generate the data based on specified parameters in the *Experiment Setup*.
+        - *[Test Strategy](#test-strategy)* is the statistical method of choice in the *Experiment Setup* for testing the result of an *Experiment*.
+        - [*Effect Strategy*](#effect-strategy) defines the method of calculating effect sizes in an *Experiment*.
+- The *[Researcher](#researcher)* module imitates the behaviors of a researcher, including possible questionable research practices conducted by him/her. The researcher will define the experiment setup, generate and collect the data, run the statistical test, decides whether to preform any QRPs, prepare the *Submission* record, and finally submit its finding(s) to the *Journal* of her/his choice.
+    - *[Decision Strategy](#decision-strategy)* is the underling logic and steps of performing the research, as well as selecting and reporting a specific variables as the primary outcome in an *Experiment*.
+    - *[Hacking Strategy](#hacking-startegies)* is a list of questionable research practices in researcher's arsenal. In the case where the researcher decides to hack his/her way through finding significant results, he/she can use these methods.
+- The [*Journal*](#journal) is a container of publications, i.e., published *submission*. The Journal keeps track of its publications and can utilize different metrics to adapts its selection strategy.
+    - *[Selection Strategy](#selection-strategy)* is the internal algorithm by which the journal decides whether a submission will be accepted, or not.
+    - *[Submission](#submission)* is a concise report, acting as a *scientific paper*, or *a manuscript* that it is going to be submitted for review to the Journal.
 
 !!! note
 
-    Unlike a real scientific journal that covers a wide range of research     tracks, SAM's Journal in its current implementation assumes that all     submitted publications are from one research track. In other words,     SAM's journals are mainly acting as a pool for related studies.
+    Unlike a real scientific journal that covers a wide range of research tracks, SAM's Journal in its current implementation assumes that all submitted publications are from one research track. In other words, SAM's journals are mainly acting as a pool for related studies ready to be analyzed using meta-analyses methods.
 
 !!! note
 
-    SAM uses several object-oriented principles and design patterns to     achieve the level of flexibility that is offering. Since all components     of SAM are technically C++ classes, from now on, I may refer to them as     objects, e.g., Experiment object, and they will appear in monospace     font.
+    SAM uses several object-oriented principles and design patterns to achieve the level of flexibility that is offering. Since all SAM components' are technically C++ classes, we may refer to them as objects, e.g., Experiment object, and they will appear in `monospace` font.
+    
+While the rest of this section discuss each component properties and rule in more details, more information about each component can be found in their dedicated pages.
 
 ### Experiment
-
-<!-- ![](figures/experiment-stack.png){: align=right} -->
 
 <picture>
   <img src="../figures/experiment-stack.png" width="300" align="right">
 </picture>
 
-As mentioned, `Experiment` object acts as an umbrella for everything related to an actual experiment. This includes metadata (a.k.a `ExperimentSetup`), raw data, method/model for generating the data, e.g., [Linear Model](data-strategies.md#linear-model), and methods of testing the hypothesis, and calculating the effect. The `Researcher` object has the complete control over every aspects of an `Experiment` **with one exception**: it can only read and not change the `ExperimentSetup` object. This is an important factor when later on we implement the concept of pre-registration.
+As mentioned, an `Experiment` object acts as an umbrella for everything related to an actual experiment. This includes metadata (a.k.a `ExperimentSetup`), raw data, method/model for generating the data, e.g., [Linear Model](data-strategies.md#linear-model), and methods of testing the hypothesis, and calculating the effect. The `Researcher` object has the complete control over every aspects of an `Experiment` **with one exception**: it can only read and not change the `ExperimentSetup` object. This is an important factor when later on we discuss the concept of pre-registration.
 
-Below is a short list of variables and methods of `Experiment`.
+Main components of `Experiment` are:
 
-- `Data` object
-    - `measurements`, a dataset of all data points for each group
-    - `nobs`, the number of observations in each group
-    - `means`, the mean of each group
-    - `vars`, the variance of each group
-    - `ses`, the standard error of each group
-    - `statistics`, test statistic of each group, e.g. student-t
-    - `pvalue`, p-value of the corresponding test
-    - `effects`, the effect size of each group
-    - `sign`, an indicator of significance for each group
-- `setup`, a reference to the `design-experiment-setup`{.interpreted-text role="ref"}.
-
-A full list of available parameters are listed in the `config-file-experiment-parameters`{.interpreted-text role="ref"} section of the configuration file.
+- Experiment Setup
+- Data, an object containing actual data points
 
 #### Experiment Setup
 
-SAM treats the `ExperimentSetup` object as a read-only object after the initialization phase. During the initialization phase, SAM initializes and randomizes the `ExperimentSetup` based on given criteria. After the initialization phase, `ExperimentSetup` will stay intact in the code and will be used as a reference point in different stages.
+After the initialization phase, SAM treats the `ExperimentSetup` object as a read-only object. During the initialization phase, SAM initializes and randomizes the `ExperimentSetup` based on given parameters. Thereafter, `ExperimentSetup` will stay intact in the code and will be used as a reference point in different stages. 
 
-Below is a list of variables and methods of `ExperimentSetup`, read more [here](configuration-file.md#experiment-parameters) and `data-strategies`{.interpreted-text role="doc"}:
+Main components of experiment setup are:
 
-- `nc`, the number of conditions
-- `nd`, the number of dependent variables
-- `dataStrategy`, a pointer to the selected `data-strategies`{.interpreted-text role="doc"}.
-- `testStrategy`, a pointer to the selected `test-strategies`{.interpreted-text role="doc"}.
-- `effectStrategy`, a pointer to the selected `effect-strategies`{.interpreted-text role="doc"}.
+- Design Parameters
+	- Number of conditions
+	- Number of dependent variables
+	- Number of observations per group
+- Data Strategy
+- Test Strategy
+- Effect Strategy
 
-#### Data Strategy
+##### Data Strategy
 
-`DataStrategy` acts as the population for the study, i.e., *data source*. This could be a simple link to a certain distribution \[or it could be an interface to an input file, e.g., a CSV file containing measurements for each group\]. In general, `DataStrategy` is responsible for initializing certain variables of the `Experiment`.
+`DataStrategy` acts as the population of the study, i.e., *data source*. In most cases, an instance of `DataStrategy` object uses a statistical model to sample data points and populates the `Data` object of the `Experiment`. 
 
-In most cases, an instance of `DataStrategy` object uses a statistical distribution to sample number of data points and populates the `measurements` variable, but this differs for different model. With certain *p*-hacking methods, e.g., [optional stopping](hacking-strategies.md#optional-stopping), the data strategy should be able to provide a routine for generating *extra* data points as requested by the optional stopping.
+Moreover, with certain *p*-hacking methods, e.g., [optional stopping](/hacking-strategies/optional-stopping), the data strategy will be used to generate *extra* data points as requested by the optional stopping.
 
-Data strategies will be discussed in more details in `design-strategies`{.interpreted-text role="doc"} chapter.
+Available data strategies are:
 
-#### Test Strategy
+- Linear Model
+- Graded Response Model
+- Latent Model (under development)
+
+##### Test Strategy
 
 `TestStrategy` provides a routine for testing the hypothesis. TestStrategy can access the entire `Experiment` object but often it is restricted to only modifying relevant variables, e.g., `pvalue, statistics, sig`.
 
@@ -95,24 +90,20 @@ There are several test strategies already implemented:
 - T-Test
 - F-Test
 - Yuen T-Test
-- Wilcoxn Test
+- Wilcoxon Test
 
-More details about will be discussed in `test-strategies`{.interpreted-text role="doc"} chapter.
+##### Effect Strategy
 
-#### Effect Strategy
-
-`EffectStrategy` defines a method of calculating the magnitude of effect between two experimental group. Like most other strategies, users are able to define their own effect strategy. This will be discussed in `extending-sam`{.interpreted-text role="doc"}.
+`EffectStrategy` defines a method of calculating the magnitude of effect between two experimental groups.
 
 List of available effect strategies:
 
+- Mean Difference
 - Cohen's D
 - Hedge's G
 - Odd Ratio
-- Mean Difference
 
 ### Journal
-
-<!-- ![](../figures/journal-stack.png){: align=right} -->
 
 <picture>
   <img src="../figures/journal-stack.png" width="300" align="right">
@@ -120,44 +111,33 @@ List of available effect strategies:
 
 In SAM, a `Journal` is often a container for *accepted* publications. `Journal` is designed to mimic the reviewing process. Therefore, it can use any arbitrary algorithms for deciding whether a submission will be accepted or not.
 
-Below is the list of some of the variables and methods of `Journal`.
+Journal's components are:
 
-- `max_pubs`, maximum number of publications before journal stops accepting new publications
-- `pub_bias`, the publication bias rate
-- `alpha`, the significance $\alpha$. **Note:** This can differ from `TestStrategy`'s $\alpha$.
-- `selectionStrategy`, journal's `design-selection-strategy`{.interpreted-text role="ref"}.
-- `isStillAccepting()`, a function returning the state of the journal.
-- `review()`, `accept()`, `reject()`,
-- `submissionList`, a list of accepted submissions, i.e., publications.
-
-You can set these parameters using [journal_parameters](configuration-file.md#journal-parameters) section of the configuration file.
+- Selection Strategy
+- Accepted List, ie., Publications List
+- Rejected List
+- Meta-analytic Methods
+	- Meta-analytic Results
 
 #### Selection Strategy
 
-`SelectionStrategy` implements the logic behind accepting or rejecting a submission. The simplest algorithms are mainly working with *p*-values and based their decision on a simple threshold check. However, more elaborate selection strategies can incorporate different metrics or criteria (e.g., pre-registration, sample sizes, or meta-analysis) into their final decision. For instance, if appropriate, a journal can have an updated estimation of the effect size from its current publications pool and use that information to accept or reject submissions.
+`Selection Strategy` implements the logic behind accepting or rejecting a submission. The simplest algorithms are mainly working with *p*-values and based their decision on a simple threshold check. However, more elaborate selection strategies can incorporate different metrics or criteria (e.g., pre-registration, sample sizes, or meta-analysis) into their final decision. For instance, if appropriate, a journal can have an updated estimation of the effect size from its current publications pool and use that information to accept or reject submissions.
+
+List of available selection strategies are:
+
+- Significant Selection
+- Random Selection
+- Free Selection
 
 #### Submission
 
-A `Submission` is a small container, created by the `Researcher` and provided to the `Journal`. It provides a simple interface between `Journal, Experiment` and `Researcher` objects. In fact, a `Submission` resembles a *manuscript* when it is at the hand of the researcher and a *publication* after being accepted by the journal.
+A `Submission` is a small container, created by the `Researcher` and provided to the `Journal`. It provides a simple interface between `Journal, Experiment` and `Researcher` objects. In fact, a `Submission` resembles a *manuscript* when it is at the hand of the researcher and a *publication* after being accepted by the journal. 
 
-After performing the test and choosing the outcome variable, the `Researcher` puts together a report containing necessary information for the `Journal` to decide whether to accept or reject the submitted finding(s).
-
-`Submission`'s variables are:
-
-- `nobs`, the number of observations
-- `yi`, the mean of the selected outcome
-- `vi`, the variance of the selected outcome
-- `estimator`, effect size estimator of choice
-- `ei`, the effect size of the select outcome
-- `statistics`, the test statistics value
-- `pvalue`, the *p*-value of the test
-- `sig`, a boolean value indicating the significance of the test
-- `side`, the side of the effect, positive or negative ...
-- `more … exhale_class_class_submission`{.interpreted-text role="ref"}
+After performing the test and choosing the outcome variable, the `Researcher` puts together a report containing necessary information for the `Journal` to decide whether to accept or reject the submitted finding(s). This representation will allow us to mimic several important concepts when it comes to publication habits, e.g., file-drawer effect, pre-registration, etc. 
 
 !!! note
 
-    `Submission` is an abstract representation of the manuscript and it does     not try to closely resembles a full publication.
+    `Submission` is an abstract representation of the manuscript and it does not try to closely resembles a full publication.
 
 ### Researcher
 
@@ -202,15 +182,22 @@ Main variables and methods of `DecisionStrategy` are:
 - `verdict(Experiment, DecisionStage)` .. - `finalSubmission`, .. 
 - `more … <exhale_class_class_experiment_setup>`{.interpreted-text role="ref"}
 
-!!! note
+!!! attention
 
-    The decision strategy is one of the more complicated pieces of SAM. It     engages in different stages of conducting the research by researcher and     different hacking strategies. This process will be clarified in     `flow`{.interpreted-text role="doc"} and     `decision-strategies`{.interpreted-text role="doc"} chapters.
+    The decision strategy is one of the more complicated pieces of SAM. It engages in different stages of conducting the research by researcher and different hacking strategies. This process will be clarified in [Flow](flow.md) and *‌[Decision Strategy](decision-strategies.md)* chapters.
 
 #### Hacking Strategy-(ies)
 
-`HackingStrategy` is an abstract representation of different *p*-hacking and QRP methods. A `HackingStrategy` object is a simple object with one function `perform()`. The `Researcher` *performs* a hacking strategy by sending a copy of its `Experiment` to the `perform` function. The `HackingStrategy` takes control of the experiment, modifies it, (e.g., adding new values, removing values), recomputes the statistic, reruns the test, and finally returns the modified `Experiment`.
+`Hacking Strategy` is an abstract representation of different *p*-hacking and QRP methods. The `Researcher` *performs* a hacking strategy by sending a copy of its `Experiment` to chosen method. The `Hacking Strategy` takes control of the experiment, modifies it, (e.g., adding new values, removing values), recomputes the statistics, reruns the test, and finally returns the modified `Experiment`. Finally, the researcher can evaluate the *hacked* experiment, and select *hacked* result if satisfactory.
 
-As mentioned in `design-researcher`{.interpreted-text role="ref"} section, a `Researcher` instance can be equipped with a list **hackingStrategies**. If more than one hacking strategy is registered, `Researcher` performs all hacking methods on different copies of the original experiment and stores the result in `submissionsPool` and `experimentsPool`. After applying all methods, `Researcher` will ask the `DecisionStrategy` for its *final verdict*, and choose among all results before preparing the *final submission*.
+If more than one hacking strategies are registered, researcher navigates through them by the logic defined in Decision Strategy and decides whether any of the *hacked* experiments will be used for constructing the *Submission*. This process will be discussed in more details, in *[Decision Strategy](decision-strategy.md)* and *[Hacking Strategy](hacking-strategy.md)* sections.
 
-The `hacking-strategies`{.interpreted-text role="doc"} chapter will shine more light on details of each hacking strategy.
+List of available hacking strategies are:
 
+- Optional Stopping
+- Outliers Removal
+- Subjective Outliers Removal
+- Questionable Rounding
+- Falsifying Data
+- Fabricating Data
+- Stopping Data Collection

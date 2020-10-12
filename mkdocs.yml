@@ -6,17 +6,17 @@ nav:
         - design.md
         - flow.md
         - research-workflow.md
+        - decision-strategies.md
         - configuration-file.md
         - data-strategies.md
         - test-strategies.md
         - effect-strategies.md
         - Hacking Strategies:
             - hacking-strategies.md
-            - hacking_strategies/selective-reporting.md
-            - hacking_strategies/optional-stopping.md
-            - hacking_strategies/outliers-removal.md
-            - hacking_strategies/subjective-outliers-removal.md
-        - decision-strategies.md
+            - hacking-strategies/selective-reporting.md
+            - hacking-strategies/optional-stopping.md
+            - hacking-strategies/outliers-removal.md
+            - hacking-strategies/subjective-outliers-removal.md
         - journal.md
     - Examples:
         - examples/index.md

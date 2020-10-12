@@ -1,52 +1,41 @@
 ---
 title: Flow
-layout: default
-nav_order: 3
 ---
 
-Flow
-====
+# Execution Flow
 
-SAM simulates the scientific process through several subprocesses as depicted in Figure 1. Each rounded rectangle describes a process, often performs by one of the components or through collaboration between different components. This chapter describes each subprocess in more details.
+SAM simulates the process of producing a scientific research through several subprocesses as depicted in Figure 1. Each rounded rectangle describes a process, often performs by one of the components or through the collaboration between different components. This chapter describes each subprocess in more details.
 
-![Overall execution flowchart of
-SAM](figures/main-routine.png)
+![<b>Figure 1.</b> Overall Execution Flow of SAM](/figures/main-routine.png)
 
-Initialization
---------------
+## Initialization
 
-During the initialization phase, SAMs loads a configuration file and initializes different compartments based on configuration parameters. You can read more about the parameters [here](configuration-file.md).
+During the initialization phase, SAMs loads a configuration file and initializes different compartments based on the given parameters. Details of the configuration file is described in more details [here](configuration-file.md). 
 
-![](../figures/initialization.png)
+![<b>Figure 2.</b> Initialization Routine.](/figures/initialization.png)
 
-After reading user parameters, SAM proceeds with initializing each of its components. Initialization mainly prepares the internal specifications of each compartment. At the end of initialization stage, `Researcher` is aware of all parameters and is ready to conduct the --- already defined --- `Experiment`.
+After reading user parameters, SAM proceeds with initializing each of its components. Initialization mainly prepares the internal specifications of each compartment. At the end of the initialization stage, `Researcher` is aware of all parameters and is ready to conduct the — already established — `Experiment`.
 
-Prepareing the Research
------------------------
+## Preparing the Research
 
-The preparation of the research is the first step of the simulation. This step resembles the process of collecting the data for the study. At this stage, the `Researcher` uses the information provided in the `ExperimentSetup` to produce/collect data points for each group/condition/dv using the `DataStrategy` module.
+The preparation of the research is the first step of the simulation. This step resembles the process of collecting the data for the study. At this stage, the `Researcher` uses the information provided by `Experiment Setup` to produce/collect data points for each group/condition/dv using the `Data Strategy` module.
 
-![Steps involving preparing the
-research](figures/prepare-research.png)
+![<b>Figure 3.</b> Preparing the Research.](/figures/prepare-research.png)
 
-Performing the Research
------------------------
+## Performing the Research
 
-At this stage, the `Researcher` uses `TestStrategy` (of the `Experiment`) to run the test and populates relevant parameters, e.g., `statistic, pvalue, sig, side`. The next step is to check whether or not the `Researcher` is satisfied with test results. This is being done by passing the `Experiment` to the `DecisionStrategy`. `Researcher` relies on deicsion strategy's verdict to decide whether to proceed with the current Submission or to continue applying one or more hacking strategies on the experiment before submitting the study for the review.
+At this stage, `Researcher` uses `Test Strategy` (defined in `Experiment Setup`) to run the test and populates relevant parameters, e.g., `statistic, pvalue, sig, side`. Similarly, `Effect Strategy` will be used to calculate effect sizes.
 
-As mentioned, Researcher can have access to a list of hacking methods. For each hacking strategy, **h**, a copy of experiment is passed to the hacking strategy. Based on the type of hacking strategy, `Researcher` reaches to the `DecisionStrategy` on whether it should continue or stop the process of altering the result. For instance, with optional stopping, the researcher --- after each phase of addition --- can decide whether the outcome is satisfactory or not.
+The next step is to check whether `Researcher` is satisfied with test results. This is being done by passing the `Experiment` to `Decision Strategy`. `Researcher` relies on decision strategy's verdict to decide whether to proceed with the current Submission or to continue applying one or more of the hacking strategies on the experiment before submitting the study for the review. This process will be discussed in more details in *[Decision Strategy](decision-strategy.md)* section.
 
-![Steps involving performing the
-research](figures/perform-research.png)
+![Figure 4. Steps involving performing the research](/figures/perform-research.png)
 
-Publishing the Research
------------------------
+## Publishing the Research
 
-Process of publishing the research resembles the preparation of final mamuscript and sending it to the Journal for review.
+Process of publishing a research resembles the preparation of the final manuscript and sending it to the Journal for review.
 
-After applying the last hack, `Researcher` continues with the preparation of its **final** Submission. This is being done through the `DecisionStrategy` where the researcher asks for the *final verdict*. Based on the type of `DecisionStrategy`, s/he can look back at different versions of `Experiment` or `Submission` and pick the most satisfying record.
+After performing the research, applying any of QRPs (if necessary), `Researcher` continues with the preparation of its **final** Submission. This is being done through the `Decision Strategy` where the researcher select a specific outcome based on given criteria. In the case where researcher finds an outcome to submit for review, a `Submission` record will be generated and will be submitted to the `Journal`. 
 
-After asking for final verdict, `Researcher` is ready to submit its finding. Journal will judge the submitted `Submission`'s based on the criteria defined in its `SelectionStrategy` routine. If accepted, `Journal` adds the submission to its publication lists for further analysis or adjustment of its `SelectionStrategy`, if necessary.
+Journal will judge the submitted `Submission` based on the criteria defined in its `Selection Strategy` routine. If accepted, `Journal` adds the submission to its publication lists for further analysis.
 
-![Steps involving publishing a
-research](figures/publish-research.png)
+![Figure 5. Steps involving publishing a research](/figures/publish-research.png)
