@@ -147,44 +147,30 @@ After performing the test and choosing the outcome variable, the `Researcher` pu
   <img src="../figures/researcher-stack.png" width="300" align="right">
 </picture>
 
-`Researcher` object is the main player in the simulation. It's a central piece of the research, it uses the `ExperimentSetup` to prepare the `Experiment` and send the final outcome to the `Journal` for reviewing process.
+`Researcher` object is the main player in the simulation. It's a central piece of the research, it uses the `Experiment Setup` to prepare the `Experiment` and send the final outcome to `Journal` for the reviewing process.
 
-After the initialization of the `ExperimentSetup`, `Researcher` will prepare the `Experiment` object by collecting data through the data strategy, testing the hypothesis via the test strategy, and calculating the effect sizes using the effect strategy. Then, if programmed to, it applies different *p*-hacking methods on the dataset and hacks its way through a significant result. In the end, the researcher prepares a `Submission` record and send it to the `Journal` for review. This process is discussed in more detailed in `flow`{.interpreted-text role="doc"} chapter.
-
-Below is a list of main methods and variables of `Researcher`.
-
-- `experiment`, an instance of `design-experiment`{.interpreted-text role="ref"}
-- `journal`, an instance of `design-journal`{.interpreted-text role="ref"}
-- `decisionStrategy`, an instance of `design-decision-strategy`{.interpreted-text role="ref"}.
-- *isHacker*, a flag indicating whether the researcher will perform any p-hacking methods on the data
-- `hackingStrategies`, a list of `hacking-strategies`{.interpreted-text role="doc"}.
-- `prepareResearch()`, a method to initialize the experiment
-- `performResearch()`, a method to calculate the necessary statistics, running the tests, and applying p-hacking methods (if applicable).
-- `publishResearch()`, a method to prepare the final `submission`{.interpreted-text role="ref"} and submit it to the `journal`{.interpreted-text role="ref"} for review.
+After the initialization of `Experiment Setup`, `Researcher` will prepare the `Experiment` object by collecting data via the `Data Strategy`, testing the hypothesis via the `Test Strategy`, and calculating the effect sizes using the `Effect Strategy`. Then, if configured to, it applies different QRPs on `Experiment` and hacks its way through a satisfactory result. In the end, the researcher prepares a `Submission` record and sends it to `Journal` for review. This process is discussed in more detailed in [Flow](flow.md) abs [Research Workflow](research-workflow.md) sections. 
 
 #### Decision Strategy
 
-As the name suggests, `DecisionStrategy` describes how the `Researcher` chooses between different outcome variables during the research. The list below shows a few available options. The default is always `PreRegisteredOutcome` which means the `Researcher` always selects the pre-registered outcome regardless of its significance.
+As the name suggests, `Decision Strategy` mimics the decision making process during a research. Researcher relies on decision strategy’s verdict in two main ways, **Selection** and **Decision** [policies](policies.md)
 
-- `PreRegisteredOutcome`
-- `MinPvalue`
-- `MaxEffect`
-- `MaxEffectMinPvalue`
+- **Selection** policies are mainly being used by Researchers to filter and select an outcome from a group of outcomes. For instance, if a Researcher only sees outcomes with significant *p*-values satisfactory, a selection policy will help her to only select for those between all available outcomes. 
+- **Decision** policies on the other hand, are being used to make certain decisions during the course of a research. For instance, whether a researcher should start applying QRPs on am experiment, or whether it should submit the final submission to the journal. 
 
-`Researcher` can consult his *Decision Strategy* in different stages of the research. **1)** Just before applying any hacking strategies, a researcher can check if the pre-registered outcome is significant or not, *initial verdict*. **2)** If it is not, during the execution of a hacking strategy, it can ask the decision strategy whether to interrupt the hacking process, *intermediate verdict*. **3)** After the completion of a hacking routine, the decision strategy evaluates the outcome, *hacking verdict*. **4)** Finally, in his *final verdict*, a researcher can look back at the history of his `Experiment` and pick the final result that is going to be submitted in the form of `Submission`.
+**Selection** and **Decision** policies follows each other’s in this order. In most cases, a decision should be make about the already selected outcome. For instance, as the researcher applies a QRP on an experiment, he uses a **Selection** policy to look for his preferred outcome, then, he needs to make a decision whether he is going to continue with the next QRP or he is already happy with the selection and find it satisfactory. The notion of satisfactory outcome will be decided by a **Decision** policy. As we will discuss later, we’ll be able to define various criteria (policies) for **selection** and **decision** processes. 
 
-Main variables and methods of `DecisionStrategy` are:
+List of some of the Selection—Decision steps available is as follow:
 
-- *isStillHacking*, a flag indicating whether the `Researcher` should continue with the hacking procedure, or the result is already satisfactory
-- `isPublishable()`, a method indicating if the selected outcome is significant or not
-- `submissionsPool`, a history of all `Submission` records during the research
-- `experimentsPool`, a history of all modified versions of `Experiment` during the research.
-- `verdict(Experiment, DecisionStage)` .. - `finalSubmission`, .. 
-- `more … <exhale_class_class_experiment_setup>`{.interpreted-text role="ref"}
+- Initial **Selection Policy**
+- Will be Hacking **Decision Policy**
+	- each hacking strategy will end with a selection-decision of its own
+		- Selection
+		- Decision
+- Between Hacked Outcomes **Selection Policies**
+- Will Submit To Journal **Decision Policy**
 
-!!! attention
-
-    The decision strategy is one of the more complicated pieces of SAM. It engages in different stages of conducting the research by researcher and different hacking strategies. This process will be clarified in [Flow](flow.md) and *‌[Decision Strategy](decision-strategies.md)* chapters.
+Decision Strategy is one of the more elaborated pieces of SAM. It engages in different stages of conducting the research by researcher and different hacking strategies. This process will be clarified in [Flow](flow.md) and [Research Workflow](research-workflow.md) and [Decision Strategy](decision-strategy.md) sections.
 
 #### Hacking Strategy-(ies)
 
