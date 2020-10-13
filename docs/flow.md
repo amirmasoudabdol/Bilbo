@@ -8,6 +8,9 @@ SAM simulates the process of producing a scientific research through several sub
 
 ![<b>Figure 1.</b> Overall Execution Flow of SAM](/figures/main-routine.png)
 
+!!! info
+	In the this and following sections, we will heavily use flowchart digrams to visualize and express processes and algorithms. If you are not familiar with general syntax of flowcharts, please read out the Wikipedia article on [Flowcharts](https://en.wikipedia.org/wiki/Flowchart#Building_blocks).
+
 ## Initialization
 
 During the initialization phase, SAMs loads a configuration file and initializes different compartments based on the given parameters. Details of the configuration file is described in more details [here](configuration-file.md). 

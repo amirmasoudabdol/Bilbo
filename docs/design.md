@@ -160,7 +160,7 @@ As the name suggests, `Decision Strategy` mimics the decision making process dur
 
 **Selection** and **Decision** policies follows each other’s in this order. In most cases, a decision should be make about the already selected outcome. For instance, as the researcher applies a QRP on an experiment, he uses a **Selection** policy to look for his preferred outcome, then, he needs to make a decision whether he is going to continue with the next QRP or he is already happy with the selection and find it satisfactory. The notion of satisfactory outcome will be decided by a **Decision** policy. As we will discuss later, we’ll be able to define various criteria (policies) for **selection** and **decision** processes. 
 
-List of some of the Selection—Decision steps available is as follow:
+List of some of the Selection→Decision sequences available is as follow:
 
 - Initial **Selection Policy**
 - Will be Hacking **Decision Policy**
@@ -168,7 +168,8 @@ List of some of the Selection—Decision steps available is as follow:
 		- Selection
 		- Decision
 - Between Hacked Outcomes **Selection Policies**
-- Will Submit To Journal **Decision Policy**
+- Will Continue Replicating **Decision Policies**
+- Will be Submitting To Journal **Decision Policy**
 
 Decision Strategy is one of the more elaborated pieces of SAM. It engages in different stages of conducting the research by researcher and different hacking strategies. This process will be clarified in [Flow](flow.md) and [Research Workflow](research-workflow.md) and [Decision Strategy](decision-strategy.md) sections.
 
