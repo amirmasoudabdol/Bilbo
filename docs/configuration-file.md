@@ -5,167 +5,162 @@ title: Introduction
 Configuration File
 ==================
 
-SAM uses a [JSON](https://www.json.org) file to load and save all simulation parameters. The code block below shows a general configuration file used by SAM to prepare the simulation and all its components. As it's shown, the file is separated into 4 different sections, each corresponding to one of SAM's components. After customizing your own configuration file, you can load it to SAM using `./SAMpp --config=your-configuration-file.json`. This will start the simulation as described in the `flow`{.interpreted-text role="doc"} section.
+SAM uses a [JSON](https://www.json.org) file to load and save all simulation parameters. The code block below shows a general configuration file used by SAM to prepare the simulation and all its components. As shown, the config file is separated into 4 different sections, each corresponding to one of SAM's components discussed previously. In this chapter, we will discuss each part, and learn how to configure each parts separately in order to be able to simulate a full research as described in [Flow](flow.md) and [Research Workflow](research-workflow.md) sections.
 
-While most parameters are self-explanatory, this section goes into more details on how SAM will process and interpret them during the initialization phase.
+<!--After customizing your own configuration file, you can load it to SAM using `./SAMpp --config=your-configuration-file.json`. This will start the simulation as described in the `flow`{.interpreted-text role="doc"} section.-->
 
-```json
-{
-    "simulation_parameters": {
-        "debug": false,
-        "master_seed": 42,
-        "n_sims": 5,
-        "output_path": "../outputs/",
-        "output_prefix": "",
-        "progress": false,
-        "save_pubs": true,
-        "save_rejected": true,
-        "save_sims": false,
-        "save_stats": true,
-        "verbose": true
-    },
-    "experiment_parameters": {
-        "n_conditions": 2,
-        "n_dep_vars": 1,
-        "n_obs": 25,
-        "data_strategy": {
-            "name": "LinearModel",
-            "covs": 0.5,
-            "means": [
-                0,
-                0.2
-            ],
-            "stddevs": 1.0
-        },
-        "test_strategy": {
-            "name": "TTest",
-            "alpha": 0.05,
-            "side": "TwoSided"
-        },
-        "effect_strategy": {
-            "name": "MeanDifference"
-        }
-    },
-    "journal_parameters": {
-        "max_pubs": 20,
-        "selection_strategy": {
-            "name": "FreeSelection"
-        }
-    },
-    "researcher_parameters": {
-        "decision_strategy": {
-            "name": "PatientDecisionMaker",
-            "preference": "MarjansHacker",
-            "publishing_policy": "Anything"
-        },
-        "hacking_strategies": [
-            [
-                {
-                    "name": "SubjectiveOutlierRemoval",
-                    "min_observations": 5,
-                    "range": [
-                        0.5,
-                        4
-                    ],
-                    "step_size": 0.1
-                }
-            ]
-        ],
-        "is_phacker": true,
-        "is_pre_processing": false,
-        "pre_processing_methods": [
-            {
-                "name": "OutliersRemoval",
-                "level": "dv",
-                "max_attempts": 1000,
-                "min_observations": 10,
-                "multipliers": [
-                    0.5
-                ],
-                "n_attempts": 1000,
-                "num": 1000,
-                "order": "random"
-            }
-        ]
-    }
-}
-```
+??? example "Sample Configuration File"
+	```json
+	{
+	    "experiment_parameters": {
+	        "n_reps": 1,
+	        "n_conditions": 2,
+	        "n_dep_vars": 2,
+	        "n_obs": 25,
+	        "data_strategy": {
+	            "name": "LinearModel",
+	            "measurements": {
+	                "dist": "mvnorm_distribution",
+	                "means": [0.0, 0.0, 0.4, 0.4],
+	                "covs": 0.5,
+	                "stddevs": 1.0
+	            }
+	        },
+	        "effect_strategy": {
+	            "name": "MeanDifference"
+	        },
+	        "test_strategy": {
+	            "name": "TTest",
+	            "alpha": 0.005,
+	            "alternative": "TwoSided",
+	            "var_equal": true
+	        }
+	    },
+	    "journal_parameters": {
+	        "max_pubs": 24,
+	        "selection_strategy": {
+	            "name": "SignificantSelection",
+	            "alpha": 0.05,
+	            "pub_bias": 0.1,
+	            "side": 0
+	        }
+	    },
+	    "researcher_parameters": {
+	        "decision_strategy": {
+	            "name": "DefaultDecisionMaker",
+	            "initial_selection_policies": [
+	                ["sig", "min(pvalue)"]
+	            ],
+	            "will_start_hacking_decision_policies": [
+	                "!sig"
+	            ],
+	            "stashing_policy": [
+	                ""
+	            ],
+	            "between_hacks_selection_policies": [
+	                [""]
+	            ],
+	            "between_replications_selection_policies": [
+	                [""]
+	            ],
+	            "will_continue_replicating_decision_policy": [
+	                ""
+	            ],
+	            "submission_decision_policies": [
+	                ""
+	            ]
+	        },
+	        "probability_of_being_a_hacker": 1,
+	        "probability_of_committing_a_hack": 1,
+	        "hacking_strategies": [],
+	        "is_pre_processing": false,
+	        "pre_processing_methods": [
+	            ""
+	        ]
+	    },
+	    "simulation_parameters": {
+	        "log_level": "info",
+	        "master_seed": "random",
+	        "n_sims": 1,
+	        "output_path": "../outputs/",
+	        "output_prefix": "sample_sim",
+	        "update_config": true,
+	        "progress": false,
+	        "save_all_pubs": false,
+	        "save_meta": true,
+	        "save_overall_summaries": true,
+	        "save_pubs_per_sim_summaries": true,
+	        "save_rejected": false
+	    }
+	}
+	```
 
-Simulation Parameters
----------------------
+??? info "About JSON"
+    For the introduction to JSON, see [here](https://learnxinyminutes.com/docs/json/) or [here](https://en.wikipedia.org/wiki/JSON).
 
-This section specifies general parameters of the simulation. These parameters are not necessarily influencing SAM components\'. They define the overall behavior of SAM regarding input and output.
+## Simulation Parameters
 
-
-
-| **Parameter**   | **Type**               | **Description**                                                                                                                                                                                                                              |
-|:----------------|:-----------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `debug`         | `bool`                 | Runs SAM in debug mode.                                                                                                                                                                                                                      |
-| `verbose`       | `bool` ex              | Causes SAM to be verbose, announcing the ecution of dfiferent processes.                                                                                                                                                                     |
-| `progress`      | `bool`                 | Shows the progress bar.                                                                                                                                                                                                                      |
-| `master_seed`   | `int` \*m ot ba \`" ra | An integer for initiating seed’s of the ain random number generator stream\*. All her necessary streams will be seeded sed on the given seed. Setting this to random"`tells SAM to use the clock to ndomize the random seed. (default:`42\`) |
-| `n_sims`        | `int` fo               | Number of simulation repeated simulation r given parameters.                                                                                                                                                                                 |
-| `save_output`   | `bool` a               | Tells SAM to export the simulation data to CSV file                                                                                                                                                                                          |
-| `output_path`   | `string`               | A path for output files.                                                                                                                                                                                                                     |
-| `output_prefix` | `string` {: wi fi      | A prefix to be added to output filenames. .label} Raw simulation data files ends th `_sim.csv`, and meta-analysis data les ends with `_meta.csv`                                                                                             |
+This section specifies general parameters of the simulation. These parameters are not necessarily influencing SAM's modules. Table below summarizes simulations parameters, and their functions.
 
 
-Experiment Parameters
----------------------
-
-This section lists necessary parameters of the [Experiment Setup](design.md#experiment-setup) and [Experiment](design.md#experiment).
-
-
-
-| **Parameter**       | **Type** | **Description**                     |
-|:--------------------|:---------|:------------------------------------|
-| `n_conditions`      | `int`    | Number of treatment conditions, `nc`. *Excluding the control group.*  |
-| `n_dep_vars`        | `int`    | Number of dependent variables in each condition, `nd`.               |
-| `n_items`           | `int`    | Number of items. Only applicable for Latent Model, `ni`.             |
-| `n_obs`             | `int`, `array`   | Number of observation per group.    |
-| `test_strategy`     | `string` | Specify the underlying test strategy.                           |
-| `data_strategy`     | `string` | Specify the underlying data strategy.                           |
-| `effect_strategy`   | `string` | Specify the underlying effect strategy.                         |
-
-!!! note
-
-    Each `Data`, `Test`, or `Effect` strategy might carry its own set of parameters. See, `design`{.interpreted-text role="doc"}, doc:[data-strategy]{.title-ref}, doc:[test-strategy]{.title-ref}, doc:[effect-strategy]{.title-ref} for more info.
-
-!!! warning
-
-    The size of an given `array` or `matrix` must agree with the number of conditions, dependant variables, and items, otherwise an error will occur.
+| **Parameter**                 | **Type**           | **Description**                                                                                                                                  |
+|:------------------------------|:-------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
+| `log_level`                   | `string`           | Indicates level of logging during the simulation.                                                                                                |
+| `progress`                    | `boolean`          | Indicates whether a progress bar is displayed or not.                                                                                            |
+| `master_seed`                 | `int` / `"random"` | An integer indicating the intial seed of the RNG engine. If set to "random", a random number will be used in each run.                           |
+| `n_sims`                      | `int`              | Number of simulation repeated simulation r given parameters.                                                                                     |
+| `save_output`                 | `boolean`          | Tells SAM to export the simulation data to CSV file                                                                                              |
+| `output_path`                 | `string`           | A path for output files.                                                                                                                         |
+| `output_prefix`               | `string`           | A prefix to be added to output filenames. .label} Raw simulation data files ends th `_sim.csv`, and meta-analysis data les ends with `_meta.csv` |
+| `update_config`               | `boolean`          | Indicates whether the config file should be updated after the simulation. This might overwrite `master_seed` or `output_path`.                   |
+| `save_all_pubs`               | `boolean`          | Indicates whether all publications should be saved.                                                                                              |
+| `save_meta`                   | `boolean`          | Indicates whether data from meta-analyses should be saved.                                                                                       |
+| `save_overall_summaries`      | `boolean`          | Indicates whether the summary of entire simulation should be calculated and saved.                                                               |
+| `save_pubs_per_sim_summaries` | `boolean`          | Indicates whether the summary of each simulation run should be calucated and saved.                                                              |
+| `save_rejected`               | `boolean`          | Indicates whether rejected publications should be stored and saved.                                                                              |
 
 
-Researcher Parameters
----------------------
+## Experiment Parameters
 
-This section defines the behavior of the `Researcher`.
-
-
-| **Parameter**            | **Type** | **Description**                                                                                                                         |
-|:-------------------------|:---------|:----------------------------------------------------------------------------------------------------------------------------------------|
-| `is_phacker`             | `bool`   | Indicates whether the `Researcher` is a *hacker* or not, if `true`, the list of hacking strategies will be applied on the `Experiment`. |
-| `p_hacking_methods`      | `list`   | A list of `list`, each indicating a chain of `HackingStrategy`.                                                                         |
-| `is_pre_processing`      | `bool`   | Indicates whether any pre-processing procedure is being performed on the data before passing the data to the researcher for analysis.   |
-| `pre_processing_methods` | `list`   | Similar to `p_hacking_methods`. See [Pre-processing]: hacking-strategies.md#hacking-pre-processing                                                                                  |
-| `decision_strategy`      | `dict`   | Specification of a `DecisionStrategy`. See more `decision-strategies`.                                                                  |
+Experiment parameters split into 4 different categories. First 4 paramters are mainly concenring with the experiment design, while each submodule gets its own set of parameters, [Data Strategy](data-strategies.md), [Test Strategies](test-strategies.md), and [Effect Strategies](effect-strategies.md).
 
 
-Journal Parameters
-------------------
+| **Parameter**     | **Type**       | **Description**                                                                    |
+|:------------------|:---------------|:-----------------------------------------------------------------------------------|
+| `n_reps`          | `int`          | Indicates the number of replications of the same research.                         |
+| `n_conditions`    | `int`          | Indicates the number of conditions, n<sub>c</sub>. *Excluding the control group.* |
+| `n_dep_vars`      | `int`          | Indicates the number of dependent variables in each condition, n<sub>d</sub>.               |
+| `n_obs`           | `int`, `array`, `object`<sup>*</sup> | Indicates the number of observations per group.                                     |
+| `data_strategy`   | `string`       | Specify the underlying [Data Strategy](data-strategies.md).                                              |
+| `test_strategy`   | `string`       | Specify the underlying [Test Strategies](test-strategies.md).                                           |
+| `effect_strategy` | `string`       | Specify the underlying [Effect Strategies](effect-strategies.md). |
 
-This section specifies the properties of the `Journal`.
+
+## Researcher Parameters
+
+This section defines the behavior of the Researcher. Researcher's parameters can be separated into three main parts, [Hacking Behaviors](hacking-behaviors.md), [Hacking Strategies](hacking-strategies.md), and [Decision Strategies](decision-strategies.md). The table below lists a few of the parameters, while each part's parameters will be discussed in more details later.
+
+
+| **Parameter**            | **Type**  | **Description**                                                                                                                         |
+|:-------------------------|:----------|:----------------------------------------------------------------------------------------------------------------------------------------|
+| `decision_strategy`      | `dict`    | Specification of a `DecisionStrategy`. See more `decision-strategies`.                                                                  |
+| `probability_of_being_a_hacker`             | `number` | Indicates the probability of a researcher deciding to apply any of the hacking strategies. [Hacking Behaviors](hacking-behaviors.md). |
+| `hacking_strategies`      | `list`    | A list of `list`, each indicating a chain of `HackingStrategy`.                                                                         |
+| `is_pre_processing`      | `boolean` | Indicates whether any pre-processing procedure is being performed on the data before passing the data to the researcher for analysis.   |
+| `pre_processing_methods` | `list`    | Similar to `p_hacking_methods`. See [Pre-processing]: hacking-strategies.md#hacking-pre-processing                                      |
+
+
+## Journal Parameters
+
+Journal parameters are less elaborate than other modules and are divivded into three main parts, [Selection Strategy](selection-strategies.md) and [Meta Analysis](meta_analyses.md).
 
 
 | **Parameter**        | **Type**    | **Description**                                                      |
 |:---------------------|:------------|:---------------------------------------------------------------------|
 | `max_pubs`           | `double` ac | Maximum number of publications that will be cepted by the `Journal`. |
 | `selection_strategy` | `string`    | The `SelectionStrategy` of the journal.                              |
+| `meta_analysis_metrics` | `list` | List of meta anlysis methods with their parameters, see [Meta Analysis](meta-analyses.md)|
 
 !!! note
 
     Parameters like `pub_bias`, `alpha` or `side` can be set based on the     `SelectionStrategy` of user's choice. See,     `selection-strategy`{.interpreted-text role="doc"} for more info.
-
-!!! info "Crash Course on JSON"
-
-    A JSON object is an *unordered* set of name/value pairs inserted     between two curly brackets, `{"name": "S.A.M"}`. A JSON list/array is     an ordered set of values between two brackets,     `[1, "blue", {"name": "S.A.M"}]`

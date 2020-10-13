@@ -33,6 +33,10 @@ blockquote {
   font-size: 98%;
 }
 
+.md-typeset__table {
+  box-sizing: content-box;
+}
+
 
 @media (prefers-color-scheme: dark) {
   body {
