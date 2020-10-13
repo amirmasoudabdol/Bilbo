@@ -6,8 +6,9 @@ nav:
         - design.md
         - flow.md
         - research-workflow.md
-        - decision-strategies.md
+    - Configuration:
         - configuration-file.md
+        - decision-strategies.md
         - data-strategies.md
         - test-strategies.md
         - effect-strategies.md

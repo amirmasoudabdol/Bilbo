@@ -1,5 +1,5 @@
 ---
-title: Design
+title: Modules 
 ---
 
 # Design

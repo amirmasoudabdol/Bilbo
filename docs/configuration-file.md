@@ -1,7 +1,5 @@
 ---
-title: Configuration File
-layout: default
-nav_order: 4
+title: Introduction
 ---
 
 Configuration File

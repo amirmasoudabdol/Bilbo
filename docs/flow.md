@@ -1,7 +1,3 @@
----
-title: Flow
----
-
 # Execution Flow
 
 SAM simulates the process of producing a scientific research through several subprocesses as depicted in Figure 1. Each rounded rectangle describes a process, often performs by one of the components or through the collaboration between different components. This chapter describes each subprocess in more details.
