@@ -103,21 +103,19 @@ SAM uses a [JSON](https://www.json.org) file to load and save all simulation par
 This section specifies general parameters of the simulation. These parameters are not necessarily influencing SAM's modules. Table below summarizes simulations parameters, and their functions.
 
 
-| **Parameter**                 | **Type**           | **Description**                                                                                                                                  |
-|:------------------------------|:-------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
-| `log_level`                   | `string`           | Indicates level of logging during the simulation.                                                                                                |
-| `progress`                    | `boolean`          | Indicates whether a progress bar is displayed or not.                                                                                            |
-| `master_seed`                 | `int` / `"random"` | An integer indicating the intial seed of the RNG engine. If set to "random", a random number will be used in each run.                           |
-| `n_sims`                      | `int`              | Number of simulation repeated simulation r given parameters.                                                                                     |
-| `save_output`                 | `boolean`          | Tells SAM to export the simulation data to CSV file                                                                                              |
-| `output_path`                 | `string`           | A path for output files.                                                                                                                         |
-| `output_prefix`               | `string`           | A prefix to be added to output filenames. .label} Raw simulation data files ends th `_sim.csv`, and meta-analysis data les ends with `_meta.csv` |
-| `update_config`               | `boolean`          | Indicates whether the config file should be updated after the simulation. This might overwrite `master_seed` or `output_path`.                   |
-| `save_all_pubs`               | `boolean`          | Indicates whether all publications should be saved.                                                                                              |
-| `save_meta`                   | `boolean`          | Indicates whether data from meta-analyses should be saved.                                                                                       |
-| `save_overall_summaries`      | `boolean`          | Indicates whether the summary of entire simulation should be calculated and saved.                                                               |
-| `save_pubs_per_sim_summaries` | `boolean`          | Indicates whether the summary of each simulation run should be calucated and saved.                                                              |
-| `save_rejected`               | `boolean`          | Indicates whether rejected publications should be stored and saved.                                                                              |
+- **`log_level`**, *`string`*, Indicates level of logging during the simulation.
+- **`progress`**, *`boolean`*, Indicates whether a progress bar is displayed or not.
+- **`master_seed`**, *`int` / `"random"`*, An integer indicating the intial seed of the RNG engine. If set to "random", a random number will be used in each run.
+- **`n_sims`**, *`int`*, Number of simulation repeated simulation r given parameters.
+- **`save_output`**, *`boolean`*, Tells SAM to export the simulation data to CSV file 
+- **`output_path`**, *`string`*, A path for output files.
+- **`output_prefix`**, *`string`*, A prefix to be added to output filenames. .label} Raw simulation data files ends th `_sim.csv`, and meta-analysis data les ends with `_meta.csv`
+- **`update_config`**, *`boolean`*, Indicates whether the config file should be updated after the simulation. This might overwrite `master_seed` or `output_path`
+- **`save_all_pubs`**, *`boolean`*, Indicates whether all publications should be saved.
+- **`save_meta`**, *`boolean`*, Indicates whether data from meta-analyses should be saved.
+- **`save_overall_summaries`**, *`boolean`*, Indicates whether the summary of entire simulation should be calculated and saved.
+- **`save_pubs_per_sim_summaries`**, *`boolean`*, Indicates whether the summary of each simulation run should be calucated and saved.
+- **`save_rejected`**, *`boolean`*, Indicates whether rejected publications should be stored and saved.
 
 
 ## Experiment Parameters
@@ -125,15 +123,13 @@ This section specifies general parameters of the simulation. These parameters ar
 Experiment parameters split into 4 different categories. First 4 paramters are mainly concenring with the experiment design, while each submodule gets its own set of parameters, [Data Strategy](data-strategies.md), [Test Strategies](test-strategies.md), and [Effect Strategies](effect-strategies.md).
 
 
-| **Parameter**     | **Type**       | **Description**                                                                    |
-|:------------------|:---------------|:-----------------------------------------------------------------------------------|
-| `n_reps`          | `int`          | Indicates the number of replications of the same research.                         |
-| `n_conditions`    | `int`          | Indicates the number of conditions, n<sub>c</sub>. *Excluding the control group.* |
-| `n_dep_vars`      | `int`          | Indicates the number of dependent variables in each condition, n<sub>d</sub>.               |
-| `n_obs`           | `int`, `array`, `object`<sup>*</sup> | Indicates the number of observations per group.                                     |
-| `data_strategy`   | `string`       | Specify the underlying [Data Strategy](data-strategies.md).                                              |
-| `test_strategy`   | `string`       | Specify the underlying [Test Strategies](test-strategies.md).                                           |
-| `effect_strategy` | `string`       | Specify the underlying [Effect Strategies](effect-strategies.md). |
+- **`n_reps`**, *`int`*, Indicates the number of replications of the same research. 
+- **`n_conditions`**, *`int`*, Indicates the number of conditions, n<sub>c</sub>. *Excluding the control group.* 
+- **`n_dep_vars`**, *`int`*, Indicates the number of dependent variables in each condition, n<sub>d</sub>.
+- **`n_obs`**, *`int`, `array`, `object`*, Indicates the number of observations per group 
+- **`data_strategy`**, *`string`*, Specify the underlying [Data Strategy](data-strategies.md).
+- **`test_strategy`**, *`string`*, Specify the underlying [Test Strategies](test-strategies.md).
+- **`effect_strategy`**, *`string`*, Specify the underlying [Effect Strategies](effect-strategies.md).
 
 
 ## Researcher Parameters
@@ -141,13 +137,11 @@ Experiment parameters split into 4 different categories. First 4 paramters are m
 This section defines the behavior of the Researcher. Researcher's parameters can be separated into three main parts, [Hacking Behaviors](hacking-behaviors.md), [Hacking Strategies](hacking-strategies.md), and [Decision Strategies](decision-strategies.md). The table below lists a few of the parameters, while each part's parameters will be discussed in more details later.
 
 
-| **Parameter**            | **Type**  | **Description**                                                                                                                         |
-|:-------------------------|:----------|:----------------------------------------------------------------------------------------------------------------------------------------|
-| `decision_strategy`      | `dict`    | Specification of a `DecisionStrategy`. See more `decision-strategies`.                                                                  |
-| `probability_of_being_a_hacker`             | `number` | Indicates the probability of a researcher deciding to apply any of the hacking strategies. [Hacking Behaviors](hacking-behaviors.md). |
-| `hacking_strategies`      | `list`    | A list of `list`, each indicating a chain of `HackingStrategy`.                                                                         |
-| `is_pre_processing`      | `boolean` | Indicates whether any pre-processing procedure is being performed on the data before passing the data to the researcher for analysis.   |
-| `pre_processing_methods` | `list`    | Similar to `p_hacking_methods`. See [Pre-processing]: hacking-strategies.md#hacking-pre-processing                                      |
+- **`decision_strategy`**, *`dict`*, Specification of a `DecisionStrategy`. See more `decision-strategies`.
+- **`probability_of_being_a_hacker`**, *`number`*, Indicates the probability of a researcher deciding to apply any of the hacking strategies. [Hacking Behaviors](hacking-behaviors.md).
+- **`hacking_strategies`**, *`list`*, A list of `list`, each indicating a chain of `HackingStrategy`.
+- **`is_pre_processing`**, *`boolean`*, Indicates whether any pre-processing procedure is being performed on the data before passing the data to the researcher for analysis. 
+- **`pre_processing_methods`**, *`list`*, Similar to `p_hacking_methods`. See [Pre-processing]: hacking-strategies.md#hacking-pre-processing  
 
 
 ## Journal Parameters
@@ -155,12 +149,6 @@ This section defines the behavior of the Researcher. Researcher's parameters can
 Journal parameters are less elaborate than other modules and are divivded into three main parts, [Selection Strategy](selection-strategies.md) and [Meta Analysis](meta_analyses.md).
 
 
-| **Parameter**        | **Type**    | **Description**                                                      |
-|:---------------------|:------------|:---------------------------------------------------------------------|
-| `max_pubs`           | `double` ac | Maximum number of publications that will be cepted by the `Journal`. |
-| `selection_strategy` | `string`    | The `SelectionStrategy` of the journal.                              |
-| `meta_analysis_metrics` | `list` | List of meta anlysis methods with their parameters, see [Meta Analysis](meta-analyses.md)|
-
-!!! note
-
-    Parameters like `pub_bias`, `alpha` or `side` can be set based on the     `SelectionStrategy` of user's choice. See,     `selection-strategy`{.interpreted-text role="doc"} for more info.
+- **`max_pubs`**, *`double`*, Maximum number of publications that will be cepted by the `Journal`.
+- **`selection_strategy`**, *`string`*, The `SelectionStrategy` of the journal. 
+- **`meta_analysis_metrics`**, *`list`*, List of meta anlysis methods with their parameters, see [Meta Analysis](meta-analyses.md)

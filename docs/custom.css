@@ -7,9 +7,14 @@ p {
 	text-align: justify;
 }
 
-pre, code {
+code {
 	/*font-family: ui-monospace !important;*/
-	font-weight: 600 !important;
+	/*font-weight: 600 !important;*/
+  font-size: .90em !important; 
+}
+
+pre#__code_0 {
+  font-weight: 600 !important;
 }
 
 .md-content {

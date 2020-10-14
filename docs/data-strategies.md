@@ -20,7 +20,7 @@ Parameters of the `DataStrategy` are intertwined with the `ExperimentSetup` para
 
 ```json
 {
-"experiment_parameters": {
+    "experiment_parameters": {
         "n_conditions": 2,
         "n_dep_vars": 1,
         "n_obs": 25
