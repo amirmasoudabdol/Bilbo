@@ -18,6 +18,8 @@ nav:
             - hacking-strategies/optional-stopping.md
             - hacking-strategies/outliers-removal.md
             - hacking-strategies/subjective-outliers-removal.md
+            - hacking-strategies/falsifying-data.md
+            - hacking-strategies/fabricating-data.md
         - journal.md
     - Examples:
         - examples/index.md
@@ -77,6 +79,7 @@ extra:
 
 # Extensions
 markdown_extensions:
+  - abbr
   - admonition
   - attr_list
   - def_list
