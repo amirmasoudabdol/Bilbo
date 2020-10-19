@@ -2,7 +2,7 @@
 title: Bakker et al., 2012
 ---
 
-# The Rules of the Game Called Psychological Science
+# The Rules of the Game Called Psychological Science[@Bakker_2012]
 
 In this report, we will attempt to discuss the replication and reproduction of the simulation study conducted by Baker et al., 2012[@Bakker_2012]. The simulation is designed to recreate a common routine of applying a set of questionable research practices, and consequently evaluate their effects on the observed effect size bias, and chance of finding significance results.
 
@@ -336,6 +336,35 @@ It’s worth mentioning that the researcher has not adoptted his strategies to t
 The effect of *α* on the chance of finding a significant result and ES bias can be visualized using a heatmap as well. Figure <a href="#fig:extended_sim_heatmap_prop" data-reference-type="ref" data-reference="fig:extended_sim_heatmap_prop">7</a> and <a href="#fig:extended_sim_heatmap_bias" data-reference-type="ref" data-reference="fig:extended_sim_heatmap_bias">8</a> showcase the trends and oatterns more vividly. With regards to *chance of finding a significant result*, as discussed before, we can see a clear decline as we decrease *α*. This can be seen by the movement of the dark region (lower probablitiy) to the right side (higher effects).
 
 While we can see a clear change in the probility of finding a significant result, the heatmap of ES bias looks very scattered and with no clear patterns or trends. This is the indication of a non-linear relation between *α* and ES bias. While decreasing alpha makes it harder to find a significant results, a weak experiment design carries its bias with it anyway.
+
+
+### Effect of Replications
+
+Before we end the first extension, we decided to study the effect of number of replications in Bakker et al. study. Figures below showcase the effect that different number of replications has on the chance of finding significant and also the bias accumulated in effect size bias. While the figures might look crowded, the only thing we are trying to emphasize on them is the fact that more replications lead to more bias in our studies. This can be seen by tracing points' shapes in each plots.
+
+
+=== "Chance of Finding Sig."
+
+    <figure>
+      <picture>
+        <source 
+            srcset="/examples/figures/Bakker_2012/First_and_Half_Extension_Different_Reps_Levels_Sig_dark.png" 
+            media="(prefers-color-scheme: dark)">
+      <img src="/examples/figures/Bakker_2012/First_and_Half_Extension_Different_Reps_Levels_Sig_light.png" id="fig:extended_sim_proportion_plot" alt="Chance of finding a significant result with regards to different values of \alpha." /><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+      </picture> 
+    </figure>
+
+
+=== "ES Bias"
+
+    <figure>
+      <picture>
+        <source 
+            srcset="/examples/figures/Bakker_2012/First_and_Half_Extension_Different_Reps_Levels_ES_dark.png" 
+            media="(prefers-color-scheme: dark)">
+      <img src="/examples/figures/Bakker_2012/First_and_Half_Extension_Different_Reps_Levels_ES_light.png" id="fig:extended_sim_bias_plot" alt="ES Bias with regards to different values of \alpha." /><figcaption aria-hidden="true">ES Bias with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+      </picture>
+    </figure>
 
 
 ## Second Extension: More Aggressive QRPs

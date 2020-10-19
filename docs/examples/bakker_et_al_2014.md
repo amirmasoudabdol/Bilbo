@@ -2,7 +2,7 @@
 title: Bakker et al., 2014
 ---
 
-# Outlier Removal, Sum Scores, and The Inflation of the Type I Error Rate In Independent Samples T Tests: The Power of Alternatives and Recommendations
+# Outlier Removal, Sum Scores, and The Inflation of the Type I Error Rate In Independent Samples T Tests: The Power of Alternatives and Recommendations[@Bakker_2014]
 
 This report discusses the reproduction process of the simulation study conducted by Bakker et al, 2014[@Bakker_2014]. The simulation aims to study the effects of removing outliers on Type I error on studies based on Graded Response Model. The original study also explores alternative tests but I will not address those in this report.
 
