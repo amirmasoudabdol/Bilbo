@@ -1,5 +1,5 @@
 ---
-title: Mriese et al., 2020
+title: Friese et al., 2020
 ---
 
 # *p*-Hacking and Publication Bias Interact to Distort Meta- Analytic Effect Size Estimates[@Friese_2020aa]
@@ -7,7 +7,7 @@ title: Mriese et al., 2020
 
 
 
-![Mriese Simulation](/examples/figures/Mriese_2019/Mriese_Simulation.png)
+![Friese Simulation](/examples/figures/Friese_2019/Friese_Simulation.png)
 
 
 \bibliography

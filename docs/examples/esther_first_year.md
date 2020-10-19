@@ -276,7 +276,7 @@ In the case of Maassen, we need to induce different level of publication bias on
 ## Extended Simulation
 
 
-In the case of Maassen's simulation, we decided to extend the simulation by covering full range of publication bias, *p*, and true effect size, *μ*. This extension does not change our main body of configuration. We only need to generate more configuration files with different values of *p*, and *μ*, see [SAMdd](/samdd.md).
+In the case of Maassen's simulation, we decided to extend the simulation by covering full range of publication bias, *p*, and true effect size, *μ*. This extension does not change our main body of configuration. We only need to generate more configuration files with different values of *p*, and *μ*, see [SAMoo](/samoo.md).
 
 
 | Parameter              | Values                                                                 |
