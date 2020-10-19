@@ -23,11 +23,11 @@ Maassen has included a range of parameters in her study. The simulation study ha
 
 | **Parameter**          | **Values**                                                             |
 |:-----------------------|:-----------------------------------------------------------------------|
-| nConds                 | [2, 5]                                                                 |
-| Publication Bias       | [0., 0.05, 0.5, 1]                                                      |
-| Max. Publications, *K* | [8, 24, 72]                                                            |
+| nConds                 | {2, 5}                                                                 |
+| Publication Bias       | {0., 0.05, 0.5, 1}                                                     |
+| Max. Publications, *K* | {8, 24, 72}                                                            |
 | Sample Size, *N*       | 75% Small<br>25% Large                                                 |
-| μ                      | [0, 0.147, 0.3835, 0.699375]                                           |
+| μ                      | {0, 0.147, 0.3835, 0.699375}                                           |
 | ɑ of T Test            | 0.05                                                                   |
 | QRPs                   | None<br>Selective Reporting<br>Selective Reporting + Optional Stopping |
 
@@ -281,12 +281,12 @@ In the case of Maassen's simulation, we decided to extend the simulation by cove
 
 | Parameter              | Values                                                                 |
 |:-----------------------|:-----------------------------------------------------------------------|
-| nConds                 | [2, 5]                                                                 |
+| nConds                 | {2, 5}                                                                 |
 | Publication Bias       | p ∈ [0, 1]                                                           |
-| Max. Publications, *K* | [8, 24, 72]                                                            |
+| Max. Publications, *K* | {8, 24, 72}                                                            |
 | Sample Size, *N*       | 75% Small<br>25% Large                                                 |
 | μ                      | μ ∈ [0, 1]                                                             |
-| ɑ                      | [0.05, 0.005, 0.0005]                                                  |
+| ɑ                      | {0.05, 0.005, 0.0005}                                                  |
 | QRPs                   | None<br>Selective Reporting<br>Selective Reporting + Optional Stopping |
 
 
