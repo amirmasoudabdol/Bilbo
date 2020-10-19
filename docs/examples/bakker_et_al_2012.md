@@ -350,7 +350,7 @@ Before we end the first extension, we decided to study the effect of number of r
         <source 
             srcset="/examples/figures/Bakker_2012/First_and_Half_Extension_Different_Reps_Levels_Sig_dark.png" 
             media="(prefers-color-scheme: dark)">
-      <img src="/examples/figures/Bakker_2012/First_and_Half_Extension_Different_Reps_Levels_Sig_light.png" id="fig:extended_sim_proportion_plot" alt="Chance of finding a significant result with regards to different values of \alpha." /><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+      <img src="/examples/figures/Bakker_2012/First_and_Half_Extension_Different_Reps_Levels_Sig_light.png" id="fig:extended_sim_proportion_plot" alt="Chance of finding a significant result with regards to different number of replications." /><figcaption aria-hidden="true">Chance of finding a significant result with regards to different number of replications.</figcaption>
       </picture> 
     </figure>
 
@@ -362,7 +362,7 @@ Before we end the first extension, we decided to study the effect of number of r
         <source 
             srcset="/examples/figures/Bakker_2012/First_and_Half_Extension_Different_Reps_Levels_ES_dark.png" 
             media="(prefers-color-scheme: dark)">
-      <img src="/examples/figures/Bakker_2012/First_and_Half_Extension_Different_Reps_Levels_ES_light.png" id="fig:extended_sim_bias_plot" alt="ES Bias with regards to different values of \alpha." /><figcaption aria-hidden="true">ES Bias with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+      <img src="/examples/figures/Bakker_2012/First_and_Half_Extension_Different_Reps_Levels_ES_light.png" id="fig:extended_sim_bias_plot" alt="ES Bias with regards to different number of replications." /><figcaption aria-hidden="true">ES Bias with regards to different number of replications.</figcaption>
       </picture>
     </figure>
 
