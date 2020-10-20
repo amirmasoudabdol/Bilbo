@@ -96,6 +96,7 @@ While each hacking strategy is companied with its set of unique parameters, ever
 	- `Control`
 	- `Treatment`
 	- `Both`
+- **`stopping_condition`**, a [policy chain](decision-strategy.md#policy-chain) indicating the stopping criteria of the method.
 
 
 ```
@@ -105,12 +106,11 @@ While each hacking strategy is companied with its set of unique parameters, ever
 	"stage": "PostProcessing",
 	"max_attempts": 1,
 	"min_observations": 1,
-	"multipliers": [
-		2
-	],
+	"multipliers": [2],
 	"n_attempts": 1,
 	"num": 10,
-	"order": "random"
+	"order": "random",
+	“stopping_condition”: [“pre-reg”, “sig”]
 }
 ```
 

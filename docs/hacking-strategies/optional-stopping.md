@@ -1,32 +1,35 @@
 # Optional Stopping
 
-Optional stopping is the practice of adding new observations to `Experiment`'s data after the initial data collection. The incentive behind applying this method is often to achieve significant results. A researcher can perform this method in many way. Here we have tried to provide a set of parameters that can collectively mimic as many scenarios as possible.
+Optional stopping — in its most prominent form — is the practice of adding new observations to an Experiment’s after the initial data collection is concluded. Often the main incentive behind applying this method is to push one of the dependent variable to significant. Like [selective reporting](selective-reporting.md), optional stopping sits high up in the list of defensible and prevalent questionable research practices [cite, cite].
 
-In order to add optional stopping to your list of hacking, you must replace one of the hacking methods, $h_i$ with the code block below.
+> maybe I can add more “fact” about each method
 
-```json
-{
-  "name": "Optional Stopping",
-  "num": 3,
-  "attempts": 3,
-  "max attempts": 10,
-  "level": "dv"
-}
-```
+![Optional Stopping Algorithm](hacking-strategies/figures/optional-stopping.png)
 
-The optional stopping algorithm is implemented based on the fact that often a researcher performs multiple attempts to achieve significance. Here, `attempts` defines the number of attempts and `num` specifies the number of items --- to be added --- in each attempt.
+Optional stopping can be performed in various ways. SAM’s implementation tries to cover wide range of customizations by providing a set of parameters. Figure 1 shows the main body of the optional stopping algorithm as implemented in SAM. The algorithm is implemented based on the fact that often a researcher perform multiple attempts to achieve significance, `max_attempts`.
 
+At each attempt, researcher reaches to [data strategy](data-strategy.md) and request `num` new observations for each group. Data strategy returns exactly `num` new observations from the same distribution that been used to initialize the Experiment. For instance, if we have configured a [graded response model](data-strategies.md#graded-response-model) as our population, each newly generated observation will be calculated exactly based on the given model, e.g., Rasch Model.
 
+After adding new observations, all statistics, tests, and effects will be recalled and Researcher continue to evaluate the `stopping_condition`, if there is any. If stopping condition is satisfied, Researcher quits the algorithm, and moves to the defined **selection → decision** sequence. 
 
-| **Parameters** | **Type**         | **Description**                                |
-|:---------------|:-----------------|:-----------------------------------------------|
-| `num`          | *n*, `int` to at | Number of observations be added on each tempt. |
-| `attempts`     | *t*, `int` be pr | Number of attempts fore stopping the ocess.    |
-| `max_attempts` | *m*, `int` at    | Maximum number of tempts                       |
-| "d             | vs" Ad de        | ding new values to pendent variables.          |
+The configuration below showcases a sample implementation of optional stopping as it has been used in [Maassen](esther_first_year.md) simulation.
 
-You can control the intensity of optional stopping by alternating the available parameters. For instance, you can implement an *extreme* optional stopping by setting `num = 1` and using large values for `attempts` and `max_attempts`.
+!!! hackingstrategy “Optional Stopping”
+	```json
+	{
+      "name": "OptionalStopping",
+      "target": "Both",
+      "prevalence": 1,
+      "defensibility": 1,
+      "max_attempts": 1,
+      "n_attempts": 1,
+      "num": 0,
+      "add_by_fraction": 0.3
+    }
+	```
 
-!!! note
+Besides [common parameters](hacking-strategies.md#hacking-strategy-specification) shared between all hacking strategies, optional stopping specific parameters are as follow:
 
-    As discussed in the `data-strategies`{.interpreted-text role="ref"}     section, optional stopping utilizes the `DataStrategy` for generating     new data points.
+- `num`, indicates number of observations be added on each attempt
+- `add_by_fraction`, indicates a multiplier that its going to be used to calculate the number of new observations — based on current *N* — to be added to each group
+- `max_attempts`, indicates number of attempts fore stopping the process.
