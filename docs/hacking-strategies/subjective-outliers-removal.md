@@ -1,6 +1,6 @@
 # Subjective Outliers Removal
 
-Subjective outliers removal is defined by Bakker et al., 2014[@Bakker_2014] as a special and even more questionable case of outliers removal where the researcher lowers `k` (the threshold of considering an item to be an outlier) dynamically during the data analysis.
+Subjective outliers removal is defined by Bakker et al., 2014[@Bakker_2014] as a special and even more questionable case of outliers removal where the researcher lowers *k* (the threshold of considering an item to be an outlier) dynamically during the data analysis.
 
 While we are able to mimic this behavior by tweaking the parameters of [outliers removal](/hacking-strategies/outliers-removal.md), SAM has a built-in hacking strategy for this specific method. 
 
