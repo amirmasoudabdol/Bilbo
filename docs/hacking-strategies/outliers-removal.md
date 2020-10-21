@@ -1,12 +1,16 @@
 # Outliers Removal
 
-Removing outliers is another popular researcher's degrees of freedom. While use of outliers removal is not prohibited, most researcher are not aware of its consequences.
+Removing outliers is an important degree of freedom in the list degrees of freedom available to a researcher. While usage of outliers removal methods are not fully condemned [cite] and they are not strictly listed as questionable researcher practices [cite], they should not be applied blindly. Remisful application of these methods could disturb the observed effect size, and influence the significant level.
 
-Outliers removal method can be implemented in several different ways as well. In the simplest case, a researcher will decide to remove a data point from a dataset if the value is further than a distance from the sample mean. One common method is to compare the distance of a value to different multiplier of standard deviation. This type of outliers removal can be deployed by defining the following parameters.
+Unfortunately, most researchers are not aware of consequences of these methods, and as shown by [cite, cite], outliers removal methods are being applied recklessly without taking their influences into the consideration and only to achieve significance level, or removing “unwanted” observations [cite].
 
+As mentioned, there is a range of methods and approaches available to remove outliers from an Experiment, each having their own strength and weakness [cite, cite, cite]. In its simplest form, outliers removal is being done by calculating the relative distances of observations from the sample mean, $d_i = \frac{x_i - \bar{x}}{\sigma^2}$, and deciding whether to call an observation an outlier or not based on a pre-selected threshold, *k*. In this case, items further than *k* are considered outliers.
 
-![Outliers Removal Algorithm](/hacking-strategies/figures/outlier-removal.png)
+![<b>Figure 1.</b> Outliers Removal Algorithm](/hacking-strategies/figures/outlier-removal.png)
 
+Figure 1 shows the implementation of aforementioned method. Like [optional stopping], outliers removal algorithm is designed based on the idea that Researchers might give the procedure several attempts before stop trying, `n_attempts`. Beside the number of attempts, we are able to provide a range of multipliers, *k*s to be considered. At each iteration, we start by a *k*, and remove `num` observations from *targeted* groups. This routine will run `n_attemtps` times or at any time where `stopping_condition` is satisfied.
+
+The configuration below showcases a sample implementation of outliers removal:
 
 !!! hackingstrategy “Outlier Removal”
 		```json
@@ -14,21 +18,19 @@ Outliers removal method can be implemented in several different ways as well. In
 		  "name": "Outlier Removal",
 		  "num": 2,
 		  "n_attempts": 3,
-		  "max_attempts": 10,
 		  "min_observations": 20,
 		  "multipliers": [3, 2, 1]
 		}
 		```
+Besides hacking strategies shared parameters, outliers removal has its own customization parameters as follow:
 
-The main body of outliers removal algorithm is implemented similarly to the optional stopping. The researcher remove add $n$ items in `n_attempts` before stopping the process, or achieving significant results. You can also specify a list of `multipliers`. The algorithm performs *t* attempts to remove *n* outliers from a dataset based on given multipliers, $\sigma_i$. The algorithm will advance if there is no item left to be removed at $i < n$ attempts, or after *n* attempts.
-
-
-
--  `num`, *n*, `int`, indicates number of items to be moved at each attempt
+- `num`, *n*, `int`, indicates number of items to be moved at each attempt
 - `n_attempts`, indicates number of attempts to move outliers for ch multiplier
-- `max_attempts`, indicates the maximum number of erations before opping the process
-- `min_observations`, indicates the minimum number of servations. Outliers moval stops removing lues when a group aches in\_observation\`.
-- `multipliers`, indicates a list of multipliers be used
+- `min_observations`, indicates the minimum number of servations. Outliers removal stops removing observations when a group reaches the given minimum.
+- `multipliers`, indicates a list of multipliers to be used
 - `order`, indicates the order in which observations will be removed from Experiment
+	- `”random”`, removing items randomly
+	- `”asc”`, removing furthest items from$\bar{x}$ first
+	- `”desc”`, removing closest items to$\bar{x}$ first
 
-You can achieve different variants of outliers removal method by modifying its parameters. For instance, setting `num = 1` and choosing large values for `n_attempts` will remove the outliers one-by-one from `Experiment`. You can control this process by specifying a list of `multipliers`.
+\bibliography

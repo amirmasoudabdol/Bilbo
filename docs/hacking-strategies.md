@@ -96,7 +96,7 @@ While each hacking strategy is companied with its set of unique parameters, ever
 	- `Control`
 	- `Treatment`
 	- `Both`
-- **`stopping_condition`**, a [policy chain](decision-strategy.md#policy-chain) indicating the stopping criteria of the method.
+- **`stopping_condition`**, a *optional* [policy chain](decision-strategy.md#policy-chain) indicating the stopping criteria of the method.
 
 
 ```
