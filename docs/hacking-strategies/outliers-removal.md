@@ -8,7 +8,7 @@ As mentioned, there is a range of methods and approaches available to remove out
 
 ![<b>Figure 1.</b> Outliers Removal Algorithm](/hacking-strategies/figures/outlier-removal.png)
 
-Figure 1 shows the implementation of aforementioned method. Like [optional stopping], outliers removal algorithm is designed based on the idea that Researchers might give the procedure several attempts before stop trying, `n_attempts`. Beside the number of attempts, we are able to provide a range of multipliers, *k*s to be considered. At each iteration, we start by a *k*, and remove `num` observations from *targeted* groups. This routine will run `n_attemtps` times or at any time where `stopping_condition` is satisfied.
+Figure 1 shows the implementation of aforementioned method. Like [optional stopping], outliers removal algorithm is designed based on the idea that Researchers might give the procedure several attempts before stop trying, `n_attempts`. Beside the number of attempts, we are able to provide a range of multipliers, *k*’s to be considered. At each iteration, we start by a *k*, and remove `num` observations from *targeted* groups. This routine will run `n_attemtps` times or at any time where `stopping_condition` is satisfied.
 
 The configuration below showcases a sample implementation of outliers removal:
 
