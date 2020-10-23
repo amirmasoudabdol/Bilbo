@@ -48,16 +48,16 @@ While the rest of this section discuss each component properties and rule in mor
   <img src="../figures/experiment-stack.png" width="300" align="right">
 </picture>
 
-As mentioned, an `Experiment` object acts as an umbrella for everything related to an actual experiment. This includes metadata (a.k.a `ExperimentSetup`), raw data, method/model for generating the data, e.g., [Linear Model](data-strategies.md#linear-model), and methods of testing the hypothesis, and calculating the effect. The `Researcher` object has the complete control over every aspects of an `Experiment` **with one exception**: it can only read and not change the `ExperimentSetup` object. This is an important factor when later on we discuss the concept of pre-registration.
+As mentioned, an Experiment object acts as an umbrella for everything related to an actual experiment. This includes metadata (a.k.a ExperimentSetup), raw data, method/model for generating the data, e.g., [Linear Model](data-strategies.md#linear-model), and methods of testing the hypothesis, and calculating the effect. The Researcher object has the complete control over every aspects of an Experiment **with one exception**: it can only read and not change the ExperimentSetup object. This is an important factor when later on we discuss the concept of pre-registration.
 
-Main components of `Experiment` are:
+Main components of Experiment are:
 
 - Experiment Setup
 - Data, an object containing actual data points
 
 #### Experiment Setup
 
-After the initialization phase, SAM treats the `ExperimentSetup` object as a read-only object. During the initialization phase, SAM initializes and randomizes the `ExperimentSetup` based on given parameters. Thereafter, `ExperimentSetup` will stay intact in the code and will be used as a reference point in different stages. 
+After the initialization phase, SAM treats the ExperimentSetup object as a read-only object. During the initialization phase, SAM initializes and randomizes the ExperimentSetup based on given parameters. Thereafter, ExperimentSetup will stay intact in the code and will be used as a reference point in different stages. 
 
 Main components of experiment setup are:
 
@@ -71,7 +71,7 @@ Main components of experiment setup are:
 
 ##### Data Strategy
 
-`DataStrategy` acts as the population of the study, i.e., *data source*. In most cases, an instance of `DataStrategy` object uses a statistical model to sample data points and populates the `Data` object of the `Experiment`. 
+`DataStrategy` acts as the population of the study, i.e., *data source*. In most cases, an instance of `DataStrategy` object uses a statistical model to sample data points and populates the `Data` object of the Experiment. 
 
 Moreover, with certain *p*-hacking methods, e.g., [optional stopping](/hacking-strategies/optional-stopping), the data strategy will be used to generate *extra* data points as requested by the optional stopping.
 
@@ -83,7 +83,7 @@ Available data strategies are:
 
 ##### Test Strategy
 
-`TestStrategy` provides a routine for testing the hypothesis. TestStrategy can access the entire `Experiment` object but often it is restricted to only modifying relevant variables, e.g., `pvalue, statistics, sig`.
+`TestStrategy` provides a routine for testing the hypothesis. TestStrategy can access the entire Experiment object but often it is restricted to only modifying relevant variables, e.g., `pvalue, statistics, sig`.
 
 There are several test strategies already implemented:
 
@@ -131,9 +131,9 @@ List of available selection strategies are:
 
 #### Submission
 
-A `Submission` is a small container, created by the `Researcher` and provided to the `Journal`. It provides a simple interface between `Journal, Experiment` and `Researcher` objects. In fact, a `Submission` resembles a *manuscript* when it is at the hand of the researcher and a *publication* after being accepted by the journal. 
+A `Submission` is a small container, created by the Researcher and provided to the `Journal`. It provides a simple interface between `Journal, Experiment` and Researcher objects. In fact, a `Submission` resembles a *manuscript* when it is at the hand of the researcher and a *publication* after being accepted by the journal. 
 
-After performing the test and choosing the outcome variable, the `Researcher` puts together a report containing necessary information for the `Journal` to decide whether to accept or reject the submitted finding(s). This representation will allow us to mimic several important concepts when it comes to publication habits, e.g., file-drawer effect, pre-registration, etc. 
+After performing the test and choosing the outcome variable, the Researcher puts together a report containing necessary information for the `Journal` to decide whether to accept or reject the submitted finding(s). This representation will allow us to mimic several important concepts when it comes to publication habits, e.g., file-drawer effect, pre-registration, etc. 
 
 !!! note
 
@@ -147,9 +147,9 @@ After performing the test and choosing the outcome variable, the `Researcher` pu
   <img src="../figures/researcher-stack.png" width="300" align="right">
 </picture>
 
-`Researcher` object is the main player in the simulation. It's a central piece of the research, it uses the `Experiment Setup` to prepare the `Experiment` and send the final outcome to `Journal` for the reviewing process.
+Researcher object is the main player in the simulation. It's a central piece of the research, it uses the `Experiment Setup` to prepare the Experiment and send the final outcome to `Journal` for the reviewing process.
 
-After the initialization of `Experiment Setup`, `Researcher` will prepare the `Experiment` object by collecting data via the `Data Strategy`, testing the hypothesis via the `Test Strategy`, and calculating the effect sizes using the `Effect Strategy`. Then, if configured to, it applies different QRPs on `Experiment` and hacks its way through a satisfactory result. In the end, the researcher prepares a `Submission` record and sends it to `Journal` for review. This process is discussed in more detailed in [Flow](flow.md) abs [Research Workflow](research-workflow.md) sections. 
+After the initialization of `Experiment Setup`, Researcher will prepare the Experiment object by collecting data via the Data Strategy, testing the hypothesis via the `Test Strategy`, and calculating the effect sizes using the `Effect Strategy`. Then, if configured to, it applies different QRPs on Experiment and hacks its way through a satisfactory result. In the end, the researcher prepares a `Submission` record and sends it to `Journal` for review. This process is discussed in more detailed in [Flow](flow.md) abs [Research Workflow](research-workflow.md) sections. 
 
 #### Decision Strategy
 
@@ -175,7 +175,7 @@ Decision Strategy is one of the more elaborated pieces of SAM. It engages in dif
 
 #### Hacking Strategy-(ies)
 
-`Hacking Strategy` is an abstract representation of different *p*-hacking and QRP methods. The `Researcher` *performs* a hacking strategy by sending a copy of its `Experiment` to chosen method. The `Hacking Strategy` takes control of the experiment, modifies it, (e.g., adding new values, removing values), recomputes the statistics, reruns the test, and finally returns the modified `Experiment`. Finally, the researcher can evaluate the *hacked* experiment, and select *hacked* result if satisfactory.
+`Hacking Strategy` is an abstract representation of different *p*-hacking and QRP methods. The Researcher *performs* a hacking strategy by sending a copy of its Experiment to chosen method. The `Hacking Strategy` takes control of the experiment, modifies it, (e.g., adding new values, removing values), recomputes the statistics, reruns the test, and finally returns the modified Experiment. Finally, the researcher can evaluate the *hacked* experiment, and select *hacked* result if satisfactory.
 
 If more than one hacking strategies are registered, researcher navigates through them by the logic defined in Decision Strategy and decides whether any of the *hacked* experiments will be used for constructing the *Submission*. This process will be discussed in more details, in *[Decision Strategy](decision-strategy.md)* and *[Hacking Strategy](hacking-strategy.md)* sections.
 

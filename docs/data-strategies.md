@@ -1,22 +1,12 @@
----
-title: Data Strategies
-layout: default
-nav_order: 5
----
+# Data Strategies
 
-Data Strategies
-===============
+*Data Strategy is the source of data, i.e., population. It knows the underlying model, and its properties*. During [research preperation](flow.md#prepare-research), Researcher reaches to Data Strategy object and populates — ie., generates/collects data for — its Experiment.
 
+Since Data Strategy is aware of all the underlying models, parameters and distributions, it can provide data at any points during the simulation. One important implication of this is during the hacking process. As mentioned, methods like [optional stopping](hacking-strategies.md#hacking-strategies-optional-stopping) needs to add new data points to the already existing measurements. Requiring data strategies to produce *new* data points helps with implementation of such hacking strategies.
 
-> *Data Strategy is the source of data, i.e., population. It knows the underlying model, and its properties.*
+You can select the type of model by setting `name` variables of the `data_strategy` parameter in the config file. Two available options are [Linear Model](data-strategies.md#linear-model) and [Graded Response Model](data-strategies.md#graded-response-model). Based on your model of choice, you must provide different set of variables.
 
-`DataStrategy` populates the `Experiment`'s `measurements` variables. A `Researcher`, during the [preperation process](flow.md#prepare-research), reaches to `DataStrategy` object and based on the underlying model and parameters populates/generates/collects data for the experiment.
-
-Since `DataStrategy` is aware of all the underlying models, parameters and distributions, it can provide data at any points during the simulation. One important implication of this is during the hacking process. As mentioend, methods like [optional stopping](hacking-strategies.md#hacking-strategies-optional-stoppin) needs to add new data points to the already existing measurements. Requiring data strategies to produce *new* data points helps with implementation of such hacking strategies.
-
-You can select the type of model by setting `name` variables of the `data_strategy` parameter in the config file. Two available options are `data-strategies-linear`{.interpreted-text role="ref"} and `data-strategies-grm`{.interpreted-text role="ref"}. Based on your model of choice, you must provide different set of variables.
-
-Parameters of the `DataStrategy` are intertwined with the `ExperimentSetup` parameters. SAM determines the total number of groups, $n_g$ (internal variable), by multiplying the number of treatment conditions, $n_c$, by the number of dependent variables in each condition, $n_d$. After knowing the number of groups, each group is being populated by $n_o$ observations based on the given model, specified in `data_strategy`.
+Parameters of the Data Strategy are intertwined with the ExperimentSetup parameters. SAM determines the total number of groups, n<sub>g</sub> (internal variable), by multiplying the number of treatment conditions, n<sub>c</sub>, by the number of dependent variables in each condition, n<sub>d</sub>. After knowing the number of groups, each group is being populated by $n_o$ observations based on the given model, specified in `data_strategy`.
 
 ```json
 {
@@ -34,8 +24,8 @@ Parameters of the `DataStrategy` are intertwined with the `ExperimentSetup` para
 
 | **Parameters** | **Value** / **Type**     |
 |:---------------|:-------------------------|
-| `n_conditions` | $n_c$, `int`             |
-| `n_dep_vars`   | $n_d$, `int`             |
+| `n_conditions` | n<sub>c</sub>, `int`             |
+| `n_dep_vars`   | n<sub>d</sub>, `int`             |
 | `n_obs`        | $n_o$, `int`             |
 
 Linear Model

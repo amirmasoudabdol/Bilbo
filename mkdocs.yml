@@ -8,11 +8,15 @@ nav:
         - research-workflow.md
     - Configuration:
         - configuration-file.md
-        - decision-strategies.md
-        - data-strategies.md
-        - test-strategies.md
-        - effect-strategies.md
-        - Hacking Strategies:
+        - Experiment:
+          - experiment-configurations.md
+          - data-strategies.md
+          - test-strategies.md
+          - effect-strategies.md
+        - Researcher:
+          - researcher-configurations.md
+          - decision-strategies.md
+          - Hacking Strategies:
             - hacking-strategies.md
             - hacking-strategies/selective-reporting.md
             - hacking-strategies/optional-stopping.md
@@ -20,7 +24,11 @@ nav:
             - hacking-strategies/subjective-outliers-removal.md
             - hacking-strategies/falsifying-data.md
             - hacking-strategies/fabricating-data.md
-        - journal.md
+        - Journal:
+          - journal-configurations.md
+          - selection-strategies.md
+          - meta-analyses.md
+        - simulation-configurations.md
     - Examples:
         - examples/index.md
         - examples/bakker_et_al_2012.md

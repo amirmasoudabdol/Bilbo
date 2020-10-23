@@ -6,7 +6,7 @@ title: Introduction
 
 Hacking Strategy encapsulates vairous processes and procedures of performing questionable research practices on a given Experiment.
 
-SAM is able to execute a complicated set of hacking strategies on a given `Experiment`. A list of hacking strategies will be applied one at a time, in a specified order. At the end of each method, `Researcher` observes their influences on all outcome variables and decides when whether to stop, and what to report if results are satisfactory. See [here](design.md#hacking-strategy) and [here](flow.md#perform-research). Besides the definition of hacking strategies, we are able to modify researcher's behavior as well. 
+SAM is able to execute a complicated set of hacking strategies on a given Experiment. A list of hacking strategies will be applied one at a time, in a specified order. At the end of each method, Researcher observes their influences on all outcome variables and decides when whether to stop, and what to report if results are satisfactory. See [here](design.md#hacking-strategy) and [here](flow.md#perform-research). Besides the definition of hacking strategies, we are able to modify researcher's behavior as well. 
 
 In the configuration below, we can see the main body of defining hacking strategies for a researcher. We start by setting some general parameters, and then defining each method individually.
 
