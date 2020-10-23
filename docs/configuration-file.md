@@ -2,15 +2,12 @@
 title: Introduction
 ---
 
-Configuration File
-==================
+# Configuration File
 
-SAM uses a [JSON](https://www.json.org) file to load and save all simulation parameters. The code block below shows a general configuration file used by SAM to prepare the simulation and all its components. As shown, the config file is separated into 4 different sections, each corresponding to one of SAM's components discussed previously. In this chapter, we will discuss each part, and learn how to configure each parts separately in order to be able to simulate a full research as described in [Flow](flow.md) and [Research Workflow](research-workflow.md) sections.
+SAM uses a [JSON](https://www.json.org) file to load and save all simulation parameters. The code block below shows a general configuration file used by SAM to prepare the simulation and all its components. As shown, the config file is separated into 4 different sections, each corresponding to one of SAM's components discussed previously. In this chapter, we will discuss each part, and learn how to configure each part separately in order to be able to simulate a full research as described in [Flow](flow.md) and [Research Workflow](research-workflow.md) sections.
 
-<!--After customizing your own configuration file, you can load it to SAM using `./SAMpp --config=your-configuration-file.json`. This will start the simulation as described in the `flow`{.interpreted-text role="doc"} section.-->
-
-??? example "Sample Configuration File"
-	```json
+!!! example "Sample Configuration File"
+	```json hl_lines="2 26 59 68"
 	{
 	    "experiment_parameters": {
 	        "n_reps": 1,
@@ -34,15 +31,6 @@ SAM uses a [JSON](https://www.json.org) file to load and save all simulation par
 	            "alpha": 0.005,
 	            "alternative": "TwoSided",
 	            "var_equal": true
-	        }
-	    },
-	    "journal_parameters": {
-	        "max_pubs": 24,
-	        "selection_strategy": {
-	            "name": "SignificantSelection",
-	            "alpha": 0.05,
-	            "pub_bias": 0.1,
-	            "side": 0
 	        }
 	    },
 	    "researcher_parameters": {
@@ -78,6 +66,15 @@ SAM uses a [JSON](https://www.json.org) file to load and save all simulation par
 	            ""
 	        ]
 	    },
+	    "journal_parameters": {
+	        "max_pubs": 24,
+	        "selection_strategy": {
+	            "name": "SignificantSelection",
+	            "alpha": 0.05,
+	            "pub_bias": 0.1,
+	            "side": 0
+	        }
+	    },
 	    "simulation_parameters": {
 	        "log_level": "info",
 	        "master_seed": "random",
@@ -94,6 +91,7 @@ SAM uses a [JSON](https://www.json.org) file to load and save all simulation par
 	    }
 	}
 	```
+
 
 ??? info "About JSON"
     For the introduction to JSON, see [here](https://learnxinyminutes.com/docs/json/) or [here](https://en.wikipedia.org/wiki/JSON).

@@ -48,7 +48,9 @@ In the configuration below, we can see the main body of defining hacking strateg
 
 Besides 
 
-## Probability of Being a Hacker
+## Hacking Behaviors
+
+### Probability of Being a Hacker
 
 The *probability of being a hacker* is a value between 0 and 1 that is being used by SAM to determine if a Researcher is a going through the hacking workflow or not. Besides a fixed value, we can give a distribution to be used for each Researcher, e.g.
 
@@ -62,11 +64,11 @@ The *probability of being a hacker* is a value between 0 and 1 that is being use
 
 In this case, SAM generates a new value for every new researcher. 
 
-## Probability of Committing to a Hack
+### Probability of Committing to a Hack
 
 The *probability of committing to a hack* is a value between 0 and 1 that is being used by SAM to determine whether a researcher applies a hacking strategy on a *given* Experiment. 
 
-### Hacking Commitment Strategy
+#### Hacking Commitment Strategy
 
 Like before, while we can use a fixed value or a distribution for this parameters, we will be able to define a specific function that returns this probability based on the content of the Experiment. For instance, we may define a function that adjust the probability based on the distance of *p*-value to ɑ.
 

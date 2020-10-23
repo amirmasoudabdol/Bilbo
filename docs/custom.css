@@ -38,9 +38,13 @@ blockquote {
   font-size: 98%;
 }
 
-.md-typeset__table {
+/*.md-typeset__table {
   box-sizing: content-box;
-}
+}*/
+
+/*.md-typeset table:not([class]), .md-typeset__table {
+  display: block;
+}*/
 
 
 @media (prefers-color-scheme: dark) {

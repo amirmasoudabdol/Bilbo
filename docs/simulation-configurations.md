@@ -2,7 +2,7 @@
 title: "Simulation"
 ---
 
-# Simulation Configuration
+# Simulation Configurations
 
 This section specifies general parameters of the simulation. These parameters are not necessarily influencing SAM's modules. Table below summarizes simulations parameters, and their functions.
 

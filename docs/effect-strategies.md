@@ -1,8 +1,9 @@
----
-title: Effect Strategies
-layout: default
-nav_order: 7
----
+# Effect Strategies
 
-Effect Strategies
-=================
+## Mean Differences
+
+
+## Cohen's D
+
+
+## Hedge's G
