@@ -35,7 +35,7 @@ Starting from the top, the simulation study concerns itself with two main *Exper
 
 ![Maassen's Experiment Design](/examples/figures/Esther_FYP/Esthers_Experiment_Design.png)
 
-In terms of QRPs, two main methods have been utilized, [Selective Reporting](hacking-strategies/selective-reporting.md), and [Optional Stopping](hacking-strategies/optional-stopping.md). While the optional stopping has been applied on both study designs (at most 3 times, adding ⅓ ⨉ N new observations), the selective reporting can only be applied on the design with 5 conditions (selecting the outcome with minimum *p*-value). 
+In terms of QRPs, two main methods have been utilized, [Selective Reporting](/hacking-strategies/selective-reporting.md), and [Optional Stopping](/hacking-strategies/optional-stopping.md). While the optional stopping has been applied on both study designs (at most 3 times, adding ⅓ ⨉ N new observations), the selective reporting can only be applied on the design with 5 conditions (selecting the outcome with minimum *p*-value). 
 
 Finally, after simulating *K* stduiesstudies, Maassen applied both meta-analytic methods, and publication bias estimators, and reported their performance.
 
@@ -85,7 +85,7 @@ In cases where the Researcher is equipped with optional stopping, she will decid
 
 #### Hacking Strategy
 
-We can configure our hacking strategy as follow. Notice the repetition of [decision and selection policies](decision-strategy.md#decision-selection-routine) at highlighted lines. This configuration mimics the behavior of
+We can configure our hacking strategy as follow. Notice the repetition of [decision and selection policies](/decision-strategies.md#decision-selection-routine) at highlighted lines. This configuration mimics the behavior of
 "peeking at minimum *p*-value after each step". After addition of ⅓ ⨉ N, the Researcher selects the outcome with
 minimum *p*-value, and if the _selected outcome_ is significant, she stops and reports the outcome, if not, she continues adding another batch of observations, and repeat this process at most 3 times.
 
@@ -226,7 +226,7 @@ The combination of *Decision Strategy* and *Hacking Strategy* configurations wil
     
 ### Journal 
 
-In the case of Maassen, we need to induce different level of publication bias on our [selection](selection-strategy.md) procedure. Moreover, we need to calculate a set of meta-analysis and publication bias tests after maxing-out the publications pool. These parameters can be set as follow:
+In the case of Maassen, we need to induce different level of publication bias on our [selection](/selection-strategies.md) procedure. Moreover, we need to calculate a set of meta-analysis and publication bias tests after maxing-out the publications pool. These parameters can be set as follow:
 
 ??? journal "Journal: _Publication Bias_"
     ```json linenums="1" hl_lines="5-10"

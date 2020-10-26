@@ -2,7 +2,7 @@
 
 *Data Strategy is the source of data, i.e., population. It knows the underlying model, and its properties*. During [research preperation](flow.md#prepare-research), Researcher reaches to Data Strategy object and populates — ie., generates/collects data for — its Experiment.
 
-Parameters of Data Strategy are intertwined with Experiment's parameters. Before defining the the model, we need to specify the structure of our design, number of observations in each group, and the [number of replications](decision-strategies.md#post-qrp-decision-and-replication-stage).
+Parameters of Data Strategy are intertwined with Experiment's parameters. Before defining the the model, we need to specify the structure of our design, number of observations in each group, and the [number of replications](/decision-strategies.md#post-qrp-decision-and-replication-stage).
 
 
 ```json
@@ -20,7 +20,7 @@ Parameters of Data Strategy are intertwined with Experiment's parameters. Before
 }
 ```
 
-The structure of our design is detemrined by the number of treatment conditions, *n* (`n_conditions`) and the number of dependent variables in each condition, *d* (`n_dep_vars`). After specifying our design, each group is being populated by `n_obs` observations based on the given model, specified in `data_strategy`. We can select the type of model by setting `name` variables of the `data_strategy` parameter in the config file. Two available options are [Linear Model](data-strategies.md#linear-model) and [Graded Response Model](data-strategies.md#graded-response-model). Based on your model of choice, you must provide different set of variables.
+The structure of our design is detemrined by the number of treatment conditions, *n* (`n_conditions`) and the number of dependent variables in each condition, *d* (`n_dep_vars`). After specifying our design, each group is being populated by `n_obs` observations based on the given model, specified in `data_strategy`. We can select the type of model by setting `name` variables of the `data_strategy` parameter in the config file. Two available options are [Linear Model](/data-strategies.md#linear-model) and [Graded Response Model](/data-strategies.md#graded-response-model). Based on your model of choice, you must provide different set of variables.
 
 ![Figure 1. Experiment Design](/figures/experiment-design.png)
 
@@ -36,7 +36,7 @@ The structure of our design is detemrined by the number of treatment conditions,
 
 <!-- Since Data Strategy is aware of all the underlying models, parameters and distributions, it is capale of providing data at any points during the simulation.  -->
 
-<!-- As mentioned, methods like [optional stopping](hacking-strategies.md#hacking-strategies-optional-stopping) needs to add new data points to the already existing measurements. Requiring data strategies to produce *new* data points helps with implementation of such hacking strategies. -->
+<!-- As mentioned, methods like [optional stopping](/hacking-strategies.md#hacking-strategies-optional-stopping) needs to add new data points to the already existing measurements. Requiring data strategies to produce *new* data points helps with implementation of such hacking strategies. -->
 
 ## Linear Model
 

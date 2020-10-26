@@ -11,11 +11,11 @@ SAM is able to execute a complicated set of hacking strategies on a given Experi
 In the configuration below, we can see the main body of defining hacking strategies for a researcher. We start by setting some general parameters, and then defining each method individually.
 
 1. **`probability_of_being_a_hacker`**, the chance of entering the hacking workflow
-2. **`probability_of_committing_a_hack`**, the chance of applying a given method on the experiment. For a detailed example, see [Friese et al. 2020](Friese_et_al_2020.md)[@Friese_2020aa]
+2. **`probability_of_committing_a_hack`**, the chance of applying a given method on the experiment. For a detailed example, see [Friese et al. 2020](/examples/Friese_et_al_2020.md)[@Friese_2020aa]
 3. **`n_hacks`**, number of hacking strategies to be selected from the list
 3. **`hacking_selection_priority`**, indicates the priority of hacking strategies during at selection stages
 4. **`hacking_execution_order`**, indicates the execution order of hacking strategies in [hacking workflow](research-workflow.md#hacking-workflow)
-5. **`hacking_strategies`**, list of hacking strategies and their [**selection → decision**](decision-strategies.md) sequences.
+5. **`hacking_strategies`**, list of hacking strategies and their [**selection → decision**](/decision-strategies.md) sequences.
 
 !!! hackingstrategy "Hacking Strategy: Top Level Settings"
     ```json
@@ -72,7 +72,7 @@ The *probability of committing to a hack* is a value between 0 and 1 that is bei
 
 Like before, while we can use a fixed value or a distribution for this parameters, we will be able to define a specific function that returns this probability based on the content of the Experiment. For instance, we may define a function that adjust the probability based on the distance of *p*-value to ɑ.
 
-In [Friese et al. 2020](Friese_et_al_2020.md)[@Friese_2020aa] example, we utilize this parameter to implement their dynamic approach of calculating researcher's interest in hacking the *p*-value based on its distance to ɑ, and the calculated effect size.
+In [Friese et al. 2020](/examples/Friese_et_al_2020.md)[@Friese_2020aa] example, we utilize this parameter to implement their dynamic approach of calculating researcher's interest in hacking the *p*-value based on its distance to ɑ, and the calculated effect size.
 
 ```json
 "hacking_probability_strategy": {
@@ -98,7 +98,7 @@ While each hacking strategy is companied with its set of unique parameters, ever
 	- `Control`
 	- `Treatment`
 	- `Both`
-- **`stopping_condition`**, a *optional* [policy chain](decision-strategy.md#policy-chain) indicating the stopping criteria of the method.
+- **`stopping_condition`**, a *optional* [policy chain](/decision-strategies.md#policy-chain) indicating the stopping criteria of the method.
 
 
 ```

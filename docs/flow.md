@@ -25,7 +25,7 @@ The preparation of the research is the first step of the simulation. This step r
 
 At this stage, Researcher uses `Test Strategy` (defined in `Experiment Setup`) to run the test and populates relevant parameters, e.g., `statistic, pvalue, sig, side`. Similarly, `Effect Strategy` will be used to calculate effect sizes.
 
-The next step is to check whether Researcher is satisfied with test results. This is being done by passing the Experiment to `Decision Strategy`. Researcher relies on decision strategy's verdict to decide whether to proceed with the current Submission or to continue applying one or more of the hacking strategies on the experiment before submitting the study for the review. This process will be discussed in more details in *[Decision Strategy](decision-strategy.md)* section.
+The next step is to check whether Researcher is satisfied with test results. This is being done by passing the Experiment to `Decision Strategy`. Researcher relies on decision strategy's verdict to decide whether to proceed with the current Submission or to continue applying one or more of the hacking strategies on the experiment before submitting the study for the review. This process will be discussed in more details in *[Decision Strategy](/decision-strategies.md)* section.
 
 ![Figure 4. Steps involving performing the research](/figures/perform-research.png)
 

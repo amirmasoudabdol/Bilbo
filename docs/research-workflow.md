@@ -16,11 +16,11 @@ This section will walk you through the above digram and discuss each steps in mo
   <img src="/figures/research-workflow-initial-stage.png" width="30%" align="right">
 </picture>
 
-As discussed in the [Introduction](introduction.me), a research starts by initializing the Experiment Setup and thereafter preparation of the Experiment which consists of generating data, calculating statistics, running tests, calculating effects, etc.
+As discussed in the [Introduction](/introduction.md), a research starts by initializing the Experiment Setup and thereafter preparation of the Experiment which consists of generating data, calculating statistics, running tests, calculating effects, etc.
 
-When the Experiment is fully initialized, a Researcher can asses the quality of results, and select her preferred outcome among all available outcome variables across all conditions and dependent variables. This is being performed at the first selection step, **Initial Selection**. At this stage, Researcher can query all available outcomes using specific set of rules. For example, by using `["sig", "min(pvalue)"]` [Policy](policies.md) she would select an outcome with minimum *p*-value between those that are significant, or `["pre-reg"]` Policy results in selecting the pre-registered outcome. 
+When the Experiment is fully initialized, a Researcher can asses the quality of results, and select her preferred outcome among all available outcome variables across all conditions and dependent variables. This is being performed at the first selection step, **Initial Selection**. At this stage, Researcher can query all available outcomes using specific set of rules. For example, by using `["sig", "min(pvalue)"]` [Policy](/decision-strategies.md#policies) she would select an outcome with minimum *p*-value between those that are significant, or `["pre-reg"]` Policy results in selecting the pre-registered outcome. 
 
-If the selection process is successful, Researcher continues to evaluate his submission, by *deciding* whether she is going to perform any QRP methods. This is being done at **Will be Hacking Decision** stage, where Researcher uses a [chain of policies](policies.md#policy-chains) to determine her next step. For instance, if she is looking for an outcome with positive effect (ie., `["effect > 0"]`) and the previously selected outcome does not have a positive effect, researcher might opt-in for applying some of the hacking strategies. 
+If the selection process is successful, Researcher continues to evaluate his submission, by *deciding* whether she is going to perform any QRP methods. This is being done at **Will be Hacking Decision** stage, where Researcher uses a [chain of policies](/decision-strategies.md#policies#policy-chains) to determine her next step. For instance, if she is looking for an outcome with positive effect (ie., `["effect > 0"]`) and the previously selected outcome does not have a positive effect, researcher might opt-in for applying some of the hacking strategies. 
 
 
 ## Hacking Workflow
@@ -33,13 +33,13 @@ If Researcher is not satisfied with the selected submission, *and* the configura
 
 In this stage, Researcher selects the first hacking strategy from his list, **H₁** and applies it on the Experiment. This process is highlighted in light blue, **Hack Experiment using Hᵢ**. After each QRP, researcher has a chance to collect the altered results for later investigation, we refer to this process as Stashing.
 
-Whether the researcher performs a stashing process, or not, he will continues to another sequence of **Selection→Decision** where he evaluates the altered Experiment after applying H₁. The selection procedure is defined by another [set of policy chains](policies.md#policy-chain-sets) — **After Hacking Selection** — which leads either to an empty submission or an unique submission. Right after selection, researcher needs to *decide* whether he is going to continue the hacking procedure, or not — **Will Continue Hacking Decision.** 
+Whether the researcher performs a stashing process, or not, he will continues to another sequence of **Selection→Decision** where he evaluates the altered Experiment after applying H₁. The selection procedure is defined by another [set of policy chains](/decision-strategies.md#policies#policy-chain-sets) — **After Hacking Selection** — which leads either to an empty submission or an unique submission. Right after selection, researcher needs to *decide* whether he is going to continue the hacking procedure, or not — **Will Continue Hacking Decision.** 
 
 If researcher decides to continue the hacking procedure, he would then choose the next hacking strategy, **H**, and repeat the same process. 
 
 ### Stashing and Post-QRP Selection
 
-After leaving the Hacking Workflow, researcher is equipped with a set of outcomes selected from his ventures into his QRP arsenal. [Stashing policy](decision-strategy.md#stashing-policy) indicates what sort of outcomes researcher is going to be collected by him after each hacking stagey. 
+After leaving the Hacking Workflow, researcher is equipped with a set of outcomes selected from his ventures into his QRP arsenal. [Stashing policy](/decision-strategies.md#stashing-policy) indicates what sort of outcomes researcher is going to be collected by him after each hacking stagey. 
 
 Researcher is being given the chance to select an outcome from his stashed outcome, **Hacked Outcomes DB.**, if he finds it necessary. In a real world scenario, this process mimic a very greedy and inconsiderate researcher who is trying everything to achieve a certain goal, ie., significance (`["sig"]`).
 
@@ -60,4 +60,4 @@ Throughout another **Selection→Decision** sequence, researcher select an outco
 
 ## Finally
 
-By the time that Final Submission, S<sub>F</sub>, is out of Researcher's hand and at Journal's stake, the process of  conducting research by Researcher is finalized. [Journal](journal.md) will decide whether the manuscript is publishable or not, and SAM initiates a new Experiment Setup for starting a new Experiment, and consequently Researcher will conduct an entirely new research.
+By the time that Final Submission, S<sub>F</sub>, is out of Researcher's hand and at Journal's stake, the process of  conducting research by Researcher is finalized. [Journal](/journal.md) will decide whether the manuscript is publishable or not, and SAM initiates a new Experiment Setup for starting a new Experiment, and consequently Researcher will conduct an entirely new research.

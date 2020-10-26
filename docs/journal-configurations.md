@@ -14,11 +14,11 @@ Figure 1 shows the steps taken by Journal during the review process. Journal sta
 
 If selection strategy approves the “quality” of the submission, submission will be accepted and stored in a database of accepted outcomes, a.k.a, **publications list**. In contrast, rejected outcomes will not be published and stored in **rejected submissions**. At the end of the simulation, journal may export any or all of these lists as CSV files for further analysis.
 
-Journal parameters are in general less elaborate than other modules and are divided into two main sections, [Selection Strategy](selection-strategies.md) and [Meta Analysis](meta_analyses.md).
+Journal parameters are in general less elaborate than other modules and are divided into two main sections, [Selection Strategy](selection-strategies.md) and [Meta Analysis](/meta_analyses.md).
 
 - **`max_pubs`**, *`double`*, Maximum number of publications that is going to be accepted by the `Journal`.
 - **`selection_strategy`**, *`string`*, The `SelectionStrategy` of the journal. See [Selection Strategy](selection-strategies.md)
-- **`meta_analysis_metrics`**, *`list`*, List of meta analyses with their parameters. See [Meta Analysis](meta-analyses.md)
+- **`meta_analysis_metrics`**, *`list`*, List of meta analyses with their parameters. See [Meta Analysis](/meta-analyses.md)
 
 
 !!! journal "Journal's Configurations"

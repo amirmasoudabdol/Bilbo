@@ -4,11 +4,11 @@ title: Introduction
 
 # Researcher Configurations
 
-This section defines the behavior of the Researcher. Researcher's parameters can be separated into two main parts, [Decision Strategies](decision-strategies.md), [Hacking Behaviors](hacking-strategies.md#hacking-behaviors) and [Hacking Strategies](hacking-strategies.md). The table below lists a few of the parameters, while each part's parameters will be discussed in more details in following sections.
+This section defines the behavior of the Researcher. Researcher's parameters can be separated into two main parts, [Decision Strategies](/decision-strategies.md), [Hacking Behaviors](/hacking-strategies.md#hacking-behaviors) and [Hacking Strategies](/hacking-strategies.md). The table below lists a few of the parameters, while each part's parameters will be discussed in more details in following sections.
 
 - **`decision_strategy`**, *`dict`*, Specification of a `DecisionStrategy`. See more `decision-strategies`.
 - Hacking Behavior Parameters:
-	- **`probability_of_being_a_hacker`**, *`number`*, Indicates the probability of a researcher deciding to apply any of the hacking strategies. [Hacking Behaviors](hacking-strategies.md#hacking-behaviors).
+	- **`probability_of_being_a_hacker`**, *`number`*, Indicates the probability of a researcher deciding to apply any of the hacking strategies. [Hacking Behaviors](/hacking-strategies.md#hacking-behaviors).
 	- **`probability_of_committing_a_hack`**, the chance of applying a given method on the experiment.
 - **`hacking_strategies`**, *`list`*, A list of `list`, each indicating a chain of `HackingStrategy`.
 

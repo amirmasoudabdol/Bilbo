@@ -441,7 +441,7 @@ These two changes can be added to the configuration file as following:
 
 In our last extension, we will explore the effect of publication bias on the level effect size bias, as well as demonstrating the power of Egger's [cite]. 
 
-[As discussed](../journal.md), a Journal can be equiped with different [Selection Strategies](../journal.md#selection-strategies); therefore, in order to simulate the publication bias process, we can utilize the built-in SignificantSelection selection model, as follow:
+[As discussed](/journal.md), a Journal can be equiped with different [Selection Strategies](/journal.md#selection-strategies); therefore, in order to simulate the publication bias process, we can utilize the built-in SignificantSelection selection model, as follow:
 
 
 ??? journal "Journal: _Publication Bias_"

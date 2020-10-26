@@ -37,7 +37,7 @@ All possible selections and decisions steps can be found in the list below:
 
 ## Policies
 
-Policies are the main ingredients of researcher’s logic. Each policy is a logical expression describing a query on an experiment’s available outcomes. A query is defined by chaining one or more policies together into a set. We refer to this set as [Policy Chain](decision-startegies.md#policy-chain). 
+Policies are the main ingredients of researcher’s logic. Each policy is a logical expression describing a query on an experiment’s available outcomes. A query is defined by chaining one or more policies together into a set. We refer to this set as [Policy Chain](/decision-startegies.md#policy-chain). 
 
 Here we discuss the range of available functions and variables that can be used to construct a policy, i.e., query.
 

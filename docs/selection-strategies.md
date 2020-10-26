@@ -37,7 +37,7 @@ As the name suggest, significant selection strategy incorporates the concept of 
 
 ## Policy Based Selection
 
-As the name suggest, policy based selection strategies are using [policy chains](decision-strategies.md#policy-chain) to evalute the "quality" of a submission, and therefore come to their verdict.
+As the name suggest, policy based selection strategies are using [policy chains](/decision-strategies.md#policy-chain) to evalute the "quality" of a submission, and therefore come to their verdict.
 
 
 !!! journal "Policy Based Selection"

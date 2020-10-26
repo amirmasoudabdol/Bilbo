@@ -48,7 +48,7 @@ While the rest of this section discuss each component properties and rule in mor
   <img src="../figures/experiment-stack.png" width="300" align="right">
 </picture>
 
-As mentioned, an Experiment object acts as an umbrella for everything related to an actual experiment. This includes metadata (a.k.a ExperimentSetup), raw data, method/model for generating the data, e.g., [Linear Model](data-strategies.md#linear-model), and methods of testing the hypothesis, and calculating the effect. The Researcher object has the complete control over every aspects of an Experiment **with one exception**: it can only read and not change the ExperimentSetup object. This is an important factor when later on we discuss the concept of pre-registration.
+As mentioned, an Experiment object acts as an umbrella for everything related to an actual experiment. This includes metadata (a.k.a ExperimentSetup), raw data, method/model for generating the data, e.g., [Linear Model](/data-strategies.md#linear-model), and methods of testing the hypothesis, and calculating the effect. The Researcher object has the complete control over every aspects of an Experiment **with one exception**: it can only read and not change the ExperimentSetup object. This is an important factor when later on we discuss the concept of pre-registration.
 
 Main components of Experiment are:
 
@@ -153,7 +153,7 @@ After the initialization of `Experiment Setup`, Researcher will prepare the Expe
 
 #### Decision Strategy
 
-As the name suggests, `Decision Strategy` mimics the decision making process during a research. Researcher relies on decision strategy’s verdict in two main ways, **Selection** and **Decision** [policies](policies.md)
+As the name suggests, `Decision Strategy` mimics the decision making process during a research. Researcher relies on decision strategy’s verdict in two main ways, **Selection** and **Decision** [policies](/decision-strategies.md#policies)
 
 - **Selection** policies are mainly being used by Researchers to filter and select an outcome from a group of outcomes. For instance, if a Researcher only sees outcomes with significant *p*-values satisfactory, a selection policy will help her to only select for those between all available outcomes. 
 - **Decision** policies on the other hand, are being used to make certain decisions during the course of a research. For instance, whether a researcher should start applying QRPs on am experiment, or whether it should submit the final submission to the journal. 
@@ -171,13 +171,13 @@ List of some of the Selection→Decision sequences available is as follow:
 - Will Continue Replicating **Decision Policies**
 - Will be Submitting To Journal **Decision Policy**
 
-Decision Strategy is one of the more elaborated pieces of SAM. It engages in different stages of conducting the research by researcher and different hacking strategies. This process will be clarified in [Flow](flow.md) and [Research Workflow](research-workflow.md) and [Decision Strategy](decision-strategy.md) sections.
+Decision Strategy is one of the more elaborated pieces of SAM. It engages in different stages of conducting the research by researcher and different hacking strategies. This process will be clarified in [Flow](flow.md) and [Research Workflow](/research-workflow.md) and [Decision Strategy](/decision-strategies.md) sections.
 
 #### Hacking Strategy-(ies)
 
 `Hacking Strategy` is an abstract representation of different *p*-hacking and QRP methods. The Researcher *performs* a hacking strategy by sending a copy of its Experiment to chosen method. The `Hacking Strategy` takes control of the experiment, modifies it, (e.g., adding new values, removing values), recomputes the statistics, reruns the test, and finally returns the modified Experiment. Finally, the researcher can evaluate the *hacked* experiment, and select *hacked* result if satisfactory.
 
-If more than one hacking strategies are registered, researcher navigates through them by the logic defined in Decision Strategy and decides whether any of the *hacked* experiments will be used for constructing the *Submission*. This process will be discussed in more details, in *[Decision Strategy](decision-strategy.md)* and *[Hacking Strategy](hacking-strategy.md)* sections.
+If more than one hacking strategies are registered, researcher navigates through them by the logic defined in Decision Strategy and decides whether any of the *hacked* experiments will be used for constructing the *Submission*. This process will be discussed in more details, in *[Decision Strategy](/decision-strategies.md)* and *[Hacking Strategy](/hacking-strategies.md)* sections.
 
 List of available hacking strategies are:
 
