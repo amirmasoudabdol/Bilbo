@@ -4,20 +4,44 @@ title: "Simulation"
 
 # Simulation Configurations
 
-This section specifies general parameters of the simulation. These parameters are not necessarily influencing SAM's modules. Table below summarizes simulations parameters, and their functions.
+This section of configuration file specifies general parameters of the simulation. These parameters are mainly defining higher-level behaviors of SAM regarding input and outputs. 
 
+```json linenums="1"
+"simulation_parameters": {
+    "n_sims": 1,
+    "master_seed": "random",
+    "log_level": "info",
+    "progress": false,
+    "output_path": "../outputs/",
+    "output_prefix": "sample_sim",
+    "update_config": true,
+    "save_all_pubs": false,
+    "save_meta": true,
+    "save_overall_summaries": true,
+    "save_pubs_per_sim_summaries": true,
+    "save_rejected": false
+}
+```
 
-- **`log_level`**, *`string`*, Indicates level of logging during the simulation.
-- **`progress`**, *`boolean`*, Indicates whether a progress bar is displayed or not.
-- **`master_seed`**, *`int` / `"random"`*, An integer indicating the intial seed of the RNG engine. If set to "random", a random number will be used in each run.
-- **`n_sims`**, *`int`*, Number of simulation repeated simulation r given parameters.
-- **`save_output`**, *`boolean`*, Tells SAM to export the simulation data to CSV file 
-- **`output_path`**, *`string`*, A path for output files.
-- **`output_prefix`**, *`string`*, A prefix to be added to output filenames. .label} Raw simulation data files ends th `_sim.csv`, and meta-analysis data les ends with `_meta.csv`
-- **`update_config`**, *`boolean`*, Indicates whether the config file should be updated after the simulation. This might overwrite `master_seed` or `output_path`
-- **`save_all_pubs`**, *`boolean`*, Indicates whether all publications should be saved.
-- **`save_meta`**, *`boolean`*, Indicates whether data from meta-analyses should be saved.
-- **`save_overall_summaries`**, *`boolean`*, Indicates whether the summary of entire simulation should be calculated and saved.
-- **`save_pubs_per_sim_summaries`**, *`boolean`*, Indicates whether the summary of each simulation run should be calucated and saved.
+The list below describes 
+
+- **`n_sims`**, *`int`*, indicates total number of simulations.
+- **`master_seed`**, *`int` / `"random"`*, indicates the intial seed of the RNG engine. If set to "random", a random number will be used in each run.
+- **`log_level`**, *`string`*, indicates the [logging level](https://www.tutorialspoint.com/log4j/log4j_logging_levels.htm) of the simulation
+- **`progress`**, *`boolean`*, indicates whether a progress bar should be displayed or not
+- **`output_path`**, *`string`*, indicates a path to be used for output files
+- **`output_prefix`**, *`string`*, a prefix to be added to *all* output filenames
+- **`update_config`**, *`boolean`*, indicates whether the config file should be updated after the simulation. **Note:** This might overwrite `master_seed` or `output_path`
+- **`save_all_pubs`**, *`boolean`*, indicates whether all publications should be saved.
+	- One CSV file with the name of `output_prefix_Publications.csv`, containing all accepted publications across all simulations, will be created 
+- **`save_meta`**, *`boolean`*, indicates whether data from meta-analyses should be saved.
+	- One CSV file for each given meta-analysis method with the name of `output_prefix_MetaAnalysisMethodName.csv`, containing records of meta-analysis output from each simulation, will be created
+- **`save_overall_summaries`**, *`boolean`*, indicates whether the summary of entire simulation should be calculated and saved
+	- One CSV file for the entire simulation with the name of `output_prefix_Publications_Summaries.csv`, containing one record of several statistics from all publications, will be created
+		- for each output parameters, SAM calcuate the overall *mean, standard deviation, variance, min, max, range*
+	- One CSV file for the entire simulation with the name of `output_prefix_MetaAnalysisMethodName_Summaries.csv`, containing one record of several statistics from all meta analysis outputs, will be created.  
+- **`save_pubs_per_sim_summaries`**, *`boolean`*, indicates whether the summary of each simulation run should be calucated and saved.
+	- One CSV file for the entire simulation with the name of `output_prefix_Publications_Per_Sim_Summaries.csv`, containing records of several statistics from each publications list, will be created.
 - **`save_rejected`**, *`boolean`*, Indicates whether rejected publications should be stored and saved.
+	- One CSV file for the entire simulation with the name of `output_prefix_Rejected.csv`, containing all rejected publications across all simulations, will be created
 
