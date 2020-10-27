@@ -35,12 +35,12 @@ nav:
         - examples/bakker_et_al_2014.md
         - examples/esther_first_year.md
         - examples/friese_et_al_2020.md
-    - Extras:
-        - extending-sam.md
-        - SAMoo.md
-    - Misc:
-        - about.md
-        - contact.md
+    # - Extras:
+    #     - extending-sam.md
+    #     - SAMoo.md
+    # - Misc:
+    #     - about.md
+    #     - contact.md
 extra_css: 
   - custom.css
 repo_name: GitHub

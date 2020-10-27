@@ -6,7 +6,7 @@ title: "Simulation"
 
 This section of configuration file specifies general parameters of the simulation. These parameters are mainly defining higher-level behaviors of SAM regarding input and outputs. 
 
-```json linenums="1"
+```json
 "simulation_parameters": {
     "n_sims": 1,
     "master_seed": "random",
