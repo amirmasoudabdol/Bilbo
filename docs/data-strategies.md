@@ -111,7 +111,7 @@ SAM supports a wide range of statistical [distributions](/distributions.md). Whi
 
 
 
-## Graded Response Model
+## General Graded Response Model[@Samejima_1997]
 
 The current implementation of the Graded Response Model is based on the generalization of [Rasch Model](https://en.wikipedia.org/wiki/Rasch_model). The probablity of person $j$ answering an item $i$ correctly, $Pr(X_{ij} = 1)$, can be calculated based on the difficulty $\beta$ of the item $i$ and the ability $\theta$ of a person $j$ with the following model[@Bakker_2014]:
 
