@@ -113,22 +113,22 @@ SAM supports a wide range of statistical [distributions](/distributions.md). Whi
 
 ## General Graded Response Model[@Samejima_1997]
 
-The current implementation of the Graded Response Model is based on the generalization of [Rasch Model](https://en.wikipedia.org/wiki/Rasch_model). The probablity of person $j$ answering an item $i$ correctly, $Pr(X_{ij} = 1)$, can be calculated based on the difficulty $\beta$ of the item $i$ and the ability $\theta$ of a person $j$ with the following model[@Bakker_2014]:
+The current implementation of the Graded Response Model is based on the model introduced by Samejima[@Samejima_1997] where we use Rasch model as the default response function. According to Rasch model, the probablity of person $j$ answering an item $i$ correctly, $Pr(X_{ij} = 1)$, can be calculated based on the difficulty, $\beta$, of the item $i$ and the ability, $\theta$, of a person $j$ with the following model[@Embretson_2000]:
 
 $$ Pr(X_{ij} = 1) = \frac{exp(\theta_j - \beta_i)}{1 + exp(\theta_j - \beta_i)} $$
 
-Besides [general design parameters](/data-strategies.md#study-design), we need to provide *number of categories*, as well as *number of items* per category to be able to completely setup a GRM. Thereafter, we need to configure distributions of *abilities* and *difficulties*. Similar to the linear model, these parameters can be set 
+Besides [general design parameters](/data-strategies.md#study-design), we need to provide *number of categories*, as well as *number of items* per category to be able to completely setup a GRM. Thereafter, like before, we need to configure define the underlying distributions of *abilities* and *difficulties*. Figure 2 shows the schematic of GRM as it is going to be modelled by SAM. 
+
+![General Graded Response Model](/figures/Data_Strategy_GRM.png)
 
 | **Parameters** | **Value** / **Type**     |
 |:---------------|:-------------------------|
-| `n_categories` | `int`                    |
 | `n_items`      | `int`                    |
-| `abilities`    | *θ*, `double` or `array` |
-| `difficulties` | *β*, `double` or `array` |
+| `abilities`    | *θ*, a multivariate distribution, or a list of univariate distributions |
+| `n_categories` | `int`                    |
+| `difficulties` | *β*, a multivariate distribution, or a list of univariate distributions<br>**Note:** SAM models the GRM using the threshold model, therefore for *c* categories, we need to provide *k - 1* distributions, or dimension in the case utilizing multivariate distribution. |
 
-After calculating all responses of person $j$ to all items, the sum
-score of all answers is calcuated for each person by adding all the item
-scores \[from, Marjan 2014\].
+An example of GRM configuration can be found below, where we model a study with *2* groups, *10* items, and *3* categories for each item, and examinee's abilities is drawn from a multivariate normal distribution of θ ~ MN(O, I). For more elaborate usecase of this model, see [Bakker et al., 2014](/examples/bakker_et_al_2014.md).
 
 !!! datastartegy "Graded Response Model Configuration"
     ```json
@@ -139,19 +139,14 @@ scores \[from, Marjan 2014\].
         "n_obs": 25,
         "data_strategy": {
             "n_items": 10,
-            "n_categories": 3,
             "abilities": {
                 "dist": "mvnorm_distribution",
                 "means": [0, 0],
                 "stddevs": 1.0,
                 "covs": 0.0
             },
+            "n_categories": 3,
             "difficulties": [
-                {
-                    "dist": "normal_distribution",
-                    "mean": 0,
-                    "stddev": 1.0
-                },
                 {
                     "dist": "normal_distribution",
                     "mean": 0,
