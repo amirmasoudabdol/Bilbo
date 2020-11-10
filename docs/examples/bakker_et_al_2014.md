@@ -49,7 +49,7 @@ In both scenarios, the study design consists of two groups, and a single depende
 	<img src="/examples/figures/Bakker_2014/Marjan_2014_Study_Design.png" id="fig:study_design" alt="Study Design" /><figcaption aria-hidden="true"><b>Figure 2.</b> Study Designs</figcaption>
 </figure>
 
-Configurations below showcase how one can express the presented design in SAM. In the case of Linear Model, the setup is simple, we set the data strategy to [Linear Model](data-strategies.md#linear-model) and define a multivariate normal distribution to populate all DVs. For simulating Rasch and GRM model, we use the [General Graded Response Model](data-strategies.md#general-graded-response-model) framework, and set appropriate difficulty and ability parameters as shown below:
+Configurations below showcase how one can express the presented design in SAM. In the case of Linear Model, the setup is simple, we set the data strategy to [Linear Model](/data-strategies.md#linear-model) and define a multivariate normal distribution to populate all DVs. For simulating Rasch and GRM model, we use the [General Graded Response Model](/data-strategies.md#general-graded-response-model) framework, and set appropriate difficulty and ability parameters as shown below:
 
 !!! datastrategy "Configuration: Data Strategy"
 	=== "Linear"
@@ -166,9 +166,9 @@ Configurations below showcase how one can express the presented design in SAM. I
 
 ### Hacking Strategies
 
-For simulating the [Outliers Removal](hacking-strategies/outliers-removal.md) process, we take a different approach than the one we have used for [Bakker et al., 2012](/examples/bakker_et_al_2012.md) simulation. Here, we simulate the outliers removal step before passing the Experiment to Researcher. This is equivalent to pre-processing the data and then running the final tests and analyses on it. 
+For simulating the [Outliers Removal](/hacking-strategies/outliers-removal.md) process, we take a different approach than the one we have used for [Bakker et al., 2012](/examples/bakker_et_al_2012.md) simulation. Here, we simulate the outliers removal step before passing the Experiment to Researcher. This is equivalent to pre-processing the data and then running the final tests and analyses on it. 
 
-For this purpose, we are using the `pre_processing_methods` parameter in `researcher_parameters` section. Pre-processing steps are similar to normal [hacking strategies](hacking-strategies.md) with the difference that Researcher doesn't get to perform a [selection → decision sequence](hacking-strategies.md#) after each step. They are being *fully* applied one after another, and when the list is exhausted, a copy of the *modified* Experiment will be passed to Researcher for further analysis. 
+For this purpose, we are using the `pre_processing_methods` parameter in `researcher_parameters` section. Pre-processing steps are similar to normal [hacking strategies](/hacking-strategies.md) with the difference that Researcher doesn't get to perform a [selection → decision sequence](/hacking-strategies.md#) after each step. They are being *fully* applied one after another, and when the list is exhausted, a copy of the *modified* Experiment will be passed to Researcher for further analysis. 
 
 !!! hackingstrategy "Configuration: Pre-processing"
 	=== "Non Subjective"
@@ -273,7 +273,7 @@ Similarly, Figure 4 shows the results of removing outliers from Rasch and GRM. F
 
 As we did with Bakker et al., 2012 study, we demonstrate how we can extend the currently established simulation with a few modification and explore different aspects of the problem using SAM.
 
-In the first extension, we introduce a biased journal to the simulation by modifying the [selection strategy](selection-strategies.md) of the Journal module as follow:
+In the first extension, we introduce a biased journal to the simulation by modifying the [selection strategy](/selection-strategies.md) of the Journal module as follow:
 
 !!! journal "Configuration: Biased Journal"
 	```json
