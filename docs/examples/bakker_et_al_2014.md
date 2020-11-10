@@ -290,23 +290,40 @@ In the first extension, we introduce a biased journal to the simulation by modif
 
 By varying this configuration, and keeping the rest of the setup intact, we will be able to study the effect of publication bias on our design. Figure 5 shows the results of this modification. As one would expect, we can see higher Type I error in publications as we increase the publication bias rate, from top to bottom. Also, we can see that Type I error rate decreases as we increase the number of items, and examinees, as expected.
 
-=== "θ = 0"
+=== "Rasch, θ = 0"
 	<figure>
 	  <picture>
 	    <source 
-	        srcset="/examples/figures/Bakker_2014/Rasch_GRM_theta_0_dark.png" 
+	        srcset="/examples/figures/Bakker_2014/Rasch_theta_0_dark.png" 
 	        media="(prefers-color-scheme: dark)">
-	  <img src="/examples/figures/Bakker_2014/Rasch_GRM_theta_0_light.png"/><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+	  <img src="/examples/figures/Bakker_2014/Rasch_theta_0_light.png"/><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
 	  </picture> 
 	</figure>
-
-=== "θ = 3"
+=== "Rasch, θ = 3"
 	<figure>
 	  <picture>
 	    <source 
-	        srcset="/examples/figures/Bakker_2014/Rasch_GRM_theta_3_dark.png" 
+	        srcset="/examples/figures/Bakker_2014/Rasch_theta_3_dark.png" 
 	        media="(prefers-color-scheme: dark)">
-	  <img src="/examples/figures/Bakker_2014/Rasch_GRM_theta_3_light.png"/><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+	  <img src="/examples/figures/Bakker_2014/Rasch_theta_3_light.png"/><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+	  </picture> 
+	</figure>
+=== "GRM, θ = 0"
+	<figure>
+	  <picture>
+	    <source 
+	        srcset="/examples/figures/Bakker_2014/GRM_theta_0_dark.png" 
+	        media="(prefers-color-scheme: dark)">
+	  <img src="/examples/figures/Bakker_2014/GRM_theta_0_light.png"/><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+	  </picture> 
+	</figure>
+=== "GRM, θ = 3"
+	<figure>
+	  <picture>
+	    <source 
+	        srcset="/examples/figures/Bakker_2014/GRM_theta_3_dark.png" 
+	        media="(prefers-color-scheme: dark)">
+	  <img src="/examples/figures/Bakker_2014/GRM_theta_3_light.png"/><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
 	  </picture> 
 	</figure>
 
