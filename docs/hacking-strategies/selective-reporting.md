@@ -43,9 +43,18 @@ Basically, Researcher can adjust his selection during the study. Keeping in mind
 
 ```json
 {
-	“initial_selection_policies”: [[“pre-reg”, “sig”], [“min(pvalue)”]],
-	“between_hacks_selection_policies”: [[“pre-reg”, “sig”], [“effect > 0”, “min(pvalue)”], [“effect < 0”, “max(pvalue)”],
-	“between_replications_selection_policies”:[[“pre-reg”, “sig”], [“effect > 0”, “min(pvalue)”], [“sig”, “min(pvalue)”]]
+	"initial_selection_policies": [
+        ["pre-reg", "sig"], ["min(pvalue)"]
+    ],
+	"between_hacks_selection_policies": [
+        ["pre-reg", "sig"],
+        ["effect > 0", "min(pvalue)"],
+        ["effect < 0", "max(pvalue)"],
+    ],
+	"between_replications_selection_policies": [
+        ["pre-reg", "sig"],
+        ["effect > 0", "min(pvalue)"],
+        ["sig", "min(pvalue)"]]
 }
 ```
 

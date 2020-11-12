@@ -38,9 +38,9 @@ blockquote {
   font-size: 98%;
 }
 
-/*.md-typeset__table {
+.md-typeset__table {
   box-sizing: content-box;
-}*/
+}
 
 /*.md-typeset table:not([class]), .md-typeset__table {
   display: block;
@@ -96,8 +96,8 @@ blockquote {
 .md-typeset .experiment > .admonition-title::before,
 .md-typeset .experiment > summary::before {
   background-color: rgba(0, 122, 255, 1.00);
-  -webkit-mask-image: var(--md-admonition-icon--researcher);
-          mask-image: var(--md-admonition-icon--researcher);
+  -webkit-mask-image: var(--md-admonition-icon--datastrategy);
+          mask-image: var(--md-admonition-icon--datastrategy);
 }
 
 

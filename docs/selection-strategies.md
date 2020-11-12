@@ -28,7 +28,7 @@ As the name suggest, significant selection strategy incorporates the concept of 
 		"selection_strategy": {
 			"name": "SignificantSelection",
 			"alpha": ɑ,
-			"journal_pub_bias": Pʙ,
+			"pub_bias": Pb,
 			"side": 0
 		}
 	}
@@ -37,19 +37,19 @@ As the name suggest, significant selection strategy incorporates the concept of 
 
 ## Policy Based Selection
 
-As the name suggest, policy based selection strategies are using [policy chains](/decision-strategies.md#policy-chain) to evalute the "quality" of a submission, and therefore come to their verdict.
+As the name suggest, policy based selection strategies are using [policy chains](/decision-strategies.md#policy-chain) to evalute the "quality" of a submission, and therefore come to their verdict. In addition to the given criteria, we can adjust the *acceptance rate*, `pub_chance`, and the *publication bias rate*, `pub_bias`. Journal first evaluates whether the `selection_policy` can be satisfied; then, a random draw decides whether the publication is lucky enough to be accepted, and finally, odds of being published will be evaluted against the publication bias rate.
+
+Notice that the flexibilty of the selection policy and availability of publication bias rate will allows us to construct Journals that are biased toward different criteria, e.g., positive effects, large studies, etc.
 
 
 !!! journal "Policy Based Selection"
 	```json
 	"journal_parameters": {
 		"selection_strategy": {
-			"name": "SignificantSelection",
-			"journal_pub_bias": Pʙ,
-			"acceptance_policy": ["effect > 0", "sig"]
+			"name": "PolicyBasedSelection",
+			"selection_policy_defs": ["effect > 0", "sig"],
+			"pub_chance": Pc,
+			"pub_bias": Pb
 		}
 	}
 	```
-
-
-!!! journal "Policy Based Selection"

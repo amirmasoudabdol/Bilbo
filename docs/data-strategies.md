@@ -5,10 +5,10 @@
 ## Study Design
 
 <picture>
-  <img src="/figures/experiment-design.png" width="50%" align="right">
+  <img src="/figures/Data_Strategy_Linear_Model.png" width="50%" align="right">
 </picture>
 
-Parameters of Data Strategy are intertwined with experiment design parameters. Before defining the model, we need to specify the structure of our design, number of observations in each group, and [number of replications](/decision-strategies.md#post-qrp-decision-and-replication-stage) if applicable. Study design is being detemrined by setting the number of treatment conditions, *n* (`n_conditions`) and the number of dependent variables in each condition, *d* (`n_dep_vars`). After specifying our design, each group is being populated by `n_obs` observations based on the given model, specified in `data_strategy`. 
+Parameters of Data Strategy are intertwined with experiment design parameters. Before defining the model, we need to specify the structure of our design, number of observations in each group, and [number of replications](/decision-strategies.md#post-qrp-decision-and-replication-stage) if applicable. Study design is being detemrined by setting the number of treatment conditions, *n* (`n_conditions`) and the number of dependent variables in each condition, *m* (`n_dep_vars`). After specifying our design, each group is being populated by `n_obs` observations based on the given model, specified in `data_strategy`. 
 
 ```json hl_lines="3 4 5 6"
 {
@@ -42,7 +42,7 @@ We can configure the type and specifications of the model using `data_strategy` 
 
 ## Linear Model
 
-In the case of Linear Model, SAM models $\bar{y} = \bar{x} + \bar{\epsilon}$ where $\bar{x}$ and $\bar{\epsilon} are  vectors of values drawn either from a single multivariate distribution, or a set of univariate distributions. Two following configurations showcase variants of this setup. As it is shown, it is possible to mix and match uni- and multi-variate distributions.
+In the case of Linear Model, SAM models $\bar{y} = \bar{x} + \bar{\epsilon}$ where $\bar{x}$ and $\bar{\epsilon}$ are  vectors of values drawn either from a single multivariate distribution, or a set of univariate distributions. Two following configurations showcase variants of this setup. As it is shown, it is possible to mix and match uni- and multi-variate distributions.
 
 SAM supports a wide range of statistical [distributions](/distributions.md). While most distirbutions accept a set of predefined parameters, multivariate normal distribution offers some helper parameters for easier configuration, Table 1. While it is possible to fully configure mean, *μ*, and the convriance matrix, *Σ*; we are able to set fixed values for covariance and standard deviations and guide SAM to generate an appropriate covariance matrix.
 
@@ -62,13 +62,13 @@ SAM supports a wide range of statistical [distributions](/distributions.md). Whi
     "data_strategy": {
         "name": "LinearModel",
         "measurements": {
-            "dist": "multivariate_normal_distribution",
+            "dist": "mvnorm_distribution",
             "means": [0, 0.2],
             "covs": 0.0,
             "stddevs": 1.0
         },
         "errors": {
-            "dist": "multivariate_normal_distribution",
+            "dist": "mvnorm_distribution",
             "means": [0, 0],
             "covs": 0.0,
             "stddevs": 1.0
@@ -86,7 +86,7 @@ SAM supports a wide range of statistical [distributions](/distributions.md). Whi
         "n_obs": 25,
         "name": "LinearModel",
         "measurements": {
-            "dist": "multivariate_normal_distribution",
+            "dist": "mvnorm_distribution",
             "means": [0, 0.2],
             "covs": 0.0,
             "stddevs": 1.0
