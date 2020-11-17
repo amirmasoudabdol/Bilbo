@@ -4,5 +4,4 @@ SAM is an extensible and modular framework for simulating and studying effects o
 
 In this vignette, we will describe underlying design principles and main features of SAM alongside some examples. In the [Introduction](introduction.md) section, we will describe types of problems that SAM is trying to solve and how are we going to approach them. After setting the ground rules, we can dive into different components of SAM and the process of designing your own simulation.
 
-
 ![](/figures/effin-scream-to-the-void.png)

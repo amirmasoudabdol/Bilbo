@@ -35,6 +35,12 @@ nav:
         - examples/bakker_et_al_2014.md
         - examples/esther_first_year.md
         # - examples/friese_et_al_2020.md
+    - Studies:
+        - studies/studies.md
+        - studies/selection-variation.md
+        - studies/sample-size-variation.md
+        # - studies/optional-stopping-variation.md
+        # - studies/outliers-removal-variation.md
     # - Extras:
     #     - extending-sam.md
     #     - SAMoo.md
