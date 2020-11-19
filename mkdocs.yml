@@ -39,7 +39,7 @@ nav:
         - studies/studies.md
         - studies/selection-variation.md
         - studies/sample-size-variation.md
-        # - studies/optional-stopping-variation.md
+        - studies/optional-stopping-variation.md
         # - studies/outliers-removal-variation.md
     # - Extras:
     #     - extending-sam.md

@@ -8,7 +8,7 @@ As with our [selective variation](/studies/selection-variation) study, we simula
 
 - *μ* ∈ [0, 1]
 - *P<sub>b</sub>* ∈ {0, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95}
-- *m* ∈ {0, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95}
+- *m* ∈ {2, 3, 4, 5}
 - *N* ∈ {5, 10, 20, 30, 50, 80}
 - *Initial<sub>sel</sub>*, `["sig", "effect > 0", "random"], ["effect > 0", "min(pvalue)"], ["effect < 0", "max(pvalue)"]`
 
