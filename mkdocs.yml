@@ -40,6 +40,15 @@ nav:
         - studies/selection-variation.md
         - studies/sample-size-variation.md
         - studies/optional-stopping-variation.md
+    - API:
+        - Home: /doxygen/
+        - Classes: /doxygen/Classes
+        - Namespaces: /doxygen/Namespaces
+        - Modules: /doxygen/Modules
+        - Files: /doxygen/Files
+        - Related Pages: /doxygen/Pages
+        - Examples: /doxygen/Examples
+
         # - studies/outliers-removal-variation.md
     # - Extras:
     #     - extending-sam.md
