@@ -318,7 +318,7 @@ In the figure below, we can see the comparison between this study  and the one p
 
 ## Second Extension: Optional Stopping Field
 
-
+## Meta-Analysis
 
 ## Appendix A: Effect of Different Number of Attemps in Optional Stopping
 
