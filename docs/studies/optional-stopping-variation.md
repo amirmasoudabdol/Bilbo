@@ -240,6 +240,10 @@ Finally, we can see the influence of publication bias on the effect size bias. E
 
 ## First Extension: Optional Stopping *Only* on Treatment Group
 
+In our first extension, we investigate the effect of only applying the optional stopping on treatment groups, meaning that Researcher will only add new observations to the treatment group and leave the control group intact. 
+
+In the figure below, we can see the comparison between this study  and the one performed above, ie., adding new observation to both groups. As one might have been expected, adding collection new observation only for treatment groups will have more severe effect on the level of effect size bias. This can be seen in the figure by noticing the slightly wider bias region in “Treatment” columns compared to their “Both” counterpart. 
+
 ### Effect Size Bias
 
 === "2 Dependent Variables"
@@ -311,6 +315,9 @@ Finally, we can see the influence of publication bias on the effect size bias. E
 		    <img src="/studies/figures/optional-stopping-variation/Comp_ES_Bias_5e-04_attemps_1_dvs_4_Optional_Stopping_light.png" />
 		  </picture>
 		</figure>
+
+## Second Extension: Optional Stopping Field
+
 
 
 ## Appendix A: Effect of Different Number of Attemps in Optional Stopping
