@@ -155,6 +155,12 @@ In both cases, as we increase *S*, while we see some growth in the yellow region
 
 ### Effect Size Bis
 
+In the case of effect size bias, as we showed in the sample size variation study, we see that the level of bias is higher in experiments with 4 dependent variables. Additionally, the level of bias after performing optional stopping is higher as well. 
+
+Moreover, we observe that the level of bias lowers as we increase *S*; however, the region that bias appears in the contour plot doesn’t move and only shrinks. We can also see that the bias region moves higher in the y-axes (ie., true effect size) as we increase the *α* level. 
+
+Finally, we can see the influence of publication bias on the effect size bias. Expectedly, increasing the publication bias will reduce our overall effect size bias. 
+
 === "2 Dependent Variables"
 
 	=== "0.05"
