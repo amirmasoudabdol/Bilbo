@@ -69,15 +69,13 @@ We can simply leave other selection and decision policies empty, as we do not pl
 
 ## Results
 
-We present our results within three main set of figures. 
-
 ## Landscape of *Probability of Finding Significant*
 
 First, we look at the probability of finding significant results within the predefined hypercube of parameters enlisted above. Figure 1 is splited into 4 different figures, each showing results for a simulation study with different number of dependent variables. 
 
 Overall, we see that most lines are overlapping each other. This means that our selections for selective reporting variation does not necessarily translate to a meaningful difference in the probability of finding significant results. However, the effect of different ɑ-level is visible and meaningful. Basically, lowering ɑ-level lowers the chance of finding significant results, as expected.
 
-Moveover, we can observe the effect of publication bias on our results. As one would expect, higher publication bias will lead to higher concentration of significant results in Journal. In SAM, higher publication bias encourages Jouranl to reject less non-significant results, therefore, Researcher will discard more non-significant results, see [Journal](/journal-configurations.md)
+Moveover, we can observe the effect of publication bias on our results. As one would expect, higher publication bias will lead to higher concentration of significant results in Journal. In SAM, higher publication bias encourages Jouranl to reject less non-significant results, therefore, Researcher will discard more non-significant results, see [Journal](/journal-configurations.md).
 
 
 === "2"
@@ -126,7 +124,7 @@ Moveover, we can observe the effect of publication bias on our results. As one w
 
 ## Level of ES Bias
 
-E
+Looking at the level of bias among our result, we again see alomst no different between between our different selection logics, except the case of researcher's who has reported `["sig", "effect > 0", "max(pvalue)"]` as their final submission. While this is expected, it's an odd choice among researcher. 
 
 === "2"
 
@@ -172,53 +170,10 @@ E
 	  </picture>
 	</figure>
 
-## Landscape of *Significant P-value*
 
-=== "2"
+## Mean of Significant P-values
 
-	<figure>
-	  <picture>
-	    <source 
-	        srcset="/studies/figures/selection-variation/PFS_2_Sel_Var_dark.png"
-	        media="(prefers-color-scheme: dark)">
-	    <img src="/studies/figures/selection-variation/PFS_2_Sel_Var_light.png" />
-	  </picture>
-	</figure>
-
-=== "3"
-
-	<figure>
-	  <picture>
-	    <source 
-	        srcset="/studies/figures/selection-variation/PFS_3_Sel_Var_dark.png"
-	        media="(prefers-color-scheme: dark)">
-	    <img src="/studies/figures/selection-variation/PFS_3_Sel_Var_light.png" />
-	  </picture>
-	</figure>
-
-=== "4"
-
-	<figure>
-	  <picture>
-	    <source 
-	        srcset="/studies/figures/selection-variation/PFS_4_Sel_Var_dark.png"
-	        media="(prefers-color-scheme: dark)">
-	    <img src="/studies/figures/selection-variation/PFS_4_Sel_Var_light.png" />
-	  </picture>
-	</figure>
-
-=== "5"
-
-	<figure>
-	  <picture>
-	    <source 
-	        srcset="/studies/figures/selection-variation/PFS_5_Sel_Var_dark.png"
-	        media="(prefers-color-scheme: dark)">
-	    <img src="/studies/figures/selection-variation/PFS_5_Sel_Var_light.png" />
-	  </picture>
-	</figure>
-
-## Level of ES Bias
+Looking at the mean of significant p-values, we can see the slight bump in the level of p-value as we move toward higher true effect sizes. In all other cases, mean of significant p-values tends to overlap similarly to PFS.
 
 === "2"
 
@@ -264,4 +219,50 @@ E
 	  </picture>
 	</figure>
 
-## Pub. Bias Effect
+
+
+<!-- ## Landscape of *Significant P-value*
+
+=== "2"
+
+	<figure>
+	  <picture>
+	    <source 
+	        srcset="/studies/figures/selection-variation/PFS_2_Sel_Var_dark.png"
+	        media="(prefers-color-scheme: dark)">
+	    <img src="/studies/figures/selection-variation/PFS_2_Sel_Var_light.png" />
+	  </picture>
+	</figure>
+
+=== "3"
+
+	<figure>
+	  <picture>
+	    <source 
+	        srcset="/studies/figures/selection-variation/PFS_3_Sel_Var_dark.png"
+	        media="(prefers-color-scheme: dark)">
+	    <img src="/studies/figures/selection-variation/PFS_3_Sel_Var_light.png" />
+	  </picture>
+	</figure>
+
+=== "4"
+
+	<figure>
+	  <picture>
+	    <source 
+	        srcset="/studies/figures/selection-variation/PFS_4_Sel_Var_dark.png"
+	        media="(prefers-color-scheme: dark)">
+	    <img src="/studies/figures/selection-variation/PFS_4_Sel_Var_light.png" />
+	  </picture>
+	</figure>
+
+=== "5"
+
+	<figure>
+	  <picture>
+	    <source 
+	        srcset="/studies/figures/selection-variation/PFS_5_Sel_Var_dark.png"
+	        media="(prefers-color-scheme: dark)">
+	    <img src="/studies/figures/selection-variation/PFS_5_Sel_Var_light.png" />
+	  </picture>
+	</figure> -->
