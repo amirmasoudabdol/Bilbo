@@ -24,12 +24,12 @@ The configuration below showcases a sample implementation of optional stopping a
       "max_attempts": 1,
       "n_attempts": 1,
       "num": 0,
-      "add_by_fraction": 0.3
+      "ratio": 0.3
     }
     ```
 
 Besides [common parameters](/hacking-strategies.md#hacking-strategy-specification) shared between all hacking strategies, optional stopping specific parameters are as follow:
 
 - `num`, indicates number of observations be added on each attempt.
-- `add_by_fraction`, indicates a multiplier that its going to be used to calculate the number of new observations — based on current *N* — to be added to each group.
+- `ratio`, indicates a multiplier that its going to be used to calculate the number of new observations — based on current *N* — to be added to each group.
 - `n_attempts`, indicates number of attempts fore stopping the process.

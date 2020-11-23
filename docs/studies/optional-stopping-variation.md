@@ -39,7 +39,7 @@ With these paramters, we hope that we could cover a wide range of possible optio
                     "max_attempts": 1,
                     "n_attempts": 3,
                     "num": 0,
-                    "add_by_fraction": 0.4,
+                    "ratio": 0.4,
                     "stopping_condition": [
                         "sig"
                     ]
