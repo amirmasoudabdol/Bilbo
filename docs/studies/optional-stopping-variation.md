@@ -318,7 +318,31 @@ In the figure below, we can see the comparison between this study  and the one p
 
 ## Second Extension: Optional Stopping Field
 
-## Meta-Analysis
+In our last extension of our study, we investigate the effect of a variable optional stopping parameters. In contrast to our previous simulations where we simulated a range of parameters, in this simulation we draw a random value for two main parameters of the optional stopping, i.e., `ratio` and `n_attempts`. 
+
+Our choices for distribution of `ratio` and `n_attempts` is a based on a *piecewise constant distribution* with which we fine tune the range and probability of values that we are interested in. For the `ratio`, we design a random number generator with the frequency shown below.
+
+As for the number of attempts, our distribution is as follow:
+
+These choices are based on our previous observations and meant to simulate an extreme and yet realistic variety of optional stopping applied in a set studies.  In fact, they depict a population of researchers who often add a few number of new observations to their studies after inrush data collection, and it is less likely that they perform the optional stopping more than 1 times. 
+
+Looking at the chance of finding significant, we see 
+
+
+Looking at the level of effect size bias, we see
+
+### Meta-Analysis
+
+Another difference of our last extension is the fact that we changed our Journal’s configuration in order to be able to collect batches of results. 
+
+!!! journal “Configuration: Journal”
+	this is it 
+
+
+As discussed in Meta Analysis, we can use these batches as our meta analysis pool, and consequently apply different meta analyses methods on them. Later these results can be exported and analyzed as shown in Maassen’s Simulation. 
+
+Here we competed two batch sizes, *K = {8, 24}*. 
+
 
 ## Appendix A: Effect of Different Number of Attemps in Optional Stopping
 
