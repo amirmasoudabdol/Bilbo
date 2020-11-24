@@ -511,6 +511,9 @@ As discussed in Meta Analysis, we can use these batches as our meta analysis poo
 
 Here we competed two batch sizes, *K = {8, 24}*. 
 
+
+Egger's
+
 === "K = 8"
 
 	<figure>
@@ -530,6 +533,31 @@ Here we competed two batch sizes, *K = {8, 24}*.
 	        srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_EggersTestEstimator_k_24_Optional_Stopping_dark.png"
 	        media="(prefers-color-scheme: dark)">
 	    <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_EggersTestEstimator_k_24_Optional_Stopping_light.png" />
+	  </picture>
+	</figure>
+
+
+Rank Correlation
+
+=== "K = 8"
+
+	<figure>
+	  <picture>
+	    <source 
+	        srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_8_Optional_Stopping_dark.png"
+	        media="(prefers-color-scheme: dark)">
+	    <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_8_Optional_Stopping_light.png" />
+	  </picture>
+	</figure>
+
+=== "K = 24"
+
+	<figure>
+	  <picture>
+	    <source 
+	        srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_24_Optional_Stopping_dark.png"
+	        media="(prefers-color-scheme: dark)">
+	    <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_24_Optional_Stopping_light.png" />
 	  </picture>
 	</figure>
 
