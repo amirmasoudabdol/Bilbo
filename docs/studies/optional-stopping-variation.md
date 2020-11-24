@@ -499,13 +499,39 @@ Looking at the level of effect size bias, we see
 Another difference of our last extension is the fact that we changed our Journal’s configuration in order to be able to collect batches of results. 
 
 !!! journal “Configuration: Journal”
-	this is it 
+	```json
+	{}
+	```
+
+
 
 
 
 As discussed in Meta Analysis, we can use these batches as our meta analysis pool, and consequently apply different meta analyses methods on them. Later these results can be exported and analyzed as shown in Maassen’s Simulation. 
 
 Here we competed two batch sizes, *K = {8, 24}*. 
+
+=== "K = 8"
+
+	<figure>
+	  <picture>
+	    <source 
+	        srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_EggersTestEstimator_k_8_Optional_Stopping_dark.png"
+	        media="(prefers-color-scheme: dark)">
+	    <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_EggersTestEstimator_k_8_Optional_Stopping_light.png" />
+	  </picture>
+	</figure>
+
+=== "K = 24"
+
+	<figure>
+	  <picture>
+	    <source 
+	        srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_EggersTestEstimator_k_24_Optional_Stopping_dark.png"
+	        media="(prefers-color-scheme: dark)">
+	    <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_EggersTestEstimator_k_24_Optional_Stopping_light.png" />
+	  </picture>
+	</figure>
 
 
 ## Appendix A: Effect of Different Number of Attemps in Optional Stopping
