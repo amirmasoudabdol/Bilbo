@@ -152,8 +152,46 @@ In both cases, as we increase *S*, while we see some growth in the yellow region
 		  </picture>
 		</figure>
 
+=== "6 Dependent Variables"
 
-### Effect Size Bis
+	=== "0.05"
+
+		<figure>
+		  <picture>
+		    <source 
+		        srcset="/studies/figures/optional-stopping-variation/PFS_0.05_attemps_1_dvs_6_Optional_Stopping_dark.png"
+		        media="(prefers-color-scheme: dark)">
+		    <img src="/studies/figures/optional-stopping-variation/PFS_0.05_attemps_1_dvs_6_Optional_Stopping_light.png" />
+		    <figcaption aria-hidden="true">6 Dependent Variables</figcaption>
+		  </picture>
+		</figure>
+
+	=== "0.005"
+
+		<figure>
+		  <picture>
+		    <source 
+		        srcset="/studies/figures/optional-stopping-variation/PFS_0.005_attemps_1_dvs_6_Optional_Stopping_dark.png"
+		        media="(prefers-color-scheme: dark)">
+		    <img src="/studies/figures/optional-stopping-variation/PFS_0.005_attemps_1_dvs_6_Optional_Stopping_light.png" />
+		    <figcaption aria-hidden="true">6 Dependent Variables</figcaption>
+		  </picture>
+		</figure>
+
+	=== "0.0005"
+
+		<figure>
+		  <picture>
+		    <source 
+		        srcset="/studies/figures/optional-stopping-variation/PFS_5e-04_attemps_1_dvs_6_Optional_Stopping_dark.png"
+		        media="(prefers-color-scheme: dark)">
+		    <img src="/studies/figures/optional-stopping-variation/PFS_5e-04_attemps_1_dvs_6_Optional_Stopping_light.png" />
+		    <figcaption aria-hidden="true">6 Dependent Variables</figcaption>
+		  </picture>
+		</figure>
+
+
+### Effect Size Bias
 
 In the case of effect size bias, as we showed in the sample size variation study, we see that the level of bias is higher in experiments with 4 dependent variables. Additionally, the level of bias after performing optional stopping is higher as well. 
 
@@ -234,6 +272,44 @@ Finally, we can see the influence of publication bias on the effect size bias. E
 		        media="(prefers-color-scheme: dark)">
 		    <img src="/studies/figures/optional-stopping-variation/ES_Bias_5e-04_attemps_1_dvs_4_Optional_Stopping_light.png" />
 		    <figcaption aria-hidden="true">4 Dependent Variables</figcaption>
+		  </picture>
+		</figure>
+
+=== "6 Dependent Variables"
+
+	=== "0.05"
+
+		<figure>
+		  <picture>
+		    <source 
+		        srcset="/studies/figures/optional-stopping-variation/ES_Bias_0.05_attemps_1_dvs_6_Optional_Stopping_dark.png"
+		        media="(prefers-color-scheme: dark)">
+		    <img src="/studies/figures/optional-stopping-variation/ES_Bias_0.05_attemps_1_dvs_6_Optional_Stopping_light.png" />
+		    <figcaption aria-hidden="true">6 Dependent Variables</figcaption>
+		  </picture>
+		</figure>
+
+	=== "0.005"
+
+		<figure>
+		  <picture>
+		    <source 
+		        srcset="/studies/figures/optional-stopping-variation/ES_Bias_0.005_attemps_1_dvs_6_Optional_Stopping_dark.png"
+		        media="(prefers-color-scheme: dark)">
+		    <img src="/studies/figures/optional-stopping-variation/ES_Bias_0.005_attemps_1_dvs_6_Optional_Stopping_light.png" />
+		    <figcaption aria-hidden="true">6 Dependent Variables</figcaption>
+		  </picture>
+		</figure>
+
+	=== "0.0005"
+
+		<figure>
+		  <picture>
+		    <source 
+		        srcset="/studies/figures/optional-stopping-variation/ES_Bias_5e-04_attemps_1_dvs_6_Optional_Stopping_dark.png"
+		        media="(prefers-color-scheme: dark)">
+		    <img src="/studies/figures/optional-stopping-variation/ES_Bias_5e-04_attemps_1_dvs_6_Optional_Stopping_light.png" />
+		    <figcaption aria-hidden="true">6 Dependent Variables</figcaption>
 		  </picture>
 		</figure>
 
@@ -348,10 +424,75 @@ These choices are based on our previous observations and meant to simulate an ex
 
 Looking at the chance of finding significant, we see 
 
+=== "2 Dependent Variables"
+
+	<figure>
+	  <picture>
+	    <source 
+	        srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_PC_Dist_PFS__dvs_2_Optional_Stopping_dark.png"
+	        media="(prefers-color-scheme: dark)">
+	    <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_PC_Dist_PFS__dvs_2_Optional_Stopping_light.png" />
+	  </picture>
+	</figure>
+
+=== "4 Dependent Variables"
+
+	<figure>
+	  <picture>
+	    <source 
+	        srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_PC_Dist_PFS__dvs_4_Optional_Stopping_dark.png"
+	        media="(prefers-color-scheme: dark)">
+	    <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_PC_Dist_PFS__dvs_4_Optional_Stopping_light.png" />
+	  </picture>
+	</figure>
+
+=== "6 Dependent Variables"
+
+	<figure>
+	  <picture>
+	    <source 
+	        srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_PC_Dist_PFS__dvs_6_Optional_Stopping_dark.png"
+	        media="(prefers-color-scheme: dark)">
+	    <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_PC_Dist_PFS__dvs_6_Optional_Stopping_light.png" />
+	  </picture>
+	</figure>
 
 
 
 Looking at the level of effect size bias, we see
+
+=== "2 Dependent Variables"
+
+	<figure>
+	  <picture>
+	    <source 
+	        srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_PC_Dist_ES_Bias__dvs_2_Optional_Stopping_dark.png"
+	        media="(prefers-color-scheme: dark)">
+	    <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_PC_Dist_ES_Bias__dvs_2_Optional_Stopping_light.png" />
+	  </picture>
+	</figure>
+
+=== "4 Dependent Variables"
+
+	<figure>
+	  <picture>
+	    <source 
+	        srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_PC_Dist_ES_Bias__dvs_4_Optional_Stopping_dark.png"
+	        media="(prefers-color-scheme: dark)">
+	    <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_PC_Dist_ES_Bias__dvs_4_Optional_Stopping_light.png" />
+	  </picture>
+	</figure>
+
+=== "6 Dependent Variables"
+
+	<figure>
+	  <picture>
+	    <source 
+	        srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_PC_Dist_ES_Bias__dvs_6_Optional_Stopping_dark.png"
+	        media="(prefers-color-scheme: dark)">
+	    <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_PC_Dist_ES_Bias__dvs_6_Optional_Stopping_light.png" />
+	  </picture>
+	</figure>
 
 ### Meta-Analysis
 
