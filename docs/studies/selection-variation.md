@@ -8,7 +8,7 @@ Here, we are interested in finding how different choices influence the *Probabil
 
 We start by a simple [Linear Model](/data-strategies.md#linear-model) consists of two groups, and variable number of dependant variables.
 
-??? datastrategy "Configuration: Data Strategy"
+!!! datastrategy "Configuration: Data Strategy"
 	```json hl_lines="4 5 10"
     "experiment_parameters": {
         "n_reps": 1,
@@ -45,7 +45,7 @@ As discussed, we achieve the selective reporting through the alternation of `ini
 
 As we discussed, `initial_selection_policies` is a [Policy Chain Set](/decision-strategies.md#policy-chain-set), meaning that it can be followed by alternatives in the case of Researcher not being able to find an outcome with the given criteria. We follow each selection with two *Policy Chain*, `["effect > 0", "min(pvalue)"], ["effect < 0", "max(pvalue)"]`. In this configuration, our Researcher priotrizes each set after failing to satisfy the previous set. Due to the fact that the first policy chain is the only policy chain emphesizing on significant, the aggregate outcome of the simulation can be used to measure the *Probablity Of Finding Significant* results, a.k.a, *Proportion Of Significant* results.
 
-??? decisionstrategy "Configuration: Initial Selection Policy"
+!!! decisionstrategy "Configuration: Initial Selection Policy"
 	```json
 	{
         "decision_strategy": {
@@ -65,7 +65,24 @@ As we discussed, `initial_selection_policies` is a [Policy Chain Set](/decision-
 	}
 	```
 
-We can simply leave other selection and decision policies empty, as we do not plan to incorporate any further decision, hacking strategies or replications.
+We can simply leave other selection and decision policies empty, as we do not plan to incorporate any further decision, hacking strategies or replications. 
+
+!!! journal "Journal: _Publication Bias_"
+    ```json linenums="1" hl_lines="5-10"
+    {
+      ...
+      "journal_parameters": {
+        "max_pubs": k,
+        "selection_strategy": {
+            "name": "SignificantSelection",
+            "pub_bias": Pb,
+            "alpha": ɑ,
+            "side": 0,
+        }
+    }
+    ```
+
+As for Journal's configuration, we can incorporate the Significant Selection method to account for different level of publications bias that we are planning to study.
 
 ## Results
 
