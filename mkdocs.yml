@@ -93,6 +93,7 @@ theme:
     - tab
     - instant
     - header.hide
+    # - toc.integrate
     # - navigation.tabs
 
 extra:
