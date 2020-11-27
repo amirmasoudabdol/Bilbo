@@ -537,7 +537,7 @@ It is important to point out that while we see minimal improvment on the level o
       </picture>
     </figure>
 
-### Meta-Analysis
+### Publication Bias and Meta-Analysis
 
 Another difference of our last extension is the fact that we changed our Journal’s configuration in order to be able to collect batches of results. Here we competed two batch sizes, *K = {8, 24}*. 
 
@@ -574,12 +574,85 @@ Another difference of our last extension is the fact that we changed our Journal
 
 As discussed in [Meta Analysis](/meta-analyses.md), we can use these batches as our meta analysis pool, and consequently apply different meta analyses methods on them. Later these results can be exported and analyzed as shown in [Maassen’s Simulation](/examples/esther_first_year.md). 
 
+<!-- #### Random Effect Estimator -->
+<!-- Results from Nov 26 Distro - Full Run -->
+<!-- === "K = 8"
+
+    === "ɑ = 0.05"
+
+        <figure>
+          <picture>
+            <source 
+                srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RandomEffectEstimator_k_8_alpha_0.05_Optional_Stopping_dark.png"
+                media="(prefers-color-scheme: dark)">
+            <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RandomEffectEstimator_k_8_alpha_0.05_Optional_Stopping_light.png" />
+          </picture>
+        </figure>
+
+    === "0.005"
+
+        <figure>
+          <picture>
+            <source 
+                srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RandomEffectEstimator_k_8_alpha_0.005_Optional_Stopping_dark.png"
+                media="(prefers-color-scheme: dark)">
+            <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RandomEffectEstimator_k_8_alpha_0.005_Optional_Stopping_light.png" />
+          </picture>
+        </figure>
+
+    === "0.0005"
+
+        <figure>
+          <picture>
+            <source 
+                srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RandomEffectEstimator_k_8_alpha_5e-04_Optional_Stopping_dark.png"
+                media="(prefers-color-scheme: dark)">
+            <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RandomEffectEstimator_k_8_alpha_5e-04_Optional_Stopping_light.png" />
+          </picture>
+        </figure>
+
+=== "K = 24"
+
+    === "ɑ = 0.05"
+
+        <figure>
+          <picture>
+            <source 
+                srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RandomEffectEstimator_k_24_alpha_0.05_Optional_Stopping_dark.png"
+                media="(prefers-color-scheme: dark)">
+            <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RandomEffectEstimator_k248_alpha_0.05_Optional_Stopping_dark.png" />
+          </picture>
+        </figure>
+
+    === "0.005"
+
+        <figure>
+          <picture>
+            <source 
+                srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RandomEffectEstimator_k_24_alpha_0.005_Optional_Stopping_dark.png"
+                media="(prefers-color-scheme: dark)">
+            <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RandomEffectEstimator_k_24_alpha_0.005_Optional_Stopping_dark.png" />
+          </picture>
+        </figure>
+
+    === "0.0005"
+
+        <figure>
+          <picture>
+            <source 
+                srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RandomEffectEstimator_k_24_alpha_5e-04_Optional_Stopping_dark.png"
+                media="(prefers-color-scheme: dark)">
+            <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RandomEffectEstimator_k_24_alpha_5e-04_Optional_Stopping_dark.png" />
+          </picture>
+        </figure> -->
+
+#### Publication Bias
+
 While we do not expect Egger's Test to be able to detect the influence of optional stopping on publication bias, we are curious to see how it performs within the range of our parameters. As we can see in the figure below, Egger's test clearly performs better with larger sample sizes. Moreover, as expected, Egger gets more confident as publication level raises. As shown in [Maassen’s Simulation](/examples/esther_first_year.md), Egger performs much better in lower ɑ-levels as well. In addtion, notice the fact that Egger's Test is only capable of detecting high (*> 50%*) publication bias within very extreme *P<sub>b</sub>* values, and even then only within very high true effect sizes and low sample sizes.
 
 > In fact, Egger's Test is fairly ineffective in a large region of our parameters set. The good news is, its most effective region lies within small sample sizes, *N ≲ 20*. 
 
 In all cases, we can see a slightly more power withing studies undergone the optional stopping. However, as one would guess this is not to the courtesy of Egger's Test in detecting the influence of optional stopping. In fact, this is shows how optional stopping can pollute publication bias metrics like Egger's Test.
-
 
 
 <!-- Results from Nov 26 Distro - Full Run -->
@@ -654,29 +727,78 @@ In all cases, we can see a slightly more power withing studies undergone the opt
         </figure>
 
 
-<!-- Rank Correlation
+We also included Begg's Rank Correlation Test in our meta analysis. Figures below showcase the variation of its power. As we know Begg's test does not perform well with small samples sizes, and it performs the best with at least *K ≳ 72* [cite], see [Maassen et al., 2016](/examples/esther_first_year.md). Here, we can observe the same behavior, as we see much brigher contour batches with *K = 24*. In comparison to Egger's test, Begg's test has a lower power, and does not necessary come out more successful. Similarly, Begg's test is more powerful withing the region of *N ≲ 20*, and higher true effect sizes, *θ*.
 
+<!-- Results from Nov 26 Distro - Full Run -->
 === "K = 8"
 
-    <figure>
-      <picture>
-        <source 
-            srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_8_Optional_Stopping_dark.png"
-            media="(prefers-color-scheme: dark)">
-        <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_8_Optional_Stopping_light.png" />
-      </picture>
-    </figure>
+    === "2 Dependent Variables"
+
+        <figure>
+          <picture>
+            <source 
+                srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_8_dvs_2_Optional_Stopping_dark.png"
+                media="(prefers-color-scheme: dark)">
+            <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_8_dvs_2_Optional_Stopping_light.png" />
+          </picture>
+        </figure>
+
+    === "4 Dependent Variables"
+
+        <figure>
+          <picture>
+            <source 
+                srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_8_dvs_4_Optional_Stopping_dark.png"
+                media="(prefers-color-scheme: dark)">
+            <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_8_dvs_4_Optional_Stopping_light.png" />
+          </picture>
+        </figure>
+
+    === "6 Dependent Variables"
+
+        <figure>
+          <picture>
+            <source 
+                srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_8_dvs_6_Optional_Stopping_dark.png"
+                media="(prefers-color-scheme: dark)">
+            <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_8_dvs_6_Optional_Stopping_light.png" />
+          </picture>
+        </figure>
 
 === "K = 24"
 
-    <figure>
-      <picture>
-        <source 
-            srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_24_Optional_Stopping_dark.png"
-            media="(prefers-color-scheme: dark)">
-        <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_24_Optional_Stopping_light.png" />
-      </picture>
-    </figure> -->
+    === "2 Dependent Variables"
+
+        <figure>
+          <picture>
+            <source 
+                srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_24_dvs_2_Optional_Stopping_dark.png"
+                media="(prefers-color-scheme: dark)">
+            <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_24_dvs_2_Optional_Stopping_light.png" />
+          </picture>
+        </figure>
+
+    === "4 Dependent Variables"
+
+        <figure>
+          <picture>
+            <source 
+                srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_24_dvs_4_Optional_Stopping_dark.png"
+                media="(prefers-color-scheme: dark)">
+            <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_24_dvs_4_Optional_Stopping_light.png" />
+          </picture>
+        </figure>
+
+    === "6 Dependent Variables"
+
+        <figure>
+          <picture>
+            <source 
+                srcset="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_24_dvs_6_Optional_Stopping_dark.png"
+                media="(prefers-color-scheme: dark)">
+            <img src="/studies/figures/optional-stopping-variation/2nd_Ext/2nd_Ext_RankCorrelation_k_24_dvs_6_Optional_Stopping_light.png" />
+          </picture>
+        </figure>
 
 
 ## Third Extension
@@ -688,7 +810,7 @@ In all cases, we can see a slightly more power withing studies undergone the opt
     <img src="/studies/figures/optional-stopping-variation/N_Distribution_light.png" width="300" align="right"/>
 </picture>
 
-Looking at the chance of finding significant, we see 
+In our last extension, we remove an another dimension by replacing a set of sample sizes with values drawn from a custom designed destribution. As shown here, we aim for a distirbution with higher chance of returning smaller *N*'s and lower chance of returning higher values. We tuned our distirbution such that 75% of our sample sizes lie within [6, 24], and the rest are drawn from [25, 300]. We can achieve this by tuning a [piecewise_constant_distribution](https://en.cppreference.com/w/cpp/numeric/random/piecewise_constant_distribution) as follow within our Data Strategy configuration.
 
 
 !!! datastrategy "Configuration: Data Strategy"
@@ -724,6 +846,7 @@ Looking at the chance of finding significant, we see
     }
     ```
 
+As before, we investigate the probability of finding significant results. The figure below shows the overall level of PFS in different scenarios. As before, we can see that optional stopping does not greatly streches the chance of finding significant results. As this is consistent with our previous observations, we may speculate that optional stopping might not necessarily helps one in its journey of finding significant results. 
 
 <!-- Results from Nov 26 Double Distro Full Run -->
 <figure>
@@ -735,6 +858,9 @@ Looking at the chance of finding significant, we see
   </picture>
 </figure>
 
+Similarly, we see a minimal variation in the level of bias!
+
+<!-- Results from Nov 26 Double Distro Full Run -->
 <figure>
   <picture>
     <source 
@@ -744,6 +870,25 @@ Looking at the chance of finding significant, we see
   </picture>
 </figure>
 
+<!-- #### Random Effect Estimate -->
+<!-- Results from Nov 26 Double Distro Full Run -->
+<!-- <figure>
+  <picture>
+    <source 
+        srcset="/studies/figures/optional-stopping-variation/3rd_Ext/3rd_Ext_Double_Dist_RandomEffectEstimator_Optional_Stopping_dark.png"
+        media="(prefers-color-scheme: dark)">
+    <img src="/studies/figures/optional-stopping-variation/3rd_Ext/3nd_Ext_Double_Dist_RandomEffectEstimator_Optional_Stopping_light.png" />
+  </picture>
+</figure> -->
+
+
+#### Publication Bias
+
+Looking into our publication bias measures, we see similar trends as before in many different parameters pools. Egger's test perform well within higher true effect sizes, and loses its edge in lower effect sizes. Moreover, we again see a minimal influece of optional stopping on its power. 
+
+**One interesting difference in Egger's test performance is high positive rate within journals with low publication bias. Notice three top-right figures where we simulated a journal with no publication bias; but, Egger's test is very confident taht we are dealing with very high publication bias.**
+
+<!-- Results from Nov 26 Double Distro Full Run -->
 <figure>
   <picture>
     <source 
@@ -753,6 +898,22 @@ Looking at the chance of finding significant, we see
   </picture>
 </figure>
 
+The same true is for Begg's test, ie., very lower power with *K = 8*, with power improving as we increase *K* to 24. In contrast to Egger's, Begg's test seems to be more conservative with announcing publication bias when no publication bias is present.
+
+<!-- Results from Nov 26 Double Distro Full Run -->
+<figure>
+  <picture>
+    <source 
+        srcset="/studies/figures/optional-stopping-variation/3rd_Ext/3rd_Ext_Double_Dist_RankCorrelation_Optional_Stopping_dark.png"
+        media="(prefers-color-scheme: dark)">
+    <img src="/studies/figures/optional-stopping-variation/3rd_Ext/3nd_Ext_Double_Dist_RankCorrelation_Optional_Stopping_light.png" />
+  </picture>
+</figure>
+
+## Conclusion
+
+
+<hr>
 
 ## Appendix A: Effect of Different Number of Attemps in Optional Stopping
 

@@ -104,7 +104,7 @@ minimum *p*-value, and if the _selected outcome_ is significant, she stops and r
               "max_attempts": 1,
               "n_attempts": 1,
               "num": 0,
-              "ratio": 0.3
+              "add_by_fraction": 0.3
             },
             [ ["min(pvalue)"] ],
             ["!sig"]
@@ -118,7 +118,7 @@ minimum *p*-value, and if the _selected outcome_ is significant, she stops and r
               "max_attempts": 1,
               "n_attempts": 1,
               "num": 0,
-              "ratio": 0.3
+              "add_by_fraction": 0.3
             },
             [ ["min(pvalue)"] ],
             ["!sig"]
@@ -132,7 +132,7 @@ minimum *p*-value, and if the _selected outcome_ is significant, she stops and r
               "max_attempts": 1,
               "n_attempts": 1,
               "num": 0,
-              "ratio": 0.3
+              "add_by_fraction": 0.3
             },
             [ ["min(pvalue)"] ],
             ["!sig"]
