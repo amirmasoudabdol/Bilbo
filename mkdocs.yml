@@ -43,7 +43,7 @@ nav:
     - API:
         # - Home: /doxygen/
         - Classes: /doxygen/Classes
-        - Namespaces: /doxygen/Namespaces
+        # - Namespaces: /doxygen/Namespaces
         - Modules: /doxygen/Modules
         # - Files: /doxygen/Files
         # - Related Pages: /doxygen/Pages

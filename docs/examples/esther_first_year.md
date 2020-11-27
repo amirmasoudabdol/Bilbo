@@ -295,6 +295,15 @@ Figure 3, 4, 5, 6 illustrate our results in the form of contour plots. The x-axi
 <figure>
   <picture>
     <source 
+        srcset="/examples/figures/Esther_FYP/Esther_FYP_PFS_Counter_Filled_dark.png" 
+        media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Esther_FYP/Esther_FYP_PFS_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 3.</b> Probability of Finding Sig.</figcaption>
+  </picture> 
+</figure>
+
+<figure>
+  <picture>
+    <source 
         srcset="/examples/figures/Esther_FYP/Esther_FYP_ES_Bias_Counter_Filled_dark.png" 
         media="(prefers-color-scheme: dark)">
   <img src="/examples/figures/Esther_FYP/Esther_FYP_ES_Bias_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 3.</b> ES Bias</figcaption>
