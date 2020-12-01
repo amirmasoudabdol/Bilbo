@@ -67,7 +67,7 @@ The rest of this article focuses on simulating Bakker’s study using SAM, and c
 
 ## SAM Configuration
 
-In order to recreate Bakker's simulation using SAM, we start by planning [Researcher's Workflow](../research-workflow.md) and translating that into a [configuration file](../configuration-file.md).
+In order to recreate Bakker's simulation using SAM, we start by planning [Researcher's Workflow](/research-workflow.md) and translating that into a [configuration file](/configuration-file.md).
 
 <picture>
   <img width="300px" align="right" src="/examples/figures/Bakker_2012/Marjan_2012_Expriment_Design_Light.png" id="fig:marjan_2012_design"/>
@@ -147,21 +147,21 @@ For effect size measure, Bakker computed the standardized effect size different 
     }
     ```
 
-After fully configuring Experiment's parameters, we can start translating the simulation logic from a [Research Workflow](research-workflow.md) to Decision Strategy's configuration, and thereafter prepareing the list of Hacking Strategies.
+After fully configuring Experiment's parameters, we can start translating the simulation logic from a [Research Workflow](/research-workflow.md) to Decision Strategy's configuration, and thereafter preparing the list of Hacking Strategies.
 
 ### Strategy 1, and 3 (Without QRPs)
 
 #### Hacking Strategy
 
-In 1st and 3rd strategies, researchers will NOT commit any QRPs, therefore the `probability_of_being_a_hacker` should be set to `0`. This is enough for configuring a researcher who does not explore the [Hacking Workflow](hacking-workflow.md).
+In 1st and 3rd strategies, researchers will NOT commit any QRPs, therefore the `probability_of_being_a_hacker` should be set to `0`. This is enough for configuring a researcher who does not explore the [Hacking Workflow](/hacking-workflow.md).
 
 #### Decision Strategies
 
 Following the workflow depicted in Figure 1, we are able to set different decision and selection policies in place for the researcher to achieve the exact path described by Bakker.
 
-The researcher always starts by checking the primary outcome, if the selected outcome is not significant and doesn’t have a positive effect (i.e.`"initial_selection_policies": [["id == 2"]]`), she executes the first hacking strategy. Since in 1st and 3rd strategies, we are not performing any QRPs, this path will not be taken. 
+The researcher always starts by checking the primary outcome, if the selected outcome is not significant and does not have a positive effect (i.e.`"initial_selection_policies": [["id == 2"]]`), she executes the first hacking strategy. Since in 1st and 3rd strategies, we are not performing any QRPs, this path will not be taken. 
 
-In the case of small studies, the researcher will replicate 5 exact studies. At the end of each replication, the researcher stores the first outcome variable (as indicated by `initial_selection_policies`) in a dataset of **All Reported Outcome**, Figure 2. Finally, she revisits this dataset, and chooses the most desirable outcome among them. Her preferences can be seen under `between_replications_selection_policies` parameter. This setup is in place to capture the main idea behind Bakker's simulation, that is, "benefitial to a researcher to run 5 small studies instead of one large study."
+In the case of small studies, the researcher will replicate 5 exact studies. At the end of each replication, the researcher stores the first outcome variable (as indicated by `initial_selection_policies`) in a dataset of **All Reported Outcome**, Figure 2. Finally, she revisits this dataset, and chooses the most desirable outcome among them. Her preferences can be seen under `between_replications_selection_policies` parameter. This setup is in place to capture the main idea behind Bakker's simulation, that is, "beneficial to a researcher to run 5 small studies instead of one large study."
 
 ??? decisionstrategy "Configuration: _Decision Strategy_"
     ```json
@@ -296,7 +296,7 @@ Figure <a href="#fig:original_vs_reproduced" data-reference-type="ref" data-refe
 
 #### The Source of Discrepency
 
-Further investigation led to the finding of a minor bug in Bakker et al., code where a typo resulted in insertion of a wrong **large** study in the replication pool of  *small* simulation. This polluted the pool of small studies and reduced the overall observed bias, due to the wrongly inserted large study having lower bias among all other small sudies. Figure <a href="#fig:patched_vs_reproduced" data-reference-type="ref" data-reference="fig:patched_vs_reproduced">5</a>, shows the comparison of results from the patched script, and SAM's results. As it is shown, patching Bakker's code accounted for the minor discrepancy and consequently we gets a perfect replication.
+Further investigation led to the finding of a minor bug in Bakker et al., code where a typo resulted in insertion of a wrong **large** study in the replication pool of  *small* simulation. This polluted the pool of small studies and reduced the overall observed bias, due to the wrongly inserted large study having lower bias among all other small studies. Figure <a href="#fig:patched_vs_reproduced" data-reference-type="ref" data-reference="fig:patched_vs_reproduced">5</a>, shows the comparison of results from the patched script, and SAM's results. As it is shown, patching Bakker's code accounted for the minor discrepancy and consequently we gets a perfect replication.
 
 <figure>
   <picture>
