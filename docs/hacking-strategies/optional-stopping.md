@@ -14,7 +14,7 @@ After adding new observations, all statistics, tests, and effects will be recall
 
 The configuration below showcases a sample implementation of optional stopping as it has been used in [Maassen](/examples/esther_first_year.md) simulation.
 
-!!! hackingstrategy “Optional Stopping”
+!!! hackingstrategy "Optional Stopping"
     ```json
     {
       "name": "OptionalStopping",

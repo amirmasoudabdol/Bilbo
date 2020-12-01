@@ -894,7 +894,7 @@ Looking into our publication bias measures, we see similar trends as before in m
     <source 
         srcset="/studies/figures/optional-stopping-variation/3rd_Ext/3rd_Ext_Double_Dist_Eggers_Optional_Stopping_dark.png"
         media="(prefers-color-scheme: dark)">
-    <img src="/studies/figures/optional-stopping-variation/3rd_Ext/3nd_Ext_Double_Dist_Eggers_Optional_Stopping_light.png" />
+    <img src="/studies/figures/optional-stopping-variation/3rd_Ext/3rd_Ext_Double_Dist_Eggers_Optional_Stopping_light.png" />
   </picture>
 </figure>
 
@@ -906,7 +906,7 @@ The same true is for Begg's test, ie., very lower power with *K = 8*, with power
     <source 
         srcset="/studies/figures/optional-stopping-variation/3rd_Ext/3rd_Ext_Double_Dist_RankCorrelation_Optional_Stopping_dark.png"
         media="(prefers-color-scheme: dark)">
-    <img src="/studies/figures/optional-stopping-variation/3rd_Ext/3nd_Ext_Double_Dist_RankCorrelation_Optional_Stopping_light.png" />
+    <img src="/studies/figures/optional-stopping-variation/3rd_Ext/3rd_Ext_Double_Dist_RankCorrelation_Optional_Stopping_light.png" />
   </picture>
 </figure>
 

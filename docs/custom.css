@@ -42,6 +42,11 @@ blockquote {
   box-sizing: content-box;
 }
 
+th {
+  font-weight: bold;
+  min-width: var();
+}
+
 /*.md-typeset table:not([class]), .md-typeset__table {
   display: block;
 }*/

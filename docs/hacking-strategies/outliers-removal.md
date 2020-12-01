@@ -12,16 +12,16 @@ Figure 1 shows the implementation of aforementioned method. Like [optional stopp
 
 The configuration below showcases a sample implementation of outliers removal:
 
-!!! hackingstrategy “Outlier Removal”
-		```json
-		{
-		  "name": "Outlier Removal",
-		  "num": 2,
-		  "n_attempts": 3,
-		  "min_observations": 20,
-		  "multipliers": [3, 2, 1]
-		}
-		```
+!!! hackingstrategy "Outlier Removal"
+	```json
+	{
+	  "name": "Outlier Removal",
+	  "num": 2,
+	  "n_attempts": 3,
+	  "min_observations": 20,
+	  "multipliers": [3, 2, 1]
+	}
+	```
 Besides hacking strategies shared parameters, outliers removal has its own customization parameters as follow:
 
 - `num`, *n*, `int`, indicates number of items to be moved at each attempt

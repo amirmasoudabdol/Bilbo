@@ -1,31 +1,28 @@
 # Test Strategies
 
-*Test strategy defined the method of hypothesis testing.* After collecting data, 
-Researcher runs the test on Experiment, and calculates appropriate statistics, 
-and *p*-values for each outcome variables. Thereafter, based on the calculated *p*-value, and given ɑ,
-Test Strategy decides whether the test result is significant or not.
+*Test strategy defines the method of hypothesis testing.* After collecting data, Researcher runs a statistical test on Experiment, and calculates appropriate statistics, and *p*-values for each outcome variables. Thereafter, based on the calculated *p*-value, and given ɑ, *Test Strategy decides whether the test result is significant or not.*
 
-Similar to Data Strategy, we configure a Test Strategy by specifying the method name, and then setting
-their specific parameters as follow:
+Similar to Data Strategy, we configure the Test Strategy by specifying the method name, follwing with its setting their specific parameters. Most tests should be accompanied by an ɑ level. This ɑ is going to be used throughout the rest of SAM to evaluate the significance level of an outcome. For instance, when a [policy](/decision-strategies.md#policy) queies for significance of an outcome, SAM asks Test Strategy to see whether for a given outcome, the test is significant or not.
 
-```json hl_lines="5 6 7 8"
-{
-	"experiment_parameters": {
-		...,
-		"data_strategy": {...},
-		"test_strategy": {
-	    	"name": "MethodName",
-	    	"alpha": 0.5
+!!! teststrategy "Configuration: Test Strategy"
+	```json hl_lines="5 6 7 8"
+	{
+		"experiment_parameters": {
+			...,
+			"data_strategy": {...},
+			"test_strategy": {
+		    	"name": "MethodName",
+		    	"alpha": 0.5
+			}
 		}
 	}
-}
-```
+	```
 
-Most tests should be accompanied by an ɑ level. This ɑ is going to be used throughout the rest of SAM to evaluate the 
-significance level of an outcome. For instance, when a [policy](/decision-strategies.md#policy) queies significance, SAM asks Test Strategy to see whether for a given outcome, the test is significant or not.
-
+While SAM offers a few test strategies out of the box, it is possible to extend this list by implementing your own methods using the provided API.
 
 ## T-Test
+
+- [ ] TODO: Add descsription and reference
 
 In order to configure a [t-test](https://en.wikipedia.org/wiki/Student%27s_t-test), we need to set some general parameters, as follow:
 
@@ -41,6 +38,8 @@ In order to configure a [t-test](https://en.wikipedia.org/wiki/Student%27s_t-tes
 
 ## F-Test
 
+- [ ] TODO: Add descsription and reference
+
 !!! teststrategy "F-Test Configurations"
 	```json
 	"test_strategy": {
@@ -50,6 +49,8 @@ In order to configure a [t-test](https://en.wikipedia.org/wiki/Student%27s_t-tes
 	```
 
 ## Yuen T-Test[@Yuen_1974]
+
+- [ ] TODO: Add descsription and reference
 
 !!! teststrategy "Yuen Test Configurations"
 	```json
@@ -63,6 +64,8 @@ In order to configure a [t-test](https://en.wikipedia.org/wiki/Student%27s_t-tes
 	```
 
 ## Wilcoxon Test[@Wilcoxon_1992]
+
+- [ ] TODO: Add descsription and reference
 
 !!! teststrategy "Wilcoxon Test Configurations"
 	```json

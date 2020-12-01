@@ -4,16 +4,17 @@ title: Introduction
 
 # Experiment Configurations
 
-Experiment parameters split into 4 different categories. First 4 paramters are mainly concenring with the experiment design, while each submodule gets its own set of parameters, [Data Strategy](/data-strategies.md), [Test Strategies](test-strategies.md), and [Effect Strategies](effect-strategies.md).
+Experiment parameters split into 4 main sections. While first four paramters are describing the overall design of the study, parameters of each individual module are encapsulated into three sections, ie., [Data Strategy](/data-strategies.md), [Test Strategies](test-strategies.md), and [Effect  Strategies](effect-strategies.md).
 
-
-- **`n_reps`**, *`int`*, Indicates the number of replications of the same research. 
-- **`n_conditions`**, *`int`*, Indicates the number of conditions, n<sub>c</sub>. *Excluding the control group.* 
-- **`n_dep_vars`**, *`int`*, Indicates the number of dependent variables in each condition, n<sub>d</sub>.
-- **`n_obs`**, *`int`, `array`, `object`*, Indicates the number of observations per group 
-- **`data_strategy`**, *`string`*, Specify the underlying [Data Strategy](/data-strategies.md).
-- **`test_strategy`**, *`string`*, Specify the underlying [Test Strategies](test-strategies.md).
-- **`effect_strategy`**, *`string`*, Specify the underlying [Effect Strategies](effect-strategies.md).
+| Parameter | Type | Description |
+|----|---|----|
+| **`n_reps`** | *`integer`* | Indicates the number of replications of the same research.  |
+| **`n_conditions`** | *`integer`* | Indicates the number of conditions, *m*. *Excluding the control group.*  |
+| **`n_dep_vars`** | *`integer`* | Indicates the number of dependent variables in each condition, *n*. |
+| **`n_obs`** | *`integer`, `array`, `Parameter`* | Indicates the number of observations per group  |
+| **`data_strategy`** | *`string`* | Specify the underlying [Data Strategy](/data-strategies.md). |
+| **`test_strategy`** | *`string`* | Specify the underlying [Test Strategies](test-strategies.md). |
+| **`effect_strategy`** | *`string`* | Specify the underlying [Effect Strategies](effect-strategies.md). |
 
 
 The code snippet below showcases a sample of Experiment's parameters that's being used in [Bakker et al., 2012](/examples/bakker_et_al_2012.md).

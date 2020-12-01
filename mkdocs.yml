@@ -18,6 +18,7 @@ nav:
           - decision-strategies.md
           - Hacking Strategies:
             - hacking-strategies.md
+            - hacking-behaviors.md
             - hacking-strategies/selective-reporting.md
             - hacking-strategies/optional-stopping.md
             - hacking-strategies/outliers-removal.md
@@ -40,16 +41,16 @@ nav:
         - studies/selection-variation.md
         - studies/sample-size-variation.md
         - studies/optional-stopping-variation.md
+        # - studies/outliers-removal-variation.md
     - API:
         # - Home: /doxygen/
+        - Modules: /doxygen/Modules
         - Classes: /doxygen/Classes
         # - Namespaces: /doxygen/Namespaces
-        - Modules: /doxygen/Modules
         # - Files: /doxygen/Files
         # - Related Pages: /doxygen/Pages
         # - Examples: /doxygen/Examples
 
-        # - studies/outliers-removal-variation.md
     # - Extras:
     #     - extending-sam.md
     #     - SAMoo.md
@@ -134,6 +135,8 @@ markdown_extensions:
   - plantuml_markdown:
       format: svg
   - footnotes
+  - toc:
+      permalink: true
 
 
 extra_javascript:
