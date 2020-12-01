@@ -9,6 +9,12 @@ _site/
 .jekyll-metadata
 site/
 
+# Project Specific Files
+docs/doxygen/Files/
+docs/doxygen/Pages/
+docs/doxygen/Namespaces/
+docs/doxygen/Examples/
+
 #########
 # macOS #
 #########
