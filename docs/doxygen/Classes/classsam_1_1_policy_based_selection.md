@@ -7,7 +7,7 @@ summary: Policy-based Selection Strategy.
 # sam::PolicyBasedSelection
 
 
-
+**Module:** **[Selection Strategies](/doxygen/Modules/group___selection_strategies/)**
 
 Policy-based Selection Strategy.  [More...](#detailed-description)
 
@@ -248,4 +248,4 @@ PolicyChain selection_policy;
 
 -------------------------------
 
-Updated on 23 November 2020 at 14:03:43 CET
+Updated on  2 December 2020 at 14:48:55 CET

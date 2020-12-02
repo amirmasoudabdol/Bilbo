@@ -7,7 +7,7 @@ summary: Significant-based Selection Strategy.
 # sam::SignificantSelection
 
 
-
+**Module:** **[Selection Strategies](/doxygen/Modules/group___selection_strategies/)**
 
 Significant-based Selection Strategy.  [More...](#detailed-description)
 
@@ -218,4 +218,4 @@ Parameters params;
 
 -------------------------------
 
-Updated on 23 November 2020 at 14:03:44 CET
+Updated on  2 December 2020 at 14:48:55 CET

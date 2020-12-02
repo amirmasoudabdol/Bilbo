@@ -172,7 +172,7 @@ Placeholder for hacking strategy name.
 ### variable num
 
 ```cpp
-Parameter< int > num {3};
+Parameter< int > num;
 ```
 
 Number of new observations to be added to each group. 
@@ -242,7 +242,7 @@ Indicates which groups are going to be targets.
 ### variable ratio
 
 ```cpp
-Parameter< double > ratio {0};
+Parameter< double > ratio;
 ```
 
 If not 0., `ratio` * n_obs will be added to the experiment. 
@@ -452,4 +452,4 @@ HackingStage stage {HackingStage::PostProcessing};
 
 -------------------------------
 
-Updated on 23 November 2020 at 14:03:44 CET
+Updated on  2 December 2020 at 14:48:54 CET

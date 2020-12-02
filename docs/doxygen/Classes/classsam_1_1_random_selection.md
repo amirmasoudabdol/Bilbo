@@ -7,7 +7,7 @@ summary: Random Selection Strategy.
 # sam::RandomSelection
 
 
-
+**Module:** **[Selection Strategies](/doxygen/Modules/group___selection_strategies/)**
 
 Random Selection Strategy.  [More...](#detailed-description)
 
@@ -85,7 +85,7 @@ Random Selection Strategy.
 
 
 
-In this method, [Journal](/doxygen/Classes/classsam_1_1_journal/) does not check any criteria for accepting or rejecting a submission. Each submission has 50% chance of being accepted.
+In this method, [Journal](/doxygen/Classes/classsam_1_1_journal/) does not check any criteria for accepting or rejecting a submission. Each submission has 50% chance of being accepted or not.
 
 
 
@@ -219,4 +219,4 @@ Parameters params;
 
 -------------------------------
 
-Updated on 23 November 2020 at 14:03:43 CET
+Updated on  2 December 2020 at 14:48:55 CET

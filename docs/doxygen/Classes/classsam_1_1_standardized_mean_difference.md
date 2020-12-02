@@ -7,7 +7,7 @@ title: sam::StandardizedMeanDifference
 # sam::StandardizedMeanDifference
 
 
-
+**Module:** **[Effect Strategies](/doxygen/Modules/group___effect_strategies/)**
 
 
 
@@ -203,4 +203,4 @@ virtual void computeEffects(
 
 -------------------------------
 
-Updated on 23 November 2020 at 14:03:44 CET
+Updated on  2 December 2020 at 14:48:54 CET

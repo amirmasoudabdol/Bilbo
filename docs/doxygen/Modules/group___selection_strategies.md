@@ -16,6 +16,14 @@ List of available Selection Strategies.  [More...](#detailed-description)
 
 
 
+## Classes
+
+|                | Name           |
+| -------------- | -------------- |
+| class | **[sam::PolicyBasedSelection](/doxygen/Classes/classsam_1_1_policy_based_selection/)** <br>Policy-based Selection Strategy.  |
+| class | **[sam::SignificantSelection](/doxygen/Classes/classsam_1_1_significant_selection/)** <br>Significant-based Selection Strategy.  |
+| class | **[sam::RandomSelection](/doxygen/Classes/classsam_1_1_random_selection/)** <br>Random Selection Strategy.  |
+| class | **[sam::FreeSelection](/doxygen/Classes/classsam_1_1_free_selection/)** <br>[FreeSelection]() doesn't pose any restriction on the submission and all submissions will be accepted.  |
 
 
 
@@ -64,4 +72,4 @@ Description to come!
 
 -------------------------------
 
-Updated on 23 November 2020 at 14:03:44 CET
+Updated on  2 December 2020 at 14:48:55 CET

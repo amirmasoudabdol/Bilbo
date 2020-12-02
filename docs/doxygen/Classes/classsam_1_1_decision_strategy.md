@@ -33,7 +33,7 @@ Inherited by [sam::DefaultDecisionMaker](/doxygen/Classes/classsam_1_1_default_d
 | virtual  | **[~DecisionStrategy](/doxygen/Classes/classsam_1_1_decision_strategy/#function-~decisionstrategy)**() =0  |
 |  | **[DecisionStrategy](/doxygen/Classes/classsam_1_1_decision_strategy/#function-decisionstrategy)**()  |
 | virtual bool | **[willStartHacking](/doxygen/Classes/classsam_1_1_decision_strategy/#function-willstarthacking)**() <br>Indicates whether the researcher will start going to the hacking procedure. The default here is to not go for hacking if we already have one candidate; but this can be overridden in different decision strategies.  |
-| virtual bool | **[willContinueHacking](/doxygen/Classes/classsam_1_1_decision_strategy/#function-willcontinuehacking)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment, [PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/) & pchain) <br>This will be used by `letTheHackBegin` and uses the decision policy to decide whether the next hacking strategy is going to be executed or not!  |
+| virtual bool | **[willContinueHacking](/doxygen/Classes/classsam_1_1_decision_strategy/#function-willcontinuehacking)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment, [PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/) & pchain) <br>This will be used by `letTheHackBegin` and uses the decision policy to decide whether the next hacking strategy is going to be executed !  |
 | bool | **[willBeSubmitting](/doxygen/Classes/classsam_1_1_decision_strategy/#function-willbesubmitting)**(const std::optional< [Submission](/doxygen/Classes/classsam_1_1_submission/) > & sub, [PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/) & pchain) <br>[Submission]().  |
 | virtual bool | **[willContinueReplicating](/doxygen/Classes/classsam_1_1_decision_strategy/#function-willcontinuereplicating)**([PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/) & pchain)  |
 | void | **[clear](/doxygen/Classes/classsam_1_1_decision_strategy/#function-clear)**()  |
@@ -198,7 +198,7 @@ inline virtual bool willContinueHacking(
 )
 ```
 
-This will be used by `letTheHackBegin` and uses the decision policy to decide whether the next hacking strategy is going to be executed or not! 
+This will be used by `letTheHackBegin` and uses the decision policy to decide whether the next hacking strategy is going to be executed ! 
 
 **Parameters**: 
 
@@ -1104,4 +1104,4 @@ PolicyChain stashing_policy;
 
 -------------------------------
 
-Updated on 23 November 2020 at 14:03:43 CET
+Updated on  2 December 2020 at 14:48:53 CET

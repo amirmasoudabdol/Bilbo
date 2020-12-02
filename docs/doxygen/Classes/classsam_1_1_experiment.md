@@ -47,7 +47,7 @@ summary: Experiment class declaration.
 | void | **[setDataStrategy](/doxygen/Classes/classsam_1_1_experiment/#function-setdatastrategy)**(std::shared_ptr< [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) > & ds)  |
 | void | **[setEffectSizeEstimator](/doxygen/Classes/classsam_1_1_experiment/#function-seteffectsizeestimator)**(std::shared_ptr< [EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strategy/) > & es)  |
 | void | **[initExperiment](/doxygen/Classes/classsam_1_1_experiment/#function-initexperiment)**()  |
-| void | **[generateData](/doxygen/Classes/classsam_1_1_experiment/#function-generatedata)**() <br>Use the `data_strategy` to generate data.  |
+| void | **[generateData](/doxygen/Classes/classsam_1_1_experiment/#function-generatedata)**() <br>Use the `data_strategy` to generate the data.  |
 | void | **[preProcessData](/doxygen/Classes/classsam_1_1_experiment/#function-preprocessdata)**()  |
 | void | **[calculateStatistics](/doxygen/Classes/classsam_1_1_experiment/#function-calculatestatistics)**()  |
 | void | **[calculateEffects](/doxygen/Classes/classsam_1_1_experiment/#function-calculateeffects)**()  |
@@ -752,7 +752,7 @@ Helper function for the [Researcher](/doxygen/Classes/classsam_1_1_researcher/) 
 void generateData()
 ```
 
-Use the `data_strategy` to generate data. 
+Use the `data_strategy` to generate the data. 
 
 
 
@@ -1344,4 +1344,4 @@ std::vector< Group > groups_;
 
 -------------------------------
 
-Updated on 23 November 2020 at 14:03:43 CET
+Updated on  2 December 2020 at 14:48:53 CET

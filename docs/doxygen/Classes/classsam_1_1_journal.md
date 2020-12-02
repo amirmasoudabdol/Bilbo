@@ -378,7 +378,7 @@ Review the [Submission]() by calling `SelectionStrategy::review()`.
 
 
 
-**Return**: A boolean indicating whether the [Submission](/doxygen/Classes/classsam_1_1_submission/) should be accpeted. 
+**Return**: A boolean indicating whether the [Submission](/doxygen/Classes/classsam_1_1_submission/) should be accpeted or not. 
 
 
 
@@ -1919,4 +1919,4 @@ Parameters params;
 
 -------------------------------
 
-Updated on 23 November 2020 at 14:03:43 CET
+Updated on  2 December 2020 at 14:48:54 CET
