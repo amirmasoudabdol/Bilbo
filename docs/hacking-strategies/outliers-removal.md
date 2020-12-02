@@ -4,7 +4,7 @@ Removing outliers is an important degree of freedom in the list degrees of freed
 
 Unfortunately, most researchers are not aware of consequences of these methods, and as shown by [cite, cite], outliers removal methods are being applied recklessly without taking their influences into the consideration and only to achieve significance level, or removing “unwanted” observations [cite].
 
-As mentioned, there is a range of methods and approaches available to remove outliers from an Experiment, each having their own strength and weakness [cite, cite, cite]. In its simplest form, outliers removal is done by calculating the relative distances of observations from the sample mean, $d_i = \frac{x_i - \bar{x}}{\sigma^2}$, and deciding whether to call an observation an outlier or not based on a pre-selected threshold, *k*. In this case, items further than *k* are considered outliers.
+As mentioned, there is a range of methods and approaches available to remove outliers from an Experiment, each having their own strength and weakness [cite, cite, cite]. In its simplest form, outliers removal is done by calculating the relative distances of observations from the sample mean, $d_i = \frac{x_i - \bar{x}}{\sigma^2}$, and deciding whether to call an observation an outlier based on a pre-selected threshold, *k*. In this case, items further than *k* are considered outliers.
 
 ![<b>Figure 1.</b> Outliers Removal Algorithm](/hacking-strategies/figures/outlier-removal.png)
 

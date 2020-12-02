@@ -248,7 +248,7 @@ Applies the hacking method on the [Experiment](/doxygen/Classes/classsam_1_1_exp
 
 
 
-Checking whether the outcome is significant or not, if not, we check whether it's close enough to be a hacked or not, if so, we either set the pvalue to `alpha` or the difference between pvalue and threshorld
+Checking whether the outcome is significant, if not, we check whether it's close enough to be a hacked, if so, we either set the pvalue to `alpha` or the difference between pvalue and threshorld
 
 
 

@@ -4,7 +4,7 @@
 
 ### Probability of Being a Hacker
 
-The *probability of being a hacker* is a value between 0 and 1 which determines whether Researcher is executing the hacking workflow or not. Besides a fixed value, we are able to define a distribution to be used for each Researcher, for instance:
+The *probability of being a hacker* is a value between 0 and 1 which determines whether Researcher is executing the hacking workflow. Besides a fixed value, we are able to define a distribution to be used for each Researcher, for instance:
 
 ```json
 "probability_of_being_a_hacker": {
@@ -17,7 +17,7 @@ In this case, for each new Researcher, SAM draws a value from the given distribu
 
 ### Probability of Committing to a Hack
 
-The *probability of committing to a hack* is a value between 0 and 1 which determines whether Researcher applies a hacking strategy on a *given* Experiment, or not. Like before, while we can use a fixed value or a distribution for this parameters.
+The *probability of committing to a hack* is a value between 0 and 1 which determines whether Researcher applies a hacking strategy on a *given* Experiment,. Like before, while we can use a fixed value or a distribution for this parameters.
 
 #### Hacking Commitment Strategy
 

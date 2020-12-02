@@ -16,10 +16,10 @@ Figure 1 highlights 4 main **Selection → Decision** sequences of research and 
 2. **While Hacking** sequences
 	1. Performing a *selection* on an altered experiment
 		2. **Stashing Step:** *Selecting* certain outcomes for building a database of alternated outcomes
-	2. Evaluating the selected outcome (if any) to make a *decision* on whether to continue with the rest of hacking strategies or not.
+	2. Evaluating the selected outcome (if any) to make a *decision* on whether to continue with the rest of hacking strategies.
 3. **After Hacking** sequences
 	1. Performing a *selection* on the database of altered outcomes (collected during hacking workflow), **stashed results**.
-	2. Evaluating the selected outcome — from the database of altered outcomes — to make a *decision* on whether to replicate the study or not.
+	2. Evaluating the selected outcome — from the database of altered outcomes — to make a *decision* on whether to replicate the study.
 3. **Before Submission** sequences
 	4. Evaluating the final submission, S<sub>F</sub>, to make *decision* on whether to submit the final submission to Journal.
 
@@ -87,7 +87,7 @@ Any combinations of listed functions and parameters can be used to create *a* po
 A policy chain is a list of queries applied one after another on an experiment. They are the main mean of constructing larger and more complicated queries. For example, `[“sig”, “min(pvalue)”]` queries an experiment for a list of significant outcomes and among them returns the one with minimum *p*-value. As demonstrated, policies will be applied one after another in a hierarchal order; in fact, they should be seen as AND statements, `"sig" AND "min(pvalue)"`, that are going to be applied on Experiments.
 
 !!! important
-    **Decision**(s) are defined in term of policy chains. In fact, decisions are set of queries assessing the truth of their policies. For instance, `will_start_hacking_decision_policies` is helping a researcher to decide on whether to start the hacking procedure or not. 
+    **Decision**(s) are defined in term of policy chains. In fact, decisions are set of queries assessing the truth of their policies. For instance, `will_start_hacking_decision_policies` is helping a researcher to decide on whether to start the hacking procedure. 
 
 ### Policy Chain Set, PCS
 

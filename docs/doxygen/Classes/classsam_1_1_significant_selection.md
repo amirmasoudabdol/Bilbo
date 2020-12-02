@@ -151,7 +151,7 @@ virtual bool review(
 
 
 
-**Return**: a boolean indicating whether the [Submission](/doxygen/Classes/classsam_1_1_submission/) is accepted or not. 
+**Return**: a boolean indicating whether the [Submission](/doxygen/Classes/classsam_1_1_submission/) is accepted. 
 
 
 
@@ -171,7 +171,7 @@ virtual bool review(
 
 
 
-Check if `p-value` of the [Submission](/doxygen/Classes/classsam_1_1_submission/) is less than the specified $\alpha$. If true, it will accept the submission, if not, a random number decide wheather the submission is going to be accepted or not. The drawn random number, $r$ will be compared to `pub_bias` of the journal.
+Check if `p-value` of the [Submission](/doxygen/Classes/classsam_1_1_submission/) is less than the specified $\alpha$. If true, it will accept the submission, if not, a random number decide wheather the submission is going to be accepted. The drawn random number, $r$ will be compared to `pub_bias` of the journal.
 
 
 

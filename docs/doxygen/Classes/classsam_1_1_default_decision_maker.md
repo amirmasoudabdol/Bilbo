@@ -37,7 +37,7 @@ Inherits from [sam::DecisionStrategy](/doxygen/Classes/classsam_1_1_decision_str
 |  | **[DefaultDecisionMaker](/doxygen/Classes/classsam_1_1_default_decision_maker/#function-defaultdecisionmaker)**(const [Parameters](/doxygen/Classes/structsam_1_1_default_decision_maker_1_1_parameters/) & p)  |
 | virtual [DecisionStrategy](/doxygen/Classes/classsam_1_1_decision_strategy/) & | **[selectOutcomeFromExperiment](/doxygen/Classes/classsam_1_1_default_decision_maker/#function-selectoutcomefromexperiment)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment, [PolicyChainSet](/doxygen/Classes/structsam_1_1_policy_chain_set/) & pchain_set) override <br>Implementation of decision-making procedure.  |
 | virtual [DecisionStrategy](/doxygen/Classes/classsam_1_1_decision_strategy/) & | **[selectOutcomeFromPool](/doxygen/Classes/classsam_1_1_default_decision_maker/#function-selectoutcomefrompool)**(SubmissionPool & spool, [PolicyChainSet](/doxygen/Classes/structsam_1_1_policy_chain_set/) & pchain_set) override  |
-| virtual bool | **[willStartHacking](/doxygen/Classes/classsam_1_1_default_decision_maker/#function-willstarthacking)**() override <br>Decides whether we are going to start hacking or not. In this canse, we only check if the `current_submission` complies with `will_start_hacking_decision_policies` roles; if yes, we will start hacking if no, then we will not continue to the hacking procedure.  |
+| virtual bool | **[willStartHacking](/doxygen/Classes/classsam_1_1_default_decision_maker/#function-willstarthacking)**() override <br>Decides whether we are going to start hacking. In this canse, we only check if the `current_submission` complies with `will_start_hacking_decision_policies` roles; if yes, we will start hacking if no, then we will not continue to the hacking procedure.  |
 | virtual bool | **[willContinueHacking](/doxygen/Classes/classsam_1_1_default_decision_maker/#function-willcontinuehacking)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment, [PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/) & pchain) override  |
 | virtual bool | **[willContinueReplicating](/doxygen/Classes/classsam_1_1_default_decision_maker/#function-willcontinuereplicating)**([PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/) & pchain) override  |
 
@@ -234,7 +234,7 @@ virtual DecisionStrategy & selectOutcomeFromPool(
 virtual bool willStartHacking() override
 ```
 
-Decides whether we are going to start hacking or not. In this canse, we only check if the `current_submission` complies with `will_start_hacking_decision_policies` roles; if yes, we will start hacking if no, then we will not continue to the hacking procedure. 
+Decides whether we are going to start hacking. In this canse, we only check if the `current_submission` complies with `will_start_hacking_decision_policies` roles; if yes, we will start hacking if no, then we will not continue to the hacking procedure. 
 
 
 

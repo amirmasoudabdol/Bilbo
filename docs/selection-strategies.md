@@ -17,7 +17,7 @@ With free selection method, Journal does not impose any restriction during the r
 
 ## Random Selection
 
-Random selection method is the simplest form of selection where Journal flips a coin to decide whether a submission is going to be accepted or not. Using **p = 0** will lead to a Journal that does not accept anything, and **p = 1** defines a Journal that accepts everything.
+Random selection method is the simplest form of selection where Journal flips a coin to decide whether a submission is going to be accepted. Using **p = 0** will lead to a Journal that does not accept anything, and **p = 1** defines a Journal that accepts everything.
 
 !!! journal "Random Selection"
 	```json

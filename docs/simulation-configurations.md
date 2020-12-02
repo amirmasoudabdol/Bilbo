@@ -28,7 +28,7 @@ The list below describes the type and functoin of each parameters:
 - **`n_sims`**, *`int`*, indicates the total number of simulations.
 - **`master_seed`**, *`int` / `"random"`*, indicates the intial seed of the RNG engine. If set to "random", a random number will be used at the start of the execution.
 - **`log_level`**, *`string`*, indicates the [logging level](https://www.tutorialspoint.com/log4j/log4j_logging_levels.htm) of the simulation
-- **`progress`**, *`boolean`*, indicates whether a progress bar should be displayed or not
+- **`progress`**, *`boolean`*, indicates whether a progress bar should be displayed
 - **`output_path`**, *`string`*, indicates a path to be used for output files
 - **`output_prefix`**, *`string`*, indicates a prefix to be added to *all* output filenames
 - **`update_config`**, *`boolean`*, indicates whether the config file should be updated after the simulation. **Note:** This might overwrite `master_seed` or `output_path`

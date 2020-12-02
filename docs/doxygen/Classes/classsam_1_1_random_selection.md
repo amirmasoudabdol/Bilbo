@@ -85,7 +85,7 @@ Random Selection Strategy.
 
 
 
-In this method, [Journal](/doxygen/Classes/classsam_1_1_journal/) does not check any criteria for accepting or rejecting a submission. Each submission has 50% chance of being accepted or not.
+In this method, [Journal](/doxygen/Classes/classsam_1_1_journal/) does not check any criteria for accepting or rejecting a submission. Each submission has 50% chance of being accepted.
 
 
 
@@ -152,7 +152,7 @@ virtual bool review(
 
 
 
-**Return**: a boolean indicating whether the [Submission](/doxygen/Classes/classsam_1_1_submission/) is accpeted or not. 
+**Return**: a boolean indicating whether the [Submission](/doxygen/Classes/classsam_1_1_submission/) is accpeted. 
 
 
 
