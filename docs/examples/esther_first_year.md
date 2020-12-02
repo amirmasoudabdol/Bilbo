@@ -37,11 +37,11 @@ Starting from the top, the simulation study concerns itself with two main *Exper
 
 In terms of QRPs, two main methods have been utilized, [Selective Reporting](/hacking-strategies/selective-reporting.md), and [Optional Stopping](/hacking-strategies/optional-stopping.md). While the optional stopping has been applied on both study designs (at most 3 times, adding ⅓ ⨉ N new observations), the selective reporting can only be applied on the design with 5 conditions (selecting the outcome with minimum *p*-value). 
 
-Finally, after simulating *K* stduiesstudies, Maassen applied both meta-analytic methods, and publication bias estimators, and reported their performance.
+Finally, after simulating *K* studies, Maassen applied both meta-analytic methods, and publication bias estimators, and reported their performance.
 
 ## SAM's Configuration
 
-As discussed in other examples, visualizing the simulation flow helps us translate our design to SAM's configuration, Figure 2. While the right-side of the flowchart shows the main decision workflow, the left-side mainly describes the process of applying different QRPs based on specific simulation configurations.
+As discussed in other examples, visualizing the simulation flow helps us translate our design to SAM's configuration, Figure 2. While the right-hand side of the flowchart shows the main decision workflow, the left-side mainly describes the process of applying different QRPs based on specific simulation configurations.
 
 ![</b>Figure 2.</b> Maassen's Simulation Design](/examples/figures/Esther_FYP/Esthers_Simulation.png)
 
@@ -85,7 +85,7 @@ In cases where the Researcher is equipped with optional stopping, she will decid
 
 #### Hacking Strategy
 
-We can configure our hacking strategy as follow. Notice the repetition of [decision and selection policies](/decision-strategies.md#decision-selection-routine) at highlighted lines. This configuration mimics the behavior of
+We can configure our hacking strategy as follows. Notice the repetition of [decision and selection policies](/decision-strategies.md#decision-selection-routine) at highlighted lines. This configuration mimics the behavior of
 "peeking at minimum *p*-value after each step". After addition of ⅓ ⨉ N, the Researcher selects the outcome with
 minimum *p*-value, and if the _selected outcome_ is significant, she stops and reports the outcome, if not, she continues adding another batch of observations, and repeat this process at most 3 times.
 

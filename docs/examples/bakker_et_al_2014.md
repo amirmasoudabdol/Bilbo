@@ -10,7 +10,7 @@ This report discusses the process of partially reproducing the simulation study 
 
 The original study is testing the effects of removing outliers in two main scenarios:
 
-- **Non-Subjective Outliers Removal**, in which the effect of removing outliers with |*Z* > *k*| — **for a fixed *k*** — is being measured.
+- **Non-Subjective Outliers Removal**, in which the effect of removing outliers with |*Z*| > *k* — **for a fixed *k*** — is being measured.
 - **Subjective Outliers Removal**, in which the effect of removing outliers with a variable *k* ∈ {3, 2.5, 2} is being measured.
 
 Figure <a href="#fig:strategies_flowchart" data-reference-type="ref" data-reference="fig:strategies_flowchart">1</a> shows the flow of two main simulation scenarios. As discussed, by Bakker et al, 2014, the subjective Type I error is calculated based on results of the non-subjective simulation:

@@ -1,6 +1,6 @@
 # Research Workflow
 
-After [introducing](flow.md) general steps of conducting a research, in this section, we will get into the details of Decision Strategy and Research Workflow.
+After [introducing](flow.md) general steps of conducting research, in this section, we will get into the details of Decision Strategy and Research Workflow.
 
 Figure 1 combines all the previously discussed processes and flowcharts of the [Execution Flow](flow.md), and gives an overview of the entire research workflow. The diagram can be separated into two main processes, *Main Research Line* and *Hacking Workflow*. Additionally, there are several *Selection→Decision* sequences spread throughout the flowchart (highlighted in red) that helps Researcher to navigate between stages, and make certain decisions.
 
@@ -20,7 +20,7 @@ As discussed in the [Introduction](/introduction.md) section, a research starts 
 When Experiment is fully initialized, Researcher is able to asses the quality of results, and select her preferred outcome among all available outcome variables across all conditions and dependent variables. This is beingdone during the first selection stage, **Initial Selection**. At this stage, Researcher can query all available outcomes using specific set of rules. For example, by using `["sig", "min(pvalue)"]` [Policy](/decision-strategies.md#policies), she will seek an outcome with minimum *p*-value between those that are significant.
 
 
-Despite the success of failure of the *Initial Selection*, Researcher decides on whether to embark on a journy of exploring QPRs or not. This is being done at the **Will be Hacking Decision** stage, where Researcher uses a [chain of policies](/decision-strategies.md#policies#policy-chains) to determine her next move. For instance, if she is looking for an outcome with positive effect (ie., `["effect > 0"]`) and the previously selected outcome does not have a positive effect, researcher might opt-in for applying some hacking strategies. 
+Despite the success of failure of the *Initial Selection*, Researcher decides on whether to embark on a journy of exploring QPRs or not. This is done at the **Will be Hacking Decision** stage, where Researcher uses a [chain of policies](/decision-strategies.md#policies#policy-chains) to determine her next move. For instance, if she is looking for an outcome with positive effect (ie., `["effect > 0"]`) and the previously selected outcome does not have a positive effect, researcher might opt-in for applying some hacking strategies. 
 
 
 ## Hacking Workflow

@@ -88,7 +88,7 @@ The `prevalence` and `defensibility` can be adjusted based on our preferences an
 
 ## Hacking Stages
 
-Not all QRPs can be applied during every stage of conducting a research. For instance, its preferred to apply the Questionable Rounding method after exploring other methods, and just before applying the Submission to Journal. In addition, some strategies can be applied in different stages, for instance, Outliers Removal can be applied both during pre- and post-processing stages. 
+Not all QRPs can be applied during every stage of conducting research. For instance, its preferred to apply the Questionable Rounding method after exploring other methods, and just before applying the Submission to Journal. In addition, some strategies can be applied in different stages, for instance, Outliers Removal can be applied both during pre- and post-processing stages. 
 
 The `stage` parameter controls this aspect of QRPs. While we set a logical default values for each method, we can enforce the execution of a method out of its usual stage. Here we list all available stages, as well as methods that are usually being applied during this stage:
 

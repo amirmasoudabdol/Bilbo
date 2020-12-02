@@ -9,7 +9,7 @@
 ## Meta-Analytic Outputs
 
 Collecting meta-analytic outputs is the main use-case of adding meta-analysis methods to Jouranl's configuration.
-This is being done by adding each method to a list of `meta_analysis_metrics` under `journal_parameters` section. Like before, we can add any method-specific parameters to the list. In the case where we prefer using one method with two sets of different parameters, we can simply add a new method with the modified parameters.
+This is done by adding each method to a list of `meta_analysis_metrics` under `journal_parameters` section. Like before, we can add any method-specific parameters to the list. In the case where we prefer using one method with two sets of different parameters, we can simply add a new method with the modified parameters.
 
 After each simulation cycle, when the list of [accepted publications](/journal-configurations.md) is ready, Journal traveses through the list of methods, and computes their outcomes. Before restarting the simulation — and getting ready for a new set of submissions to arrive — Journal saves all its publications, and their corresponding meta-analyses to different CSV files for further analysis by the user. [Simulation configurations](/simulation-configurations.md) section lists all the different available output parameters.
 
