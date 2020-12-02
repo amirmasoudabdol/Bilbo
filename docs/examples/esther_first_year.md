@@ -21,14 +21,14 @@ Beyond fixed- and random-effects estimators, the list of publication bias tests 
 
 Maassen has included a range of parameters in her study. The simulation study has been conducted on all combination of parameters from the list below.
 
-- n ∈ {2, 5}
-- P<sub>b</sub> ∈ {0., 0.05, 0.5, 1}
+- *n* ∈ {2, 5}
+- *P<sub>b</sub>* ∈ {0., 0.05, 0.5, 1}
 - *K* ∈ {8, 24, 72}
 - *N*
     - 75% Small ∈ [6, 21]
     - 25% Large ∈ [22, 300]
-- μ ∈ {0, 0.147, 0.3835, 0.699375}
-- ɑ ∈ 0.05
+- *μ* ∈ {0, 0.147, 0.3835, 0.699375}
+- *ɑ* ∈ 0.05
 - QRPs
     - None
     - Selective Reporting
@@ -89,9 +89,7 @@ In cases where the Researcher is equipped with optional stopping, she will decid
 
 #### Hacking Strategy
 
-We can configure our hacking strategy as follows. Notice the repetition of [decision and selection policies](/decision-strategies.md#decision-selection-routine) at highlighted lines. This configuration mimics the behavior of
-"peeking at minimum *p*-value after each step". After addition of ⅓ ⨉ N, the Researcher selects the outcome with
-minimum *p*-value, and if the _selected outcome_ is significant, she stops and reports the outcome, if not, she continues adding another batch of observations, and repeat this process at most 3 times.
+We can configure our hacking strategy as follows. Notice the repetition of [decision and selection policies](/decision-strategies.md#decision-selection-routine) at highlighted lines. This configuration mimics the behavior of "peeking at minimum *p*-value after each step". After addition of ⅓ ⨉ N, the Researcher selects the outcome with minimum *p*-value, and if the _selected outcome_ is significant, she stops and reports the outcome, if not, she continues adding another batch of observations, and repeat this process at most 3 times.
 
 !!! hackingstrategy "Configuration: _Hacking Strategy_"
     ```json linenums="1" hl_lines="16 17 30 31 44 45"
@@ -155,7 +153,7 @@ The combination of *Decision Strategy* and *Hacking Strategy* configurations wil
         {
           "experiment_parameters": {
             "n_reps": 1,
-            "n_conditions": nConds,
+            "n_conditions": n,
             "n_dep_vars": 1,
             "n_obs": {
               "dist": "piecewise_constant_distribution",
@@ -178,7 +176,7 @@ The combination of *Decision Strategy* and *Hacking Strategy* configurations wil
         {
           "experiment_parameters": {
             "n_reps": 1,
-            "n_conditions": nConds,
+            "n_conditions": n,
             "n_dep_vars": 1,
             "n_obs": {
               "dist": "piecewise_constant_distribution",
@@ -240,7 +238,7 @@ In the case of Maassen, we need to induce different level of publication bias on
         "max_pubs": K,
         "selection_strategy": {
           "name": "SignificantSelection",
-          "pub_bias": p,
+          "pub_bias": Pb,
           "alpha": ɑ,
           "side": 0,
         },
@@ -280,22 +278,10 @@ In the case of Maassen, we need to induce different level of publication bias on
 ## Extended Simulation
 
 
-In the case of Maassen's simulation, we decided to extend the simulation by covering full range of publication bias, *p*, and true effect size, *μ*. This extension does not change our main body of configuration. We only need to generate more configuration files with different values of *p*, and *μ*, see [SAMoo](/samoo.md).
+In the case of Maassen's simulation, we decided to extend the simulation by covering full range of publication bias, *P<sub>b</sub>*, and true effect size, *μ*. This extension does not change our main body of configuration. We only need to generate more configuration files with different values of *P<sub>b</sub>*, and *μ*, see [SAMoo](/samoo.md).
 
-
-- n ∈ {2, 5}
-- ***P<sub>b</sub>* ∈ [0., 1.]**
-- *K* ∈ {8, 24, 72}
-- *N*
-    - 75% Small ∈ [6, 21]
-    - 25% Large ∈ [22, 300]
 - **μ ∈ [0, 1]**
-- ɑ ∈ 0.05
-- QRPs
-    - None
-    - Selective Reporting
-    - Selective Reporting
-    - Optional Stopping
+- **P<sub>b</sub> ∈ [0., 1.]**
 
 Figure 3, 4, 5, 6 illustrate our results in the form of contour plots. The x-axis is the range of true effect size, and y-axis is publication bias level, finally the plotted contour represent the level of bias, or power of our tests.
 
