@@ -21,15 +21,19 @@ Beyond fixed- and random-effects estimators, the list of publication bias tests 
 
 Maassen has included a range of parameters in her study. The simulation study has been conducted on all combination of parameters from the list below.
 
-| **Parameter**          | **Values**                                                             |
-|:-----------------------|:-----------------------------------------------------------------------|
-| nConds                 | {2, 5}                                                                 |
-| Publication Bias       | {0., 0.05, 0.5, 1}                                                     |
-| Max. Publications, *K* | {8, 24, 72}                                                            |
-| Sample Size, *N*       | 75% Small<br>25% Large                                                 |
-| μ                      | {0, 0.147, 0.3835, 0.699375}                                           |
-| ɑ of T Test            | 0.05                                                                   |
-| QRPs                   | None<br>Selective Reporting<br>Selective Reporting + Optional Stopping |
+- n ∈ {2, 5}
+- P<sub>b</sub> ∈ {0., 0.05, 0.5, 1}
+- *K* ∈ {8, 24, 72}
+- *N*
+    - 75% Small ∈ [6, 21]
+    - 25% Large ∈ [22, 300]
+- μ ∈ {0, 0.147, 0.3835, 0.699375}
+- ɑ ∈ 0.05
+- QRPs
+    - None
+    - Selective Reporting
+    - Selective Reporting
+    - Optional Stopping
 
 Starting from the top, the simulation study concerns itself with two main *Experiment Setup*. One with 2, and another with 5 conditions. The sample size, *N*, of each study is drawn from a piecewise linear distribution where 75% of samples are from [6, 21], and the rest are spreading uniformly between 22 and 300. In addition, true means, *μ*, of treatment conditions varies between 4 pre-calculated effect size representing studies with small, medium and large power.
 
@@ -154,9 +158,9 @@ The combination of *Decision Strategy* and *Hacking Strategy* configurations wil
             "n_conditions": nConds,
             "n_dep_vars": 1,
             "n_obs": {
-              "dist": "piecewise_linear_distribution",
-              "intervals": [0, 3, 5.9, 6, 20, 24, 25, 30, 40, 50, 100, 200, 300],
-              "densities": [0, 0, 0, 1, 1, 1, 0.75, 0.25, 0.1, 0.1, 0.05, 0.05, 0.05]
+              "dist": "piecewise_constant_distribution",
+              "intervals": [6, 24, 300],
+              "densities": [0.75,  0.25]
             },
             "data_strategy": {
               "name": "LinearModel",
@@ -177,9 +181,9 @@ The combination of *Decision Strategy* and *Hacking Strategy* configurations wil
             "n_conditions": nConds,
             "n_dep_vars": 1,
             "n_obs": {
-              "dist": "piecewise_linear_distribution",
-              "intervals": [0, 3, 5.9, 6, 20, 24, 25, 30, 40, 50, 100, 200, 300],
-              "densities": [0, 0, 0, 1, 1, 1, 0.75, 0.25, 0.1, 0.1, 0.05, 0.05, 0.05]
+              "dist": "piecewise_constant_distribution",
+              "intervals": [6, 24, 300],
+              "densities": [0.75,  0.25]
             },
             "data_strategy": {
               "name": "LinearModel",
@@ -279,18 +283,23 @@ In the case of Maassen, we need to induce different level of publication bias on
 In the case of Maassen's simulation, we decided to extend the simulation by covering full range of publication bias, *p*, and true effect size, *μ*. This extension does not change our main body of configuration. We only need to generate more configuration files with different values of *p*, and *μ*, see [SAMoo](/samoo.md).
 
 
-| Parameter              | Values                                                                 |
-|:-----------------------|:-----------------------------------------------------------------------|
-| nConds                 | {2, 5}                                                                 |
-| Publication Bias       | p ∈ [0, 1]                                                           |
-| Max. Publications, *K* | {8, 24, 72}                                                            |
-| Sample Size, *N*       | 75% Small<br>25% Large                                                 |
-| μ                      | μ ∈ [0, 1]                                                             |
-| ɑ                      | {0.05, 0.005, 0.0005}                                                  |
-| QRPs                   | None<br>Selective Reporting<br>Selective Reporting + Optional Stopping |
-
+- n ∈ {2, 5}
+- ***P<sub>b</sub>* ∈ [0., 1.]**
+- *K* ∈ {8, 24, 72}
+- *N*
+    - 75% Small ∈ [6, 21]
+    - 25% Large ∈ [22, 300]
+- **μ ∈ [0, 1]**
+- ɑ ∈ 0.05
+- QRPs
+    - None
+    - Selective Reporting
+    - Selective Reporting
+    - Optional Stopping
 
 Figure 3, 4, 5, 6 illustrate our results in the form of contour plots. The x-axis is the range of true effect size, and y-axis is publication bias level, finally the plotted contour represent the level of bias, or power of our tests.
+
+- [ ] TODO: Add description
 
 <figure>
   <picture>
@@ -301,6 +310,8 @@ Figure 3, 4, 5, 6 illustrate our results in the form of contour plots. The x-axi
   </picture> 
 </figure>
 
+- [ ] TODO: Add description
+
 <figure>
   <picture>
     <source 
@@ -309,6 +320,8 @@ Figure 3, 4, 5, 6 illustrate our results in the form of contour plots. The x-axi
   <img src="/examples/figures/Esther_FYP/Esther_FYP_ES_Bias_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 3.</b> ES Bias</figcaption>
   </picture> 
 </figure>
+
+- [ ] TODO: Add description
 
 <figure>
   <picture>
@@ -319,6 +332,8 @@ Figure 3, 4, 5, 6 illustrate our results in the form of contour plots. The x-axi
   </picture> 
 </figure>
 
+- [ ] TODO: Add description
+
 <figure>
   <picture>
     <source 
@@ -327,6 +342,8 @@ Figure 3, 4, 5, 6 illustrate our results in the form of contour plots. The x-axi
   <img src="/examples/figures/Esther_FYP/Esther_FYP_Eggers_Test_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 5.</b> Power of Egger's Test</figcaption>
   </picture> 
 </figure>
+
+- [ ] TODO: Add description
 
 <figure>
   <picture>
@@ -337,6 +354,8 @@ Figure 3, 4, 5, 6 illustrate our results in the form of contour plots. The x-axi
   </picture> 
 </figure>
 
+- [ ] TODO: Add description
+
 <figure>
   <picture>
     <source 
@@ -345,6 +364,8 @@ Figure 3, 4, 5, 6 illustrate our results in the form of contour plots. The x-axi
   <img src="/examples/figures/Esther_FYP/Esther_FYP_TES_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 7.</b> Power of Test of Excess of Significant Findings.</figcaption>
   </picture> 
 </figure>
+
+## Conclusion
 
 
 \bibliography

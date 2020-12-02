@@ -1,13 +1,13 @@
 # Execution Flow
 
-SAM simulates the process of producing scientific research through several subprocesses as depicted in Figure 1. Each rounded rectangle describes a process that is either performed entirely by one of the components or through a collaboration between different ones. This chapter describes each process in more details.
+SAM simulates the process of producing scientific research through several sub-processes as depicted in Figure 1. Each rounded rectangle describes a process that is either performed entirely by one of the components or through a collaboration between different ones. This chapter describes each process in more details.
 
 In this section, we expand each process to their sub-processes and describe the overall execution flow of a simulation.
 
 ![<b>Figure 1.</b> Overall Execution Flow of SAM](/figures/main-routine.png)
 
 !!! info
-	In the this and following sections, we will use flowchart digrams to visualize and express processes and algorithms. If you are not familiar with general syntax of flowcharts, please read the Wikipedia article on [Flowcharts](https://en.wikipedia.org/wiki/Flowchart#Building_blocks).
+	In the this and following sections, we will use flowchart diagrams to visualize and express processes and algorithms. If you are not familiar with general syntax of flowcharts, please read the Wikipedia article on [Flowcharts](https://en.wikipedia.org/wiki/Flowchart#Building_blocks).
 
 ## Initialization
 
