@@ -134,7 +134,8 @@ NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 
 
 
-**Note**: While this mostly works fine, there is one drawback that it cannot handle missing argument. The change is in nlohmann list and when released, I can use optional and this macro will handle everything just fine 
+!!! note "Note"
+    While this mostly works fine, there is one drawback that it cannot handle missing argument. The change is in nlohmann list and when released, I can use optional and this macro will handle everything just fine 
 
 
 
@@ -372,4 +373,4 @@ HackingStage stage {HackingStage::Reporting};
 
 -------------------------------
 
-Updated on  2 December 2020 at 14:48:54 CET
+Updated on  3 December 2020 at 12:37:29 CET

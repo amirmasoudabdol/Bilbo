@@ -96,7 +96,8 @@ Simulate data from Graded Response Model.
 
 
 
-**Note**: :
+!!! note "Note"
+    :
 
 * DVs in GRM are distinguished by their participant abilities to answer tests. Therefore, we'll have `ng_` number of `abilities`. This value is being used to, in each group, to initialize a normal distribution of `\theta ~ N(abilitis[i], 1)`.
 * $ \beta $
@@ -266,7 +267,8 @@ virtual std::vector< arma::Row< double > > genNewObservationsForAllGroups(
 
 
 
-**Note**: This routine uses the secondary random number stream to avoid conflicting with the main random engine.
+!!! note "Note"
+    This routine uses the secondary random number stream to avoid conflicting with the main random engine.
 
 
 
@@ -342,4 +344,4 @@ Generate `n_new_obs` new observations for `g` group.
 
 -------------------------------
 
-Updated on  2 December 2020 at 14:48:54 CET
+Updated on  3 December 2020 at 12:37:28 CET

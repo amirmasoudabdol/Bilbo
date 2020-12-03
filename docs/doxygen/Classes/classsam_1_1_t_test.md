@@ -408,7 +408,8 @@ static ResultType single_sample_t_test(
 
 
 
-**Note**: Obtained from [Boost Library Example](https://www.boost.org/doc/libs/1_69_0/libs/math/doc/html/math_toolkit/stat_tut/weg/st_eg/paired_st.html).
+!!! note "Note"
+    Obtained from [Boost Library Example](https://www.boost.org/doc/libs/1_69_0/libs/math/doc/html/math_toolkit/stat_tut/weg/st_eg/paired_st.html).
 
 
 
@@ -464,7 +465,8 @@ static ResultType two_samples_t_test_equal_sd(
 
 
 
-**Note**: Obtained from [Boost Library Example](https://www.boost.org/doc/libs/1_69_0/libs/math/doc/html/math_toolkit/stat_tut/weg/st_eg/paired_st.html).
+!!! note "Note"
+    Obtained from [Boost Library Example](https://www.boost.org/doc/libs/1_69_0/libs/math/doc/html/math_toolkit/stat_tut/weg/st_eg/paired_st.html).
 
 
 
@@ -520,7 +522,8 @@ static ResultType two_samples_t_test_unequal_sd(
 
 
 
-**Note**: Obtained from [Boost Library Example](https://www.boost.org/doc/libs/1_69_0/libs/math/doc/html/math_toolkit/stat_tut/weg/st_eg/paired_st.html).
+!!! note "Note"
+    Obtained from [Boost Library Example](https://www.boost.org/doc/libs/1_69_0/libs/math/doc/html/math_toolkit/stat_tut/weg/st_eg/paired_st.html).
 
 
 
@@ -582,4 +585,4 @@ Parameters params;
 
 -------------------------------
 
-Updated on  2 December 2020 at 14:48:55 CET
+Updated on  3 December 2020 at 12:37:29 CET

@@ -485,10 +485,10 @@ Determine whether the experiment satisfies any of the given policies.
 
 
 
-**Note**: 
+!!! note "Note"
 
-  * Currently this only uses `all_of` meaning that all policies need to be satisfied for the check to be passed.
-  * This is horrible, there are two methods, one gets the pointer and another one the ref. This is very confusing! 
+    * Currently this only uses `all_of` meaning that all policies need to be satisfied for the check to be passed.
+    * This is horrible, there are two methods, one gets the pointer and another one the ref. This is very confusing! 
 
 
 
@@ -528,10 +528,10 @@ inline std::optional< std::vector< Submission > > operator()(
 
 
 
-**Note**: 
+!!! note "Note"
 
-  * this is probably a better implementation but for now, I'll stay with the one above to get around the stopping condition implementation 
-  * I'm not sure if I need this one 
+    * this is probably a better implementation but for now, I'll stay with the one above to get around the stopping condition implementation 
+    * I'm not sure if I need this one 
 
 
 
@@ -739,4 +739,4 @@ std::vector< Policy > pchain;
 
 -------------------------------
 
-Updated on  2 December 2020 at 14:48:55 CET
+Updated on  3 December 2020 at 12:37:29 CET

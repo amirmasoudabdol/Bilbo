@@ -291,7 +291,8 @@ virtual bool willContinueHacking(
 
 
 
-**Note**: The important difference between this and `willBeSubmitting` is the fact that, the latter will check if **all** of the rules are passing.
+!!! note "Note"
+    The important difference between this and `willBeSubmitting` is the fact that, the latter will check if **all** of the rules are passing.
 
 
 
@@ -394,4 +395,4 @@ Parameters params;
 
 -------------------------------
 
-Updated on  2 December 2020 at 14:48:54 CET
+Updated on  3 December 2020 at 12:37:29 CET

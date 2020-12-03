@@ -1,6 +1,6 @@
 ---
 title: sam::Experiment
-summary: Experiment class declaration.  
+summary: Experiment encapsulates data and methods needed by the Researcher to conduct its research.  
 
 ---
 
@@ -9,7 +9,7 @@ summary: Experiment class declaration.
 
 
 
-[Experiment]() class declaration.  [More...](#detailed-description)
+[Experiment]() encapsulates data and methods needed by the [Researcher]() to conduct its research.  [More...](#detailed-description)
 
 
 `#include <Experiment.h>`
@@ -31,8 +31,8 @@ summary: Experiment class declaration.
 |                | Name           |
 | -------------- | -------------- |
 |  | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**() =default  |
-|  | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**(json & experiment_config)  |
-|  | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**([ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) & e)  |
+|  | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**(json & experiment_config) <br>Constructing an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) object using the given JSON configuration.  |
+|  | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**([ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) & e) <br>Constructing an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) using an already initialized [ExperimentSetup]().  |
 |  | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**([ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) & e, std::shared_ptr< [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) > & ds, std::shared_ptr< [TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/) > & ts, std::shared_ptr< [EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strategy/) > & efs)  |
 | [Group](/doxygen/Classes/classsam_1_1_group/) & | **[operator[]](/doxygen/Classes/classsam_1_1_experiment/#function-operator[])**(std::size_t idx)  |
 | const [Group](/doxygen/Classes/classsam_1_1_group/) & | **[operator[]](/doxygen/Classes/classsam_1_1_experiment/#function-operator[])**(std::size_t idx) const  |
@@ -82,20 +82,7 @@ summary: Experiment class declaration.
 class sam::Experiment;
 ```
 
-[Experiment]() class declaration. 
-
-
-
-
-
-
-
-
-
-
-
-
-**Note**: This could be an abstract class. The abstract will define the body an experiment while subclasses customize it for different type of experiments. This can be used to save space because I can only define relevant variables for each type of experiment 
+[Experiment]() encapsulates data and methods needed by the [Researcher]() to conduct its research. 
 
 
 
@@ -110,6 +97,21 @@ class sam::Experiment;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+[Experiment](/doxygen/Classes/classsam_1_1_experiment/) has access to all data-related strategies, e.g., [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/), TestStraregy, and [EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strategy/). Moreover, it stores the actual research data in a vector of [Group](/doxygen/Classes/classsam_1_1_group/) objects. [Researcher](/doxygen/Classes/classsam_1_1_researcher/)'s access to actual data, and other data-related strategies always goes through an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) object.
+
+Moreover, the [Experiment](/doxygen/Classes/classsam_1_1_experiment/) stores a copy of the [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) where most study parameters are stored in. 
 
 
 
@@ -163,6 +165,7 @@ Experiment(
 )
 ```
 
+Constructing an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) object using the given JSON configuration. 
 
 
 
@@ -189,6 +192,7 @@ Experiment(
 
 
 
+Starting by the initialization of an [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/), followed by Data, Test, and Effect stratgies initialization; and finally, all necessary resources will be initialized. 
 
 
 ### function Experiment
@@ -199,6 +203,21 @@ Experiment(
 )
 ```
 
+Constructing an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) using an already initialized [ExperimentSetup](). 
+
+
+
+
+
+
+
+
+
+
+
+
+!!! note "Note"
+    This can be used in cases where the underlying strategies should be preserved while some experiment parameters needs to be modified. 
 
 
 
@@ -213,18 +232,7 @@ Experiment(
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+Since ExperimenSetup already contains the definition of Data, Test, and Effect strategies, this method accept the [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) as it is, and only initialize those strategies.
 
 
 ### function Experiment
@@ -286,10 +294,10 @@ inline Group & operator[](
 
 
 
-**Note**: 
+!!! note "Note"
 
-  * I think these are bad ideas, I think they should just return the index that are being asked to, and then some other method, actually returns the group like `get_group`, and `set_group` or even a `[Group](/doxygen/Classes/classsam_1_1_group/) operator()` why not. 
-  * This means I need to change the [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) too, and make sure that in each iteration, I start with a fresh [Experiment](/doxygen/Classes/classsam_1_1_experiment/) rather than a half cleanup one. 
+    * I think these are bad ideas, I think they should just return the index that are being asked to, and then some other method, actually returns the group like `get_group`, and `set_group` or even a `[Group](/doxygen/Classes/classsam_1_1_group/) operator()` why not. 
+    * This means I need to change the [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) too, and make sure that in each iteration, I start with a fresh [Experiment](/doxygen/Classes/classsam_1_1_experiment/) rather than a half cleanup one. 
 
 
 
@@ -765,7 +773,8 @@ Use the `data_strategy` to generate the data.
 
 
 
-**Note**: The `data_strategy` takes over the entire experiment and populate the `measurements` based on `setup`'s parameters. 
+!!! note "Note"
+    The `data_strategy` takes over the entire experiment and populate the `measurements` based on `setup`'s parameters. 
 
 
 
@@ -800,7 +809,8 @@ void preProcessData()
 
 
 
-**Note**: `pre_processing_steps` lists the available steps and their order. 
+!!! note "Note"
+    `pre_processing_steps` lists the available steps and their order. 
 
 
 
@@ -1344,4 +1354,4 @@ std::vector< Group > groups_;
 
 -------------------------------
 
-Updated on  2 December 2020 at 14:48:53 CET
+Updated on  3 December 2020 at 12:37:28 CET

@@ -70,7 +70,8 @@ Random Selection Strategy.
 
 
 
-**Note**: This is technically the [SignificantSelection](/doxygen/Classes/classsam_1_1_significant_selection/) with pub_bias set to 0. 
+!!! note "Note"
+    This is technically the [SignificantSelection](/doxygen/Classes/classsam_1_1_significant_selection/) with pub_bias set to 0. 
 
 
 
@@ -219,4 +220,4 @@ Parameters params;
 
 -------------------------------
 
-Updated on  2 December 2020 at 14:48:55 CET
+Updated on  3 December 2020 at 12:37:29 CET

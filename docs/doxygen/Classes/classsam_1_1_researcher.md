@@ -101,7 +101,8 @@ Researcher() =default
 
 
 
-**Note**: This is defined `private` because I want force the user to use the `create(name)` method and therefore delegate the construction to the [ResearcherBuilder](/doxygen/Classes/classsam_1_1_researcher_builder/). 
+!!! note "Note"
+    This is defined `private` because I want force the user to use the `create(name)` method and therefore delegate the construction to the [ResearcherBuilder](/doxygen/Classes/classsam_1_1_researcher_builder/). 
 
 
 
@@ -208,7 +209,8 @@ void preProcessData()
 
 
 
-**Note**: This has a very similar implemention to the `hack()` but it doesn't perform any of the secondary checks. 
+!!! note "Note"
+    This has a very similar implemention to the `hack()` but it doesn't perform any of the secondary checks. 
 
 
 
@@ -542,7 +544,8 @@ inline void setDecisionStrategy(
 
 
 
-**Note**: [Researcher](/doxygen/Classes/classsam_1_1_researcher/) owns its decision strategy that's why I move the pointer.
+!!! note "Note"
+    [Researcher](/doxygen/Classes/classsam_1_1_researcher/) owns its decision strategy that's why I move the pointer.
 
 
 
@@ -1199,4 +1202,4 @@ friend class ResearcherBuilder;
 
 -------------------------------
 
-Updated on  2 December 2020 at 14:48:54 CET
+Updated on  3 December 2020 at 12:37:28 CET

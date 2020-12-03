@@ -301,10 +301,10 @@ Create a new [Journal](/doxygen/Classes/classsam_1_1_journal/) for the researche
 
 
 
-**Note**: 
+!!! note "Note"
 
-  * The configuration needs to include information about the SelectionStrategy as well.
-  * : This assumes that the experiment setup is correctly initiated. 
+    * The configuration needs to include information about the SelectionStrategy as well.
+    * : This assumes that the experiment setup is correctly initiated. 
 
 
 
@@ -759,7 +759,8 @@ inline Researcher build()
 
 
 
-**Note**: Be aware that this needs to be called after you set all aspects of the [Researcher](/doxygen/Classes/classsam_1_1_researcher/)
+!!! note "Note"
+    Be aware that this needs to be called after you set all aspects of the [Researcher](/doxygen/Classes/classsam_1_1_researcher/)
 
 
 
@@ -785,4 +786,4 @@ Build and return a new [Researcher](/doxygen/Classes/classsam_1_1_researcher/).
 
 -------------------------------
 
-Updated on  2 December 2020 at 14:48:54 CET
+Updated on  3 December 2020 at 12:37:28 CET
