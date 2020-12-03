@@ -149,7 +149,7 @@ After performing the test and choosing an outcome variable, the Researcher puts 
 
 The Researcher object is the main player in the simulation. It uses the Experiment Setup to prepare the Experiment and send the final outcome to the Journal for the reviewing process.
 
-After the initialization of the Experiment Setup, the Researcher prepares the Experiment object by collecting data via the Data Strategy, tests the hypothesis via the Test Strategy, and calculates the effect sizes using the Effect Strategy. Then, if configured to, it applies different QRPs on the Experiment and hacks its way to a satisfactory result. In the end, the researcher prepares a Submission record and sends it to Journal for review. This process is discussed in more detail in [Execution Flow](flow.md) and [Research Workflow](research-workflow.md). 
+After the initialization of the Experiment Setup, the Researcher prepares the Experiment object by collecting data via the Data Strategy, tests the hypothesis via the Test Strategy, and calculates the effect sizes using the Effect Strategy. Then, if configured to, it applies different QRPs on the Experiment and hacks its way to a satisfactory result. In the end, the researcher prepares a Submission record and sends it to the Journal for review. This process is discussed in more detail in [Execution Flow](flow.md) and [Research Workflow](research-workflow.md). 
 
 #### Decision Strategy
 

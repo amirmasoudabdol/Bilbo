@@ -220,7 +220,7 @@ For this purpose, we are using the `pre_processing_methods` parameter in `resear
 
 ### Decision Strategies
 
-Neither of the simulation scenarios involve a complicated design making routine compared to [Bakker et al., 2012](/examples/bakker_et_al_2012.md) multistep decision making process. Here, in both cases, we are only interested in reporting the only available dependent variable, and this can be done by setting `initial_selection_policies` to `["id == 1"]` or `["pre-reg"]`. With this configuration, the Researcher initializes an Experiment, perform the pre-processing step, and "blindly" submit the only DV to Journal without altering the experiment.
+Neither of the simulation scenarios involve a complicated design making routine compared to [Bakker et al., 2012](/examples/bakker_et_al_2012.md) multistep decision making process. Here, in both cases, we are only interested in reporting the only available dependent variable, and this can be done by setting `initial_selection_policies` to `["id == 1"]` or `["pre-reg"]`. With this configuration, the Researcher initializes an Experiment, perform the pre-processing step, and "blindly" submit the only DV to the Journal without altering the experiment.
 
 This simple decision strategy can be used to skip the entire decision workflow, and study the Experiment in its purity without any dynamic interventions from the Researcher.
 

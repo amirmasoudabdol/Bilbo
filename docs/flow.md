@@ -46,8 +46,8 @@ This last stage simulates the preparation process of the final manuscript and co
 
 After finalizing the research and applying any of QRPs (if necessary), the Researcher prepares his **final** Submission. This is done through the logic coded within the Decision Strategy module. In the case where the Researcher finds an outcome, a Submission record will be created and submitted/sent to the Journal. If the Researcher is not satisfied with any of the available outcome, he discards the Experiment, and skips the rest of this stage.
 
-The Journal evaluates the received Submission based on the criteria defined by the Selection Strategy module. If accepted, Journal adds the submission to its publications list for further analysis.
+The Journal evaluates the received Submission based on the criteria defined by the Selection Strategy module. If accepted, the Journal adds the submission to its publications list for further analysis.
 
 ![Figure 5. Steps involving publishing a research](/figures/publish-research.png)
 
-Despite what happens to the Experiment and Submission (ie., discardment, rejection or acceptance by Journal), the Researcher is done by the current Experiment and initializes a new Experiment.
+Despite what happens to the Experiment and Submission (ie., discardment, rejection or acceptance by the Journal), the Researcher is done by the current Experiment and initializes a new Experiment.

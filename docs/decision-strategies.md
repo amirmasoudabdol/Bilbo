@@ -21,7 +21,7 @@ Figure 1 highlights 4 main **Selection → Decision** sequences of research and 
 	1. Performing a *selection* on the database of altered outcomes (collected during hacking workflow), **stashed results**.
 	2. Evaluating the selected outcome — from the database of altered outcomes — to make a *decision* on whether to replicate the study.
 3. **Before Submission** sequences
-	4. Evaluating the final submission, S<sub>F</sub>, to make *decision* on whether to submit the final submission to Journal.
+	4. Evaluating the final submission, S<sub>F</sub>, to make *decision* on whether to submit the final submission to the Journal.
 
 All possible selections and decisions steps can be found in the list below:
 
@@ -103,7 +103,7 @@ A *policy chain set* is a set of policy chains. Policy chain sets are mainly bei
 }
 ```
 
-For instance, a research with the selection policy chain set above:
+For instance, research with the selection policy chain set above:
 
 - starts by looking for `[“sig”, “min(pvalue)”]`
 - if there is no outcome with these properties, he moves to search for `[“effect > 0”, “min(pvalue)”]`,

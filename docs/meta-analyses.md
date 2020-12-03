@@ -1,9 +1,9 @@
 # Meta Analysis
 
-[Meta analysis](https://en.wikipedia.org/wiki/Meta-analysis) methods are being used by Journal for two main purposes:
+[Meta analysis](https://en.wikipedia.org/wiki/Meta-analysis) methods are being used by the Journal for two main purposes:
 
-1. **Meta-Analytic Outputs**. Journal may use the specified meta-analysis methods to combine  result of multiple studies, ie., [**publications list**](/journal-configuration.md), at the end of each  simulation cycle, ie., when it has collected `max_pubs` publications. 
-2. **Adaptive Selection Strategies**. Journal may use the meta-analytic outcomes to adjust its [Selection Strategy](/selection-strategies.md) and its acceptance rate. [under development]
+1. **Meta-Analytic Outputs**. The Journal may use the specified meta-analysis methods to combine  result of multiple studies, ie., [**publications list**](/journal-configuration.md), at the end of each  simulation cycle, ie., when it has collected `max_pubs` publications. 
+2. **Adaptive Selection Strategies**. The Journal may use the meta-analytic outcomes to adjust its [Selection Strategy](/selection-strategies.md) and its acceptance rate. [under development]
 
 
 ## Meta-Analytic Outputs
@@ -11,7 +11,7 @@
 Collecting meta-analytic outputs is the main use-case of adding meta-analysis methods to Jouranl's configuration.
 This is done by adding each method to a list of `meta_analysis_metrics` under `journal_parameters` section. Like before, we can add any method-specific parameters to the list. In the case where we prefer using one method with two sets of different parameters, we can simply add a new method with the modified parameters.
 
-After each simulation cycle, when the list of [accepted publications](/journal-configurations.md) is ready, Journal traveses through the list of methods, and computes their outcomes. Before restarting the simulation — and getting ready for a new set of submissions to arrive — Journal saves all its publications, and their corresponding meta-analyses to different CSV files for further analysis by the user. [Simulation configurations](/simulation-configurations.md) section lists all the different available output parameters.
+After each simulation cycle, when the list of [accepted publications](/journal-configurations.md) is ready, The Journal traveses through the list of methods, and computes their outcomes. Before restarting the simulation — and getting ready for a new set of submissions to arrive — the Journal saves all its publications, and their corresponding meta-analyses to different CSV files for further analysis by the user. [Simulation configurations](/simulation-configurations.md) section lists all the different available output parameters.
 
 ```json hl_lines="4 5 6 7 8 9 10 11 12 13 14"
 "journal_parameters": {

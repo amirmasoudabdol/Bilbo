@@ -92,7 +92,7 @@ First, we look at the probability of finding significant results within the pred
 
 Overall, we see that most lines are overlapping each other. This indicates that our selections for selective reporting variation does not necessarily translate to a meaningful difference in the probability of finding significant results. However, the effect of different ɑ-level is visible and meaningful. Basically, lowering ɑ-level lowers the chance of finding significant results, as expected. 
 
-Moveover, we can observe the effect of publication bias on our results. As one would expect, higher publication bias will lead to higher concentration of significant results in Journal. In SAM, higher publication bias encourages the Journal to accept less non-significant results, therefore, more non-significant results will be discarded, see [Journal](/journal-configurations.md).
+Moveover, we can observe the effect of publication bias on our results. As one would expect, higher publication bias will lead to higher concentration of significant results in the Journal. In SAM, higher publication bias encourages the Journal to accept less non-significant results, therefore, more non-significant results will be discarded, see [Journal](/journal-configurations.md).
 
 
 === "2"

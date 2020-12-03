@@ -1,6 +1,6 @@
 # Falsifying Data
 
-Falsifying data is the act of deliberately modifying, adding, or removing measurements in order to steer the primary outcome of a research toward a certain satisfactory conclusion. While this process can take many different forms, as mentioned, the main incentive is to contaminate the dataset in order to legitimize a certain conclusion or decision. [cite, cite, cite]
+Falsifying data is the act of deliberately modifying, adding, or removing measurements in order to steer the primary outcome of research toward a certain satisfactory conclusion. While this process can take many different forms, as mentioned, the main incentive is to contaminate the dataset in order to legitimize a certain conclusion or decision. [cite, cite, cite]
 
 Here we offer a customizable algorithm to achieve a few variations of data falsification. We focused on three primary form of data falsification: perturbation, swapping, and switching data.
 

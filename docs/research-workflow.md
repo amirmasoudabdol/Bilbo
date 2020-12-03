@@ -15,7 +15,7 @@ This section will walk you through each process and discuss each step in more de
   <img src="/figures/research-workflow-initial-stage.png" width="30%" align="right">
 </picture>
 
-As discussed in the [Introduction](/introduction.md) section, a research starts by initializing the Experiment Setup and thereafter preparation of the Experiment which consists of generating data, calculating statistics, running tests, calculating effects, etc.
+As discussed in the [Introduction](/introduction.md) section, research starts by initializing the Experiment Setup and thereafter preparation of the Experiment which consists of generating data, calculating statistics, running tests, calculating effects, etc.
 
 When the Experiment is fully initialized, the Researcher is able to asses the quality of results, and select her preferred outcome among all available outcome variables across all conditions and dependent variables. This is beingdone during the first selection stage, **Initial Selection**. At this stage, the Researcher can query all available outcomes using specific set of rules. For example, by using `["sig", "min(pvalue)"]` [Policy](/decision-strategies.md#policies), she will seek an outcome with minimum *p*-value between those that are significant.
 
@@ -52,8 +52,8 @@ Researcher's final selected outcome, S<sub>Fᵢ</sub> will be stored in an anoth
 
 If researcher is intending to perform more than one replication of his research, `n_reps`, see [configuration file](configuration-file.md#experiment-parameters). Then, he faces another decision, **Will Continue Replication Decision**. If the verdict is a yes, researcher stores the current selected outcome, S<sub>Fᵢ</sub>, and initiates a replication of the Experiment using the parameters defined in the Experiment Setup.
 
-After performing `n_reps` replication, or negative ruling of **Will Continue Replicating Decision** (which leads termination of the replication process), the Researcher moves to the final stage of his research. Throughout another **Selection→Decision** sequence, the Researcher selects an outcome among all those stored from every replications, and decides on whether he is going to submit that submission to Journal. The final decision stage acts as researcher's final call to whether his research is good enough (in his terms) to be submitted as a manuscript to the Journal.
+After performing `n_reps` replication, or negative ruling of **Will Continue Replicating Decision** (which leads termination of the replication process), the Researcher moves to the final stage of his research. Throughout another **Selection→Decision** sequence, the Researcher selects an outcome among all those stored from every replications, and decides on whether he is going to submit that submission to the Journal. The final decision stage acts as researcher's final call to whether his research is good enough (in his terms) to be submitted as a manuscript to the Journal.
 
 ## Finally
 
-By the time that Final Submission, S<sub>F</sub>, is out of Researcher's hand and at Journal's mercy, the process of conducting research by the Researcher is finalized. At this point, [Journal](/journal.md) decides on whether the manuscript is "publishable".
+By the time that Final Submission, S<sub>F</sub>, is out of Researcher's hand and at Journal's mercy, the process of conducting research by the Researcher is finalized. At this point, the [Journal](/journal.md) decides on whether the manuscript is "publishable".

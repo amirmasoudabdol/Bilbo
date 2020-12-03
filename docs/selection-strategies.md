@@ -1,10 +1,10 @@
 # Selection Strategies
 
-Two primary built-in selection strategies are Random Selection and Significant Selection. While the former algorithm flips a coin for accepting each submission, the latter mimics the publication bias phenomena. Besides these two strategies, more elaborate selection strategies can be deployed at Journal. In this section we list a few of the available strategies.
+Two primary built-in selection strategies are Random Selection and Significant Selection. While the former algorithm flips a coin for accepting each submission, the latter mimics the publication bias phenomena. Besides these two strategies, more elaborate selection strategies can be deployed at the Journal. In this section we list a few of the available strategies.
 
 ## Free Selection
 
-With free selection method, Journal does not impose any restriction during the reviewing process and every submission applied for the review is going to be accepted. This strategy is suitable for cases where we are interested in the intact population of the publications rather.
+With free selection method, the Journal does not impose any restriction during the reviewing process and every submission applied for the review is going to be accepted. This strategy is suitable for cases where we are interested in the intact population of the publications rather.
 
 !!! journal "Free Selection"
 	```json
@@ -17,7 +17,7 @@ With free selection method, Journal does not impose any restriction during the r
 
 ## Random Selection
 
-Random selection method is the simplest form of selection where Journal flips a coin to decide whether a submission is going to be accepted. Using **p = 0** will lead to a Journal that does not accept anything, and **p = 1** defines a Journal that accepts everything.
+Random selection method is the simplest form of selection where the Journal flips a coin to decide whether a submission is going to be accepted. Using **p = 0** will lead to a Journal that does not accept anything, and **p = 1** defines a Journal that accepts everything.
 
 !!! journal "Random Selection"
 	```json
@@ -49,9 +49,9 @@ As the name suggests, the *significant selection strategy* incorporates the conc
 
 ## Policy Based Selection
 
-Policy based selection strategy are using [policy chains](/decision-strategies.md#policy-chain) to evalute the "quality" of a submission, and therefore come to their verdict. In addition to the given criteria, we can adjust the *acceptance rate*, `pub_chance`, and the *publication bias rate*, `pub_bias`. Journal first evaluates whether the `selection_policy` can be satisfied; then, a random draw decides whether the publication is lucky enough to be accepted, and finally, odds of being actually published will be evaluted against the publication bias rate.
+Policy based selection strategy are using [policy chains](/decision-strategies.md#policy-chain) to evalute the "quality" of a submission, and therefore come to their verdict. In addition to the given criteria, we can adjust the *acceptance rate*, `pub_chance`, and the *publication bias rate*, `pub_bias`. The Journal first evaluates whether the `selection_policy` can be satisfied; then, a random draw decides whether the publication is lucky enough to be accepted, and finally, odds of being actually published will be evaluted against the publication bias rate.
 
-Notice that the flexibilty of the selection policy and availability of publication bias rate will allow for construction of Journals with specific biases, e.g., positive effects, large study sizes, etc.
+Notice that the flexibilty of the selection policy and availability of publication bias rate will allow for construction of the Journal with specific biases, e.g., positive effects, large study sizes, etc.
 
 
 !!! journal "Policy Based Selection"
