@@ -107,7 +107,7 @@ For instance, a research with the selection policy chain set above:
 
 - starts by looking for `[“sig”, “min(pvalue)”]`
 - if there is no outcome with these properties, he moves to search for `[“effect > 0”, “min(pvalue)”]`,
-- and finally, if that returns no unique outcome, he applies the last set of queries on Experiment.
+- and finally, if that returns no unique outcome, he applies the last set of queries on the Experiment.
 
 Policy chain sets are designed to mimic behaviors of a researchers with multiple priorities. An example of this behavior is demonstrated in [Bakker et al., 2012 simulation](/examples/bakker_et_al_2012.md). 
 

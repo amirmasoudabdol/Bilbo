@@ -28,7 +28,7 @@ Besides hacking strategies shared parameters, outliers removal has its own custo
 - `n_attempts`, indicates number of attempts to move outliers for ch multiplier
 - `min_observations`, indicates the minimum number of servations. Outliers removal stops removing observations when a group reaches the given minimum.
 - `multipliers`, indicates a list of multipliers to be used
-- `order`, indicates the order in which observations will be removed from Experiment
+- `order`, indicates the order in which observations will be removed from the Experiment
 	- `”random”`, removing items randomly
 	- `”asc”`, removing furthest items from$\bar{x}$ first
 	- `”desc”`, removing closest items to$\bar{x}$ first

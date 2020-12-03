@@ -1,6 +1,6 @@
 # Test Strategies
 
-*Test strategy defines the method of hypothesis testing.* After collecting data, the Researcher runs a statistical test on Experiment, and calculates appropriate statistics, and *p*-values for each outcome variables. Thereafter, based on the calculated *p*-value, and given ɑ, *Test Strategy decides whether the test result is significant.*
+*Test strategy defines the method of hypothesis testing.* After collecting data, the Researcher runs a statistical test on the Experiment, and calculates appropriate statistics, and *p*-values for each outcome variables. Thereafter, based on the calculated *p*-value, and given ɑ, *Test Strategy decides whether the test result is significant.*
 
 Similar to Data Strategy, we configure the Test Strategy by specifying the method name, follwing with its setting their specific parameters. Most tests should be accompanied by an ɑ level. This ɑ is going to be used throughout the rest of SAM to evaluate the significance level of an outcome. For instance, when a [policy](/decision-strategies.md#policy) queies for significance of an outcome, SAM asks Test Strategy to see whether for a given outcome, the test is significant.
 

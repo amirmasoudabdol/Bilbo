@@ -21,7 +21,7 @@ The *probability of committing to a hack* is a value between 0 and 1 which deter
 
 #### Hacking Commitment Strategy
 
-Additionally, we are able to define a specific function to calcualte this probability based on the content of Experiment. For instance, we may define a function that adjust this probability based on the distance of *p*-value from ɑ. In this case, the Researcher could individually evaluate each Experiment and decide on whether he wants to commit to a QRP based on the properties of the current Experiment. This allows for a much more fine-grained filtering and execution of QRPs, and overall smarter Researchers.
+Additionally, we are able to define a specific function to calcualte this probability based on the content of the Experiment. For instance, we may define a function that adjust this probability based on the distance of *p*-value from ɑ. In this case, the Researcher could individually evaluate each Experiment and decide on whether he wants to commit to a QRP based on the properties of the current Experiment. This allows for a much more fine-grained filtering and execution of QRPs, and overall smarter Researchers.
 
 In [Friese et al. 2020](/examples/Friese_et_al_2020.md)[@Friese_2020aa] example, we utilize this parameter to implement their dynamic approach of calculating researcher's interest in hacking the *p*-value based on its distance to ɑ, and the calculated effect size.
 

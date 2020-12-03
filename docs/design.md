@@ -48,7 +48,7 @@ The rest of this section discusses each component properties and rule in more de
   <img src="../figures/experiment-stack.png" width="300" align="right">
 </picture>
 
-As mentioned, an Experiment object acts as an umbrella for everything related to an actual experiment. This includes metadata (a.k.a ExperimentSetup), raw data, method/model for generating the data, e.g., [Linear Model](/data-strategies.md#linear-model), methods of testing the hypothesis, and calculating the effect. The Researcher object has complete control over every aspect of an Experiment **with one exception**: it can only read and not change the ExperimentSetup object. This is an important factor when later on we discuss the concept of pre-registration.
+As mentioned, an Experiment object acts as an umbrella for everything related to an actual experiment. This includes metadata (a.k.a Experiment Setup), raw data, method/model for generating the data, e.g., [Linear Model](/data-strategies.md#linear-model), methods of testing the hypothesis, and calculating the effect. The Researcher object has complete control over every aspect of an Experiment **with one exception**: it can only read and not change the Experiment Setup object. This is an important factor when later on we discuss the concept of pre-registration.
 
 The main components of the Experiment are:
 
@@ -57,9 +57,9 @@ The main components of the Experiment are:
 
 #### Experiment Setup
 
-After the initialization phase, SAM treats the ExperimentSetup object as a read-only object. During the initialization phase, SAM initializes and randomizes the ExperimentSetup based on given parameters. Thereafter, ExperimentSetup will stay intact in the code and will be used as a reference point in different stages. 
+After the initialization phase, SAM treats the Experiment Setup object as a read-only object. During the initialization phase, SAM initializes and randomizes the Experiment Setup based on given parameters. Thereafter, Experiment Setup will stay intact in the code and will be used as a reference point in different stages. 
 
-The main components of Experiment Setup are:
+The main components of the Experiment Setup are:
 
 - Design Parameters
 	- Number of conditions
@@ -149,7 +149,7 @@ After performing the test and choosing an outcome variable, the Researcher puts 
 
 The Researcher object is the main player in the simulation. It uses the Experiment Setup to prepare the Experiment and send the final outcome to the Journal for the reviewing process.
 
-After the initialization of the Experiment Setup, the Researcher prepares the Experiment object by collecting data via the Data Strategy, tests the hypothesis via the Test Strategy, and calculates the effect sizes using the Effect Strategy. Then, if configured to, it applies different QRPs on Experiment and hacks its way to a satisfactory result. In the end, the researcher prepares a Submission record and sends it to Journal for review. This process is discussed in more detail in [Execution Flow](flow.md) and [Research Workflow](research-workflow.md). 
+After the initialization of the Experiment Setup, the Researcher prepares the Experiment object by collecting data via the Data Strategy, tests the hypothesis via the Test Strategy, and calculates the effect sizes using the Effect Strategy. Then, if configured to, it applies different QRPs on the Experiment and hacks its way to a satisfactory result. In the end, the researcher prepares a Submission record and sends it to Journal for review. This process is discussed in more detail in [Execution Flow](flow.md) and [Research Workflow](research-workflow.md). 
 
 #### Decision Strategy
 

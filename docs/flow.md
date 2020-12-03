@@ -50,4 +50,4 @@ The Journal evaluates the received Submission based on the criteria defined by t
 
 ![Figure 5. Steps involving publishing a research](/figures/publish-research.png)
 
-Despite what happens to Experiment and Submission (ie., discardment, rejection or acceptance by Journal), the Researcher is done by the current Experiment and initializes a new Experiment.
+Despite what happens to the Experiment and Submission (ie., discardment, rejection or acceptance by Journal), the Researcher is done by the current Experiment and initializes a new Experiment.
