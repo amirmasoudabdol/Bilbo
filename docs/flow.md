@@ -31,7 +31,7 @@ By the end of this stage, the Experiment is populated with data points and the R
 
 ## Performing the Research
 
-At this stage, Researcher uses the Test Strategy to run the test and populate relevant variables, e.g., `statistic`, `pvalue`, `sig`, `side`. Similarly, Effect Strategy will be used to calculate effect sizes, and populate `effect` variable.
+At this stage, the Researcher uses the Test Strategy to run the test and populate relevant variables, e.g., `statistic`, `pvalue`, `sig`, `side`. Similarly, Effect Strategy will be used to calculate effect sizes, and populate `effect` variable.
 
 The next step is to check whether the Researcher is satisfied with the test results. This is done by passing the Experiment to the Decision Strategy. The Researcher relies on decision strategy's verdict to decide on whether to proceed with the current Submission, or continue applying one or more of the hacking strategies before submitting the study for the review. This process will be discussed in more details in [Research Workflow](/research-workflow.md) and *[Decision Strategy](/decision-strategies.md)*.
 
@@ -44,10 +44,10 @@ By the end of this stage, the Researcher has finished his research and is ready 
 
 This last stage simulates the preparation process of the final manuscript and consequently sending it to the Journal for review.
 
-After finalizing the research and applying any of QRPs (if necessary), the Researcher prepares his **final** Submission. This is done through the logic coded within the Decision Strategy module. In the case where the Researcher finds an outcome, a Submission record will be created and submitted/sent to the Journal. If Researcher is not satisfied with any of the available outcome, he discards the Experiment, and skips the rest of this stage.
+After finalizing the research and applying any of QRPs (if necessary), the Researcher prepares his **final** Submission. This is done through the logic coded within the Decision Strategy module. In the case where the Researcher finds an outcome, a Submission record will be created and submitted/sent to the Journal. If the Researcher is not satisfied with any of the available outcome, he discards the Experiment, and skips the rest of this stage.
 
 The Journal evaluates the received Submission based on the criteria defined by the Selection Strategy module. If accepted, Journal adds the submission to its publications list for further analysis.
 
 ![Figure 5. Steps involving publishing a research](/figures/publish-research.png)
 
-Despite what happens to Experiment and Submission (ie., discardment, rejection or acceptance by Journal), Researcher is done by the current Experiment and initializes a new Experiment.
+Despite what happens to Experiment and Submission (ie., discardment, rejection or acceptance by Journal), the Researcher is done by the current Experiment and initializes a new Experiment.

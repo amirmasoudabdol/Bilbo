@@ -10,7 +10,7 @@ Optional stopping can be performed in various ways. SAM’s implementation tries
 
 At each attempt, researcher reaches to [data strategy](/data-strategies.md) and request `num` new observations for each group. Data strategy returns exactly `num` new observations from the same distribution that been used to initialize the Experiment. For instance, if we have configured a [graded response model](/data-strategies.md#graded-response-model) as our population, each newly generated observation will be calculated exactly based on the given model, e.g., Rasch Model.
 
-After adding new observations, all statistics, tests, and effects will be recalled and Researcher continue to evaluate the `stopping_condition`, if there is any. If stopping condition is satisfied, Researcher quits the algorithm, and moves to the defined **selection → decision** sequence. 
+After adding new observations, all statistics, tests, and effects will be recalled and the Researcher continue to evaluate the `stopping_condition`, if there is any. If stopping condition is satisfied, the Researcher quits the algorithm, and moves to the defined **selection → decision** sequence. 
 
 The configuration below showcases a sample implementation of optional stopping as it has been used in [Maassen](/examples/esther_first_year.md) simulation.
 

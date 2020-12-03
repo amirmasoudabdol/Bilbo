@@ -4,7 +4,7 @@
 
 ### Probability of Being a Hacker
 
-The *probability of being a hacker* is a value between 0 and 1 which determines whether Researcher is executing the hacking workflow. Besides a fixed value, we are able to define a distribution to be used for each Researcher, for instance:
+The *probability of being a hacker* is a value between 0 and 1 which determines whether the Researcher is executing the hacking workflow. Besides a fixed value, we are able to define a distribution to be used for each Researcher, for instance:
 
 ```json
 "probability_of_being_a_hacker": {
@@ -17,11 +17,11 @@ In this case, for each new Researcher, SAM draws a value from the given distribu
 
 ### Probability of Committing to a Hack
 
-The *probability of committing to a hack* is a value between 0 and 1 which determines whether Researcher applies a hacking strategy on a *given* Experiment,. Like before, while we can use a fixed value or a distribution for this parameters.
+The *probability of committing to a hack* is a value between 0 and 1 which determines whether the Researcher applies a hacking strategy on a *given* Experiment,. Like before, while we can use a fixed value or a distribution for this parameters.
 
 #### Hacking Commitment Strategy
 
-Additionally, we are able to define a specific function to calcualte this probability based on the content of Experiment. For instance, we may define a function that adjust this probability based on the distance of *p*-value from ɑ. In this case, Researcher could individually evaluate each Experiment and decide on whether he wants to commit to a QRP based on the properties of the current Experiment. This allows for a much more fine-grained filtering and execution of QRPs, and overall smarter Researchers.
+Additionally, we are able to define a specific function to calcualte this probability based on the content of Experiment. For instance, we may define a function that adjust this probability based on the distance of *p*-value from ɑ. In this case, the Researcher could individually evaluate each Experiment and decide on whether he wants to commit to a QRP based on the properties of the current Experiment. This allows for a much more fine-grained filtering and execution of QRPs, and overall smarter Researchers.
 
 In [Friese et al. 2020](/examples/Friese_et_al_2020.md)[@Friese_2020aa] example, we utilize this parameter to implement their dynamic approach of calculating researcher's interest in hacking the *p*-value based on its distance to ɑ, and the calculated effect size.
 

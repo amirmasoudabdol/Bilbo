@@ -166,9 +166,9 @@ Configurations below showcase how one can express the presented design in SAM. I
 
 ### Hacking Strategies
 
-For simulating the [Outliers Removal](/hacking-strategies/outliers-removal.md) process, we take a different approach than the one we have used for [Bakker et al., 2012](/examples/bakker_et_al_2012.md) simulation. Here, we simulate the outliers removal step before passing the Experiment to Researcher. This is equivalent to pre-processing the data and then running the final tests and analyses on it. 
+For simulating the [Outliers Removal](/hacking-strategies/outliers-removal.md) process, we take a different approach than the one we have used for [Bakker et al., 2012](/examples/bakker_et_al_2012.md) simulation. Here, we simulate the outliers removal step before passing the Experiment to the Researcher. This is equivalent to pre-processing the data and then running the final tests and analyses on it. 
 
-For this purpose, we are using the `pre_processing_methods` parameter in `researcher_parameters` section. Pre-processing steps are similar to normal [hacking strategies](/hacking-strategies.md) with the difference that Researcher doesn't get to perform a [selection → decision sequence](/hacking-strategies.md#) after each step. They are being *fully* applied one after another, and when the list is exhausted, a copy of the *modified* Experiment will be passed to Researcher for further analysis. 
+For this purpose, we are using the `pre_processing_methods` parameter in `researcher_parameters` section. Pre-processing steps are similar to normal [hacking strategies](/hacking-strategies.md) with the difference that the Researcher does not get to perform a [selection → decision sequence](/hacking-strategies.md#) after each step. They are being *fully* applied one after another, and when the list is exhausted, a copy of the *modified* Experiment will be passed to the Researcher for further analysis. 
 
 !!! hackingstrategy "Configuration: Pre-processing"
 	=== "Non Subjective"
@@ -220,9 +220,9 @@ For this purpose, we are using the `pre_processing_methods` parameter in `resear
 
 ### Decision Strategies
 
-Neither of the simulation scenarios involve a complicated design making routine compared to [Bakker et al., 2012](/examples/bakker_et_al_2012.md) multistep decision making process. Here, in both cases, we are only interested in reporting the only available dependent variable, and this can be done by setting `initial_selection_policies` to `["id == 1"]` or `["pre-reg"]`. With this configuration, Researcher initializes an Experiment, perform the pre-processing step, and "blindly" submit the only DV to Journal without altering the experiment.
+Neither of the simulation scenarios involve a complicated design making routine compared to [Bakker et al., 2012](/examples/bakker_et_al_2012.md) multistep decision making process. Here, in both cases, we are only interested in reporting the only available dependent variable, and this can be done by setting `initial_selection_policies` to `["id == 1"]` or `["pre-reg"]`. With this configuration, the Researcher initializes an Experiment, perform the pre-processing step, and "blindly" submit the only DV to Journal without altering the experiment.
 
-This simple decision strategy can be used to skip the entire decision workflow, and study the Experiment in its purity without any dynamic interventions from Researcher.
+This simple decision strategy can be used to skip the entire decision workflow, and study the Experiment in its purity without any dynamic interventions from the Researcher.
 
 
 !!! decisionstrategy "Configuration: Decision Strategy"

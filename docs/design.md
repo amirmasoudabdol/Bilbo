@@ -21,7 +21,7 @@ This section describes the design principles behind each component, what they mo
 SAM consists of 3 main components, *Experiment, Researcher* and *Journal*. Each component mimics one of the subprocesses or entities that are discussed in the [Introduction](introduction.md) The list below briefly introduces each component alongside their roles.
 
 - The *[Experiment](#experiment)* comprises of several parts, each dealing with different aspects of a research, e.g., setup, data, test, effect.
-    - *[Experiment Setup](#experiment-setup)* holds the specification of the design. Researcher can only set these parameters once, at the start of an experiment. In fact, the *Experiment Setup* implementation simulates the concept of *pre-registration*.
+    - *[Experiment Setup](#experiment-setup)* holds the specification of the design. The Researcher can only set these parameters once, at the start of an experiment. In fact, the *Experiment Setup* implementation simulates the concept of *pre-registration*.
         - *[Data Strategy](#data-strategy)* is a routine used to generate data based on specified parameters in the *Experiment Setup*.
         - *[Test Strategy](#test-strategy)* is the statistical method of choice in the *Experiment Setup* for testing the result of an *Experiment*.
         - [*Effect Strategy*](#effect-strategy) defines the method of calculating effect sizes in an *Experiment*.

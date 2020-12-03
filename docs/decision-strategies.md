@@ -1,8 +1,8 @@
 # Decision Strategies
 
-*Decision strategy acts as researcher's brain, and describes his/her logical steps.* Its specification will be used by Researcher to perform two fundamentals tasks, Selection and Decision. As discussed in the [Design](design.md#decision-strategy) section, in most cases a Selection is followed by a Decision, directly evaluating the already selected outcome. 
+*Decision strategy acts as researcher's brain, and describes his/her logical steps.* Its specification will be used by the Researcher to perform two fundamentals tasks, Selection and Decision. As discussed in the [Design](design.md#decision-strategy) section, in most cases a Selection is followed by a Decision, directly evaluating the already selected outcome. 
 
-We will refer to this process as **Selection → Decision** sequence. These sequences are the building block of decision strategy. We use utilize them in several different stages of [Research](/research-workflow), and [Hacking](/hacking-workflow.md) workflows in order to mimic the thought process of Researcher and guide him throughout his research.
+We will refer to this process as **Selection → Decision** sequence. These sequences are the building block of decision strategy. We use utilize them in several different stages of [Research](/research-workflow), and [Hacking](/hacking-workflow.md) workflows in order to mimic the thought process of the Researcher and guide him throughout his research.
 
 As researcher needs to perform several selections and decisions during her course of research, each selection and decision is defined separately in the configuration file. Figure 1 shows a simplified version of research workflow by only highlighing **Selection** and **Decision** stages. The diagram also replaces logical names with their parameter names counterpart as they are lsited in `decision_strategy` section of [configurtion file](configuration-file.md).
 

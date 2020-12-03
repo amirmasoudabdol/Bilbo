@@ -4,9 +4,9 @@ title: Introduction
 
 # Journal Configurations
 
-At the end of the [research workflow](/research-workflow.md), Researcher has either decided to discard his research, or, is preparing to submit his final submission to the Journal. At this point, he passes his manuscript to Journal, and thereafter he will have no control over its destiny anymore. 
+At the end of the [research workflow](/research-workflow.md), the Researcher has either decided to discard his research, or, is preparing to submit his final submission to the Journal. At this point, he passes his manuscript to Journal, and thereafter he will have no control over its destiny anymore. 
 
-Journal module is designed to simulate the reviewing process. After receiving the submission (ie. Manuscript) from Researcher, Journal asses the quality of the research and decide on whether to accept or reject the submission. Journal’s assessment is being conducted using a group of pre-defined algorithms, referred to as *[Selection Strategies](/selection-strategies.md)*. 
+Journal module is designed to simulate the reviewing process. After receiving the submission (ie. Manuscript) from the Researcher, Journal asses the quality of the research and decide on whether to accept or reject the submission. Journal’s assessment is being conducted using a group of pre-defined algorithms, referred to as *[Selection Strategies](/selection-strategies.md)*. 
 
 ![<b>Figure 1.</b> Journal’s Reviewing Workflow](/figures/journal-workflow.png)
 

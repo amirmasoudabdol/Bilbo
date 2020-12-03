@@ -1,6 +1,6 @@
 # Selection Variation
 
-In this study we investigate the effect of varying Researcher's [intial selection](/decision-strategies.md) [policy](/decision-strategies.md#policy-chain). As we discussed, by modifying each of the **selection → decision** routine, we can influence Researcher's judgments on his research. This is as we enforce Researcher to take different paths when it comes to reporting his final outcome, a.k.a, [Selective Reporting](/hacking-strategies/selective-reporting.md).
+In this study we investigate the effect of varying Researcher's [intial selection](/decision-strategies.md) [policy](/decision-strategies.md#policy-chain). As we discussed, by modifying each of the **selection → decision** routine, we can influence Researcher's judgments on his research. This is as we enforce the Researcher to take different paths when it comes to reporting his final outcome, a.k.a, [Selective Reporting](/hacking-strategies/selective-reporting.md).
 
 Here, we are interested in finding how different choices influence the *Probability of Finding Significant, PFS*, and *Level of Bias*.
 
@@ -43,7 +43,7 @@ As discussed, we achieve the selective reporting through the alternation of `ini
 - `["sig", "effect > 0", "min(pvalue)"]`
 - `["sig", "effect > 0", "max(pvalue)"]`
 
-As we discussed, `initial_selection_policies` is a [Policy Chain Set](/decision-strategies.md#policy-chain-set), meaning that it can be followed by alternatives in the case of Researcher not being able to find an outcome with the given criteria. We follow each selection with two *Policy Chain*, `["effect > 0", "min(pvalue)"], ["effect < 0", "max(pvalue)"]`. In this configuration, our Researcher priotrizes each set after failing to satisfy the previous set. Due to the fact that the first policy chain is the only policy chain emphesizing on significant, the aggregate outcome of the simulation can be used to measure the *Probablity Of Finding Significant* results, a.k.a, *Proportion Of Significant* results.
+As we discussed, `initial_selection_policies` is a [Policy Chain Set](/decision-strategies.md#policy-chain-set), meaning that it can be followed by alternatives in the case of the Researcher not being able to find an outcome with the given criteria. We follow each selection with two *Policy Chain*, `["effect > 0", "min(pvalue)"], ["effect < 0", "max(pvalue)"]`. In this configuration, our Researcher priotrizes each set after failing to satisfy the previous set. Due to the fact that the first policy chain is the only policy chain emphesizing on significant, the aggregate outcome of the simulation can be used to measure the *Probablity Of Finding Significant* results, a.k.a, *Proportion Of Significant* results.
 
 !!! decisionstrategy "Configuration: Initial Selection Policy"
 	```json

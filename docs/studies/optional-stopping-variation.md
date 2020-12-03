@@ -15,7 +15,7 @@ In order to cover a range of optional stopping approaches, we start by simulatin
 
 ## Optional Stopping on Both Groups
 
-In our first study, we simulate the optional stopping by adding new observations as much as of *S* percent of the current sample size to every group. For example, a group with *N = 20* will have 22 observations after adding 10% new observations, *S = 10%*. Additionally, we vary the maxiumum number of trial that Researcher could perform the optional stopping with the given *S*. For instance, a Researcher — who is allowed to perform a maximum of 5 optional stopping trials — will continue adding 2 new obervations, for maximum number of 5 times, to each group until it finds a significant result. The variation of described parameters is as follow:
+In our first study, we simulate the optional stopping by adding new observations as much as of *S* percent of the current sample size to every group. For example, a group with *N = 20* will have 22 observations after adding 10% new observations, *S = 10%*. Additionally, we vary the maxiumum number of trials that the Researcher could perform the optional stopping with the given *S*. For instance, a Researcher — who is allowed to perform a maximum of 5 optional stopping trials — will continue adding 2 new obervations, for maximum number of 5 times, to each group until it finds a significant result. The variation of described parameters is as follow:
 
 - *S* ∈ {0.1, 0.2, 0.3, 0.4, 0.5}
 - *T* ∈ {1, 3, 5}
@@ -309,7 +309,7 @@ Finally, we can see the influence of publication bias on the effect size bias. E
 
 ## First Extension: Optional Stopping *Only* on Treatment Group
 
-In our first extension, we investigate the effect of only applying the optional stopping on treatment groups, meaning that Researcher will only add new observations to the treatment group and leave the control group intact. 
+In our first extension, we investigate the effect of only applying the optional stopping on treatment groups, meaning that the Researcher will only add new observations to the treatment group and leave the control group intact. 
 
 In the figure below, we can see the comparison between this study and the one performed previously, ie., adding new observation to both groups. In contrast to our expectation, adding new observation only to treatment groups does not have a considerable impact on the level of bias. This can be seen in the figure by tracking the slightly wider bias region in “Treatment” columns compared to their “Both” counterparts. 
 
