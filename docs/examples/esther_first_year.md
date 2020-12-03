@@ -278,15 +278,16 @@ In the case of Maassen, we need to induce different level of publication bias on
 ## Extended Simulation
 
 
-In the case of Maassen's simulation, we decided to extend the simulation by covering full range of publication bias, *P<sub>b</sub>*, and true effect size, *μ*. This extension does not change our main body of configuration. We only need to generate more configuration files with different values of *P<sub>b</sub>*, and *μ*, see [SAMoo](/samoo.md).
+In the case of Maassen's simulation, we decided to extend the simulation by covering full range of publication bias, *P<sub>b</sub>*, and true effect size, *μ*. This extension does not change our main body of configuration. We only need to generate more configuration files with different values of *P<sub>b</sub>*, and *μ*.
 
 - **μ ∈ [0, 1]**
 - **P<sub>b</sub> ∈ [0., 1.]**
 
-Figure 3, 4, 5, 6 illustrate our results in the form of contour plots. The x-axis is the range of true effect size, and y-axis is publication bias level, finally the plotted contour represent the level of bias, or power of our tests.
+Figures 3–8 illustrate our results in the form of contour plots. The x-axis corresponds to the range of true effect sizes, and y-axis shows the publication bias level, finally contour regions represent the level of bias, or power of our tests.
 
-- [ ] TODO: Add description
+Staring by the proportion of significant results in our outcomes pool, we notice a regular and expected pattern of higher proportion of significant results with higher true effect sizes and higher rate of publication bias, ie., the yellow region of each plot. Moreover, we see a clear shrinkage in the size of this region as we lower *ɑ*. Furthermore, notice the growth of the darker regions in lower effect sizes; which can be seen as the influence of lowering *ɑ* on diminishing the chance of finding significant results with lower true effect sizes.
 
+<!-- Results from Nov 27 Run -->
 <figure>
   <picture>
     <source 
@@ -296,62 +297,68 @@ Figure 3, 4, 5, 6 illustrate our results in the form of contour plots. The x-axi
   </picture> 
 </figure>
 
-- [ ] TODO: Add description
+Looking at the level of effect size bias, we observe higher bias in studies with 5 dependent variables. Moreover, notice the minor negligible effect of our QRPs on the level of bias. This is inline with our results from [Bakker et al., 2012](/examples/bakker_et_al_2012.md) where we concluded that the source of biases is the number of replications, and not the QRPs.
 
+<!-- Results from Nov 27 Run -->
 <figure>
   <picture>
     <source 
         srcset="/examples/figures/Esther_FYP/Esther_FYP_ES_Bias_Counter_Filled_dark.png" 
         media="(prefers-color-scheme: dark)">
-  <img src="/examples/figures/Esther_FYP/Esther_FYP_ES_Bias_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 3.</b> ES Bias</figcaption>
+  <img src="/examples/figures/Esther_FYP/Esther_FYP_ES_Bias_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 4.</b> Effect Size Bias</figcaption>
   </picture> 
 </figure>
 
-- [ ] TODO: Add description
+Figure below visualizes the accuracy of random-effect estimate's of the effect size. As we expected, the random-effect estimate improves as we increase *K*, and declines as we introduce more dependent variables.
 
+<!-- Results from Nov 27 Run -->
 <figure>
   <picture>
     <source 
         srcset="/examples/figures/Esther_FYP/Esther_FYP_RandomEffect_Bias_Counter_Filled_dark.png" 
         media="(prefers-color-scheme: dark)">
-  <img src="/examples/figures/Esther_FYP/Esther_FYP_RandomEffect_Bias_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 4.</b> Random Effect Estimate's Bias</figcaption>
+  <img src="/examples/figures/Esther_FYP/Esther_FYP_RandomEffect_Bias_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 5.</b> Random Effect Estimate's Bias</figcaption>
   </picture> 
 </figure>
 
-- [ ] TODO: Add description
+As shown below, power of Egger's test consistently improves as we add more publications to our pool, *K*. Moreover, as expected, we can observe the correlation of higher power with the increase of the publication bias rate. Notice the slight increase of the yellow region as we lowers *ɑ*, and add more dependent variables. Furthermore, as we discussed in [Bakker et al., 2012](/examples/bakker_et_al_2012.md), we observe a high rate of false positive in simulations with low publication bias rate.
 
+<!-- Results from Nov 27 Run -->
 <figure>
   <picture>
     <source 
         srcset="/examples/figures/Esther_FYP/Esther_FYP_Eggers_Test_Counter_Filled_dark.png" 
         media="(prefers-color-scheme: dark)">
-  <img src="/examples/figures/Esther_FYP/Esther_FYP_Eggers_Test_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 5.</b> Power of Egger's Test</figcaption>
+  <img src="/examples/figures/Esther_FYP/Esther_FYP_Eggers_Test_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 6.</b> Power of Egger's Test</figcaption>
   </picture> 
 </figure>
 
-- [ ] TODO: Add description
+Begg's Rank Correlation Test is an another test for detecting publication bias. As stated by Begg et al.[@Begg_1994], the test has a fair power with *K > 75*, and expected to have lower power with lower *K*'s. While we only simulated pools of publications with *K = 72*, we can observe the increase in Begg's test power as we increase *K*. It is worth mentioning that Begg's test performs better than Egger's test in terms of false positives. This can be seen by comparing the size of yellow regions within lower half of each plot, as we see much smaller confidence in reporting publication bias when the true publication bias is lower.
 
+<!-- Results from Nov 27 Run -->
 <figure>
   <picture>
     <source 
         srcset="/examples/figures/Esther_FYP/Esther_FYP_RankCorrelation_Test_Counter_Filled_dark.png" 
         media="(prefers-color-scheme: dark)">
-  <img src="/examples/figures/Esther_FYP/Esther_FYP_RankCorrelation_Test_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 6.</b> Power of Begg's Rank Correlation Test</figcaption>
+  <img src="/examples/figures/Esther_FYP/Esther_FYP_RankCorrelation_Test_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 7.</b> Power of Begg's Rank Correlation Test</figcaption>
   </picture> 
 </figure>
 
-- [ ] TODO: Add description
+??? info "Test Of Excess of Significant Findings [In Progress]"
 
-<figure>
-  <picture>
-    <source 
-        srcset="/examples/figures/Esther_FYP/Esther_FYP_TES_Counter_Filled_dark.png" 
-        media="(prefers-color-scheme: dark)">
-  <img src="/examples/figures/Esther_FYP/Esther_FYP_TES_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 7.</b> Power of Test of Excess of Significant Findings.</figcaption>
-  </picture> 
-</figure>
+    Finally, we measured the power of Test Of Excess of Significant Findings. Figure below shows the results of this measure across our parameters landscape. We are quite surprised with the test, and cannot quite make sense of it yet! Further explanation will follow!
 
-## Conclusion
+    <!-- Results from Nov 27 Run -->
+    <figure>
+      <picture>
+        <source 
+            srcset="/examples/figures/Esther_FYP/Esther_FYP_TES_Counter_Filled_dark.png" 
+            media="(prefers-color-scheme: dark)">
+      <img src="/examples/figures/Esther_FYP/Esther_FYP_TES_Counter_Filled_light.png" /><figcaption aria-hidden="true"><b>Figure 8.</b> Power of Test of Excess of Significant Findings.</figcaption>
+      </picture> 
+    </figure>
+
 
 
 \bibliography

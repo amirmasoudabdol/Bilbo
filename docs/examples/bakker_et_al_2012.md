@@ -15,7 +15,7 @@ As described by Bakker, the simulation study is concerned about 4 distinct strat
 > **Strategy 2.** Perform one large study and use some of the QRPs most popular in psychology (John et al., 2012). These QRPs may be performed sequentially until a significant result is found:
 > - Test a second dependent variable that is correlated with the primary dependent variable (for which John et al. found a 65% admittance rate)
 >  - Add 10 subjects (sequential testing; 57% admittance rate)
->  - Remove outliers (\|*Z*\| > 2) and rerun analysis (41% admittance rate)
+>  - Remove outliers (|*Z*| > 2) and rerun analysis (41% admittance rate)
 > 
 > **Strategy 3.** Perform, at most, five small studies each with (N/5) as sample size. Players may stop data collection when they find a significant result in the expected direction and only publish the desired result (the other studies are denoted “failed”; 48% admittance rate).
 > 
@@ -461,7 +461,6 @@ Figures below show the results of these modifications. As it is shown, while the
 </figure>
  
 
-
 ## Third Extension: Influence of Publication Bias
 
 In our last extension, we will explore the effect of publication bias on the level of effect size bias; moreover, we investigated the power of Egger's[@Egger_1997] test under different publication bias levels.
@@ -505,7 +504,7 @@ Starting by our general plots, we can observer the effect of publication bias on
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0001.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0001.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0001.png"/>
     </picture> 
 
 === "0.1"
@@ -514,7 +513,7 @@ Starting by our general plots, we can observer the effect of publication bias on
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0001.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0001.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0001.png"/>
     </picture> 
 
 === "0.2"
@@ -523,7 +522,7 @@ Starting by our general plots, we can observer the effect of publication bias on
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0002.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0002.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0002.png"/>
     </picture> 
 
 === "0.3"
@@ -532,7 +531,7 @@ Starting by our general plots, we can observer the effect of publication bias on
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0003.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0003.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0003.png"/>
     </picture> 
 
 === "0.4"
@@ -541,7 +540,7 @@ Starting by our general plots, we can observer the effect of publication bias on
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0004.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0004.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0004.png"/>
     </picture> 
 
 === "0.5"
@@ -550,7 +549,7 @@ Starting by our general plots, we can observer the effect of publication bias on
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0005.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0005.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0005.png"/>
     </picture> 
 
 === "0.6"
@@ -559,7 +558,7 @@ Starting by our general plots, we can observer the effect of publication bias on
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0006.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0006.png"/>
+     <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0006.png"/>
     </picture> 
 
 === "0.7"
@@ -568,7 +567,7 @@ Starting by our general plots, we can observer the effect of publication bias on
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0007.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0007.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0007.png"/>
     </picture> 
 
 === "0.8"
@@ -577,7 +576,7 @@ Starting by our general plots, we can observer the effect of publication bias on
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0008.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0008.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0008.png"/>
     </picture> 
 
 === "0.9"
@@ -586,7 +585,7 @@ Starting by our general plots, we can observer the effect of publication bias on
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0009.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0009.png"/>
+     <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0009.png"/>
     </picture> 
 
 === "1.0"
@@ -595,11 +594,11 @@ Starting by our general plots, we can observer the effect of publication bias on
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0010.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0010.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0010.png"/>
     </picture> 
 
 
-Moreover, level of the effect size bias can be 
+Moreover, the level of bias can be seen below. As expected, raising the publicatoin bias raises the level of bias accross all our configurations, with sharper swell in lower true effect sizes.
 
 === "0.0"
 
@@ -607,7 +606,7 @@ Moreover, level of the effect size bias can be
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0001.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0001.png"/>
+     <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0001.png"/>
     </picture> 
 
 === "0.1"
@@ -616,7 +615,7 @@ Moreover, level of the effect size bias can be
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0001.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0001.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0001.png"/>
     </picture> 
 
 === "0.2"
@@ -625,7 +624,7 @@ Moreover, level of the effect size bias can be
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0002.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0002.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0002.png"/>
     </picture> 
 
 === "0.3"
@@ -634,7 +633,7 @@ Moreover, level of the effect size bias can be
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0003.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0003.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0003.png"/>
     </picture> 
 
 === "0.4"
@@ -643,7 +642,7 @@ Moreover, level of the effect size bias can be
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0004.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0004.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0004.png"/>
     </picture> 
 
 === "0.5"
@@ -652,7 +651,7 @@ Moreover, level of the effect size bias can be
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0005.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0005.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0005.png"/>
     </picture> 
 
 === "0.6"
@@ -661,7 +660,7 @@ Moreover, level of the effect size bias can be
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0006.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0006.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0006.png"/>
     </picture> 
 
 === "0.7"
@@ -670,7 +669,7 @@ Moreover, level of the effect size bias can be
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0007.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0007.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0007.png"/>
     </picture> 
 
 === "0.8"
@@ -679,7 +678,7 @@ Moreover, level of the effect size bias can be
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0008.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0008.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0008.png"/>
     </picture> 
 
 === "0.9"
@@ -688,7 +687,7 @@ Moreover, level of the effect size bias can be
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0009.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0009.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0009.png"/>
     </picture> 
 
 === "1.0"
@@ -697,12 +696,10 @@ Moreover, level of the effect size bias can be
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0010.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0010.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0010.png"/>
     </picture>
 
-
-Furthermore, we can plot the power of Egger's test in our current setup.
-
+Figures below showcase the power of Egger's test in detecting publication bias. The average performance of the test is accepetable within most parameter configurations. However, we see large regions of false positives where Egger's test overestimate the presence of the publication bias, especially within smaller true effect sizes. It is also worth mentioning that Egger's test performs quite poorly within a pool of studies with larger sample sizes, *L; N = 40*, even with publication bias as high as %90.
 
 === "0.0"
 
@@ -710,7 +707,7 @@ Furthermore, we can plot the power of Egger's test in our current setup.
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0001.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0001.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0001.png"/>
     </picture> 
 
 === "0.1"
@@ -719,7 +716,7 @@ Furthermore, we can plot the power of Egger's test in our current setup.
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0001.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0001.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0001.png"/>
     </picture> 
 
 === "0.2"
@@ -728,7 +725,7 @@ Furthermore, we can plot the power of Egger's test in our current setup.
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0002.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0002.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0002.png"/>
     </picture> 
 
 === "0.3"
@@ -737,7 +734,7 @@ Furthermore, we can plot the power of Egger's test in our current setup.
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0003.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0003.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0003.png"/>
     </picture> 
 
 === "0.4"
@@ -746,7 +743,7 @@ Furthermore, we can plot the power of Egger's test in our current setup.
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0004.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0004.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0004.png"/>
     </picture> 
 
 === "0.5"
@@ -755,7 +752,7 @@ Furthermore, we can plot the power of Egger's test in our current setup.
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0005.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0005.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0005.png"/>
     </picture> 
 
 === "0.6"
@@ -764,7 +761,7 @@ Furthermore, we can plot the power of Egger's test in our current setup.
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0006.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0006.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0006.png"/>
     </picture> 
 
 === "0.7"
@@ -773,7 +770,7 @@ Furthermore, we can plot the power of Egger's test in our current setup.
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0007.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0007.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0007.png"/>
     </picture> 
 
 === "0.8"
@@ -782,7 +779,7 @@ Furthermore, we can plot the power of Egger's test in our current setup.
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0008.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0008.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0008.png"/>
     </picture> 
 
 === "0.9"
@@ -791,7 +788,7 @@ Furthermore, we can plot the power of Egger's test in our current setup.
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0009.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0009.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0009.png"/>
     </picture> 
 
 === "1.0"
@@ -800,14 +797,23 @@ Furthermore, we can plot the power of Egger's test in our current setup.
       <source 
           srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0010.png" 
           media="(prefers-color-scheme: dark)">
-    <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0010.png"/>
+      <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0010.png"/>
     </picture>
 
 
 
 ## Conclusion
 
-In this example, we discussed the process of translating an existing project into SAM. We started by replicating the original simulation, fine-tunning our configuration and comparing our results. Consequently, after successfully replicating the original results, we have tried to build on top Bakker's simulation and demonstrate the process of extending SAM's configuration. 
+In this example, we discussed the process of translating an existing project into SAM. We started by replicating the original simulation, fine-tunning our configuration and comparing our results. Consequently, after successfully replicating the original results, we built on top Bakker et al., simulation.
+
+In our first extension, we showed that while lowering the alpha decreases the chance of finding significant results it does not necessarily help with the reduction of bias. Moreover, we showed that the number of replications directly influence the level of bias.
+
+In the second extension, we showed that more aggressive QRPs do not proportionally contribute to higher effect size biases. Together with our results from first extension, we believe that the main source of bias in Bakker et al., is the number of replications and the role of QRPs are almost negligible.
+
+In our third and last extension, we investigated the effect of publication bias on the overall bias and the power of Egger’s test in defecting publication bias. We showed that while Egger's test generally provide a good measure of publication bias in the presence of publication bias, it consistently overestimate the level of bias when there is not publication bias is present.
+
+
+
 
 
 \bibliography
