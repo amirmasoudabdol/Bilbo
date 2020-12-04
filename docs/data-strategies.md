@@ -1,6 +1,6 @@
 # Data Strategies
 
-*Data Strategy is the source of data, i.e., population. It knows the underlying design, and its properties*. During the [research preperation](flow.md#prepare-research) stage, the Researcher reaches our to the Data Strategy object and uses it to populates — ie., generates/collects data for — its Experiment.
+*Data Strategy is the source of data, i.e., population. It knows the underlying design, and its properties*. During the [research preperation](execution-flow.md#prepare-research) stage, the Researcher reaches our to the Data Strategy object and uses it to populates — ie., generates/collects data for — its Experiment.
 
 ## Study Design
 

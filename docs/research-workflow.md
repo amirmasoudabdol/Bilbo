@@ -1,8 +1,8 @@
 # Research Workflow
 
-After [introducing](flow.md) general steps of conducting research, in this section, we will get into the details of Decision Strategy and Research Workflow.
+After [introducing](execution-flow.md) general steps of conducting research, in this section, we will get into the details of Decision Strategy and Research Workflow.
 
-Figure 1 combines all the previously discussed processes and flowcharts of the [Execution Flow](flow.md), and gives an overview of the entire research workflow. The diagram can be separated into two main processes, *Main Research Line* and *Hacking Workflow*. Additionally, there are several *Selection→Decision* sequences spread throughout the flowchart (highlighted in red) that helps the Researcher to navigate between stages, and make certain decisions.
+Figure 1 combines all the previously discussed processes and flowcharts of the [Execution Flow](execution-flow.md), and gives an overview of the entire research workflow. The diagram can be separated into two main processes, *Main Research Line* and *Hacking Workflow*. Additionally, there are several *Selection→Decision* sequences spread throughout the flowchart (highlighted in red) that helps the Researcher to navigate between stages, and make certain decisions.
 
 
 ![<b>Figure 1.</b> An overview of Research and Hacking Workflow.](/figures/research-workflow.png)
@@ -15,7 +15,7 @@ This section will walk you through each process and discuss each step in more de
   <img src="/figures/research-workflow-initial-stage.png" width="30%" align="right">
 </picture>
 
-As discussed in the [Introduction](/introduction.md) section, research starts by initializing the Experiment Setup and thereafter preparation of the Experiment which consists of generating data, calculating statistics, running tests, calculating effects, etc.
+As discussed in the [Design](/design.md) section, research starts by initializing the Experiment Setup and thereafter preparation of the Experiment which consists of generating data, calculating statistics, running tests, calculating effects, etc.
 
 When the Experiment is fully initialized, the Researcher is able to asses the quality of results, and select her preferred outcome among all available outcome variables across all conditions and dependent variables. This is beingdone during the first selection stage, **Initial Selection**. At this stage, the Researcher can query all available outcomes using specific set of rules. For example, by using `["sig", "min(pvalue)"]` [Policy](/decision-strategies.md#policies), she will seek an outcome with minimum *p*-value between those that are significant.
 

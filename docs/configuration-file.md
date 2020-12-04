@@ -4,9 +4,9 @@ title: Introduction
 
 # Configuration File
 
-SAM uses a [JSON](https://www.json.org) file to load and save all simulation parameters. The code block below shows a general configuration file used by SAM. As highlighted, the config file is separated into 4 different sections, each corresponding to one of SAM's component discussed previously. In this chapter, we will discuss each section, and learn how to configure each module separately; in order to be able to customize and configure all processes of [execution](flow.md), [research](/research-workflow.md) and [hacking](/hacking-wrokflow.md) workflows.
+SAM uses a [JSON](https://www.json.org) file to load and save all simulation parameters. The code block below shows a general configuration file used by SAM. As highlighted, the config file is separated into 4 different sections, each corresponding to one of SAM's component discussed previously. In this chapter, we will discuss each section, and learn how to configure each module separately; in order to be able to customize and configure all processes of [execution](execution-flow.md), [research](/research-workflow.md) and [hacking](/hacking-wrokflow.md) workflows.
 
-<!-- entire  a full research as described in [Execution Flow](flow.md) and [Research Workflow](research-workflow.md). Moreover, we will discuss how processes of execution,  -->
+<!-- entire  a full research as described in [Execution Flow](execution-flow.md) and [Research Workflow](research-workflow.md). Moreover, we will discuss how processes of execution,  -->
 
 !!! example "Sample Configuration File"
 	```json hl_lines="2 26 59 68"

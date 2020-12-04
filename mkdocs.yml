@@ -2,9 +2,9 @@ site_name: SAM
 nav:
     - Home: index.md
     - Design:
-        - introduction.md
         - design.md
-        - flow.md
+        - modules.md
+        - execution-flow.md
         - research-workflow.md
     - Configuration:
         - configuration-file.md

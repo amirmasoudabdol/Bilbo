@@ -1,190 +1,31 @@
 ---
-title: Modules 
+title: Introduction
 ---
 
 # Design
 
-In the [previous section](introduction.md#intro-research-process), we listed main components and entities involved in the different stages of conducting research, e.g., Experiment Setup, Experiment, Researcher, Submission, and Journal. *In our model*, each component is a semi-independent entity while the whole system and its processes (i.e. conducting scientific research) are defined through their interactions.
+First, we will review a common process of defining, conducting and reporting scientific research. In this section, we describe a *simplified* **process of producing scientific result**. In order to define a list of components and entities involved in different stages of conducting research. Later, in the [Design](design.md) section, we will explain how each component is represented in SAM.
 
-One of our main design goals with SAM was to achieve a level of flexibility where we could change different aspects of each component. In order to achieve this, we decoupled the system to smaller — but conceptually meaningful — routines and entities. Figure 1. shows these components, and their dependencies and interactions with each other.
+## The Scientific Research Process
 
-![SAM's main components and their interactions](../figures/components-revised.png)
+The *process* of producing scientific research is often a cumbersome and complicated process. A typical scientific study starts by *formulating a hypothesis* when a [Researcher](design.md#researcher) jots down her ideas about how a certain process influences a certain phenomenon or how she thinks a complicated system works. In order to test this hypothesis, she *sets up an experiment* in which the underlying parameters and boundaries of her theories and ideas are defined.
 
+After the [Experiment Setup](design.md#experiment-setup) is finalized, an [Experiment](design.md#experiment) is conducted in which the Researcher aims to collect certain types of data in order to test her hypothesis, e.g., questionnaire results, sensors data, images, etc. The next step is (pre-)processing and analysis of the data, which leads to a conclusion evaluating her initial hypothesis (a.k.a results). If the results are informative — regardless of agreeing or disagreeing with the *initial hypothesis* (i.e., *pre-registered hypothesis*) — the Researcher selects a [Journal](design.md#journal) and submits her findings in the form of a [Manuscript](design.md#submission), for it to be reviewed according to the Journal's criteria. Finally, the Journal will decide whether the submitted manuscript is published.
 
-!!! attention
-		Throughout this document, we use the color assigned to each module in Figure 1. to refer to them in different sections. 
+![<b>Figure 1.</b> The Simplified Process of Producing a Scientific Publication/Result.](/figures/Research_Process.png)
 
-This section describes the design principles behind each component, what they model in the real world and how they work and interact with each others to collectively simulate the process of producing scientific research.
+## Meta-analysis
 
-## SAM's Main Components
+It has been shown and discussed [cite, cite], the aforementioned process is often long and prone to errors in every different stage. The natural complexity of conducting a research, together with the large number of degrees of freedom available to researchers and journals, will undoubtedly affect the quality of research and publications [cite, cite]. Researchers may make mistakes, and journals may select a particular set of publications based on erroneous or outdated criteria. As a result, various biases will accumulate the pool of publications and ultimately affect our understanding of a certain topic [cite, cite, cite].
 
-SAM consists of 3 main components, *Experiment, Researcher* and *Journal*. Each component mimics one of the subprocesses or entities that are discussed in the [Introduction](introduction.md) The list below briefly introduces each component alongside their roles.
+Studying this interaction between *Researchers*, their *Research*, *Journals* (i.e. the publishing medium), and Publications (i.e., *Knowledge*), is a challenging task[@Bakker_2012]<sup>,</sup>[@Bakker_2014] [Marjan, Robbie, Jelte, cite, cite, cite]. The list of degrees of freedom is long[@John_2012aa]<sup>,</sup>[@Agnoli_2017] [cite], and researchers are insufficiently aware of the consequences of certain procedures on the final outcome of their research. 
 
-- The *[Experiment](#experiment)* comprises of several parts, each dealing with different aspects of a research, e.g., setup, data, test, effect.
-    - *[Experiment Setup](#experiment-setup)* holds the specification of the design. The Researcher can only set these parameters once, at the start of an experiment. In fact, the *Experiment Setup* implementation simulates the concept of *pre-registration*.
-        - *[Data Strategy](#data-strategy)* is a routine used to generate data based on specified parameters in the *Experiment Setup*.
-        - *[Test Strategy](#test-strategy)* is the statistical method of choice in the *Experiment Setup* for testing the result of an *Experiment*.
-        - [*Effect Strategy*](#effect-strategy) defines the method of calculating effect sizes in an *Experiment*.
-- The *[Researcher](#researcher)* module imitates the behaviors of a researcher, including possible questionable research practices conducted by him/her. The Researcher defines the Experiment Setup, generates and collects data, runs the statistical test, decides whether to preform any QRPs, prepares the *Submission* record, and finally submits its finding(s) to the *Journal* of her/his choice.
-    - *[Decision Strategy](#decision-strategy)* is the underlying logic and steps of performing the research, as well as selecting and reporting specific variables as the primary outcome in an *Experiment*.
-    - *[Hacking Strategy](#hacking-startegies)* is a list of questionable research practices in the researcher's arsenal. In the case where the researcher decides to hack his/her way to finding significant results, he/she can use these methods.
-- The [*Journal*](#journal) is a container of publications. The Journal keeps track of its publications and can utilize different metrics to adapts its selection strategy.
-    - *[Selection Strategy](#selection-strategy)* is the internal algorithm by which the journal decides whether a submission will be accepted.
-    - *[Submission](#submission)* is a concise report, acting as a scientific paper, or a manuscript that it is going to be submitted for review to the Journal.
+In recent years, the field of meta-analysis has grown in size and popularity in an attempt to evaluate and *account* for the various biases introduced by this process. As a result, the scientific community have defined and documented the effects of researchers' degrees of freedom on published results [cite] and the unwanted outcomes of journals' tendency to publish positive and novel results [cite]. For example, it has been shown that the process of adding new data points to an experiment — after the initial data collection — is a widespread practice[@John_2012aa]<sup>,</sup>[@Agnoli_2017] and it has a severe effect on researchers' ability to create significant results; and therefore makes their research more appealing to biased journals, and consequently skew our collective knowledge.
 
-!!! note
+While meta-analysts and statisticians are hard at work to identify and correct for these issues, lack of data and the complicated nature of aforementioned interactions make it challenging to address this issue systematically. To the extend that the scientific community cannot agree on the effects and propagative impacts of questionable research practices on our collective knowledge [cite, papers supporting some of the qrps], a.k.a, *true effect size*.
 
-    Unlike a real scientific journal that covers a wide range of research tracks, SAM's Journal in its current implementation assumes that all submitted publications are from one research track. In other words, SAM's journals are mainly acting as a pool for related studies ready to be analyzed using meta-analyses methods.
+## SAM
 
-<!-- !!! note
+With SAM, we are hoping to address this issue. We are developing a standardize and flexible framework for studying of these processes and interactions. SAM streamlines the process of designing and executing large simulation studies covering as many aspects of **performing scientific research** as possible, from designing the experiment setup to the process of reviewing and accepting research by journals. 
 
-    SAM uses several object-oriented principles and design patterns in its implementation. Since all SAM components' are technically C++ classes, we may refer to them as objects, e.g., Experiment object, and they will appear in `monospace` font. -->
-    
-The rest of this section discusses each component properties and rule in more details, and more information about each component can be found in their dedicated pages.
-
-### Experiment
-
-<picture>
-  <img src="../figures/experiment-stack.png" width="300" align="right">
-</picture>
-
-As mentioned, an Experiment object acts as an umbrella for everything related to an actual experiment. This includes metadata (a.k.a Experiment Setup), raw data, method/model for generating the data, e.g., [Linear Model](/data-strategies.md#linear-model), methods of testing the hypothesis, and calculating the effect. The Researcher object has complete control over every aspect of an Experiment **with one exception**: it can only read and not change the Experiment Setup object. This is an important factor when later on we discuss the concept of pre-registration.
-
-The main components of the Experiment are:
-
-- Experiment Setup
-- Data, an object containing actual data points
-
-#### Experiment Setup
-
-After the initialization phase, SAM treats the Experiment Setup object as a read-only object. During the initialization phase, SAM initializes and randomizes the Experiment Setup based on given parameters. Thereafter, Experiment Setup will stay intact in the code and will be used as a reference point in different stages. 
-
-The main components of the Experiment Setup are:
-
-- Design Parameters
-	- Number of conditions
-	- Number of dependent variables
-	- Number of observations per group
-- Data Strategy
-- Test Strategy
-- Effect Strategy
-
-##### Data Strategy
-
-Data Strategy acts as the population of the study, i.e., data source. In most cases, an instance of the Data Strategy object uses a statistical model to sample data points and populates the `Data` object of the Experiment. 
-
-Moreover, with certain *p*-hacking methods, e.g., [optional stopping](/hacking-strategies/optional-stopping), the data strategy will be used to generate *extra* data points as requested by the optional stopping.
-
-Available data strategies are:
-
-- Linear Model
-- Graded Response Model
-- Latent Model (under development)
-
-##### Test Strategy
-
-`TestStrategy` provides a routine for testing the hypothesis. TestStrategy can access the entire Experiment object but often it is restricted to only modifying relevant variables, e.g., `pvalue, statistics, sig`.
-
-Test Strategies already implemented:
-
-- T-Test
-- F-Test
-- Yuen T-Test
-- Wilcoxon Test
-
-##### Effect Strategy
-
-`EffectStrategy` defines a method of calculating the magnitude of effect between two experimental groups.
-
-Available effect strategies:
-
-- Mean Difference
-- Cohen's D
-- Hedge's G
-- Odd Ratio
-
-### Journal
-
-<picture>
-  <img src="../figures/journal-stack.png" width="300" align="right">
-</picture>
-
-In SAM, a `Journal` is a container for *accepted* publications. `Journal` is designed to mimic the reviewing process. Therefore, it uses an arbitrary algorithm for deciding whether a submission will be accepted.
-
-The Journal's components are:
-
-- Selection Strategy
-- Accepted List, ie., Publications List
-- Rejected List
-- Meta-analytic Methods
-	- Meta-analytic Results
-
-#### Selection Strategy
-
-`Selection Strategy` implements the logic behind accepting or rejecting a submission. The simplest algorithms are based on *p*-values and their decision is a simple threshold check. However, more elaborate selection strategies incorporate different metrics or criteria (e.g., pre-registration, sample sizes, or meta-analysis) into their final decision. For instance, if appropriate, a journal can have an updated estimation of the effect size from its current publications pool and use that information to accept or reject new submissions.
-
-List of available selection strategies are:
-
-- Significant Selection
-- Random Selection
-- Free Selection
-
-#### Submission
-
-A Submission is a container, created by the Researcher and provided to the Journal. It provides a simple interface between Journal, Experiment and Researcher objects. In fact, a Submission resembles a manuscript when it is at the hand of the researcher and a publication after being accepted by the journal. 
-
-After performing the test and choosing an outcome variable, the Researcher puts together a report containing necessary information for the Journal to decide whether to accept or reject the submitted finding(s). This representation allows us to mimic several important concepts related to publication habits, e.g., the file-drawer effect, pre-registration. 
-
-<!-- !!! note
-
-    Submission is an abstract representation of the manuscript and it does not try to closely resembles a full publication. -->
-
-### Researcher
-
-<!-- ![](../figures/researcher-stack.png){: align=right} -->
-
-<picture>
-  <img src="../figures/researcher-stack.png" width="300" align="right">
-</picture>
-
-The Researcher object is the main player in the simulation. It uses the Experiment Setup to prepare the Experiment and send the final outcome to the Journal for the reviewing process.
-
-After the initialization of the Experiment Setup, the Researcher prepares the Experiment object by collecting data via the Data Strategy, tests the hypothesis via the Test Strategy, and calculates the effect sizes using the Effect Strategy. Then, if configured to, it applies different QRPs on the Experiment and hacks its way to a satisfactory result. In the end, the researcher prepares a Submission record and sends it to the Journal for review. This process is discussed in more detail in [Execution Flow](flow.md) and [Research Workflow](research-workflow.md). 
-
-#### Decision Strategy
-
-Decision Strategy models the decision making process during the research process. The Researcher relies on the verdict of the decision strategy two main ways, **Selection** and **Decision** [policies](/decision-strategies.md#policies).
-
-- **Selection** policies are used by Researchers to filter and select an outcome from a group of outcomes. For instance, if a Researcher only considers outcomes with significant *p*-values satisfactory, a selection policy will help her to only select for those among all available outcomes. 
-- **Decision** policies process, are used to make certain decisions during the research process. For instance, whether a researcher should start applying QRPs on an experiment, or whether it should submit the final submission to the journal. 
-
-**Selection** and **Decision** policies follows each other in this order. In most cases, a decision should be made about the already selected outcome. For instance, as the researcher applies a QRP on an experiment, he uses a **Selection** policy to look for his preferred outcome, then, he needs to make a decision whether he is going to continue with the next QRP or if he finds the selection satisfactory. The notion of satisfactory outcome will be decided by a **Decision** policy. As we will discuss later, we’ll be able to define various criteria (policies) for **selection** and **decision** processes. 
-
-Some of the Selection→Decision sequences available are:
-
-- *Initial* **Selection Policy**
-- *Will be Hacking* **Decision Policy**
-	- each hacking strategy will end with a selection-decision of its own
-		- Selection
-		- Decision
-- *Between Hacked Outcomes* **Selection Policies**
-- *Will Continue Replicating* **Decision Policies**
-- *Will be Submitting To Journal* **Decision Policy**
-
-Decision Strategy is one of the more elaborated pieces of SAM. It engages in different stages of conducting the research by researcher and different hacking strategies. This process will be clarified in [Flow](flow.md) and [Research Workflow](/research-workflow.md) and [Decision Strategy](/decision-strategies.md).
-
-#### Hacking Strategies
-
-Hacking Strategy is an abstract representation of different *p*-hacking and QRP methods. The Researcher *performs* a hacking strategy by sending a copy of its Experiment to a chosen method. The Hacking Strategy takes control of the experiment, modifies it, (e.g., adding new values, removing values), recomputes the statistics, reruns the test, and finally returns the modified Experiment. Finally, the researcher can evaluate the *hacked* experiment, and select the *hacked* result if satisfactory.
-
-If more than one hacking strategies are registered, The Researcher navigates through them by the logic defined in Decision Strategy and decides whether any of the *hacked* experiments will be used for constructing the *Submission*. This process will be discussed in more detail, in *[Decision Strategy](/decision-strategies.md)* and *[Hacking Strategy](/hacking-strategies.md)*.
-
-The available hacking strategies are:
-
-- Optional Stopping
-- Outliers Removal
-- Subjective Outliers Removal
-- Questionable Rounding
-- Falsifying Data
-- Fabricating Data
-- Stopping Data Collection
+\bibliography
