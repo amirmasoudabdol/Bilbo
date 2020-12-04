@@ -75,6 +75,7 @@ plugins:
 # Configuration
 theme:
   name: material
+  custom_dir: overrides
   font: false
   font:
     code: ui-monospace
