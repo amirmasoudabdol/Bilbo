@@ -7,8 +7,8 @@ p {
 	text-align: justify;
 }
 
-code {
-	/*font-family: ui-monospace !important;*/
+code, pre {
+	font-family: ui-monospace, Menlo !important;
 	/*font-weight: 600 !important;*/
   font-size: .90em !important; 
 }

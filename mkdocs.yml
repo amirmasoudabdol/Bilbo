@@ -80,12 +80,8 @@ theme:
   name: material
   custom_dir: overrides
   font: false
-  font:
-    code: ui-monospace
-    # text: -ui-sans-serif
   palette:
     scheme: preference
-    # primary: black
   include_homepage_in_sidebar: false
   highlightjs: true
   logo:
