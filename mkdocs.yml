@@ -59,14 +59,17 @@ nav:
     #     - contact.md
 extra_css: 
   - custom.css
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
 repo_name: GitHub
-repo_url: https://github.com/amirmasoudabdol/sampp
-edit_uri: ""
+repo_url: https://github.com/amirmasoudabdol/samdd
+edit_uri: edit/main/docs
 
 
 plugins:
   - search
   - img2fig
+  - git-revision-date
   - bibtex:
       bib_file: "refs.bib"
       cite_style: "pandoc"
@@ -140,5 +143,3 @@ markdown_extensions:
       permalink: true
 
 
-extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
