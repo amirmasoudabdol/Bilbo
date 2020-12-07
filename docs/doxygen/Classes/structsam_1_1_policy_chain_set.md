@@ -100,7 +100,7 @@ They are mainly being used and interpreted like a list of preferences, and will 
 
 ## Public Functions Documentation
 
-### function PolicyChainSet
+### function `PolicyChainSet`
 
 ```cpp
 PolicyChainSet() =default
@@ -134,7 +134,7 @@ PolicyChainSet() =default
 
 
 
-### function PolicyChainSet
+### function `PolicyChainSet`
 
 ```cpp
 inline PolicyChainSet(
@@ -171,7 +171,7 @@ inline PolicyChainSet(
 
 
 
-### function begin
+### function `begin`
 
 ```cpp
 inline auto begin()
@@ -205,7 +205,7 @@ inline auto begin()
 
 
 
-### function cbegin
+### function `cbegin`
 
 ```cpp
 inline auto cbegin() const
@@ -239,7 +239,7 @@ inline auto cbegin() const
 
 
 
-### function end
+### function `end`
 
 ```cpp
 inline auto end()
@@ -273,7 +273,7 @@ inline auto end()
 
 
 
-### function cend
+### function `cend`
 
 ```cpp
 inline auto cend() const
@@ -307,7 +307,7 @@ inline auto cend() const
 
 
 
-### function operator()
+### function `operator()`
 
 ```cpp
 inline std::optional< Submission > operator()(
@@ -344,7 +344,7 @@ inline std::optional< Submission > operator()(
 
 Todo: Check and return, 
 
-### function operator[]
+### function `operator[]`
 
 ```cpp
 inline PolicyChain & operator[](
@@ -380,7 +380,7 @@ inline PolicyChain & operator[](
 
 
 
-### function operator[]
+### function `operator[]`
 
 ```cpp
 inline const PolicyChain & operator[](
@@ -416,7 +416,7 @@ inline const PolicyChain & operator[](
 
 
 
-### function size
+### function `size`
 
 ```cpp
 inline size_t size() const
@@ -450,7 +450,7 @@ inline size_t size() const
 
 
 
-### function empty
+### function `empty`
 
 ```cpp
 inline bool empty() const
@@ -488,7 +488,7 @@ inline bool empty() const
 
 ## Public Attributes Documentation
 
-### variable pchains
+### variable `pchains`
 
 ```cpp
 std::vector< PolicyChain > pchains;
@@ -526,6 +526,3 @@ std::vector< PolicyChain > pchains;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

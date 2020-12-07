@@ -108,7 +108,7 @@ _Filename: .json_
 
 ## Public Functions Documentation
 
-### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
+### function `NLOHMANN_DEFINE_TYPE_INTRUSIVE`
 
 ```cpp
 NLOHMANN_DEFINE_TYPE_INTRUSIVE(
@@ -157,7 +157,7 @@ This is a helper macro that generates from/to_json methods for this struct.
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 HackingMethod name = HackingMethod::QuestionableRounding;
@@ -191,7 +191,7 @@ HackingMethod name = HackingMethod::QuestionableRounding;
 
 
 
-### variable threshold
+### variable `threshold`
 
 ```cpp
 double threshold {0.005};
@@ -226,7 +226,7 @@ double threshold {0.005};
 Indicates the distance between the pvalue and alpha by which the researcher considers to round the pvalue to significance 
 
 
-### variable rounding_method
+### variable `rounding_method`
 
 ```cpp
 std::string rounding_method = "diff";
@@ -265,7 +265,7 @@ Rounding Method
 TodoI cna possibly add more methods here, e.g.,
 
 
-### variable prevalence
+### variable `prevalence`
 
 ```cpp
 double prevalence {0.9};
@@ -299,7 +299,7 @@ double prevalence {0.9};
 
 
 
-### variable defensibility
+### variable `defensibility`
 
 ```cpp
 double defensibility {0.7};
@@ -333,7 +333,7 @@ double defensibility {0.7};
 
 
 
-### variable stage
+### variable `stage`
 
 ```cpp
 HackingStage stage {HackingStage::Reporting};
@@ -371,6 +371,3 @@ HackingStage stage {HackingStage::Reporting};
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

@@ -53,7 +53,7 @@ title: sam::Journal::Parameters
 
 ## Public Functions Documentation
 
-### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
+### function `NLOHMANN_DEFINE_TYPE_INTRUSIVE`
 
 ```cpp
 NLOHMANN_DEFINE_TYPE_INTRUSIVE(
@@ -95,7 +95,7 @@ NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 std::string name;
@@ -129,7 +129,7 @@ std::string name;
 
 
 
-### variable max_pubs
+### variable `max_pubs`
 
 ```cpp
 int max_pubs;
@@ -167,6 +167,3 @@ int max_pubs;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:07 CET

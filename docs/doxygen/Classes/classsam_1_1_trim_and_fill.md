@@ -87,7 +87,7 @@ Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
 
 ## Public Functions Documentation
 
-### function TrimAndFill
+### function `TrimAndFill`
 
 ```cpp
 TrimAndFill() =default
@@ -121,7 +121,7 @@ TrimAndFill() =default
 
 
 
-### function TrimAndFill
+### function `TrimAndFill`
 
 ```cpp
 inline TrimAndFill(
@@ -157,7 +157,7 @@ inline TrimAndFill(
 
 
 
-### function estimate
+### function `estimate`
 
 ```cpp
 virtual void estimate(
@@ -195,7 +195,7 @@ virtual void estimate(
 
 
 
-### function TF
+### function `TF`
 
 ```cpp
 static ResultType TF(
@@ -275,7 +275,7 @@ TodoStill need to report the p_k0
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -313,6 +313,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

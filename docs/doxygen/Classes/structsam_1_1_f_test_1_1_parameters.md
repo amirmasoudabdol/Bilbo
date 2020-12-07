@@ -53,7 +53,7 @@ title: sam::FTest::Parameters
 
 ## Public Functions Documentation
 
-### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
+### function `NLOHMANN_DEFINE_TYPE_INTRUSIVE`
 
 ```cpp
 NLOHMANN_DEFINE_TYPE_INTRUSIVE(
@@ -95,7 +95,7 @@ NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 TestMethod name = [TestMethod::FTest](/doxygen/Classes/classsam_1_1_test_strategy/#enumvalue-ftest);
@@ -129,7 +129,7 @@ TestMethod name = [TestMethod::FTest](/doxygen/Classes/classsam_1_1_test_strateg
 
 
 
-### variable alpha
+### variable `alpha`
 
 ```cpp
 double alpha;
@@ -167,6 +167,3 @@ double alpha;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

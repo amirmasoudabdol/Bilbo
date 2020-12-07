@@ -98,7 +98,7 @@ Inherits from [sam::HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strat
 
 ## Public Functions Documentation
 
-### function GroupPooling
+### function `GroupPooling`
 
 ```cpp
 GroupPooling() =default
@@ -132,7 +132,7 @@ GroupPooling() =default
 
 
 
-### function GroupPooling
+### function `GroupPooling`
 
 ```cpp
 inline GroupPooling(
@@ -168,7 +168,7 @@ inline GroupPooling(
 
 
 
-### function perform
+### function `perform`
 
 ```cpp
 virtual void perform(
@@ -179,8 +179,8 @@ virtual void perform(
 
 **Parameters**: 
 
-  * **experiment** A pointer to researcher's experiment 
-  * **decisionStrategy** A pointer to researcher's decision strategy 
+  * **`experiment`** A pointer to researcher's experiment 
+  * **`decisionStrategy`** A pointer to researcher's decision strategy 
 
 
 
@@ -216,7 +216,7 @@ Perform [Group](/doxygen/Classes/classsam_1_1_group/) Pooling on the given [Expe
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -254,6 +254,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:07 CET

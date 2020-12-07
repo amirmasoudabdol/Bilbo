@@ -123,7 +123,7 @@ A strategy performing Egger's Test on the available list of [Journal](/doxygen/C
 
 ## Public Functions Documentation
 
-### function EggersTestEstimator
+### function `EggersTestEstimator`
 
 ```cpp
 EggersTestEstimator() =default
@@ -157,7 +157,7 @@ EggersTestEstimator() =default
 
 
 
-### function EggersTestEstimator
+### function `EggersTestEstimator`
 
 ```cpp
 inline EggersTestEstimator(
@@ -193,7 +193,7 @@ inline EggersTestEstimator(
 
 
 
-### function estimate
+### function `estimate`
 
 ```cpp
 virtual void estimate(
@@ -231,7 +231,7 @@ virtual void estimate(
 
 
 
-### function EggersTest
+### function `EggersTest`
 
 ```cpp
 static ResultType EggersTest(
@@ -273,7 +273,7 @@ static ResultType EggersTest(
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -311,6 +311,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

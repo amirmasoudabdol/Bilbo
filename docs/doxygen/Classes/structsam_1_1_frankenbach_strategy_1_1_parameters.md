@@ -54,7 +54,7 @@ title: sam::FrankenbachStrategy::Parameters
 
 ## Public Attributes Documentation
 
-### variable method
+### variable `method`
 
 ```cpp
 std::string method {"FrankenbachStrategy"};
@@ -88,7 +88,7 @@ std::string method {"FrankenbachStrategy"};
 
 
 
-### variable base_hp
+### variable `base_hp`
 
 ```cpp
 double base_hp {0};
@@ -122,7 +122,7 @@ double base_hp {0};
 
 
 
-### variable lo_se
+### variable `lo_se`
 
 ```cpp
 double lo_se {0.4};
@@ -156,7 +156,7 @@ double lo_se {0.4};
 
 
 
-### variable hi_se
+### variable `hi_se`
 
 ```cpp
 double hi_se {0.6};
@@ -190,7 +190,7 @@ double hi_se {0.6};
 
 
 
-### variable min_se
+### variable `min_se`
 
 ```cpp
 double min_se {0.1};
@@ -224,7 +224,7 @@ double min_se {0.1};
 
 
 
-### variable max_se
+### variable `max_se`
 
 ```cpp
 double max_se {0.6};
@@ -262,6 +262,3 @@ double max_se {0.6};
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:07 CET

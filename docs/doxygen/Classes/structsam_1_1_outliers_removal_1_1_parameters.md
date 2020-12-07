@@ -113,7 +113,7 @@ _Filename: .json_
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 HackingMethod name = HackingMethod::OutliersRemoval;
@@ -147,7 +147,7 @@ HackingMethod name = HackingMethod::OutliersRemoval;
 
 
 
-### variable target
+### variable `target`
 
 ```cpp
 HackingTarget target {HackingTarget::Both};
@@ -182,7 +182,7 @@ TO BE IMPLEMENTED!
 
 
 
-### variable order
+### variable `order`
 
 ```cpp
 std::string order {"max first"};
@@ -220,7 +220,7 @@ Indicates the order where outliers are going to be removed from the experiment.
 * `random`, removes the first outlier first, this is as a random outlier is being removed 
 
 
-### variable num
+### variable `num`
 
 ```cpp
 int num {3};
@@ -255,7 +255,7 @@ Indicates the number of outliers to be removed in each iteration.
 
 
 
-### variable n_attempts
+### variable `n_attempts`
 
 ```cpp
 int n_attempts {1};
@@ -290,7 +290,7 @@ int n_attempts {1};
 Indicates the total number of attempts, i.e., _iterations_, to remove outliers 
 
 
-### variable min_observations
+### variable `min_observations`
 
 ```cpp
 int min_observations {15};
@@ -325,7 +325,7 @@ Indicates the minimum number of observations allowed during the process.
 
 
 
-### variable multipliers
+### variable `multipliers`
 
 ```cpp
 std::vector< double > multipliers = {3};
@@ -360,7 +360,7 @@ A list of standard deviation multipliers for identidying outliers.
 
 
 
-### variable stopping_cond_defs
+### variable `stopping_cond_defs`
 
 ```cpp
 std::vector< std::string > stopping_cond_defs;
@@ -395,7 +395,7 @@ Stopping condition [PolicyChain]() definitions.
 
 
 
-### variable defensibility
+### variable `defensibility`
 
 ```cpp
 double defensibility {0.5};
@@ -429,7 +429,7 @@ double defensibility {0.5};
 
 
 
-### variable prevalence
+### variable `prevalence`
 
 ```cpp
 double prevalence {0.7};
@@ -463,7 +463,7 @@ double prevalence {0.7};
 
 
 
-### variable stage
+### variable `stage`
 
 ```cpp
 HackingStage stage {HackingStage::PostProcessing};
@@ -501,6 +501,3 @@ HackingStage stage {HackingStage::PostProcessing};
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

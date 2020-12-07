@@ -67,7 +67,7 @@ title: sam::Submission
 
 ## Public Functions Documentation
 
-### function Columns
+### function `Columns`
 
 ```cpp
 static std::vector< std::string > Columns()
@@ -101,7 +101,7 @@ static std::vector< std::string > Columns()
 
 
 
-### function Submission
+### function `Submission`
 
 ```cpp
 Submission() =default
@@ -135,7 +135,7 @@ Submission() =default
 
 
 
-### function Submission
+### function `Submission`
 
 ```cpp
 Submission(
@@ -172,7 +172,7 @@ Submission(
 
 
 
-### function ~Submission
+### function `~Submission`
 
 ```cpp
 ~Submission() =default
@@ -206,7 +206,7 @@ Submission(
 
 
 
-### function isSig
+### function `isSig`
 
 ```cpp
 inline bool isSig() const
@@ -241,7 +241,7 @@ inline bool isSig() const
 
 
 
-### function operator arma::Row< double >
+### function `operator arma::Row< double >`
 
 ```cpp
 operator arma::Row< double >()
@@ -279,7 +279,7 @@ operator arma::Row< double >()
 
 ## Public Attributes Documentation
 
-### variable simid
+### variable `simid`
 
 ```cpp
 int simid {0};
@@ -314,7 +314,7 @@ Simulation ID.
 
 
 
-### variable exprid
+### variable `exprid`
 
 ```cpp
 int exprid {0};
@@ -349,7 +349,7 @@ int exprid {0};
 
 
 
-### variable repid
+### variable `repid`
 
 ```cpp
 int repid {0};
@@ -384,7 +384,7 @@ Replicaiton ID.
 
 
 
-### variable pubid
+### variable `pubid`
 
 ```cpp
 int pubid {0};
@@ -419,7 +419,7 @@ Publication ID.
 
 
 
-### variable tnobs
+### variable `tnobs`
 
 ```cpp
 int tnobs;
@@ -455,7 +455,7 @@ Index of the selected group.
 True number of observations 
 
 
-### variable group_
+### variable `group_`
 
 ```cpp
 Group group_;
@@ -493,7 +493,7 @@ Group group_;
 
 ## Friends
 
-### friend operator<<
+### friend `operator<<`
 
 ```cpp
 friend OStream & operator<<(
@@ -532,6 +532,3 @@ friend OStream & operator<<(
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

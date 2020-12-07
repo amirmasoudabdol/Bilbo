@@ -58,7 +58,7 @@ title: sam::ExperimentSetupBuilder
 
 ## Public Functions Documentation
 
-### function ExperimentSetupBuilder
+### function `ExperimentSetupBuilder`
 
 ```cpp
 ExperimentSetupBuilder() =default
@@ -92,7 +92,7 @@ ExperimentSetupBuilder() =default
 
 
 
-### function fromConfigFile
+### function `fromConfigFile`
 
 ```cpp
 ExperimentSetupBuilder & fromConfigFile(
@@ -129,7 +129,7 @@ Create and configure a new experiment setup based on the given configuration.
 
 
 
-### function setSeed
+### function `setSeed`
 
 ```cpp
 inline ExperimentSetupBuilder & setSeed(
@@ -141,7 +141,7 @@ Sets the seed for randomizing setup parameters.
 
 **Parameters**: 
 
-  * **s** seed
+  * **`s`** seed
 
 
 
@@ -171,7 +171,7 @@ Sets the seed for randomizing setup parameters.
 
 
 
-### function setNumConditions
+### function `setNumConditions`
 
 ```cpp
 inline ExperimentSetupBuilder & setNumConditions(
@@ -207,7 +207,7 @@ inline ExperimentSetupBuilder & setNumConditions(
 
 
 
-### function setNumDependentVariables
+### function `setNumDependentVariables`
 
 ```cpp
 inline ExperimentSetupBuilder & setNumDependentVariables(
@@ -243,7 +243,7 @@ inline ExperimentSetupBuilder & setNumDependentVariables(
 
 
 
-### function setNumItems
+### function `setNumItems`
 
 ```cpp
 inline ExperimentSetupBuilder & setNumItems(
@@ -279,7 +279,7 @@ inline ExperimentSetupBuilder & setNumItems(
 
 
 
-### function setNumObservations
+### function `setNumObservations`
 
 ```cpp
 inline ExperimentSetupBuilder & setNumObservations(
@@ -315,7 +315,7 @@ inline ExperimentSetupBuilder & setNumObservations(
 
 
 
-### function setNumObservations
+### function `setNumObservations`
 
 ```cpp
 inline ExperimentSetupBuilder & setNumObservations(
@@ -352,7 +352,7 @@ inline ExperimentSetupBuilder & setNumObservations(
 
 Todo: Recover this, it's been removed during the [Parameter](/doxygen/Classes/classsam_1_1_parameter/) transition 
 
-### function setTestStrategyParameters
+### function `setTestStrategyParameters`
 
 ```cpp
 inline ExperimentSetupBuilder & setTestStrategyParameters(
@@ -388,7 +388,7 @@ inline ExperimentSetupBuilder & setTestStrategyParameters(
 
 
 
-### function setDataStrategyParameters
+### function `setDataStrategyParameters`
 
 ```cpp
 inline ExperimentSetupBuilder & setDataStrategyParameters(
@@ -424,7 +424,7 @@ inline ExperimentSetupBuilder & setDataStrategyParameters(
 
 
 
-### function setEffectStrategyParameters
+### function `setEffectStrategyParameters`
 
 ```cpp
 inline ExperimentSetupBuilder & setEffectStrategyParameters(
@@ -460,7 +460,7 @@ inline ExperimentSetupBuilder & setEffectStrategyParameters(
 
 
 
-### function build
+### function `build`
 
 ```cpp
 inline ExperimentSetup build()
@@ -500,6 +500,3 @@ inline ExperimentSetup build()
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

@@ -58,7 +58,7 @@ title: sam::WilcoxonTest::ResultType
 
 ## Public Attributes Documentation
 
-### variable zstat
+### variable `zstat`
 
 ```cpp
 double zstat;
@@ -92,7 +92,7 @@ double zstat;
 
 
 
-### variable wstat
+### variable `wstat`
 
 ```cpp
 double wstat;
@@ -126,7 +126,7 @@ double wstat;
 
 
 
-### variable pvalue
+### variable `pvalue`
 
 ```cpp
 double pvalue;
@@ -160,7 +160,7 @@ double pvalue;
 
 
 
-### variable side
+### variable `side`
 
 ```cpp
 int side;
@@ -194,7 +194,7 @@ int side;
 
 
 
-### variable sig
+### variable `sig`
 
 ```cpp
 bool sig;
@@ -232,7 +232,7 @@ bool sig;
 
 ## Friends
 
-### friend operator<<
+### friend `operator<<`
 
 ```cpp
 friend std::ostream & operator<<(
@@ -271,6 +271,3 @@ friend std::ostream & operator<<(
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:11 CET

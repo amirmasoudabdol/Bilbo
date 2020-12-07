@@ -83,7 +83,7 @@ title: sam::Researcher
 
 ## Public Functions Documentation
 
-### function Researcher
+### function `Researcher`
 
 ```cpp
 Researcher() =default
@@ -120,7 +120,7 @@ Researcher() =default
 Default constructor of the [Researcher](/doxygen/Classes/classsam_1_1_researcher/).
 
 
-### function isHacker
+### function `isHacker`
 
 ```cpp
 bool isHacker()
@@ -155,7 +155,7 @@ bool isHacker()
 
 
 
-### function isCommittingToTheHack
+### function `isCommittingToTheHack`
 
 ```cpp
 bool isCommittingToTheHack(
@@ -191,7 +191,7 @@ bool isCommittingToTheHack(
 
 
 
-### function preProcessData
+### function `preProcessData`
 
 ```cpp
 void preProcessData()
@@ -228,7 +228,7 @@ void preProcessData()
 Iterating over the registrated methods and run them on the current experiment.
 
 
-### function research
+### function `research`
 
 ```cpp
 void research()
@@ -312,7 +312,7 @@ If we have done more than one replication, then we have to select between them
 
 If we did only one replication, then if there is anything, that's our final submission
 
-### function letTheHackBegin
+### function `letTheHackBegin`
 
 ```cpp
 void letTheHackBegin()
@@ -365,7 +365,7 @@ Since I'm going to continue hacking, I'm going to reset the candidate because it
 
 We leave the workflow when we have a submission, and it also passes the decision policy
 
-### function randomizeParameters
+### function `randomizeParameters`
 
 ```cpp
 void randomizeParameters()
@@ -410,7 +410,7 @@ Then I need a for-loop to randomize each strategy
 
 * I think this might not be necessary as [Parameter](/doxygen/Classes/classsam_1_1_parameter/) handles the randomization automatically
 
-### function reorderHackingStrategies
+### function `reorderHackingStrategies`
 
 ```cpp
 void reorderHackingStrategies(
@@ -448,7 +448,7 @@ Re-order the hacking strategies according the priority.
 
 
 
-### function checkAndsubmitTheResearch
+### function `checkAndsubmitTheResearch`
 
 ```cpp
 void checkAndsubmitTheResearch(
@@ -486,7 +486,7 @@ Checking the final submission and submitting it to the [Journal](/doxygen/Classe
 
 
 
-### function computeStuff
+### function `computeStuff`
 
 ```cpp
 inline void computeStuff()
@@ -520,7 +520,7 @@ inline void computeStuff()
 
 
 
-### function setDecisionStrategy
+### function `setDecisionStrategy`
 
 ```cpp
 inline void setDecisionStrategy(
@@ -531,7 +531,7 @@ inline void setDecisionStrategy(
 
 **Parameters**: 
 
-  * **d** The pointer to a Decision Strategy
+  * **`d`** The pointer to a Decision Strategy
 
 
 
@@ -564,7 +564,7 @@ inline void setDecisionStrategy(
 Set the decisionStrategy of the researcher.
 
 
-### function create
+### function `create`
 
 ```cpp
 static ResearcherBuilder create(
@@ -575,7 +575,7 @@ static ResearcherBuilder create(
 
 **Parameters**: 
 
-  * **name** The researcher name 
+  * **`name`** The researcher name 
 
 
 
@@ -610,7 +610,7 @@ Starts the [Researcher](/doxygen/Classes/classsam_1_1_researcher/) build process
 
 ## Public Attributes Documentation
 
-### variable experiment
+### variable `experiment`
 
 ```cpp
 std::unique_ptr< Experiment > experiment;
@@ -644,7 +644,7 @@ std::unique_ptr< Experiment > experiment;
 
 
 
-### variable journal
+### variable `journal`
 
 ```cpp
 std::shared_ptr< Journal > journal;
@@ -678,7 +678,7 @@ std::shared_ptr< Journal > journal;
 
 
 
-### variable decision_strategy
+### variable `decision_strategy`
 
 ```cpp
 std::unique_ptr< DecisionStrategy > decision_strategy;
@@ -712,7 +712,7 @@ std::unique_ptr< DecisionStrategy > decision_strategy;
 
 
 
-### variable hacking_strategies
+### variable `hacking_strategies`
 
 ```cpp
 std::vector< std::vector< std::unique_ptr< HackingStrategy > > > hacking_strategies;
@@ -746,7 +746,7 @@ std::vector< std::vector< std::unique_ptr< HackingStrategy > > > hacking_strateg
 
 
 
-### variable is_pre_processing
+### variable `is_pre_processing`
 
 ```cpp
 bool is_pre_processing {false};
@@ -780,7 +780,7 @@ bool is_pre_processing {false};
 
 
 
-### variable pre_processing_methods
+### variable `pre_processing_methods`
 
 ```cpp
 std::vector< std::unique_ptr< HackingStrategy > > pre_processing_methods;
@@ -814,7 +814,7 @@ std::vector< std::unique_ptr< HackingStrategy > > pre_processing_methods;
 
 
 
-### variable n_hacks
+### variable `n_hacks`
 
 ```cpp
 size_t n_hacks;
@@ -849,7 +849,7 @@ Number of hacking strategies to be choosen from the given list of strategies.
 
 
 
-### variable reselect_hacking_strategies_after_every_simulation
+### variable `reselect_hacking_strategies_after_every_simulation`
 
 ```cpp
 bool reselect_hacking_strategies_after_every_simulation {false};
@@ -883,7 +883,7 @@ bool reselect_hacking_strategies_after_every_simulation {false};
 
 
 
-### variable hacking_selection_priority
+### variable `hacking_selection_priority`
 
 ```cpp
 std::string hacking_selection_priority;
@@ -918,7 +918,7 @@ std::string hacking_selection_priority;
 Indicates order in which hacking strategies are going to be selected from the list of given hacking strategies if the [Researcher](/doxygen/Classes/classsam_1_1_researcher/) decides has to apply a fewer number than the given list 
 
 
-### variable hacking_execution_order
+### variable `hacking_execution_order`
 
 ```cpp
 std::string hacking_execution_order;
@@ -953,7 +953,7 @@ Indicates the execution order of selected/given hacking strategies.
 
 
 
-### variable probability_of_being_a_hacker
+### variable `probability_of_being_a_hacker`
 
 ```cpp
 Parameter< double > probability_of_being_a_hacker;
@@ -988,7 +988,7 @@ Indicates the probablity of a [Researcher](/doxygen/Classes/classsam_1_1_researc
 
 
 
-### variable probability_of_committing_a_hack
+### variable `probability_of_committing_a_hack`
 
 ```cpp
 std::variant< double, std::string, Distribution, std::unique_ptr< HackingProbabilityStrategy > > probability_of_committing_a_hack;
@@ -1023,7 +1023,7 @@ Indicates the probablity of a [Researcher](/doxygen/Classes/classsam_1_1_researc
 
 
 
-### variable submission_probability
+### variable `submission_probability`
 
 ```cpp
 double submission_probability {1};
@@ -1057,7 +1057,7 @@ double submission_probability {1};
 
 
 
-### variable submissions_from_reps
+### variable `submissions_from_reps`
 
 ```cpp
 SubmissionPool submissions_from_reps;
@@ -1092,7 +1092,7 @@ A [Submission]() record that [Researcher](/doxygen/Classes/classsam_1_1_research
 
 
 
-### variable original_workflow
+### variable `original_workflow`
 
 ```cpp
 HackingWorkflow original_workflow;
@@ -1126,7 +1126,7 @@ HackingWorkflow original_workflow;
 
 
 
-### variable h_workflow
+### variable `h_workflow`
 
 ```cpp
 HackingWorkflow h_workflow;
@@ -1164,7 +1164,7 @@ HackingWorkflow h_workflow;
 
 ## Friends
 
-### friend ResearcherBuilder
+### friend `ResearcherBuilder`
 
 ```cpp
 friend class ResearcherBuilder;
@@ -1200,6 +1200,3 @@ friend class ResearcherBuilder;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:08 CET

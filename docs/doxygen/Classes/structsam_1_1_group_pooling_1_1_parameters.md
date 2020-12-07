@@ -50,7 +50,7 @@ title: sam::GroupPooling::Parameters
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 HackingMethod name = HackingMethod::GroupPooling;
@@ -84,7 +84,7 @@ HackingMethod name = HackingMethod::GroupPooling;
 
 
 
-### variable num
+### variable `num`
 
 ```cpp
 std::vector< int > num = {2};
@@ -122,6 +122,3 @@ std::vector< int > num = {2};
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:07 CET

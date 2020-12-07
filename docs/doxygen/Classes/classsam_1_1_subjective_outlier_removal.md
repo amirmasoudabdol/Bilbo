@@ -135,7 +135,7 @@ The subjective outlier removal refers to a type of outliers removal where the re
 
 ## Public Functions Documentation
 
-### function SubjectiveOutlierRemoval
+### function `SubjectiveOutlierRemoval`
 
 ```cpp
 SubjectiveOutlierRemoval() =default
@@ -169,7 +169,7 @@ SubjectiveOutlierRemoval() =default
 
 
 
-### function SubjectiveOutlierRemoval
+### function `SubjectiveOutlierRemoval`
 
 ```cpp
 inline SubjectiveOutlierRemoval(
@@ -209,7 +209,7 @@ inline SubjectiveOutlierRemoval(
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -243,7 +243,7 @@ Parameters params;
 
 
 
-### variable stopping_condition
+### variable `stopping_condition`
 
 ```cpp
 PolicyChain stopping_condition;
@@ -281,6 +281,3 @@ PolicyChain stopping_condition;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

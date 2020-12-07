@@ -58,7 +58,7 @@ title: sam::TrimAndFill::ResultType
 
 ## Public Functions Documentation
 
-### function Columns
+### function `Columns`
 
 ```cpp
 static inline std::vector< std::string > Columns()
@@ -92,7 +92,7 @@ static inline std::vector< std::string > Columns()
 
 
 
-### function operator arma::Row< double >
+### function `operator arma::Row< double >`
 
 ```cpp
 inline operator arma::Row< double >()
@@ -130,7 +130,7 @@ inline operator arma::Row< double >()
 
 ## Public Attributes Documentation
 
-### variable k0
+### variable `k0`
 
 ```cpp
 double k0;
@@ -164,7 +164,7 @@ double k0;
 
 
 
-### variable se_k0
+### variable `se_k0`
 
 ```cpp
 double se_k0;
@@ -198,7 +198,7 @@ double se_k0;
 
 
 
-### variable k_all
+### variable `k_all`
 
 ```cpp
 double k_all;
@@ -232,7 +232,7 @@ double k_all;
 
 
 
-### variable side
+### variable `side`
 
 ```cpp
 std::string side;
@@ -266,7 +266,7 @@ std::string side;
 
 
 
-### variable imputed_est
+### variable `imputed_est`
 
 ```cpp
 double imputed_est;
@@ -300,7 +300,7 @@ double imputed_est;
 
 
 
-### variable imputed_pval
+### variable `imputed_pval`
 
 ```cpp
 double imputed_pval;
@@ -338,6 +338,3 @@ double imputed_pval;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

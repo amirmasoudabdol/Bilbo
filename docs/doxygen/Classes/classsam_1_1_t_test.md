@@ -138,7 +138,7 @@ The `[run()](/doxygen/Classes/classsam_1_1_t_test/#function-run)` method will ch
 
 ## Public Functions Documentation
 
-### function TTest
+### function `TTest`
 
 ```cpp
 inline TTest(
@@ -174,7 +174,7 @@ inline TTest(
 
 
 
-### function run
+### function `run`
 
 ```cpp
 virtual void run(
@@ -213,7 +213,7 @@ virtual void run(
 
 TodoThis could be declared static 
 
-### function run
+### function `run`
 
 ```cpp
 inline virtual void run(
@@ -252,7 +252,7 @@ inline virtual void run(
 
 
 
-### function t_test
+### function `t_test`
 
 ```cpp
 static ResultType t_test(
@@ -291,7 +291,7 @@ static ResultType t_test(
 
 
 
-### function t_test
+### function `t_test`
 
 ```cpp
 static ResultType t_test(
@@ -335,7 +335,7 @@ static ResultType t_test(
 
 
 
-### function compute_pvalue
+### function `compute_pvalue`
 
 ```cpp
 static std::pair< double, bool > compute_pvalue(
@@ -374,7 +374,7 @@ static std::pair< double, bool > compute_pvalue(
 
 
 
-### function single_sample_t_test
+### function `single_sample_t_test`
 
 ```cpp
 static ResultType single_sample_t_test(
@@ -390,11 +390,11 @@ static ResultType single_sample_t_test(
 
 **Parameters**: 
 
-  * **M** True Mean. 
-  * **Sm** Sample Mean. 
-  * **Sd** Sample Standard Deviation. 
-  * **Sn** Sample Size. 
-  * **alpha** Significance Level. 
+  * **`M`** True Mean. 
+  * **`Sm`** Sample Mean. 
+  * **`Sd`** Sample Standard Deviation. 
+  * **`Sn`** Sample Size. 
+  * **`alpha`** Significance Level. 
 
 
 
@@ -427,7 +427,7 @@ static ResultType single_sample_t_test(
 A Students t test applied to a single set of data. We are testing the null hypothesis that the true mean of the sample is M, and that any variation is down to chance. We can also test the alternative hypothesis that any difference is not down to chance
 
 
-### function two_samples_t_test_equal_sd
+### function `two_samples_t_test_equal_sd`
 
 ```cpp
 static ResultType two_samples_t_test_equal_sd(
@@ -445,13 +445,13 @@ static ResultType two_samples_t_test_equal_sd(
 
 **Parameters**: 
 
-  * **Sm1** Sample Mean 1. 
-  * **Sd1** Sample Standard Deviation 1. 
-  * **Sn1** Sample Size 1. 
-  * **Sm2** Sample Mean 2. 
-  * **Sd2** Sample Standard Deviation 2. 
-  * **Sn2** Sample Size 2. 
-  * **alpha** Significance Level. 
+  * **`Sm1`** Sample Mean 1. 
+  * **`Sd1`** Sample Standard Deviation 1. 
+  * **`Sn1`** Sample Size 1. 
+  * **`Sm2`** Sample Mean 2. 
+  * **`Sd2`** Sample Standard Deviation 2. 
+  * **`Sn2`** Sample Size 2. 
+  * **`alpha`** Significance Level. 
 
 
 
@@ -484,7 +484,7 @@ static ResultType two_samples_t_test_equal_sd(
 A Students t test applied to two sets of data. We are testing the null hypothesis that the two samples have the same mean and that any difference if due to chance.
 
 
-### function two_samples_t_test_unequal_sd
+### function `two_samples_t_test_unequal_sd`
 
 ```cpp
 static ResultType two_samples_t_test_unequal_sd(
@@ -502,13 +502,13 @@ static ResultType two_samples_t_test_unequal_sd(
 
 **Parameters**: 
 
-  * **Sm1** Sample Mean 1. 
-  * **Sd1** Sample Standard Deviation 1. 
-  * **Sn1** Sample Size 1. 
-  * **Sm2** Sample Mean 2. 
-  * **Sd2** Sample Standard Deviation 2. 
-  * **Sn2** Sample Size 2. 
-  * **alpha** Significance Level. 
+  * **`Sm1`** Sample Mean 1. 
+  * **`Sd1`** Sample Standard Deviation 1. 
+  * **`Sn1`** Sample Size 1. 
+  * **`Sm2`** Sample Mean 2. 
+  * **`Sd2`** Sample Standard Deviation 2. 
+  * **`Sn2`** Sample Size 2. 
+  * **`alpha`** Significance Level. 
 
 
 
@@ -545,7 +545,7 @@ A Students t test applied to two sets of data with _unequal_ variance. We are te
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -583,6 +583,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

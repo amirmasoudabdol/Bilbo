@@ -89,7 +89,7 @@ Perisistence Manager class, dealing with CSV Read/Write. This is designed such t
 
 ## Public Functions Documentation
 
-### function ~PersistenceManager
+### function `~PersistenceManager`
 
 ```cpp
 ~PersistenceManager() =default
@@ -129,6 +129,3 @@ Perisistence Manager class, dealing with CSV Read/Write. This is designed such t
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:08 CET

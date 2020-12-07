@@ -87,7 +87,7 @@ Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
 
 ## Public Functions Documentation
 
-### function TestOfObsOverExptSig
+### function `TestOfObsOverExptSig`
 
 ```cpp
 TestOfObsOverExptSig() =default
@@ -121,7 +121,7 @@ TestOfObsOverExptSig() =default
 
 
 
-### function TestOfObsOverExptSig
+### function `TestOfObsOverExptSig`
 
 ```cpp
 inline TestOfObsOverExptSig(
@@ -157,7 +157,7 @@ inline TestOfObsOverExptSig(
 
 
 
-### function estimate
+### function `estimate`
 
 ```cpp
 virtual void estimate(
@@ -195,7 +195,7 @@ virtual void estimate(
 
 
 
-### function TES
+### function `TES`
 
 ```cpp
 static ResultType TES(
@@ -242,7 +242,7 @@ A is most likely different from what R spit out, due to brutal rounding that's h
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -280,6 +280,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

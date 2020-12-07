@@ -96,7 +96,7 @@ This is designed to capture the encapsulate a distribution and therefore mimic t
 
 ## Public Functions Documentation
 
-### function Parameter
+### function `Parameter`
 
 ```cpp
 inline Parameter()
@@ -130,7 +130,7 @@ inline Parameter()
 
 
 
-### function Parameter
+### function `Parameter`
 
 ```cpp
 inline Parameter(
@@ -166,7 +166,7 @@ inline Parameter(
 
 
 
-### function Parameter
+### function `Parameter`
 
 ```cpp
 Parameter(
@@ -206,7 +206,7 @@ Multivariante Distribution
 
 Univariate Distribution
 
-### function randomize
+### function `randomize`
 
 ```cpp
 void randomize()
@@ -240,7 +240,7 @@ void randomize()
 
 
 
-### function operator T
+### function `operator T`
 
 ```cpp
 inline operator T()
@@ -274,7 +274,7 @@ inline operator T()
 
 
 
-### function isDist
+### function `isDist`
 
 ```cpp
 inline bool isDist()
@@ -314,6 +314,3 @@ inline bool isDist()
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:08 CET

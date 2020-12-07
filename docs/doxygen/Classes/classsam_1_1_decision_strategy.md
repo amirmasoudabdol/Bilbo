@@ -83,7 +83,7 @@ Inherited by [sam::DefaultDecisionMaker](/doxygen/Classes/classsam_1_1_default_d
 
 ## Public Functions Documentation
 
-### function ~DecisionStrategy
+### function `~DecisionStrategy`
 
 ```cpp
 virtual ~DecisionStrategy() =0
@@ -118,7 +118,7 @@ virtual ~DecisionStrategy() =0
 Pure deconstructor of [DecisionStrategy](/doxygen/Classes/classsam_1_1_decision_strategy/). This is necessary for proper deconstruction of derived classes. 
 
 
-### function DecisionStrategy
+### function `DecisionStrategy`
 
 ```cpp
 DecisionStrategy()
@@ -152,7 +152,7 @@ DecisionStrategy()
 
 
 
-### function willStartHacking
+### function `willStartHacking`
 
 ```cpp
 inline virtual bool willStartHacking()
@@ -189,7 +189,7 @@ Indicates whether the researcher will start going to the hacking procedure. The 
 
 
 
-### function willContinueHacking
+### function `willContinueHacking`
 
 ```cpp
 inline virtual bool willContinueHacking(
@@ -202,7 +202,7 @@ This will be used by `letTheHackBegin` and uses the decision policy to decide wh
 
 **Parameters**: 
 
-  * **experiment** A reference to the experiment 
+  * **`experiment`** A reference to the experiment 
 
 
 
@@ -233,7 +233,7 @@ This will be used by `letTheHackBegin` and uses the decision policy to decide wh
 
 
 
-### function willBeSubmitting
+### function `willBeSubmitting`
 
 ```cpp
 bool willBeSubmitting(
@@ -271,7 +271,7 @@ bool willBeSubmitting(
 
 
 
-### function willContinueReplicating
+### function `willContinueReplicating`
 
 ```cpp
 inline virtual bool willContinueReplicating(
@@ -309,7 +309,7 @@ inline virtual bool willContinueReplicating(
 
 
 
-### function clear
+### function `clear`
 
 ```cpp
 inline void clear()
@@ -344,7 +344,7 @@ inline void clear()
 Clear the contents of the decision strategy, this include the submission pools or other collected information by the decision strategy. 
 
 
-### function reset
+### function `reset`
 
 ```cpp
 inline void reset()
@@ -382,7 +382,7 @@ inline void reset()
 Reset the internal state of the decision strategy 
 
 
-### function selectOutcomeFromExperiment
+### function `selectOutcomeFromExperiment`
 
 ```cpp
 virtual DecisionStrategy & selectOutcomeFromExperiment(
@@ -422,7 +422,7 @@ Implementation of decision-making procedure.
 
 
 
-### function selectOutcomeFromPool
+### function `selectOutcomeFromPool`
 
 ```cpp
 virtual DecisionStrategy & selectOutcomeFromPool(
@@ -461,7 +461,7 @@ virtual DecisionStrategy & selectOutcomeFromPool(
 
 
 
-### function saveEveryOutcome
+### function `saveEveryOutcome`
 
 ```cpp
 inline void saveEveryOutcome(
@@ -497,7 +497,7 @@ inline void saveEveryOutcome(
 
 
 
-### function saveOutcomes
+### function `saveOutcomes`
 
 ```cpp
 void saveOutcomes(
@@ -509,10 +509,10 @@ void saveOutcomes(
 
 **Parameters**: 
 
-  * **experiment** a reference to the experiment 
-  * **pchain** a policy chain, usually stored in `stashing_policy` in the config file
-  * **experiment** a reference to the experiment 
-  * **pchain** a policy chain, usually stored in `stashing_policy` in the config file 
+  * **`experiment`** a reference to the experiment 
+  * **`pchain`** a policy chain, usually stored in `stashing_policy` in the config file
+  * **`experiment`** a reference to the experiment 
+  * **`pchain`** a policy chain, usually stored in `stashing_policy` in the config file 
 
 
 
@@ -545,7 +545,7 @@ Create and save all possible submissions from an experiment, if they pass the gi
 Create and save all possible submissions from an experiment, if the satisfy all of the given policies in the pchain.
 
 
-### function build
+### function `build`
 
 ```cpp
 static std::unique_ptr< DecisionStrategy > build(
@@ -556,7 +556,7 @@ static std::unique_ptr< DecisionStrategy > build(
 
 **Parameters**: 
 
-  * **decision_strategy_config** A JSON object containing information about each decision strategy. 
+  * **`decision_strategy_config`** A JSON object containing information about each decision strategy. 
 
 
 
@@ -589,7 +589,7 @@ static std::unique_ptr< DecisionStrategy > build(
 
 ## Protected Functions Documentation
 
-### function saveCurrentSubmissionCandidate
+### function `saveCurrentSubmissionCandidate`
 
 ```cpp
 inline void saveCurrentSubmissionCandidate()
@@ -624,7 +624,7 @@ inline void saveCurrentSubmissionCandidate()
 A helper method to save the current submission. This needs to be called after verdict. 
 
 
-### function selectOutcome
+### function `selectOutcome`
 
 ```cpp
 void selectOutcome(
@@ -636,8 +636,8 @@ void selectOutcome(
 
 **Parameters**: 
 
-  * **experiment** a reference to an experiment 
-  * **pchain_set** a reference to a policy chain set 
+  * **`experiment`** a reference to an experiment 
+  * **`pchain_set`** a reference to a policy chain set 
 
 
 
@@ -672,7 +672,7 @@ TodoI probably should check this somewhere else, and don't throw here!
 
 If we find many, we just collect them, and quit update: I think this is actually an incorrect behavior. I think I was confusing this with stashing! I think I designed pchain operator to be able to return more than one outcome but didn't test for it
 
-### function selectBetweenSubmissions
+### function `selectBetweenSubmissions`
 
 ```cpp
 void selectBetweenSubmissions(
@@ -684,8 +684,8 @@ void selectBetweenSubmissions(
 
 **Parameters**: 
 
-  * **spool** a collection of submissions collected in previous stages, e.g., selectOutcome 
-  * **pchain_set** a set of policy chains 
+  * **`spool`** a collection of submissions collected in previous stages, e.g., selectOutcome 
+  * **`pchain_set`** a set of policy chains 
 
 
 
@@ -723,7 +723,7 @@ TodoThis is the same issue as it was in selectOutcome, if I return here, I'll no
 
 ## Public Attributes Documentation
 
-### variable lua
+### variable `lua`
 
 ```cpp
 sol::state lua;
@@ -757,7 +757,7 @@ sol::state lua;
 
 
 
-### variable config_
+### variable `config_`
 
 ```cpp
 json config_;
@@ -791,7 +791,7 @@ json config_;
 
 
 
-### variable submission_candidate
+### variable `submission_candidate`
 
 ```cpp
 std::optional< Submission > submission_candidate;
@@ -825,7 +825,7 @@ std::optional< Submission > submission_candidate;
 
 
 
-### variable submissions_pool
+### variable `submissions_pool`
 
 ```cpp
 SubmissionPool submissions_pool;
@@ -860,7 +860,7 @@ List of selected [Submission]() by the researcher, during the hacking procedure.
 
 
 
-### variable initial_selection_policies
+### variable `initial_selection_policies`
 
 ```cpp
 PolicyChainSet initial_selection_policies;
@@ -895,7 +895,7 @@ PolicyChainSet initial_selection_policies;
 
 
 
-### variable submission_decision_policies
+### variable `submission_decision_policies`
 
 ```cpp
 PolicyChain submission_decision_policies;
@@ -929,7 +929,7 @@ PolicyChain submission_decision_policies;
 
 
 
-### variable between_hacks_selection_policies
+### variable `between_hacks_selection_policies`
 
 ```cpp
 PolicyChainSet between_hacks_selection_policies;
@@ -963,7 +963,7 @@ PolicyChainSet between_hacks_selection_policies;
 
 
 
-### variable between_reps_policies
+### variable `between_reps_policies`
 
 ```cpp
 PolicyChainSet between_reps_policies;
@@ -997,7 +997,7 @@ PolicyChainSet between_reps_policies;
 
 
 
-### variable will_start_hacking_decision_policies
+### variable `will_start_hacking_decision_policies`
 
 ```cpp
 PolicyChain will_start_hacking_decision_policies;
@@ -1031,7 +1031,7 @@ PolicyChain will_start_hacking_decision_policies;
 
 
 
-### variable will_continue_replicating_decision_policy
+### variable `will_continue_replicating_decision_policy`
 
 ```cpp
 PolicyChain will_continue_replicating_decision_policy;
@@ -1065,7 +1065,7 @@ PolicyChain will_continue_replicating_decision_policy;
 
 
 
-### variable stashing_policy
+### variable `stashing_policy`
 
 ```cpp
 PolicyChain stashing_policy;
@@ -1103,6 +1103,3 @@ PolicyChain stashing_policy;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:07 CET

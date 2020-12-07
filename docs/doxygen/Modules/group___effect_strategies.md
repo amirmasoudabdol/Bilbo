@@ -38,6 +38,3 @@ List of available effect strategies.
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

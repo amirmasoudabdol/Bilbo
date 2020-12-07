@@ -94,7 +94,7 @@ Egger's Test Output
 
 ## Public Functions Documentation
 
-### function Columns
+### function `Columns`
 
 ```cpp
 static inline std::vector< std::string > Columns()
@@ -128,7 +128,7 @@ static inline std::vector< std::string > Columns()
 
 
 
-### function operator arma::Row< double >
+### function `operator arma::Row< double >`
 
 ```cpp
 inline operator arma::Row< double >()
@@ -166,7 +166,7 @@ inline operator arma::Row< double >()
 
 ## Public Attributes Documentation
 
-### variable slope
+### variable `slope`
 
 ```cpp
 double slope;
@@ -201,7 +201,7 @@ The slope of the fitted line.
 
 
 
-### variable se
+### variable `se`
 
 ```cpp
 double se;
@@ -236,7 +236,7 @@ The standard error of the slope.
 
 
 
-### variable tstat
+### variable `tstat`
 
 ```cpp
 double tstat;
@@ -271,7 +271,7 @@ The t-statistic of the test.
 
 
 
-### variable pval
+### variable `pval`
 
 ```cpp
 double pval;
@@ -306,7 +306,7 @@ The p-value of the test.
 
 
 
-### variable sig
+### variable `sig`
 
 ```cpp
 bool sig;
@@ -341,7 +341,7 @@ The significance of the test.
 
 
 
-### variable df
+### variable `df`
 
 ```cpp
 double df;
@@ -380,6 +380,3 @@ The degree-of-freedom of the test.
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

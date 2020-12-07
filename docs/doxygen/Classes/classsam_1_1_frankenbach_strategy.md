@@ -90,7 +90,7 @@ Inherits from [sam::HackingProbabilityStrategy](/doxygen/Classes/classsam_1_1_ha
 
 ## Public Functions Documentation
 
-### function FrankenbachStrategy
+### function `FrankenbachStrategy`
 
 ```cpp
 FrankenbachStrategy() =default
@@ -124,7 +124,7 @@ FrankenbachStrategy() =default
 
 
 
-### function FrankenbachStrategy
+### function `FrankenbachStrategy`
 
 ```cpp
 inline FrankenbachStrategy(
@@ -160,7 +160,7 @@ inline FrankenbachStrategy(
 
 
 
-### function estimate
+### function `estimate`
 
 ```cpp
 virtual double estimate(
@@ -209,7 +209,7 @@ TodoRemember that you should consider some option here. At the moment, I'm retur
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -247,6 +247,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:07 CET

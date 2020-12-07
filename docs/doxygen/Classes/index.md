@@ -37,7 +37,7 @@ title: Classes
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_frankenbach_strategy_1_1_parameters/)** 
     * **class [FreeSelection](/doxygen/Classes/classsam_1_1_free_selection/)** <br>[FreeSelection]() doesn't pose any restriction on the submission and all submissions will be accepted. 
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_free_selection_1_1_parameters/)** 
-    * **class [GRMDataStrategy](/doxygen/Classes/classsam_1_1_g_r_m_data_strategy/)** <br>Simulate data from Graded Response Model. 
+    * **class [GRMDataStrategy](/doxygen/Classes/classsam_1_1_g_r_m_data_strategy/)** <br>Simulate data based on General Graded Response Model. 
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_g_r_m_data_strategy_1_1_parameters/)** 
     * **class [Group](/doxygen/Classes/classsam_1_1_group/)** <br>Declartiong of [Group]() class. 
     * **class [GroupPooling](/doxygen/Classes/classsam_1_1_group_pooling/)** 
@@ -48,8 +48,8 @@ title: Classes
     * **class [Journal](/doxygen/Classes/classsam_1_1_journal/)** 
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_journal_1_1_parameters/)** 
     * **class [LatentDataStrategy](/doxygen/Classes/classsam_1_1_latent_data_strategy/)** <br>⚠️ TO BE IMPLEMENTED! 
-    * **class [LinearModelStrategy](/doxygen/Classes/classsam_1_1_linear_model_strategy/)** 
-        * **struct [Parameters](/doxygen/Classes/structsam_1_1_linear_model_strategy_1_1_parameters/)** 
+    * **class [LinearModelStrategy](/doxygen/Classes/classsam_1_1_linear_model_strategy/)** <br>Linear Model Data Strategy. 
+        * **struct [Parameters](/doxygen/Classes/structsam_1_1_linear_model_strategy_1_1_parameters/)** <br>[Parameters]() of [LinearModelStrategy](/doxygen/Classes/classsam_1_1_linear_model_strategy/). 
     * **class [MeanDifference](/doxygen/Classes/classsam_1_1_mean_difference/)** 
     * **class [MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)** 
     * **class [NoHack](/doxygen/Classes/classsam_1_1_no_hack/)** 
@@ -106,6 +106,4 @@ title: Classes
 
 
 
--------------------------------
 
-Updated on  7 December 2020 at 13:20:12 CET

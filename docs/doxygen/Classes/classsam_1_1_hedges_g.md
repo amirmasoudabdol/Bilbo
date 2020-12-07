@@ -87,7 +87,7 @@ Inherits from [sam::EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strateg
 
 ## Public Functions Documentation
 
-### function HedgesG
+### function `HedgesG`
 
 ```cpp
 inline explicit HedgesG()
@@ -121,7 +121,7 @@ inline explicit HedgesG()
 
 
 
-### function HedgesG
+### function `HedgesG`
 
 ```cpp
 inline explicit HedgesG(
@@ -157,7 +157,7 @@ inline explicit HedgesG(
 
 
 
-### function computeEffects
+### function `computeEffects`
 
 ```cpp
 virtual void computeEffects(
@@ -202,6 +202,3 @@ Skipping Treatment groups
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

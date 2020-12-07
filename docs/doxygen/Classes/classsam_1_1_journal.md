@@ -106,7 +106,7 @@ title: sam::Journal
 
 ## Public Functions Documentation
 
-### function Columns
+### function `Columns`
 
 ```cpp
 static std::vector< std::string > Columns()
@@ -140,7 +140,7 @@ static std::vector< std::string > Columns()
 
 
 
-### function operator arma::Row< double >
+### function `operator arma::Row< double >`
 
 ```cpp
 inline operator arma::Row< double >()
@@ -174,7 +174,7 @@ inline operator arma::Row< double >()
 
 
 
-### function Journal
+### function `Journal`
 
 ```cpp
 Journal() =default
@@ -208,7 +208,7 @@ Journal() =default
 
 
 
-### function ~Journal
+### function `~Journal`
 
 ```cpp
 ~Journal() =default
@@ -242,7 +242,7 @@ Journal() =default
 
 
 
-### function Journal
+### function `Journal`
 
 ```cpp
 explicit Journal(
@@ -281,7 +281,7 @@ For each given method, we prepare their output columns names, and an output file
 
 Removing the higher level information because I don't want them to be written to the config file again.
 
-### function Journal
+### function `Journal`
 
 ```cpp
 explicit Journal(
@@ -317,7 +317,7 @@ explicit Journal(
 
 
 
-### function setSelectionStrategy
+### function `setSelectionStrategy`
 
 ```cpp
 inline void setSelectionStrategy(
@@ -328,7 +328,7 @@ inline void setSelectionStrategy(
 
 **Parameters**: 
 
-  * **s** The pointer to the given selection strategy 
+  * **`s`** The pointer to the given selection strategy 
 
 
 
@@ -358,7 +358,7 @@ inline void setSelectionStrategy(
 Point [Journal](/doxygen/Classes/classsam_1_1_journal/)'s selection strategy to the given strategy
 
 
-### function review
+### function `review`
 
 ```cpp
 bool review(
@@ -370,7 +370,7 @@ Review the [Submission]() by calling `SelectionStrategy::review()`.
 
 **Parameters**: 
 
-  * **s** A reference to the [Submission](/doxygen/Classes/classsam_1_1_submission/)
+  * **`s`** A reference to the [Submission](/doxygen/Classes/classsam_1_1_submission/)
 
 
 
@@ -403,7 +403,7 @@ Stats runner over all publications of this journal
 
 Stat runner over all simulations
 
-### function accept
+### function `accept`
 
 ```cpp
 void accept(
@@ -415,7 +415,7 @@ Accept the [Submission]() by adding it to the `publicationList`.
 
 **Parameters**: 
 
-  * **s** A copy of the [Submission](/doxygen/Classes/classsam_1_1_submission/)
+  * **`s`** A copy of the [Submission](/doxygen/Classes/classsam_1_1_submission/)
 
 
 
@@ -449,7 +449,7 @@ Updating journal's info
 
 Adding current info to the stat runner
 
-### function reject
+### function `reject`
 
 ```cpp
 void reject(
@@ -461,7 +461,7 @@ Rejecting the Submission!
 
 **Parameters**: 
 
-  * **s** A reference to the [Submission](/doxygen/Classes/classsam_1_1_submission/)
+  * **`s`** A reference to the [Submission](/doxygen/Classes/classsam_1_1_submission/)
 
 
 
@@ -490,7 +490,7 @@ Rejecting the Submission!
 
 
 
-### function isStillAccepting
+### function `isStillAccepting`
 
 ```cpp
 inline bool isStillAccepting() const
@@ -524,7 +524,7 @@ inline bool isStillAccepting() const
 
 
 
-### function saveSubmissions
+### function `saveSubmissions`
 
 ```cpp
 void saveSubmissions(
@@ -536,8 +536,8 @@ void saveSubmissions(
 
 **Parameters**: 
 
-  * **simid** The index to be used for the given set. 
-  * **writer** The output file. 
+  * **`simid`** The index to be used for the given set. 
+  * **`writer`** The output file. 
 
 
 
@@ -567,7 +567,7 @@ void saveSubmissions(
 Save enteries of publications_list to a CSV file.
 
 
-### function saveMetaAnalysis
+### function `saveMetaAnalysis`
 
 ```cpp
 void saveMetaAnalysis()
@@ -601,7 +601,7 @@ void saveMetaAnalysis()
 
 
 
-### function saveSummaries
+### function `saveSummaries`
 
 ```cpp
 void saveSummaries()
@@ -640,7 +640,7 @@ Preparing the summary of all publications
 
 Preparing the summary of journal's info by adding it to the end of publication's record
 
-### function saveMetaStatsOf
+### function `saveMetaStatsOf`
 
 ```cpp
 void saveMetaStatsOf(
@@ -676,7 +676,7 @@ void saveMetaStatsOf(
 
 
 
-### function savePulicationsPerSimSummaries
+### function `savePulicationsPerSimSummaries`
 
 ```cpp
 void savePulicationsPerSimSummaries()
@@ -712,7 +712,7 @@ Saving the runner statistics of each batch of publications in [Journal](/doxygen
 
 Reseting the runner statistics
 
-### function clear
+### function `clear`
 
 ```cpp
 inline void clear()
@@ -747,7 +747,7 @@ inline void clear()
 Clear the publications_list vector. 
 
 
-### function prepareForMetaAnalysis
+### function `prepareForMetaAnalysis`
 
 ```cpp
 inline void prepareForMetaAnalysis()
@@ -781,7 +781,7 @@ inline void prepareForMetaAnalysis()
 
 
 
-### function runMetaAnalysis
+### function `runMetaAnalysis`
 
 ```cpp
 void runMetaAnalysis()
@@ -815,7 +815,7 @@ void runMetaAnalysis()
 
 
 
-### function updateTheOverallRunner
+### function `updateTheOverallRunner`
 
 ```cpp
 void updateTheOverallRunner()
@@ -853,7 +853,7 @@ void updateTheOverallRunner()
 
 ## Public Attributes Documentation
 
-### variable max_pubs
+### variable `max_pubs`
 
 ```cpp
 double max_pubs;
@@ -887,7 +887,7 @@ double max_pubs;
 
 
 
-### variable publications_list
+### variable `publications_list`
 
 ```cpp
 std::vector< Submission > publications_list;
@@ -922,7 +922,7 @@ List of all accepted Submissions, i.e., publications.
 
 
 
-### variable n_accepted
+### variable `n_accepted`
 
 ```cpp
 int n_accepted {0};
@@ -956,7 +956,7 @@ int n_accepted {0};
 
 
 
-### variable rejection_list
+### variable `rejection_list`
 
 ```cpp
 std::vector< Submission > rejection_list;
@@ -991,7 +991,7 @@ Rejected Submissions.
 
 
 
-### variable n_rejected
+### variable `n_rejected`
 
 ```cpp
 int n_rejected {0};
@@ -1025,7 +1025,7 @@ int n_rejected {0};
 
 
 
-### variable n_sigs
+### variable `n_sigs`
 
 ```cpp
 int n_sigs {0};
@@ -1060,7 +1060,7 @@ Number of significant submissions.
 
 
 
-### variable sum_sig_pvalue
+### variable `sum_sig_pvalue`
 
 ```cpp
 double sum_sig_pvalue {0};
@@ -1094,7 +1094,7 @@ double sum_sig_pvalue {0};
 
 
 
-### variable mean_sig_pvalue
+### variable `mean_sig_pvalue`
 
 ```cpp
 double mean_sig_pvalue {0};
@@ -1128,7 +1128,7 @@ double mean_sig_pvalue {0};
 
 
 
-### variable sum_sig_effect
+### variable `sum_sig_effect`
 
 ```cpp
 double sum_sig_effect {0};
@@ -1162,7 +1162,7 @@ double sum_sig_effect {0};
 
 
 
-### variable mean_sig_effect
+### variable `mean_sig_effect`
 
 ```cpp
 double mean_sig_effect {0};
@@ -1196,7 +1196,7 @@ double mean_sig_effect {0};
 
 
 
-### variable yi
+### variable `yi`
 
 ```cpp
 arma::Row< double > yi;
@@ -1231,7 +1231,7 @@ Caching variables.
 
 
 
-### variable vi
+### variable `vi`
 
 ```cpp
 arma::Row< double > vi;
@@ -1265,7 +1265,7 @@ arma::Row< double > vi;
 
 
 
-### variable wi
+### variable `wi`
 
 ```cpp
 arma::Row< double > wi;
@@ -1299,7 +1299,7 @@ arma::Row< double > wi;
 
 
 
-### variable is_saving_summaries
+### variable `is_saving_summaries`
 
 ```cpp
 bool is_saving_summaries;
@@ -1333,7 +1333,7 @@ bool is_saving_summaries;
 
 
 
-### variable is_saving_meta
+### variable `is_saving_meta`
 
 ```cpp
 bool is_saving_meta;
@@ -1367,7 +1367,7 @@ bool is_saving_meta;
 
 
 
-### variable is_saving_pubs_per_sim_summaries
+### variable `is_saving_pubs_per_sim_summaries`
 
 ```cpp
 bool is_saving_pubs_per_sim_summaries;
@@ -1401,7 +1401,7 @@ bool is_saving_pubs_per_sim_summaries;
 
 
 
-### variable pubs_per_sim_stat_runner
+### variable `pubs_per_sim_stat_runner`
 
 ```cpp
 arma::running_stat_vec< arma::Row< double > > pubs_per_sim_stat_runner;
@@ -1435,7 +1435,7 @@ arma::running_stat_vec< arma::Row< double > > pubs_per_sim_stat_runner;
 
 
 
-### variable pubs_per_sim_stats_writer
+### variable `pubs_per_sim_stats_writer`
 
 ```cpp
 std::unique_ptr< PersistenceManager::Writer > pubs_per_sim_stats_writer;
@@ -1469,7 +1469,7 @@ std::unique_ptr< PersistenceManager::Writer > pubs_per_sim_stats_writer;
 
 
 
-### variable pubs_stat_runner
+### variable `pubs_stat_runner`
 
 ```cpp
 arma::running_stat_vec< arma::Row< double > > pubs_stat_runner;
@@ -1503,7 +1503,7 @@ arma::running_stat_vec< arma::Row< double > > pubs_stat_runner;
 
 
 
-### variable pubs_stats_writer
+### variable `pubs_stats_writer`
 
 ```cpp
 std::unique_ptr< PersistenceManager::Writer > pubs_stats_writer;
@@ -1537,7 +1537,7 @@ std::unique_ptr< PersistenceManager::Writer > pubs_stats_writer;
 
 
 
-### variable selection_strategy
+### variable `selection_strategy`
 
 ```cpp
 std::unique_ptr< SelectionStrategy > selection_strategy;
@@ -1572,7 +1572,7 @@ std::unique_ptr< SelectionStrategy > selection_strategy;
 
 
 
-### variable meta_columns
+### variable `meta_columns`
 
 ```cpp
 std::map< std::string, std::vector< std::string > > meta_columns;
@@ -1607,7 +1607,7 @@ Meta Analysis Estimators and their Stats Runner.
 
 
 
-### variable meta_stats_columns
+### variable `meta_stats_columns`
 
 ```cpp
 std::map< std::string, std::vector< std::string > > meta_stats_columns;
@@ -1641,7 +1641,7 @@ std::map< std::string, std::vector< std::string > > meta_stats_columns;
 
 
 
-### variable meta_analysis_strategies
+### variable `meta_analysis_strategies`
 
 ```cpp
 std::vector< std::unique_ptr< MetaAnalysis > > meta_analysis_strategies;
@@ -1675,7 +1675,7 @@ std::vector< std::unique_ptr< MetaAnalysis > > meta_analysis_strategies;
 
 
 
-### variable meta_stat_runners
+### variable `meta_stat_runners`
 
 ```cpp
 std::map< std::string, arma::running_stat_vec< arma::Row< double > > > meta_stat_runners;
@@ -1709,7 +1709,7 @@ std::map< std::string, arma::running_stat_vec< arma::Row< double > > > meta_stat
 
 
 
-### variable meta_writers
+### variable `meta_writers`
 
 ```cpp
 std::map< std::string, PersistenceManager::Writer > meta_writers;
@@ -1743,7 +1743,7 @@ std::map< std::string, PersistenceManager::Writer > meta_writers;
 
 
 
-### variable meta_stats_writers
+### variable `meta_stats_writers`
 
 ```cpp
 std::map< std::string, PersistenceManager::Writer > meta_stats_writers;
@@ -1777,7 +1777,7 @@ std::map< std::string, PersistenceManager::Writer > meta_stats_writers;
 
 
 
-### variable submission_columns
+### variable `submission_columns`
 
 ```cpp
 std::vector< std::string > submission_columns;
@@ -1811,7 +1811,7 @@ std::vector< std::string > submission_columns;
 
 
 
-### variable stats_columns
+### variable `stats_columns`
 
 ```cpp
 std::vector< std::string > stats_columns;
@@ -1845,7 +1845,7 @@ std::vector< std::string > stats_columns;
 
 
 
-### variable meta_analysis_submissions
+### variable `meta_analysis_submissions`
 
 ```cpp
 MetaAnalysisResults meta_analysis_submissions;
@@ -1879,7 +1879,7 @@ MetaAnalysisResults meta_analysis_submissions;
 
 
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -1917,6 +1917,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:07 CET

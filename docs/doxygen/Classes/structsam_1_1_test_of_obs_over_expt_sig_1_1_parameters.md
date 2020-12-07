@@ -89,7 +89,7 @@ struct sam::TestOfObsOverExptSig::Parameters;
 
 ## Public Functions Documentation
 
-### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
+### function `NLOHMANN_DEFINE_TYPE_INTRUSIVE`
 
 ```cpp
 NLOHMANN_DEFINE_TYPE_INTRUSIVE(
@@ -131,7 +131,7 @@ NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 std::string name {"TestOfObsOverExptSig"};
@@ -165,7 +165,7 @@ std::string name {"TestOfObsOverExptSig"};
 
 
 
-### variable alpha
+### variable `alpha`
 
 ```cpp
 double alpha {0.10};
@@ -203,6 +203,3 @@ double alpha {0.10};
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

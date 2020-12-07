@@ -104,7 +104,7 @@ _Filename: .json_
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 HackingMethod name = HackingMethod::FabricatingData;
@@ -138,7 +138,7 @@ HackingMethod name = HackingMethod::FabricatingData;
 
 
 
-### variable approach
+### variable `approach`
 
 ```cpp
 std::string approach {"generating"};
@@ -176,7 +176,7 @@ Falsification approach. We've discussed two possible way of doing this
 * duplicating, swapping values between groups 
 
 
-### variable target
+### variable `target`
 
 ```cpp
 HackingTarget target {HackingTarget::Both};
@@ -215,7 +215,7 @@ Indicates which outcome variables are going to be targeted,
 * both 
 
 
-### variable n_attempts
+### variable `n_attempts`
 
 ```cpp
 int n_attempts {1};
@@ -252,7 +252,7 @@ Number of trials.
 Indicates a set of rule that is going to be used to select the target group 
 
 
-### variable num
+### variable `num`
 
 ```cpp
 int num {5};
@@ -287,7 +287,7 @@ Number of observations to be purturbed.
 
 
 
-### variable dist
+### variable `dist`
 
 ```cpp
 std::optional< Distribution > dist;
@@ -323,7 +323,7 @@ std::optional< Distribution > dist;
 Distribution of fabricated data 
 
 
-### variable stopping_cond_defs
+### variable `stopping_cond_defs`
 
 ```cpp
 std::vector< std::string > stopping_cond_defs;
@@ -358,7 +358,7 @@ Stopping condition [PolicyChain]() definitions.
 
 
 
-### variable defensibility
+### variable `defensibility`
 
 ```cpp
 double defensibility {0.05};
@@ -392,7 +392,7 @@ double defensibility {0.05};
 
 
 
-### variable prevalence
+### variable `prevalence`
 
 ```cpp
 double prevalence {0.1};
@@ -426,7 +426,7 @@ double prevalence {0.1};
 
 
 
-### variable stage
+### variable `stage`
 
 ```cpp
 HackingStage stage {HackingStage::PostProcessing};
@@ -464,6 +464,3 @@ HackingStage stage {HackingStage::PostProcessing};
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

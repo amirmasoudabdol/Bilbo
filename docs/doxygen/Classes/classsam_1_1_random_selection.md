@@ -98,7 +98,7 @@ In this method, [Journal](/doxygen/Classes/classsam_1_1_journal/) does not check
 
 ## Public Functions Documentation
 
-### function RandomSelection
+### function `RandomSelection`
 
 ```cpp
 inline RandomSelection(
@@ -134,7 +134,7 @@ inline RandomSelection(
 
 
 
-### function review
+### function `review`
 
 ```cpp
 virtual bool review(
@@ -145,7 +145,7 @@ virtual bool review(
 
 **Parameters**: 
 
-  * **s** corresponding submission 
+  * **`s`** corresponding submission 
 
 
 
@@ -180,7 +180,7 @@ Draw a random number between $ r \in [0, 1] $, reject the submission if $ r < 0.
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -218,6 +218,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

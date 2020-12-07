@@ -68,7 +68,7 @@ title: sam::FixedEffectEstimator::ResultType
 
 ## Public Functions Documentation
 
-### function ResultType
+### function `ResultType`
 
 ```cpp
 ResultType() =default
@@ -102,7 +102,7 @@ ResultType() =default
 
 
 
-### function ResultType
+### function `ResultType`
 
 ```cpp
 inline ResultType(
@@ -138,7 +138,7 @@ inline ResultType(
 
 
 
-### function operator arma::Row< double >
+### function `operator arma::Row< double >`
 
 ```cpp
 inline operator arma::Row< double >()
@@ -172,7 +172,7 @@ inline operator arma::Row< double >()
 
 
 
-### function Columns
+### function `Columns`
 
 ```cpp
 static inline std::vector< std::string > Columns()
@@ -210,7 +210,7 @@ static inline std::vector< std::string > Columns()
 
 ## Public Attributes Documentation
 
-### variable est
+### variable `est`
 
 ```cpp
 double est;
@@ -244,7 +244,7 @@ double est;
 
 
 
-### variable se
+### variable `se`
 
 ```cpp
 double se;
@@ -278,7 +278,7 @@ double se;
 
 
 
-### variable ci_lb
+### variable `ci_lb`
 
 ```cpp
 double ci_lb;
@@ -312,7 +312,7 @@ double ci_lb;
 
 
 
-### variable ci_ub
+### variable `ci_ub`
 
 ```cpp
 double ci_ub;
@@ -346,7 +346,7 @@ double ci_ub;
 
 
 
-### variable zval
+### variable `zval`
 
 ```cpp
 double zval;
@@ -380,7 +380,7 @@ double zval;
 
 
 
-### variable pval
+### variable `pval`
 
 ```cpp
 double pval;
@@ -414,7 +414,7 @@ double pval;
 
 
 
-### variable q_stat
+### variable `q_stat`
 
 ```cpp
 double q_stat;
@@ -448,7 +448,7 @@ double q_stat;
 
 
 
-### variable q_pval
+### variable `q_pval`
 
 ```cpp
 double q_pval;
@@ -482,7 +482,7 @@ double q_pval;
 
 
 
-### variable tau2
+### variable `tau2`
 
 ```cpp
 double tau2;
@@ -520,7 +520,7 @@ double tau2;
 
 ## Friends
 
-### friend operator<<
+### friend `operator<<`
 
 ```cpp
 friend ostream & operator<<(
@@ -559,6 +559,3 @@ friend ostream & operator<<(
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

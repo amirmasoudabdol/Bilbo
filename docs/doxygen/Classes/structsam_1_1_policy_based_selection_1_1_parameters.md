@@ -55,7 +55,7 @@ title: sam::PolicyBasedSelection::Parameters
 
 ## Public Functions Documentation
 
-### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
+### function `NLOHMANN_DEFINE_TYPE_INTRUSIVE`
 
 ```cpp
 NLOHMANN_DEFINE_TYPE_INTRUSIVE(
@@ -99,7 +99,7 @@ NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 SelectionMethod name = SelectionMethod::PolicyBasedSelection;
@@ -133,7 +133,7 @@ SelectionMethod name = SelectionMethod::PolicyBasedSelection;
 
 
 
-### variable pub_bias
+### variable `pub_bias`
 
 ```cpp
 double pub_bias {0.5};
@@ -168,7 +168,7 @@ Publication Bias Rate.
 
 
 
-### variable pub_chance
+### variable `pub_chance`
 
 ```cpp
 double pub_chance {0.5};
@@ -203,7 +203,7 @@ Acceptance Rate.
 
 
 
-### variable selection_policy_defs
+### variable `selection_policy_defs`
 
 ```cpp
 std::vector< std::string > selection_policy_defs {"sig"};
@@ -242,6 +242,3 @@ Definition of the selection policy used by [Journal](/doxygen/Classes/classsam_1
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

@@ -105,7 +105,7 @@ Implementation of [PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/)
 
 ## Public Functions Documentation
 
-### function PolicyChain
+### function `PolicyChain`
 
 ```cpp
 PolicyChain() =default
@@ -139,7 +139,7 @@ PolicyChain() =default
 
 
 
-### function PolicyChain
+### function `PolicyChain`
 
 ```cpp
 inline PolicyChain(
@@ -176,7 +176,7 @@ inline PolicyChain(
 
 
 
-### function PolicyChain
+### function `PolicyChain`
 
 ```cpp
 inline PolicyChain(
@@ -214,7 +214,7 @@ inline PolicyChain(
 
 
 
-### function operator[]
+### function `operator[]`
 
 ```cpp
 inline Policy & operator[](
@@ -250,7 +250,7 @@ inline Policy & operator[](
 
 
 
-### function operator[]
+### function `operator[]`
 
 ```cpp
 inline const Policy & operator[](
@@ -286,7 +286,7 @@ inline const Policy & operator[](
 
 
 
-### function begin
+### function `begin`
 
 ```cpp
 inline auto begin()
@@ -320,7 +320,7 @@ inline auto begin()
 
 
 
-### function cbegin
+### function `cbegin`
 
 ```cpp
 inline auto cbegin() const
@@ -354,7 +354,7 @@ inline auto cbegin() const
 
 
 
-### function end
+### function `end`
 
 ```cpp
 inline auto end()
@@ -388,7 +388,7 @@ inline auto end()
 
 
 
-### function cend
+### function `cend`
 
 ```cpp
 inline auto cend() const
@@ -422,7 +422,7 @@ inline auto cend() const
 
 
 
-### function operator()
+### function `operator()`
 
 ```cpp
 inline bool operator()(
@@ -434,7 +434,7 @@ Checks whether the given [Submission]() satisfies **all** listed policies.
 
 **Parameters**: 
 
-  * **sub** The submission
+  * **`sub`** The submission
 
 
 
@@ -464,7 +464,7 @@ Checks whether the given [Submission]() satisfies **all** listed policies.
 
 
 
-### function operator()
+### function `operator()`
 
 ```cpp
 inline bool operator()(
@@ -508,7 +508,7 @@ Determine whether the experiment satisfies any of the given policies.
 For every dependent variable, we check whether that dv satisfies any of the given rules, if so, we set the verdict to `true` meaning that at least part of the experiment satisfies all the policies. However, if after going through all outcomes, none satisfies all the rules `false` will be returned, meaning that none of the outcomes satisfied all the given rules
 
 
-### function operator()
+### function `operator()`
 
 ```cpp
 inline std::optional< std::vector< Submission > > operator()(
@@ -554,7 +554,7 @@ We found a bunch
 
 I don't think I actually need this
 
-### function operator()
+### function `operator()`
 
 ```cpp
 inline std::optional< Submission > operator()(
@@ -593,7 +593,7 @@ else: We are still looking. This happens when I'm testing a comparison
 
 We found a bunch This is not a acceptable case for now! TodoBut it should be! 
 
-### function empty
+### function `empty`
 
 ```cpp
 inline bool empty() const
@@ -631,7 +631,7 @@ inline bool empty() const
 
 ## Public Attributes Documentation
 
-### variable ltype
+### variable `ltype`
 
 ```cpp
 LogicType ltype = LogicType::AllOf;
@@ -665,7 +665,7 @@ LogicType ltype = LogicType::AllOf;
 
 
 
-### variable defs
+### variable `defs`
 
 ```cpp
 std::vector< std::string > defs;
@@ -699,7 +699,7 @@ std::vector< std::string > defs;
 
 
 
-### variable pchain
+### variable `pchain`
 
 ```cpp
 std::vector< Policy > pchain;
@@ -737,6 +737,3 @@ std::vector< Policy > pchain;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

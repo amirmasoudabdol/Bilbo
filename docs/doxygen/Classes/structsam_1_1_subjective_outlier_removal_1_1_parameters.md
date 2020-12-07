@@ -109,7 +109,7 @@ _Filename: .json_
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 HackingMethod name = HackingMethod::SubjectiveOutlierRemoval;
@@ -144,7 +144,7 @@ A placeholder for the name.
 
 
 
-### variable target
+### variable `target`
 
 ```cpp
 HackingTarget target {HackingTarget::Both};
@@ -179,7 +179,7 @@ TO BE IMPLEMENTED.
 
 
 
-### variable range
+### variable `range`
 
 ```cpp
 std::vector< int > range {2, 4};
@@ -214,7 +214,7 @@ A vector of `{min, max}`, defining the range of `K`.
 
 
 
-### variable step_size
+### variable `step_size`
 
 ```cpp
 double step_size {0.1};
@@ -249,7 +249,7 @@ Indicates the step size of walking through K's.
 
 
 
-### variable min_observations
+### variable `min_observations`
 
 ```cpp
 int min_observations {5};
@@ -284,7 +284,7 @@ Indicates minimum number of observatons.
 
 
 
-### variable stopping_cond_defs
+### variable `stopping_cond_defs`
 
 ```cpp
 std::vector< std::string > stopping_cond_defs {{"sig"}};
@@ -319,7 +319,7 @@ Stopping condition [PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/) d
 
 
 
-### variable prevalence
+### variable `prevalence`
 
 ```cpp
 double prevalence {0.1};
@@ -353,7 +353,7 @@ double prevalence {0.1};
 
 
 
-### variable defensibility
+### variable `defensibility`
 
 ```cpp
 double defensibility {0.1};
@@ -387,7 +387,7 @@ double defensibility {0.1};
 
 
 
-### variable stage
+### variable `stage`
 
 ```cpp
 HackingStage stage {HackingStage::PostProcessing};
@@ -425,6 +425,3 @@ HackingStage stage {HackingStage::PostProcessing};
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

@@ -98,7 +98,7 @@ Inherits from [sam::TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/)
 
 ## Public Functions Documentation
 
-### function YuenTest
+### function `YuenTest`
 
 ```cpp
 inline YuenTest(
@@ -134,7 +134,7 @@ inline YuenTest(
 
 
 
-### function run
+### function `run`
 
 ```cpp
 virtual void run(
@@ -172,7 +172,7 @@ virtual void run(
 
 
 
-### function run
+### function `run`
 
 ```cpp
 inline virtual void run(
@@ -211,7 +211,7 @@ inline virtual void run(
 
 
 
-### function yuen_t_test_one_sample
+### function `yuen_t_test_one_sample`
 
 ```cpp
 static ResultType yuen_t_test_one_sample(
@@ -251,7 +251,7 @@ static ResultType yuen_t_test_one_sample(
 
 
 
-### function yuen_t_test_paired
+### function `yuen_t_test_paired`
 
 ```cpp
 static ResultType yuen_t_test_paired(
@@ -292,7 +292,7 @@ static ResultType yuen_t_test_paired(
 
 
 
-### function yuen_t_test_two_samples
+### function `yuen_t_test_two_samples`
 
 ```cpp
 static ResultType yuen_t_test_two_samples(
@@ -337,7 +337,7 @@ static ResultType yuen_t_test_two_samples(
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -375,6 +375,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:11 CET

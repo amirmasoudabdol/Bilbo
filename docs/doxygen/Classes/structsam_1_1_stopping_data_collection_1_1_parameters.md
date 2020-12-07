@@ -103,7 +103,7 @@ _Filename: .json_
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 HackingMethod name = HackingMethod::StoppingDataCollection;
@@ -137,7 +137,7 @@ HackingMethod name = HackingMethod::StoppingDataCollection;
 
 
 
-### variable target
+### variable `target`
 
 ```cpp
 HackingTarget target {HackingTarget::Both};
@@ -176,7 +176,7 @@ Indicates which outcome variables are going to be targeted,
 * both 
 
 
-### variable batch_size
+### variable `batch_size`
 
 ```cpp
 int batch_size {5};
@@ -213,7 +213,7 @@ Number of observations to be purturbed.
 Indicates a set of rule that is going to be used to select the target group 
 
 
-### variable stopping_cond_defs
+### variable `stopping_cond_defs`
 
 ```cpp
 std::vector< std::string > stopping_cond_defs {"sig"};
@@ -248,7 +248,7 @@ Stopping condition [PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/) d
 
 
 
-### variable defensibility
+### variable `defensibility`
 
 ```cpp
 double defensibility {0.05};
@@ -282,7 +282,7 @@ double defensibility {0.05};
 
 
 
-### variable prevalence
+### variable `prevalence`
 
 ```cpp
 double prevalence {0.1};
@@ -316,7 +316,7 @@ double prevalence {0.1};
 
 
 
-### variable stage
+### variable `stage`
 
 ```cpp
 HackingStage stage {HackingStage::DataCollection};
@@ -354,6 +354,3 @@ HackingStage stage {HackingStage::DataCollection};
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

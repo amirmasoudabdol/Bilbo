@@ -96,7 +96,7 @@ Inherits from [sam::TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/)
 
 ## Public Functions Documentation
 
-### function WilcoxonTest
+### function `WilcoxonTest`
 
 ```cpp
 inline WilcoxonTest(
@@ -132,7 +132,7 @@ inline WilcoxonTest(
 
 
 
-### function run
+### function `run`
 
 ```cpp
 virtual void run(
@@ -170,7 +170,7 @@ virtual void run(
 
 
 
-### function run
+### function `run`
 
 ```cpp
 inline virtual void run(
@@ -209,7 +209,7 @@ inline virtual void run(
 
 
 
-### function wilcoxon_test
+### function `wilcoxon_test`
 
 ```cpp
 static ResultType wilcoxon_test(
@@ -253,7 +253,7 @@ static ResultType wilcoxon_test(
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -291,6 +291,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:11 CET

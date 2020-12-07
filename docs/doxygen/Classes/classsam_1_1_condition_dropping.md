@@ -97,7 +97,7 @@ Inherits from [sam::HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strat
 
 ## Public Functions Documentation
 
-### function ConditionDropping
+### function `ConditionDropping`
 
 ```cpp
 inline ConditionDropping(
@@ -133,7 +133,7 @@ inline ConditionDropping(
 
 
 
-### function ConditionDropping
+### function `ConditionDropping`
 
 ```cpp
 inline ConditionDropping()
@@ -171,7 +171,7 @@ inline ConditionDropping()
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -209,6 +209,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:07 CET

@@ -58,7 +58,7 @@ title: sam::FTest::ResultType
 
 ## Public Attributes Documentation
 
-### variable fstat
+### variable `fstat`
 
 ```cpp
 double fstat;
@@ -92,7 +92,7 @@ double fstat;
 
 
 
-### variable df1
+### variable `df1`
 
 ```cpp
 unsigned df1;
@@ -126,7 +126,7 @@ unsigned df1;
 
 
 
-### variable df2
+### variable `df2`
 
 ```cpp
 unsigned df2;
@@ -160,7 +160,7 @@ unsigned df2;
 
 
 
-### variable pvalue
+### variable `pvalue`
 
 ```cpp
 double pvalue;
@@ -194,7 +194,7 @@ double pvalue;
 
 
 
-### variable sig
+### variable `sig`
 
 ```cpp
 bool sig;
@@ -232,7 +232,7 @@ bool sig;
 
 ## Friends
 
-### friend operator<<
+### friend `operator<<`
 
 ```cpp
 friend std::ostream & operator<<(
@@ -271,6 +271,3 @@ friend std::ostream & operator<<(
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:11 CET

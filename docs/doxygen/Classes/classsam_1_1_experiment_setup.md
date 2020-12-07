@@ -104,7 +104,7 @@ Define a class for [ExperimentSetup]().
 
 ## Public Functions Documentation
 
-### function create
+### function `create`
 
 ```cpp
 static ExperimentSetupBuilder create()
@@ -140,7 +140,7 @@ static ExperimentSetupBuilder create()
 Create a new [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) by invoking a [ExperimentSetupBuilder](/doxygen/Classes/classsam_1_1_experiment_setup_builder/).
 
 
-### function ExperimentSetup
+### function `ExperimentSetup`
 
 ```cpp
 ExperimentSetup() =default
@@ -175,7 +175,7 @@ ExperimentSetup() =default
 Default constructor of the [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/). This is necessary because of the [ExperimentSetupBuilder](/doxygen/Classes/classsam_1_1_experiment_setup_builder/)
 
 
-### function ExperimentSetup
+### function `ExperimentSetup`
 
 ```cpp
 explicit ExperimentSetup(
@@ -211,7 +211,7 @@ explicit ExperimentSetup(
 
 
 
-### function nc
+### function `nc`
 
 ```cpp
 inline const int nc() const
@@ -245,7 +245,7 @@ inline const int nc() const
 
 
 
-### function nd
+### function `nd`
 
 ```cpp
 inline const int nd() const
@@ -279,7 +279,7 @@ inline const int nd() const
 
 
 
-### function ng
+### function `ng`
 
 ```cpp
 inline const int ng() const
@@ -313,7 +313,7 @@ inline const int ng() const
 
 
 
-### function nreps
+### function `nreps`
 
 ```cpp
 inline const int nreps() const
@@ -347,7 +347,7 @@ inline const int nreps() const
 
 
 
-### function nobs
+### function `nobs`
 
 ```cpp
 inline const arma::Row< int > & nobs() const
@@ -381,7 +381,7 @@ inline const arma::Row< int > & nobs() const
 
 
 
-### function randomizeTheParameters
+### function `randomizeTheParameters`
 
 ```cpp
 void randomizeTheParameters()
@@ -419,7 +419,7 @@ void randomizeTheParameters()
 
 ## Public Attributes Documentation
 
-### variable tsp_conf
+### variable `tsp_conf`
 
 ```cpp
 json tsp_conf;
@@ -454,7 +454,7 @@ Test Strategy Parameters.
 
 
 
-### variable dsp_conf
+### variable `dsp_conf`
 
 ```cpp
 json dsp_conf;
@@ -489,7 +489,7 @@ Data Strategy Parameters.
 
 
 
-### variable esp_conf
+### variable `esp_conf`
 
 ```cpp
 json esp_conf;
@@ -528,7 +528,7 @@ Effect Estimator Parameters.
 
 ## Friends
 
-### friend ExperimentSetupBuilder
+### friend `ExperimentSetupBuilder`
 
 ```cpp
 friend class ExperimentSetupBuilder;
@@ -564,6 +564,3 @@ friend class ExperimentSetupBuilder;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

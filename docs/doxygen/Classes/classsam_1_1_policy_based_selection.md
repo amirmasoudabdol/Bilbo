@@ -97,7 +97,7 @@ Policy-based selection strategy accepts a submission if it passes a criteria spe
 
 ## Public Functions Documentation
 
-### function PolicyBasedSelection
+### function `PolicyBasedSelection`
 
 ```cpp
 inline PolicyBasedSelection(
@@ -133,7 +133,7 @@ inline PolicyBasedSelection(
 
 
 
-### function review
+### function `review`
 
 ```cpp
 virtual bool review(
@@ -174,7 +174,7 @@ Check wheter the selection_policy passes, if so, and a random draw from U(0, 1) 
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -208,7 +208,7 @@ Parameters params;
 
 
 
-### variable selection_policy
+### variable `selection_policy`
 
 ```cpp
 PolicyChain selection_policy;
@@ -246,6 +246,3 @@ PolicyChain selection_policy;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

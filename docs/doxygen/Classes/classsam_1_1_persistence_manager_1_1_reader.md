@@ -51,7 +51,7 @@ title: sam::PersistenceManager::Reader
 
 ## Public Functions Documentation
 
-### function Reader
+### function `Reader`
 
 ```cpp
 Reader() =default
@@ -85,7 +85,7 @@ Reader() =default
 
 
 
-### function ~Reader
+### function `~Reader`
 
 ```cpp
 ~Reader()
@@ -119,7 +119,7 @@ Reader() =default
 
 
 
-### function Reader
+### function `Reader`
 
 ```cpp
 Reader(
@@ -155,7 +155,7 @@ Reader(
 
 
 
-### function filename
+### function `filename`
 
 ```cpp
 inline void filename(
@@ -191,7 +191,7 @@ inline void filename(
 
 
 
-### function read_raw_data
+### function `read_raw_data`
 
 ```cpp
 void read_raw_data(
@@ -234,6 +234,3 @@ TODO: Re-implement me!
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:08 CET

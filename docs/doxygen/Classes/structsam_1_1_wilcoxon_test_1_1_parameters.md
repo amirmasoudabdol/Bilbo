@@ -55,7 +55,7 @@ title: sam::WilcoxonTest::Parameters
 
 ## Public Functions Documentation
 
-### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
+### function `NLOHMANN_DEFINE_TYPE_INTRUSIVE`
 
 ```cpp
 NLOHMANN_DEFINE_TYPE_INTRUSIVE(
@@ -99,7 +99,7 @@ NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 TestMethod name = [TestMethod::WilcoxonTest](/doxygen/Classes/classsam_1_1_test_strategy/#enumvalue-wilcoxontest);
@@ -133,7 +133,7 @@ TestMethod name = [TestMethod::WilcoxonTest](/doxygen/Classes/classsam_1_1_test_
 
 
 
-### variable alternative
+### variable `alternative`
 
 ```cpp
 TestAlternative alternative = TestAlternative::TwoSided;
@@ -167,7 +167,7 @@ TestAlternative alternative = TestAlternative::TwoSided;
 
 
 
-### variable alpha
+### variable `alpha`
 
 ```cpp
 double alpha = 0.95;
@@ -201,7 +201,7 @@ double alpha = 0.95;
 
 
 
-### variable use_continuity
+### variable `use_continuity`
 
 ```cpp
 bool use_continuity {true};
@@ -239,6 +239,3 @@ bool use_continuity {true};
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:11 CET

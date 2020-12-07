@@ -52,7 +52,7 @@ Inherited by [sam::EggersTestEstimator](/doxygen/Classes/classsam_1_1_eggers_tes
 
 ## Public Functions Documentation
 
-### function ~MetaAnalysis
+### function `~MetaAnalysis`
 
 ```cpp
 virtual ~MetaAnalysis() =0
@@ -86,7 +86,7 @@ virtual ~MetaAnalysis() =0
 
 
 
-### function estimate
+### function `estimate`
 
 ```cpp
 virtual void estimate(
@@ -124,7 +124,7 @@ virtual void estimate(
 
 
 
-### function build
+### function `build`
 
 ```cpp
 static std::unique_ptr< MetaAnalysis > build(
@@ -160,7 +160,7 @@ static std::unique_ptr< MetaAnalysis > build(
 
 
 
-### function build
+### function `build`
 
 ```cpp
 static std::unique_ptr< MetaAnalysis > build(
@@ -196,7 +196,7 @@ static std::unique_ptr< MetaAnalysis > build(
 
 
 
-### function Columns
+### function `Columns`
 
 ```cpp
 static std::vector< std::string > Columns(
@@ -238,6 +238,3 @@ static std::vector< std::string > Columns(
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:08 CET

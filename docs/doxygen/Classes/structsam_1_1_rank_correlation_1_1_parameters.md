@@ -55,7 +55,7 @@ summary: Parameters of RankCorrelation.
 
 ## Public Functions Documentation
 
-### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
+### function `NLOHMANN_DEFINE_TYPE_INTRUSIVE`
 
 ```cpp
 NLOHMANN_DEFINE_TYPE_INTRUSIVE(
@@ -98,7 +98,7 @@ NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 std::string name {"RankCorrelation"};
@@ -132,7 +132,7 @@ std::string name {"RankCorrelation"};
 
 
 
-### variable alternative
+### variable `alternative`
 
 ```cpp
 TestStrategy::TestAlternative alternative = TestStrategy::TestAlternative::TwoSided;
@@ -166,7 +166,7 @@ TestStrategy::TestAlternative alternative = TestStrategy::TestAlternative::TwoSi
 
 
 
-### variable alpha
+### variable `alpha`
 
 ```cpp
 double alpha {0.10};
@@ -205,6 +205,3 @@ The ɑ of the test.
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

@@ -99,7 +99,7 @@ class sam::ResearcherBuilder;
 
 ## Public Functions Documentation
 
-### function ResearcherBuilder
+### function `ResearcherBuilder`
 
 ```cpp
 inline ResearcherBuilder()
@@ -133,7 +133,7 @@ inline ResearcherBuilder()
 
 
 
-### function ResearcherBuilder
+### function `ResearcherBuilder`
 
 ```cpp
 inline ResearcherBuilder(
@@ -169,7 +169,7 @@ inline ResearcherBuilder(
 
 
 
-### function fromConfigFile
+### function `fromConfigFile`
 
 ```cpp
 inline ResearcherBuilder & fromConfigFile(
@@ -180,7 +180,7 @@ inline ResearcherBuilder & fromConfigFile(
 
 **Parameters**: 
 
-  * **config** A JSON object 
+  * **`config`** A JSON object 
 
 
 
@@ -242,7 +242,7 @@ Sorting the selected hacking strategies based on their stage The stable_sort has
 
 Indicate what percentage of [Researcher](/doxygen/Classes/classsam_1_1_researcher/)'s work is going to be submitted
 
-### function createDecisionStrategy
+### function `createDecisionStrategy`
 
 ```cpp
 inline ResearcherBuilder & createDecisionStrategy(
@@ -280,7 +280,7 @@ CREATEING NEW OBJECT ///.
 Create a new [DecisionStrategy](/doxygen/Classes/classsam_1_1_decision_strategy/) for the researcher based on the given configuration. 
 
 
-### function createNewHackingStrategyGroup
+### function `createNewHackingStrategyGroup`
 
 ```cpp
 inline ResearcherBuilder & createNewHackingStrategyGroup(
@@ -324,7 +324,7 @@ Create a new [Journal](/doxygen/Classes/classsam_1_1_journal/) for the researche
 Create a new [Experiment](/doxygen/Classes/classsam_1_1_experiment/) based on the given [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/).
 
 
-### function createNewHackingStrategy
+### function `createNewHackingStrategy`
 
 ```cpp
 inline ResearcherBuilder & createNewHackingStrategy(
@@ -360,7 +360,7 @@ inline ResearcherBuilder & createNewHackingStrategy(
 
 
 
-### function setDataStrategy
+### function `setDataStrategy`
 
 ```cpp
 inline ResearcherBuilder & setDataStrategy(
@@ -397,7 +397,7 @@ SETTING NEW OBJECT ///.
 
 
 
-### function setTestStrategy
+### function `setTestStrategy`
 
 ```cpp
 inline ResearcherBuilder & setTestStrategy(
@@ -433,7 +433,7 @@ inline ResearcherBuilder & setTestStrategy(
 
 
 
-### function setJournalSelectionStrategy
+### function `setJournalSelectionStrategy`
 
 ```cpp
 inline ResearcherBuilder & setJournalSelectionStrategy(
@@ -469,7 +469,7 @@ inline ResearcherBuilder & setJournalSelectionStrategy(
 
 
 
-### function setDecisionStrategy
+### function `setDecisionStrategy`
 
 ```cpp
 inline ResearcherBuilder & setDecisionStrategy(
@@ -505,7 +505,7 @@ inline ResearcherBuilder & setDecisionStrategy(
 
 
 
-### function setHackingStrategy
+### function `setHackingStrategy`
 
 ```cpp
 ResearcherBuilder & setHackingStrategy(
@@ -541,7 +541,7 @@ ResearcherBuilder & setHackingStrategy(
 
 
 
-### function setHackingStrategy
+### function `setHackingStrategy`
 
 ```cpp
 ResearcherBuilder & setHackingStrategy(
@@ -577,7 +577,7 @@ ResearcherBuilder & setHackingStrategy(
 
 
 
-### function addHackingStrategyGroup
+### function `addHackingStrategyGroup`
 
 ```cpp
 inline ResearcherBuilder & addHackingStrategyGroup(
@@ -613,7 +613,7 @@ inline ResearcherBuilder & addHackingStrategyGroup(
 
 
 
-### function addNewHackingStrategy
+### function `addNewHackingStrategy`
 
 ```cpp
 inline ResearcherBuilder & addNewHackingStrategy(
@@ -649,7 +649,7 @@ inline ResearcherBuilder & addNewHackingStrategy(
 
 
 
-### function chooseHackingStrategies
+### function `chooseHackingStrategies`
 
 ```cpp
 inline ResearcherBuilder & chooseHackingStrategies(
@@ -662,9 +662,9 @@ inline ResearcherBuilder & chooseHackingStrategies(
 
 **Parameters**: 
 
-  * **hacking_strategies_pool** A set of hacking strategy methods use to prepare researcher's hacking startegies 
-  * **n_group** The number of hacking strategies groups 
-  * **m_strategies** The number of hacking startegies in each group 
+  * **`hacking_strategies_pool`** A set of hacking strategy methods use to prepare researcher's hacking startegies 
+  * **`n_group`** The number of hacking strategies groups 
+  * **`m_strategies`** The number of hacking startegies in each group 
 
 
 
@@ -696,7 +696,7 @@ Prepare a set of hacking strategies groups by populating each group from the giv
 
 auto h_method = enum_cast<HackingMethod>(Random::get<int>(0, hacking_strategies_pool.size() - 1));
 
-### function pickRandomHackingStrategies
+### function `pickRandomHackingStrategies`
 
 ```cpp
 inline ResearcherBuilder & pickRandomHackingStrategies(
@@ -708,8 +708,8 @@ inline ResearcherBuilder & pickRandomHackingStrategies(
 
 **Parameters**: 
 
-  * **n_group** Number of groups of hacking strategies 
-  * **m_strategies** Number of hacking strategies in each group 
+  * **`n_group`** Number of groups of hacking strategies 
+  * **`m_strategies`** Number of hacking strategies in each group 
 
 
 
@@ -740,7 +740,7 @@ inline ResearcherBuilder & pickRandomHackingStrategies(
 Constructs `n_group`'s of hacking strategies, each consisting of maximum `m_strategies`'s or steps. Each startegy is being selected randomly between all available strategies.
 
 
-### function build
+### function `build`
 
 ```cpp
 inline Researcher build()
@@ -784,6 +784,3 @@ Build and return a new [Researcher](/doxygen/Classes/classsam_1_1_researcher/).
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:08 CET

@@ -87,7 +87,7 @@ Inherits from [sam::EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strateg
 
 ## Public Functions Documentation
 
-### function CohensD
+### function `CohensD`
 
 ```cpp
 inline explicit CohensD()
@@ -121,7 +121,7 @@ inline explicit CohensD()
 
 
 
-### function CohensD
+### function `CohensD`
 
 ```cpp
 inline explicit CohensD(
@@ -157,7 +157,7 @@ inline explicit CohensD(
 
 
 
-### function computeEffects
+### function `computeEffects`
 
 ```cpp
 virtual void computeEffects(
@@ -201,6 +201,3 @@ virtual void computeEffects(
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

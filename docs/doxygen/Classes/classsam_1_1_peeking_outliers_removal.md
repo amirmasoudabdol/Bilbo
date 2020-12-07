@@ -136,7 +136,7 @@ class sam::PeekingOutliersRemoval;
 
 ## Public Functions Documentation
 
-### function PeekingOutliersRemoval
+### function `PeekingOutliersRemoval`
 
 ```cpp
 PeekingOutliersRemoval() =default
@@ -170,7 +170,7 @@ PeekingOutliersRemoval() =default
 
 
 
-### function PeekingOutliersRemoval
+### function `PeekingOutliersRemoval`
 
 ```cpp
 inline PeekingOutliersRemoval(
@@ -206,7 +206,7 @@ inline PeekingOutliersRemoval(
 
 
 
-### function perform
+### function `perform`
 
 ```cpp
 virtual void perform(
@@ -218,7 +218,7 @@ Applies the hacking method on the [Experiment](/doxygen/Classes/classsam_1_1_exp
 
 **Parameters**: 
 
-  * **experiment** A pointer to an [Experiment](/doxygen/Classes/classsam_1_1_experiment/). 
+  * **`experiment`** A pointer to an [Experiment](/doxygen/Classes/classsam_1_1_experiment/). 
 
 
 
@@ -254,7 +254,7 @@ Removing outliers `n` at a time, for the total of `n_attempts` It'll stop either
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -288,7 +288,7 @@ Parameters params;
 
 
 
-### variable stopping_condition
+### variable `stopping_condition`
 
 ```cpp
 PolicyChain stopping_condition;
@@ -322,7 +322,7 @@ PolicyChain stopping_condition;
 
 
 
-### variable whether_to_save_condition
+### variable `whether_to_save_condition`
 
 ```cpp
 PolicyChain whether_to_save_condition;
@@ -360,6 +360,3 @@ PolicyChain whether_to_save_condition;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

@@ -123,7 +123,7 @@ Moreover, the [Experiment](/doxygen/Classes/classsam_1_1_experiment/) stores a c
 
 ## Public Functions Documentation
 
-### function Experiment
+### function `Experiment`
 
 ```cpp
 Experiment() =default
@@ -157,7 +157,7 @@ Experiment() =default
 
 
 
-### function Experiment
+### function `Experiment`
 
 ```cpp
 Experiment(
@@ -195,7 +195,7 @@ Constructing an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) object u
 Starting by the initialization of an [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/), followed by Data, Test, and Effect stratgies initialization; and finally, all necessary resources will be initialized. 
 
 
-### function Experiment
+### function `Experiment`
 
 ```cpp
 Experiment(
@@ -235,7 +235,7 @@ Constructing an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) using an
 Since ExperimenSetup already contains the definition of Data, Test, and Effect strategies, this method accept the [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) as it is, and only initialize those strategies.
 
 
-### function Experiment
+### function `Experiment`
 
 ```cpp
 Experiment(
@@ -274,7 +274,7 @@ Experiment(
 
 
 
-### function operator[]
+### function `operator[]`
 
 ```cpp
 inline Group & operator[](
@@ -317,7 +317,7 @@ inline Group & operator[](
 These operators are returning the correct group, even if the group list is not sorted
 
 
-### function operator[]
+### function `operator[]`
 
 ```cpp
 inline const Group & operator[](
@@ -353,7 +353,7 @@ inline const Group & operator[](
 
 
 
-### function get_group
+### function `get_group`
 
 ```cpp
 inline Group & get_group(
@@ -389,7 +389,7 @@ inline Group & get_group(
 
 
 
-### function get_group
+### function `get_group`
 
 ```cpp
 inline const Group & get_group(
@@ -425,7 +425,7 @@ inline const Group & get_group(
 
 
 
-### function begin
+### function `begin`
 
 ```cpp
 inline auto begin()
@@ -459,7 +459,7 @@ inline auto begin()
 
 
 
-### function end
+### function `end`
 
 ```cpp
 inline auto end()
@@ -493,7 +493,7 @@ inline auto end()
 
 
 
-### function begin
+### function `begin`
 
 ```cpp
 inline auto begin() const
@@ -527,7 +527,7 @@ inline auto begin() const
 
 
 
-### function end
+### function `end`
 
 ```cpp
 inline auto end() const
@@ -561,7 +561,7 @@ inline auto end() const
 
 
 
-### function runTest
+### function `runTest`
 
 ```cpp
 void runTest()
@@ -596,7 +596,7 @@ Runs the Test Strategy.
 
 
 
-### function setTestStrategy
+### function `setTestStrategy`
 
 ```cpp
 inline void setTestStrategy(
@@ -607,7 +607,7 @@ inline void setTestStrategy(
 
 **Parameters**: 
 
-  * **t** A reference to a Test Strategy instance 
+  * **`t`** A reference to a Test Strategy instance 
 
 
 
@@ -637,7 +637,7 @@ inline void setTestStrategy(
 Set or re-set the Test Strategy
 
 
-### function setDataStrategy
+### function `setDataStrategy`
 
 ```cpp
 inline void setDataStrategy(
@@ -648,7 +648,7 @@ inline void setDataStrategy(
 
 **Parameters**: 
 
-  * **d** A reference to a Data Strategy instance 
+  * **`d`** A reference to a Data Strategy instance 
 
 
 
@@ -678,7 +678,7 @@ inline void setDataStrategy(
 Set or re-set the Data Strategy
 
 
-### function setEffectSizeEstimator
+### function `setEffectSizeEstimator`
 
 ```cpp
 inline void setEffectSizeEstimator(
@@ -689,7 +689,7 @@ inline void setEffectSizeEstimator(
 
 **Parameters**: 
 
-  * **es** A reference to an Effect Strategy instance. 
+  * **`es`** A reference to an Effect Strategy instance. 
 
 
 
@@ -719,7 +719,7 @@ inline void setEffectSizeEstimator(
 Set or re-set the Effect Strategy
 
 
-### function initExperiment
+### function `initExperiment`
 
 ```cpp
 void initExperiment()
@@ -754,7 +754,7 @@ void initExperiment()
 Helper function for the [Researcher](/doxygen/Classes/classsam_1_1_researcher/) to fully initilize the experiment by generating the data, calculating the statistics and effects, as well as running the test. 
 
 
-### function generateData
+### function `generateData`
 
 ```cpp
 void generateData()
@@ -791,7 +791,7 @@ Use the `data_strategy` to generate the data.
 
 
 
-### function preProcessData
+### function `preProcessData`
 
 ```cpp
 void preProcessData()
@@ -828,7 +828,7 @@ void preProcessData()
 Run different pre-processing steps before passing the data to the [Researcher](/doxygen/Classes/classsam_1_1_researcher/).
 
 
-### function calculateStatistics
+### function `calculateStatistics`
 
 ```cpp
 void calculateStatistics()
@@ -863,7 +863,7 @@ void calculateStatistics()
 Calculate the statistics by sending the `experiment` to the `test_strategy`. 
 
 
-### function calculateEffects
+### function `calculateEffects`
 
 ```cpp
 void calculateEffects()
@@ -898,7 +898,7 @@ void calculateEffects()
 Iterates over the list of EffectSizeEstimators, and calculate different different estimates accordingly. 
 
 
-### function recalculateEverything
+### function `recalculateEverything`
 
 ```cpp
 void recalculateEverything()
@@ -932,7 +932,7 @@ void recalculateEverything()
 
 
 
-### function recalculateEverythingForGroup
+### function `recalculateEverythingForGroup`
 
 ```cpp
 void recalculateEverythingForGroup(
@@ -968,7 +968,7 @@ void recalculateEverythingForGroup(
 
 
 
-### function clear
+### function `clear`
 
 ```cpp
 void clear()
@@ -1007,7 +1007,7 @@ Clear contents of the experiment.
 
 ## Public Attributes Documentation
 
-### variable exprid
+### variable `exprid`
 
 ```cpp
 int exprid {0};
@@ -1041,7 +1041,7 @@ int exprid {0};
 
 
 
-### variable repid
+### variable `repid`
 
 ```cpp
 int repid {0};
@@ -1075,7 +1075,7 @@ int repid {0};
 
 
 
-### variable is_hacked
+### variable `is_hacked`
 
 ```cpp
 bool is_hacked = false;
@@ -1110,7 +1110,7 @@ Indicates if any hacking routine has been applied on the experiment.
 
 
 
-### variable hacks_history
+### variable `hacks_history`
 
 ```cpp
 std::vector< int > hacks_history;
@@ -1144,7 +1144,7 @@ std::vector< int > hacks_history;
 
 
 
-### variable is_published
+### variable `is_published`
 
 ```cpp
 bool is_published = false;
@@ -1178,7 +1178,7 @@ bool is_published = false;
 
 
 
-### variable setup
+### variable `setup`
 
 ```cpp
 ExperimentSetup setup;
@@ -1212,7 +1212,7 @@ ExperimentSetup setup;
 
 
 
-### variable data_strategy
+### variable `data_strategy`
 
 ```cpp
 std::shared_ptr< DataStrategy > data_strategy;
@@ -1246,7 +1246,7 @@ std::shared_ptr< DataStrategy > data_strategy;
 
 
 
-### variable test_strategy
+### variable `test_strategy`
 
 ```cpp
 std::shared_ptr< TestStrategy > test_strategy;
@@ -1280,7 +1280,7 @@ std::shared_ptr< TestStrategy > test_strategy;
 
 
 
-### variable effect_strategy
+### variable `effect_strategy`
 
 ```cpp
 std::shared_ptr< EffectStrategy > effect_strategy;
@@ -1314,7 +1314,7 @@ std::shared_ptr< EffectStrategy > effect_strategy;
 
 
 
-### variable groups_
+### variable `groups_`
 
 ```cpp
 std::vector< Group > groups_;
@@ -1352,6 +1352,3 @@ std::vector< Group > groups_;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

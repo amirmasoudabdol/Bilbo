@@ -80,7 +80,7 @@ Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
 
 ## Public Functions Documentation
 
-### function FixedEffectEstimator
+### function `FixedEffectEstimator`
 
 ```cpp
 FixedEffectEstimator() =default
@@ -114,7 +114,7 @@ FixedEffectEstimator() =default
 
 
 
-### function estimate
+### function `estimate`
 
 ```cpp
 virtual void estimate(
@@ -152,7 +152,7 @@ virtual void estimate(
 
 
 
-### function FixedEffect
+### function `FixedEffect`
 
 ```cpp
 static inline ResultType FixedEffect(
@@ -195,6 +195,3 @@ static inline ResultType FixedEffect(
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

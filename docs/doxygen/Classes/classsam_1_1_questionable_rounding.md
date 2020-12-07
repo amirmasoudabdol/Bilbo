@@ -136,7 +136,7 @@ Questionable rounding strategy mimics the behavior of a researcher who might hac
 
 ## Public Functions Documentation
 
-### function QuestionableRounding
+### function `QuestionableRounding`
 
 ```cpp
 QuestionableRounding() =default
@@ -170,7 +170,7 @@ QuestionableRounding() =default
 
 
 
-### function QuestionableRounding
+### function `QuestionableRounding`
 
 ```cpp
 inline QuestionableRounding(
@@ -206,7 +206,7 @@ inline QuestionableRounding(
 
 
 
-### function perform
+### function `perform`
 
 ```cpp
 virtual void perform(
@@ -218,7 +218,7 @@ Applies the hacking method on the [Experiment](/doxygen/Classes/classsam_1_1_exp
 
 **Parameters**: 
 
-  * **experiment** A pointer to an [Experiment](/doxygen/Classes/classsam_1_1_experiment/). 
+  * **`experiment`** A pointer to an [Experiment](/doxygen/Classes/classsam_1_1_experiment/). 
 
 
 
@@ -254,7 +254,7 @@ Checking whether the outcome is significant, if not, we check whether it's close
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -292,6 +292,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

@@ -102,7 +102,7 @@ Each [HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strategy/) should p
 
 ## Public Functions Documentation
 
-### function ~HackingStrategy
+### function `~HackingStrategy`
 
 ```cpp
 virtual ~HackingStrategy() =0
@@ -137,7 +137,7 @@ Pure deconstuctor of the Base calss. This is important for proper deconstruction
 
 
 
-### function HackingStrategy
+### function `HackingStrategy`
 
 ```cpp
 HackingStrategy()
@@ -171,7 +171,7 @@ HackingStrategy()
 
 
 
-### function operator()
+### function `operator()`
 
 ```cpp
 inline void operator()(
@@ -207,7 +207,7 @@ inline void operator()(
 
 
 
-### function defensibility
+### function `defensibility`
 
 ```cpp
 inline double defensibility() const
@@ -241,7 +241,7 @@ inline double defensibility() const
 
 
 
-### function prevalence
+### function `prevalence`
 
 ```cpp
 inline double prevalence() const
@@ -275,7 +275,7 @@ inline double prevalence() const
 
 
 
-### function stage
+### function `stage`
 
 ```cpp
 inline HackingStage stage() const
@@ -309,7 +309,7 @@ inline HackingStage stage() const
 
 
 
-### function target
+### function `target`
 
 ```cpp
 inline HackingTarget target() const
@@ -343,7 +343,7 @@ inline HackingTarget target() const
 
 
 
-### function build
+### function `build`
 
 ```cpp
 static std::unique_ptr< HackingStrategy > build(
@@ -355,8 +355,8 @@ Factory method for building a [HackingStrategy](/doxygen/Classes/classsam_1_1_ha
 
 **Parameters**: 
 
-  * **config** A reference to an item of the "json[&ndash;hacking-strategy']`. Researcher::Builder is responsible for passing this object correctly.
-  * **config** A JSON object defining a hacking strategy, and its parameters 
+  * **`config`** A reference to an item of the "json[&ndash;hacking-strategy']`. Researcher::Builder is responsible for passing this object correctly.
+  * **`config`** A JSON object defining a hacking strategy, and its parameters 
 
 
 
@@ -392,7 +392,7 @@ Factory method for building a [HackingStrategy](/doxygen/Classes/classsam_1_1_ha
 A Factory method for building hacking strategies
 
 
-### function build
+### function `build`
 
 ```cpp
 static std::unique_ptr< HackingStrategy > build(
@@ -432,7 +432,7 @@ static std::unique_ptr< HackingStrategy > build(
 
 ## Public Attributes Documentation
 
-### variable lua
+### variable `lua`
 
 ```cpp
 sol::state lua;
@@ -466,7 +466,7 @@ sol::state lua;
 
 
 
-### variable defensibility_
+### variable `defensibility_`
 
 ```cpp
 double defensibility_;
@@ -500,7 +500,7 @@ double defensibility_;
 
 
 
-### variable prevalence_
+### variable `prevalence_`
 
 ```cpp
 double prevalence_;
@@ -534,7 +534,7 @@ double prevalence_;
 
 
 
-### variable stage_
+### variable `stage_`
 
 ```cpp
 HackingStage stage_;
@@ -568,7 +568,7 @@ HackingStage stage_;
 
 
 
-### variable target_
+### variable `target_`
 
 ```cpp
 HackingTarget target_;
@@ -606,6 +606,3 @@ HackingTarget target_;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

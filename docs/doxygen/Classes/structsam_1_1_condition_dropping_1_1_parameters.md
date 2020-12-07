@@ -49,7 +49,7 @@ title: sam::ConditionDropping::Parameters
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 HackingMethod name = HackingMethod::ConditionDropping;
@@ -87,6 +87,3 @@ HackingMethod name = HackingMethod::ConditionDropping;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:07 CET

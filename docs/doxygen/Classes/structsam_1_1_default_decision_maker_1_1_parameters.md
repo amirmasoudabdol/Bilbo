@@ -56,7 +56,7 @@ title: sam::DefaultDecisionMaker::Parameters
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 DecisionMethod name = DecisionMethod::DefaultDecisionMaker;
@@ -90,7 +90,7 @@ DecisionMethod name = DecisionMethod::DefaultDecisionMaker;
 
 
 
-### variable initial_selection_policies_defs
+### variable `initial_selection_policies_defs`
 
 ```cpp
 std::vector< std::vector< std::string > > initial_selection_policies_defs;
@@ -124,7 +124,7 @@ std::vector< std::vector< std::string > > initial_selection_policies_defs;
 
 
 
-### variable submission_decision_policies_defs
+### variable `submission_decision_policies_defs`
 
 ```cpp
 std::vector< std::string > submission_decision_policies_defs;
@@ -158,7 +158,7 @@ std::vector< std::string > submission_decision_policies_defs;
 
 
 
-### variable between_hacks_selection_policies_defs
+### variable `between_hacks_selection_policies_defs`
 
 ```cpp
 std::vector< std::vector< std::string > > between_hacks_selection_policies_defs;
@@ -192,7 +192,7 @@ std::vector< std::vector< std::string > > between_hacks_selection_policies_defs;
 
 
 
-### variable between_replications_selection_policies_defs
+### variable `between_replications_selection_policies_defs`
 
 ```cpp
 std::vector< std::vector< std::string > > between_replications_selection_policies_defs;
@@ -226,7 +226,7 @@ std::vector< std::vector< std::string > > between_replications_selection_policie
 
 
 
-### variable will_start_hacking_decision_policies_def
+### variable `will_start_hacking_decision_policies_def`
 
 ```cpp
 std::vector< std::string > will_start_hacking_decision_policies_def;
@@ -260,7 +260,7 @@ std::vector< std::string > will_start_hacking_decision_policies_def;
 
 
 
-### variable will_continue_replicating_decision_policy_def
+### variable `will_continue_replicating_decision_policy_def`
 
 ```cpp
 std::vector< std::string > will_continue_replicating_decision_policy_def;
@@ -294,7 +294,7 @@ std::vector< std::string > will_continue_replicating_decision_policy_def;
 
 
 
-### variable stashing_policy_def
+### variable `stashing_policy_def`
 
 ```cpp
 std::vector< std::string > stashing_policy_def;
@@ -332,6 +332,3 @@ std::vector< std::string > stashing_policy_def;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

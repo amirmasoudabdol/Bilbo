@@ -36,10 +36,9 @@ title: sam::GRMDataStrategy::Parameters
 |                | Name           |
 | -------------- | -------------- |
 | DataModel | **[name](/doxygen/Classes/structsam_1_1_g_r_m_data_strategy_1_1_parameters/#variable-name)**  |
-| int | **[n_dims](/doxygen/Classes/structsam_1_1_g_r_m_data_strategy_1_1_parameters/#variable-n_dims)**  |
-| int | **[n_items](/doxygen/Classes/structsam_1_1_g_r_m_data_strategy_1_1_parameters/#variable-n_items)**  |
-| int | **[n_categories](/doxygen/Classes/structsam_1_1_g_r_m_data_strategy_1_1_parameters/#variable-n_categories)**  |
-| std::string | **[response_function](/doxygen/Classes/structsam_1_1_g_r_m_data_strategy_1_1_parameters/#variable-response_function)**  |
+| int | **[n_items](/doxygen/Classes/structsam_1_1_g_r_m_data_strategy_1_1_parameters/#variable-n_items)** <br>Number of items.  |
+| int | **[n_categories](/doxygen/Classes/structsam_1_1_g_r_m_data_strategy_1_1_parameters/#variable-n_categories)** <br>Number of categories.  |
+| std::string | **[response_function](/doxygen/Classes/structsam_1_1_g_r_m_data_strategy_1_1_parameters/#variable-response_function)** <br>Inidicates the Response Function.  |
 | std::optional< MultivariateDistribution > | **[m_diff_dist](/doxygen/Classes/structsam_1_1_g_r_m_data_strategy_1_1_parameters/#variable-m_diff_dist)**  |
 | std::optional< MultivariateDistribution > | **[m_abil_dist](/doxygen/Classes/structsam_1_1_g_r_m_data_strategy_1_1_parameters/#variable-m_abil_dist)**  |
 | std::optional< std::vector< Distribution > > | **[diff_dists](/doxygen/Classes/structsam_1_1_g_r_m_data_strategy_1_1_parameters/#variable-diff_dists)**  |
@@ -60,7 +59,7 @@ title: sam::GRMDataStrategy::Parameters
 
 ## Public Functions Documentation
 
-### function Parameters
+### function `Parameters`
 
 ```cpp
 Parameters() =default
@@ -98,7 +97,7 @@ Parameters() =default
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 DataModel name {DataModel::GradedResponseModel};
@@ -132,46 +131,13 @@ DataModel name {DataModel::GradedResponseModel};
 
 
 
-### variable n_dims
-
-```cpp
-int n_dims;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable n_items
+### variable `n_items`
 
 ```cpp
 int n_items;
 ```
 
+Number of items. 
 
 
 
@@ -200,12 +166,13 @@ int n_items;
 
 
 
-### variable n_categories
+### variable `n_categories`
 
 ```cpp
 int n_categories;
 ```
 
+Number of categories. 
 
 
 
@@ -234,12 +201,13 @@ int n_categories;
 
 
 
-### variable response_function
+### variable `response_function`
 
 ```cpp
 std::string response_function {"Rasch"};
 ```
 
+Inidicates the Response Function. 
 
 
 
@@ -268,7 +236,7 @@ std::string response_function {"Rasch"};
 
 
 
-### variable m_diff_dist
+### variable `m_diff_dist`
 
 ```cpp
 std::optional< MultivariateDistribution > m_diff_dist;
@@ -302,7 +270,7 @@ std::optional< MultivariateDistribution > m_diff_dist;
 
 
 
-### variable m_abil_dist
+### variable `m_abil_dist`
 
 ```cpp
 std::optional< MultivariateDistribution > m_abil_dist;
@@ -336,7 +304,7 @@ std::optional< MultivariateDistribution > m_abil_dist;
 
 
 
-### variable diff_dists
+### variable `diff_dists`
 
 ```cpp
 std::optional< std::vector< Distribution > > diff_dists;
@@ -370,7 +338,7 @@ std::optional< std::vector< Distribution > > diff_dists;
 
 
 
-### variable abil_dists
+### variable `abil_dists`
 
 ```cpp
 std::optional< std::vector< Distribution > > abil_dists;
@@ -408,6 +376,3 @@ std::optional< std::vector< Distribution > > abil_dists;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

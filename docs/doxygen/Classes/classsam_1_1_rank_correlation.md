@@ -88,7 +88,7 @@ Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
 
 ## Public Functions Documentation
 
-### function RankCorrelation
+### function `RankCorrelation`
 
 ```cpp
 RankCorrelation() =default
@@ -122,7 +122,7 @@ RankCorrelation() =default
 
 
 
-### function RankCorrelation
+### function `RankCorrelation`
 
 ```cpp
 inline RankCorrelation(
@@ -158,7 +158,7 @@ inline RankCorrelation(
 
 
 
-### function estimate
+### function `estimate`
 
 ```cpp
 virtual void estimate(
@@ -196,7 +196,7 @@ virtual void estimate(
 
 
 
-### function RankCor
+### function `RankCor`
 
 ```cpp
 static ResultType RankCor(
@@ -234,7 +234,7 @@ static ResultType RankCor(
 
 
 
-### function duplicate_count
+### function `duplicate_count`
 
 ```cpp
 static arma::Row< int > duplicate_count(
@@ -274,7 +274,7 @@ static arma::Row< int > duplicate_count(
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -312,6 +312,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

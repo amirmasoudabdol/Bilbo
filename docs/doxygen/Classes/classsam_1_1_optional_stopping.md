@@ -136,7 +136,7 @@ Declartion of [OptionalStopping](/doxygen/Classes/classsam_1_1_optional_stopping
 
 ## Public Functions Documentation
 
-### function OptionalStopping
+### function `OptionalStopping`
 
 ```cpp
 OptionalStopping() =default
@@ -170,7 +170,7 @@ OptionalStopping() =default
 
 
 
-### function OptionalStopping
+### function `OptionalStopping`
 
 ```cpp
 inline OptionalStopping(
@@ -206,7 +206,7 @@ inline OptionalStopping(
 
 
 
-### function addObservations
+### function `addObservations`
 
 ```cpp
 void addObservations(
@@ -218,8 +218,8 @@ void addObservations(
 
 **Parameters**: 
 
-  * **experiment** A pointer to the experiment 
-  * **n** number of new observations to be added 
+  * **`experiment`** A pointer to the experiment 
+  * **`n`** number of new observations to be added 
 
 
 
@@ -249,7 +249,7 @@ void addObservations(
 Adds `n` observations to all groups
 
 
-### function addObservations
+### function `addObservations`
 
 ```cpp
 void addObservations(
@@ -261,8 +261,8 @@ void addObservations(
 
 **Parameters**: 
 
-  * **experiment** A pointer to an experiment 
-  * **ns** An array indicating how many new items should be added to each group 
+  * **`experiment`** A pointer to an experiment 
+  * **`ns`** An array indicating how many new items should be added to each group 
 
 
 
@@ -296,7 +296,7 @@ Adds `ns[i]` new items to `i`th group
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -330,7 +330,7 @@ Parameters params;
 
 
 
-### variable stopping_condition
+### variable `stopping_condition`
 
 ```cpp
 PolicyChain stopping_condition;
@@ -368,6 +368,3 @@ PolicyChain stopping_condition;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

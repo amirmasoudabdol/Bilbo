@@ -60,7 +60,7 @@ Inherited by [sam::CohensD](/doxygen/Classes/classsam_1_1_cohens_d/), [sam::Hedg
 
 ## Public Types Documentation
 
-### enum EffectEstimator
+### enum `EffectEstimator`
 
 
 | Enumerator | Value | Description |
@@ -108,7 +108,7 @@ Inherited by [sam::CohensD](/doxygen/Classes/classsam_1_1_cohens_d/), [sam::Hedg
 
 ## Public Functions Documentation
 
-### function build
+### function `build`
 
 ```cpp
 static std::unique_ptr< EffectStrategy > build(
@@ -144,7 +144,7 @@ static std::unique_ptr< EffectStrategy > build(
 
 
 
-### function ~EffectStrategy
+### function `~EffectStrategy`
 
 ```cpp
 virtual ~EffectStrategy() =0
@@ -178,7 +178,7 @@ virtual ~EffectStrategy() =0
 
 
 
-### function computeEffects
+### function `computeEffects`
 
 ```cpp
 virtual void computeEffects(
@@ -220,7 +220,7 @@ virtual void computeEffects(
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 EffectStrategyParameters params;
@@ -258,6 +258,3 @@ EffectStrategyParameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:07 CET

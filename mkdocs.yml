@@ -69,7 +69,7 @@ edit_uri: edit/main/docs
 plugins:
   - search
   - img2fig
-  # - git-revision-date
+  - git-revision-date
   - bibtex:
       bib_file: "refs.bib"
       cite_style: "pandoc"

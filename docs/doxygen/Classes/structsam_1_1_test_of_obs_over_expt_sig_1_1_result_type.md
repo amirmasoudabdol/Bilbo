@@ -56,7 +56,7 @@ title: sam::TestOfObsOverExptSig::ResultType
 
 ## Public Functions Documentation
 
-### function Columns
+### function `Columns`
 
 ```cpp
 static inline std::vector< std::string > Columns()
@@ -90,7 +90,7 @@ static inline std::vector< std::string > Columns()
 
 
 
-### function operator arma::Row< double >
+### function `operator arma::Row< double >`
 
 ```cpp
 inline operator arma::Row< double >()
@@ -128,7 +128,7 @@ inline operator arma::Row< double >()
 
 ## Public Attributes Documentation
 
-### variable E
+### variable `E`
 
 ```cpp
 double E;
@@ -163,7 +163,7 @@ Sum of the expected probabilities.
 
 
 
-### variable A
+### variable `A`
 
 ```cpp
 double A;
@@ -198,7 +198,7 @@ The chi-square statistic of the test.
 
 
 
-### variable pval
+### variable `pval`
 
 ```cpp
 double pval;
@@ -233,7 +233,7 @@ The p-value of the test.
 
 
 
-### variable sig
+### variable `sig`
 
 ```cpp
 bool sig;
@@ -272,6 +272,3 @@ The significance of the test.
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

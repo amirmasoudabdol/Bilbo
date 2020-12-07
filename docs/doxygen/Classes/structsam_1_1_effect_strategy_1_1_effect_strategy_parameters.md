@@ -49,7 +49,7 @@ title: sam::EffectStrategy::EffectStrategyParameters
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 EffectEstimator name;
@@ -87,6 +87,3 @@ EffectEstimator name;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:07 CET

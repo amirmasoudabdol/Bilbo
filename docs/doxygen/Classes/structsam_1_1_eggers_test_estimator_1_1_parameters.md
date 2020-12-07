@@ -90,7 +90,7 @@ While Egger's test is often performed with ɑ = 0.1, it's possible to change the
 
 ## Public Functions Documentation
 
-### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
+### function `NLOHMANN_DEFINE_TYPE_INTRUSIVE`
 
 ```cpp
 NLOHMANN_DEFINE_TYPE_INTRUSIVE(
@@ -132,7 +132,7 @@ NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 std::string name {"EggersTestEstimator"};
@@ -166,7 +166,7 @@ std::string name {"EggersTestEstimator"};
 
 
 
-### variable alpha
+### variable `alpha`
 
 ```cpp
 double alpha {0.10};
@@ -205,6 +205,3 @@ The ɑ of the test.
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

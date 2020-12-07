@@ -96,7 +96,7 @@ Significant-based selection strategy accepts a publication if the given _p_-valu
 
 ## Public Functions Documentation
 
-### function SignificantSelection
+### function `SignificantSelection`
 
 ```cpp
 inline SignificantSelection(
@@ -132,7 +132,7 @@ inline SignificantSelection(
 
 
 
-### function review
+### function `review`
 
 ```cpp
 virtual bool review(
@@ -143,7 +143,7 @@ virtual bool review(
 
 **Parameters**: 
 
-  * **s** A reference to the [Submission](/doxygen/Classes/classsam_1_1_submission/)
+  * **`s`** A reference to the [Submission](/doxygen/Classes/classsam_1_1_submission/)
 
 
 
@@ -178,7 +178,7 @@ Check if `p-value` of the [Submission](/doxygen/Classes/classsam_1_1_submission/
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -216,6 +216,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

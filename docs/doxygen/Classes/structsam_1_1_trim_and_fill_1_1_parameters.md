@@ -56,7 +56,7 @@ summary: Parameters of the TrimAndFill.
 
 ## Public Functions Documentation
 
-### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
+### function `NLOHMANN_DEFINE_TYPE_INTRUSIVE`
 
 ```cpp
 NLOHMANN_DEFINE_TYPE_INTRUSIVE(
@@ -100,7 +100,7 @@ NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 std::string name {"TrimAndFill"};
@@ -134,7 +134,7 @@ std::string name {"TrimAndFill"};
 
 
 
-### variable side
+### variable `side`
 
 ```cpp
 std::string side {"auto"};
@@ -169,7 +169,7 @@ Indicates the side of the funnel plot where missing values should be imputed.
 
 
 
-### variable estimator
+### variable `estimator`
 
 ```cpp
 std::string estimator {"R0"};
@@ -204,7 +204,7 @@ The symmetry estimator.
 
 
 
-### variable alpha
+### variable `alpha`
 
 ```cpp
 double alpha {0.10};
@@ -243,6 +243,3 @@ The ɑ of the test.
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

@@ -100,7 +100,7 @@ Inherits from [sam::HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strat
 
 ## Public Functions Documentation
 
-### function OutliersRemoval
+### function `OutliersRemoval`
 
 ```cpp
 OutliersRemoval() =default
@@ -134,7 +134,7 @@ OutliersRemoval() =default
 
 
 
-### function OutliersRemoval
+### function `OutliersRemoval`
 
 ```cpp
 inline OutliersRemoval(
@@ -170,7 +170,7 @@ inline OutliersRemoval(
 
 
 
-### function perform
+### function `perform`
 
 ```cpp
 virtual void perform(
@@ -214,7 +214,7 @@ Removing outliers `n` at a time, for the total of `n_attempts` It'll stop either
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -248,7 +248,7 @@ Parameters params;
 
 
 
-### variable stopping_condition
+### variable `stopping_condition`
 
 ```cpp
 PolicyChain stopping_condition;
@@ -286,6 +286,3 @@ PolicyChain stopping_condition;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

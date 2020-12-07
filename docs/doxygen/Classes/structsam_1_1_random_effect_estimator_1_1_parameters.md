@@ -54,7 +54,7 @@ summary: Parameters of the RandomEffectEstimator.
 
 ## Public Functions Documentation
 
-### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
+### function `NLOHMANN_DEFINE_TYPE_INTRUSIVE`
 
 ```cpp
 NLOHMANN_DEFINE_TYPE_INTRUSIVE(
@@ -96,7 +96,7 @@ NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 std::string name {"RandomEffectEstimator"};
@@ -130,7 +130,7 @@ std::string name {"RandomEffectEstimator"};
 
 
 
-### variable estimator
+### variable `estimator`
 
 ```cpp
 std::string estimator {"DL"};
@@ -169,6 +169,3 @@ The random effect estimator.
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

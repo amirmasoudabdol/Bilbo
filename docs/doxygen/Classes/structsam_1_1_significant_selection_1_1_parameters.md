@@ -91,7 +91,7 @@ A type keeping the parameters of the Significat Seleciton strategy.
 
 ## Public Functions Documentation
 
-### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
+### function `NLOHMANN_DEFINE_TYPE_INTRUSIVE`
 
 ```cpp
 NLOHMANN_DEFINE_TYPE_INTRUSIVE(
@@ -135,7 +135,7 @@ NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 SelectionMethod name = SelectionMethod::SignificantSelection;
@@ -170,7 +170,7 @@ Selection strategy name.
 
 
 
-### variable alpha
+### variable `alpha`
 
 ```cpp
 double alpha {0.05};
@@ -205,7 +205,7 @@ double alpha {0.05};
 The \alpha at which the _selection strategy_ decides the significance of a publication 
 
 
-### variable pub_bias
+### variable `pub_bias`
 
 ```cpp
 double pub_bias {0.5};
@@ -240,7 +240,7 @@ Publication bias rate.
 
 
 
-### variable side
+### variable `side`
 
 ```cpp
 int side {1};
@@ -279,6 +279,3 @@ Indicates the _selection stratgy_'s preference toward positive, `1`, or negative
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

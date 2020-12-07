@@ -131,7 +131,7 @@ The [Group](/doxygen/Classes/classsam_1_1_group/) class is an abstract represent
 
 ## Public Functions Documentation
 
-### function Columns
+### function `Columns`
 
 ```cpp
 static std::vector< std::string > Columns()
@@ -165,7 +165,7 @@ static std::vector< std::string > Columns()
 
 
 
-### function Group
+### function `Group`
 
 ```cpp
 inline Group()
@@ -199,7 +199,7 @@ inline Group()
 
 
 
-### function Group
+### function `Group`
 
 ```cpp
 inline Group(
@@ -236,7 +236,7 @@ inline Group(
 
 
 
-### function Group
+### function `Group`
 
 ```cpp
 inline Group(
@@ -272,7 +272,7 @@ inline Group(
 
 
 
-### function measurements
+### function `measurements`
 
 ```cpp
 inline arma::Row< double > & measurements()
@@ -307,7 +307,7 @@ Getter / Setter.
 
 
 
-### function measurements
+### function `measurements`
 
 ```cpp
 inline const arma::Row< double > & measurements() const
@@ -341,7 +341,7 @@ inline const arma::Row< double > & measurements() const
 
 
 
-### function set_measurements
+### function `set_measurements`
 
 ```cpp
 inline void set_measurements(
@@ -377,7 +377,7 @@ inline void set_measurements(
 
 
 
-### function add_measurements
+### function `add_measurements`
 
 ```cpp
 inline void add_measurements(
@@ -413,7 +413,7 @@ inline void add_measurements(
 
 
 
-### function del_measurements
+### function `del_measurements`
 
 ```cpp
 inline void del_measurements(
@@ -449,7 +449,7 @@ inline void del_measurements(
 
 
 
-### function begin
+### function `begin`
 
 ```cpp
 inline auto begin()
@@ -483,7 +483,7 @@ inline auto begin()
 
 
 
-### function end
+### function `end`
 
 ```cpp
 inline auto end()
@@ -517,7 +517,7 @@ inline auto end()
 
 
 
-### function operator arma::Row< double >
+### function `operator arma::Row< double >`
 
 ```cpp
 operator arma::Row< double >()
@@ -551,7 +551,7 @@ operator arma::Row< double >()
 
 
 
-### function updateStats
+### function `updateStats`
 
 ```cpp
 void updateStats()
@@ -586,7 +586,7 @@ void updateStats()
 
 TodoBring this back, I'm removing this because group is not being notified with some of the changes, and this leads to SAM not updating the statistics, i.e., the type of changes that Falsifying Data will cause 
 
-### function testAgaist
+### function `testAgaist`
 
 ```cpp
 void testAgaist(
@@ -623,7 +623,7 @@ void testAgaist(
 
 
 
-### function effectComparedTo
+### function `effectComparedTo`
 
 ```cpp
 void effectComparedTo(
@@ -660,7 +660,7 @@ void effectComparedTo(
 
 
 
-### function clear
+### function `clear`
 
 ```cpp
 void clear()
@@ -698,7 +698,7 @@ void clear()
 
 ## Public Attributes Documentation
 
-### variable id_
+### variable `id_`
 
 ```cpp
 int id_;
@@ -732,7 +732,7 @@ int id_;
 
 
 
-### variable gtype
+### variable `gtype`
 
 ```cpp
 GroupType gtype;
@@ -766,7 +766,7 @@ GroupType gtype;
 
 
 
-### variable true_nobs_
+### variable `true_nobs_`
 
 ```cpp
 std::optional< double > true_nobs_ {0};
@@ -801,7 +801,7 @@ std::optional< double > true_nobs_ {0};
 &mdash; Distribution/Population Parameters These can be their own type, and determined by the DataStrategies 
 
 
-### variable true_mean_
+### variable `true_mean_`
 
 ```cpp
 std::optional< double > true_mean_ {0};
@@ -835,7 +835,7 @@ std::optional< double > true_mean_ {0};
 
 
 
-### variable true_std_
+### variable `true_std_`
 
 ```cpp
 std::optional< double > true_std_ {0};
@@ -869,7 +869,7 @@ std::optional< double > true_std_ {0};
 
 
 
-### variable nobs_
+### variable `nobs_`
 
 ```cpp
 int nobs_ {0};
@@ -904,7 +904,7 @@ int nobs_ {0};
 
 
 
-### variable mean_
+### variable `mean_`
 
 ```cpp
 double mean_ {0};
@@ -938,7 +938,7 @@ double mean_ {0};
 
 
 
-### variable var_
+### variable `var_`
 
 ```cpp
 double var_ {0};
@@ -972,7 +972,7 @@ double var_ {0};
 
 
 
-### variable stddev_
+### variable `stddev_`
 
 ```cpp
 double stddev_ {0};
@@ -1006,7 +1006,7 @@ double stddev_ {0};
 
 
 
-### variable sei_
+### variable `sei_`
 
 ```cpp
 double sei_ {0};
@@ -1040,7 +1040,7 @@ double sei_ {0};
 
 
 
-### variable is_stats_up_to_date
+### variable `is_stats_up_to_date`
 
 ```cpp
 bool is_stats_up_to_date {false};
@@ -1074,7 +1074,7 @@ bool is_stats_up_to_date {false};
 
 
 
-### variable stats_
+### variable `stats_`
 
 ```cpp
 double stats_ {0};
@@ -1109,7 +1109,7 @@ double stats_ {0};
 &mdash; Test statistics ... These can be their own type, and determined by the TestStrategies 
 
 
-### variable pvalue_
+### variable `pvalue_`
 
 ```cpp
 double pvalue_ {0};
@@ -1143,7 +1143,7 @@ double pvalue_ {0};
 
 
 
-### variable effect_
+### variable `effect_`
 
 ```cpp
 double effect_ {0};
@@ -1177,7 +1177,7 @@ double effect_ {0};
 
 
 
-### variable var_effect_
+### variable `var_effect_`
 
 ```cpp
 double var_effect_ {0};
@@ -1211,7 +1211,7 @@ double var_effect_ {0};
 
 
 
-### variable se_effect_
+### variable `se_effect_`
 
 ```cpp
 double se_effect_ {0};
@@ -1245,7 +1245,7 @@ double se_effect_ {0};
 
 
 
-### variable eff_side_
+### variable `eff_side_`
 
 ```cpp
 int eff_side_ {0};
@@ -1279,7 +1279,7 @@ int eff_side_ {0};
 
 
 
-### variable sig_
+### variable `sig_`
 
 ```cpp
 bool sig_ {false};
@@ -1313,7 +1313,7 @@ bool sig_ {false};
 
 
 
-### variable is_test_updated_
+### variable `is_test_updated_`
 
 ```cpp
 bool is_test_updated_ {false};
@@ -1347,7 +1347,7 @@ bool is_test_updated_ {false};
 
 
 
-### variable is_hacked_
+### variable `is_hacked_`
 
 ```cpp
 bool is_hacked_ {false};
@@ -1382,7 +1382,7 @@ bool is_hacked_ {false};
 
 
 
-### variable hacking_history_
+### variable `hacking_history_`
 
 ```cpp
 std::vector< HackingMethod > hacking_history_;
@@ -1416,7 +1416,7 @@ std::vector< HackingMethod > hacking_history_;
 
 
 
-### variable n_added_obs
+### variable `n_added_obs`
 
 ```cpp
 int n_added_obs {0};
@@ -1450,7 +1450,7 @@ int n_added_obs {0};
 
 
 
-### variable n_removed_obs
+### variable `n_removed_obs`
 
 ```cpp
 int n_removed_obs {0};
@@ -1488,7 +1488,7 @@ int n_removed_obs {0};
 
 ## Friends
 
-### friend operator<<
+### friend `operator<<`
 
 ```cpp
 friend OStream & operator<<(
@@ -1527,6 +1527,3 @@ friend OStream & operator<<(
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:07 CET

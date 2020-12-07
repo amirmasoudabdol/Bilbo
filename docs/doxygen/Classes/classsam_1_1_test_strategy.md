@@ -94,7 +94,7 @@ Statistical test strategies will investigate if there is a meaningful difference
 
 ## Public Types Documentation
 
-### enum TestMethod
+### enum `TestMethod`
 
 
 | Enumerator | Value | Description |
@@ -135,7 +135,7 @@ Statistical test strategies will investigate if there is a meaningful difference
 Specifying the significant testing method 
 
 
-### enum TestAlternative
+### enum `TestAlternative`
 
 
 | Enumerator | Value | Description |
@@ -183,7 +183,7 @@ Specify the side of the test
 
 ## Public Functions Documentation
 
-### function ~TestStrategy
+### function `~TestStrategy`
 
 ```cpp
 virtual ~TestStrategy() =0
@@ -217,7 +217,7 @@ virtual ~TestStrategy() =0
 
 
 
-### function run
+### function `run`
 
 ```cpp
 virtual void run(
@@ -255,7 +255,7 @@ virtual void run(
 
 
 
-### function run
+### function `run`
 
 ```cpp
 virtual void run(
@@ -294,7 +294,7 @@ virtual void run(
 
 
 
-### function alpha
+### function `alpha`
 
 ```cpp
 inline virtual double alpha()
@@ -328,7 +328,7 @@ inline virtual double alpha()
 
 
 
-### function build
+### function `build`
 
 ```cpp
 static std::unique_ptr< TestStrategy > build(
@@ -368,7 +368,7 @@ static std::unique_ptr< TestStrategy > build(
 
 ## Public Attributes Documentation
 
-### variable alpha_
+### variable `alpha_`
 
 ```cpp
 double alpha_;
@@ -406,6 +406,3 @@ double alpha_;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

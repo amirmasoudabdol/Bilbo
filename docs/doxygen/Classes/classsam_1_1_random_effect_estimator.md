@@ -89,7 +89,7 @@ Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
 
 ## Public Functions Documentation
 
-### function RandomEffectEstimator
+### function `RandomEffectEstimator`
 
 ```cpp
 RandomEffectEstimator() =default
@@ -123,7 +123,7 @@ RandomEffectEstimator() =default
 
 
 
-### function RandomEffectEstimator
+### function `RandomEffectEstimator`
 
 ```cpp
 inline RandomEffectEstimator(
@@ -159,7 +159,7 @@ inline RandomEffectEstimator(
 
 
 
-### function estimate
+### function `estimate`
 
 ```cpp
 virtual void estimate(
@@ -197,7 +197,7 @@ virtual void estimate(
 
 
 
-### function DL
+### function `DL`
 
 ```cpp
 double DL(
@@ -235,7 +235,7 @@ double DL(
 
 
 
-### function PM
+### function `PM`
 
 ```cpp
 double PM(
@@ -273,7 +273,7 @@ double PM(
 
 
 
-### function RandomEffect
+### function `RandomEffect`
 
 ```cpp
 static ResultType RandomEffect(
@@ -315,7 +315,7 @@ static ResultType RandomEffect(
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -353,6 +353,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

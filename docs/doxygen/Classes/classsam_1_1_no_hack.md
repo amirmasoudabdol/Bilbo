@@ -86,7 +86,7 @@ Inherits from [sam::HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strat
 
 ## Public Functions Documentation
 
-### function NoHack
+### function `NoHack`
 
 ```cpp
 inline NoHack()
@@ -126,6 +126,3 @@ inline NoHack()
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:08 CET

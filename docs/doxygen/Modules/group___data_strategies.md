@@ -20,9 +20,10 @@ List of available Data Strategies.  [More...](#detailed-description)
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[sam::LinearModelStrategy](/doxygen/Classes/classsam_1_1_linear_model_strategy/)**  |
+| class | **[sam::DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/)** <br>Abstract class for Data Strategies.  |
+| class | **[sam::LinearModelStrategy](/doxygen/Classes/classsam_1_1_linear_model_strategy/)** <br>Linear Model Data Strategy.  |
 | class | **[sam::LatentDataStrategy](/doxygen/Classes/classsam_1_1_latent_data_strategy/)** <br>⚠️ TO BE IMPLEMENTED!  |
-| class | **[sam::GRMDataStrategy](/doxygen/Classes/classsam_1_1_g_r_m_data_strategy/)** <br>Simulate data from Graded Response Model.  |
+| class | **[sam::GRMDataStrategy](/doxygen/Classes/classsam_1_1_g_r_m_data_strategy/)** <br>Simulate data based on General Graded Response Model.  |
 
 
 
@@ -69,6 +70,3 @@ Description to come!
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

@@ -33,7 +33,7 @@ Inherits from [sam::DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/)
 | -------------- | -------------- |
 |  | **[LatentDataStrategy](/doxygen/Classes/classsam_1_1_latent_data_strategy/#function-latentdatastrategy)**()  |
 | virtual void | **[genData](/doxygen/Classes/classsam_1_1_latent_data_strategy/#function-gendata)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment) override  |
-| virtual std::vector< arma::Row< double > > | **[genNewObservationsForAllGroups](/doxygen/Classes/classsam_1_1_latent_data_strategy/#function-gennewobservationsforallgroups)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment, int n_new_obs) override  |
+| virtual std::vector< arma::Row< double > > | **[genNewObservationsForAllGroups](/doxygen/Classes/classsam_1_1_latent_data_strategy/#function-gennewobservationsforallgroups)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment, int n_new_obs) override <br>Generates `n_new_obs` new observations for each group.  |
 | virtual arma::Row< double > | **[genNewObservationsFor](/doxygen/Classes/classsam_1_1_latent_data_strategy/#function-gennewobservationsfor)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment, int g, int n_new_obs) override <br>Generate `n_new_obs` new observations for `g` group.  |
 
 
@@ -61,9 +61,8 @@ Inherits from [sam::DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/)
 
 |                | Name           |
 | -------------- | -------------- |
-| std::unique_ptr< [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) > | **[build](/doxygen/Classes/classsam_1_1_data_strategy/#function-build)**(json & data_strategy_config)  |
+| std::unique_ptr< [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) > | **[build](/doxygen/Classes/classsam_1_1_data_strategy/#function-build)**(json & data_strategy_config) <br>[DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) Factory Method.  |
 | virtual  | **[~DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/#function-~datastrategy)**() =0 <br>Pure deconstructor of the [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) abstract class.  |
-| void | **[loadRawData](/doxygen/Classes/classsam_1_1_data_strategy/#function-loadrawdata)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * expr, const std::string & filename)  |
 
 
 
@@ -120,7 +119,7 @@ A Data Strategy for constructing a general [Structural Equaiton Model](https://e
 
 ## Public Functions Documentation
 
-### function LatentDataStrategy
+### function `LatentDataStrategy`
 
 ```cpp
 inline LatentDataStrategy()
@@ -154,7 +153,7 @@ inline LatentDataStrategy()
 
 
 
-### function genData
+### function `genData`
 
 ```cpp
 virtual void genData(
@@ -198,7 +197,7 @@ this->mainRngStream->mvnorm_n(allErrorMeans, allErrorsSigma, allErrors);
 
 gsl_vector_set(itemMeans, r, gsl_stats_mean(tmpRow->data, 1, nobs));
 
-### function genNewObservationsForAllGroups
+### function `genNewObservationsForAllGroups`
 
 ```cpp
 virtual std::vector< arma::Row< double > > genNewObservationsForAllGroups(
@@ -207,11 +206,12 @@ virtual std::vector< arma::Row< double > > genNewObservationsForAllGroups(
 ) override
 ```
 
+Generates `n_new_obs` new observations for each group. 
 
 **Parameters**: 
 
-  * **experiment** The pointer to the current experiment 
-  * **n_new_obs** The number of new observations to be added
+  * **`experiment`** The pointer to the current experiment 
+  * **`n_new_obs`** The number of new observations to be generated
 
 
 
@@ -225,8 +225,6 @@ virtual std::vector< arma::Row< double > > genNewObservationsForAllGroups(
 
 
 
-!!! note "Note"
-    This routine uses the secondary random number stream to avoid conflicting with the main random engine.
 
 
 
@@ -243,10 +241,9 @@ virtual std::vector< arma::Row< double > > genNewObservationsForAllGroups(
 **Reimplements**: [sam::DataStrategy::genNewObservationsForAllGroups](/doxygen/Classes/classsam_1_1_data_strategy/#function-gennewobservationsforallgroups)
 
 
-Generates `n_new_obs` new observations to each group.
 
 
-### function genNewObservationsFor
+### function `genNewObservationsFor`
 
 ```cpp
 virtual arma::Row< double > genNewObservationsFor(
@@ -260,9 +257,9 @@ Generate `n_new_obs` new observations for `g` group.
 
 **Parameters**: 
 
-  * **experiment** The pointer to the experiment 
-  * **g** The target group 
-  * **n_new_obs** The number of new observations
+  * **`experiment`** The pointer to the experiment 
+  * **`g`** The target group 
+  * **`n_new_obs`** The number of new observations
 
 
 
@@ -300,6 +297,3 @@ Generate `n_new_obs` new observations for `g` group.
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

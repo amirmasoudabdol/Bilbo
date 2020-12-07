@@ -60,7 +60,7 @@ Inherits from SelectionStrategy
 
 ## Public Functions Documentation
 
-### function FreeSelection
+### function `FreeSelection`
 
 ```cpp
 inline FreeSelection()
@@ -94,7 +94,7 @@ inline FreeSelection()
 
 
 
-### function review
+### function `review`
 
 ```cpp
 inline virtual bool review(
@@ -135,7 +135,7 @@ Accepting anything!
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -173,6 +173,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

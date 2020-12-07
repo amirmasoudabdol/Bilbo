@@ -59,7 +59,7 @@ Declration of the [Writer]() class.
 
 ## Public Functions Documentation
 
-### function Writer
+### function `Writer`
 
 ```cpp
 Writer() =default
@@ -93,7 +93,7 @@ Writer() =default
 
 
 
-### function ~Writer
+### function `~Writer`
 
 ```cpp
 ~Writer()
@@ -127,7 +127,7 @@ Writer() =default
 
 
 
-### function Writer
+### function `Writer`
 
 ```cpp
 Writer(
@@ -163,7 +163,7 @@ Writer(
 
 
 
-### function Writer
+### function `Writer`
 
 ```cpp
 Writer(
@@ -201,7 +201,7 @@ Writer(
 
 
 
-### function Writer
+### function `Writer`
 
 ```cpp
 Writer(
@@ -238,7 +238,7 @@ Writer(
 
 
 
-### function write
+### function `write`
 
 ```cpp
 void write(
@@ -274,7 +274,7 @@ void write(
 
 
 
-### function write
+### function `write`
 
 ```cpp
 void write(
@@ -310,7 +310,7 @@ void write(
 
 
 
-### function write
+### function `write`
 
 ```cpp
 void write(
@@ -346,7 +346,7 @@ void write(
 
 
 
-### function write
+### function `write`
 
 ```cpp
 void write(
@@ -358,7 +358,7 @@ void write(
 
 **Parameters**: 
 
-  * **subs** A reference to [Submission](/doxygen/Classes/classsam_1_1_submission/) container 
+  * **`subs`** A reference to [Submission](/doxygen/Classes/classsam_1_1_submission/) container 
 
 
 
@@ -388,7 +388,7 @@ void write(
 Write a list of submission records to a file, or a database 
 
 
-### function write
+### function `write`
 
 ```cpp
 void write(
@@ -400,7 +400,7 @@ void write(
 
 **Parameters**: 
 
-  * **data** A reference to the Experiment->measurements 
+  * **`data`** A reference to the Experiment->measurements 
 
 
 
@@ -430,7 +430,7 @@ void write(
 Write each groups' data to a file, or a database 
 
 
-### function write
+### function `write`
 
 ```cpp
 void write(
@@ -443,7 +443,7 @@ void write(
 
 **Parameters**: 
 
-  * **A** constance reference to the [Experiment](/doxygen/Classes/classsam_1_1_experiment/)
+  * **`A`** constance reference to the [Experiment](/doxygen/Classes/classsam_1_1_experiment/)
 
 
 
@@ -473,7 +473,7 @@ void write(
 Write part of the [Experiment](/doxygen/Classes/classsam_1_1_experiment/) to a file, or a database 
 
 
-### function setColumnNames
+### function `setColumnNames`
 
 ```cpp
 void setColumnNames(
@@ -515,6 +515,3 @@ void setColumnNames(
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:08 CET

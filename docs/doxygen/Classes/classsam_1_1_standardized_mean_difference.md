@@ -87,7 +87,7 @@ Inherits from [sam::EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strateg
 
 ## Public Functions Documentation
 
-### function StandardizedMeanDifference
+### function `StandardizedMeanDifference`
 
 ```cpp
 inline explicit StandardizedMeanDifference()
@@ -121,7 +121,7 @@ inline explicit StandardizedMeanDifference()
 
 
 
-### function StandardizedMeanDifference
+### function `StandardizedMeanDifference`
 
 ```cpp
 inline explicit StandardizedMeanDifference(
@@ -157,7 +157,7 @@ inline explicit StandardizedMeanDifference(
 
 
 
-### function computeEffects
+### function `computeEffects`
 
 ```cpp
 virtual void computeEffects(
@@ -201,6 +201,3 @@ virtual void computeEffects(
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET

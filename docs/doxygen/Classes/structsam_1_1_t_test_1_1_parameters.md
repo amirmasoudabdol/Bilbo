@@ -55,7 +55,7 @@ title: sam::TTest::Parameters
 
 ## Public Functions Documentation
 
-### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
+### function `NLOHMANN_DEFINE_TYPE_INTRUSIVE`
 
 ```cpp
 NLOHMANN_DEFINE_TYPE_INTRUSIVE(
@@ -99,7 +99,7 @@ NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 TestMethod name = [TestMethod::TTest](/doxygen/Classes/classsam_1_1_test_strategy/#enumvalue-ttest);
@@ -133,7 +133,7 @@ TestMethod name = [TestMethod::TTest](/doxygen/Classes/classsam_1_1_test_strateg
 
 
 
-### variable alternative
+### variable `alternative`
 
 ```cpp
 TestAlternative alternative = TestAlternative::TwoSided;
@@ -167,7 +167,7 @@ TestAlternative alternative = TestAlternative::TwoSided;
 
 
 
-### variable alpha
+### variable `alpha`
 
 ```cpp
 double alpha;
@@ -201,7 +201,7 @@ double alpha;
 
 
 
-### variable var_equal
+### variable `var_equal`
 
 ```cpp
 bool var_equal {true};
@@ -239,6 +239,3 @@ bool var_equal {true};
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

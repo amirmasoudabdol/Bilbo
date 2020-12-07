@@ -52,7 +52,7 @@ title: sam::RandomSelection::Parameters
 
 ## Public Functions Documentation
 
-### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
+### function `NLOHMANN_DEFINE_TYPE_INTRUSIVE`
 
 ```cpp
 NLOHMANN_DEFINE_TYPE_INTRUSIVE(
@@ -93,7 +93,7 @@ NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 
 ## Public Attributes Documentation
 
-### variable name
+### variable `name`
 
 ```cpp
 SelectionMethod name = SelectionMethod::RandomSelection;
@@ -131,6 +131,3 @@ SelectionMethod name = SelectionMethod::RandomSelection;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:10 CET

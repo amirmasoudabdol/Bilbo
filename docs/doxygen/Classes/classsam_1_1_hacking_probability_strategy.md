@@ -58,7 +58,7 @@ Inherited by [sam::FrankenbachStrategy](/doxygen/Classes/classsam_1_1_frankenbac
 
 ## Public Functions Documentation
 
-### function ~HackingProbabilityStrategy
+### function `~HackingProbabilityStrategy`
 
 ```cpp
 virtual ~HackingProbabilityStrategy() =0
@@ -92,7 +92,7 @@ virtual ~HackingProbabilityStrategy() =0
 
 
 
-### function estimate
+### function `estimate`
 
 ```cpp
 virtual double estimate(
@@ -130,7 +130,7 @@ virtual double estimate(
 
 
 
-### function operator double
+### function `operator double`
 
 ```cpp
 inline operator double()
@@ -164,7 +164,7 @@ inline operator double()
 
 
 
-### function operator arma::rowvec
+### function `operator arma::rowvec`
 
 ```cpp
 inline operator arma::rowvec()
@@ -198,7 +198,7 @@ inline operator arma::rowvec()
 
 
 
-### function build
+### function `build`
 
 ```cpp
 static std::unique_ptr< HackingProbabilityStrategy > build(
@@ -238,7 +238,7 @@ static std::unique_ptr< HackingProbabilityStrategy > build(
 
 ## Public Attributes Documentation
 
-### variable prob
+### variable `prob`
 
 ```cpp
 double prob;
@@ -272,7 +272,7 @@ double prob;
 
 
 
-### variable probabilities
+### variable `probabilities`
 
 ```cpp
 arma::rowvec probabilities;
@@ -310,6 +310,3 @@ arma::rowvec probabilities;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:07 CET

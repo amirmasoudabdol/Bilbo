@@ -113,7 +113,7 @@ Inherits from [sam::DecisionStrategy](/doxygen/Classes/classsam_1_1_decision_str
 
 ## Public Functions Documentation
 
-### function DefaultDecisionMaker
+### function `DefaultDecisionMaker`
 
 ```cpp
 inline explicit DefaultDecisionMaker(
@@ -149,7 +149,7 @@ inline explicit DefaultDecisionMaker(
 
 
 
-### function selectOutcomeFromExperiment
+### function `selectOutcomeFromExperiment`
 
 ```cpp
 virtual DecisionStrategy & selectOutcomeFromExperiment(
@@ -189,7 +189,7 @@ Implementation of decision-making procedure.
 
 
 
-### function selectOutcomeFromPool
+### function `selectOutcomeFromPool`
 
 ```cpp
 virtual DecisionStrategy & selectOutcomeFromPool(
@@ -228,7 +228,7 @@ virtual DecisionStrategy & selectOutcomeFromPool(
 
 
 
-### function willStartHacking
+### function `willStartHacking`
 
 ```cpp
 virtual bool willStartHacking() override
@@ -266,7 +266,7 @@ Decides whether we are going to start hacking. In this canse, we only check if t
 
 Todothis can be replaced by Policy->oprator() 
 
-### function willContinueHacking
+### function `willContinueHacking`
 
 ```cpp
 virtual bool willContinueHacking(
@@ -278,7 +278,7 @@ virtual bool willContinueHacking(
 
 **Parameters**: 
 
-  * **pchain** a reference to the given policy chain 
+  * **`pchain`** a reference to the given policy chain 
 
 
 
@@ -313,7 +313,7 @@ virtual bool willContinueHacking(
 Determines whether the `final_submission_candidates` complies with **any** of the given policies.
 
 
-### function willContinueReplicating
+### function `willContinueReplicating`
 
 ```cpp
 virtual bool willContinueReplicating(
@@ -355,7 +355,7 @@ virtual bool willContinueReplicating(
 
 ## Public Attributes Documentation
 
-### variable params
+### variable `params`
 
 ```cpp
 Parameters params;
@@ -393,6 +393,3 @@ Parameters params;
 
 
 
--------------------------------
-
-Updated on  7 December 2020 at 13:20:09 CET
