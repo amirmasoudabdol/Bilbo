@@ -1,6 +1,6 @@
 ---
 title: sam::Group
-
+summary: Declartiong of Group class.  
 
 ---
 
@@ -9,8 +9,10 @@ title: sam::Group
 
 
 
+Declartiong of [Group]() class.  [More...](#detailed-description)
 
 
+`#include <Group.h>`
 
 
 
@@ -83,6 +85,41 @@ title: sam::Group
 
 
 
+
+## Detailed Description
+
+```cpp
+class sam::Group;
+```
+
+Declartiong of [Group]() class. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The [Group](/doxygen/Classes/classsam_1_1_group/) class is an abstract representation of a dependant variable 
 
 
 
@@ -1492,4 +1529,4 @@ friend OStream & operator<<(
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:28 CET
+Updated on  7 December 2020 at 13:20:07 CET

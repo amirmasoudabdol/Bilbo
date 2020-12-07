@@ -1,6 +1,6 @@
 ---
 title: sam::EggersTestEstimator
-
+summary: Egger's Test of Funnel Plot Symmetry.  
 
 ---
 
@@ -9,8 +9,10 @@ title: sam::EggersTestEstimator
 
 **Module:** **[Meta Analysis Methods](/doxygen/Modules/group___meta_analysis/)**
 
+Egger's Test of Funnel Plot Symmetry.  [More...](#detailed-description)
 
 
+`#include <MetaAnalysis.h>`
 
 
 Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
@@ -21,7 +23,7 @@ Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[Parameters](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_parameters/)**  |
+| struct | **[Parameters](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_parameters/)** <br>[Parameters]() of the [EggersTestEstimator](/doxygen/Classes/classsam_1_1_eggers_test_estimator/).  |
 | struct | **[ResultType](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/)**  |
 
 
@@ -75,6 +77,41 @@ Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
 
 
 
+
+## Detailed Description
+
+```cpp
+class sam::EggersTestEstimator;
+```
+
+Egger's Test of Funnel Plot Symmetry. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A strategy performing Egger's Test on the available list of [Journal](/doxygen/Classes/classsam_1_1_journal/)'s publications. List of available parameters and the format of output can be found in [Parameters](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_parameters/), and [ResultType](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/). 
 
 
 
@@ -276,4 +313,4 @@ Parameters params;
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:29 CET
+Updated on  7 December 2020 at 13:20:10 CET

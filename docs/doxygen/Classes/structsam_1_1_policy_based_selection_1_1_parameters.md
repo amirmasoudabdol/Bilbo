@@ -244,4 +244,4 @@ Definition of the selection policy used by [Journal](/doxygen/Classes/classsam_1
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:29 CET
+Updated on  7 December 2020 at 13:20:10 CET

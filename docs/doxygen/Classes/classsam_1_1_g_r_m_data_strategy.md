@@ -7,7 +7,7 @@ summary: Simulate data from Graded Response Model.
 # sam::GRMDataStrategy
 
 
-
+**Module:** **[Data Strategies](/doxygen/Modules/group___data_strategies/)**
 
 Simulate data from Graded Response Model.  [More...](#detailed-description)
 
@@ -344,4 +344,4 @@ Generate `n_new_obs` new observations for `g` group.
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:28 CET
+Updated on  7 December 2020 at 13:20:09 CET

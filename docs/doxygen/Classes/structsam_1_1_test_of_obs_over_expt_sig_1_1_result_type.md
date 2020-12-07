@@ -36,10 +36,10 @@ title: sam::TestOfObsOverExptSig::ResultType
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[E](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#variable-e)**  |
-| double | **[A](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#variable-a)**  |
-| double | **[pval](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#variable-pval)**  |
-| bool | **[sig](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#variable-sig)**  |
+| double | **[E](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#variable-e)** <br>Sum of the expected probabilities.  |
+| double | **[A](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#variable-a)** <br>The chi-square statistic of the test.  |
+| double | **[pval](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#variable-pval)** <br>The p-value of the test.  |
+| bool | **[sig](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#variable-sig)** <br>The significance of the test.  |
 
 
 
@@ -134,6 +134,7 @@ inline operator arma::Row< double >()
 double E;
 ```
 
+Sum of the expected probabilities. 
 
 
 
@@ -168,6 +169,7 @@ double E;
 double A;
 ```
 
+The chi-square statistic of the test. 
 
 
 
@@ -202,6 +204,7 @@ double A;
 double pval;
 ```
 
+The p-value of the test. 
 
 
 
@@ -236,6 +239,7 @@ double pval;
 bool sig;
 ```
 
+The significance of the test. 
 
 
 
@@ -270,4 +274,4 @@ bool sig;
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:29 CET
+Updated on  7 December 2020 at 13:20:10 CET

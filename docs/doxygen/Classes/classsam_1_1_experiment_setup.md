@@ -7,7 +7,7 @@ summary: Define a class for ExperimentSetup.
 # sam::ExperimentSetup
 
 
-
+**Module:** **[Experiment Modules](/doxygen/Modules/group___experiment/)**
 
 Define a class for [ExperimentSetup]().  [More...](#detailed-description)
 
@@ -566,4 +566,4 @@ friend class ExperimentSetupBuilder;
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:28 CET
+Updated on  7 December 2020 at 13:20:09 CET

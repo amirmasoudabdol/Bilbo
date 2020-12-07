@@ -7,7 +7,7 @@ summary: Experiment encapsulates data and methods needed by the Researcher to co
 # sam::Experiment
 
 
-
+**Module:** **[Experiment Modules](/doxygen/Modules/group___experiment/)**
 
 [Experiment]() encapsulates data and methods needed by the [Researcher]() to conduct its research.  [More...](#detailed-description)
 
@@ -1354,4 +1354,4 @@ std::vector< Group > groups_;
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:28 CET
+Updated on  7 December 2020 at 13:20:09 CET

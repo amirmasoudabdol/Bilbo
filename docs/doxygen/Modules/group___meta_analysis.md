@@ -20,12 +20,12 @@ List of available Meta Analysis.  [More...](#detailed-description)
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[sam::RandomEffectEstimator](/doxygen/Classes/classsam_1_1_random_effect_estimator/)**  |
-| class | **[sam::FixedEffectEstimator](/doxygen/Classes/classsam_1_1_fixed_effect_estimator/)**  |
-| class | **[sam::EggersTestEstimator](/doxygen/Classes/classsam_1_1_eggers_test_estimator/)**  |
-| class | **[sam::TestOfObsOverExptSig](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/)**  |
-| class | **[sam::TrimAndFill](/doxygen/Classes/classsam_1_1_trim_and_fill/)**  |
-| class | **[sam::RankCorrelation](/doxygen/Classes/classsam_1_1_rank_correlation/)**  |
+| class | **[sam::RandomEffectEstimator](/doxygen/Classes/classsam_1_1_random_effect_estimator/)** <br>Random Effect Estimator.  |
+| class | **[sam::FixedEffectEstimator](/doxygen/Classes/classsam_1_1_fixed_effect_estimator/)** <br>Fixed Effect Estimator.  |
+| class | **[sam::EggersTestEstimator](/doxygen/Classes/classsam_1_1_eggers_test_estimator/)** <br>Egger's Test of Funnel Plot Symmetry.  |
+| class | **[sam::TestOfObsOverExptSig](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/)** <br>Test of Excess of Significant Findings.  |
+| class | **[sam::TrimAndFill](/doxygen/Classes/classsam_1_1_trim_and_fill/)** <br>Trim and Fill Publication Bias Test.  |
+| class | **[sam::RankCorrelation](/doxygen/Classes/classsam_1_1_rank_correlation/)** <br>Begg's Rank Correlation Test.  |
 
 
 
@@ -74,4 +74,4 @@ Description to come!
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:29 CET
+Updated on  7 December 2020 at 13:20:10 CET

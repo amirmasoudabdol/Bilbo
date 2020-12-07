@@ -1,6 +1,6 @@
 ---
 title: sam::TrimAndFill::Parameters
-
+summary: Parameters of the TrimAndFill.  
 
 ---
 
@@ -9,8 +9,7 @@ title: sam::TrimAndFill::Parameters
 
 
 
- [More...](#detailed-description)
-
+[Parameters]() of the [TrimAndFill](/doxygen/Classes/classsam_1_1_trim_and_fill/). 
 
 `#include <MetaAnalysis.h>`
 
@@ -30,7 +29,7 @@ title: sam::TrimAndFill::Parameters
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[NLOHMANN_DEFINE_TYPE_INTRUSIVE](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#function-nlohmann_define_type_intrusive)**([TrimAndFill::Parameters](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/) , name , side , estimator , alpha )  |
+|  | **[NLOHMANN_DEFINE_TYPE_INTRUSIVE](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#function-nlohmann_define_type_intrusive)**([TrimAndFill::Parameters](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/) , name , [side](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-side) , [estimator](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-estimator) , [alpha](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-alpha) )  |
 
 
 ## Public Attributes
@@ -38,43 +37,9 @@ title: sam::TrimAndFill::Parameters
 |                | Name           |
 | -------------- | -------------- |
 | std::string | **[name](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-name)**  |
-| std::string | **[side](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-side)**  |
-| std::string | **[estimator](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-estimator)**  |
-| double | **[alpha](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-alpha)**  |
-
-
-
-
-
-
-## Detailed Description
-
-```cpp
-struct sam::TrimAndFill::Parameters;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**Todo**: : to be extended! and be properly implemented 
-
-
-
-
-
-
+| std::string | **[side](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-side)** <br>Indicates the side of the funnel plot where missing values should be imputed.  |
+| std::string | **[estimator](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-estimator)** <br>The symmetry estimator.  |
+| double | **[alpha](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-alpha)** <br>The ɑ of the test.  |
 
 
 
@@ -175,6 +140,7 @@ std::string name {"TrimAndFill"};
 std::string side {"auto"};
 ```
 
+Indicates the side of the funnel plot where missing values should be imputed. 
 
 
 
@@ -209,6 +175,7 @@ std::string side {"auto"};
 std::string estimator {"R0"};
 ```
 
+The symmetry estimator. 
 
 
 
@@ -243,6 +210,7 @@ std::string estimator {"R0"};
 double alpha {0.10};
 ```
 
+The ɑ of the test. 
 
 
 
@@ -277,4 +245,4 @@ double alpha {0.10};
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:29 CET
+Updated on  7 December 2020 at 13:20:10 CET

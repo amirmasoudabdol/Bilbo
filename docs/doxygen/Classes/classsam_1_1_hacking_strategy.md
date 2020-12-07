@@ -1,6 +1,6 @@
 ---
 title: sam::HackingStrategy
-summary: Abstract class for hacking strategies.  
+summary: Abstract Class of Hacking Strategies.  
 
 ---
 
@@ -9,7 +9,7 @@ summary: Abstract class for hacking strategies.
 
 **Module:** **[Hacking Strategies](/doxygen/Modules/group___hacking_strategies/)**
 
-Abstract class for hacking strategies.  [More...](#detailed-description)
+Abstract Class of Hacking Strategies.  [More...](#detailed-description)
 
 
 `#include <HackingStrategy.h>`
@@ -63,7 +63,7 @@ Inherited by [sam::ConditionDropping](/doxygen/Classes/classsam_1_1_condition_dr
 class sam::HackingStrategy;
 ```
 
-Abstract class for hacking strategies. 
+Abstract Class of Hacking Strategies. 
 
 
 
@@ -608,4 +608,4 @@ HackingTarget target_;
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:29 CET
+Updated on  7 December 2020 at 13:20:09 CET

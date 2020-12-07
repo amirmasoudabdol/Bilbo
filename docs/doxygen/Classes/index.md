@@ -18,8 +18,8 @@ title: Classes
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_default_decision_maker_1_1_parameters/)** 
     * **class [EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strategy/)** <br>Abstract class for Effect Size Strategy. 
         * **struct [EffectStrategyParameters](/doxygen/Classes/structsam_1_1_effect_strategy_1_1_effect_strategy_parameters/)** 
-    * **class [EggersTestEstimator](/doxygen/Classes/classsam_1_1_eggers_test_estimator/)** 
-        * **struct [Parameters](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_parameters/)** 
+    * **class [EggersTestEstimator](/doxygen/Classes/classsam_1_1_eggers_test_estimator/)** <br>Egger's Test of Funnel Plot Symmetry. 
+        * **struct [Parameters](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_parameters/)** <br>[Parameters]() of the [EggersTestEstimator](/doxygen/Classes/classsam_1_1_eggers_test_estimator/). 
         * **struct [ResultType](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/)** 
     * **class [Experiment](/doxygen/Classes/classsam_1_1_experiment/)** <br>[Experiment]() encapsulates data and methods needed by the [Researcher]() to conduct its research. 
     * **class [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/)** <br>Define a class for [ExperimentSetup](). 
@@ -31,7 +31,7 @@ title: Classes
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_fabricating_data_1_1_parameters/)** 
     * **class [FalsifyingData](/doxygen/Classes/classsam_1_1_falsifying_data/)** 
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/)** 
-    * **class [FixedEffectEstimator](/doxygen/Classes/classsam_1_1_fixed_effect_estimator/)** 
+    * **class [FixedEffectEstimator](/doxygen/Classes/classsam_1_1_fixed_effect_estimator/)** <br>Fixed Effect Estimator. 
         * **struct [ResultType](/doxygen/Classes/structsam_1_1_fixed_effect_estimator_1_1_result_type/)** 
     * **class [FrankenbachStrategy](/doxygen/Classes/classsam_1_1_frankenbach_strategy/)** 
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_frankenbach_strategy_1_1_parameters/)** 
@@ -39,15 +39,15 @@ title: Classes
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_free_selection_1_1_parameters/)** 
     * **class [GRMDataStrategy](/doxygen/Classes/classsam_1_1_g_r_m_data_strategy/)** <br>Simulate data from Graded Response Model. 
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_g_r_m_data_strategy_1_1_parameters/)** 
-    * **class [Group](/doxygen/Classes/classsam_1_1_group/)** 
+    * **class [Group](/doxygen/Classes/classsam_1_1_group/)** <br>Declartiong of [Group]() class. 
     * **class [GroupPooling](/doxygen/Classes/classsam_1_1_group_pooling/)** 
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_group_pooling_1_1_parameters/)** 
     * **class [HackingProbabilityStrategy](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/)** 
-    * **class [HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strategy/)** <br>Abstract class for hacking strategies. 
+    * **class [HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strategy/)** <br>Abstract Class of Hacking Strategies. 
     * **class [HedgesG](/doxygen/Classes/classsam_1_1_hedges_g/)** 
     * **class [Journal](/doxygen/Classes/classsam_1_1_journal/)** 
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_journal_1_1_parameters/)** 
-    * **class [LatentDataStrategy](/doxygen/Classes/classsam_1_1_latent_data_strategy/)** 
+    * **class [LatentDataStrategy](/doxygen/Classes/classsam_1_1_latent_data_strategy/)** <br>⚠️ TO BE IMPLEMENTED! 
     * **class [LinearModelStrategy](/doxygen/Classes/classsam_1_1_linear_model_strategy/)** 
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_linear_model_strategy_1_1_parameters/)** 
     * **class [MeanDifference](/doxygen/Classes/classsam_1_1_mean_difference/)** 
@@ -69,13 +69,13 @@ title: Classes
     * **struct [PolicyChainSet](/doxygen/Classes/structsam_1_1_policy_chain_set/)** 
     * **class [QuestionableRounding](/doxygen/Classes/classsam_1_1_questionable_rounding/)** 
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/)** 
-    * **class [RandomEffectEstimator](/doxygen/Classes/classsam_1_1_random_effect_estimator/)** 
-        * **struct [Parameters](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_parameters/)** 
+    * **class [RandomEffectEstimator](/doxygen/Classes/classsam_1_1_random_effect_estimator/)** <br>Random Effect Estimator. 
+        * **struct [Parameters](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_parameters/)** <br>[Parameters]() of the [RandomEffectEstimator](/doxygen/Classes/classsam_1_1_random_effect_estimator/). 
         * **struct [ResultType](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/)** 
     * **class [RandomSelection](/doxygen/Classes/classsam_1_1_random_selection/)** <br>Random Selection Strategy. 
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_random_selection_1_1_parameters/)** 
-    * **class [RankCorrelation](/doxygen/Classes/classsam_1_1_rank_correlation/)** 
-        * **struct [Parameters](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_parameters/)** 
+    * **class [RankCorrelation](/doxygen/Classes/classsam_1_1_rank_correlation/)** <br>Begg's Rank Correlation Test. 
+        * **struct [Parameters](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_parameters/)** <br>[Parameters]() of [RankCorrelation](/doxygen/Classes/classsam_1_1_rank_correlation/). 
         * **struct [ResultType](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/)** 
     * **class [Researcher](/doxygen/Classes/classsam_1_1_researcher/)** 
     * **class [ResearcherBuilder](/doxygen/Classes/classsam_1_1_researcher_builder/)** 
@@ -90,12 +90,12 @@ title: Classes
     * **class [TTest](/doxygen/Classes/classsam_1_1_t_test/)** <br>Declration of t-test. 
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_t_test_1_1_parameters/)** 
         * **struct [ResultType](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/)** 
-    * **class [TestOfObsOverExptSig](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/)** 
+    * **class [TestOfObsOverExptSig](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/)** <br>Test of Excess of Significant Findings. 
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_parameters/)** 
         * **struct [ResultType](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/)** 
     * **class [TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/)** <br>Abstract class for defining test strategies. 
-    * **class [TrimAndFill](/doxygen/Classes/classsam_1_1_trim_and_fill/)** 
-        * **struct [Parameters](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/)** 
+    * **class [TrimAndFill](/doxygen/Classes/classsam_1_1_trim_and_fill/)** <br>Trim and Fill Publication Bias Test. 
+        * **struct [Parameters](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/)** <br>[Parameters]() of the [TrimAndFill](/doxygen/Classes/classsam_1_1_trim_and_fill/). 
         * **struct [ResultType](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_result_type/)** 
     * **class [WilcoxonTest](/doxygen/Classes/classsam_1_1_wilcoxon_test/)** 
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_parameters/)** 
@@ -108,4 +108,4 @@ title: Classes
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:30 CET
+Updated on  7 December 2020 at 13:20:12 CET

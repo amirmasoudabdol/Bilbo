@@ -36,9 +36,9 @@ title: sam::RankCorrelation::ResultType
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[est](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#variable-est)**  |
-| double | **[pval](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#variable-pval)**  |
-| bool | **[sig](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#variable-sig)**  |
+| double | **[est](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#variable-est)** <br>Kendall's tau estimate.  |
+| double | **[pval](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#variable-pval)** <br>The p-value of the test.  |
+| bool | **[sig](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#variable-sig)** <br>The significance of the test.  |
 
 
 
@@ -133,6 +133,7 @@ inline operator arma::Row< double >()
 double est;
 ```
 
+Kendall's tau estimate. 
 
 
 
@@ -167,6 +168,7 @@ double est;
 double pval;
 ```
 
+The p-value of the test. 
 
 
 
@@ -201,6 +203,7 @@ double pval;
 bool sig;
 ```
 
+The significance of the test. 
 
 
 
@@ -235,4 +238,4 @@ bool sig;
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:29 CET
+Updated on  7 December 2020 at 13:20:10 CET

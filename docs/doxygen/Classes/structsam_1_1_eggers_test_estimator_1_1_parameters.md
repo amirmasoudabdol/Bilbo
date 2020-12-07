@@ -1,15 +1,15 @@
 ---
 title: sam::EggersTestEstimator::Parameters
-
+summary: Parameters of the EggersTestEstimator.  
 
 ---
 
 # sam::EggersTestEstimator::Parameters
 
 
+**Module:** **[Parameters of Meta Anlaysis Methods](/doxygen/Modules/group___meta_analysis_parameters/)**
 
-
- [More...](#detailed-description)
+[Parameters]() of the [EggersTestEstimator](/doxygen/Classes/classsam_1_1_eggers_test_estimator/).  [More...](#detailed-description)
 
 
 `#include <MetaAnalysis.h>`
@@ -30,7 +30,7 @@ title: sam::EggersTestEstimator::Parameters
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[NLOHMANN_DEFINE_TYPE_INTRUSIVE](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_parameters/#function-nlohmann_define_type_intrusive)**([EggersTestEstimator::Parameters](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_parameters/) , name , alpha )  |
+|  | **[NLOHMANN_DEFINE_TYPE_INTRUSIVE](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_parameters/#function-nlohmann_define_type_intrusive)**([EggersTestEstimator::Parameters](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_parameters/) , name , [alpha](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_parameters/#variable-alpha) )  |
 
 
 ## Public Attributes
@@ -38,7 +38,7 @@ title: sam::EggersTestEstimator::Parameters
 |                | Name           |
 | -------------- | -------------- |
 | std::string | **[name](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_parameters/#variable-name)**  |
-| double | **[alpha](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_parameters/#variable-alpha)**  |
+| double | **[alpha](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_parameters/#variable-alpha)** <br>The ɑ of the test.  |
 
 
 
@@ -51,6 +51,7 @@ title: sam::EggersTestEstimator::Parameters
 struct sam::EggersTestEstimator::Parameters;
 ```
 
+[Parameters]() of the [EggersTestEstimator](/doxygen/Classes/classsam_1_1_eggers_test_estimator/). 
 
 
 
@@ -66,7 +67,6 @@ struct sam::EggersTestEstimator::Parameters;
 
 
 
-**Todo**: : to be extended! and be properly implemented 
 
 
 
@@ -78,6 +78,7 @@ struct sam::EggersTestEstimator::Parameters;
 
 
 
+While Egger's test is often performed with ɑ = 0.1, it's possible to change the ɑ using the [alpha](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_parameters/#variable-alpha) parameter. 
 
 
 
@@ -171,6 +172,7 @@ std::string name {"EggersTestEstimator"};
 double alpha {0.10};
 ```
 
+The ɑ of the test. 
 
 
 
@@ -205,4 +207,4 @@ double alpha {0.10};
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:29 CET
+Updated on  7 December 2020 at 13:20:10 CET

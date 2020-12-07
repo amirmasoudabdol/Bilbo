@@ -1,6 +1,6 @@
 ---
 title: sam::FixedEffectEstimator
-
+summary: Fixed Effect Estimator.  
 
 ---
 
@@ -9,8 +9,9 @@ title: sam::FixedEffectEstimator
 
 **Module:** **[Meta Analysis Methods](/doxygen/Modules/group___meta_analysis/)**
 
+Fixed Effect Estimator. 
 
-
+`#include <MetaAnalysis.h>`
 
 
 Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
@@ -196,4 +197,4 @@ static inline ResultType FixedEffect(
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:29 CET
+Updated on  7 December 2020 at 13:20:10 CET

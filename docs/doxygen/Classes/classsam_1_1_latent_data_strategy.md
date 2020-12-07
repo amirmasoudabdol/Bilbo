@@ -1,15 +1,15 @@
 ---
 title: sam::LatentDataStrategy
-
+summary: ⚠️ TO BE IMPLEMENTED!  
 
 ---
 
 # sam::LatentDataStrategy
 
 
+**Module:** **[Data Strategies](/doxygen/Modules/group___data_strategies/)**
 
-
- [More...](#detailed-description)
+⚠️ TO BE IMPLEMENTED!  [More...](#detailed-description)
 
 
 `#include <DataStrategy.h>`
@@ -77,6 +77,7 @@ Inherits from [sam::DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/)
 class sam::LatentDataStrategy;
 ```
 
+⚠️ TO BE IMPLEMENTED! 
 
 
 
@@ -95,7 +96,8 @@ class sam::LatentDataStrategy;
 
 
 
-!!! warning "Warning"To be implemented!
+!!! warning "Warning"
+    To be implemented!
 
 
 
@@ -300,4 +302,4 @@ Generate `n_new_obs` new observations for `g` group.
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:28 CET
+Updated on  7 December 2020 at 13:20:09 CET

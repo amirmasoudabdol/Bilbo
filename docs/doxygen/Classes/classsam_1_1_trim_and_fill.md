@@ -1,6 +1,6 @@
 ---
 title: sam::TrimAndFill
-
+summary: Trim and Fill Publication Bias Test.  
 
 ---
 
@@ -9,8 +9,9 @@ title: sam::TrimAndFill
 
 **Module:** **[Meta Analysis Methods](/doxygen/Modules/group___meta_analysis/)**
 
+Trim and Fill Publication Bias Test. 
 
-
+`#include <MetaAnalysis.h>`
 
 
 Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
@@ -21,7 +22,7 @@ Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[Parameters](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/)**  |
+| struct | **[Parameters](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/)** <br>[Parameters]() of the [TrimAndFill](/doxygen/Classes/classsam_1_1_trim_and_fill/).  |
 | struct | **[ResultType](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_result_type/)**  |
 
 
@@ -314,4 +315,4 @@ Parameters params;
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:29 CET
+Updated on  7 December 2020 at 13:20:10 CET

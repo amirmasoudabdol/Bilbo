@@ -7,7 +7,7 @@ title: sam::OutliersRemoval::Parameters
 # sam::OutliersRemoval::Parameters
 
 
-**Module:** **[Hacking Strategies Parameters](/doxygen/Modules/group___hacking_strategies_parameters/)**
+**Module:** **[Parameters of Hacking Strategies](/doxygen/Modules/group___hacking_strategies_parameters/)**
 
  [More...](#detailed-description)
 
@@ -503,4 +503,4 @@ HackingStage stage {HackingStage::PostProcessing};
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:29 CET
+Updated on  7 December 2020 at 13:20:10 CET

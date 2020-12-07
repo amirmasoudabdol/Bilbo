@@ -69,8 +69,6 @@ Abstract class for Data Strategies.
 
 
 
-!!! note "Note"
-    Each Data Strategy should have access to an instance of RandomNumberGenerator. This is usually done by creating a desired _random engine_ and passing the pointer to the DataGenStrategy. 
 
 
 
@@ -85,7 +83,7 @@ Abstract class for Data Strategies.
 
 
 
-A DataGenStrategy should at least two methods, `genData` and `genNewObservationForAllGroups`. The former is mainly used to populate a new [Experiment](/doxygen/Classes/classsam_1_1_experiment/) while the latter is being used by some hacking strategies, e.g. [OptionalStopping](/doxygen/Classes/classsam_1_1_optional_stopping/), where new data — from the same population — is needed.
+A DataGenStrategy should at least two methods, `genData` and `genNewObservationForAllGroups`. The former is mainly used to populate a new [Experiment](/doxygen/Classes/classsam_1_1_experiment/) while the latter is being used by some hacking strategies, e.g. [OptionalStopping](/doxygen/Classes/classsam_1_1_optional_stopping/), where new data — from the same population — is needed. 
 
 
 
@@ -405,4 +403,4 @@ Generate `n_new_obs` new observations for `g` group.
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:28 CET
+Updated on  7 December 2020 at 13:20:07 CET

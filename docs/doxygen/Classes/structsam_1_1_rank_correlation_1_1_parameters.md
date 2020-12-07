@@ -1,16 +1,15 @@
 ---
 title: sam::RankCorrelation::Parameters
-
+summary: Parameters of RankCorrelation.  
 
 ---
 
 # sam::RankCorrelation::Parameters
 
 
+**Module:** **[Parameters of Meta Anlaysis Methods](/doxygen/Modules/group___meta_analysis_parameters/)**
 
-
- [More...](#detailed-description)
-
+[Parameters]() of [RankCorrelation](/doxygen/Classes/classsam_1_1_rank_correlation/). 
 
 `#include <MetaAnalysis.h>`
 
@@ -30,7 +29,7 @@ title: sam::RankCorrelation::Parameters
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[NLOHMANN_DEFINE_TYPE_INTRUSIVE](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_parameters/#function-nlohmann_define_type_intrusive)**([RankCorrelation::Parameters](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_parameters/) , name , alternative , alpha )  |
+|  | **[NLOHMANN_DEFINE_TYPE_INTRUSIVE](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_parameters/#function-nlohmann_define_type_intrusive)**([RankCorrelation::Parameters](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_parameters/) , name , alternative , [alpha](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_parameters/#variable-alpha) )  |
 
 
 ## Public Attributes
@@ -39,41 +38,7 @@ title: sam::RankCorrelation::Parameters
 | -------------- | -------------- |
 | std::string | **[name](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_parameters/#variable-name)**  |
 | [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) | **[alternative](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_parameters/#variable-alternative)**  |
-| double | **[alpha](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_parameters/#variable-alpha)**  |
-
-
-
-
-
-
-## Detailed Description
-
-```cpp
-struct sam::RankCorrelation::Parameters;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**Todo**: : to be extended! and be properly implemented 
-
-
-
-
-
-
+| double | **[alpha](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_parameters/#variable-alpha)** <br>The ɑ of the test.  |
 
 
 
@@ -207,6 +172,7 @@ TestStrategy::TestAlternative alternative = TestStrategy::TestAlternative::TwoSi
 double alpha {0.10};
 ```
 
+The ɑ of the test. 
 
 
 
@@ -241,4 +207,4 @@ double alpha {0.10};
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:29 CET
+Updated on  7 December 2020 at 13:20:10 CET

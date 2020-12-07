@@ -1,6 +1,6 @@
 ---
 title: sam::TestOfObsOverExptSig
-
+summary: Test of Excess of Significant Findings.  
 
 ---
 
@@ -9,8 +9,9 @@ title: sam::TestOfObsOverExptSig
 
 **Module:** **[Meta Analysis Methods](/doxygen/Modules/group___meta_analysis/)**
 
+Test of Excess of Significant Findings. 
 
-
+`#include <MetaAnalysis.h>`
 
 
 Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
@@ -281,4 +282,4 @@ Parameters params;
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:29 CET
+Updated on  7 December 2020 at 13:20:10 CET

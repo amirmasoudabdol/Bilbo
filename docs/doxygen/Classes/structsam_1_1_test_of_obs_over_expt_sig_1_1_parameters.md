@@ -7,7 +7,7 @@ title: sam::TestOfObsOverExptSig::Parameters
 # sam::TestOfObsOverExptSig::Parameters
 
 
-
+**Module:** **[Parameters of Meta Anlaysis Methods](/doxygen/Modules/group___meta_analysis_parameters/)**
 
  [More...](#detailed-description)
 
@@ -66,7 +66,6 @@ struct sam::TestOfObsOverExptSig::Parameters;
 
 
 
-**Todo**: : to be extended! and be properly implemented 
 
 
 
@@ -78,6 +77,7 @@ struct sam::TestOfObsOverExptSig::Parameters;
 
 
 
+[Parameters](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_parameters/) of [TestOfObsOverExptSig](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/)
 
 
 
@@ -205,4 +205,4 @@ double alpha {0.10};
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:29 CET
+Updated on  7 December 2020 at 13:20:10 CET

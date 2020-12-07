@@ -9,8 +9,10 @@ title: sam::EggersTestEstimator::ResultType
 
 
 
+ [More...](#detailed-description)
 
 
+`#include <MetaAnalysis.h>`
 
 
 
@@ -36,17 +38,51 @@ title: sam::EggersTestEstimator::ResultType
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[slope](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-slope)**  |
-| double | **[se](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-se)**  |
-| double | **[tstat](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-tstat)**  |
-| double | **[pval](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-pval)**  |
-| bool | **[sig](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-sig)**  |
-| double | **[df](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-df)**  |
+| double | **[slope](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-slope)** <br>The slope of the fitted line.  |
+| double | **[se](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-se)** <br>The standard error of the slope.  |
+| double | **[tstat](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-tstat)** <br>The t-statistic of the test.  |
+| double | **[pval](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-pval)** <br>The p-value of the test.  |
+| bool | **[sig](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-sig)** <br>The significance of the test.  |
+| double | **[df](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-df)** <br>The degree-of-freedom of the test.  |
 
 
 
 
 
+
+## Detailed Description
+
+```cpp
+struct sam::EggersTestEstimator::ResultType;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Egger's Test Output 
 
 
 
@@ -136,6 +172,7 @@ inline operator arma::Row< double >()
 double slope;
 ```
 
+The slope of the fitted line. 
 
 
 
@@ -170,6 +207,7 @@ double slope;
 double se;
 ```
 
+The standard error of the slope. 
 
 
 
@@ -204,6 +242,7 @@ double se;
 double tstat;
 ```
 
+The t-statistic of the test. 
 
 
 
@@ -238,6 +277,7 @@ double tstat;
 double pval;
 ```
 
+The p-value of the test. 
 
 
 
@@ -272,6 +312,7 @@ double pval;
 bool sig;
 ```
 
+The significance of the test. 
 
 
 
@@ -306,6 +347,7 @@ bool sig;
 double df;
 ```
 
+The degree-of-freedom of the test. 
 
 
 
@@ -340,4 +382,4 @@ double df;
 
 -------------------------------
 
-Updated on  3 December 2020 at 12:37:29 CET
+Updated on  7 December 2020 at 13:20:10 CET
