@@ -1,4 +1,4 @@
-site_name: SAM
+site_name: SAM - Science Abstract Model
 nav:
     - Home: index.md
     - Design:
@@ -43,13 +43,19 @@ nav:
         - studies/optional-stopping-variation.md
         # - studies/outliers-removal-variation.md
     - API:
-        # - Home: /doxygen/
-        - Modules: /doxygen/Modules
-        - Classes: /doxygen/Classes
+        - Home: doxygen/index.md
+        - Modules: doxygen/Modules
+        - Classes: doxygen/Classes
         # - Namespaces: /doxygen/Namespaces
         # - Files: /doxygen/Files
         # - Related Pages: /doxygen/Pages
         # - Examples: /doxygen/Examples
+    - Tutorial:
+        - Tutorial: tutorial/index.md
+        - Installation: tutorial/installation.md
+        - Getting Started: tutorial/getting-started.md
+        - Simple Simulation: tutorial/simple-simulation.md
+    - Frodo: frodo.md
 
     # - Extras:
     #     - extending-sam.md
