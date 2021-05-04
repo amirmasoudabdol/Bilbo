@@ -1,23 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="486.5 242 256 256" width="256" height="256">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="1167.7 937.5 96 96" width="96" height="96">
   <defs>
-    <font-face font-family="Lucida Grande" font-size="200" panose-1="2 11 7 0 4 5 2 2 2 4" units-per-em="1000" underline-position="-97.65625" underline-thickness="48.828125" slope="0" x-height="536.1328" cap-height="722.65625" ascent="966.7969" descent="-210.9375" font-weight="700">
+    <font-face font-family="Nitti Grotesk" font-size="42" panose-1="2 11 8 3 4 2 2 2 0 3" units-per-em="1000" underline-position="-114" underline-thickness="84" slope="0" x-height="445" cap-height="558" ascent="924.0019" descent="-276.00056" font-weight="700">
       <font-face-src>
-        <font-face-name name="LucidaGrande-Bold"/>
+        <font-face-name name="NittiGrotesk-Bold"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Nitti Grotesk" font-size="42" panose-1="2 11 8 3 4 2 2 9 0 3" units-per-em="1000" underline-position="-114" underline-thickness="84" slope="-285.7143" x-height="445" cap-height="558" ascent="924.0019" descent="-276.00056" font-style="italic" font-weight="700">
+      <font-face-src>
+        <font-face-name name="NittiGrotesk-BoldItalic"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Nitti Grotesk" font-size="42" panose-1="2 11 5 3 4 2 2 2 0 3" units-per-em="1000" underline-position="-142" underline-thickness="56" slope="0" x-height="435" cap-height="558" ascent="924.0019" descent="-276.00056" font-weight="400">
+      <font-face-src>
+        <font-face-name name="NittiGrotesk-Normal"/>
       </font-face-src>
     </font-face>
   </defs>
-  <metadata> Produced by OmniGraffle 7.17.4\n2020-09-17 08:34:17 +0000</metadata>
-  <g id="Canvas_1" fill-opacity="1" fill="none" stroke-opacity="1" stroke-dasharray="none" stroke="none">
+  <metadata> Produced by OmniGraffle 7.18.5\n2021-05-04 08:26:37 +0000</metadata>
+  <g id="Canvas_1" stroke="none" stroke-opacity="1" fill-opacity="1" fill="none" stroke-dasharray="none">
     <title>Canvas 1</title>
-    <rect fill="white" x="486.5" y="242" width="256" height="256"/>
     <g id="Canvas_1_Layer_1">
       <title>Layer 1</title>
-      <g id="Graphic_2">
-        <rect x="486.5" y="242" width="256" height="256" fill="black"/>
-        <text transform="translate(676.707 487.5) rotate(180)" fill="white">
-          <tspan font-family="Lucida Grande" font-size="200" font-weight="700" fill="white" x="0" y="193">δ</tspan>
+      <g id="Graphic_130">
+        <path d="M 1182.7 937.5 L 1248.7 937.5 C 1256.9843 937.5 1263.7 944.2157 1263.7 952.5 L 1263.7 1018.5 C 1263.7 1026.7843 1256.9843 1033.5 1248.7 1033.5 L 1182.7 1033.5 C 1174.4157 1033.5 1167.7 1026.7843 1167.7 1018.5 L 1167.7 952.5 C 1167.7 944.2157 1174.4157 937.5 1182.7 937.5 Z" fill="#111217"/>
+      </g>
+      <g id="Graphic_129">
+        <clipPath id="clip_path">
+          <rect x="0" y="0" width="30" height="30"/>
+        </clipPath>
+        <text clip-path="url(#clip_path)" transform="translate(1171.623 960)" fill="#007aff">
+          <tspan font-family="Nitti Grotesk" font-size="42" font-weight="700" fill="#007aff" x="0" y="39">S</tspan>
+        </text>
+      </g>
+      <g id="Graphic_128">
+        <clipPath id="clip_path_2">
+          <rect x="0" y="0" width="30" height="30"/>
+        </clipPath>
+        <text clip-path="url(#clip_path_2)" transform="translate(1232.278 960)" fill="#ff9500">
+          <tspan font-family="Nitti Grotesk" font-size="42" font-weight="700" fill="#ff9500" x="0" y="39">M</tspan>
+        </text>
+      </g>
+      <g id="Graphic_127">
+        <clipPath id="clip_path_3">
+          <rect x="0" y="0" width="30" height="30"/>
+        </clipPath>
+        <text clip-path="url(#clip_path_3)" transform="translate(1224.3913 1014.2913) rotate(180)" fill="#af52de">
+          <tspan font-family="Nitti Grotesk" font-size="42" font-style="italic" font-weight="700" fill="#af52de" x="0" y="39">A</tspan>
+        </text>
+      </g>
+      <g id="Graphic_126">
+        <text transform="translate(1192.7104 957)" fill="#444446">
+          <tspan font-family="Nitti Grotesk" font-size="42" font-weight="400" fill="#444446" x="4352074e-20" y="39">[</tspan>
+        </text>
+      </g>
+      <g id="Graphic_125">
+        <text transform="translate(1222.9867 957)" fill="#444446">
+          <tspan font-family="Nitti Grotesk" font-size="42" font-weight="400" fill="#444446" x="4352074e-20" y="39">]</tspan>
         </text>
       </g>
     </g>

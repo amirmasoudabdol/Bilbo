@@ -1,4 +1,4 @@
-site_name: SAM - Science Abstract Model
+site_name: SAM - Science Abstract Model Simulation Framework
 nav:
     - Home: index.md
     - Design:
@@ -46,10 +46,6 @@ nav:
         - Home: doxygen/index.md
         - Modules: doxygen/Modules
         - Classes: doxygen/Classes
-        # - Namespaces: /doxygen/Namespaces
-        # - Files: /doxygen/Files
-        # - Related Pages: /doxygen/Pages
-        # - Examples: /doxygen/Examples
     - Tutorial:
         - Tutorial: tutorial/index.md
         - Installation: tutorial/installation.md
@@ -91,7 +87,7 @@ theme:
   include_homepage_in_sidebar: false
   highlightjs: true
   logo:
-    img/logo.svg
+    img/logo.png
   favicon:
     img/favicon.ico
   icon:

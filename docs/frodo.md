@@ -1,5 +1,7 @@
 # FRODO
 
+<img src="img/frodo-logo.png" width="120" align="right"/>
+
 FRODO is a collection of scripts that facilitates the process of creating, managing and running SAM projects. With FRODO, you can create, remove, or archive your projects; in addition, when within your project, FRODO several useful tools to simplify the process of configuring and running your project.
 
 !!! attention

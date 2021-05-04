@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="1168.068 1057.1 90 90" width="90" height="90">
+  <defs>
+    <font-face font-family="Nitti Grotesk" font-size="72" panose-1="2 11 8 3 4 2 2 2 0 3" units-per-em="1000" underline-position="-114" underline-thickness="84" slope="0" x-height="445" cap-height="558" ascent="924.0019" descent="-276.00056" font-weight="700">
+      <font-face-src>
+        <font-face-name name="NittiGrotesk-Bold"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Nitti Grotesk" font-size="28" panose-1="2 11 8 3 4 2 2 2 0 3" units-per-em="1000" underline-position="-114" underline-thickness="84" slope="0" x-height="445" cap-height="558" ascent="924.0019" descent="-276.00056" font-weight="700">
+      <font-face-src>
+        <font-face-name name="NittiGrotesk-Bold"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.18.5\n2021-05-04 08:26:37 +0000</metadata>
+  <g id="Canvas_1" stroke="none" stroke-opacity="1" fill-opacity="1" fill="none" stroke-dasharray="none">
+    <title>Canvas 1</title>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_136">
+        <path d="M 1183.068 1057.1 L 1243.068 1057.1 C 1251.3523 1057.1 1258.068 1063.8157 1258.068 1072.1 L 1258.068 1132.1 C 1258.068 1140.3843 1251.3523 1147.1 1243.068 1147.1 L 1183.068 1147.1 C 1174.7837 1147.1 1168.068 1140.3843 1168.068 1132.1 L 1168.068 1072.1 C 1168.068 1063.8157 1174.7837 1057.1 1183.068 1057.1 Z" fill="#111217"/>
+      </g>
+      <g id="Graphic_135">
+        <text transform="translate(1175.6377 1057.1)" fill="#007aff">
+          <tspan font-family="Nitti Grotesk" font-size="72" font-weight="700" fill="#007aff" x="2344791e-19" y="67">F</tspan>
+        </text>
+      </g>
+      <g id="Graphic_134">
+        <text transform="translate(1211.9257 1097)" fill="#ff9500">
+          <tspan font-family="Nitti Grotesk" font-size="28" font-weight="700" fill="#ff9500" x="0" y="26">DO</tspan>
+        </text>
+      </g>
+      <g id="Graphic_133">
+        <text transform="translate(1211.9257 1073.5)" fill="#af52de">
+          <tspan font-family="Nitti Grotesk" font-size="28" font-weight="700" fill="#af52de" x="0" y="26">RO</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
