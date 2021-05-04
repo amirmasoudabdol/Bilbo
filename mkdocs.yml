@@ -50,8 +50,9 @@ nav:
         - Tutorial: tutorial/index.md
         - Installation: tutorial/installation.md
         - Getting Started: tutorial/getting-started.md
-        - Simple Simulation: tutorial/simple-simulation.md
-    - Frodo: frodo.md
+    - FRODO: 
+        - FRODO: frodo/frodo.md
+        - Simple Simulation: frodo/sample-frodo-project.md
 
     # - Extras:
     #     - extending-sam.md

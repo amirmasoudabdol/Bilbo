@@ -19,6 +19,7 @@ SAM dependes on several packages:
 - [indicators](https://github.com/p-ranav/indicators) (included)
 - [baaraan](https://github.com/amirmasoudabdol/baaraan) (included as a submodule)
 - [effolkronium/random](https://github.com/effolkronium/random) (included)
+- [rang](https://github.com/agauniyal/rang) (included)
 
 Below you can find an instruction on how to install all these dependencies based on your operation system.
 
