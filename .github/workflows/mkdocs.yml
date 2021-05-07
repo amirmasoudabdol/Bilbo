@@ -17,6 +17,7 @@ jobs:
           pip install mkdocs-material
           pip install mkdocs-material-extensions
           pip install pymdown-extensions
+          pip install plantuml_markdown
           pip install mkdocs-git-revision-date-plugin
           pip install mkdocs-bibtex
           pip install mkdocs-img2fig-plugin
