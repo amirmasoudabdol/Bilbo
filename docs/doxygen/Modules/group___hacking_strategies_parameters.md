@@ -1,22 +1,12 @@
 ---
 title: Parameters of Hacking Strategies
-summary: Description of hacking strategies parameters.  
+summary: Description of hacking strategies parameters. 
 
 ---
 
 # Parameters of Hacking Strategies
 
-
-
-
-Description of hacking strategies parameters.  [More...](#detailed-description)
-
-
-
-
-
-
-## Classes
+Description of hacking strategies parameters. ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
@@ -34,43 +24,6 @@ Description of hacking strategies parameters.  [More...](#detailed-description)
 
 
 
+-------------------------------
 
-
-## Detailed Description
-
-Description of hacking strategies parameters. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Description to come! 
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:32 CEST

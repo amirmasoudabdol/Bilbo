@@ -1,37 +1,24 @@
 ---
 title: sam::QuestionableRounding::Parameters
 
-
 ---
 
 # sam::QuestionableRounding::Parameters
 
-
 **Module:** **[Parameters of Hacking Strategies](/doxygen/Modules/group___hacking_strategies_parameters/)**
+
+
 
  [More...](#detailed-description)
 
 
 `#include <HackingStrategy.h>`
 
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[NLOHMANN_DEFINE_TYPE_INTRUSIVE](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#function-nlohmann_define_type_intrusive)**([QuestionableRounding::Parameters](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/) , name , [threshold](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-threshold) , [rounding_method](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-rounding_method) , prevalence , defensibility , stage )  |
-
+| | **[NLOHMANN_DEFINE_TYPE_INTRUSIVE](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#function-nlohmann_define_type_intrusive)**([QuestionableRounding::Parameters](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/) , name , [threshold](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-threshold) , [rounding_method](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-rounding_method) , prevalence , defensibility , stage ) |
 
 ## Public Attributes
 
@@ -44,41 +31,11 @@ title: sam::QuestionableRounding::Parameters
 | double | **[defensibility](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-defensibility)**  |
 | HackingStage | **[stage](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-stage)**  |
 
-
-
-
-
-
 ## Detailed Description
 
 ```cpp
 struct sam::QuestionableRounding::Parameters;
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Questionable Rounding [Parameters](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/)
@@ -98,17 +55,9 @@ Example usage:
 
 _Filename: .json_
 
-
-
-
-
-
-
-
-
 ## Public Functions Documentation
 
-### function `NLOHMANN_DEFINE_TYPE_INTRUSIVE`
+### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
 
 ```cpp
 NLOHMANN_DEFINE_TYPE_INTRUSIVE(
@@ -123,139 +72,35 @@ NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-!!! note "Note"
-    While this mostly works fine, there is one drawback that it cannot handle missing argument. The change is in nlohmann list and when released, I can use optional and this macro will handle everything just fine 
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Note**: While this mostly works fine, there is one drawback that it cannot handle missing argument. The change is in nlohmann list and when released, I can use optional and this macro will handle everything just fine 
 
 This is a helper macro that generates from/to_json methods for this struct. 
 
 
-
-
 ## Public Attributes Documentation
 
-### variable `name`
+### variable name
 
 ```cpp
 HackingMethod name = HackingMethod::QuestionableRounding;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `threshold`
+### variable threshold
 
 ```cpp
 double threshold {0.005};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Indicates the distance between the pvalue and alpha by which the researcher considers to round the pvalue to significance 
 
 
-### variable `rounding_method`
+### variable rounding_method
 
 ```cpp
 std::string rounding_method = "diff";
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Rounding Method
@@ -265,109 +110,27 @@ Rounding Method
 TodoI cna possibly add more methods here, e.g.,
 
 
-### variable `prevalence`
+### variable prevalence
 
 ```cpp
 double prevalence {0.9};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `defensibility`
+### variable defensibility
 
 ```cpp
 double defensibility {0.7};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `stage`
+### variable stage
 
 ```cpp
 HackingStage stage {HackingStage::Reporting};
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:32 CEST

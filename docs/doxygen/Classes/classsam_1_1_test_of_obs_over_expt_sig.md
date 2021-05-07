@@ -1,22 +1,19 @@
 ---
 title: sam::TestOfObsOverExptSig
-summary: Test of Excess of Significant Findings.  
+summary: Test of Excess of Significant Findings. 
 
 ---
 
 # sam::TestOfObsOverExptSig
 
-
 **Module:** **[Meta Analysis Methods](/doxygen/Modules/group___meta_analysis/)**
 
-Test of Excess of Significant Findings. 
 
+
+Test of Excess of Significant Findings. 
 `#include <MetaAnalysis.h>`
 
-
 Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
-
-
 
 ## Public Classes
 
@@ -25,22 +22,14 @@ Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
 | struct | **[Parameters](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_parameters/)**  |
 | struct | **[ResultType](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/)**  |
 
-
-
-
-
-
-
-
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[TestOfObsOverExptSig](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/#function-testofobsoverexptsig)**() =default  |
-|  | **[TestOfObsOverExptSig](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/#function-testofobsoverexptsig)**(const [Parameters](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_parameters/) & p)  |
-| virtual void | **[estimate](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/#function-estimate)**([Journal](/doxygen/Classes/classsam_1_1_journal/) * journal)  |
-| [ResultType](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/) | **[TES](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/#function-tes)**(const arma::Row< double > & sigs, const arma::Row< double > & ni, double beta, double alpha)  |
-
+| | **[TestOfObsOverExptSig](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/#function-testofobsoverexptsig)**() =default |
+| | **[TestOfObsOverExptSig](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/#function-testofobsoverexptsig)**(const [Parameters](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_parameters/) & p) |
+| virtual void | **[estimate](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/#function-estimate)**([Journal](/doxygen/Classes/classsam_1_1_journal/) * journal) |
+| [ResultType](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/) | **[TES](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/#function-tes)**(const arma::Row< double > & sigs, const arma::Row< double > & ni, double beta, double alpha) |
 
 ## Public Attributes
 
@@ -48,80 +37,28 @@ Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
 | -------------- | -------------- |
 | [Parameters](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_parameters/) | **[params](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/#variable-params)**  |
 
-
-
-
 ## Additional inherited members
-
-
-
-
-
-
-
-
-
 
 **Public Functions inherited from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)**
 
 |                | Name           |
 | -------------- | -------------- |
-| virtual  | **[~MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/#function-~metaanalysis)**() =0  |
-| std::unique_ptr< [MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/) > | **[build](/doxygen/Classes/classsam_1_1_meta_analysis/#function-build)**(std::string name)  |
-| std::unique_ptr< [MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/) > | **[build](/doxygen/Classes/classsam_1_1_meta_analysis/#function-build)**(const json & config)  |
-| std::vector< std::string > | **[Columns](/doxygen/Classes/classsam_1_1_meta_analysis/#function-columns)**(std::string name)  |
-
-
-
-
-
-
-
-
-
-
-
-
-
+| virtual | **[~MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/#function-~metaanalysis)**() =0 |
+| std::unique_ptr< [MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/) > | **[build](/doxygen/Classes/classsam_1_1_meta_analysis/#function-build)**(std::string name) |
+| std::unique_ptr< [MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/) > | **[build](/doxygen/Classes/classsam_1_1_meta_analysis/#function-build)**(const json & config) |
+| std::vector< std::string > | **[Columns](/doxygen/Classes/classsam_1_1_meta_analysis/#function-columns)**(std::string name) |
 
 
 ## Public Functions Documentation
 
-### function `TestOfObsOverExptSig`
+### function TestOfObsOverExptSig
 
 ```cpp
 TestOfObsOverExptSig() =default
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `TestOfObsOverExptSig`
+### function TestOfObsOverExptSig
 
 ```cpp
 inline TestOfObsOverExptSig(
@@ -130,34 +67,7 @@ inline TestOfObsOverExptSig(
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `estimate`
+### function estimate
 
 ```cpp
 virtual void estimate(
@@ -166,36 +76,10 @@ virtual void estimate(
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 **Reimplements**: [sam::MetaAnalysis::estimate](/doxygen/Classes/classsam_1_1_meta_analysis/#function-estimate)
 
 
-
-
-### function `TES`
+### function TES
 
 ```cpp
 static ResultType TES(
@@ -207,76 +91,21 @@ static ResultType TES(
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 If E is absolute zero, I'm adding some noise that I don't have to deal with the explosion
 
 
 A is most likely different from what R spit out, due to brutal rounding that's happening in R.
 
 
-
 ## Public Attributes Documentation
 
-### variable `params`
+### variable params
 
 ```cpp
 Parameters params;
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:32 CEST

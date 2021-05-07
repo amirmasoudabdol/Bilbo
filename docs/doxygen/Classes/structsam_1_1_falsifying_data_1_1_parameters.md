@@ -1,32 +1,18 @@
 ---
 title: sam::FalsifyingData::Parameters
 
-
 ---
 
 # sam::FalsifyingData::Parameters
 
-
 **Module:** **[Parameters of Hacking Strategies](/doxygen/Modules/group___hacking_strategies_parameters/)**
+
+
 
  [More...](#detailed-description)
 
 
 `#include <HackingStrategy.h>`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Public Attributes
 
@@ -38,48 +24,18 @@ title: sam::FalsifyingData::Parameters
 | std::string | **[selection_method](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-selection_method)**  |
 | HackingTarget | **[target](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-target)**  |
 | int | **[n_attempts](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-n_attempts)** <br>Number of trials.  |
-| size_t | **[num](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-num)** <br>Number of observations to be purturbed.  |
-| std::optional< Distribution > | **[noise_dist](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-noise_dist)** <br>Distribution of noise.  |
+| size_t | **[num](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-num)** <br>Number of observations to be perturbed.  |
+| std::optional< UnivariateDistribution > | **[noise_dist](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-noise_dist)** <br>Distribution of noise.  |
 | std::vector< std::string > | **[stopping_cond_defs](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-stopping_cond_defs)** <br>Stopping condition [PolicyChain]() definitions.  |
 | double | **[defensibility](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-defensibility)**  |
 | double | **[prevalence](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-prevalence)**  |
 | HackingStage | **[stage](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-stage)**  |
-
-
-
-
-
 
 ## Detailed Description
 
 ```cpp
 struct sam::FalsifyingData::Parameters;
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Falsifying Data [Parameters](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/)
@@ -94,82 +50,20 @@ Example usage:
 
 _Filename: .json_
 
-
-
-
-
-
-
-
-
-
-
 ## Public Attributes Documentation
 
-### variable `name`
+### variable name
 
 ```cpp
 HackingMethod name = HackingMethod::FalsifyingData;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `approach`
+### variable approach
 
 ```cpp
 std::string approach {"perturbation"};
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Falsification approach. We've discussed two possible way of doing this
@@ -179,36 +73,11 @@ Falsification approach. We've discussed two possible way of doing this
 * group switching, moving values between groups 
 
 
-### variable `switching_direction`
+### variable switching_direction
 
 ```cpp
 std::string switching_direction {"control-to-treatment"};
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Switching direction
@@ -217,36 +86,11 @@ Switching direction
 * treatment-to-control 
 
 
-### variable `selection_method`
+### variable selection_method
 
 ```cpp
 std::string selection_method {"random"};
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Swapping Method
@@ -255,36 +99,11 @@ Swapping Method
 * smart 
 
 
-### variable `target`
+### variable target
 
 ```cpp
 HackingTarget target {HackingTarget::Both};
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Indicates which outcome variables are going to be targeted,
@@ -294,7 +113,7 @@ Indicates which outcome variables are going to be targeted,
 * both 
 
 
-### variable `n_attempts`
+### variable n_attempts
 
 ```cpp
 int n_attempts {1};
@@ -302,74 +121,23 @@ int n_attempts {1};
 
 Number of trials. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 **Todo**: To be implemented 
-
-
-
-
-
-
-
-
-
-
 
 Indicates a set of rule that is going to be used to select the target group 
 
 
-### variable `num`
+### variable num
 
 ```cpp
 size_t num {5};
 ```
 
-Number of observations to be purturbed. 
+Number of observations to be perturbed. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `noise_dist`
+### variable noise_dist
 
 ```cpp
-std::optional< Distribution > noise_dist = make_distribution({
+std::optional< UnivariateDistribution > noise_dist = [makeUnivariateDistribution](/doxygen/Files/_distributions_8h/#function-makeunivariatedistribution)({
       {"dist", "normal_distribution"},
       {"mean", 0},
       {"stddev", 0.1}
@@ -378,34 +146,7 @@ std::optional< Distribution > noise_dist = make_distribution({
 
 Distribution of noise. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `stopping_cond_defs`
+### variable stopping_cond_defs
 
 ```cpp
 std::vector< std::string > stopping_cond_defs;
@@ -413,136 +154,27 @@ std::vector< std::string > stopping_cond_defs;
 
 Stopping condition [PolicyChain]() definitions. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `defensibility`
+### variable defensibility
 
 ```cpp
 double defensibility {0.05};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `prevalence`
+### variable prevalence
 
 ```cpp
 double prevalence {0.1};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `stage`
+### variable stage
 
 ```cpp
 HackingStage stage {HackingStage::PostProcessing};
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:32 CEST

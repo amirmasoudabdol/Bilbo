@@ -1,32 +1,18 @@
 ---
 title: sam::PeekingOutliersRemoval::Parameters
 
-
 ---
 
 # sam::PeekingOutliersRemoval::Parameters
 
-
 **Module:** **[Parameters of Hacking Strategies](/doxygen/Modules/group___hacking_strategies_parameters/)**
+
+
 
  [More...](#detailed-description)
 
 
 `#include <HackingStrategy.h>`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Public Attributes
 
@@ -38,48 +24,18 @@ title: sam::PeekingOutliersRemoval::Parameters
 | int | **[num](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-num)** <br>Indicates the number of outliers to be removed in each iteration.  |
 | int | **[n_attempts](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-n_attempts)**  |
 | int | **[min_observations](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-min_observations)** <br>Indicates the minimum number of observations allowed during the process.  |
-| std::vector< double > | **[multipliers](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-multipliers)** <br>A list of standard deviation multipliers for identidying outliers.  |
+| std::vector< double > | **[multipliers](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-multipliers)** <br>A list of standard deviation multipliers for identifying outliers.  |
 | std::vector< std::string > | **[stopping_cond_defs](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-stopping_cond_defs)** <br>Stopping condition [PolicyChain]() definitions.  |
 | std::vector< std::string > | **[whether_to_save_cond_defs](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-whether_to_save_cond_defs)** <br>Removing if.  |
 | double | **[prevalence](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-prevalence)**  |
 | double | **[defensibility](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-defensibility)**  |
 | HackingStage | **[stage](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-stage)**  |
 
-
-
-
-
-
 ## Detailed Description
 
 ```cpp
 struct sam::PeekingOutliersRemoval::Parameters;
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Peaking Outliers Removal [Parameters](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/)
@@ -102,53 +58,16 @@ Example usage:
 
 _Filename: .json_
 
-
-
-
-
-
-
-
-
-
-
 ## Public Attributes Documentation
 
-### variable `name`
+### variable name
 
 ```cpp
 HackingMethod name = HackingMethod::PeekingOutliersRemoval;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `target`
+### variable target
 
 ```cpp
 HackingTarget target {HackingTarget::Both};
@@ -156,63 +75,11 @@ HackingTarget target {HackingTarget::Both};
 
 TO BE IMPLEMENTED! 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `order`
+### variable order
 
 ```cpp
 std::string order {"max first"};
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Indicates the order where outliers are going to be removed from the experiment. 
@@ -221,7 +88,7 @@ Indicates the order where outliers are going to be removed from the experiment.
 * `random`, removes the first outlier first, this is as a random outlier is being removed 
 
 
-### variable `num`
+### variable num
 
 ```cpp
 int num {3};
@@ -229,69 +96,17 @@ int num {3};
 
 Indicates the number of outliers to be removed in each iteration. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `n_attempts`
+### variable n_attempts
 
 ```cpp
 int n_attempts {1};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Indicates the total number of attempts, i.e., _iterations_, to remove outliers 
 
 
-### variable `min_observations`
+### variable min_observations
 
 ```cpp
 int min_observations {15};
@@ -299,69 +114,15 @@ int min_observations {15};
 
 Indicates the minimum number of observations allowed during the process. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `multipliers`
+### variable multipliers
 
 ```cpp
 std::vector< double > multipliers = {3};
 ```
 
-A list of standard deviation multipliers for identidying outliers. 
+A list of standard deviation multipliers for identifying outliers. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `stopping_cond_defs`
+### variable stopping_cond_defs
 
 ```cpp
 std::vector< std::string > stopping_cond_defs;
@@ -369,34 +130,7 @@ std::vector< std::string > stopping_cond_defs;
 
 Stopping condition [PolicyChain]() definitions. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `whether_to_save_cond_defs`
+### variable whether_to_save_cond_defs
 
 ```cpp
 std::vector< std::string > whether_to_save_cond_defs;
@@ -404,136 +138,27 @@ std::vector< std::string > whether_to_save_cond_defs;
 
 Removing if. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `prevalence`
+### variable prevalence
 
 ```cpp
 double prevalence {0.9};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `defensibility`
+### variable defensibility
 
 ```cpp
 double defensibility {0.7};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `stage`
+### variable stage
 
 ```cpp
 HackingStage stage {HackingStage::PostProcessing};
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:32 CEST

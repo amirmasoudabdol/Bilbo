@@ -1,80 +1,68 @@
 ---
 title: sam::Experiment
-summary: Experiment encapsulates data and methods needed by the Researcher to conduct its research.  
+summary: Experiment encapsulates data and methods needed by the Researcher to conduct its research. 
 
 ---
 
 # sam::Experiment
 
-
 **Module:** **[Experiment Modules](/doxygen/Modules/group___experiment/)**
+
+
 
 [Experiment]() encapsulates data and methods needed by the [Researcher]() to conduct its research.  [More...](#detailed-description)
 
 
 `#include <Experiment.h>`
 
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**() =default  |
-|  | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**(json & experiment_config) <br>Constructing an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) object using the given JSON configuration.  |
-|  | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**([ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) & e) <br>Constructing an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) using an already initialized [ExperimentSetup]().  |
-|  | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**([ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) & e, std::shared_ptr< [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) > & ds, std::shared_ptr< [TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/) > & ts, std::shared_ptr< [EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strategy/) > & efs)  |
-| [Group](/doxygen/Classes/classsam_1_1_group/) & | **[operator[]](/doxygen/Classes/classsam_1_1_experiment/#function-operator[])**(std::size_t idx)  |
-| const [Group](/doxygen/Classes/classsam_1_1_group/) & | **[operator[]](/doxygen/Classes/classsam_1_1_experiment/#function-operator[])**(std::size_t idx) const  |
-| [Group](/doxygen/Classes/classsam_1_1_group/) & | **[get_group](/doxygen/Classes/classsam_1_1_experiment/#function-get_group)**(std::size_t idx)  |
-| const [Group](/doxygen/Classes/classsam_1_1_group/) & | **[get_group](/doxygen/Classes/classsam_1_1_experiment/#function-get_group)**(std::size_t idx) const  |
-| auto | **[begin](/doxygen/Classes/classsam_1_1_experiment/#function-begin)**()  |
-| auto | **[end](/doxygen/Classes/classsam_1_1_experiment/#function-end)**()  |
-| auto | **[begin](/doxygen/Classes/classsam_1_1_experiment/#function-begin)**() const  |
-| auto | **[end](/doxygen/Classes/classsam_1_1_experiment/#function-end)**() const  |
-| void | **[runTest](/doxygen/Classes/classsam_1_1_experiment/#function-runtest)**() <br>Runs the Test Strategy.  |
-| void | **[setTestStrategy](/doxygen/Classes/classsam_1_1_experiment/#function-setteststrategy)**(std::shared_ptr< [TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/) > & ts)  |
-| void | **[setDataStrategy](/doxygen/Classes/classsam_1_1_experiment/#function-setdatastrategy)**(std::shared_ptr< [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) > & ds)  |
-| void | **[setEffectSizeEstimator](/doxygen/Classes/classsam_1_1_experiment/#function-seteffectsizeestimator)**(std::shared_ptr< [EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strategy/) > & es)  |
-| void | **[initExperiment](/doxygen/Classes/classsam_1_1_experiment/#function-initexperiment)**()  |
-| void | **[generateData](/doxygen/Classes/classsam_1_1_experiment/#function-generatedata)**() <br>Use the `data_strategy` to generate the data.  |
-| void | **[preProcessData](/doxygen/Classes/classsam_1_1_experiment/#function-preprocessdata)**()  |
-| void | **[calculateStatistics](/doxygen/Classes/classsam_1_1_experiment/#function-calculatestatistics)**()  |
-| void | **[calculateEffects](/doxygen/Classes/classsam_1_1_experiment/#function-calculateeffects)**()  |
-| void | **[recalculateEverything](/doxygen/Classes/classsam_1_1_experiment/#function-recalculateeverything)**()  |
-| void | **[recalculateEverythingForGroup](/doxygen/Classes/classsam_1_1_experiment/#function-recalculateeverythingforgroup)**(size_t inx)  |
-| void | **[clear](/doxygen/Classes/classsam_1_1_experiment/#function-clear)**() <br>Clear contents of the experiment.  |
-
+| [DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) & | **[operator[]](/doxygen/Classes/classsam_1_1_experiment/#function-operator[])**(std::size_t idx) |
+| const [DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) & | **[operator[]](/doxygen/Classes/classsam_1_1_experiment/#function-operator[])**(std::size_t idx) const |
+| auto | **[begin](/doxygen/Classes/classsam_1_1_experiment/#function-begin)**() |
+| auto | **[end](/doxygen/Classes/classsam_1_1_experiment/#function-end)**() |
+| auto | **[begin](/doxygen/Classes/classsam_1_1_experiment/#function-begin)**() const |
+| auto | **[end](/doxygen/Classes/classsam_1_1_experiment/#function-end)**() const |
+| | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**() =default<br>Default constructor.  |
+| | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**(json & experiment_config)<br>Constructs an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) object using the given JSON configuration.  |
+| | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**([ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) & e)<br>Constructs an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) using an already initialized [ExperimentSetup]().  |
+| | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**([ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) & e, std::shared_ptr< [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) > & ds, std::shared_ptr< [TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/) > & ts, std::shared_ptr< [EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strategy/) > & es)<br>Directly constructs an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) from its components.  |
+| void | **[addNewCandidates](/doxygen/Classes/classsam_1_1_experiment/#function-addnewcandidates)**(const std::vector< [Submission](/doxygen/Classes/classsam_1_1_submission/) > & subs)<br>Adds new submissions to the list of submissions.  |
+| void | **[setHackedStatus](/doxygen/Classes/classsam_1_1_experiment/#function-sethackedstatus)**(const bool status)<br>Sets the hacked status of the experiment.  |
+| void | **[setPublishedStatus](/doxygen/Classes/classsam_1_1_experiment/#function-setpublishedstatus)**(const bool status)<br>Sets the published status of the experiment.  |
+| void | **[setHackedStatusOf](/doxygen/Classes/classsam_1_1_experiment/#function-sethackedstatusof)**(const std::vector< size_t > & idxs, const bool status)<br>Sets the hacked status of a group of dvs.  |
+| void | **[setCandidateStatusOf](/doxygen/Classes/classsam_1_1_experiment/#function-setcandidatestatusof)**(const std::vector< size_t > & idxs, const bool status)<br>Sets the candidate status of a group of dvs.  |
+| bool | **[isHacked](/doxygen/Classes/classsam_1_1_experiment/#function-ishacked)**() const<br>Returns true if the experiment is hacked.  |
+| bool | **[isModified](/doxygen/Classes/classsam_1_1_experiment/#function-ismodified)**() const<br>Returns true if the experiment has been modified in anyway.  |
+| bool | **[hasCandidates](/doxygen/Classes/classsam_1_1_experiment/#function-hascandidates)**() const<br>Returns true if there is an candidate in the experiment.  |
+| bool | **[isPublished](/doxygen/Classes/classsam_1_1_experiment/#function-ispublished)**() const<br>Returns true if the experiment has been published by the [Journal]().  |
+| size_t | **[nCandidates](/doxygen/Classes/classsam_1_1_experiment/#function-ncandidates)**() const<br>Returns the number of candidate DVs.  |
+| void | **[reset](/doxygen/Classes/classsam_1_1_experiment/#function-reset)**()<br>Clears and re-initializes the dependent variables.  |
+| void | **[generateData](/doxygen/Classes/classsam_1_1_experiment/#function-generatedata)**()<br>Uses the [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) to populate every DVs with raw the data.  |
+| void | **[calculateStatistics](/doxygen/Classes/classsam_1_1_experiment/#function-calculatestatistics)**()<br>Asks each [DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) to update its general statistics, e.g., mean, var.  |
+| void | **[calculateTests](/doxygen/Classes/classsam_1_1_experiment/#function-calculatetests)**()<br>Uses the [TestStrategy]() to run the statistical test.  |
+| void | **[calculateEffects](/doxygen/Classes/classsam_1_1_experiment/#function-calculateeffects)**()<br>Uses the [EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strategy/) to calculates the effect sizes.  |
+| void | **[recalculateEverything](/doxygen/Classes/classsam_1_1_experiment/#function-recalculateeverything)**()<br>Runs [calculateStatistics()](/doxygen/Classes/classsam_1_1_experiment/#function-calculatestatistics), [calculateTests()](/doxygen/Classes/classsam_1_1_experiment/#function-calculatetests), and [calculateEffects()](/doxygen/Classes/classsam_1_1_experiment/#function-calculateeffects) in order.  |
+| void | **[clear](/doxygen/Classes/classsam_1_1_experiment/#function-clear)**()<br>Clears the content of the experiment.  |
+| void | **[setTestStrategy](/doxygen/Classes/classsam_1_1_experiment/#function-setteststrategy)**(std::shared_ptr< [TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/) > & ts) |
+| void | **[setDataStrategy](/doxygen/Classes/classsam_1_1_experiment/#function-setdatastrategy)**(std::shared_ptr< [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) > & ds) |
+| void | **[setEffectSizeEstimator](/doxygen/Classes/classsam_1_1_experiment/#function-seteffectsizeestimator)**(std::shared_ptr< [EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strategy/) > & es) |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
+| int | **[simid](/doxygen/Classes/classsam_1_1_experiment/#variable-simid)**  |
 | int | **[exprid](/doxygen/Classes/classsam_1_1_experiment/#variable-exprid)**  |
 | int | **[repid](/doxygen/Classes/classsam_1_1_experiment/#variable-repid)**  |
-| bool | **[is_hacked](/doxygen/Classes/classsam_1_1_experiment/#variable-is_hacked)** <br>Indicates if any hacking routine has been applied on the experiment.  |
-| std::vector< int > | **[hacks_history](/doxygen/Classes/classsam_1_1_experiment/#variable-hacks_history)**  |
-| bool | **[is_published](/doxygen/Classes/classsam_1_1_experiment/#variable-is_published)**  |
 | [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) | **[setup](/doxygen/Classes/classsam_1_1_experiment/#variable-setup)**  |
 | std::shared_ptr< [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) > | **[data_strategy](/doxygen/Classes/classsam_1_1_experiment/#variable-data_strategy)**  |
 | std::shared_ptr< [TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/) > | **[test_strategy](/doxygen/Classes/classsam_1_1_experiment/#variable-test_strategy)**  |
 | std::shared_ptr< [EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strategy/) > | **[effect_strategy](/doxygen/Classes/classsam_1_1_experiment/#variable-effect_strategy)**  |
-| std::vector< [Group](/doxygen/Classes/classsam_1_1_group/) > | **[groups_](/doxygen/Classes/classsam_1_1_experiment/#variable-groups_)**  |
-
-
-
-
-
+| std::vector< [DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) > | **[dvs_](/doxygen/Classes/classsam_1_1_experiment/#variable-dvs_)**  |
+| std::optional< std::vector< [Submission](/doxygen/Classes/classsam_1_1_submission/) > > | **[candidates](/doxygen/Classes/classsam_1_1_experiment/#variable-candidates)** <br>List of all possible candidates from this experiment so far!  |
 
 ## Detailed Description
 
@@ -84,80 +72,72 @@ class sam::Experiment;
 
 [Experiment]() encapsulates data and methods needed by the [Researcher]() to conduct its research. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[Experiment](/doxygen/Classes/classsam_1_1_experiment/) has access to all data-related strategies, e.g., [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/), TestStraregy, and [EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strategy/). Moreover, it stores the actual research data in a vector of [Group](/doxygen/Classes/classsam_1_1_group/) objects. [Researcher](/doxygen/Classes/classsam_1_1_researcher/)'s access to actual data, and other data-related strategies always goes through an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) object.
-
-Moreover, the [Experiment](/doxygen/Classes/classsam_1_1_experiment/) stores a copy of the [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) where most study parameters are stored in. 
-
-
-
-
-
-
-
-
+[Experiment](/doxygen/Classes/classsam_1_1_experiment/) has a full access to all data-related strategies, e.g., [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/), [TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/), and [EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strategy/). It also contains the raw research data in the form of list of DependentVariable(s). Moreover, the [Experiment](/doxygen/Classes/classsam_1_1_experiment/) stores a copy of the [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) where most study parameters are stored in. 
 
 ## Public Functions Documentation
 
-### function `Experiment`
+### function operator[]
+
+```cpp
+DependentVariable & operator[](
+    std::size_t idx
+)
+```
+
+
+**Todo**: I'm not the fan of this `find_if` here, and I think I can do better. 
+
+I think I can avoid this search if I use std::reference_wrapper 
+
+These operators are returning the correct group, even if the group list is not sorted.
+
+
+### function operator[]
+
+```cpp
+const DependentVariable & operator[](
+    std::size_t idx
+) const
+```
+
+
+### function begin
+
+```cpp
+inline auto begin()
+```
+
+
+### function end
+
+```cpp
+inline auto end()
+```
+
+
+### function begin
+
+```cpp
+inline auto begin() const
+```
+
+
+### function end
+
+```cpp
+inline auto end() const
+```
+
+
+### function Experiment
 
 ```cpp
 Experiment() =default
 ```
 
+Default constructor. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `Experiment`
+### function Experiment
 
 ```cpp
 Experiment(
@@ -165,37 +145,12 @@ Experiment(
 )
 ```
 
-Constructing an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) object using the given JSON configuration. 
+Constructs an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) object using the given JSON configuration. 
+
+This constructs an [Experiment](/doxygen/Classes/classsam_1_1_experiment/), and allocates the resources necessary for the experiment to setup its dependent variables, etc. Using the config parameters of the Data, Test, and Effect strategies, it also initializes those to be used by the [Researcher](/doxygen/Classes/classsam_1_1_researcher/) or the [Experiment](/doxygen/Classes/classsam_1_1_experiment/) itself 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Starting by the initialization of an [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/), followed by Data, Test, and Effect stratgies initialization; and finally, all necessary resources will be initialized. 
-
-
-### function `Experiment`
+### function Experiment
 
 ```cpp
 Experiment(
@@ -203,400 +158,199 @@ Experiment(
 )
 ```
 
-Constructing an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) using an already initialized [ExperimentSetup](). 
+Constructs an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) using an already initialized [ExperimentSetup](). 
+
+**Note**: This can be used in cases where the underlying strategies should be preserved while some experiment parameters needs to be modified. 
+
+Since [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) already contains the definition of Data, Test, and Effect strategies, this method accepts the [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) as it is, and only initialize those strategies.
 
 
-
-
-
-
-
-
-
-
-
-
-!!! note "Note"
-    This can be used in cases where the underlying strategies should be preserved while some experiment parameters needs to be modified. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Since ExperimenSetup already contains the definition of Data, Test, and Effect strategies, this method accept the [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) as it is, and only initialize those strategies.
-
-
-### function `Experiment`
+### function Experiment
 
 ```cpp
 Experiment(
     ExperimentSetup & e,
     std::shared_ptr< DataStrategy > & ds,
     std::shared_ptr< TestStrategy > & ts,
-    std::shared_ptr< EffectStrategy > & efs
+    std::shared_ptr< EffectStrategy > & es
 )
 ```
 
+Directly constructs an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) from its components. 
+
+**Note**: This is mainly used by the ExperimentBuilder 
+
+This directly constructs the experiment by directly constructing its internal based on the set of given parameters.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `operator[]`
+### function addNewCandidates
 
 ```cpp
-inline Group & operator[](
-    std::size_t idx
+void addNewCandidates(
+    const std::vector< Submission > & subs
 )
 ```
 
+Adds new submissions to the list of submissions. 
+
+Adds new candidates to the list of selected candidates 
 
 
-
-
-
-
-
-
-
-
-
-
-!!! note "Note"
-
-    * I think these are bad ideas, I think they should just return the index that are being asked to, and then some other method, actually returns the group like `get_group`, and `set_group` or even a `[Group](/doxygen/Classes/classsam_1_1_group/) operator()` why not. 
-    * This means I need to change the [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) too, and make sure that in each iteration, I start with a fresh [Experiment](/doxygen/Classes/classsam_1_1_experiment/) rather than a half cleanup one. 
-
-
-
-
-**Todo**: : I think these guys are a bit strange, they work and I'm not sure why I have them like this but I think I can do better, for now I put some guard 
-
-
-
-
-
-
-
-
-
-
-
-These operators are returning the correct group, even if the group list is not sorted
-
-
-### function `operator[]`
+### function setHackedStatus
 
 ```cpp
-inline const Group & operator[](
-    std::size_t idx
-) const
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `get_group`
-
-```cpp
-inline Group & get_group(
-    std::size_t idx
+void setHackedStatus(
+    const bool status
 )
 ```
 
+Sets the hacked status of the experiment. 
+
+**Attention**: Setting this to `true` will make the `[isHacked()](/doxygen/Classes/classsam_1_1_experiment/#function-ishacked)` to return `true`. Basically, this overrules the status of the dependent variables, but it doesn't overwrite them! 
+
+It sets the overall hacked status of the experiment to status.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `get_group`
+### function setPublishedStatus
 
 ```cpp
-inline const Group & get_group(
-    std::size_t idx
-) const
+void setPublishedStatus(
+    const bool status
+)
 ```
 
+Sets the published status of the experiment. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `begin`
+### function setHackedStatusOf
 
 ```cpp
-inline auto begin()
+void setHackedStatusOf(
+    const std::vector< size_t > & idxs,
+    const bool status
+)
 ```
 
+Sets the hacked status of a group of dvs. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `end`
+### function setCandidateStatusOf
 
 ```cpp
-inline auto end()
+void setCandidateStatusOf(
+    const std::vector< size_t > & idxs,
+    const bool status
+)
 ```
 
+Sets the candidate status of a group of dvs. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `begin`
+### function isHacked
 
 ```cpp
-inline auto begin() const
+bool isHacked() const
 ```
 
+Returns true if the experiment is hacked. 
+
+An experiment is hacked if its hacked status has been set to `true`, or one of its dependent variables has been flagged as hacked 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `end`
+### function isModified
 
 ```cpp
-inline auto end() const
+bool isModified() const
 ```
 
+Returns true if the experiment has been modified in anyway. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `runTest`
+### function hasCandidates
 
 ```cpp
-void runTest()
+bool hasCandidates() const
 ```
 
-Runs the Test Strategy. 
+Returns true if there is an candidate in the experiment. 
+
+### function isPublished
+
+```cpp
+bool isPublished() const
+```
+
+Returns true if the experiment has been published by the [Journal](). 
+
+### function nCandidates
+
+```cpp
+size_t nCandidates() const
+```
+
+Returns the number of candidate DVs. 
+
+### function reset
+
+```cpp
+void reset()
+```
+
+Clears and re-initializes the dependent variables. 
+
+This cleanup the [Experiment](/doxygen/Classes/classsam_1_1_experiment/), and reallocate its memory again. Technically, preparing the experiment for a new run. 
 
 
+### function generateData
+
+```cpp
+void generateData()
+```
+
+Uses the [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) to populate every DVs with raw the data. 
+
+### function calculateStatistics
+
+```cpp
+void calculateStatistics()
+```
+
+Asks each [DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) to update its general statistics, e.g., mean, var. 
+
+### function calculateTests
+
+```cpp
+void calculateTests()
+```
+
+Uses the [TestStrategy]() to run the statistical test. 
+
+### function calculateEffects
+
+```cpp
+void calculateEffects()
+```
+
+Uses the [EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strategy/) to calculates the effect sizes. 
+
+### function recalculateEverything
+
+```cpp
+void recalculateEverything()
+```
+
+Runs [calculateStatistics()](/doxygen/Classes/classsam_1_1_experiment/#function-calculatestatistics), [calculateTests()](/doxygen/Classes/classsam_1_1_experiment/#function-calculatetests), and [calculateEffects()](/doxygen/Classes/classsam_1_1_experiment/#function-calculateeffects) in order. 
+
+### function clear
+
+```cpp
+void clear()
+```
+
+Clears the content of the experiment. 
+
+**Todo**: I think this is a bad implementation, and I should probably just discard the list of DVs and recreate them for the new [Experiment](/doxygen/Classes/classsam_1_1_experiment/), which is probably safer! Something like `dvs_.clear()`
+
+It clears every DVs individually, and also sort them back into the correct order.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `setTestStrategy`
+### function setTestStrategy
 
 ```cpp
 inline void setTestStrategy(
@@ -607,37 +361,13 @@ inline void setTestStrategy(
 
 **Parameters**: 
 
-  * **`t`** A reference to a Test Strategy instance 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  * **t** A reference to a Test Strategy instance 
 
 
 Set or re-set the Test Strategy
 
 
-### function `setDataStrategy`
+### function setDataStrategy
 
 ```cpp
 inline void setDataStrategy(
@@ -648,37 +378,13 @@ inline void setDataStrategy(
 
 **Parameters**: 
 
-  * **`d`** A reference to a Data Strategy instance 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  * **d** A reference to a Data Strategy instance 
 
 
 Set or re-set the Data Strategy
 
 
-### function `setEffectSizeEstimator`
+### function setEffectSizeEstimator
 
 ```cpp
 inline void setEffectSizeEstimator(
@@ -689,666 +395,86 @@ inline void setEffectSizeEstimator(
 
 **Parameters**: 
 
-  * **`es`** A reference to an Effect Strategy instance. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  * **es** A reference to an Effect Strategy instance. 
 
 
 Set or re-set the Effect Strategy
 
 
-### function `initExperiment`
-
-```cpp
-void initExperiment()
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Helper function for the [Researcher](/doxygen/Classes/classsam_1_1_researcher/) to fully initilize the experiment by generating the data, calculating the statistics and effects, as well as running the test. 
-
-
-### function `generateData`
-
-```cpp
-void generateData()
-```
-
-Use the `data_strategy` to generate the data. 
-
-
-
-
-
-
-
-
-
-
-
-
-!!! note "Note"
-    The `data_strategy` takes over the entire experiment and populate the `measurements` based on `setup`'s parameters. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `preProcessData`
-
-```cpp
-void preProcessData()
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-!!! note "Note"
-    `pre_processing_steps` lists the available steps and their order. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Run different pre-processing steps before passing the data to the [Researcher](/doxygen/Classes/classsam_1_1_researcher/).
-
-
-### function `calculateStatistics`
-
-```cpp
-void calculateStatistics()
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Calculate the statistics by sending the `experiment` to the `test_strategy`. 
-
-
-### function `calculateEffects`
-
-```cpp
-void calculateEffects()
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Iterates over the list of EffectSizeEstimators, and calculate different different estimates accordingly. 
-
-
-### function `recalculateEverything`
-
-```cpp
-void recalculateEverything()
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `recalculateEverythingForGroup`
-
-```cpp
-void recalculateEverythingForGroup(
-    size_t inx
-)
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `clear`
-
-```cpp
-void clear()
-```
-
-Clear contents of the experiment. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Attributes Documentation
 
-### variable `exprid`
+### variable simid
+
+```cpp
+int simid {0};
+```
+
+
+### variable exprid
 
 ```cpp
 int exprid {0};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `repid`
+### variable repid
 
 ```cpp
 int repid {0};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `is_hacked`
-
-```cpp
-bool is_hacked = false;
-```
-
-Indicates if any hacking routine has been applied on the experiment. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `hacks_history`
-
-```cpp
-std::vector< int > hacks_history;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `is_published`
-
-```cpp
-bool is_published = false;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `setup`
+### variable setup
 
 ```cpp
 ExperimentSetup setup;
 ```
 
 
+An instance of the [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/). All other strategies can access and query it for meta information about the [Experiment](/doxygen/Classes/classsam_1_1_experiment/)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `data_strategy`
+### variable data_strategy
 
 ```cpp
 std::shared_ptr< DataStrategy > data_strategy;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `test_strategy`
+### variable test_strategy
 
 ```cpp
 std::shared_ptr< TestStrategy > test_strategy;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `effect_strategy`
+### variable effect_strategy
 
 ```cpp
 std::shared_ptr< EffectStrategy > effect_strategy;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `groups_`
+### variable dvs_
 
 ```cpp
-std::vector< Group > groups_;
+std::vector< DependentVariable > dvs_;
 ```
 
 
+### variable candidates
+
+```cpp
+std::optional< std::vector< Submission > > candidates;
+```
+
+List of all possible candidates from this experiment so far! 
+
+**Note**: This is not yet in use! 
+
+This is a list of any dvs that has been flagged as submissions during the lifespan of this experiment
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:31 CEST

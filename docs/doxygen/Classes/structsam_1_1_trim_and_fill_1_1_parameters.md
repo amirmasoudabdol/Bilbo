@@ -1,6 +1,6 @@
 ---
 title: sam::TrimAndFill::Parameters
-summary: Parameters of the TrimAndFill.  
+summary: Parameters of the TrimAndFill. 
 
 ---
 
@@ -8,29 +8,14 @@ summary: Parameters of the TrimAndFill.
 
 
 
-
 [Parameters]() of the [TrimAndFill](/doxygen/Classes/classsam_1_1_trim_and_fill/). 
-
 `#include <MetaAnalysis.h>`
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[NLOHMANN_DEFINE_TYPE_INTRUSIVE](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#function-nlohmann_define_type_intrusive)**([TrimAndFill::Parameters](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/) , name , [side](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-side) , [estimator](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-estimator) , [alpha](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-alpha) )  |
-
+| | **[NLOHMANN_DEFINE_TYPE_INTRUSIVE](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#function-nlohmann_define_type_intrusive)**([TrimAndFill::Parameters](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/) , name , [side](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-side) , [estimator](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-estimator) , [alpha](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-alpha) ) |
 
 ## Public Attributes
 
@@ -41,22 +26,9 @@ summary: Parameters of the TrimAndFill.
 | std::string | **[estimator](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-estimator)** <br>The symmetry estimator.  |
 | double | **[alpha](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-alpha)** <br>The ɑ of the test.  |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Functions Documentation
 
-### function `NLOHMANN_DEFINE_TYPE_INTRUSIVE`
+### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
 
 ```cpp
 NLOHMANN_DEFINE_TYPE_INTRUSIVE(
@@ -69,72 +41,16 @@ NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Attributes Documentation
 
-### variable `name`
+### variable name
 
 ```cpp
 std::string name {"TrimAndFill"};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `side`
+### variable side
 
 ```cpp
 std::string side {"auto"};
@@ -142,34 +58,7 @@ std::string side {"auto"};
 
 Indicates the side of the funnel plot where missing values should be imputed. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `estimator`
+### variable estimator
 
 ```cpp
 std::string estimator {"R0"};
@@ -177,34 +66,7 @@ std::string estimator {"R0"};
 
 The symmetry estimator. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `alpha`
+### variable alpha
 
 ```cpp
 double alpha {0.10};
@@ -212,34 +74,6 @@ double alpha {0.10};
 
 The ɑ of the test. 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:32 CEST

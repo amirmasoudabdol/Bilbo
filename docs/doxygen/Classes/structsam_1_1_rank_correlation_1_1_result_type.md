@@ -1,26 +1,9 @@
 ---
 title: sam::RankCorrelation::ResultType
 
-
 ---
 
 # sam::RankCorrelation::ResultType
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -28,9 +11,8 @@ title: sam::RankCorrelation::ResultType
 
 |                | Name           |
 | -------------- | -------------- |
-| std::vector< std::string > | **[Columns](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#function-columns)**()  |
-|  | **[operator arma::Row< double >](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#function-operator-armarow<-double->)**()  |
-
+| std::vector< std::string > | **[Columns](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#function-columns)**() |
+| | **[operator arma::Row< double >](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#function-operator-armarow<-double->)**() |
 
 ## Public Attributes
 
@@ -40,94 +22,25 @@ title: sam::RankCorrelation::ResultType
 | double | **[pval](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#variable-pval)** <br>The p-value of the test.  |
 | bool | **[sig](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#variable-sig)** <br>The significance of the test.  |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Functions Documentation
 
-### function `Columns`
+### function Columns
 
 ```cpp
 static inline std::vector< std::string > Columns()
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `operator arma::Row< double >`
+### function operator arma::Row< double >
 
 ```cpp
 inline operator arma::Row< double >()
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Attributes Documentation
 
-### variable `est`
+### variable est
 
 ```cpp
 double est;
@@ -135,34 +48,7 @@ double est;
 
 Kendall's tau estimate. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `pval`
+### variable pval
 
 ```cpp
 double pval;
@@ -170,34 +56,7 @@ double pval;
 
 The p-value of the test. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `sig`
+### variable sig
 
 ```cpp
 bool sig;
@@ -205,34 +64,6 @@ bool sig;
 
 The significance of the test. 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:32 CEST

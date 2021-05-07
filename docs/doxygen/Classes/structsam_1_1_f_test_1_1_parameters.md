@@ -1,26 +1,9 @@
 ---
 title: sam::FTest::Parameters
 
-
 ---
 
 # sam::FTest::Parameters
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -28,8 +11,7 @@ title: sam::FTest::Parameters
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[NLOHMANN_DEFINE_TYPE_INTRUSIVE](/doxygen/Classes/structsam_1_1_f_test_1_1_parameters/#function-nlohmann_define_type_intrusive)**([FTest::Parameters](/doxygen/Classes/structsam_1_1_f_test_1_1_parameters/) , name , alpha )  |
-
+| | **[NLOHMANN_DEFINE_TYPE_INTRUSIVE](/doxygen/Classes/structsam_1_1_f_test_1_1_parameters/#function-nlohmann_define_type_intrusive)**([FTest::Parameters](/doxygen/Classes/structsam_1_1_f_test_1_1_parameters/) , name , alpha ) |
 
 ## Public Attributes
 
@@ -38,22 +20,9 @@ title: sam::FTest::Parameters
 | [TestMethod](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testmethod) | **[name](/doxygen/Classes/structsam_1_1_f_test_1_1_parameters/#variable-name)**  |
 | double | **[alpha](/doxygen/Classes/structsam_1_1_f_test_1_1_parameters/#variable-alpha)**  |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Functions Documentation
 
-### function `NLOHMANN_DEFINE_TYPE_INTRUSIVE`
+### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
 
 ```cpp
 NLOHMANN_DEFINE_TYPE_INTRUSIVE(
@@ -64,106 +33,22 @@ NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Attributes Documentation
 
-### variable `name`
+### variable name
 
 ```cpp
 TestMethod name = [TestMethod::FTest](/doxygen/Classes/classsam_1_1_test_strategy/#enumvalue-ftest);
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `alpha`
+### variable alpha
 
 ```cpp
 double alpha;
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:32 CEST

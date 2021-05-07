@@ -1,86 +1,74 @@
 ---
 title: Policy-related Modules
-summary: List of available policy-related modules.  
+summary: List of available policy-related modules. 
 
 ---
 
 # Policy-related Modules
 
-
-
-
-List of available policy-related modules.  [More...](#detailed-description)
-
-
-
-
-
-
-## Classes
+List of available policy-related modules. ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[sam::PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/)**  |
+| struct | **[sam::Policy](/doxygen/Classes/structsam_1_1_policy/)** <br>Implementation of the [Policy]() class.  |
+| struct | **[sam::PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/)** <br>Implementation of the [PolicyChain]() class.  |
 | struct | **[sam::PolicyChainSet](/doxygen/Classes/structsam_1_1_policy_chain_set/)**  |
 
-
-
-
-## Functions
+## Types
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[NLOHMANN_JSON_SERIALIZE_ENUM](/doxygen/Modules/group___policies/#function-nlohmann_json_serialize_enum)**(LogicType , {{LogicType::AllOf, "all_of"}, {LogicType::AnyOf, "any_of"}, {LogicType::NoneOf, "none_of"}} ) <br>Implementation of the Policy.  |
+| enum int | **[PolicyType](/doxygen/Modules/group___policies/#enum-policytype)** { Min, Max, Comp, Random, First, Last, All}<br>Indicates the type of the [Policy](/doxygen/Classes/structsam_1_1_policy/).  |
+| enum int | **[PolicyChainType](/doxygen/Modules/group___policies/#enum-policychaintype)** { Selection, Decision}<br>Indicates the type of the [PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/).  |
+| using std::vector< std::vector< std::variant< std::shared_ptr< HackingStrategy >, PolicyChain, PolicyChainSet > >> | **[HackingWorkflow](/doxygen/Modules/group___policies/#using-hackingworkflow)**  |
+
+## Types Documentation
+
+### enum PolicyType
+
+| Enumerator | Value | Description |
+| ---------- | ----- | ----------- |
+| Min | |   |
+| Max | |   |
+| Comp | |   |
+| Random | |   |
+| First | |   |
+| Last | |   |
+| All | |   |
 
 
 
+Indicates the type of the [Policy](/doxygen/Classes/structsam_1_1_policy/). 
 
-## Detailed Description
-
-List of available policy-related modules. 
-
+This is mainly being used by [Policy](/doxygen/Classes/structsam_1_1_policy/) to decide which type of formula it's dealing with. 
 
 
+### enum PolicyChainType
 
-
-
-
-
-
+| Enumerator | Value | Description |
+| ---------- | ----- | ----------- |
+| Selection | |   |
+| Decision | |   |
 
 
 
+Indicates the type of the [PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/). 
+
+A [PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/) can either be used to perform _selection_, or a _decision_. The main difference between them being that the `::Selection` chains could include a function call, e.g., `min`, while the `::Decision` chains cannot. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-Description to come! 
-
-
-
-
-## Functions Documentation
-
-### function NLOHMANN_JSON_SERIALIZE_ENUM
+### using HackingWorkflow
 
 ```cpp
-NLOHMANN_JSON_SERIALIZE_ENUM(
-    LogicType ,
-    {{LogicType::AllOf, "all_of"}, {LogicType::AnyOf, "any_of"}, {LogicType::NoneOf, "none_of"}} 
-)
+using sam::HackingWorkflow = typedef std::vector< std::vector< std::variant<std::shared_ptr<HackingStrategy>, PolicyChain, PolicyChainSet> >>;
 ```
 
-Implementation of the Policy. 
+
+**See**: [Researcher::hackTheResearch()](/doxygen/Classes/classsam_1_1_researcher/#function-hacktheresearch)
+
+The representation of the Hacking Workflow
+
+This is defined to capture a sequence of _hacking → selection → decision_. While it looks rather strange, it allows for some nice and flexible setup using the std::visit().
 
 
 
@@ -88,56 +76,6 @@ Implementation of the Policy.
 
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-A policy is a logical rule that it's being applied on an experiment, submission, or a set of submissions.
-
-
-
-* In the case of submission, policy checks whether the given submission satisfies the given policy.
-* In the case of set of submissions, or an experiment, policy checks whether the any of the items, ie., dvs or sub, will satisfy the given policy, if so, it'll return those items, otherwise, the output will be empty. 
-
-Given the forward iterator, it applies `func` on each item, and returns a subset of the range where all items satisfy the `func` criteria
-
-beginThe begin 
-
-endThe end
-
-ForwardItThis usually accepts [Submission](/doxygen/Classes/classsam_1_1_submission/)'s ForwardIt
-
-Return a tuple containing three variables.
-
-This can take care of either [Group](/doxygen/Classes/classsam_1_1_group/) or [Submission](/doxygen/Classes/classsam_1_1_submission/) because the Lua instance is aware of them!
-
-
-Shuffling the array and setting the end pointer to the first time, this basically mimic the process of selecting a random element from the list.
-
-Returns the result of applying the policy on a submission
-
-Todoto be implemented 
-
-Todoto be implemented 
-
-Todothese should be joined, they're technically the same! 
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:32 CEST

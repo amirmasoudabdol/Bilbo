@@ -1,28 +1,9 @@
 ---
 title: sam::WilcoxonTest::ResultType
 
-
 ---
 
 # sam::WilcoxonTest::ResultType
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -36,238 +17,62 @@ title: sam::WilcoxonTest::ResultType
 | int | **[side](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_result_type/#variable-side)**  |
 | bool | **[sig](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_result_type/#variable-sig)**  |
 
-
 ## Friends
 
 |                | Name           |
 | -------------- | -------------- |
 | std::ostream & | **[operator<<](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_result_type/#friend-operator<<)**(std::ostream & os, const [ResultType](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_result_type/) & type)  |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Attributes Documentation
 
-### variable `zstat`
+### variable zstat
 
 ```cpp
 double zstat;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `wstat`
+### variable wstat
 
 ```cpp
 double wstat;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `pvalue`
+### variable pvalue
 
 ```cpp
 double pvalue;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `side`
+### variable side
 
 ```cpp
 int side;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `sig`
+### variable sig
 
 ```cpp
 bool sig;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Friends
 
-### friend `operator<<`
+### friend operator<<
 
 ```cpp
 friend std::ostream & operator<<(
     std::ostream & os,
+
     const ResultType & type
 );
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:32 CEST

@@ -52,7 +52,7 @@ th {
 }*/
 
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   body {
     background-color: #141414;
   }
@@ -69,22 +69,7 @@ th {
     a:focus, a:hover, .md-nav__link:focus, .md-nav__link:hover {
     color: #aaaaaa !important;
   }
-}
-
-/* I don't get why these don't work! */
-:root {
-  --md-primary-fg-color:        #15beec;
-  --md-primary-fg-color--light: #15beec;
-  --md-primary-fg-color--dark:  #15beec;
-
-  --md-default-bg-color:        #fafafa;
-  --md-default-bg-color--light: #141414;
-  --md-default-bg-color--dark:  #141414;
-
-  --md-primary-bg-color:        #fafafa;
-  --md-primary-bg-color--light: #141414;
-}
-
+}*/
 
 /*experiment*/
 :root {

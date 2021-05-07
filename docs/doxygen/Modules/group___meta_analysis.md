@@ -1,20 +1,12 @@
 ---
 title: Meta Analysis Methods
-summary: List of available Meta Analysis.  
+summary: List of available Meta Analysis. 
 
 ---
 
 # Meta Analysis Methods
 
-
-
-
 List of available Meta Analysis.  [More...](#detailed-description)
-
-
-
-
-
 
 ## Classes
 
@@ -27,41 +19,9 @@ List of available Meta Analysis.  [More...](#detailed-description)
 | class | **[sam::TrimAndFill](/doxygen/Classes/classsam_1_1_trim_and_fill/)** <br>Trim and Fill Publication Bias Test.  |
 | class | **[sam::RankCorrelation](/doxygen/Classes/classsam_1_1_rank_correlation/)** <br>Begg's Rank Correlation Test.  |
 
-
-
-
-
-
-
-
 ## Detailed Description
 
 List of available Meta Analysis. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Description to come! 
 
@@ -70,5 +30,6 @@ Description to come!
 
 
 
+-------------------------------
 
-
+Updated on  7 May 2021 at 14:51:32 CEST

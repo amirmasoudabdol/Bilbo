@@ -1,28 +1,9 @@
 ---
 title: sam::FTest::ResultType
 
-
 ---
 
 # sam::FTest::ResultType
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -36,238 +17,62 @@ title: sam::FTest::ResultType
 | double | **[pvalue](/doxygen/Classes/structsam_1_1_f_test_1_1_result_type/#variable-pvalue)**  |
 | bool | **[sig](/doxygen/Classes/structsam_1_1_f_test_1_1_result_type/#variable-sig)**  |
 
-
 ## Friends
 
 |                | Name           |
 | -------------- | -------------- |
 | std::ostream & | **[operator<<](/doxygen/Classes/structsam_1_1_f_test_1_1_result_type/#friend-operator<<)**(std::ostream & os, const [ResultType](/doxygen/Classes/structsam_1_1_f_test_1_1_result_type/) & type)  |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Attributes Documentation
 
-### variable `fstat`
+### variable fstat
 
 ```cpp
 double fstat;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `df1`
+### variable df1
 
 ```cpp
 unsigned df1;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `df2`
+### variable df2
 
 ```cpp
 unsigned df2;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `pvalue`
+### variable pvalue
 
 ```cpp
 double pvalue;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `sig`
+### variable sig
 
 ```cpp
 bool sig;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Friends
 
-### friend `operator<<`
+### friend operator<<
 
 ```cpp
 friend std::ostream & operator<<(
     std::ostream & os,
+
     const ResultType & type
 );
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:32 CEST

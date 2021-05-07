@@ -1,6 +1,6 @@
 ---
 title: sam::LinearModelStrategy::Parameters
-summary: Parameters of LinearModelStrategy.  
+summary: Parameters of LinearModelStrategy. 
 
 ---
 
@@ -8,266 +8,77 @@ summary: Parameters of LinearModelStrategy.
 
 
 
-
 [Parameters]() of [LinearModelStrategy](/doxygen/Classes/classsam_1_1_linear_model_strategy/). 
-
 `#include <DataStrategy.h>`
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[Parameters](/doxygen/Classes/structsam_1_1_linear_model_strategy_1_1_parameters/#function-parameters)**() =default  |
-
+| | **[Parameters](/doxygen/Classes/structsam_1_1_linear_model_strategy_1_1_parameters/#function-parameters)**() =default |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| std::optional< std::vector< Distribution > > | **[meas_dists](/doxygen/Classes/structsam_1_1_linear_model_strategy_1_1_parameters/#variable-meas_dists)**  |
+| std::optional< std::vector< UnivariateDistribution > > | **[meas_dists](/doxygen/Classes/structsam_1_1_linear_model_strategy_1_1_parameters/#variable-meas_dists)**  |
 | std::optional< MultivariateDistribution > | **[m_meas_dist](/doxygen/Classes/structsam_1_1_linear_model_strategy_1_1_parameters/#variable-m_meas_dist)**  |
-| std::optional< std::vector< Distribution > > | **[erro_dists](/doxygen/Classes/structsam_1_1_linear_model_strategy_1_1_parameters/#variable-erro_dists)**  |
+| std::optional< std::vector< UnivariateDistribution > > | **[erro_dists](/doxygen/Classes/structsam_1_1_linear_model_strategy_1_1_parameters/#variable-erro_dists)**  |
 | std::optional< MultivariateDistribution > | **[m_erro_dist](/doxygen/Classes/structsam_1_1_linear_model_strategy_1_1_parameters/#variable-m_erro_dist)**  |
 | DataModel | **[name](/doxygen/Classes/structsam_1_1_linear_model_strategy_1_1_parameters/#variable-name)**  |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Functions Documentation
 
-### function `Parameters`
+### function Parameters
 
 ```cpp
 Parameters() =default
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Attributes Documentation
 
-### variable `meas_dists`
+### variable meas_dists
 
 ```cpp
-std::optional< std::vector< Distribution > > meas_dists;
+std::optional< std::vector< UnivariateDistribution > > meas_dists;
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Distributions of main effects 
 
 
-### variable `m_meas_dist`
+### variable m_meas_dist
 
 ```cpp
 std::optional< MultivariateDistribution > m_meas_dist;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `erro_dists`
+### variable erro_dists
 
 ```cpp
-std::optional< std::vector< Distribution > > erro_dists;
+std::optional< std::vector< UnivariateDistribution > > erro_dists;
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Distributions of error. 
 
 
-### variable `m_erro_dist`
+### variable m_erro_dist
 
 ```cpp
 std::optional< MultivariateDistribution > m_erro_dist;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `name`
+### variable name
 
 ```cpp
 DataModel name {DataModel::LinearModel};
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:31 CEST

@@ -1,21 +1,12 @@
 ---
 title: Effect Strategies
-summary: List of available effect strategies.  
+summary: List of available effect strategies. 
 
 ---
 
 # Effect Strategies
 
-
-
-
-List of available effect strategies. 
-
-
-
-
-
-## Classes
+List of available effect strategies. ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
@@ -29,12 +20,6 @@ List of available effect strategies.
 
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:31 CEST

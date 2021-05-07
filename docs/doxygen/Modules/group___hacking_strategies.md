@@ -1,29 +1,19 @@
 ---
 title: Hacking Strategies
-summary: List of available hacking strategies.  
+summary: List of available hacking strategies. 
 
 ---
 
 # Hacking Strategies
 
-
-
-
-List of available hacking strategies.  [More...](#detailed-description)
-
-
-
-
-
-
-## Classes
+List of available hacking strategies. ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
 | class | **[sam::HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strategy/)** <br>Abstract Class of Hacking Strategies.  |
 | class | **[sam::OptionalStopping](/doxygen/Classes/classsam_1_1_optional_stopping/)**  |
 | class | **[sam::OutliersRemoval](/doxygen/Classes/classsam_1_1_outliers_removal/)** <br>Declaration of Outlier Removal hacking method based on items' distance from their sample mean.  |
-| class | **[sam::SubjectiveOutlierRemoval](/doxygen/Classes/classsam_1_1_subjective_outlier_removal/)** <br>The subjective outlier removal refers to a type of outliers removal where the researcher continiously lowers the threshold of identifying an outlier, `k`, until it finds a significant (or satisfactory) result.  |
+| class | **[sam::SubjectiveOutlierRemoval](/doxygen/Classes/classsam_1_1_subjective_outlier_removal/)** <br>The subjective outlier removal refers to a type of outliers removal where the researcher continuously lowers the threshold of identifying an outlier, `k`, until it finds a significant (or satisfactory) result.  |
 | class | **[sam::QuestionableRounding](/doxygen/Classes/classsam_1_1_questionable_rounding/)**  |
 | class | **[sam::PeekingOutliersRemoval](/doxygen/Classes/classsam_1_1_peeking_outliers_removal/)**  |
 | class | **[sam::FalsifyingData](/doxygen/Classes/classsam_1_1_falsifying_data/)**  |
@@ -35,43 +25,6 @@ List of available hacking strategies.  [More...](#detailed-description)
 
 
 
+-------------------------------
 
-
-## Detailed Description
-
-List of available hacking strategies. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Description to come! 
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:31 CEST

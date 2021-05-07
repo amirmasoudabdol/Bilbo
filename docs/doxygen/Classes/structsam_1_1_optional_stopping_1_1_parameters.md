@@ -1,37 +1,18 @@
 ---
 title: sam::OptionalStopping::Parameters
 
-
 ---
 
 # sam::OptionalStopping::Parameters
 
-
 **Module:** **[Parameters of Hacking Strategies](/doxygen/Modules/group___hacking_strategies_parameters/)**
+
+
 
  [More...](#detailed-description)
 
 
 `#include <HackingStrategy.h>`
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Public Functions
-
-|                | Name           |
-| -------------- | -------------- |
-| void | **[randomize](/doxygen/Classes/structsam_1_1_optional_stopping_1_1_parameters/#function-randomize)**()  |
-
 
 ## Public Attributes
 
@@ -47,11 +28,6 @@ title: sam::OptionalStopping::Parameters
 | double | **[prevalence](/doxygen/Classes/structsam_1_1_optional_stopping_1_1_parameters/#variable-prevalence)**  |
 | HackingStage | **[stage](/doxygen/Classes/structsam_1_1_optional_stopping_1_1_parameters/#variable-stage)**  |
 
-
-
-
-
-
 ## Detailed Description
 
 ```cpp
@@ -59,82 +35,11 @@ struct sam::OptionalStopping::Parameters;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 [Parameter](/doxygen/Classes/classsam_1_1_parameter/) of optional stopping method. 
-
-
-
-
-
-
-
-
-
-## Public Functions Documentation
-
-### function `randomize`
-
-```cpp
-void randomize()
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Public Attributes Documentation
 
-### variable `name`
+### variable name
 
 ```cpp
 HackingMethod name = HackingMethod::OptionalStopping;
@@ -142,34 +47,7 @@ HackingMethod name = HackingMethod::OptionalStopping;
 
 Placeholder for hacking strategy name. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `num`
+### variable num
 
 ```cpp
 Parameter< int > num;
@@ -177,34 +55,7 @@ Parameter< int > num;
 
 Number of new observations to be added to each group. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `target`
+### variable target
 
 ```cpp
 HackingTarget target {HackingTarget::Both};
@@ -212,34 +63,7 @@ HackingTarget target {HackingTarget::Both};
 
 Indicates which groups are going to be targets. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `ratio`
+### variable ratio
 
 ```cpp
 Parameter< double > ratio;
@@ -247,34 +71,7 @@ Parameter< double > ratio;
 
 If not 0., `ratio` * n_obs will be added to the experiment. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `n_attempts`
+### variable n_attempts
 
 ```cpp
 Parameter< int > n_attempts {1};
@@ -282,34 +79,7 @@ Parameter< int > n_attempts {1};
 
 Number of times that [Researcher]() add `num` observations to each group. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `stopping_cond_defs`
+### variable stopping_cond_defs
 
 ```cpp
 std::vector< std::string > stopping_cond_defs;
@@ -317,136 +87,27 @@ std::vector< std::string > stopping_cond_defs;
 
 Stopping condition [PolicyChain]() definitions. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `defensibility`
+### variable defensibility
 
 ```cpp
 double defensibility {0.1};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `prevalence`
+### variable prevalence
 
 ```cpp
 double prevalence {0.7};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `stage`
+### variable stage
 
 ```cpp
 HackingStage stage {HackingStage::PostProcessing};
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:32 CEST

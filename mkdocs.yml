@@ -81,10 +81,21 @@ plugins:
 # Configuration
 theme:
   name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      # toggle:
+      #   icon: material/toggle-switch-off-outline
+      #   name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: light blue
+      # toggle:
+      #   icon: material/toggle-switch
+      #   name: Switch to light mode
   custom_dir: overrides
   font: false
-  palette:
-    scheme: preference
   include_homepage_in_sidebar: false
   highlightjs: true
   logo:

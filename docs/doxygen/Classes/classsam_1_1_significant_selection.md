@@ -1,23 +1,21 @@
 ---
 title: sam::SignificantSelection
-summary: Significant-based Selection Strategy.  
+summary: Significant-based Selection Strategy. 
 
 ---
 
 # sam::SignificantSelection
 
+**Module:** **[Review Strategies](/doxygen/Modules/group___review_strategies/)**
 
-**Module:** **[Selection Strategies](/doxygen/Modules/group___selection_strategies/)**
+
 
 Significant-based Selection Strategy.  [More...](#detailed-description)
 
 
-`#include <SelectionStrategy.h>`
+`#include <ReviewStrategy.h>`
 
-
-Inherits from SelectionStrategy
-
-
+Inherits from ReviewStrategy
 
 ## Public Classes
 
@@ -25,31 +23,19 @@ Inherits from SelectionStrategy
 | -------------- | -------------- |
 | struct | **[Parameters](/doxygen/Classes/structsam_1_1_significant_selection_1_1_parameters/)**  |
 
-
-
-
-
-
-
-
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[SignificantSelection](/doxygen/Classes/classsam_1_1_significant_selection/#function-significantselection)**(const [Parameters](/doxygen/Classes/structsam_1_1_significant_selection_1_1_parameters/) & p)  |
-| virtual bool | **[review](/doxygen/Classes/classsam_1_1_significant_selection/#function-review)**(const [Submission](/doxygen/Classes/classsam_1_1_submission/) & s) override  |
-
+| | **[SignificantSelection](/doxygen/Classes/classsam_1_1_significant_selection/#function-significantselection)**(const [Parameters](/doxygen/Classes/structsam_1_1_significant_selection_1_1_parameters/) & p) |
+| bool | **[review](/doxygen/Classes/classsam_1_1_significant_selection/#function-review)**(const std::vector< [Submission](/doxygen/Classes/classsam_1_1_submission/) > & s) override |
+| bool | **[review](/doxygen/Classes/classsam_1_1_significant_selection/#function-review)**(const [Experiment](/doxygen/Classes/classsam_1_1_experiment/) & expr) override |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
 | [Parameters](/doxygen/Classes/structsam_1_1_significant_selection_1_1_parameters/) | **[params](/doxygen/Classes/classsam_1_1_significant_selection/#variable-params)**  |
-
-
-
-
-
 
 ## Detailed Description
 
@@ -61,158 +47,64 @@ Significant-based Selection Strategy.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Significant-based selection strategy accepts a publication if the given _p_-value is significant. Certain degree of _publication bias_, can be specified. In this case, a [Submission](/doxygen/Classes/classsam_1_1_submission/) has a chance of being published even if the statistics is not significant. Moreover, the [SignificantSelection](/doxygen/Classes/classsam_1_1_significant_selection/) can be tailored toward either positive or negative effect. In this case, the [Journal](/doxygen/Classes/classsam_1_1_journal/) will only accept Submissions with larger or smaller effects. 
-
-
-
-
-
-
-
-
+```
+        Significant-based review strategy accepts a publication if the
+        given *p*-value is significant. Certain degree of *publication
+        bias*, can be specified. In this case, a Submission has a chance
+        of being published even if the statistics is not significant.
+        Moreover, the SignificantSelection can be tailored toward either
+        positive or negative effect. In this case, the Journal will only
+        accept Submissions with larger or smaller effects.
+```
 
 ## Public Functions Documentation
 
-### function `SignificantSelection`
+### function SignificantSelection
 
 ```cpp
-inline SignificantSelection(
+inline explicit SignificantSelection(
     const Parameters & p
 )
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `review`
+### function review
 
 ```cpp
-virtual bool review(
-    const Submission & s
+bool review(
+    const std::vector< Submission > & s
 ) override
 ```
 
 
 **Parameters**: 
 
-  * **`s`** A reference to the [Submission](/doxygen/Classes/classsam_1_1_submission/)
-
-
-
-
-
+  * **s** A reference to the [Submission](/doxygen/Classes/classsam_1_1_submission/)
 
 
 **Return**: a boolean indicating whether the [Submission](/doxygen/Classes/classsam_1_1_submission/) is accepted. 
 
+Check if the _p_-value of any of the Submissions are less than the specified \(\alpha\). If true, it will accept the submission, if not, a random number decide whether or not the submission is going to be accepted. The drawn random number, \(r\) will be compared to `pub_bias_rate` of the journal.
 
 
+### function review
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Check if `p-value` of the [Submission](/doxygen/Classes/classsam_1_1_submission/) is less than the specified $\alpha$. If true, it will accept the submission, if not, a random number decide wheather the submission is going to be accepted. The drawn random number, $r$ will be compared to `pub_bias` of the journal.
-
-
+```cpp
+inline bool review(
+    const Experiment & expr
+) override
+```
 
 
 ## Public Attributes Documentation
 
-### variable `params`
+### variable params
 
 ```cpp
 Parameters params;
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:32 CEST

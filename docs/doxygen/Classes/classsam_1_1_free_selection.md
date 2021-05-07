@@ -1,43 +1,33 @@
 ---
 title: sam::FreeSelection
-summary: FreeSelection doesn't pose any restriction on the submission and all submissions will be accepted.  
+summary: FreeSelection doesn't pose any restriction on the submission and all submissions will be accepted. 
 
 ---
 
 # sam::FreeSelection
 
+**Module:** **[Review Strategies](/doxygen/Modules/group___review_strategies/)**
 
-**Module:** **[Selection Strategies](/doxygen/Modules/group___selection_strategies/)**
+
 
 [FreeSelection]() doesn't pose any restriction on the submission and all submissions will be accepted. 
+`#include <ReviewStrategy.h>`
 
-`#include <SelectionStrategy.h>`
-
-
-Inherits from SelectionStrategy
-
-
+Inherits from ReviewStrategy
 
 ## Public Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[Parameters](/doxygen/Classes/structsam_1_1_free_selection_1_1_parameters/)**  |
-
-
-
-
-
-
-
+| struct | **[Parameters](/doxygen/Classes/structsam_1_1_free_selection_1_1_parameters/)** <br>[Parameters]() of free selection.  |
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[FreeSelection](/doxygen/Classes/classsam_1_1_free_selection/#function-freeselection)**()  |
-| virtual bool | **[review](/doxygen/Classes/classsam_1_1_free_selection/#function-review)**(const [Submission](/doxygen/Classes/classsam_1_1_submission/) & s) override <br>Accepting anything!  |
-
+| | **[FreeSelection](/doxygen/Classes/classsam_1_1_free_selection/#function-freeselection)**() =default |
+| bool | **[review](/doxygen/Classes/classsam_1_1_free_selection/#function-review)**(const std::vector< [Submission](/doxygen/Classes/classsam_1_1_submission/) > & s) override<br>It accepts everything.  |
+| bool | **[review](/doxygen/Classes/classsam_1_1_free_selection/#function-review)**(const [Experiment](/doxygen/Classes/classsam_1_1_experiment/) & expr) override<br>It accepts everything.  |
 
 ## Public Attributes
 
@@ -45,131 +35,44 @@ Inherits from SelectionStrategy
 | -------------- | -------------- |
 | [Parameters](/doxygen/Classes/structsam_1_1_free_selection_1_1_parameters/) | **[params](/doxygen/Classes/classsam_1_1_free_selection/#variable-params)**  |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Functions Documentation
 
-### function `FreeSelection`
+### function FreeSelection
 
 ```cpp
-inline FreeSelection()
+FreeSelection() =default
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `review`
+### function review
 
 ```cpp
-inline virtual bool review(
-    const Submission & s
+inline bool review(
+    const std::vector< Submission > & s
 ) override
 ```
 
-Accepting anything! 
+It accepts everything. 
 
+### function review
 
+```cpp
+inline bool review(
+    const Experiment & expr
+) override
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+It accepts everything. 
 
 ## Public Attributes Documentation
 
-### variable `params`
+### variable params
 
 ```cpp
 Parameters params;
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on  7 May 2021 at 14:51:32 CEST
