@@ -12,7 +12,6 @@ title: sam::TestOfObsOverExptSig::ResultType
 |                | Name           |
 | -------------- | -------------- |
 | std::vector< std::string > | **[Columns](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#function-columns)**() |
-| | **[operator arma::Row< double >](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#function-operator-armarow<-double->)**() |
 
 ## Public Attributes
 
@@ -29,13 +28,6 @@ title: sam::TestOfObsOverExptSig::ResultType
 
 ```cpp
 static inline std::vector< std::string > Columns()
-```
-
-
-### function operator arma::Row< double >
-
-```cpp
-inline operator arma::Row< double >()
 ```
 
 
@@ -75,4 +67,4 @@ The significance of the test.
 
 -------------------------------
 
-Updated on  7 May 2021 at 14:51:32 CEST
+Updated on  7 June 2021 at 12:00:21 CEST

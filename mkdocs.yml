@@ -1,6 +1,9 @@
 site_name: SAM - Science Abstract Model Simulation Framework
 nav:
     - Home: index.md
+    - Tutorial:
+        - Installation: tutorial/installation.md
+        - Getting Started: tutorial/getting-started.md
     - Design:
         - design.md
         - modules.md
@@ -31,28 +34,24 @@ nav:
           - meta-analyses.md
         - simulation-configurations.md
     - Examples:
-        - examples/index.md
-        - examples/bakker_et_al_2012.md
-        - examples/bakker_et_al_2014.md
-        - examples/esther_first_year.md
-        # - examples/friese_et_al_2020.md
-    - Studies:
         - studies/studies.md
         - studies/selection-variation.md
         - studies/sample-size-variation.md
         - studies/optional-stopping-variation.md
         # - studies/outliers-removal-variation.md
-    - API:
-        - Home: doxygen/index.md
-        - Modules: doxygen/Modules
-        - Classes: doxygen/Classes
-    - Tutorial:
-        - Tutorial: tutorial/index.md
-        - Installation: tutorial/installation.md
-        - Getting Started: tutorial/getting-started.md
+        - Studies / Replications:
+          - examples/index.md
+          - examples/bakker_et_al_2012.md
+          - examples/bakker_et_al_2014.md
+          - examples/esther_first_year.md
+          # - examples/friese_et_al_2020.md
     - FRODO: 
         - FRODO: frodo/frodo.md
         - Simple Simulation: frodo/sample-frodo-project.md
+    - API:
+        - Introduction: doxygen/index.md
+        - Modules: doxygen/Modules
+        - Classes: doxygen/Classes
 
     # - Extras:
     #     - extending-sam.md
@@ -65,7 +64,7 @@ extra_css:
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
 repo_name: GitHub
-repo_url: https://github.com/amirmasoudabdol/samdd
+repo_url: https://github.com/amirmasoudabdol/bilbo
 edit_uri: edit/main/docs
 
 
@@ -85,15 +84,17 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: light blue
-      # toggle:
-      #   icon: material/toggle-switch-off-outline
-      #   name: Switch to dark mode
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: light blue
-      # toggle:
-      #   icon: material/toggle-switch
-      #   name: Switch to light mode
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
   custom_dir: overrides
   font: false
   include_homepage_in_sidebar: false
@@ -115,6 +116,10 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/amirmasoudabdol
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/amirmasoudabdol
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/amirmasoudabdol
 
 # Extensions
 markdown_extensions:

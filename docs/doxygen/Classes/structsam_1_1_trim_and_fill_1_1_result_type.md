@@ -12,7 +12,6 @@ title: sam::TrimAndFill::ResultType
 |                | Name           |
 | -------------- | -------------- |
 | std::vector< std::string > | **[Columns](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_result_type/#function-columns)**() |
-| | **[operator arma::Row< double >](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_result_type/#function-operator-armarow<-double->)**() |
 
 ## Public Attributes
 
@@ -31,13 +30,6 @@ title: sam::TrimAndFill::ResultType
 
 ```cpp
 static inline std::vector< std::string > Columns()
-```
-
-
-### function operator arma::Row< double >
-
-```cpp
-inline operator arma::Row< double >()
 ```
 
 
@@ -87,4 +79,4 @@ double imputed_pval;
 
 -------------------------------
 
-Updated on  7 May 2021 at 14:51:32 CEST
+Updated on  7 June 2021 at 12:00:21 CEST

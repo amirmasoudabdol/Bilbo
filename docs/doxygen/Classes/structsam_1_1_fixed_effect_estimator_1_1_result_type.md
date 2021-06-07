@@ -13,7 +13,6 @@ title: sam::FixedEffectEstimator::ResultType
 | -------------- | -------------- |
 | | **[ResultType](/doxygen/Classes/structsam_1_1_fixed_effect_estimator_1_1_result_type/#function-resulttype)**() =default |
 | | **[ResultType](/doxygen/Classes/structsam_1_1_fixed_effect_estimator_1_1_result_type/#function-resulttype)**(const [RandomEffectEstimator::ResultType](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/) & res) |
-| | **[operator arma::Row< double >](/doxygen/Classes/structsam_1_1_fixed_effect_estimator_1_1_result_type/#function-operator-armarow<-double->)**() |
 | std::vector< std::string > | **[Columns](/doxygen/Classes/structsam_1_1_fixed_effect_estimator_1_1_result_type/#function-columns)**() |
 
 ## Public Attributes
@@ -51,13 +50,6 @@ ResultType() =default
 inline ResultType(
     const RandomEffectEstimator::ResultType & res
 )
-```
-
-
-### function operator arma::Row< double >
-
-```cpp
-inline operator arma::Row< double >()
 ```
 
 
@@ -148,4 +140,4 @@ friend ostream & operator<<(
 
 -------------------------------
 
-Updated on  7 May 2021 at 14:51:32 CEST
+Updated on  7 June 2021 at 12:00:21 CEST

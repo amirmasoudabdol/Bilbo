@@ -8,9 +8,6 @@ title: Classes
 
 
 
-* **namespace [arma](/doxygen/Namespaces/namespacearma/)** 
-* **namespace [rang](/doxygen/Namespaces/namespacerang/)** 
-    * **namespace [rang_implementation](/doxygen/Namespaces/namespacerang_1_1rang__implementation/)** 
 * **namespace [sam](/doxygen/Namespaces/namespacesam/)** 
     * **class [CohensD](/doxygen/Classes/classsam_1_1_cohens_d/)** 
     * **class [ConditionDropping](/doxygen/Classes/classsam_1_1_condition_dropping/)** 
@@ -110,4 +107,4 @@ title: Classes
 
 -------------------------------
 
-Updated on  7 May 2021 at 14:51:32 CEST
+Updated on  7 June 2021 at 12:00:22 CEST
