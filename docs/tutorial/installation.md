@@ -2,7 +2,7 @@ This page helps you setup your system, install the required packages, and finall
 
 ## Dependencies
 
-SAM dependes on several packages:
+SAM depends on several packages:
 
 - [CMake](https://cmake.org) (need to be installed)
 - [Boost](https://www.boost.org) (need to be installed)
@@ -27,17 +27,18 @@ Below you can find an instruction on how to install all these dependencies based
 
 If you are using Windows, in order to avoid unneccessary complications and compilation issues, we recommend setting up your development enviroment by installing [Anaconda](https://www.anaconda.com/products/individual). By installing Anaconda, you get a full-featured scientific enviroment that simplifies the process of building and managing SAM's dependencies tremendously. 
 
-After installing anaconda, you can install the required packages using the `conda` command.
+After installing anaconda, open the Anaconda Navigator and open the CMD.exe prompt. Here you can install the required packages using the `conda` command. It is advised to enter each command separately.
 
 ```bash
 conda install -c conda-forge cmake
 conda install -c conda-forge boost-cpp
+conda install -c conda-forge nlohmann_json
 conda install -c conda-forge armadillo
 conda install -c conda-forge mlpack
 conda install -c conda-forge ensmallen
-conda install -c conda-forge lua
-conda install -c conda-forge fmt
 conda install -c conda-forge spdlog
+conda install -c conda-forge fmt
+conda install -c conda-forge lua
 ```
 
 
