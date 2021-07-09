@@ -23,10 +23,17 @@ SAM depends on several packages:
 
 Below you can find an instruction on how to install all these dependencies based on your operation system.
 
-### Windows
+
+### Windows (WLS)
+
+Microsoft has recently started to embrace Linux (and open-source) by offering a first party Linux environment inside the Windows. [Windows Linux Subsystem](https://docs.microsoft.com/en-us/windows/wsl/about), WLS, is an example of this enviroment. As Microsoft puts it, "_The Windows Subsystem for Linux lets developers run a GNU/Linux environment — including most command-line tools, utilities, and applications — directly on Windows, unmodified, without the overhead of a traditional virtual machine or dualboot setup._"
+
+In our tests, this in facts works better than alternatives, e.g., Cygwin, and allows you to quickly and correctly deploy an Ubuntu instance on your system. We recommend you to give this approach a try if you are a Windows user since it offers the cleanest and most robust solutions to build and run SAM in your Windows machine. If you decide to give the WLS a try, you can simply head to the Linux (Ubuntu) section of this guide and follow the same procedure without any issues. 
+
+### Windows (Anaconda)
 
 If you are using Windows, in order to avoid unneccessary complications and compilation issues, we recommend setting up your development enviroment by installing [Anaconda](https://www.anaconda.com/products/individual). By installing Anaconda, you get a full-featured scientific enviroment that simplifies the process of building and managing SAM's dependencies tremendously. 
-
+	
 After installing anaconda, open the Anaconda Navigator and open the CMD.exe prompt. Here you can install the required packages using the `conda` command. It is advised to enter each command separately.
 
 ```bash
@@ -41,7 +48,6 @@ conda install -c conda-forge fmt
 conda install -c conda-forge lua
 ```
 
-
 !!! note
 	You can choose to use Anaconda on macOS and Linux as well. If you go with Anaconda, then you can simply ignore the following steps.
 
@@ -53,8 +59,13 @@ Now, if you do not have Homebrew already installed, you may download and install
 
 ```shell
 brew install cmake
-brew install boost armadillo ensmallen mlpack fmt spdlog
 brew install Lua
+brew install boost
+brew install armadillo
+brew install ensmallen
+brew install mlpack
+brew install fmt
+brew install spdlog
 brew tap nlohmann/json; brew install nlohmann-json
 ```
 
@@ -70,10 +81,9 @@ sudo apt install liblapack-dev libblas-dev
 sudo apt install libboost-all-dev
 sudo apt install libarmadillo-dev
 sudo apt install lua5.3 liblua5.3-dev
-sudo apt install libmlpack-dev
 ```
 
-For nlohmann/json, mlpack, ensmallen, fmt, and spdlog, you need to build and install these packages manually. Please follow the link to their homepage, and follow their instruction. 
+For `nlohmann/json`, `mlpack`, `ensmallen`, `fmt`, and `spdlog`, you need to build and install these packages manually. This is due to the fact that sometimes there required version of them are not yet deployed in different Linux distros.  Please follow the link to their homepage, and follow their instruction. 
 
 !!! note
 	Based on your distribution and version, these commands may be different, or you may end up having different versions of these packages available to you.
