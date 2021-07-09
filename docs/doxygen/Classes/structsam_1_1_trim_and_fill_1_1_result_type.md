@@ -17,12 +17,12 @@ title: sam::TrimAndFill::ResultType
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[k0](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_result_type/#variable-k0)**  |
-| double | **[se_k0](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_result_type/#variable-se_k0)**  |
-| double | **[k_all](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_result_type/#variable-k_all)**  |
+| float | **[k0](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_result_type/#variable-k0)**  |
+| float | **[se_k0](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_result_type/#variable-se_k0)**  |
+| float | **[k_all](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_result_type/#variable-k_all)**  |
 | std::string | **[side](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_result_type/#variable-side)**  |
-| double | **[imputed_est](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_result_type/#variable-imputed_est)**  |
-| double | **[imputed_pval](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_result_type/#variable-imputed_pval)**  |
+| float | **[imputed_est](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_result_type/#variable-imputed_est)**  |
+| float | **[imputed_pval](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_result_type/#variable-imputed_pval)**  |
 
 ## Public Functions Documentation
 
@@ -38,21 +38,21 @@ static inline std::vector< std::string > Columns()
 ### variable k0
 
 ```cpp
-double k0;
+float k0;
 ```
 
 
 ### variable se_k0
 
 ```cpp
-double se_k0;
+float se_k0;
 ```
 
 
 ### variable k_all
 
 ```cpp
-double k_all;
+float k_all;
 ```
 
 
@@ -66,17 +66,17 @@ std::string side;
 ### variable imputed_est
 
 ```cpp
-double imputed_est;
+float imputed_est;
 ```
 
 
 ### variable imputed_pval
 
 ```cpp
-double imputed_pval;
+float imputed_pval;
 ```
 
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

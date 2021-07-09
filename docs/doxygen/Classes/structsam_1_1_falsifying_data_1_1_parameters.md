@@ -27,8 +27,8 @@ title: sam::FalsifyingData::Parameters
 | size_t | **[num](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-num)** <br>Number of observations to be perturbed.  |
 | std::optional< UnivariateDistribution > | **[noise_dist](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-noise_dist)** <br>Distribution of noise.  |
 | std::vector< std::string > | **[stopping_cond_defs](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-stopping_cond_defs)** <br>Stopping condition [PolicyChain]() definitions.  |
-| double | **[defensibility](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-defensibility)**  |
-| double | **[prevalence](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-prevalence)**  |
+| std::optional< float > | **[defensibility](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-defensibility)** <br>The defensibility factor of the strategy.  |
+| std::optional< float > | **[prevalence](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-prevalence)** <br>The prevalence factor of the strategy.  |
 | HackingStage | **[stage](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/#variable-stage)**  |
 
 ## Detailed Description
@@ -129,7 +129,7 @@ Indicates a set of rule that is going to be used to select the target group
 ### variable num
 
 ```cpp
-size_t num {5};
+size_t num;
 ```
 
 Number of observations to be perturbed. 
@@ -140,7 +140,7 @@ Number of observations to be perturbed.
 std::optional< UnivariateDistribution > noise_dist = [makeUnivariateDistribution](/doxygen/Files/_distributions_8h/#function-makeunivariatedistribution)({
       {"dist", "normal_distribution"},
       {"mean", 0},
-      {"stddev", 0.1}
+      {"stddev", 1}
     });
 ```
 
@@ -157,16 +157,18 @@ Stopping condition [PolicyChain]() definitions.
 ### variable defensibility
 
 ```cpp
-double defensibility {0.05};
+std::optional< float > defensibility;
 ```
 
+The defensibility factor of the strategy. 
 
 ### variable prevalence
 
 ```cpp
-double prevalence {0.1};
+std::optional< float > prevalence;
 ```
 
+The prevalence factor of the strategy. 
 
 ### variable stage
 
@@ -177,4 +179,4 @@ HackingStage stage {HackingStage::PostProcessing};
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

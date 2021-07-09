@@ -19,7 +19,7 @@ title: sam::WilcoxonTest::Parameters
 | -------------- | -------------- |
 | [TestMethod](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testmethod) | **[name](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_parameters/#variable-name)**  |
 | [TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) | **[alternative](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_parameters/#variable-alternative)**  |
-| double | **[alpha](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_parameters/#variable-alpha)**  |
+| float | **[alpha](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_parameters/#variable-alpha)**  |
 | bool | **[use_continuity](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_parameters/#variable-use_continuity)**  |
 
 ## Public Functions Documentation
@@ -56,7 +56,7 @@ TestAlternative alternative = TestAlternative::TwoSided;
 ### variable alpha
 
 ```cpp
-double alpha = 0.95;
+float alpha = 0.95;
 ```
 
 
@@ -69,4 +69,4 @@ bool use_continuity {true};
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:22 CEST
+Updated on 29 June 2021 at 16:13:48 CEST

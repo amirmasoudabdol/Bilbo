@@ -17,9 +17,9 @@ title: sam::TestOfObsOverExptSig::ResultType
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[E](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#variable-e)** <br>Sum of the expected probabilities.  |
-| double | **[A](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#variable-a)** <br>The chi-square statistic of the test.  |
-| double | **[pval](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#variable-pval)** <br>The p-value of the test.  |
+| float | **[E](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#variable-e)** <br>Sum of the expected probabilities.  |
+| float | **[A](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#variable-a)** <br>The chi-square statistic of the test.  |
+| float | **[pval](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#variable-pval)** <br>The p-value of the test.  |
 | bool | **[sig](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/#variable-sig)** <br>The significance of the test.  |
 
 ## Public Functions Documentation
@@ -36,7 +36,7 @@ static inline std::vector< std::string > Columns()
 ### variable E
 
 ```cpp
-double E;
+float E;
 ```
 
 Sum of the expected probabilities. 
@@ -44,7 +44,7 @@ Sum of the expected probabilities.
 ### variable A
 
 ```cpp
-double A;
+float A;
 ```
 
 The chi-square statistic of the test. 
@@ -52,7 +52,7 @@ The chi-square statistic of the test.
 ### variable pval
 
 ```cpp
-double pval;
+float pval;
 ```
 
 The p-value of the test. 
@@ -67,4 +67,4 @@ The significance of the test.
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

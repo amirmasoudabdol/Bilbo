@@ -17,8 +17,8 @@ title: sam::RankCorrelation::ResultType
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[est](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#variable-est)** <br>Kendall's tau estimate.  |
-| double | **[pval](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#variable-pval)** <br>The p-value of the test.  |
+| float | **[est](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#variable-est)** <br>Kendall's tau estimate.  |
+| float | **[pval](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#variable-pval)** <br>The p-value of the test.  |
 | bool | **[sig](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_result_type/#variable-sig)** <br>The significance of the test.  |
 
 ## Public Functions Documentation
@@ -35,7 +35,7 @@ static inline std::vector< std::string > Columns()
 ### variable est
 
 ```cpp
-double est;
+float est;
 ```
 
 Kendall's tau estimate. 
@@ -43,7 +43,7 @@ Kendall's tau estimate.
 ### variable pval
 
 ```cpp
-double pval;
+float pval;
 ```
 
 The p-value of the test. 
@@ -58,4 +58,4 @@ The significance of the test.
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

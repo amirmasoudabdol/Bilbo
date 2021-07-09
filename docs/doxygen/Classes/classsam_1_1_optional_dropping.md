@@ -1,16 +1,17 @@
 ---
-title: sam::OutliersRemoval
-summary: Declaration of Outlier Removal hacking method based on items' distance from their sample mean. 
+title: sam::OptionalDropping
 
 ---
 
-# sam::OutliersRemoval
+# sam::OptionalDropping
 
 **Module:** **[Hacking Strategies](/doxygen/Modules/group___hacking_strategies/)**
 
 
 
-Declaration of Outlier Removal hacking method based on items' distance from their sample mean. 
+ [More...](#detailed-description)
+
+
 `#include <HackingStrategy.h>`
 
 Inherits from [sam::HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strategy/)
@@ -19,22 +20,22 @@ Inherits from [sam::HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strat
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[Parameters](/doxygen/Classes/structsam_1_1_outliers_removal_1_1_parameters/)**  |
+| struct | **[Parameters](/doxygen/Classes/structsam_1_1_optional_dropping_1_1_parameters/)**  |
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[OutliersRemoval](/doxygen/Classes/classsam_1_1_outliers_removal/#function-outliersremoval)**() =default |
-| | **[OutliersRemoval](/doxygen/Classes/classsam_1_1_outliers_removal/#function-outliersremoval)**(const [Parameters](/doxygen/Classes/structsam_1_1_outliers_removal_1_1_parameters/) & p) |
-| virtual void | **[perform](/doxygen/Classes/classsam_1_1_outliers_removal/#function-perform)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment) override<br>Implementation of Outliers Removal based on an item's distance from the \mu.  |
+| | **[OptionalDropping](/doxygen/Classes/classsam_1_1_optional_dropping/#function-optionaldropping)**() =default |
+| | **[OptionalDropping](/doxygen/Classes/classsam_1_1_optional_dropping/#function-optionaldropping)**(const [Parameters](/doxygen/Classes/structsam_1_1_optional_dropping_1_1_parameters/) & p) |
+| virtual void | **[perform](/doxygen/Classes/classsam_1_1_optional_dropping/#function-perform)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment) override<br>Applies the hacking method on the [Experiment](/doxygen/Classes/classsam_1_1_experiment/).  |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| [Parameters](/doxygen/Classes/structsam_1_1_outliers_removal_1_1_parameters/) | **[params](/doxygen/Classes/classsam_1_1_outliers_removal/#variable-params)**  |
-| [PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/) | **[stopping_condition](/doxygen/Classes/classsam_1_1_outliers_removal/#variable-stopping_condition)**  |
+| [Parameters](/doxygen/Classes/structsam_1_1_optional_dropping_1_1_parameters/) | **[params](/doxygen/Classes/classsam_1_1_optional_dropping/#variable-params)**  |
+| [PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/) | **[stopping_condition](/doxygen/Classes/classsam_1_1_optional_dropping/#variable-stopping_condition)**  |
 
 ## Additional inherited members
 
@@ -62,19 +63,30 @@ Inherits from [sam::HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strat
 | HackingTarget | **[target_](/doxygen/Classes/classsam_1_1_hacking_strategy/#variable-target_)**  |
 
 
-## Public Functions Documentation
-
-### function OutliersRemoval
+## Detailed Description
 
 ```cpp
-OutliersRemoval() =default
+class sam::OptionalDropping;
 ```
 
 
-### function OutliersRemoval
+Optional Dropping Hacking Strategy
+
+The _Optional Dropping_ algorithm uses the covariant values to split the dataset, and generates new condition groups. 
+
+## Public Functions Documentation
+
+### function OptionalDropping
 
 ```cpp
-inline explicit OutliersRemoval(
+OptionalDropping() =default
+```
+
+
+### function OptionalDropping
+
+```cpp
+inline explicit OptionalDropping(
     const Parameters & p
 )
 ```
@@ -88,12 +100,14 @@ virtual void perform(
 ) override
 ```
 
-Implementation of Outliers Removal based on an item's distance from the \mu. 
+Applies the hacking method on the [Experiment](/doxygen/Classes/classsam_1_1_experiment/). 
+
+**Parameters**: 
+
+  * **experiment** A pointer to an [Experiment](/doxygen/Classes/classsam_1_1_experiment/). 
+
 
 **Reimplements**: [sam::HackingStrategy::perform](/doxygen/Classes/classsam_1_1_hacking_strategy/#function-perform)
-
-
-Removing outliers `n` at a time, for the total of `n_attempts` It'll stop either when n_attempts are exhausted, or there is no more observations left to be removed
 
 
 ## Public Attributes Documentation

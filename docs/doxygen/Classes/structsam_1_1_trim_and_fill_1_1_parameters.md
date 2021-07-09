@@ -24,7 +24,7 @@ summary: Parameters of the TrimAndFill.
 | std::string | **[name](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-name)**  |
 | std::string | **[side](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-side)** <br>Indicates the side of the funnel plot where missing values should be imputed.  |
 | std::string | **[estimator](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-estimator)** <br>The symmetry estimator.  |
-| double | **[alpha](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-alpha)** <br>The ɑ of the test.  |
+| float | **[alpha](/doxygen/Classes/structsam_1_1_trim_and_fill_1_1_parameters/#variable-alpha)** <br>The ɑ of the test.  |
 
 ## Public Functions Documentation
 
@@ -69,11 +69,11 @@ The symmetry estimator.
 ### variable alpha
 
 ```cpp
-double alpha {0.10};
+float alpha {0.10};
 ```
 
 The ɑ of the test. 
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

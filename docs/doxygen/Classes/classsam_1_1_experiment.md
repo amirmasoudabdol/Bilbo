@@ -29,6 +29,9 @@ summary: Experiment encapsulates data and methods needed by the Researcher to co
 | | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**(json & experiment_config)<br>Constructs an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) object using the given JSON configuration.  |
 | | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**([ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) & e)<br>Constructs an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) using an already initialized [ExperimentSetup]().  |
 | | **[Experiment](/doxygen/Classes/classsam_1_1_experiment/#function-experiment)**([ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) & e, std::shared_ptr< [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) > & ds, std::shared_ptr< [TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/) > & ts, std::shared_ptr< [EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strategy/) > & es)<br>Directly constructs an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) from its components.  |
+| void | **[addNewCondition](/doxygen/Classes/classsam_1_1_experiment/#function-addnewcondition)**() |
+| void | **[addNewCondition](/doxygen/Classes/classsam_1_1_experiment/#function-addnewcondition)**(const std::vector< [DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) > & dvs) |
+| void | **[addNewDependentVariable](/doxygen/Classes/classsam_1_1_experiment/#function-addnewdependentvariable)**(const [DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) & dv)<br>Adds a new dependent variable to the list.  |
 | void | **[addNewCandidates](/doxygen/Classes/classsam_1_1_experiment/#function-addnewcandidates)**(const std::vector< [Submission](/doxygen/Classes/classsam_1_1_submission/) > & subs)<br>Adds new submissions to the list of submissions.  |
 | void | **[setHackedStatus](/doxygen/Classes/classsam_1_1_experiment/#function-sethackedstatus)**(const bool status)<br>Sets the hacked status of the experiment.  |
 | void | **[setPublishedStatus](/doxygen/Classes/classsam_1_1_experiment/#function-setpublishedstatus)**(const bool status)<br>Sets the published status of the experiment.  |
@@ -37,10 +40,13 @@ summary: Experiment encapsulates data and methods needed by the Researcher to co
 | bool | **[isHacked](/doxygen/Classes/classsam_1_1_experiment/#function-ishacked)**() const<br>Returns true if the experiment is hacked.  |
 | bool | **[isModified](/doxygen/Classes/classsam_1_1_experiment/#function-ismodified)**() const<br>Returns true if the experiment has been modified in anyway.  |
 | bool | **[hasCandidates](/doxygen/Classes/classsam_1_1_experiment/#function-hascandidates)**() const<br>Returns true if there is an candidate in the experiment.  |
+| bool | **[hasCovariants](/doxygen/Classes/classsam_1_1_experiment/#function-hascovariants)**() const<br>Returns true if there is an candidate in the experiment.  |
 | bool | **[isPublished](/doxygen/Classes/classsam_1_1_experiment/#function-ispublished)**() const<br>Returns true if the experiment has been published by the [Journal]().  |
 | size_t | **[nCandidates](/doxygen/Classes/classsam_1_1_experiment/#function-ncandidates)**() const<br>Returns the number of candidate DVs.  |
+| int | **[nCovariants](/doxygen/Classes/classsam_1_1_experiment/#function-ncovariants)**() const |
 | void | **[reset](/doxygen/Classes/classsam_1_1_experiment/#function-reset)**()<br>Clears and re-initializes the dependent variables.  |
 | void | **[generateData](/doxygen/Classes/classsam_1_1_experiment/#function-generatedata)**()<br>Uses the [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) to populate every DVs with raw the data.  |
+| void | **[generateCovariants](/doxygen/Classes/classsam_1_1_experiment/#function-generatecovariants)**()<br>Generates covariants data.  |
 | void | **[calculateStatistics](/doxygen/Classes/classsam_1_1_experiment/#function-calculatestatistics)**()<br>Asks each [DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) to update its general statistics, e.g., mean, var.  |
 | void | **[calculateTests](/doxygen/Classes/classsam_1_1_experiment/#function-calculatetests)**()<br>Uses the [TestStrategy]() to run the statistical test.  |
 | void | **[calculateEffects](/doxygen/Classes/classsam_1_1_experiment/#function-calculateeffects)**()<br>Uses the [EffectStrategy](/doxygen/Classes/classsam_1_1_effect_strategy/) to calculates the effect sizes.  |
@@ -57,6 +63,8 @@ summary: Experiment encapsulates data and methods needed by the Researcher to co
 | int | **[simid](/doxygen/Classes/classsam_1_1_experiment/#variable-simid)**  |
 | int | **[exprid](/doxygen/Classes/classsam_1_1_experiment/#variable-exprid)**  |
 | int | **[repid](/doxygen/Classes/classsam_1_1_experiment/#variable-repid)**  |
+| int | **[n_covariants](/doxygen/Classes/classsam_1_1_experiment/#variable-n_covariants)** <br>Indicates the number of covariants.  |
+| arma::Mat< int > | **[covariants](/doxygen/Classes/classsam_1_1_experiment/#variable-covariants)**  |
 | [ExperimentSetup](/doxygen/Classes/classsam_1_1_experiment_setup/) | **[setup](/doxygen/Classes/classsam_1_1_experiment/#variable-setup)**  |
 | std::shared_ptr< [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) > | **[data_strategy](/doxygen/Classes/classsam_1_1_experiment/#variable-data_strategy)**  |
 | std::shared_ptr< [TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/) > | **[test_strategy](/doxygen/Classes/classsam_1_1_experiment/#variable-test_strategy)**  |
@@ -183,6 +191,38 @@ Directly constructs an [Experiment](/doxygen/Classes/classsam_1_1_experiment/) f
 This directly constructs the experiment by directly constructing its internal based on the set of given parameters.
 
 
+### function addNewCondition
+
+```cpp
+void addNewCondition()
+```
+
+
+Adds a new condition @TODO TO BE IMPLEMENTED! 
+
+
+### function addNewCondition
+
+```cpp
+void addNewCondition(
+    const std::vector< DependentVariable > & dvs
+)
+```
+
+
+Adds a new condition @TODO TO BE IMPLEMENTED! 
+
+
+### function addNewDependentVariable
+
+```cpp
+void addNewDependentVariable(
+    const DependentVariable & dv
+)
+```
+
+Adds a new dependent variable to the list. 
+
 ### function addNewCandidates
 
 ```cpp
@@ -270,6 +310,14 @@ bool hasCandidates() const
 
 Returns true if there is an candidate in the experiment. 
 
+### function hasCovariants
+
+```cpp
+bool hasCovariants() const
+```
+
+Returns true if there is an candidate in the experiment. 
+
 ### function isPublished
 
 ```cpp
@@ -285,6 +333,13 @@ size_t nCandidates() const
 ```
 
 Returns the number of candidate DVs. 
+
+### function nCovariants
+
+```cpp
+int nCovariants() const
+```
+
 
 ### function reset
 
@@ -304,6 +359,17 @@ void generateData()
 ```
 
 Uses the [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) to populate every DVs with raw the data. 
+
+### function generateCovariants
+
+```cpp
+void generateCovariants()
+```
+
+Generates covariants data. 
+
+@Todo Check if all groups are the same size
+
 
 ### function calculateStatistics
 
@@ -424,6 +490,21 @@ int repid {0};
 ```
 
 
+### variable n_covariants
+
+```cpp
+int n_covariants {0};
+```
+
+Indicates the number of covariants. 
+
+### variable covariants
+
+```cpp
+arma::Mat< int > covariants;
+```
+
+
 ### variable setup
 
 ```cpp
@@ -477,4 +558,4 @@ This is a list of any dvs that has been flagged as submissions during the lifesp
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

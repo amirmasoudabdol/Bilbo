@@ -102,4 +102,4 @@ Build and return a new [Researcher](/doxygen/Classes/classsam_1_1_researcher/).
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:48 CEST

@@ -1,6 +1,6 @@
 ---
 title: sam::Journal
-
+summary: Journal Class. 
 
 ---
 
@@ -8,241 +8,76 @@ title: sam::Journal
 
 
 
+[Journal]() Class.  [More...](#detailed-description)
 
 
-
-
-
-
-
-
-## Public Classes
-
-|                | Name           |
-| -------------- | -------------- |
-| struct | **[Parameters](/doxygen/Classes/structsam_1_1_journal_1_1_parameters/)**  |
-
-
-
-
-
-
-
+`#include <Journal.h>`
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| std::vector< std::string > | **[Columns](/doxygen/Classes/classsam_1_1_journal/#function-columns)**()  |
-|  | **[operator arma::Row< double >](/doxygen/Classes/classsam_1_1_journal/#function-operator-armarow<-double->)**()  |
-|  | **[Journal](/doxygen/Classes/classsam_1_1_journal/#function-journal)**() =default  |
-|  | **[~Journal](/doxygen/Classes/classsam_1_1_journal/#function-~journal)**() =default  |
-|  | **[Journal](/doxygen/Classes/classsam_1_1_journal/#function-journal)**(json & journal_config)  |
-|  | **[Journal](/doxygen/Classes/classsam_1_1_journal/#function-journal)**(const [Parameters](/doxygen/Classes/structsam_1_1_journal_1_1_parameters/) & jp)  |
-| void | **[setSelectionStrategy](/doxygen/Classes/classsam_1_1_journal/#function-setselectionstrategy)**(std::unique_ptr< SelectionStrategy > ss)  |
-| bool | **[review](/doxygen/Classes/classsam_1_1_journal/#function-review)**([Submission](/doxygen/Classes/classsam_1_1_submission/) & s) <br>Review the [Submission]() by calling `SelectionStrategy::review()`.  |
-| void | **[accept](/doxygen/Classes/classsam_1_1_journal/#function-accept)**(const [Submission](/doxygen/Classes/classsam_1_1_submission/) & s) <br>Accept the [Submission]() by adding it to the `publicationList`.  |
-| void | **[reject](/doxygen/Classes/classsam_1_1_journal/#function-reject)**(const [Submission](/doxygen/Classes/classsam_1_1_submission/) & s) <br>Rejecting the Submission!  |
-| bool | **[isStillAccepting](/doxygen/Classes/classsam_1_1_journal/#function-isstillaccepting)**() const  |
-| void | **[saveSubmissions](/doxygen/Classes/classsam_1_1_journal/#function-savesubmissions)**(int simid, std::ofstream & writer)  |
-| void | **[saveMetaAnalysis](/doxygen/Classes/classsam_1_1_journal/#function-savemetaanalysis)**()  |
-| void | **[saveSummaries](/doxygen/Classes/classsam_1_1_journal/#function-savesummaries)**()  |
-| void | **[saveMetaStatsOf](/doxygen/Classes/classsam_1_1_journal/#function-savemetastatsof)**(std::string method)  |
-| void | **[savePulicationsPerSimSummaries](/doxygen/Classes/classsam_1_1_journal/#function-savepulicationspersimsummaries)**() <br>Saving the runner statistics of each batch of publications in [Journal](/doxygen/Classes/classsam_1_1_journal/).  |
-| void | **[clear](/doxygen/Classes/classsam_1_1_journal/#function-clear)**()  |
-| void | **[prepareForMetaAnalysis](/doxygen/Classes/classsam_1_1_journal/#function-prepareformetaanalysis)**()  |
-| void | **[runMetaAnalysis](/doxygen/Classes/classsam_1_1_journal/#function-runmetaanalysis)**()  |
-| void | **[updateTheOverallRunner](/doxygen/Classes/classsam_1_1_journal/#function-updatetheoverallrunner)**()  |
-
+| | **[Journal](/doxygen/Classes/classsam_1_1_journal/#function-journal)**() =default |
+| | **[~Journal](/doxygen/Classes/classsam_1_1_journal/#function-~journal)**() =default |
+| | **[Journal](/doxygen/Classes/classsam_1_1_journal/#function-journal)**(json & journal_config)<br>Constructs a [Journal](/doxygen/Classes/classsam_1_1_journal/) from a JSON object.  |
+| bool | **[review](/doxygen/Classes/classsam_1_1_journal/#function-review)**(std::vector< [Submission](/doxygen/Classes/classsam_1_1_submission/) > & s)<br>Review the [Submission]().  |
+| void | **[accept](/doxygen/Classes/classsam_1_1_journal/#function-accept)**(const std::vector< [Submission](/doxygen/Classes/classsam_1_1_submission/) > & s)<br>Accepts the [Submission]().  |
+| void | **[reject](/doxygen/Classes/classsam_1_1_journal/#function-reject)**(const std::vector< [Submission](/doxygen/Classes/classsam_1_1_submission/) > & s)<br>Rejects the [Submission]().  |
+| bool | **[isStillAccepting](/doxygen/Classes/classsam_1_1_journal/#function-isstillaccepting)**() const<br>Indicates whether the [Journal](/doxygen/Classes/classsam_1_1_journal/) is still accepting outcomes or not.  |
+| size_t | **[nStudies](/doxygen/Classes/classsam_1_1_journal/#function-nstudies)**() const<br>Returns the number of studies.  |
+| size_t | **[nSubmissions](/doxygen/Classes/classsam_1_1_journal/#function-nsubmissions)**() const<br>Returns the number of publications.  |
+| size_t | **[nRejected](/doxygen/Classes/classsam_1_1_journal/#function-nrejected)**() const<br>Returns the number of rejected publications.  |
+| void | **[saveMetaAnalysis](/doxygen/Classes/classsam_1_1_journal/#function-savemetaanalysis)**()<br>Saves [MetaAnalysis]() Results.  |
+| void | **[saveSummaries](/doxygen/Classes/classsam_1_1_journal/#function-savesummaries)**()<br>Saves Overall Summaries.  |
+| void | **[storeMetaAnalysisResult](/doxygen/Classes/classsam_1_1_journal/#function-storemetaanalysisresult)**(const [MetaAnalysisOutcome](/doxygen/Namespaces/namespacesam/#using-metaanalysisoutcome) & res)<br>Stores the MetaAnalysisOutcome.  |
+| void | **[savePublicationsPerSimSummaries](/doxygen/Classes/classsam_1_1_journal/#function-savepublicationspersimsummaries)**()<br>Saves the Per Simulation summary of Publications.  |
+| void | **[clear](/doxygen/Classes/classsam_1_1_journal/#function-clear)**()<br>Clear the [Journal](/doxygen/Classes/classsam_1_1_journal/).  |
+| void | **[reset](/doxygen/Classes/classsam_1_1_journal/#function-reset)**()<br>Completely resets the [Journal](/doxygen/Classes/classsam_1_1_journal/).  |
+| void | **[prepareForMetaAnalysis](/doxygen/Classes/classsam_1_1_journal/#function-prepareformetaanalysis)**()<br>Prepares the [Journal](/doxygen/Classes/classsam_1_1_journal/) for running meta-analysis.  |
+| void | **[runMetaAnalysis](/doxygen/Classes/classsam_1_1_journal/#function-runmetaanalysis)**()<br>Runs the meta-analysis methods.  |
+| void | **[updateMetaStatsRunners](/doxygen/Classes/classsam_1_1_journal/#function-updatemetastatsrunners)**()<br>Updates the overall stats runners.  |
+| std::vector< std::string > | **[Columns](/doxygen/Classes/classsam_1_1_journal/#function-columns)**()<br>Returns [Journal](/doxygen/Classes/classsam_1_1_journal/)'s CSV header.  |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[max_pubs](/doxygen/Classes/classsam_1_1_journal/#variable-max_pubs)**  |
-| std::vector< [Submission](/doxygen/Classes/classsam_1_1_submission/) > | **[publications_list](/doxygen/Classes/classsam_1_1_journal/#variable-publications_list)** <br>List of all accepted Submissions, i.e., publications.  |
-| int | **[n_accepted](/doxygen/Classes/classsam_1_1_journal/#variable-n_accepted)**  |
+| std::vector< [Submission](/doxygen/Classes/classsam_1_1_submission/) > | **[publications_list](/doxygen/Classes/classsam_1_1_journal/#variable-publications_list)** <br>List of all accepted submissions, i.e., outcomes.  |
 | std::vector< [Submission](/doxygen/Classes/classsam_1_1_submission/) > | **[rejection_list](/doxygen/Classes/classsam_1_1_journal/#variable-rejection_list)** <br>Rejected Submissions.  |
-| int | **[n_rejected](/doxygen/Classes/classsam_1_1_journal/#variable-n_rejected)**  |
-| int | **[n_sigs](/doxygen/Classes/classsam_1_1_journal/#variable-n_sigs)** <br>Number of significant submissions.  |
-| double | **[sum_sig_pvalue](/doxygen/Classes/classsam_1_1_journal/#variable-sum_sig_pvalue)**  |
-| double | **[mean_sig_pvalue](/doxygen/Classes/classsam_1_1_journal/#variable-mean_sig_pvalue)**  |
-| double | **[sum_sig_effect](/doxygen/Classes/classsam_1_1_journal/#variable-sum_sig_effect)**  |
-| double | **[mean_sig_effect](/doxygen/Classes/classsam_1_1_journal/#variable-mean_sig_effect)**  |
-| arma::Row< double > | **[yi](/doxygen/Classes/classsam_1_1_journal/#variable-yi)** <br>Caching variables.  |
-| arma::Row< double > | **[vi](/doxygen/Classes/classsam_1_1_journal/#variable-vi)**  |
-| arma::Row< double > | **[wi](/doxygen/Classes/classsam_1_1_journal/#variable-wi)**  |
-| bool | **[is_saving_summaries](/doxygen/Classes/classsam_1_1_journal/#variable-is_saving_summaries)**  |
-| bool | **[is_saving_meta](/doxygen/Classes/classsam_1_1_journal/#variable-is_saving_meta)**  |
-| bool | **[is_saving_pubs_per_sim_summaries](/doxygen/Classes/classsam_1_1_journal/#variable-is_saving_pubs_per_sim_summaries)**  |
-| arma::running_stat_vec< arma::Row< double > > | **[pubs_per_sim_stat_runner](/doxygen/Classes/classsam_1_1_journal/#variable-pubs_per_sim_stat_runner)**  |
-| std::unique_ptr< [PersistenceManager::Writer](/doxygen/Classes/classsam_1_1_persistence_manager_1_1_writer/) > | **[pubs_per_sim_stats_writer](/doxygen/Classes/classsam_1_1_journal/#variable-pubs_per_sim_stats_writer)**  |
-| arma::running_stat_vec< arma::Row< double > > | **[pubs_stat_runner](/doxygen/Classes/classsam_1_1_journal/#variable-pubs_stat_runner)**  |
-| std::unique_ptr< [PersistenceManager::Writer](/doxygen/Classes/classsam_1_1_persistence_manager_1_1_writer/) > | **[pubs_stats_writer](/doxygen/Classes/classsam_1_1_journal/#variable-pubs_stats_writer)**  |
-| std::unique_ptr< SelectionStrategy > | **[selection_strategy](/doxygen/Classes/classsam_1_1_journal/#variable-selection_strategy)** <br>[Journal](/doxygen/Classes/classsam_1_1_journal/)'s Selection Model/Strategy.  |
-| std::map< std::string, std::vector< std::string > > | **[meta_columns](/doxygen/Classes/classsam_1_1_journal/#variable-meta_columns)** <br>Meta Analysis Estimators and their Stats Runner.  |
-| std::map< std::string, std::vector< std::string > > | **[meta_stats_columns](/doxygen/Classes/classsam_1_1_journal/#variable-meta_stats_columns)**  |
-| std::vector< std::unique_ptr< [MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/) > > | **[meta_analysis_strategies](/doxygen/Classes/classsam_1_1_journal/#variable-meta_analysis_strategies)**  |
-| std::map< std::string, arma::running_stat_vec< arma::Row< double > > > | **[meta_stat_runners](/doxygen/Classes/classsam_1_1_journal/#variable-meta_stat_runners)**  |
-| std::map< std::string, [PersistenceManager::Writer](/doxygen/Classes/classsam_1_1_persistence_manager_1_1_writer/) > | **[meta_writers](/doxygen/Classes/classsam_1_1_journal/#variable-meta_writers)**  |
-| std::map< std::string, [PersistenceManager::Writer](/doxygen/Classes/classsam_1_1_persistence_manager_1_1_writer/) > | **[meta_stats_writers](/doxygen/Classes/classsam_1_1_journal/#variable-meta_stats_writers)**  |
-| std::vector< std::string > | **[submission_columns](/doxygen/Classes/classsam_1_1_journal/#variable-submission_columns)**  |
-| std::vector< std::string > | **[stats_columns](/doxygen/Classes/classsam_1_1_journal/#variable-stats_columns)**  |
-| MetaAnalysisResults | **[meta_analysis_submissions](/doxygen/Classes/classsam_1_1_journal/#variable-meta_analysis_submissions)**  |
-| [Parameters](/doxygen/Classes/structsam_1_1_journal_1_1_parameters/) | **[params](/doxygen/Classes/classsam_1_1_journal/#variable-params)**  |
+| arma::Row< float > | **[yi](/doxygen/Classes/classsam_1_1_journal/#variable-yi)**  |
+| arma::Row< float > | **[vi](/doxygen/Classes/classsam_1_1_journal/#variable-vi)** <br>The variance of the accepted submissions.  |
+| arma::Row< float > | **[wi](/doxygen/Classes/classsam_1_1_journal/#variable-wi)** <br>The weight of the accepted submissions, computed as 1./vi;.  |
+| std::unique_ptr< ReviewStrategy > | **[review_strategy](/doxygen/Classes/classsam_1_1_journal/#variable-review_strategy)** <br>[Journal](/doxygen/Classes/classsam_1_1_journal/)'s Selection Model/Strategy.  |
 
+## Detailed Description
 
+```cpp
+class sam::Journal;
+```
 
+[Journal]() Class. 
 
+The [Journal](/doxygen/Classes/classsam_1_1_journal/) class mimics the behavior of a [Journal](/doxygen/Classes/classsam_1_1_journal/). It deals with new publications as they are being submitted for review. It is equipped with a review strategy which is used to make a decision over the destiny of the newly submitted manuscript, ie., being accepted or rejected.
 
-
-
-
-
-
-
-
-
+Additionally, it handles the meta-analysis calculation and reporting of those at the end of the simulation. 
 
 ## Public Functions Documentation
 
-### function `Columns`
-
-```cpp
-static std::vector< std::string > Columns()
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `operator arma::Row< double >`
-
-```cpp
-inline operator arma::Row< double >()
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `Journal`
+### function Journal
 
 ```cpp
 Journal() =default
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `~Journal`
+### function ~Journal
 
 ```cpp
 ~Journal() =default
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `Journal`
+### function Journal
 
 ```cpp
 explicit Journal(
@@ -250,713 +85,236 @@ explicit Journal(
 )
 ```
 
+Constructs a [Journal](/doxygen/Classes/classsam_1_1_journal/) from a JSON object. 
+
+**Parameters**: 
+
+  * **journal_config** The journal configuration 
+
+
+This makes sure that everything in the [Journal](/doxygen/Classes/classsam_1_1_journal/) are set up correctly:
 
 
 
+* Instantiates the Review Strategy
+* Prepares the output files, and their column names
+* Prepares the stat runners based on users preference
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-For each given method, we prepare their output columns names, and an output file. If we are saving summaries, we initialize a stats runner, as well as appropriate column names, and output file.
 
 Removing the higher level information because I don't want them to be written to the config file again.
 
-### function `Journal`
 
-```cpp
-explicit Journal(
-    const Parameters & jp
-)
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `setSelectionStrategy`
-
-```cpp
-inline void setSelectionStrategy(
-    std::unique_ptr< SelectionStrategy > ss
-)
-```
-
-
-**Parameters**: 
-
-  * **`s`** The pointer to the given selection strategy 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Point [Journal](/doxygen/Classes/classsam_1_1_journal/)'s selection strategy to the given strategy
-
-
-### function `review`
+### function review
 
 ```cpp
 bool review(
-    Submission & s
+    std::vector< Submission > & s
 )
 ```
 
-Review the [Submission]() by calling `SelectionStrategy::review()`. 
+Review the [Submission](). 
 
 **Parameters**: 
 
-  * **`s`** A reference to the [Submission](/doxygen/Classes/classsam_1_1_submission/)
+  * **subs** A list of submissions
 
 
+**Return**: Returns `true` if the submission is accepted, otherwise it returns false. 
+
+Sends the submission to the review strategy, and based on its verdict it either [accept()](/doxygen/Classes/classsam_1_1_journal/#function-accept) or [reject()](/doxygen/Classes/classsam_1_1_journal/#function-reject) the submission.
 
 
-
-
-
-**Return**: A boolean indicating whether the [Submission](/doxygen/Classes/classsam_1_1_submission/) should be accpeted or not. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Stats runner over all publications of this journal
-
-Stat runner over all simulations
-
-### function `accept`
+### function accept
 
 ```cpp
 void accept(
-    const Submission & s
+    const std::vector< Submission > & s
 )
 ```
 
-Accept the [Submission]() by adding it to the `publicationList`. 
+Accepts the [Submission](). 
 
 **Parameters**: 
 
-  * **`s`** A copy of the [Submission](/doxygen/Classes/classsam_1_1_submission/)
+  * **subs** A list of submissions 
 
 
+Adds the accepted submission to the list of publications, and updates some of the necessary internals of the [Journal](/doxygen/Classes/classsam_1_1_journal/) to be able to keep track of the number of publications, studies, etc.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-TodoMaybe I should calculate the publications stats here 
-
-Updating journal's info
-
-Adding current info to the stat runner
-
-### function `reject`
+### function reject
 
 ```cpp
 void reject(
-    const Submission & s
+    const std::vector< Submission > & s
 )
 ```
 
-Rejecting the Submission! 
+Rejects the [Submission](). 
 
 **Parameters**: 
 
-  * **`s`** A reference to the [Submission](/doxygen/Classes/classsam_1_1_submission/)
+  * **subs** A list of submissions 
 
 
+Adds the rejected submissions to the list of rejected submissions, and keeps the internal of the [Journal](/doxygen/Classes/classsam_1_1_journal/) up-to-date.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `isStillAccepting`
+### function isStillAccepting
 
 ```cpp
 inline bool isStillAccepting() const
 ```
 
+Indicates whether the [Journal](/doxygen/Classes/classsam_1_1_journal/) is still accepting outcomes or not. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `saveSubmissions`
+### function nStudies
 
 ```cpp
-void saveSubmissions(
-    int simid,
-    std::ofstream & writer
-)
+inline size_t nStudies() const
 ```
 
+Returns the number of studies. 
 
-**Parameters**: 
+### function nSubmissions
 
-  * **`simid`** The index to be used for the given set. 
-  * **`writer`** The output file. 
+```cpp
+inline size_t nSubmissions() const
+```
 
+Returns the number of publications. 
 
+### function nRejected
 
+```cpp
+inline size_t nRejected() const
+```
 
+Returns the number of rejected publications. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Save enteries of publications_list to a CSV file.
-
-
-### function `saveMetaAnalysis`
+### function saveMetaAnalysis
 
 ```cpp
 void saveMetaAnalysis()
 ```
 
+Saves [MetaAnalysis]() Results. 
+
+Saves the meta analytics results. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `saveSummaries`
+### function saveSummaries
 
 ```cpp
 void saveSummaries()
 ```
 
+Saves Overall Summaries. 
+
+Saves the publications and meta stats runners. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Preparing and writting the summary of every meta-analysis method
-
-Preparing the summary of all publications
-
-Preparing the summary of journal's info by adding it to the end of publication's record
-
-### function `saveMetaStatsOf`
+### function storeMetaAnalysisResult
 
 ```cpp
-void saveMetaStatsOf(
-    std::string method
+void storeMetaAnalysisResult(
+    const MetaAnalysisOutcome & res
 )
 ```
 
+Stores the MetaAnalysisOutcome. 
+
+Adds the given meta analysis outcome to the list of collected meta-analysis. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `savePulicationsPerSimSummaries`
+### function savePublicationsPerSimSummaries
 
 ```cpp
-void savePulicationsPerSimSummaries()
+void savePublicationsPerSimSummaries()
 ```
+
+Saves the Per Simulation summary of Publications. 
 
 Saving the runner statistics of each batch of publications in [Journal](/doxygen/Classes/classsam_1_1_journal/). 
 
 
+Resetting the runner statistics
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Reseting the runner statistics
-
-### function `clear`
+### function clear
 
 ```cpp
-inline void clear()
+void clear()
 ```
 
+Clear the [Journal](/doxygen/Classes/classsam_1_1_journal/). 
+
+Clears the history of publications, rejections, and runner statistics... 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Clear the publications_list vector. 
-
-
-### function `prepareForMetaAnalysis`
+### function reset
 
 ```cpp
-inline void prepareForMetaAnalysis()
+void reset()
 ```
 
+Completely resets the [Journal](/doxygen/Classes/classsam_1_1_journal/). 
+
+In addition to clearing the [Journal](/doxygen/Classes/classsam_1_1_journal/), it resets some of the overall stats runners that are not usually being cleared by [clear()](/doxygen/Classes/classsam_1_1_journal/#function-clear)
 
 
+### function prepareForMetaAnalysis
+
+```cpp
+void prepareForMetaAnalysis()
+```
+
+Prepares the [Journal](/doxygen/Classes/classsam_1_1_journal/) for running meta-analysis. 
+
+This prepares the [Journal](/doxygen/Classes/classsam_1_1_journal/) for running meta-analysis. I mainly designed this to introduce some caching that I don't have to compute everything every time. So, with this, [Journal](/doxygen/Classes/classsam_1_1_journal/) prepares the [vi](/doxygen/Classes/classsam_1_1_journal/#variable-vi), [yi](/doxygen/Classes/classsam_1_1_journal/#variable-yi), and [wi](/doxygen/Classes/classsam_1_1_journal/#variable-wi) once and pass them to the meta analysis methods. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `runMetaAnalysis`
+### function runMetaAnalysis
 
 ```cpp
 void runMetaAnalysis()
 ```
 
+Runs the meta-analysis methods. 
+
+Loops through the meta-analysis methods and run them, and update their stats runners 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `updateTheOverallRunner`
+### function updateMetaStatsRunners
 
 ```cpp
-void updateTheOverallRunner()
+void updateMetaStatsRunners()
 ```
 
+Updates the overall stats runners. 
+
+Updates the overall meta stats runners. 
 
 
+### function Columns
 
+```cpp
+static std::vector< std::string > Columns()
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Returns [Journal](/doxygen/Classes/classsam_1_1_journal/)'s CSV header. 
 
 ## Public Attributes Documentation
 
-### variable `max_pubs`
-
-```cpp
-double max_pubs;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `publications_list`
+### variable publications_list
 
 ```cpp
 std::vector< Submission > publications_list;
 ```
 
-List of all accepted Submissions, i.e., publications. 
+List of all accepted submissions, i.e., outcomes. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `n_accepted`
-
-```cpp
-int n_accepted {0};
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `rejection_list`
+### variable rejection_list
 
 ```cpp
 std::vector< Submission > rejection_list;
@@ -964,956 +322,40 @@ std::vector< Submission > rejection_list;
 
 Rejected Submissions. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `n_rejected`
+### variable yi
 
 ```cpp
-int n_rejected {0};
+arma::Row< float > yi;
 ```
 
 
+Caching variables The effect sizes of the accepted submissions. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `n_sigs`
+### variable vi
 
 ```cpp
-int n_sigs {0};
+arma::Row< float > vi;
 ```
 
-Number of significant submissions. 
+The variance of the accepted submissions. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `sum_sig_pvalue`
+### variable wi
 
 ```cpp
-double sum_sig_pvalue {0};
+arma::Row< float > wi;
 ```
 
+The weight of the accepted submissions, computed as 1./vi;. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `mean_sig_pvalue`
+### variable review_strategy
 
 ```cpp
-double mean_sig_pvalue {0};
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `sum_sig_effect`
-
-```cpp
-double sum_sig_effect {0};
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `mean_sig_effect`
-
-```cpp
-double mean_sig_effect {0};
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `yi`
-
-```cpp
-arma::Row< double > yi;
-```
-
-Caching variables. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `vi`
-
-```cpp
-arma::Row< double > vi;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `wi`
-
-```cpp
-arma::Row< double > wi;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `is_saving_summaries`
-
-```cpp
-bool is_saving_summaries;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `is_saving_meta`
-
-```cpp
-bool is_saving_meta;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `is_saving_pubs_per_sim_summaries`
-
-```cpp
-bool is_saving_pubs_per_sim_summaries;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `pubs_per_sim_stat_runner`
-
-```cpp
-arma::running_stat_vec< arma::Row< double > > pubs_per_sim_stat_runner;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `pubs_per_sim_stats_writer`
-
-```cpp
-std::unique_ptr< PersistenceManager::Writer > pubs_per_sim_stats_writer;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `pubs_stat_runner`
-
-```cpp
-arma::running_stat_vec< arma::Row< double > > pubs_stat_runner;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `pubs_stats_writer`
-
-```cpp
-std::unique_ptr< PersistenceManager::Writer > pubs_stats_writer;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `selection_strategy`
-
-```cpp
-std::unique_ptr< SelectionStrategy > selection_strategy;
+std::unique_ptr< ReviewStrategy > review_strategy;
 ```
 
 [Journal](/doxygen/Classes/classsam_1_1_journal/)'s Selection Model/Strategy. 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `meta_columns`
-
-```cpp
-std::map< std::string, std::vector< std::string > > meta_columns;
-```
-
-Meta Analysis Estimators and their Stats Runner. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `meta_stats_columns`
-
-```cpp
-std::map< std::string, std::vector< std::string > > meta_stats_columns;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `meta_analysis_strategies`
-
-```cpp
-std::vector< std::unique_ptr< MetaAnalysis > > meta_analysis_strategies;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `meta_stat_runners`
-
-```cpp
-std::map< std::string, arma::running_stat_vec< arma::Row< double > > > meta_stat_runners;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `meta_writers`
-
-```cpp
-std::map< std::string, PersistenceManager::Writer > meta_writers;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `meta_stats_writers`
-
-```cpp
-std::map< std::string, PersistenceManager::Writer > meta_stats_writers;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `submission_columns`
-
-```cpp
-std::vector< std::string > submission_columns;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `stats_columns`
-
-```cpp
-std::vector< std::string > stats_columns;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `meta_analysis_submissions`
-
-```cpp
-MetaAnalysisResults meta_analysis_submissions;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `params`
-
-```cpp
-Parameters params;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on 29 June 2021 at 16:13:46 CEST

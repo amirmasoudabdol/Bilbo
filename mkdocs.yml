@@ -50,8 +50,8 @@ nav:
         - Simple Simulation: frodo/sample-frodo-project.md
     - API:
         - Introduction: doxygen/index.md
-        - Modules: doxygen/Modules
-        - Classes: doxygen/Classes
+        - Modules: doxygen/Modules/
+        - Classes: doxygen/Classes/
 
     # - Extras:
     #     - extending-sam.md

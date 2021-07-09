@@ -24,11 +24,11 @@ title: sam::PeekingOutliersRemoval::Parameters
 | int | **[num](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-num)** <br>Indicates the number of outliers to be removed in each iteration.  |
 | int | **[n_attempts](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-n_attempts)**  |
 | int | **[min_observations](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-min_observations)** <br>Indicates the minimum number of observations allowed during the process.  |
-| std::vector< double > | **[multipliers](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-multipliers)** <br>A list of standard deviation multipliers for identifying outliers.  |
+| std::vector< float > | **[multipliers](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-multipliers)** <br>A list of standard deviation multipliers for identifying outliers.  |
 | std::vector< std::string > | **[stopping_cond_defs](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-stopping_cond_defs)** <br>Stopping condition [PolicyChain]() definitions.  |
 | std::vector< std::string > | **[whether_to_save_cond_defs](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-whether_to_save_cond_defs)** <br>Removing if.  |
-| double | **[prevalence](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-prevalence)**  |
-| double | **[defensibility](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-defensibility)**  |
+| std::optional< float > | **[prevalence](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-prevalence)** <br>The prevalence factor of the strategy.  |
+| std::optional< float > | **[defensibility](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-defensibility)** <br>The defensibility factor of the strategy.  |
 | HackingStage | **[stage](/doxygen/Classes/structsam_1_1_peeking_outliers_removal_1_1_parameters/#variable-stage)**  |
 
 ## Detailed Description
@@ -91,7 +91,7 @@ Indicates the order where outliers are going to be removed from the experiment.
 ### variable num
 
 ```cpp
-int num {3};
+int num;
 ```
 
 Indicates the number of outliers to be removed in each iteration. 
@@ -109,7 +109,7 @@ Indicates the total number of attempts, i.e., _iterations_, to remove outliers
 ### variable min_observations
 
 ```cpp
-int min_observations {15};
+int min_observations;
 ```
 
 Indicates the minimum number of observations allowed during the process. 
@@ -117,7 +117,7 @@ Indicates the minimum number of observations allowed during the process.
 ### variable multipliers
 
 ```cpp
-std::vector< double > multipliers = {3};
+std::vector< float > multipliers;
 ```
 
 A list of standard deviation multipliers for identifying outliers. 
@@ -141,16 +141,18 @@ Removing if.
 ### variable prevalence
 
 ```cpp
-double prevalence {0.9};
+std::optional< float > prevalence;
 ```
 
+The prevalence factor of the strategy. 
 
 ### variable defensibility
 
 ```cpp
-double defensibility {0.7};
+std::optional< float > defensibility;
 ```
 
+The defensibility factor of the strategy. 
 
 ### variable stage
 
@@ -161,4 +163,4 @@ HackingStage stage {HackingStage::PostProcessing};
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

@@ -23,7 +23,7 @@ Inherits from [sam::DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/)
 | -------------- | -------------- |
 | | **[LatentDataStrategy](/doxygen/Classes/classsam_1_1_latent_data_strategy/#function-latentdatastrategy)**() =default |
 | virtual void | **[genData](/doxygen/Classes/classsam_1_1_latent_data_strategy/#function-gendata)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment) override |
-| virtual std::vector< arma::Row< double > > | **[genNewObservationsForAllGroups](/doxygen/Classes/classsam_1_1_latent_data_strategy/#function-gennewobservationsforallgroups)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment, int n_new_obs) override<br>Generates `n_new_obs` new observations for each group.  |
+| virtual std::vector< arma::Row< float > > | **[genNewObservationsForAllGroups](/doxygen/Classes/classsam_1_1_latent_data_strategy/#function-gennewobservationsforallgroups)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment, int n_new_obs) override<br>Generates `n_new_obs` new observations for each group.  |
 
 ## Additional inherited members
 
@@ -89,7 +89,7 @@ gsl_vector_set(itemMeans, r, gsl_stats_mean(tmpRow->data, 1, nobs));
 ### function genNewObservationsForAllGroups
 
 ```cpp
-virtual std::vector< arma::Row< double > > genNewObservationsForAllGroups(
+virtual std::vector< arma::Row< float > > genNewObservationsForAllGroups(
     Experiment * experiment,
     int n_new_obs
 ) override
@@ -110,4 +110,4 @@ Generates `n_new_obs` new observations for each group.
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

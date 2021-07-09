@@ -15,7 +15,7 @@ Abstract Class of Hacking Strategies.  [More...](#detailed-description)
 
 `#include <HackingStrategy.h>`
 
-Inherited by [sam::ConditionDropping](/doxygen/Classes/classsam_1_1_condition_dropping/), [sam::FabricatingData](/doxygen/Classes/classsam_1_1_fabricating_data/), [sam::FalsifyingData](/doxygen/Classes/classsam_1_1_falsifying_data/), [sam::GroupPooling](/doxygen/Classes/classsam_1_1_group_pooling/), [sam::NoHack](/doxygen/Classes/classsam_1_1_no_hack/), [sam::OptionalStopping](/doxygen/Classes/classsam_1_1_optional_stopping/), [sam::OutliersRemoval](/doxygen/Classes/classsam_1_1_outliers_removal/), [sam::PeekingOutliersRemoval](/doxygen/Classes/classsam_1_1_peeking_outliers_removal/), [sam::QuestionableRounding](/doxygen/Classes/classsam_1_1_questionable_rounding/), [sam::StoppingDataCollection](/doxygen/Classes/classsam_1_1_stopping_data_collection/), [sam::SubjectiveOutlierRemoval](/doxygen/Classes/classsam_1_1_subjective_outlier_removal/)
+Inherited by [sam::ConditionDropping](/doxygen/Classes/classsam_1_1_condition_dropping/), [sam::FabricatingData](/doxygen/Classes/classsam_1_1_fabricating_data/), [sam::FalsifyingData](/doxygen/Classes/classsam_1_1_falsifying_data/), [sam::GroupPooling](/doxygen/Classes/classsam_1_1_group_pooling/), [sam::OptionalDropping](/doxygen/Classes/classsam_1_1_optional_dropping/), [sam::OptionalStopping](/doxygen/Classes/classsam_1_1_optional_stopping/), [sam::OutliersRemoval](/doxygen/Classes/classsam_1_1_outliers_removal/), [sam::PeekingOutliersRemoval](/doxygen/Classes/classsam_1_1_peeking_outliers_removal/), [sam::QuestionableRounding](/doxygen/Classes/classsam_1_1_questionable_rounding/), [sam::StoppingDataCollection](/doxygen/Classes/classsam_1_1_stopping_data_collection/), [sam::SubjectiveOutlierRemoval](/doxygen/Classes/classsam_1_1_subjective_outlier_removal/)
 
 ## Public Functions
 
@@ -24,8 +24,8 @@ Inherited by [sam::ConditionDropping](/doxygen/Classes/classsam_1_1_condition_dr
 | virtual | **[~HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strategy/#function-~hackingstrategy)**() =0<br>Pure destructor of the Base class. This is important for proper deconstruction of Derived classes.  |
 | | **[HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strategy/#function-hackingstrategy)**() |
 | void | **[operator()](/doxygen/Classes/classsam_1_1_hacking_strategy/#function-operator())**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment) |
-| double | **[defensibility](/doxygen/Classes/classsam_1_1_hacking_strategy/#function-defensibility)**() const |
-| double | **[prevalence](/doxygen/Classes/classsam_1_1_hacking_strategy/#function-prevalence)**() const |
+| float | **[defensibility](/doxygen/Classes/classsam_1_1_hacking_strategy/#function-defensibility)**() const |
+| float | **[prevalence](/doxygen/Classes/classsam_1_1_hacking_strategy/#function-prevalence)**() const |
 | HackingStage | **[stage](/doxygen/Classes/classsam_1_1_hacking_strategy/#function-stage)**() const |
 | HackingTarget | **[target](/doxygen/Classes/classsam_1_1_hacking_strategy/#function-target)**() const |
 | std::unique_ptr< [HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strategy/) > | **[build](/doxygen/Classes/classsam_1_1_hacking_strategy/#function-build)**(json & hacking_strategy_config)<br>Factory method for building a [HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strategy/).  |
@@ -35,8 +35,8 @@ Inherited by [sam::ConditionDropping](/doxygen/Classes/classsam_1_1_condition_dr
 |                | Name           |
 | -------------- | -------------- |
 | sol::state | **[lua](/doxygen/Classes/classsam_1_1_hacking_strategy/#variable-lua)**  |
-| double | **[defensibility_](/doxygen/Classes/classsam_1_1_hacking_strategy/#variable-defensibility_)**  |
-| double | **[prevalence_](/doxygen/Classes/classsam_1_1_hacking_strategy/#variable-prevalence_)**  |
+| std::optional< float > | **[defensibility_](/doxygen/Classes/classsam_1_1_hacking_strategy/#variable-defensibility_)**  |
+| std::optional< float > | **[prevalence_](/doxygen/Classes/classsam_1_1_hacking_strategy/#variable-prevalence_)**  |
 | HackingStage | **[stage_](/doxygen/Classes/classsam_1_1_hacking_strategy/#variable-stage_)**  |
 | HackingTarget | **[target_](/doxygen/Classes/classsam_1_1_hacking_strategy/#variable-target_)**  |
 
@@ -79,14 +79,14 @@ inline void operator()(
 ### function defensibility
 
 ```cpp
-inline double defensibility() const
+inline float defensibility() const
 ```
 
 
 ### function prevalence
 
 ```cpp
-inline double prevalence() const
+inline float prevalence() const
 ```
 
 
@@ -142,14 +142,14 @@ sol::state lua;
 ### variable defensibility_
 
 ```cpp
-double defensibility_;
+std::optional< float > defensibility_;
 ```
 
 
 ### variable prevalence_
 
 ```cpp
-double prevalence_;
+std::optional< float > prevalence_;
 ```
 
 
@@ -169,4 +169,4 @@ HackingTarget target_;
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

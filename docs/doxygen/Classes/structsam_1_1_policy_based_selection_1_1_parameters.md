@@ -24,8 +24,8 @@ summary: Parameters of the Policy-based Selection.
 |                | Name           |
 | -------------- | -------------- |
 | [SelectionMethod](/doxygen/Namespaces/namespacesam/#enum-selectionmethod) | **[name](/doxygen/Classes/structsam_1_1_policy_based_selection_1_1_parameters/#variable-name)**  |
-| double | **[pub_bias_rate](/doxygen/Classes/structsam_1_1_policy_based_selection_1_1_parameters/#variable-pub_bias_rate)** <br>Publication Bias Rate.  |
-| double | **[acceptance_rate](/doxygen/Classes/structsam_1_1_policy_based_selection_1_1_parameters/#variable-acceptance_rate)** <br>Acceptance Rate.  |
+| float | **[pub_bias_rate](/doxygen/Classes/structsam_1_1_policy_based_selection_1_1_parameters/#variable-pub_bias_rate)** <br>Publication Bias Rate.  |
+| float | **[acceptance_rate](/doxygen/Classes/structsam_1_1_policy_based_selection_1_1_parameters/#variable-acceptance_rate)** <br>Acceptance Rate.  |
 | std::vector< std::string > | **[selection_policy_defs](/doxygen/Classes/structsam_1_1_policy_based_selection_1_1_parameters/#variable-selection_policy_defs)**  |
 
 ## Public Functions Documentation
@@ -55,7 +55,7 @@ SelectionMethod name = SelectionMethod::PolicyBasedSelection;
 ### variable pub_bias_rate
 
 ```cpp
-double pub_bias_rate {};
+float pub_bias_rate {};
 ```
 
 Publication Bias Rate. 
@@ -63,7 +63,7 @@ Publication Bias Rate.
 ### variable acceptance_rate
 
 ```cpp
-double acceptance_rate {};
+float acceptance_rate {};
 ```
 
 Acceptance Rate. 
@@ -80,4 +80,4 @@ Definition of the selection policy used by [Journal](/doxygen/Classes/classsam_1
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:48 CEST

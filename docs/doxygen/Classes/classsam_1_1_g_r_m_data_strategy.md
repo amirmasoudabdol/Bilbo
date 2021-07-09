@@ -30,7 +30,7 @@ Inherits from [sam::DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/)
 | | **[GRMDataStrategy](/doxygen/Classes/classsam_1_1_g_r_m_data_strategy/#function-grmdatastrategy)**() =default |
 | | **[GRMDataStrategy](/doxygen/Classes/classsam_1_1_g_r_m_data_strategy/#function-grmdatastrategy)**(const [Parameters](/doxygen/Classes/structsam_1_1_g_r_m_data_strategy_1_1_parameters/) & p) |
 | virtual void | **[genData](/doxygen/Classes/classsam_1_1_g_r_m_data_strategy/#function-gendata)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment) override<br>Generates data based on the selected DataModel.  |
-| virtual std::vector< arma::Row< double > > | **[genNewObservationsForAllGroups](/doxygen/Classes/classsam_1_1_g_r_m_data_strategy/#function-gennewobservationsforallgroups)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment, int n_new_obs) override<br>Generates `n_new_obs` new observations for each group.  |
+| virtual std::vector< arma::Row< float > > | **[genNewObservationsForAllGroups](/doxygen/Classes/classsam_1_1_g_r_m_data_strategy/#function-gennewobservationsforallgroups)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment, int n_new_obs) override<br>Generates `n_new_obs` new observations for each group.  |
 
 ## Additional inherited members
 
@@ -105,7 +105,7 @@ Populates the `experiment->groups_->measurements` with data based on the paramet
 ### function genNewObservationsForAllGroups
 
 ```cpp
-virtual std::vector< arma::Row< double > > genNewObservationsForAllGroups(
+virtual std::vector< arma::Row< float > > genNewObservationsForAllGroups(
     Experiment * experiment,
     int n_new_obs
 ) override
@@ -126,4 +126,4 @@ Generates `n_new_obs` new observations for each group.
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

@@ -49,7 +49,8 @@ title: Classes
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_linear_model_strategy_1_1_parameters/)** <br>[Parameters]() of [LinearModelStrategy](/doxygen/Classes/classsam_1_1_linear_model_strategy/). 
     * **class [MeanDifference](/doxygen/Classes/classsam_1_1_mean_difference/)** 
     * **class [MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)** 
-    * **class [NoHack](/doxygen/Classes/classsam_1_1_no_hack/)** 
+    * **class [OptionalDropping](/doxygen/Classes/classsam_1_1_optional_dropping/)** 
+        * **struct [Parameters](/doxygen/Classes/structsam_1_1_optional_dropping_1_1_parameters/)** 
     * **class [OptionalStopping](/doxygen/Classes/classsam_1_1_optional_stopping/)** 
         * **struct [Parameters](/doxygen/Classes/structsam_1_1_optional_stopping_1_1_parameters/)** 
     * **class [OutliersRemoval](/doxygen/Classes/classsam_1_1_outliers_removal/)** <br>Declaration of Outlier Removal hacking method based on items' distance from their sample mean. 
@@ -107,4 +108,4 @@ title: Classes
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:22 CEST
+Updated on 29 June 2021 at 16:13:48 CEST

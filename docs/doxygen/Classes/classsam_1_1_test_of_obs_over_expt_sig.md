@@ -29,7 +29,7 @@ Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
 | | **[TestOfObsOverExptSig](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/#function-testofobsoverexptsig)**() =default |
 | | **[TestOfObsOverExptSig](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/#function-testofobsoverexptsig)**(const [Parameters](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_parameters/) & p) |
 | virtual void | **[estimate](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/#function-estimate)**([Journal](/doxygen/Classes/classsam_1_1_journal/) * journal) |
-| [ResultType](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/) | **[TES](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/#function-tes)**(const arma::Row< double > & sigs, const arma::Row< double > & ni, double beta, double alpha) |
+| [ResultType](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_result_type/) | **[TES](/doxygen/Classes/classsam_1_1_test_of_obs_over_expt_sig/#function-tes)**(const arma::Row< float > & sigs, const arma::Row< float > & ni, float beta, float alpha) |
 
 ## Public Attributes
 
@@ -83,10 +83,10 @@ virtual void estimate(
 
 ```cpp
 static ResultType TES(
-    const arma::Row< double > & sigs,
-    const arma::Row< double > & ni,
-    double beta,
-    double alpha
+    const arma::Row< float > & sigs,
+    const arma::Row< float > & ni,
+    float beta,
+    float alpha
 )
 ```
 
@@ -108,4 +108,4 @@ Parameters params;
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

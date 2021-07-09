@@ -31,12 +31,12 @@ Inherits from [sam::TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/)
 | | **[TTest](/doxygen/Classes/classsam_1_1_t_test/#function-ttest)**(const [Parameters](/doxygen/Classes/structsam_1_1_t_test_1_1_parameters/) & p) |
 | virtual void | **[run](/doxygen/Classes/classsam_1_1_t_test/#function-run)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment) override |
 | virtual void | **[run](/doxygen/Classes/classsam_1_1_t_test/#function-run)**([DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) & group_1, [DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) & group_2) override |
-| [ResultType](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/) | **[t_test](/doxygen/Classes/classsam_1_1_t_test/#function-t_test)**(const arma::Row< double > & d1, const arma::Row< double > & d2, double alpha, [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative) |
-| [ResultType](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/) | **[t_test](/doxygen/Classes/classsam_1_1_t_test/#function-t_test)**(double Sm1, double Sd1, double Sn1, double Sm2, double Sd2, double Sn2, double alpha, [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative, bool equal_var) |
-| std::pair< double, bool > | **[compute_pvalue](/doxygen/Classes/classsam_1_1_t_test/#function-compute_pvalue)**(double tstat, double df, double alpha, [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative) |
-| [ResultType](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/) | **[single_sample_t_test](/doxygen/Classes/classsam_1_1_t_test/#function-single_sample_t_test)**(double M, double Sm, double Sd, unsigned Sn, double alpha, [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative) |
-| [ResultType](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/) | **[two_samples_t_test_equal_sd](/doxygen/Classes/classsam_1_1_t_test/#function-two_samples_t_test_equal_sd)**(double Sm1, double Sd1, unsigned Sn1, double Sm2, double Sd2, unsigned Sn2, double alpha, [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative) |
-| [ResultType](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/) | **[two_samples_t_test_unequal_sd](/doxygen/Classes/classsam_1_1_t_test/#function-two_samples_t_test_unequal_sd)**(double Sm1, double Sd1, unsigned Sn1, double Sm2, double Sd2, unsigned Sn2, double alpha, [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative) |
+| [ResultType](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/) | **[t_test](/doxygen/Classes/classsam_1_1_t_test/#function-t_test)**(const arma::Row< float > & d1, const arma::Row< float > & d2, float alpha, [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative) |
+| [ResultType](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/) | **[t_test](/doxygen/Classes/classsam_1_1_t_test/#function-t_test)**(float Sm1, float Sd1, float Sn1, float Sm2, float Sd2, float Sn2, float alpha, [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative, bool equal_var) |
+| std::pair< float, bool > | **[compute_pvalue](/doxygen/Classes/classsam_1_1_t_test/#function-compute_pvalue)**(float tstat, float df, float alpha, [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative) |
+| [ResultType](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/) | **[single_sample_t_test](/doxygen/Classes/classsam_1_1_t_test/#function-single_sample_t_test)**(float M, float Sm, float Sd, unsigned Sn, float alpha, [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative) |
+| [ResultType](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/) | **[two_samples_t_test_equal_sd](/doxygen/Classes/classsam_1_1_t_test/#function-two_samples_t_test_equal_sd)**(float Sm1, float Sd1, unsigned Sn1, float Sm2, float Sd2, unsigned Sn2, float alpha, [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative) |
+| [ResultType](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/) | **[two_samples_t_test_unequal_sd](/doxygen/Classes/classsam_1_1_t_test/#function-two_samples_t_test_unequal_sd)**(float Sm1, float Sd1, unsigned Sn1, float Sm2, float Sd2, unsigned Sn2, float alpha, [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative) |
 
 ## Public Attributes
 
@@ -58,14 +58,14 @@ Inherits from [sam::TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/)
 |                | Name           |
 | -------------- | -------------- |
 | virtual | **[~TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/#function-~teststrategy)**() =0 |
-| virtual double | **[alpha](/doxygen/Classes/classsam_1_1_test_strategy/#function-alpha)**() |
+| virtual float | **[alpha](/doxygen/Classes/classsam_1_1_test_strategy/#function-alpha)**() |
 | std::unique_ptr< [TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/) > | **[build](/doxygen/Classes/classsam_1_1_test_strategy/#function-build)**(json & test_strategy_config) |
 
 **Public Attributes inherited from [sam::TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/)**
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[alpha_](/doxygen/Classes/classsam_1_1_test_strategy/#variable-alpha_)**  |
+| float | **[alpha_](/doxygen/Classes/classsam_1_1_test_strategy/#variable-alpha_)**  |
 
 
 ## Detailed Description
@@ -118,9 +118,9 @@ inline virtual void run(
 
 ```cpp
 static ResultType t_test(
-    const arma::Row< double > & d1,
-    const arma::Row< double > & d2,
-    double alpha,
+    const arma::Row< float > & d1,
+    const arma::Row< float > & d2,
+    float alpha,
     TestStrategy::TestAlternative alternative
 )
 ```
@@ -130,13 +130,13 @@ static ResultType t_test(
 
 ```cpp
 static ResultType t_test(
-    double Sm1,
-    double Sd1,
-    double Sn1,
-    double Sm2,
-    double Sd2,
-    double Sn2,
-    double alpha,
+    float Sm1,
+    float Sd1,
+    float Sn1,
+    float Sm2,
+    float Sd2,
+    float Sn2,
+    float alpha,
     TestStrategy::TestAlternative alternative,
     bool equal_var
 )
@@ -146,10 +146,10 @@ static ResultType t_test(
 ### function compute_pvalue
 
 ```cpp
-static std::pair< double, bool > compute_pvalue(
-    double tstat,
-    double df,
-    double alpha,
+static std::pair< float, bool > compute_pvalue(
+    float tstat,
+    float df,
+    float alpha,
     TestStrategy::TestAlternative alternative
 )
 ```
@@ -159,11 +159,11 @@ static std::pair< double, bool > compute_pvalue(
 
 ```cpp
 static ResultType single_sample_t_test(
-    double M,
-    double Sm,
-    double Sd,
+    float M,
+    float Sm,
+    float Sd,
     unsigned Sn,
-    double alpha,
+    float alpha,
     TestStrategy::TestAlternative alternative
 )
 ```
@@ -189,13 +189,13 @@ A Students t test applied to a single set of data. We are testing the null hypot
 
 ```cpp
 static ResultType two_samples_t_test_equal_sd(
-    double Sm1,
-    double Sd1,
+    float Sm1,
+    float Sd1,
     unsigned Sn1,
-    double Sm2,
-    double Sd2,
+    float Sm2,
+    float Sd2,
     unsigned Sn2,
-    double alpha,
+    float alpha,
     TestStrategy::TestAlternative alternative
 )
 ```
@@ -223,13 +223,13 @@ A Students t test applied to two sets of data. We are testing the null hypothesi
 
 ```cpp
 static ResultType two_samples_t_test_unequal_sd(
-    double Sm1,
-    double Sd1,
+    float Sm1,
+    float Sd1,
     unsigned Sn1,
-    double Sm2,
-    double Sd2,
+    float Sm2,
+    float Sd2,
     unsigned Sn2,
-    double alpha,
+    float alpha,
     TestStrategy::TestAlternative alternative
 )
 ```
@@ -264,4 +264,4 @@ Parameters params;
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:48 CEST

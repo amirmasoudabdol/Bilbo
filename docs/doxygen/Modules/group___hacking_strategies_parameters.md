@@ -18,6 +18,7 @@ Description of hacking strategies parameters. ## Classes
 | struct | **[sam::FalsifyingData::Parameters](/doxygen/Classes/structsam_1_1_falsifying_data_1_1_parameters/)**  |
 | struct | **[sam::FabricatingData::Parameters](/doxygen/Classes/structsam_1_1_fabricating_data_1_1_parameters/)**  |
 | struct | **[sam::StoppingDataCollection::Parameters](/doxygen/Classes/structsam_1_1_stopping_data_collection_1_1_parameters/)**  |
+| struct | **[sam::OptionalDropping::Parameters](/doxygen/Classes/structsam_1_1_optional_dropping_1_1_parameters/)**  |
 
 
 
@@ -26,4 +27,4 @@ Description of hacking strategies parameters. ## Classes
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

@@ -25,7 +25,7 @@ title: sam::TestOfObsOverExptSig::Parameters
 |                | Name           |
 | -------------- | -------------- |
 | std::string | **[name](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_parameters/#variable-name)**  |
-| double | **[alpha](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_parameters/#variable-alpha)**  |
+| float | **[alpha](/doxygen/Classes/structsam_1_1_test_of_obs_over_expt_sig_1_1_parameters/#variable-alpha)**  |
 
 ## Detailed Description
 
@@ -61,10 +61,10 @@ std::string name {"TestOfObsOverExptSig"};
 ### variable alpha
 
 ```cpp
-double alpha {0.10};
+float alpha {0.10};
 ```
 
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:48 CEST

@@ -1,204 +1,59 @@
 ---
 title: sam::HackingProbabilityStrategy
 
-
 ---
 
 # sam::HackingProbabilityStrategy
 
 
 
-
-
-
-
-
-
 Inherited by [sam::FrankenbachStrategy](/doxygen/Classes/classsam_1_1_frankenbach_strategy/)
-
-
-
-
-
-
-
-
-
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| virtual  | **[~HackingProbabilityStrategy](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/#function-~hackingprobabilitystrategy)**() =0  |
-| virtual double | **[estimate](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/#function-estimate)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment) =0  |
-|  | **[operator double](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/#function-operator-double)**()  |
-|  | **[operator arma::rowvec](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/#function-operator-armarowvec)**()  |
-| std::unique_ptr< [HackingProbabilityStrategy](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/) > | **[build](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/#function-build)**(json & config)  |
-
+| virtual | **[~HackingProbabilityStrategy](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/#function-~hackingprobabilitystrategy)**() =0 |
+| virtual float | **[estimate](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/#function-estimate)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment) =0 |
+| | **[operator float](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/#function-operator-float)**() |
+| std::unique_ptr< [HackingProbabilityStrategy](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/) > | **[build](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/#function-build)**(json & config) |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[prob](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/#variable-prob)**  |
-| arma::rowvec | **[probabilities](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/#variable-probabilities)**  |
-
-
-
-
-
-
-
-
-
-
-
-
-
+| float | **[prob](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/#variable-prob)**  |
+| arma::Row< float > | **[probabilities](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/#variable-probabilities)**  |
 
 ## Public Functions Documentation
 
-### function `~HackingProbabilityStrategy`
+### function ~HackingProbabilityStrategy
 
 ```cpp
 virtual ~HackingProbabilityStrategy() =0
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `estimate`
+### function estimate
 
 ```cpp
-virtual double estimate(
+virtual float estimate(
     Experiment * experiment
 ) =0
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 **Reimplemented by**: [sam::FrankenbachStrategy::estimate](/doxygen/Classes/classsam_1_1_frankenbach_strategy/#function-estimate)
 
 
-
-
-### function `operator double`
+### function operator float
 
 ```cpp
-inline operator double()
+inline operator float()
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `operator arma::rowvec`
-
-```cpp
-inline operator arma::rowvec()
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `build`
+### function build
 
 ```cpp
 static std::unique_ptr< HackingProbabilityStrategy > build(
@@ -207,106 +62,22 @@ static std::unique_ptr< HackingProbabilityStrategy > build(
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Attributes Documentation
 
-### variable `prob`
+### variable prob
 
 ```cpp
-double prob;
+float prob;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `probabilities`
+### variable probabilities
 
 ```cpp
-arma::rowvec probabilities;
+arma::Row< float > probabilities;
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on 29 June 2021 at 16:13:46 CEST

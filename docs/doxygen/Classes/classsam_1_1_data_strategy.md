@@ -30,7 +30,7 @@ Inherited by [sam::GRMDataStrategy](/doxygen/Classes/classsam_1_1_g_r_m_data_str
 | std::unique_ptr< [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) > | **[build](/doxygen/Classes/classsam_1_1_data_strategy/#function-build)**(json & data_strategy_config)<br>[DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) Factory Method.  |
 | virtual | **[~DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/#function-~datastrategy)**() =0<br>Pure destructors of the [DataStrategy](/doxygen/Classes/classsam_1_1_data_strategy/) abstract class.  |
 | virtual void | **[genData](/doxygen/Classes/classsam_1_1_data_strategy/#function-gendata)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment) =0<br>Generates data based on the selected DataModel.  |
-| virtual std::vector< arma::Row< double > > | **[genNewObservationsForAllGroups](/doxygen/Classes/classsam_1_1_data_strategy/#function-gennewobservationsforallgroups)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment, int n_new_obs) =0<br>Generates `n_new_obs` new observations for each group.  |
+| virtual std::vector< arma::Row< float > > | **[genNewObservationsForAllGroups](/doxygen/Classes/classsam_1_1_data_strategy/#function-gennewobservationsforallgroups)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment, int n_new_obs) =0<br>Generates `n_new_obs` new observations for each group.  |
 
 ## Detailed Description
 
@@ -106,7 +106,7 @@ Populates the `experiment->groups_->measurements` with data based on the paramet
 ### function genNewObservationsForAllGroups
 
 ```cpp
-virtual std::vector< arma::Row< double > > genNewObservationsForAllGroups(
+virtual std::vector< arma::Row< float > > genNewObservationsForAllGroups(
     Experiment * experiment,
     int n_new_obs
 ) =0
@@ -127,4 +127,4 @@ Generates `n_new_obs` new observations for each group.
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

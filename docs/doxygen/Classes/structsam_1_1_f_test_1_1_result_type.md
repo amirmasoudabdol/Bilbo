@@ -11,10 +11,10 @@ title: sam::FTest::ResultType
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[fstat](/doxygen/Classes/structsam_1_1_f_test_1_1_result_type/#variable-fstat)**  |
+| float | **[fstat](/doxygen/Classes/structsam_1_1_f_test_1_1_result_type/#variable-fstat)**  |
 | unsigned | **[df1](/doxygen/Classes/structsam_1_1_f_test_1_1_result_type/#variable-df1)**  |
 | unsigned | **[df2](/doxygen/Classes/structsam_1_1_f_test_1_1_result_type/#variable-df2)**  |
-| double | **[pvalue](/doxygen/Classes/structsam_1_1_f_test_1_1_result_type/#variable-pvalue)**  |
+| float | **[pvalue](/doxygen/Classes/structsam_1_1_f_test_1_1_result_type/#variable-pvalue)**  |
 | bool | **[sig](/doxygen/Classes/structsam_1_1_f_test_1_1_result_type/#variable-sig)**  |
 
 ## Friends
@@ -28,7 +28,7 @@ title: sam::FTest::ResultType
 ### variable fstat
 
 ```cpp
-double fstat;
+float fstat;
 ```
 
 
@@ -49,7 +49,7 @@ unsigned df2;
 ### variable pvalue
 
 ```cpp
-double pvalue;
+float pvalue;
 ```
 
 
@@ -75,4 +75,4 @@ friend std::ostream & operator<<(
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:48 CEST

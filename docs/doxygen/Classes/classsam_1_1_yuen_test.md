@@ -25,9 +25,9 @@ Inherits from [sam::TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/)
 | | **[YuenTest](/doxygen/Classes/classsam_1_1_yuen_test/#function-yuentest)**(const [Parameters](/doxygen/Classes/structsam_1_1_yuen_test_1_1_parameters/) & p) |
 | virtual void | **[run](/doxygen/Classes/classsam_1_1_yuen_test/#function-run)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment) override |
 | virtual void | **[run](/doxygen/Classes/classsam_1_1_yuen_test/#function-run)**([DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) & group_1, [DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) & group_2) override |
-| [ResultType](/doxygen/Classes/structsam_1_1_yuen_test_1_1_result_type/) | **[yuen_t_test_one_sample](/doxygen/Classes/classsam_1_1_yuen_test/#function-yuen_t_test_one_sample)**(const arma::Row< double > & x, double alpha, const [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative, double trim, double mu) |
-| [ResultType](/doxygen/Classes/structsam_1_1_yuen_test_1_1_result_type/) | **[yuen_t_test_paired](/doxygen/Classes/classsam_1_1_yuen_test/#function-yuen_t_test_paired)**(const arma::Row< double > & x, const arma::Row< double > & y, double alpha, const [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative, double trim, double mu) |
-| [ResultType](/doxygen/Classes/structsam_1_1_yuen_test_1_1_result_type/) | **[yuen_t_test_two_samples](/doxygen/Classes/classsam_1_1_yuen_test/#function-yuen_t_test_two_samples)**(const arma::Row< double > & x, const arma::Row< double > & y, double alpha, const [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative, double trim, double mu) |
+| [ResultType](/doxygen/Classes/structsam_1_1_yuen_test_1_1_result_type/) | **[yuen_t_test_one_sample](/doxygen/Classes/classsam_1_1_yuen_test/#function-yuen_t_test_one_sample)**(const arma::Row< float > & x, float alpha, const [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative, float trim, float mu) |
+| [ResultType](/doxygen/Classes/structsam_1_1_yuen_test_1_1_result_type/) | **[yuen_t_test_paired](/doxygen/Classes/classsam_1_1_yuen_test/#function-yuen_t_test_paired)**(const arma::Row< float > & x, const arma::Row< float > & y, float alpha, const [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative, float trim, float mu) |
+| [ResultType](/doxygen/Classes/structsam_1_1_yuen_test_1_1_result_type/) | **[yuen_t_test_two_samples](/doxygen/Classes/classsam_1_1_yuen_test/#function-yuen_t_test_two_samples)**(const arma::Row< float > & x, const arma::Row< float > & y, float alpha, const [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative, float trim, float mu) |
 
 ## Public Attributes
 
@@ -49,14 +49,14 @@ Inherits from [sam::TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/)
 |                | Name           |
 | -------------- | -------------- |
 | virtual | **[~TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/#function-~teststrategy)**() =0 |
-| virtual double | **[alpha](/doxygen/Classes/classsam_1_1_test_strategy/#function-alpha)**() |
+| virtual float | **[alpha](/doxygen/Classes/classsam_1_1_test_strategy/#function-alpha)**() |
 | std::unique_ptr< [TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/) > | **[build](/doxygen/Classes/classsam_1_1_test_strategy/#function-build)**(json & test_strategy_config) |
 
 **Public Attributes inherited from [sam::TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/)**
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[alpha_](/doxygen/Classes/classsam_1_1_test_strategy/#variable-alpha_)**  |
+| float | **[alpha_](/doxygen/Classes/classsam_1_1_test_strategy/#variable-alpha_)**  |
 
 
 ## Public Functions Documentation
@@ -99,11 +99,11 @@ inline virtual void run(
 
 ```cpp
 static ResultType yuen_t_test_one_sample(
-    const arma::Row< double > & x,
-    double alpha,
+    const arma::Row< float > & x,
+    float alpha,
     const TestStrategy::TestAlternative alternative,
-    double trim,
-    double mu
+    float trim,
+    float mu
 )
 ```
 
@@ -112,12 +112,12 @@ static ResultType yuen_t_test_one_sample(
 
 ```cpp
 static ResultType yuen_t_test_paired(
-    const arma::Row< double > & x,
-    const arma::Row< double > & y,
-    double alpha,
+    const arma::Row< float > & x,
+    const arma::Row< float > & y,
+    float alpha,
     const TestStrategy::TestAlternative alternative,
-    double trim,
-    double mu
+    float trim,
+    float mu
 )
 ```
 
@@ -126,12 +126,12 @@ static ResultType yuen_t_test_paired(
 
 ```cpp
 static ResultType yuen_t_test_two_samples(
-    const arma::Row< double > & x,
-    const arma::Row< double > & y,
-    double alpha,
+    const arma::Row< float > & x,
+    const arma::Row< float > & y,
+    float alpha,
     const TestStrategy::TestAlternative alternative,
-    double trim,
-    double mu
+    float trim,
+    float mu
 )
 ```
 
@@ -147,4 +147,4 @@ Parameters params;
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:22 CEST
+Updated on 29 June 2021 at 16:13:48 CEST

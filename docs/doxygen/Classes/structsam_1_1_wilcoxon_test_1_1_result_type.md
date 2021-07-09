@@ -11,9 +11,9 @@ title: sam::WilcoxonTest::ResultType
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[zstat](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_result_type/#variable-zstat)**  |
-| double | **[wstat](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_result_type/#variable-wstat)**  |
-| double | **[pvalue](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_result_type/#variable-pvalue)**  |
+| float | **[zstat](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_result_type/#variable-zstat)**  |
+| float | **[wstat](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_result_type/#variable-wstat)**  |
+| float | **[pvalue](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_result_type/#variable-pvalue)**  |
 | int | **[side](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_result_type/#variable-side)**  |
 | bool | **[sig](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_result_type/#variable-sig)**  |
 
@@ -28,21 +28,21 @@ title: sam::WilcoxonTest::ResultType
 ### variable zstat
 
 ```cpp
-double zstat;
+float zstat;
 ```
 
 
 ### variable wstat
 
 ```cpp
-double wstat;
+float wstat;
 ```
 
 
 ### variable pvalue
 
 ```cpp
-double pvalue;
+float pvalue;
 ```
 
 
@@ -75,4 +75,4 @@ friend std::ostream & operator<<(
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:22 CEST
+Updated on 29 June 2021 at 16:13:48 CEST

@@ -1,11 +1,10 @@
 ---
 title: sam::TestStrategy
-summary: Abstract class for defining test strategies.  
+summary: Abstract class for defining test strategies. 
 
 ---
 
 # sam::TestStrategy
-
 
 
 
@@ -14,46 +13,30 @@ Abstract class for defining test strategies.  [More...](#detailed-description)
 
 `#include <TestStrategy.h>`
 
-
-
 Inherited by [sam::FTest](/doxygen/Classes/classsam_1_1_f_test/), [sam::TTest](/doxygen/Classes/classsam_1_1_t_test/), [sam::WilcoxonTest](/doxygen/Classes/classsam_1_1_wilcoxon_test/), [sam::YuenTest](/doxygen/Classes/classsam_1_1_yuen_test/)
-
-
-
 
 ## Public Types
 
 |                | Name           |
 | -------------- | -------------- |
-| enum | **[TestMethod](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testmethod)** { TTest, FTest, YuenTest, WilcoxonTest } |
-| enum | **[TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative)** { Less, Greater, TwoSided } |
-
-
-
-
-
+| enum| **[TestMethod](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testmethod)** { TTest, FTest, YuenTest, WilcoxonTest} |
+| enum| **[TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative)** { Less, Greater, TwoSided} |
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| virtual  | **[~TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/#function-~teststrategy)**() =0  |
-| virtual void | **[run](/doxygen/Classes/classsam_1_1_test_strategy/#function-run)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment) =0  |
-| virtual void | **[run](/doxygen/Classes/classsam_1_1_test_strategy/#function-run)**([Group](/doxygen/Classes/classsam_1_1_group/) & group_1, [Group](/doxygen/Classes/classsam_1_1_group/) & group_2) =0  |
-| virtual double | **[alpha](/doxygen/Classes/classsam_1_1_test_strategy/#function-alpha)**()  |
-| std::unique_ptr< [TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/) > | **[build](/doxygen/Classes/classsam_1_1_test_strategy/#function-build)**(json & test_strategy_config)  |
-
+| virtual | **[~TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/#function-~teststrategy)**() =0 |
+| virtual void | **[run](/doxygen/Classes/classsam_1_1_test_strategy/#function-run)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment) =0 |
+| virtual void | **[run](/doxygen/Classes/classsam_1_1_test_strategy/#function-run)**([DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) & group_1, [DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) & group_2) =0 |
+| virtual float | **[alpha](/doxygen/Classes/classsam_1_1_test_strategy/#function-alpha)**() |
+| std::unique_ptr< [TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/) > | **[build](/doxygen/Classes/classsam_1_1_test_strategy/#function-build)**(json & test_strategy_config) |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[alpha_](/doxygen/Classes/classsam_1_1_test_strategy/#variable-alpha_)**  |
-
-
-
-
-
+| float | **[alpha_](/doxygen/Classes/classsam_1_1_test_strategy/#variable-alpha_)**  |
 
 ## Detailed Description
 
@@ -63,71 +46,18 @@ class sam::TestStrategy;
 
 Abstract class for defining test strategies. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Statistical test strategies will investigate if there is a meaningful difference between means of two samples. Every test strategy should provide a `run()` method. The `run()` method will accept a pointer to the experiment and update necessary variables, e.g., _statistics_ & _p-value_. 
-
-
 
 ## Public Types Documentation
 
-### enum `TestMethod`
-
+### enum TestMethod
 
 | Enumerator | Value | Description |
 | ---------- | ----- | ----------- |
-| TTest |  | [TTest]().   |
-| FTest |  | [FTest](/doxygen/Classes/classsam_1_1_f_test/).   |
-| YuenTest |  | [YuenTest]().   |
-| WilcoxonTest |  | [WilcoxonTest]().   |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| TTest | | [TTest]().   |
+| FTest | | [FTest]().   |
+| YuenTest | | [YuenTest]().   |
+| WilcoxonTest | | [WilcoxonTest]().   |
 
 
 
@@ -135,39 +65,13 @@ Statistical test strategies will investigate if there is a meaningful difference
 Specifying the significant testing method 
 
 
-### enum `TestAlternative`
-
+### enum TestAlternative
 
 | Enumerator | Value | Description |
 | ---------- | ----- | ----------- |
-| Less |  |   |
-| Greater |  |   |
-| TwoSided |  |   |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| Less | |   |
+| Greater | |   |
+| TwoSided | |   |
 
 
 
@@ -175,49 +79,16 @@ Specifying the significant testing method
 Specify the side of the test 
 
 
-
-
-
-
-
-
 ## Public Functions Documentation
 
-### function `~TestStrategy`
+### function ~TestStrategy
 
 ```cpp
 virtual ~TestStrategy() =0
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `run`
+### function run
 
 ```cpp
 virtual void run(
@@ -226,109 +97,30 @@ virtual void run(
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 **Reimplemented by**: [sam::TTest::run](/doxygen/Classes/classsam_1_1_t_test/#function-run), [sam::FTest::run](/doxygen/Classes/classsam_1_1_f_test/#function-run), [sam::YuenTest::run](/doxygen/Classes/classsam_1_1_yuen_test/#function-run), [sam::WilcoxonTest::run](/doxygen/Classes/classsam_1_1_wilcoxon_test/#function-run)
 
 
-
-
-### function `run`
+### function run
 
 ```cpp
 virtual void run(
-    Group & group_1,
-    Group & group_2
+    DependentVariable & group_1,
+    DependentVariable & group_2
 ) =0
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 **Reimplemented by**: [sam::TTest::run](/doxygen/Classes/classsam_1_1_t_test/#function-run), [sam::FTest::run](/doxygen/Classes/classsam_1_1_f_test/#function-run), [sam::YuenTest::run](/doxygen/Classes/classsam_1_1_yuen_test/#function-run), [sam::WilcoxonTest::run](/doxygen/Classes/classsam_1_1_wilcoxon_test/#function-run)
 
 
-
-
-### function `alpha`
+### function alpha
 
 ```cpp
-inline virtual double alpha()
+inline virtual float alpha()
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `build`
+### function build
 
 ```cpp
 static std::unique_ptr< TestStrategy > build(
@@ -337,72 +129,15 @@ static std::unique_ptr< TestStrategy > build(
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Attributes Documentation
 
-### variable `alpha_`
+### variable alpha_
 
 ```cpp
-double alpha_;
+float alpha_;
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on 29 June 2021 at 16:13:47 CEST

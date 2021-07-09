@@ -11,7 +11,8 @@
   "folderRelatedPagesName": "Pages",
   "foldersToGenerate": [
     "classes",
-    "modules"
+    "modules",
+    "namespaces"
   ],
   "imagesFolder": "images",
   "indexClassesName": "index",

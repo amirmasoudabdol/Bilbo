@@ -64,11 +64,13 @@ On Ubuntu, you can install most of the dependencies using the `apt` tool.
 
 ```bash
 sudo apt update
+sudo apt install build-essential
 sudo apt install cmake
 sudo apt install liblapack-dev libblas-dev
 sudo apt install libboost-all-dev
 sudo apt install libarmadillo-dev
-sudo apt install lua5.3
+sudo apt install lua5.3 liblua5.3-dev
+sudo apt install libmlpack-dev
 ```
 
 For nlohmann/json, mlpack, ensmallen, fmt, and spdlog, you need to build and install these packages manually. Please follow the link to their homepage, and follow their instruction. 

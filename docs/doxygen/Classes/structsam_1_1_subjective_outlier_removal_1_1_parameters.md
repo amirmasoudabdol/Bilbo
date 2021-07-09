@@ -22,11 +22,11 @@ summary: SubjectiveOutlierRemoval's parameters.
 | HackingMethod | **[name](/doxygen/Classes/structsam_1_1_subjective_outlier_removal_1_1_parameters/#variable-name)** <br>A placeholder for the name.  |
 | HackingTarget | **[target](/doxygen/Classes/structsam_1_1_subjective_outlier_removal_1_1_parameters/#variable-target)**  |
 | std::vector< int > | **[range](/doxygen/Classes/structsam_1_1_subjective_outlier_removal_1_1_parameters/#variable-range)** <br>A vector of `{min, max}`, defining the range of `K`.  |
-| double | **[step_size](/doxygen/Classes/structsam_1_1_subjective_outlier_removal_1_1_parameters/#variable-step_size)** <br>Indicates the step size of walking through K's.  |
+| float | **[step_size](/doxygen/Classes/structsam_1_1_subjective_outlier_removal_1_1_parameters/#variable-step_size)** <br>Indicates the step size of walking through K's.  |
 | int | **[min_observations](/doxygen/Classes/structsam_1_1_subjective_outlier_removal_1_1_parameters/#variable-min_observations)** <br>Indicates minimum number of observations.  |
 | std::vector< std::string > | **[stopping_cond_defs](/doxygen/Classes/structsam_1_1_subjective_outlier_removal_1_1_parameters/#variable-stopping_cond_defs)** <br>Stopping condition [PolicyChain]() definitions.  |
-| double | **[prevalence](/doxygen/Classes/structsam_1_1_subjective_outlier_removal_1_1_parameters/#variable-prevalence)**  |
-| double | **[defensibility](/doxygen/Classes/structsam_1_1_subjective_outlier_removal_1_1_parameters/#variable-defensibility)**  |
+| std::optional< float > | **[prevalence](/doxygen/Classes/structsam_1_1_subjective_outlier_removal_1_1_parameters/#variable-prevalence)** <br>The prevalence factor of the strategy.  |
+| std::optional< float > | **[defensibility](/doxygen/Classes/structsam_1_1_subjective_outlier_removal_1_1_parameters/#variable-defensibility)** <br>The defensibility factor of the strategy.  |
 | HackingStage | **[stage](/doxygen/Classes/structsam_1_1_subjective_outlier_removal_1_1_parameters/#variable-stage)**  |
 
 ## Detailed Description
@@ -76,7 +76,7 @@ HackingTarget target {HackingTarget::Both};
 ### variable range
 
 ```cpp
-std::vector< int > range {2, 4};
+std::vector< int > range;
 ```
 
 A vector of `{min, max}`, defining the range of `K`. 
@@ -84,7 +84,7 @@ A vector of `{min, max}`, defining the range of `K`.
 ### variable step_size
 
 ```cpp
-double step_size {0.1};
+float step_size;
 ```
 
 Indicates the step size of walking through K's. 
@@ -92,7 +92,7 @@ Indicates the step size of walking through K's.
 ### variable min_observations
 
 ```cpp
-int min_observations {5};
+int min_observations;
 ```
 
 Indicates minimum number of observations. 
@@ -108,16 +108,18 @@ Stopping condition [PolicyChain]() definitions.
 ### variable prevalence
 
 ```cpp
-double prevalence {0.1};
+std::optional< float > prevalence;
 ```
 
+The prevalence factor of the strategy. 
 
 ### variable defensibility
 
 ```cpp
-double defensibility {0.1};
+std::optional< float > defensibility;
 ```
 
+The defensibility factor of the strategy. 
 
 ### variable stage
 
@@ -128,4 +130,4 @@ HackingStage stage {HackingStage::PostProcessing};
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

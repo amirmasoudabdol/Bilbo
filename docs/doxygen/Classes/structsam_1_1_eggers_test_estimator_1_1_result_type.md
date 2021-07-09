@@ -22,12 +22,12 @@ title: sam::EggersTestEstimator::ResultType
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[slope](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-slope)** <br>The slope of the fitted line.  |
-| double | **[se](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-se)** <br>The standard error of the slope.  |
-| double | **[tstat](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-tstat)** <br>The t-statistic of the test.  |
-| double | **[pval](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-pval)** <br>The p-value of the test.  |
+| float | **[slope](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-slope)** <br>The slope of the fitted line.  |
+| float | **[se](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-se)** <br>The standard error of the slope.  |
+| float | **[tstat](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-tstat)** <br>The t-statistic of the test.  |
+| float | **[pval](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-pval)** <br>The p-value of the test.  |
 | bool | **[sig](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-sig)** <br>The significance of the test.  |
-| double | **[df](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-df)** <br>The degree-of-freedom of the test.  |
+| float | **[df](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/#variable-df)** <br>The degree-of-freedom of the test.  |
 
 ## Detailed Description
 
@@ -52,7 +52,7 @@ static inline std::vector< std::string > Columns()
 ### variable slope
 
 ```cpp
-double slope;
+float slope;
 ```
 
 The slope of the fitted line. 
@@ -60,7 +60,7 @@ The slope of the fitted line.
 ### variable se
 
 ```cpp
-double se;
+float se;
 ```
 
 The standard error of the slope. 
@@ -68,7 +68,7 @@ The standard error of the slope.
 ### variable tstat
 
 ```cpp
-double tstat;
+float tstat;
 ```
 
 The t-statistic of the test. 
@@ -76,7 +76,7 @@ The t-statistic of the test.
 ### variable pval
 
 ```cpp
-double pval;
+float pval;
 ```
 
 The p-value of the test. 
@@ -92,11 +92,11 @@ The significance of the test.
 ### variable df
 
 ```cpp
-double df;
+float df;
 ```
 
 The degree-of-freedom of the test. 
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

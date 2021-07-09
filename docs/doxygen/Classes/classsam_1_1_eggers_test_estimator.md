@@ -31,7 +31,7 @@ Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
 | | **[EggersTestEstimator](/doxygen/Classes/classsam_1_1_eggers_test_estimator/#function-eggerstestestimator)**() =default |
 | | **[EggersTestEstimator](/doxygen/Classes/classsam_1_1_eggers_test_estimator/#function-eggerstestestimator)**(const [Parameters](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_parameters/) & p) |
 | virtual void | **[estimate](/doxygen/Classes/classsam_1_1_eggers_test_estimator/#function-estimate)**([Journal](/doxygen/Classes/classsam_1_1_journal/) * journal) |
-| [ResultType](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/) | **[EggersTest](/doxygen/Classes/classsam_1_1_eggers_test_estimator/#function-eggerstest)**(const arma::Row< double > & yi, const arma::Row< double > & vi, double alpha) |
+| [ResultType](/doxygen/Classes/structsam_1_1_eggers_test_estimator_1_1_result_type/) | **[EggersTest](/doxygen/Classes/classsam_1_1_eggers_test_estimator/#function-eggerstest)**(const arma::Row< float > & yi, const arma::Row< float > & vi, float alpha) |
 
 ## Public Attributes
 
@@ -95,9 +95,9 @@ virtual void estimate(
 
 ```cpp
 static ResultType EggersTest(
-    const arma::Row< double > & yi,
-    const arma::Row< double > & vi,
-    double alpha
+    const arma::Row< float > & yi,
+    const arma::Row< float > & vi,
+    float alpha
 )
 ```
 
@@ -113,4 +113,4 @@ Parameters params;
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

@@ -24,7 +24,7 @@ summary: Parameter of Random Selection review strategy.
 |                | Name           |
 | -------------- | -------------- |
 | [SelectionMethod](/doxygen/Namespaces/namespacesam/#enum-selectionmethod) | **[name](/doxygen/Classes/structsam_1_1_random_selection_1_1_parameters/#variable-name)**  |
-| double | **[acceptance_rate](/doxygen/Classes/structsam_1_1_random_selection_1_1_parameters/#variable-acceptance_rate)** <br>Indicates the acceptance rate of the [Journal](/doxygen/Classes/classsam_1_1_journal/).  |
+| float | **[acceptance_rate](/doxygen/Classes/structsam_1_1_random_selection_1_1_parameters/#variable-acceptance_rate)** <br>Indicates the acceptance rate of the [Journal](/doxygen/Classes/classsam_1_1_journal/).  |
 
 ## Public Functions Documentation
 
@@ -51,11 +51,11 @@ SelectionMethod name = SelectionMethod::RandomSelection;
 ### variable acceptance_rate
 
 ```cpp
-double acceptance_rate {};
+float acceptance_rate {};
 ```
 
 Indicates the acceptance rate of the [Journal](/doxygen/Classes/classsam_1_1_journal/). 
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:48 CEST

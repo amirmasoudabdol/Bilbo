@@ -25,8 +25,8 @@ title: sam::SignificantSelection::Parameters
 |                | Name           |
 | -------------- | -------------- |
 | [SelectionMethod](/doxygen/Namespaces/namespacesam/#enum-selectionmethod) | **[name](/doxygen/Classes/structsam_1_1_significant_selection_1_1_parameters/#variable-name)** <br>Selection strategy name.  |
-| double | **[alpha](/doxygen/Classes/structsam_1_1_significant_selection_1_1_parameters/#variable-alpha)**  |
-| double | **[pub_bias_rate](/doxygen/Classes/structsam_1_1_significant_selection_1_1_parameters/#variable-pub_bias_rate)** <br>Publication bias rate.  |
+| float | **[alpha](/doxygen/Classes/structsam_1_1_significant_selection_1_1_parameters/#variable-alpha)**  |
+| float | **[pub_bias_rate](/doxygen/Classes/structsam_1_1_significant_selection_1_1_parameters/#variable-pub_bias_rate)** <br>Publication bias rate.  |
 | int | **[side](/doxygen/Classes/structsam_1_1_significant_selection_1_1_parameters/#variable-side)**  |
 
 ## Detailed Description
@@ -66,7 +66,7 @@ Selection strategy name.
 ### variable alpha
 
 ```cpp
-double alpha {};
+float alpha {};
 ```
 
 
@@ -76,7 +76,7 @@ The \alpha at which the _review strategy_ decides the significance of a publicat
 ### variable pub_bias_rate
 
 ```cpp
-double pub_bias_rate {};
+float pub_bias_rate {};
 ```
 
 Publication bias rate. 
@@ -93,4 +93,4 @@ Indicates the _selection strategy_'s preference toward positive, `1`, or negativ
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:48 CEST

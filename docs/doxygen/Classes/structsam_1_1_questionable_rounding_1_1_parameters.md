@@ -14,21 +14,16 @@ title: sam::QuestionableRounding::Parameters
 
 `#include <HackingStrategy.h>`
 
-## Public Functions
-
-|                | Name           |
-| -------------- | -------------- |
-| | **[NLOHMANN_DEFINE_TYPE_INTRUSIVE](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#function-nlohmann_define_type_intrusive)**([QuestionableRounding::Parameters](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/) , name , [threshold](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-threshold) , [rounding_method](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-rounding_method) , prevalence , defensibility , stage ) |
-
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
 | HackingMethod | **[name](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-name)**  |
-| double | **[threshold](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-threshold)**  |
+| HackingTarget | **[target](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-target)**  |
+| float | **[threshold](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-threshold)**  |
 | std::string | **[rounding_method](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-rounding_method)**  |
-| double | **[prevalence](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-prevalence)**  |
-| double | **[defensibility](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-defensibility)**  |
+| std::optional< float > | **[prevalence](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-prevalence)** <br>The prevalence factor of the strategy.  |
+| std::optional< float > | **[defensibility](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-defensibility)** <br>The defensibility factor of the strategy.  |
 | HackingStage | **[stage](/doxygen/Classes/structsam_1_1_questionable_rounding_1_1_parameters/#variable-stage)**  |
 
 ## Detailed Description
@@ -55,28 +50,6 @@ Example usage:
 
 _Filename: .json_
 
-## Public Functions Documentation
-
-### function NLOHMANN_DEFINE_TYPE_INTRUSIVE
-
-```cpp
-NLOHMANN_DEFINE_TYPE_INTRUSIVE(
-    QuestionableRounding::Parameters ,
-    name ,
-    threshold ,
-    rounding_method ,
-    prevalence ,
-    defensibility ,
-    stage 
-)
-```
-
-
-**Note**: While this mostly works fine, there is one drawback that it cannot handle missing argument. The change is in nlohmann list and when released, I can use optional and this macro will handle everything just fine 
-
-This is a helper macro that generates from/to_json methods for this struct. 
-
-
 ## Public Attributes Documentation
 
 ### variable name
@@ -86,10 +59,17 @@ HackingMethod name = HackingMethod::QuestionableRounding;
 ```
 
 
+### variable target
+
+```cpp
+HackingTarget target {HackingTarget::Treatment};
+```
+
+
 ### variable threshold
 
 ```cpp
-double threshold {0.005};
+float threshold;
 ```
 
 
@@ -113,16 +93,18 @@ TodoI cna possibly add more methods here, e.g.,
 ### variable prevalence
 
 ```cpp
-double prevalence {0.9};
+std::optional< float > prevalence;
 ```
 
+The prevalence factor of the strategy. 
 
 ### variable defensibility
 
 ```cpp
-double defensibility {0.7};
+std::optional< float > defensibility;
 ```
 
+The defensibility factor of the strategy. 
 
 ### variable stage
 
@@ -133,4 +115,4 @@ HackingStage stage {HackingStage::Reporting};
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

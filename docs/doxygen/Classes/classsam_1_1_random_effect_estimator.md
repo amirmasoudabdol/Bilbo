@@ -29,9 +29,9 @@ Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
 | | **[RandomEffectEstimator](/doxygen/Classes/classsam_1_1_random_effect_estimator/#function-randomeffectestimator)**() =default |
 | | **[RandomEffectEstimator](/doxygen/Classes/classsam_1_1_random_effect_estimator/#function-randomeffectestimator)**(const [Parameters](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_parameters/) & p) |
 | virtual void | **[estimate](/doxygen/Classes/classsam_1_1_random_effect_estimator/#function-estimate)**([Journal](/doxygen/Classes/classsam_1_1_journal/) * journal) |
-| double | **[DL](/doxygen/Classes/classsam_1_1_random_effect_estimator/#function-dl)**(const arma::Row< double > & yi, const arma::Row< double > & vi, const arma::Row< double > & ai) |
-| double | **[PM](/doxygen/Classes/classsam_1_1_random_effect_estimator/#function-pm)**(const arma::Row< double > & yi, const arma::Row< double > & vi, const double tau2) |
-| [ResultType](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/) | **[RandomEffect](/doxygen/Classes/classsam_1_1_random_effect_estimator/#function-randomeffect)**(const arma::Row< double > & vi, const arma::Row< double > & yi, double tau2) |
+| float | **[DL](/doxygen/Classes/classsam_1_1_random_effect_estimator/#function-dl)**(const arma::Row< float > & yi, const arma::Row< float > & vi, const arma::Row< float > & ai) |
+| float | **[PM](/doxygen/Classes/classsam_1_1_random_effect_estimator/#function-pm)**(const arma::Row< float > & yi, const arma::Row< float > & vi, const float tau2) |
+| [ResultType](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/) | **[RandomEffect](/doxygen/Classes/classsam_1_1_random_effect_estimator/#function-randomeffect)**(const arma::Row< float > & vi, const arma::Row< float > & yi, float tau2) |
 
 ## Public Attributes
 
@@ -84,10 +84,10 @@ virtual void estimate(
 ### function DL
 
 ```cpp
-double DL(
-    const arma::Row< double > & yi,
-    const arma::Row< double > & vi,
-    const arma::Row< double > & ai
+float DL(
+    const arma::Row< float > & yi,
+    const arma::Row< float > & vi,
+    const arma::Row< float > & ai
 )
 ```
 
@@ -95,10 +95,10 @@ double DL(
 ### function PM
 
 ```cpp
-double PM(
-    const arma::Row< double > & yi,
-    const arma::Row< double > & vi,
-    const double tau2
+float PM(
+    const arma::Row< float > & yi,
+    const arma::Row< float > & vi,
+    const float tau2
 )
 ```
 
@@ -107,9 +107,9 @@ double PM(
 
 ```cpp
 static ResultType RandomEffect(
-    const arma::Row< double > & vi,
-    const arma::Row< double > & yi,
-    double tau2
+    const arma::Row< float > & vi,
+    const arma::Row< float > & yi,
+    float tau2
 )
 ```
 
@@ -125,4 +125,4 @@ Parameters params;
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

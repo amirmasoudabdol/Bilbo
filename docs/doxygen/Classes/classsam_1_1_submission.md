@@ -1,26 +1,9 @@
 ---
 title: sam::Submission
 
-
 ---
 
 # sam::Submission
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -28,13 +11,14 @@ title: sam::Submission
 
 |                | Name           |
 | -------------- | -------------- |
-| std::vector< std::string > | **[Columns](/doxygen/Classes/classsam_1_1_submission/#function-columns)**()  |
-|  | **[Submission](/doxygen/Classes/classsam_1_1_submission/#function-submission)**() =default  |
-|  | **[Submission](/doxygen/Classes/classsam_1_1_submission/#function-submission)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) & e, const int & index)  |
-|  | **[~Submission](/doxygen/Classes/classsam_1_1_submission/#function-~submission)**() =default  |
-| bool | **[isSig](/doxygen/Classes/classsam_1_1_submission/#function-issig)**() const  |
-|  | **[operator arma::Row< double >](/doxygen/Classes/classsam_1_1_submission/#function-operator-armarow<-double->)**()  |
-
+| bool | **[isSig](/doxygen/Classes/classsam_1_1_submission/#function-issig)**() const |
+| bool | **[isHacked](/doxygen/Classes/classsam_1_1_submission/#function-ishacked)**() const |
+| bool | **[isCandidate](/doxygen/Classes/classsam_1_1_submission/#function-iscandidate)**() const |
+| std::vector< std::string > | **[Columns](/doxygen/Classes/classsam_1_1_submission/#function-columns)**()<br>Somewhat of a buffer for storing and returning a csv rows.  |
+| | **[Submission](/doxygen/Classes/classsam_1_1_submission/#function-submission)**() =default |
+| | **[Submission](/doxygen/Classes/classsam_1_1_submission/#function-submission)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) & e, const int & index) |
+| | **[Submission](/doxygen/Classes/classsam_1_1_submission/#function-submission)**(int sim_id, int expr_id, int rep_id, int pub_id, [DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) dv) |
+| | **[~Submission](/doxygen/Classes/classsam_1_1_submission/#function-~submission)**() =default |
 
 ## Public Attributes
 
@@ -42,100 +26,49 @@ title: sam::Submission
 | -------------- | -------------- |
 | int | **[simid](/doxygen/Classes/classsam_1_1_submission/#variable-simid)** <br>Simulation ID.  |
 | int | **[exprid](/doxygen/Classes/classsam_1_1_submission/#variable-exprid)** <br>[Experiment](/doxygen/Classes/classsam_1_1_experiment/) ID.  |
-| int | **[repid](/doxygen/Classes/classsam_1_1_submission/#variable-repid)** <br>Replicaiton ID.  |
+| int | **[repid](/doxygen/Classes/classsam_1_1_submission/#variable-repid)** <br>Replication ID.  |
 | int | **[pubid](/doxygen/Classes/classsam_1_1_submission/#variable-pubid)** <br>Publication ID.  |
-| int | **[tnobs](/doxygen/Classes/classsam_1_1_submission/#variable-tnobs)** <br>Index of the selected group.  |
-| [Group](/doxygen/Classes/classsam_1_1_group/) | **[group_](/doxygen/Classes/classsam_1_1_submission/#variable-group_)**  |
-
-
-## Friends
-
-|                | Name           |
-| -------------- | -------------- |
-| OStream & | **[operator<<](/doxygen/Classes/classsam_1_1_submission/#friend-operator<<)**(OStream & os, const [Submission](/doxygen/Classes/classsam_1_1_submission/) & s)  |
-
-
-
-
-
-
-
-
-
-
-
+| [DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) | **[dv_](/doxygen/Classes/classsam_1_1_submission/#variable-dv_)**  |
 
 ## Public Functions Documentation
 
-### function `Columns`
+### function isSig
+
+```cpp
+inline bool isSig() const
+```
+
+
+### function isHacked
+
+```cpp
+inline bool isHacked() const
+```
+
+
+### function isCandidate
+
+```cpp
+inline bool isCandidate() const
+```
+
+
+### function Columns
 
 ```cpp
 static std::vector< std::string > Columns()
 ```
 
+Somewhat of a buffer for storing and returning a csv rows. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `Submission`
+### function Submission
 
 ```cpp
 Submission() =default
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `Submission`
+### function Submission
 
 ```cpp
 Submission(
@@ -145,141 +78,29 @@ Submission(
 ```
 
 
+### function Submission
+
+```cpp
+Submission(
+    int sim_id,
+    int expr_id,
+    int rep_id,
+    int pub_id,
+    DependentVariable dv
+)
+```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `~Submission`
+### function ~Submission
 
 ```cpp
 ~Submission() =default
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `isSig`
-
-```cpp
-inline bool isSig() const
-```
-
-
-
-
-
-
-
-
-**Return**: `true` if the [Submission](/doxygen/Classes/classsam_1_1_submission/) is significant, `false` otherwise 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `operator arma::Row< double >`
-
-```cpp
-operator arma::Row< double >()
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Attributes Documentation
 
-### variable `simid`
+### variable simid
 
 ```cpp
 int simid {0};
@@ -287,34 +108,7 @@ int simid {0};
 
 Simulation ID. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `exprid`
+### variable exprid
 
 ```cpp
 int exprid {0};
@@ -322,69 +116,15 @@ int exprid {0};
 
 [Experiment](/doxygen/Classes/classsam_1_1_experiment/) ID. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `repid`
+### variable repid
 
 ```cpp
 int repid {0};
 ```
 
-Replicaiton ID. 
+Replication ID. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `pubid`
+### variable pubid
 
 ```cpp
 int pubid {0};
@@ -392,143 +132,13 @@ int pubid {0};
 
 Publication ID. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `tnobs`
+### variable dv_
 
 ```cpp
-int tnobs;
-```
-
-Index of the selected group. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-True number of observations 
-
-
-### variable `group_`
-
-```cpp
-Group group_;
+DependentVariable dv_;
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Friends
-
-### friend `operator<<`
-
-```cpp
-friend OStream & operator<<(
-    OStream & os,
-    const Submission & s
-);
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on 29 June 2021 at 16:13:47 CEST

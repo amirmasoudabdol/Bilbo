@@ -25,7 +25,7 @@ Inherits from [sam::TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/)
 | | **[WilcoxonTest](/doxygen/Classes/classsam_1_1_wilcoxon_test/#function-wilcoxontest)**(const [Parameters](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_parameters/) & p) |
 | virtual void | **[run](/doxygen/Classes/classsam_1_1_wilcoxon_test/#function-run)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment) override |
 | virtual void | **[run](/doxygen/Classes/classsam_1_1_wilcoxon_test/#function-run)**([DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) & group_1, [DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) & group_2) override |
-| [ResultType](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_result_type/) | **[wilcoxon_test](/doxygen/Classes/classsam_1_1_wilcoxon_test/#function-wilcoxon_test)**(const arma::Row< double > & x, const arma::Row< double > & y, double alpha, double use_continuity, const [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative) |
+| [ResultType](/doxygen/Classes/structsam_1_1_wilcoxon_test_1_1_result_type/) | **[wilcoxon_test](/doxygen/Classes/classsam_1_1_wilcoxon_test/#function-wilcoxon_test)**(const arma::Row< float > & x, const arma::Row< float > & y, float alpha, float use_continuity, const [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) alternative) |
 
 ## Public Attributes
 
@@ -47,14 +47,14 @@ Inherits from [sam::TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/)
 |                | Name           |
 | -------------- | -------------- |
 | virtual | **[~TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/#function-~teststrategy)**() =0 |
-| virtual double | **[alpha](/doxygen/Classes/classsam_1_1_test_strategy/#function-alpha)**() |
+| virtual float | **[alpha](/doxygen/Classes/classsam_1_1_test_strategy/#function-alpha)**() |
 | std::unique_ptr< [TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/) > | **[build](/doxygen/Classes/classsam_1_1_test_strategy/#function-build)**(json & test_strategy_config) |
 
 **Public Attributes inherited from [sam::TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/)**
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[alpha_](/doxygen/Classes/classsam_1_1_test_strategy/#variable-alpha_)**  |
+| float | **[alpha_](/doxygen/Classes/classsam_1_1_test_strategy/#variable-alpha_)**  |
 
 
 ## Public Functions Documentation
@@ -97,10 +97,10 @@ inline virtual void run(
 
 ```cpp
 static ResultType wilcoxon_test(
-    const arma::Row< double > & x,
-    const arma::Row< double > & y,
-    double alpha,
-    double use_continuity,
+    const arma::Row< float > & x,
+    const arma::Row< float > & y,
+    float alpha,
+    float use_continuity,
     const TestStrategy::TestAlternative alternative
 )
 ```
@@ -117,4 +117,4 @@ Parameters params;
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:22 CEST
+Updated on 29 June 2021 at 16:13:48 CEST

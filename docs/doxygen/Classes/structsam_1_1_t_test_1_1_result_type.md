@@ -11,9 +11,9 @@ title: sam::TTest::ResultType
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[tstat](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/#variable-tstat)**  |
-| double | **[df](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/#variable-df)**  |
-| double | **[pvalue](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/#variable-pvalue)**  |
+| float | **[tstat](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/#variable-tstat)**  |
+| float | **[df](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/#variable-df)**  |
+| float | **[pvalue](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/#variable-pvalue)**  |
 | int | **[side](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/#variable-side)**  |
 | bool | **[sig](/doxygen/Classes/structsam_1_1_t_test_1_1_result_type/#variable-sig)**  |
 
@@ -28,21 +28,21 @@ title: sam::TTest::ResultType
 ### variable tstat
 
 ```cpp
-double tstat;
+float tstat;
 ```
 
 
 ### variable df
 
 ```cpp
-double df;
+float df;
 ```
 
 
 ### variable pvalue
 
 ```cpp
-double pvalue;
+float pvalue;
 ```
 
 
@@ -75,4 +75,4 @@ friend std::ostream & operator<<(
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:48 CEST

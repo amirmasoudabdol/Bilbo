@@ -25,7 +25,7 @@ Inherits from [sam::TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/)
 | | **[FTest](/doxygen/Classes/classsam_1_1_f_test/#function-ftest)**(const [Parameters](/doxygen/Classes/structsam_1_1_f_test_1_1_parameters/) & p) |
 | virtual void | **[run](/doxygen/Classes/classsam_1_1_f_test/#function-run)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * experiment) override |
 | virtual void | **[run](/doxygen/Classes/classsam_1_1_f_test/#function-run)**([DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) & group_1, [DependentVariable](/doxygen/Classes/classsam_1_1_dependent_variable/) & group_2) override |
-| [ResultType](/doxygen/Classes/structsam_1_1_f_test_1_1_result_type/) | **[f_test](/doxygen/Classes/classsam_1_1_f_test/#function-f_test)**(double Sd1, unsigned Sn1, double Sd2, unsigned Sn2, double alpha) |
+| [ResultType](/doxygen/Classes/structsam_1_1_f_test_1_1_result_type/) | **[f_test](/doxygen/Classes/classsam_1_1_f_test/#function-f_test)**(float Sd1, unsigned Sn1, float Sd2, unsigned Sn2, float alpha) |
 
 ## Public Attributes
 
@@ -47,14 +47,14 @@ Inherits from [sam::TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/)
 |                | Name           |
 | -------------- | -------------- |
 | virtual | **[~TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/#function-~teststrategy)**() =0 |
-| virtual double | **[alpha](/doxygen/Classes/classsam_1_1_test_strategy/#function-alpha)**() |
+| virtual float | **[alpha](/doxygen/Classes/classsam_1_1_test_strategy/#function-alpha)**() |
 | std::unique_ptr< [TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/) > | **[build](/doxygen/Classes/classsam_1_1_test_strategy/#function-build)**(json & test_strategy_config) |
 
 **Public Attributes inherited from [sam::TestStrategy](/doxygen/Classes/classsam_1_1_test_strategy/)**
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[alpha_](/doxygen/Classes/classsam_1_1_test_strategy/#variable-alpha_)**  |
+| float | **[alpha_](/doxygen/Classes/classsam_1_1_test_strategy/#variable-alpha_)**  |
 
 
 ## Public Functions Documentation
@@ -97,11 +97,11 @@ inline virtual void run(
 
 ```cpp
 static ResultType f_test(
-    double Sd1,
+    float Sd1,
     unsigned Sn1,
-    double Sd2,
+    float Sd2,
     unsigned Sn2,
-    double alpha
+    float alpha
 )
 ```
 
@@ -117,4 +117,4 @@ Parameters params;
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:48 CEST

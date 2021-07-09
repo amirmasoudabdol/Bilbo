@@ -18,15 +18,15 @@ title: sam::RandomEffectEstimator::ResultType
 
 |                | Name           |
 | -------------- | -------------- |
-| double | **[est](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-est)**  |
-| double | **[se](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-se)**  |
-| double | **[ci_lb](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-ci_lb)**  |
-| double | **[ci_ub](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-ci_ub)**  |
-| double | **[zval](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-zval)**  |
-| double | **[pval](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-pval)**  |
-| double | **[q_stat](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-q_stat)**  |
-| double | **[q_pval](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-q_pval)**  |
-| double | **[tau2](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-tau2)**  |
+| float | **[est](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-est)**  |
+| float | **[se](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-se)**  |
+| float | **[ci_lb](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-ci_lb)**  |
+| float | **[ci_ub](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-ci_ub)**  |
+| float | **[zval](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-zval)**  |
+| float | **[pval](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-pval)**  |
+| float | **[q_stat](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-q_stat)**  |
+| float | **[q_pval](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-q_pval)**  |
+| float | **[tau2](/doxygen/Classes/structsam_1_1_random_effect_estimator_1_1_result_type/#variable-tau2)**  |
 
 ## Friends
 
@@ -55,63 +55,63 @@ static inline std::vector< std::string > Columns()
 ### variable est
 
 ```cpp
-double est;
+float est;
 ```
 
 
 ### variable se
 
 ```cpp
-double se;
+float se;
 ```
 
 
 ### variable ci_lb
 
 ```cpp
-double ci_lb;
+float ci_lb;
 ```
 
 
 ### variable ci_ub
 
 ```cpp
-double ci_ub;
+float ci_ub;
 ```
 
 
 ### variable zval
 
 ```cpp
-double zval;
+float zval;
 ```
 
 
 ### variable pval
 
 ```cpp
-double pval;
+float pval;
 ```
 
 
 ### variable q_stat
 
 ```cpp
-double q_stat;
+float q_stat;
 ```
 
 
 ### variable q_pval
 
 ```cpp
-double q_pval;
+float q_pval;
 ```
 
 
 ### variable tau2
 
 ```cpp
-double tau2;
+float tau2;
 ```
 
 
@@ -130,4 +130,4 @@ friend ostream & operator<<(
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

@@ -1,28 +1,9 @@
 ---
 title: sam::FrankenbachStrategy::Parameters
 
-
 ---
 
 # sam::FrankenbachStrategy::Parameters
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -31,234 +12,56 @@ title: sam::FrankenbachStrategy::Parameters
 |                | Name           |
 | -------------- | -------------- |
 | std::string | **[method](/doxygen/Classes/structsam_1_1_frankenbach_strategy_1_1_parameters/#variable-method)**  |
-| double | **[base_hp](/doxygen/Classes/structsam_1_1_frankenbach_strategy_1_1_parameters/#variable-base_hp)**  |
-| double | **[lo_se](/doxygen/Classes/structsam_1_1_frankenbach_strategy_1_1_parameters/#variable-lo_se)**  |
-| double | **[hi_se](/doxygen/Classes/structsam_1_1_frankenbach_strategy_1_1_parameters/#variable-hi_se)**  |
-| double | **[min_se](/doxygen/Classes/structsam_1_1_frankenbach_strategy_1_1_parameters/#variable-min_se)**  |
-| double | **[max_se](/doxygen/Classes/structsam_1_1_frankenbach_strategy_1_1_parameters/#variable-max_se)**  |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| float | **[base_hp](/doxygen/Classes/structsam_1_1_frankenbach_strategy_1_1_parameters/#variable-base_hp)**  |
+| float | **[lo_se](/doxygen/Classes/structsam_1_1_frankenbach_strategy_1_1_parameters/#variable-lo_se)**  |
+| float | **[hi_se](/doxygen/Classes/structsam_1_1_frankenbach_strategy_1_1_parameters/#variable-hi_se)**  |
+| float | **[min_se](/doxygen/Classes/structsam_1_1_frankenbach_strategy_1_1_parameters/#variable-min_se)**  |
+| float | **[max_se](/doxygen/Classes/structsam_1_1_frankenbach_strategy_1_1_parameters/#variable-max_se)**  |
 
 ## Public Attributes Documentation
 
-### variable `method`
+### variable method
 
 ```cpp
 std::string method {"FrankenbachStrategy"};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `base_hp`
+### variable base_hp
 
 ```cpp
-double base_hp {0};
+float base_hp {0};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `lo_se`
+### variable lo_se
 
 ```cpp
-double lo_se {0.4};
+float lo_se {0.4};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `hi_se`
+### variable hi_se
 
 ```cpp
-double hi_se {0.6};
+float hi_se {0.6};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `min_se`
+### variable min_se
 
 ```cpp
-double min_se {0.1};
+float min_se {0.1};
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `max_se`
+### variable max_se
 
 ```cpp
-double max_se {0.6};
+float max_se {0.6};
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on 29 June 2021 at 16:13:46 CEST

@@ -19,8 +19,8 @@ title: sam::YuenTest::Parameters
 | -------------- | -------------- |
 | [TestMethod](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testmethod) | **[name](/doxygen/Classes/structsam_1_1_yuen_test_1_1_parameters/#variable-name)**  |
 | [TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) | **[alternative](/doxygen/Classes/structsam_1_1_yuen_test_1_1_parameters/#variable-alternative)**  |
-| double | **[alpha](/doxygen/Classes/structsam_1_1_yuen_test_1_1_parameters/#variable-alpha)**  |
-| double | **[trim](/doxygen/Classes/structsam_1_1_yuen_test_1_1_parameters/#variable-trim)**  |
+| float | **[alpha](/doxygen/Classes/structsam_1_1_yuen_test_1_1_parameters/#variable-alpha)**  |
+| float | **[trim](/doxygen/Classes/structsam_1_1_yuen_test_1_1_parameters/#variable-trim)**  |
 | bool | **[paired](/doxygen/Classes/structsam_1_1_yuen_test_1_1_parameters/#variable-paired)**  |
 
 ## Public Functions Documentation
@@ -58,14 +58,14 @@ TestAlternative alternative = TestAlternative::TwoSided;
 ### variable alpha
 
 ```cpp
-double alpha {0.05};
+float alpha {0.05};
 ```
 
 
 ### variable trim
 
 ```cpp
-double trim {0.20};
+float trim {0.20};
 ```
 
 
@@ -78,4 +78,4 @@ bool paired {false};
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:22 CEST
+Updated on 29 June 2021 at 16:13:48 CEST

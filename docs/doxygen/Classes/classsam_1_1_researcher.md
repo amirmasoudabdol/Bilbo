@@ -1,6 +1,6 @@
 ---
 title: sam::Researcher
-
+summary: This class describes a researcher. 
 
 ---
 
@@ -8,61 +8,37 @@ title: sam::Researcher
 
 
 
+This class describes a researcher.  [More...](#detailed-description)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+`#include <Researcher.h>`
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[Researcher](/doxygen/Classes/classsam_1_1_researcher/#function-researcher)**() =default  |
-| bool | **[isHacker](/doxygen/Classes/classsam_1_1_researcher/#function-ishacker)**()  |
-| bool | **[isCommittingToTheHack](/doxygen/Classes/classsam_1_1_researcher/#function-iscommittingtothehack)**([HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strategy/) * hs)  |
-| void | **[preProcessData](/doxygen/Classes/classsam_1_1_researcher/#function-preprocessdata)**()  |
-| void | **[research](/doxygen/Classes/classsam_1_1_researcher/#function-research)**() <br>Executing the research workflow.  |
-| void | **[letTheHackBegin](/doxygen/Classes/classsam_1_1_researcher/#function-letthehackbegin)**()  |
-| void | **[randomizeParameters](/doxygen/Classes/classsam_1_1_researcher/#function-randomizeparameters)**()  |
-| void | **[reorderHackingStrategies](/doxygen/Classes/classsam_1_1_researcher/#function-reorderhackingstrategies)**(HackingWorkflow & hw, std::string priority) <br>Re-order the hacking strategies according the priority.  |
-| void | **[checkAndsubmitTheResearch](/doxygen/Classes/classsam_1_1_researcher/#function-checkandsubmittheresearch)**(const std::optional< [Submission](/doxygen/Classes/classsam_1_1_submission/) > & sub) <br>Checking the final submission and submitting it to the [Journal](/doxygen/Classes/classsam_1_1_journal/).  |
-| void | **[computeStuff](/doxygen/Classes/classsam_1_1_researcher/#function-computestuff)**()  |
-| void | **[setDecisionStrategy](/doxygen/Classes/classsam_1_1_researcher/#function-setdecisionstrategy)**(std::unique_ptr< [DecisionStrategy](/doxygen/Classes/classsam_1_1_decision_strategy/) > ds)  |
-| [ResearcherBuilder](/doxygen/Classes/classsam_1_1_researcher_builder/) | **[create](/doxygen/Classes/classsam_1_1_researcher/#function-create)**(std::string name)  |
-
+| | **[Researcher](/doxygen/Classes/classsam_1_1_researcher/#function-researcher)**() =default |
+| void | **[preProcessData](/doxygen/Classes/classsam_1_1_researcher/#function-preprocessdata)**()<br>Applies the pro-processing methods on the [Experiment](/doxygen/Classes/classsam_1_1_experiment/).  |
+| bool | **[isHacker](/doxygen/Classes/classsam_1_1_researcher/#function-ishacker)**()<br>Determines whether the [Researcher](/doxygen/Classes/classsam_1_1_researcher/) is a hacker.  |
+| bool | **[isCommittingToTheHack](/doxygen/Classes/classsam_1_1_researcher/#function-iscommittingtothehack)**([HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strategy/) * hs)<br>Determines whether the [Researcher](/doxygen/Classes/classsam_1_1_researcher/) will commit to the given hack.  |
+| void | **[research](/doxygen/Classes/classsam_1_1_researcher/#function-research)**()<br>Perform the Research.  |
+| std::optional< SubmissionPool > | **[hackTheResearch](/doxygen/Classes/classsam_1_1_researcher/#function-hacktheresearch)**()<br>Applies the HackingWorkflow on the [Experiment](/doxygen/Classes/classsam_1_1_experiment/).  |
+| void | **[randomizeHackingStrategies](/doxygen/Classes/classsam_1_1_researcher/#function-randomizehackingstrategies)**()<br>Randomizes the internal state of the [Researcher](/doxygen/Classes/classsam_1_1_researcher/).  |
+| void | **[submitTheResearch](/doxygen/Classes/classsam_1_1_researcher/#function-submittheresearch)**(const std::optional< std::vector< [Submission](/doxygen/Classes/classsam_1_1_submission/) >> & subs)<br>Evaluating the candidates and submitting them to the [Journal](/doxygen/Classes/classsam_1_1_journal/).  |
+| void | **[computeStuff](/doxygen/Classes/classsam_1_1_researcher/#function-computestuff)**() const<br>A helper function for re-computing all statistics at once.  |
+| void | **[reset](/doxygen/Classes/classsam_1_1_researcher/#function-reset)**()<br>Resets the internal state of the [Researcher](/doxygen/Classes/classsam_1_1_researcher/).  |
+| [ResearcherBuilder](/doxygen/Classes/classsam_1_1_researcher_builder/) | **[create](/doxygen/Classes/classsam_1_1_researcher/#function-create)**(std::string name) |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| std::unique_ptr< [Experiment](/doxygen/Classes/classsam_1_1_experiment/) > | **[experiment](/doxygen/Classes/classsam_1_1_researcher/#variable-experiment)**  |
-| std::shared_ptr< [Journal](/doxygen/Classes/classsam_1_1_journal/) > | **[journal](/doxygen/Classes/classsam_1_1_researcher/#variable-journal)**  |
-| std::unique_ptr< [DecisionStrategy](/doxygen/Classes/classsam_1_1_decision_strategy/) > | **[decision_strategy](/doxygen/Classes/classsam_1_1_researcher/#variable-decision_strategy)**  |
-| std::vector< std::vector< std::unique_ptr< [HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strategy/) > > > | **[hacking_strategies](/doxygen/Classes/classsam_1_1_researcher/#variable-hacking_strategies)**  |
-| bool | **[is_pre_processing](/doxygen/Classes/classsam_1_1_researcher/#variable-is_pre_processing)**  |
 | std::vector< std::unique_ptr< [HackingStrategy](/doxygen/Classes/classsam_1_1_hacking_strategy/) > > | **[pre_processing_methods](/doxygen/Classes/classsam_1_1_researcher/#variable-pre_processing_methods)**  |
-| size_t | **[n_hacks](/doxygen/Classes/classsam_1_1_researcher/#variable-n_hacks)** <br>Number of hacking strategies to be choosen from the given list of strategies.  |
-| bool | **[reselect_hacking_strategies_after_every_simulation](/doxygen/Classes/classsam_1_1_researcher/#variable-reselect_hacking_strategies_after_every_simulation)**  |
-| std::string | **[hacking_selection_priority](/doxygen/Classes/classsam_1_1_researcher/#variable-hacking_selection_priority)**  |
-| std::string | **[hacking_execution_order](/doxygen/Classes/classsam_1_1_researcher/#variable-hacking_execution_order)** <br>Indicates the execution order of selected/given hacking strategies.  |
-| [Parameter](/doxygen/Classes/classsam_1_1_parameter/)< double > | **[probability_of_being_a_hacker](/doxygen/Classes/classsam_1_1_researcher/#variable-probability_of_being_a_hacker)** <br>Indicates the probablity of a [Researcher](/doxygen/Classes/classsam_1_1_researcher/)_deciding_ to go for hacking an [Experiment](/doxygen/Classes/classsam_1_1_experiment/).  |
-| std::variant< double, std::string, Distribution, std::unique_ptr< [HackingProbabilityStrategy](/doxygen/Classes/classsam_1_1_hacking_probability_strategy/) > > | **[probability_of_committing_a_hack](/doxygen/Classes/classsam_1_1_researcher/#variable-probability_of_committing_a_hack)** <br>Indicates the probablity of a [Researcher](/doxygen/Classes/classsam_1_1_researcher/)_actally applying_ a choosen hacking strategy.  |
-| double | **[submission_probability](/doxygen/Classes/classsam_1_1_researcher/#variable-submission_probability)**  |
-| SubmissionPool | **[submissions_from_reps](/doxygen/Classes/classsam_1_1_researcher/#variable-submissions_from_reps)** <br>A [Submission]() record that [Researcher](/doxygen/Classes/classsam_1_1_researcher/) is going to submit to the [Journal](/doxygen/Classes/classsam_1_1_journal/).  |
-| HackingWorkflow | **[original_workflow](/doxygen/Classes/classsam_1_1_researcher/#variable-original_workflow)**  |
-| HackingWorkflow | **[h_workflow](/doxygen/Classes/classsam_1_1_researcher/#variable-h_workflow)**  |
-
+| std::unique_ptr< [Experiment](/doxygen/Classes/classsam_1_1_experiment/) > | **[experiment](/doxygen/Classes/classsam_1_1_researcher/#variable-experiment)** <br>[Researcher](/doxygen/Classes/classsam_1_1_researcher/)'s [Experiment](/doxygen/Classes/classsam_1_1_experiment/).  |
+| std::shared_ptr< [Journal](/doxygen/Classes/classsam_1_1_journal/) > | **[journal](/doxygen/Classes/classsam_1_1_researcher/#variable-journal)** <br>[Researcher](/doxygen/Classes/classsam_1_1_researcher/)'s [Journal](/doxygen/Classes/classsam_1_1_journal/) of choice!  |
+| std::unique_ptr< [ResearchStrategy](/doxygen/Classes/classsam_1_1_research_strategy/) > | **[research_strategy](/doxygen/Classes/classsam_1_1_researcher/#variable-research_strategy)** <br>[Researcher](/doxygen/Classes/classsam_1_1_researcher/)'s Research Strategy.  |
+| [HackingWorkflow](/doxygen/Modules/group___policies/#using-hackingworkflow) | **[original_workflow](/doxygen/Classes/classsam_1_1_researcher/#variable-original_workflow)** <br>Original set of hacking strategies and their Selection→Decision sequences.  |
+| [HackingWorkflow](/doxygen/Modules/group___policies/#using-hackingworkflow) | **[hacking_workflow](/doxygen/Classes/classsam_1_1_researcher/#variable-hacking_workflow)**  |
 
 ## Friends
 
@@ -70,92 +46,55 @@ title: sam::Researcher
 | -------------- | -------------- |
 | class | **[ResearcherBuilder](/doxygen/Classes/classsam_1_1_researcher/#friend-researcherbuilder)**  |
 
+## Detailed Description
 
+```cpp
+class sam::Researcher;
+```
 
+This class describes a researcher. 
 
-
-
-
-
-
-
-
+[Researcher](/doxygen/Classes/classsam_1_1_researcher/) is the main player of the game. It has access to _almost_ everything and it works with several other components to conduct and evaluate the research, and prepare it to be submitted to the [Journal](/doxygen/Classes/classsam_1_1_journal/). 
 
 ## Public Functions Documentation
 
-### function `Researcher`
+### function Researcher
 
 ```cpp
 Researcher() =default
 ```
 
 
+This doesn't do anything! But it should! At the moment, I'm relying on the [ResearcherBuilder](/doxygen/Classes/classsam_1_1_researcher_builder/) to construct the [Researcher](/doxygen/Classes/classsam_1_1_researcher/) but this has to change 
 
 
+### function preProcessData
+
+```cpp
+void preProcessData()
+```
+
+Applies the pro-processing methods on the [Experiment](/doxygen/Classes/classsam_1_1_experiment/). 
+
+**Note**: This has a very similar implementation to the `[hackTheResearch()](/doxygen/Classes/classsam_1_1_researcher/#function-hacktheresearch)` but it doesn't perform any of the secondary checks, and it does not incorporates any of the selection → decision sequences. 
+
+Iterating over the registered [pre_processing_methods](/doxygen/Classes/classsam_1_1_researcher/#variable-pre_processing_methods), this applies all of the them to the current experiment. Keep in mind that the pre-processing is done before any of the decision/hacking stages, and right after data generation.
 
 
-
-
-
-
-
-
-
-!!! note "Note"
-    This is defined `private` because I want force the user to use the `create(name)` method and therefore delegate the construction to the [ResearcherBuilder](/doxygen/Classes/classsam_1_1_researcher_builder/). 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Default constructor of the [Researcher](/doxygen/Classes/classsam_1_1_researcher/).
-
-
-### function `isHacker`
+### function isHacker
 
 ```cpp
 bool isHacker()
 ```
 
+Determines whether the [Researcher](/doxygen/Classes/classsam_1_1_researcher/) is a hacker. 
+
+**Note**: Note that the #probability_of_being_a_hacker is called through it's call operator(). This guarantees that its value is being randomized _only if_ it contains a distribution. 
+
+This technically invokes the #probability_of_being_a_hacker, and returns the outcome. The value then will be cast-ed to a boolean to determine whether the [Researcher](/doxygen/Classes/classsam_1_1_researcher/) is going to start the hacking procedure or not, ie., calling or skipping the [hackTheResearch()](/doxygen/Classes/classsam_1_1_researcher/#function-hacktheresearch).
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-**Todo**: this should not draw a new value every time, and should draw once and keep reporting that one. \updated Should it thought? 
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `isCommittingToTheHack`
+### function isCommittingToTheHack
 
 ```cpp
 bool isCommittingToTheHack(
@@ -163,408 +102,95 @@ bool isCommittingToTheHack(
 )
 ```
 
+Determines whether the [Researcher](/doxygen/Classes/classsam_1_1_researcher/) will commit to the given hack. 
+
+Similar to the [isHacker()](/doxygen/Classes/classsam_1_1_researcher/#function-ishacker) method, this returns a boolean indicating whether or not the [Researcher](/doxygen/Classes/classsam_1_1_researcher/) will commit to the given hacking method. The probability of commitment to a hacking strategy is being calculated from the value of #probability_of_committing_a_hack. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `preProcessData`
-
-```cpp
-void preProcessData()
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-!!! note "Note"
-    This has a very similar implemention to the `hack()` but it doesn't perform any of the secondary checks. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Iterating over the registrated methods and run them on the current experiment.
-
-
-### function `research`
+### function research
 
 ```cpp
 void research()
 ```
 
-Executing the research workflow. 
+Perform the Research. 
+
+This is the main routine of the [Researcher](/doxygen/Classes/classsam_1_1_researcher/). It is responsible for a few things:
 
 
 
+* Randomizing the [Experiment](/doxygen/Classes/classsam_1_1_experiment/), if necessary
+* Initializing the [Experiment](/doxygen/Classes/classsam_1_1_experiment/)
+* Performing the research by:
+    * Generating the data
+    * Pre-processing the Data, if necessary
+    * Calculating the statistics
+    * Deciding whether to hack or not
+        * Perform the hack, if necessary
+    * Deciding whether to replicate the research
+        * Perform the replication, if necessary
+    * Evaluate the list of final submissions
+    * Submit the final submissions to the [Journal](/doxygen/Classes/classsam_1_1_journal/), or discard the [Experiment](/doxygen/Classes/classsam_1_1_experiment/)
+    * Clean up everything, and start a get ready for a new run
+The internal of the method is based on sequential application of selection → decision sequences on the experiment. Throughout the process, the researcher keeps the list of candidate submissions, #candidate_submissions, up-to-date. This starts by the initial selection, and following though with the hacking, and stashing selection. At the end of each replication, if any, researcher collects the last submission candidate and head to perform a new experiment. After performing all the replications (or skipping some), researcher perform a final selection → decision on the list of #replicated_submissions and select her final submission to be submitted to the [Journal](/doxygen/Classes/classsam_1_1_journal/). 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-This is the main routine that the [Researcher](/doxygen/Classes/classsam_1_1_researcher/) execute. 
-
-Preparing the experiment for a new Research
-
-
-
-------------------
-
-
- Initial SELECTION
-
-
-
-------------------
-
-
- WillBeHacking DECISION
-
-If we are a hacker, and we decide to start hacking — based on the current submission —, then, we are going to the hacking procedure!
-
-
-
-------------------
-
-
- BetweenHackedOutcome SELECTION
-
-If the pool of viable submissions is not empty, then we have to choose between them! Otherwise, we don't have to look into the pile!
-
-
-
-------------------
-
-
- Replication Stashings
-
-If we have a submittable candidate, then we collect it
-
-
-
-------------------
-
-
- Will Continue Replicating DECISION
-
-BetweenReplications SELECTION
-
-If we have done more than one replication, then we have to select between them
-
-If we did only one replication, then if there is anything, that's our final submission
-
-### function `letTheHackBegin`
+### function hackTheResearch
 
 ```cpp
-void letTheHackBegin()
+std::optional< SubmissionPool > hackTheResearch()
 ```
 
+Applies the HackingWorkflow on the [Experiment](/doxygen/Classes/classsam_1_1_experiment/). 
+
+**Return**: Returns `true` if any of the decision steps passes, it returns `false` indicating that none of the selection → decisions were successful. 
+
+This uses HackingWorkflow to sequentially apply sets of hacking → selection → decision on the available [Experiment](/doxygen/Classes/classsam_1_1_experiment/). Before applying each hacking strategy, researcher asks [isCommittingToTheHack()](/doxygen/Classes/classsam_1_1_researcher/#function-iscommittingtothehack) to decide on whether or not it is going to commit to a hack, if not, the rest of the set will be ignored, and researcher continues with the next set, if available.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-TodoDoes this copy even make any sense! I don't think so! 
-
-This is a handy flag for propogating the information out of the std::visit.
-
-TodoNow that I have a set, I don't really need the has_commited variable! 
-
-In each step, we either run a hack or a policy
-
-Performing a Hack
-
-If we are not committed to the method, then, we just leave the entire set behind
-
-Performing a Selection With [PolicyChainSet](/doxygen/Classes/structsam_1_1_policy_chain_set/) we can look for different results
-
-Performing a Decision With [PolicyChain](/doxygen/Classes/structsam_1_1_policy_chain/), we can only validate if a submission passes all the criteria
-
-Since I'm going to continue hacking, I'm going to reset the candidate because it should be evaluated again, and I've already performed a selection, I'm going to reset the selected submission. Bug, this could possibly cause some confusion! In cases where I only have one strategy and wants to be done after it, this role discard the last selection. @workaround, the current workaround is to select from the stash using between_hacking_selection 
-
-We leave the workflow when we have a submission, and it also passes the decision policy
-
-### function `randomizeParameters`
+### function randomizeHackingStrategies
 
 ```cpp
-void randomizeParameters()
+void randomizeHackingStrategies()
 ```
 
+Randomizes the internal state of the [Researcher](/doxygen/Classes/classsam_1_1_researcher/). 
+
+**Note**: It worth mentioning that, this method doesn't randomize the internal parameters of individual hacking strategies. Hacking strategies parameters can be randomized only if their parameters are set to be a Parameter<T>. 
+
+Based on the provided settings, this re-selects, re-arranges, and shuffles the list of hacking strategies, and their corresponding parameters.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Clearing the list
-
-Shuffling the original list
-
-Sorting based on the given selection criteria
-
-Reordering based on the given execution order
-
-Then I need a for-loop to randomize each strategy
-
-* I think this might not be necessary as [Parameter](/doxygen/Classes/classsam_1_1_parameter/) handles the randomization automatically
-
-### function `reorderHackingStrategies`
+### function submitTheResearch
 
 ```cpp
-void reorderHackingStrategies(
-    HackingWorkflow & hw,
-    std::string priority
+void submitTheResearch(
+    const std::optional< std::vector< Submission >> & subs
 )
 ```
 
-Re-order the hacking strategies according the priority. 
+Evaluating the candidates and submitting them to the [Journal](/doxygen/Classes/classsam_1_1_journal/). 
+
+This checks whether there is any submissions at all, if so, it checks whether `submission_decision_policies` have any hits, if so, it gives a green light to [Researcher](/doxygen/Classes/classsam_1_1_researcher/) to submit the list of submissions; otherwise, it discards the list. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `checkAndsubmitTheResearch`
+### function computeStuff
 
 ```cpp
-void checkAndsubmitTheResearch(
-    const std::optional< Submission > & sub
-)
+inline void computeStuff() const
 ```
 
-Checking the final submission and submitting it to the [Journal](/doxygen/Classes/classsam_1_1_journal/). 
+A helper function for re-computing all statistics at once. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**Todo**: Maybe I should pass the `final_submission` to this, and don't rely on it reading it from the `decision_strategy`
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `computeStuff`
+### function reset
 
 ```cpp
-inline void computeStuff()
+inline void reset()
 ```
 
+Resets the internal state of the [Researcher](/doxygen/Classes/classsam_1_1_researcher/). 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `setDecisionStrategy`
-
-```cpp
-inline void setDecisionStrategy(
-    std::unique_ptr< DecisionStrategy > ds
-)
-```
-
-
-**Parameters**: 
-
-  * **`d`** The pointer to a Decision Strategy
-
-
-
-
-
-
-
-
-
-
-
-
-!!! note "Note"
-    [Researcher](/doxygen/Classes/classsam_1_1_researcher/) owns its decision strategy that's why I move the pointer.
-
-
-
-**Todo**: I think I need to do the `std::move` when I'm calling the function not inside it 
-
-
-
-
-
-
-
-
-
-
-
-Set the decisionStrategy of the researcher.
-
-
-### function `create`
+### function create
 
 ```cpp
 static ResearcherBuilder create(
@@ -575,628 +201,79 @@ static ResearcherBuilder create(
 
 **Parameters**: 
 
-  * **`name`** The researcher name 
-
-
-
-
-
+  * **name** The researcher name 
 
 
 **Return**: An instance of [ResearcherBuilder](/doxygen/Classes/classsam_1_1_researcher_builder/). 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Starts the [Researcher](/doxygen/Classes/classsam_1_1_researcher/) build process. Use this to build a new instance of the [Researcher](/doxygen/Classes/classsam_1_1_researcher/).
-
-
 
 
 ## Public Attributes Documentation
 
-### variable `experiment`
-
-```cpp
-std::unique_ptr< Experiment > experiment;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `journal`
-
-```cpp
-std::shared_ptr< Journal > journal;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `decision_strategy`
-
-```cpp
-std::unique_ptr< DecisionStrategy > decision_strategy;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `hacking_strategies`
-
-```cpp
-std::vector< std::vector< std::unique_ptr< HackingStrategy > > > hacking_strategies;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `is_pre_processing`
-
-```cpp
-bool is_pre_processing {false};
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `pre_processing_methods`
+### variable pre_processing_methods
 
 ```cpp
 std::vector< std::unique_ptr< HackingStrategy > > pre_processing_methods;
 ```
 
 
+List of hacking strategies that are going to be applied on the experiment during the pre-processing stage 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `n_hacks`
+### variable experiment
 
 ```cpp
-size_t n_hacks;
+std::unique_ptr< Experiment > experiment;
 ```
 
-Number of hacking strategies to be choosen from the given list of strategies. 
+[Researcher](/doxygen/Classes/classsam_1_1_researcher/)'s [Experiment](/doxygen/Classes/classsam_1_1_experiment/). 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `reselect_hacking_strategies_after_every_simulation`
+### variable journal
 
 ```cpp
-bool reselect_hacking_strategies_after_every_simulation {false};
+std::shared_ptr< Journal > journal;
 ```
 
+[Researcher](/doxygen/Classes/classsam_1_1_researcher/)'s [Journal](/doxygen/Classes/classsam_1_1_journal/) of choice! 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `hacking_selection_priority`
+### variable research_strategy
 
 ```cpp
-std::string hacking_selection_priority;
+std::unique_ptr< ResearchStrategy > research_strategy;
 ```
 
+[Researcher](/doxygen/Classes/classsam_1_1_researcher/)'s Research Strategy. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Indicates order in which hacking strategies are going to be selected from the list of given hacking strategies if the [Researcher](/doxygen/Classes/classsam_1_1_researcher/) decides has to apply a fewer number than the given list 
-
-
-### variable `hacking_execution_order`
-
-```cpp
-std::string hacking_execution_order;
-```
-
-Indicates the execution order of selected/given hacking strategies. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `probability_of_being_a_hacker`
-
-```cpp
-Parameter< double > probability_of_being_a_hacker;
-```
-
-Indicates the probablity of a [Researcher](/doxygen/Classes/classsam_1_1_researcher/)_deciding_ to go for hacking an [Experiment](/doxygen/Classes/classsam_1_1_experiment/). 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `probability_of_committing_a_hack`
-
-```cpp
-std::variant< double, std::string, Distribution, std::unique_ptr< HackingProbabilityStrategy > > probability_of_committing_a_hack;
-```
-
-Indicates the probablity of a [Researcher](/doxygen/Classes/classsam_1_1_researcher/)_actally applying_ a choosen hacking strategy. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `submission_probability`
-
-```cpp
-double submission_probability {1};
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `submissions_from_reps`
-
-```cpp
-SubmissionPool submissions_from_reps;
-```
-
-A [Submission]() record that [Researcher](/doxygen/Classes/classsam_1_1_researcher/) is going to submit to the [Journal](/doxygen/Classes/classsam_1_1_journal/). 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `original_workflow`
+### variable original_workflow
 
 ```cpp
 HackingWorkflow original_workflow;
 ```
 
+Original set of hacking strategies and their Selection→Decision sequences. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### variable `h_workflow`
+### variable hacking_workflow
 
 ```cpp
-HackingWorkflow h_workflow;
+HackingWorkflow hacking_workflow;
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[Researcher](/doxygen/Classes/classsam_1_1_researcher/)'s hacking workflow. This is a subset of the [original_workflow](/doxygen/Classes/classsam_1_1_researcher/#variable-original_workflow), as it is being filtered and rearranged by various factors during the initialization. 
 
 
 ## Friends
 
-### friend `ResearcherBuilder`
+### friend ResearcherBuilder
 
 ```cpp
-friend class ResearcherBuilder;
+friend class ResearcherBuilder(
+    ResearcherBuilder 
+);
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Updated on 29 June 2021 at 16:13:46 CEST

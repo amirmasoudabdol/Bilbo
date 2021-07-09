@@ -1,26 +1,9 @@
 ---
 title: sam::PersistenceManager::Reader
 
-
 ---
 
 # sam::PersistenceManager::Reader
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -28,209 +11,55 @@ title: sam::PersistenceManager::Reader
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[Reader](/doxygen/Classes/classsam_1_1_persistence_manager_1_1_reader/#function-reader)**() =default  |
-|  | **[~Reader](/doxygen/Classes/classsam_1_1_persistence_manager_1_1_reader/#function-~reader)**()  |
-|  | **[Reader](/doxygen/Classes/classsam_1_1_persistence_manager_1_1_reader/#function-reader)**(const string & filename)  |
-| void | **[filename](/doxygen/Classes/classsam_1_1_persistence_manager_1_1_reader/#function-filename)**(const string & name)  |
-| void | **[read_raw_data](/doxygen/Classes/classsam_1_1_persistence_manager_1_1_reader/#function-read_raw_data)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * epxr)  |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| | **[Reader](/doxygen/Classes/classsam_1_1_persistence_manager_1_1_reader/#function-reader)**() =default |
+| | **[~Reader](/doxygen/Classes/classsam_1_1_persistence_manager_1_1_reader/#function-~reader)**() |
+| | **[Reader](/doxygen/Classes/classsam_1_1_persistence_manager_1_1_reader/#function-reader)**(const std::filesystem::path & filename) |
+| void | **[filename](/doxygen/Classes/classsam_1_1_persistence_manager_1_1_reader/#function-filename)**(const std::filesystem::path & name) |
+| void | **[read_raw_data](/doxygen/Classes/classsam_1_1_persistence_manager_1_1_reader/#function-read_raw_data)**([Experiment](/doxygen/Classes/classsam_1_1_experiment/) * expr) |
 
 ## Public Functions Documentation
 
-### function `Reader`
+### function Reader
 
 ```cpp
 Reader() =default
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `~Reader`
+### function ~Reader
 
 ```cpp
 ~Reader()
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `Reader`
+### function Reader
 
 ```cpp
 Reader(
-    const string & filename
+    const std::filesystem::path & filename
 )
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `filename`
+### function filename
 
 ```cpp
 inline void filename(
-    const string & name
+    const std::filesystem::path & name
 )
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### function `read_raw_data`
+### function read_raw_data
 
 ```cpp
 void read_raw_data(
-    Experiment * epxr
+    Experiment * expr
 )
 ```
 
 
+-------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-TODO: Re-implement me!
-
-
-
-
-
-
-
+Updated on 29 June 2021 at 16:13:46 CEST

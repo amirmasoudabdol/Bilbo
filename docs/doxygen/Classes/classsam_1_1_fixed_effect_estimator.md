@@ -27,7 +27,7 @@ Inherits from [sam::MetaAnalysis](/doxygen/Classes/classsam_1_1_meta_analysis/)
 | -------------- | -------------- |
 | | **[FixedEffectEstimator](/doxygen/Classes/classsam_1_1_fixed_effect_estimator/#function-fixedeffectestimator)**() =default |
 | virtual void | **[estimate](/doxygen/Classes/classsam_1_1_fixed_effect_estimator/#function-estimate)**([Journal](/doxygen/Classes/classsam_1_1_journal/) * journal) |
-| [ResultType](/doxygen/Classes/structsam_1_1_fixed_effect_estimator_1_1_result_type/) | **[FixedEffect](/doxygen/Classes/classsam_1_1_fixed_effect_estimator/#function-fixedeffect)**(const arma::Row< double > & yi, const arma::Row< double > & vi) |
+| [ResultType](/doxygen/Classes/structsam_1_1_fixed_effect_estimator_1_1_result_type/) | **[FixedEffect](/doxygen/Classes/classsam_1_1_fixed_effect_estimator/#function-fixedeffect)**(const arma::Row< float > & yi, const arma::Row< float > & vi) |
 
 ## Additional inherited members
 
@@ -66,12 +66,12 @@ virtual void estimate(
 
 ```cpp
 static inline ResultType FixedEffect(
-    const arma::Row< double > & yi,
-    const arma::Row< double > & vi
+    const arma::Row< float > & yi,
+    const arma::Row< float > & vi
 )
 ```
 
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:47 CEST

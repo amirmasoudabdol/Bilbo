@@ -25,7 +25,7 @@ summary: Parameters of RankCorrelation.
 | -------------- | -------------- |
 | std::string | **[name](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_parameters/#variable-name)**  |
 | [TestStrategy::TestAlternative](/doxygen/Classes/classsam_1_1_test_strategy/#enum-testalternative) | **[alternative](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_parameters/#variable-alternative)**  |
-| double | **[alpha](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_parameters/#variable-alpha)** <br>The ɑ of the test.  |
+| float | **[alpha](/doxygen/Classes/structsam_1_1_rank_correlation_1_1_parameters/#variable-alpha)** <br>The ɑ of the test.  |
 
 ## Public Functions Documentation
 
@@ -60,11 +60,11 @@ TestStrategy::TestAlternative alternative = TestStrategy::TestAlternative::TwoSi
 ### variable alpha
 
 ```cpp
-double alpha {0.10};
+float alpha {0.10};
 ```
 
 The ɑ of the test. 
 
 -------------------------------
 
-Updated on  7 June 2021 at 12:00:21 CEST
+Updated on 29 June 2021 at 16:13:48 CEST
