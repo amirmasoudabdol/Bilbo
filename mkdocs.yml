@@ -45,8 +45,8 @@ nav:
           - examples/bakker_et_al_2014.md
           - examples/esther_first_year.md
           # - examples/friese_et_al_2020.md
-    - FRODO: 
-        - FRODO: frodo/frodo.md
+    - Frodo: 
+        - Frodo: frodo/frodo.md
         - Simple Simulation: frodo/sample-frodo-project.md
     - API:
         - Introduction: doxygen/index.md
