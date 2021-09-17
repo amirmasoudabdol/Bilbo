@@ -65,8 +65,8 @@ extra_css:
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
 repo_name: GitHub
-repo_url: https://github.com/amirmasoudabdol/bilbo
-edit_uri: edit/main/docs
+repo_url: https://github.com/amirmasoudabdol/sam
+# edit_uri: edit/main/docs
 
 
 copyright: Copyright &copy; 2021 Amir Masoud Abdol
