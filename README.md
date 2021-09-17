@@ -1,4 +1,4 @@
-# BILBO
+# Bilbo
 
 <img src="docs/img/bilbo-logo.png" width="200" align="right"/>
 
