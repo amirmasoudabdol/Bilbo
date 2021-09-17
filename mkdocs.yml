@@ -33,6 +33,13 @@ nav:
           - selection-strategies.md
           - meta-analyses.md
         - simulation-configurations.md
+    - Frodo: 
+        - Frodo: frodo/frodo.md
+        - Simple Simulation: frodo/sample-frodo-project.md
+    - API:
+        - Introduction: doxygen/index.md
+        - Modules: doxygen/Modules/
+        - Classes: doxygen/Classes/
     - Examples:
         - studies/studies.md
         - studies/selection-variation.md
@@ -45,13 +52,6 @@ nav:
           - examples/bakker_et_al_2014.md
           - examples/esther_first_year.md
           # - examples/friese_et_al_2020.md
-    - Frodo: 
-        - Frodo: frodo/frodo.md
-        - Simple Simulation: frodo/sample-frodo-project.md
-    - API:
-        - Introduction: doxygen/index.md
-        - Modules: doxygen/Modules/
-        - Classes: doxygen/Classes/
 
     # - Extras:
     #     - extending-sam.md
@@ -66,6 +66,9 @@ extra_javascript:
 repo_name: GitHub
 repo_url: https://github.com/amirmasoudabdol/bilbo
 edit_uri: edit/main/docs
+
+
+copyright: Copyright &copy; 2021 Amir Masoud Abdol
 
 
 plugins:
