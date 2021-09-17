@@ -1,4 +1,5 @@
 site_name: SAM - Science Abstract Model Simulation Framework
+site_description: A modular, flexible, and extensible C++ simulation framework for systematically studying Researcher's questionable research practices as well as Journal's questionable review practices.
 nav:
     - Home: index.md
     - Tutorial:
