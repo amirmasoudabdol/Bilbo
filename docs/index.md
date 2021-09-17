@@ -8,6 +8,11 @@ In this vignette, we will describe the underlying design principles and main fea
 
 - - - 
 
+!!! note
+	The contents of this documentation might be slightly differ from the information published by Abdol et al., 2021[@Abdol_2021]. For general introduction to SAM, please refer to the main publication while we sync the two sources.
+
+- - - 
+
 > The preparation of this project and its related material was supported by an ERC consolidator grant IMPROVE (grant no. 603726361) from the European Research Council.
 
 <picture>
@@ -16,3 +21,6 @@ In this vignette, we will describe the underlying design principles and main fea
       media="(prefers-color-scheme: dark)">
   <img src="img/LOGO_ERC-FLAG_EU_Light.jpg"/>
 </picture>
+
+
+\bibliography

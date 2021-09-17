@@ -36,7 +36,7 @@ nav:
         - simulation-configurations.md
     - Frodo: 
         - Frodo: frodo/frodo.md
-        - Simple Simulation: frodo/sample-frodo-project.md
+        # - Simple Simulation: frodo/sample-frodo-project.md
     - API:
         - Introduction: doxygen/index.md
         - Modules: doxygen/Modules/
