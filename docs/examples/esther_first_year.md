@@ -39,7 +39,7 @@ Starting from the top, the simulation study concerns itself with two main *Exper
 
 ![Maassen's Experiment Design](/examples/figures/Esther_FYP/Esthers_Experiment_Design.png)
 
-In terms of QRPs, two main methods have been utilized, [Selective Reporting](/hacking-strategies/selective-reporting.md), and [Optional Stopping](/hacking-strategies/optional-stopping.md). While the optional stopping has been applied on both study designs (at most 3 times, adding ⅓ ⨉ N new observations), the selective reporting can only be applied on the design with 5 conditions (selecting the outcome with minimum *p*-value). 
+In terms of QRPs, two main methods have been utilized, [Selective Reporting](selective-reporting.md), and [Optional Stopping](optional-stopping.md). While the optional stopping has been applied on both study designs (at most 3 times, adding ⅓ ⨉ N new observations), the selective reporting can only be applied on the design with 5 conditions (selecting the outcome with minimum *p*-value). 
 
 Finally, after simulating *K* studies, Maassen applied both meta-analytic methods, and publication bias estimators, and reported their performance.
 
@@ -145,7 +145,7 @@ We can configure our hacking strategy as follows. Notice the repetition of [deci
 
 ## Data, Test, and Effect Strategy
 
-The combination of *Decision Strategy* and *Hacking Strategy* configurations will simulate the process described in Figure 2. Configurations for *Data*, *Test*, and *Effect* strategies have been discussed in more detail in [Bakker et al., 2012](/examples/bakker_et_al_2012.md) example.
+The combination of *Decision Strategy* and *Hacking Strategy* configurations will simulate the process described in Figure 2. Configurations for *Data*, *Test*, and *Effect* strategies have been discussed in more detail in [Bakker et al., 2012](bakker_et_al_2012.md) example.
 
 ??? datastrategy "Configuration: _Data Strategy_"
     === "2 Conditions"
@@ -297,7 +297,7 @@ Staring by the proportion of significant results in our outcomes pool, we notice
   </picture> 
 </figure>
 
-Looking at the level of effect size bias, we observe higher bias in studies with 5 dependent variables. Moreover, notice the minor negligible effect of our QRPs on the level of bias. This is inline with our results from [Bakker et al., 2012](/examples/bakker_et_al_2012.md) where we concluded that the source of biases is the number of replications, and not the QRPs.
+Looking at the level of effect size bias, we observe higher bias in studies with 5 dependent variables. Moreover, notice the minor negligible effect of our QRPs on the level of bias. This is inline with our results from [Bakker et al., 2012](bakker_et_al_2012.md) where we concluded that the source of biases is the number of replications, and not the QRPs.
 
 <!-- Results from Nov 27 Run -->
 <figure>
@@ -321,7 +321,7 @@ Figure below visualizes the accuracy of random-effect estimate's of the effect s
   </picture> 
 </figure>
 
-As shown below, power of Egger's test consistently improves as we add more publications to our pool, *K*. Moreover, as expected, we can observe the correlation of higher power with the increase of the publication bias rate. Notice the slight increase of the yellow region as we lowers *ɑ*, and add more dependent variables. Furthermore, as we discussed in [Bakker et al., 2012](/examples/bakker_et_al_2012.md), we observe a high rate of false positive in simulations with low publication bias rate.
+As shown below, power of Egger's test consistently improves as we add more publications to our pool, *K*. Moreover, as expected, we can observe the correlation of higher power with the increase of the publication bias rate. Notice the slight increase of the yellow region as we lowers *ɑ*, and add more dependent variables. Furthermore, as we discussed in [Bakker et al., 2012](bakker_et_al_2012.md), we observe a high rate of false positive in simulations with low publication bias rate.
 
 <!-- Results from Nov 27 Run -->
 <figure>

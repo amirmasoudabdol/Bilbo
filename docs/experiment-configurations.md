@@ -4,7 +4,7 @@ title: Introduction
 
 # Experiment Configurations
 
-Experiment parameters split into 4 main sections. While first four paramters are describing the overall design of the study, parameters of each individual module are encapsulated into three sections, ie., [Data Strategy](/data-strategies.md), [Test Strategies](test-strategies.md), and [Effect  Strategies](effect-strategies.md).
+Experiment parameters split into 4 main sections. While first four paramters are describing the overall design of the study, parameters of each individual module are encapsulated into three sections, ie., [Data Strategy](data-strategies.md), [Test Strategies](test-strategies.md), and [Effect  Strategies](effect-strategies.md).
 
 | Parameter | Type | Description |
 |----|---|----|
@@ -17,7 +17,7 @@ Experiment parameters split into 4 main sections. While first four paramters are
 | **`effect_strategy`** | *`string`* | Specify the underlying [Effect Strategies](effect-strategies.md). |
 
 
-The code snippet below showcases a sample of Experiment's parameters that's being used in [Bakker et al., 2012](/examples/bakker_et_al_2012.md).
+The code snippet below showcases a sample of Experiment's parameters that's being used in [Bakker et al., 2012](bakker_et_al_2012.md).
 
 
 !!! experiment "Experiment's Configurations"

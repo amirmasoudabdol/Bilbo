@@ -2,7 +2,7 @@
 
 *Decision strategy acts as researcher's brain, and describes his/her logical steps.* Its specification will be used by the Researcher to perform two fundamentals tasks, Selection and Decision. As discussed in the [Design](design.md#decision-strategy) section, in most cases a Selection is followed by a Decision, directly evaluating the already selected outcome. 
 
-We will refer to this process as **Selection → Decision** sequence. These sequences are the building block of decision strategy. We use utilize them in several different stages of [Research](/research-workflow), and [Hacking](/hacking-workflow.md) workflows in order to mimic the thought process of the Researcher and guide him throughout his research.
+We will refer to this process as **Selection → Decision** sequence. These sequences are the building block of decision strategy. We use utilize them in several different stages of [Research](research-workflow.md), and [Hacking](hacking-workflow.md) workflows in order to mimic the thought process of the Researcher and guide him throughout his research.
 
 As researcher needs to perform several selections and decisions during her course of research, each selection and decision is defined separately in the configuration file. Figure 1 shows a simplified version of research workflow by only highlighing **Selection** and **Decision** stages. The diagram also replaces logical names with their parameter names counterpart as they are lsited in `decision_strategy` section of [configurtion file](configuration-file.md).
 
@@ -41,7 +41,7 @@ All possible selections and decisions steps can be found in the list below:
 
 Policies are the building blocks of researcher’s logic. Each policy is a logical expression describing a query to be performed on list of available outcome variables. 
 
-<!-- A query is defined by chaining one or more policies together into a set. We refer to this set as [Policy Chain](/decision-startegies.md#policy-chain).  -->
+<!-- A query is defined by chaining one or more policies together into a set. We refer to this set as [Policy Chain](decision-startegies.md#policy-chain).  -->
 
 Here we discuss a range of available logical expression and variables that can be used to construct any elaborate quesries.
 
@@ -109,7 +109,7 @@ For instance, research with the selection policy chain set above:
 - if there is no outcome with these properties, he moves to search for `[“effect > 0”, “min(pvalue)”]`,
 - and finally, if that returns no unique outcome, he applies the last set of queries on the Experiment.
 
-Policy chain sets are designed to mimic behaviors of a researchers with multiple priorities. An example of this behavior is demonstrated in [Bakker et al., 2012 simulation](/examples/bakker_et_al_2012.md). 
+Policy chain sets are designed to mimic behaviors of a researchers with multiple priorities. An example of this behavior is demonstrated in [Bakker et al., 2012 simulation](bakker_et_al_2012.md). 
 
 !!! decisionstrategy "Example: Bakker et al., 2012's Decision Strategy"
     ```json

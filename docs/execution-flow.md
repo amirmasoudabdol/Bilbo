@@ -33,7 +33,7 @@ By the end of this stage, the Experiment is populated with data points and the R
 
 At this stage, the Researcher uses the Test Strategy to run the test and populate relevant variables, e.g., `statistic`, `pvalue`, `sig`, `side`. Similarly, Effect Strategy will be used to calculate effect sizes, and populate `effect` variable.
 
-The next step is to check whether the Researcher is satisfied with the test results. This is done by passing the Experiment to the Decision Strategy. The Researcher relies on decision strategy's verdict to decide on whether to proceed with the current Submission, or continue applying one or more of the hacking strategies before submitting the study for the review. This process will be discussed in more details in [Research Workflow](/research-workflow.md) and *[Decision Strategy](/decision-strategies.md)*.
+The next step is to check whether the Researcher is satisfied with the test results. This is done by passing the Experiment to the Decision Strategy. The Researcher relies on decision strategy's verdict to decide on whether to proceed with the current Submission, or continue applying one or more of the hacking strategies before submitting the study for the review. This process will be discussed in more details in [Research Workflow](research-workflow.md) and *[Decision Strategy](decision-strategies.md)*.
 
 
 ![Figure 4. Steps involved in performing the research](/figures/perform-research.png)

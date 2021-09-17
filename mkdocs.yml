@@ -52,7 +52,7 @@ nav:
           - examples/bakker_et_al_2012.md
           - examples/bakker_et_al_2014.md
           - examples/esther_first_year.md
-          # - examples/friese_et_al_2020.md
+          - examples/friese_et_al_2020.md
 
     # - Extras:
     #     - extending-sam.md
@@ -76,6 +76,7 @@ plugins:
   - search
   - img2fig
   - git-revision-date
+  - autolinks
   - bibtex:
       bib_file: "refs.bib"
       cite_style: "pandoc"

@@ -1,10 +1,10 @@
 # Optional Stopping Variation
 
-After investigating the influecens of initial selection logic, and sample size, here, we will investigate the effect of applying several variants of Optional Stopping on the probability of finding significant results and the level of effect size bias. Similarly to our [Sample Size Variation](/studies/sample-size-variation.md) and [Selection Variation](/studies/selection-variation.md) studies, we will cover a range of parameters in order to draw a landscape of our both target metrics, e.g., Probability of Finding Significant (PFS), and Effect Size Bias, (ESB). 
+After investigating the influecens of initial selection logic, and sample size, here, we will investigate the effect of applying several variants of Optional Stopping on the probability of finding significant results and the level of effect size bias. Similarly to our [Sample Size Variation](sample-size-variation.md) and [Selection Variation](selection-variation.md) studies, we will cover a range of parameters in order to draw a landscape of our both target metrics, e.g., Probability of Finding Significant (PFS), and Effect Size Bias, (ESB). 
 
 ## Study Design
 
-Based on results of our sample size study, we will adjust our sample size parameters, from simulating the entire range of [8, 100] to a discrete set of values. We think our approximation can still provide an overview of the interaction as [we observed](/studies/sample-size-variation.md) a predictable change of PFS and ES Bias along a fine-grind range of *N*. For the rest of Experiment’s parameters, we use the same set of parameters in order to draw a complete and comparable picture as before.
+Based on results of our sample size study, we will adjust our sample size parameters, from simulating the entire range of [8, 100] to a discrete set of values. We think our approximation can still provide an overview of the interaction as [we observed](sample-size-variation.md) a predictable change of PFS and ES Bias along a fine-grind range of *N*. For the rest of Experiment’s parameters, we use the same set of parameters in order to draw a complete and comparable picture as before.
 
 - *μ* ∈ [0, 1]
 - *m* ∈ {2, 4, 6}

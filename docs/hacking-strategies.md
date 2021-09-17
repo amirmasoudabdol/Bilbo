@@ -6,14 +6,14 @@ title: Introduction
 
 *Hacking Strategy encapsulates vairous processes and procedures of performing a questionable research practices on a given Experiment.* SAM is capable of executing a complicated set of hacking strategies on a given Experiment. A list of hacking strategies will be applied one at a time, in the specified order. At the end of each method, the Researcher observes their influences on all outcome variables and decides on whether to stop, or what to report if results are satisfactory, see [here](design.md#hacking-strategy) and [here](execution-flow.md#perform-research). Besides the definition of hacking strategies, we are able to modify researcher's behavior as well. 
 
-In the configuration below, we can see the main body of defining hacking strategies for a researcher. Above the list of hacking strategies, a collection of parameters modify the behavior of the Researcher throughout the [Hacking Workflow](/hacking-workflow.md). While we will cover these parameters in detail in [Hacking Behavior](/hacking-behaviors.md) section, a list below briefly describes their function.
+In the configuration below, we can see the main body of defining hacking strategies for a researcher. Above the list of hacking strategies, a collection of parameters modify the behavior of the Researcher throughout the [Hacking Workflow](hacking-workflow.md). While we will cover these parameters in detail in [Hacking Behavior](hacking-behaviors.md) section, a list below briefly describes their function.
 
 1. **`probability_of_being_a_hacker`**, `double`, indicates the chance of  chance of the Researcher entering the hacking workflow.
-2. **`probability_of_committing_a_hack`**, `double`, indicates the chance of applying a given method on the Experiment. For a detailed example, see [Friese et al. 2020](/examples/Friese_et_al_2020.md)[@Friese_2020aa]
+2. **`probability_of_committing_a_hack`**, `double`, indicates the chance of applying a given method on the Experiment. For a detailed example, see [Friese et al. 2020](Friese_et_al_2020.md)[@Friese_2020aa]
 3. **`n_hacks`**, `integer`, indicates the number of hacking strategies to be selected from the list.
 3. **`hacking_selection_priority`**, indicates the priority of hacking strategies during at selection stages
 4. **`hacking_execution_order`**, indicates the execution order of hacking strategies during the execution of [hacking workflow](research-workflow.md#hacking-workflow).
-5. **`hacking_strategies`**, a list of hacking strategies and their [**selection → decision**](/decision-strategies.md) sequences, see Figure 1.
+5. **`hacking_strategies`**, a list of hacking strategies and their [**selection → decision**](decision-strategies.md) sequences, see Figure 1.
 
 !!! hackingstrategy "Hacking Strategy: Top Level Settings"
     ```json hl_lines="9-23"
@@ -84,7 +84,7 @@ While each hacking strategy is accompanied with its list of unique parameters, a
 
 ## Prevalence and Defensibility
 
-The `prevalence` and `defensibility` can be adjusted based on our preferences and type of simulations that we are going to conduct. There are higher level information at researcher's hand which helps him to make more informed decision during the hacking workflow. For insurance, we can define a cautious researcher who only applies strategies with high defensibility, ie., outliers removal. This is being enforced using `hacking_execution_order` and it will be discussed in [hacking behaviors](/hacking-behaviors.md) stage.
+The `prevalence` and `defensibility` can be adjusted based on our preferences and type of simulations that we are going to conduct. There are higher level information at researcher's hand which helps him to make more informed decision during the hacking workflow. For insurance, we can define a cautious researcher who only applies strategies with high defensibility, ie., outliers removal. This is being enforced using `hacking_execution_order` and it will be discussed in [hacking behaviors](hacking-behaviors.md) stage.
 
 ## Hacking Stages
 

@@ -49,7 +49,7 @@ As the name suggests, the *significant selection strategy* incorporates the conc
 
 ## Policy Based Selection
 
-Policy based selection strategy are using [policy chains](/decision-strategies.md#policy-chain) to evalute the "quality" of a submission, and therefore come to their verdict. In addition to the given criteria, we can adjust the *acceptance rate*, `pub_chance`, and the *publication bias rate*, `pub_bias`. The Journal first evaluates whether the `selection_policy` can be satisfied; then, a random draw decides whether the publication is lucky enough to be accepted, and finally, odds of being actually published will be evaluted against the publication bias rate.
+Policy based selection strategy are using [policy chains](decision-strategies.md#policy-chain) to evalute the "quality" of a submission, and therefore come to their verdict. In addition to the given criteria, we can adjust the *acceptance rate*, `pub_chance`, and the *publication bias rate*, `pub_bias`. The Journal first evaluates whether the `selection_policy` can be satisfied; then, a random draw decides whether the publication is lucky enough to be accepted, and finally, odds of being actually published will be evaluted against the publication bias rate.
 
 Notice that the flexibilty of the selection policy and availability of publication bias rate will allow for construction of the Journal with specific biases, e.g., positive effects, large study sizes, etc.
 

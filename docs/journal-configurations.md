@@ -4,9 +4,9 @@ title: Introduction
 
 # Journal Configurations
 
-At the end of the [research workflow](/research-workflow.md), the Researcher has either decided to discard his research, or, is preparing to submit his final submission to the Journal. At this point, he passes his manuscript to the Journal, and thereafter he will have no control over its destiny anymore. 
+At the end of the [research workflow](research-workflow.md), the Researcher has either decided to discard his research, or, is preparing to submit his final submission to the Journal. At this point, he passes his manuscript to the Journal, and thereafter he will have no control over its destiny anymore. 
 
-Journal module is designed to simulate the reviewing process. After receiving the submission (ie. Manuscript) from the Researcher, the Journal asses the quality of the research and decide on whether to accept or reject the submission. Journal’s assessment is being conducted using a group of pre-defined algorithms, referred to as *[Selection Strategies](/selection-strategies.md)*. 
+Journal module is designed to simulate the reviewing process. After receiving the submission (ie. Manuscript) from the Researcher, the Journal asses the quality of the research and decide on whether to accept or reject the submission. Journal’s assessment is being conducted using a group of pre-defined algorithms, referred to as *[Selection Strategies](selection-strategies.md)*. 
 
 ![<b>Figure 1.</b> Journal’s Reviewing Workflow](/figures/journal-workflow.png)
 
@@ -14,11 +14,11 @@ Figure 1 shows the steps taken by the Journal during the review process. The Jou
 
 If selection strategy approves the “quality” of the submission, submission will be accepted and stored in a database of accepted submissions, a.k.a, **publications list**. In contrast, rejected outcomes will not be published and stored in **rejected submissions list**. At the end of the simulation, journal may export any or all of these lists as CSV files for further analysis.
 
-Journal parameters are in general less elaborate than other modules and are divided into two main sections, [Selection Strategy](/selection-strategies.md) and [Meta Analysis](/meta_analyses.md).
+Journal parameters are in general less elaborate than other modules and are divided into two main sections, [Selection Strategy](selection-strategies.md) and [Meta Analysis](meta_analyses.md).
 
 - **`max_pubs`**, *`integer`*, Indicates the maximum number of publications that is going to be accepted by `Journal`.
-- **`selection_strategy`**, *`object`*, Indicates the specification of the [Selection Strategy](/selection-strategies.md).
-- **`meta_analysis_metrics`**, *`list`*, List of [meta analysis methods](/meta-analysse.md) together with their corresponding parameters.
+- **`selection_strategy`**, *`object`*, Indicates the specification of the [Selection Strategy](selection-strategies.md).
+- **`meta_analysis_metrics`**, *`list`*, List of [meta analysis methods](meta-analysse.md) together with their corresponding parameters.
 
 - [ ] TODO: Explain the example below!
 

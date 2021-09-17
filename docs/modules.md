@@ -73,7 +73,7 @@ The main components of the Experiment Setup are:
 
 Data Strategy acts as the population of the study, i.e., data source. In most cases, an instance of the Data Strategy object uses a statistical model to sample data points and populates the `Data` object of the Experiment. 
 
-Moreover, with certain *p*-hacking methods, e.g., [optional stopping](/hacking-strategies/optional-stopping), the data strategy will be used to generate *extra* data points as requested by the optional stopping.
+Moreover, with certain *p*-hacking methods, e.g., [optional stopping](optional-stopping.md), the data strategy will be used to generate *extra* data points as requested by the optional stopping.
 
 Available data strategies are:
 
@@ -153,7 +153,7 @@ After the initialization of the Experiment Setup, the Researcher prepares the Ex
 
 #### Decision Strategy
 
-Decision Strategy models the decision making process during the research process. The Researcher relies on the verdict of the decision strategy two main ways, **Selection** and **Decision** [policies](/decision-strategies.md#policies).
+Decision Strategy models the decision making process during the research process. The Researcher relies on the verdict of the decision strategy two main ways, **Selection** and **Decision** [policies](decision-strategies.md#policies).
 
 - **Selection** policies are used by Researchers to filter and select an outcome from a group of outcomes. For instance, if a Researcher only considers outcomes with significant *p*-values satisfactory, a selection policy will help her to only select for those among all available outcomes. 
 - **Decision** policies process, are used to make certain decisions during the research process. For instance, whether a researcher should start applying QRPs on an experiment, or whether it should submit the final submission to the journal. 
@@ -171,13 +171,13 @@ Some of the Selection→Decision sequences available are:
 - *Will Continue Replicating* **Decision Policies**
 - *Will be Submitting To Journal* **Decision Policy**
 
-Decision Strategy is one of the more elaborated pieces of SAM. It engages in different stages of conducting the research by researcher and different hacking strategies. This process will be clarified in [Flow](execution-flow.md) and [Research Workflow](/research-workflow.md) and [Decision Strategy](/decision-strategies.md).
+Decision Strategy is one of the more elaborated pieces of SAM. It engages in different stages of conducting the research by researcher and different hacking strategies. This process will be clarified in [Flow](execution-flow.md) and [Research Workflow](research-workflow.md) and [Decision Strategy](decision-strategies.md).
 
 #### Hacking Strategies
 
 Hacking Strategy is an abstract representation of different *p*-hacking and QRP methods. The Researcher *performs* a hacking strategy by sending a copy of its Experiment to a chosen method. The Hacking Strategy takes control of the experiment, modifies it, (e.g., adding new values, removing values), recomputes the statistics, reruns the test, and finally returns the modified Experiment. Finally, the researcher can evaluate the *hacked* experiment, and select the *hacked* result if satisfactory.
 
-If more than one hacking strategies are registered, The Researcher navigates through them by the logic defined in Decision Strategy and decides whether any of the *hacked* experiments will be used for constructing the *Submission*. This process will be discussed in more detail, in *[Decision Strategy](/decision-strategies.md)* and *[Hacking Strategy](/hacking-strategies.md)*.
+If more than one hacking strategies are registered, The Researcher navigates through them by the logic defined in Decision Strategy and decides whether any of the *hacked* experiments will be used for constructing the *Submission*. This process will be discussed in more detail, in *[Decision Strategy](decision-strategies.md)* and *[Hacking Strategy](hacking-strategies.md)*.
 
 The available hacking strategies are:
 
