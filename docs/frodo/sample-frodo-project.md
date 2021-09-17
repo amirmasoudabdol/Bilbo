@@ -1,3 +1,3 @@
 ---
-title: "Sample FRODO Project"
+title: "Sample Frodo Project"
 ---

@@ -339,6 +339,6 @@ After running all the simulations, you find your `outputs/` folder filled with s
 
 ## Running Even More Simulation
 
-As you may have realized, the process of creating new configuration files is a cumbersome and error-prone process, especially if you are planning to run thousands of different configuration files. In address this issues, we developed FRODO to be SAM's project management companion. FRODO streamlines the process of automatically creating thousands and thousands of configuration files. In addition, it helps you to run your entire simulation, deal with the complexity of naming several configuration files, and it helps you summarize and process your simulation's results.
+As you may have realized, the process of creating new configuration files is a cumbersome and error-prone process, especially if you are planning to run thousands of different configuration files. In address this issues, we developed Frodo to be SAM's project management companion. Frodo streamlines the process of automatically creating thousands and thousands of configuration files. In addition, it helps you to run your entire simulation, deal with the complexity of naming several configuration files, and it helps you summarize and process your simulation's results.
 
-Read more about [FRODO](https://sam.amirmasoudabdol.name/frodo).
+Read more about [Frodo](https://sam.amirmasoudabdol.name/frodo).
