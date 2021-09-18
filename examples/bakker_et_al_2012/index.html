@@ -1,0 +1,2313 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A modular, flexible, and extensible C++ simulation framework for systematically studying Researcher's questionable research practices as well as Journal's questionable review practices.">
+      
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>Bakker et al., 2012 - SAM - Science Abstract Model Simulation Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../custom.css">
+    
+    
+  <script async defer data-domain="sam.amirmasoudabdol.name" src="https://stats.sam.amirmasoudabdol.name/js/index.js"></script>
+
+    
+  
+  
+    
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="amirmasoudabdol" />
+  <meta name="twitter:creator" content="amirmasoudabdol" />
+  <meta name="twitter:title" content="SAM - Science Abstract Model Simulation Framework - Bakker et al., 2012" />
+  <meta name="twitter:description" content="A modular, flexible, and extensible C++ simulation framework for systematically studying Researcher's questionable research practices as well as Journal's questionable review practices." />
+  <meta name="twitter:image" content="https://sam.amirmasoudabdol.name/img/twitter_large_image.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SAM - Science Abstract Model Simulation Framework - Bakker et al., 2012" />
+  <meta property="og:description" content="A modular, flexible, and extensible C++ simulation framework for systematically studying Researcher's questionable research practices as well as Journal's questionable review practices." />
+  <meta property="og:url" content="None" />
+  <meta property="og:image" content="https://sam.amirmasoudabdol.name/img/twitter_large_image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-rules-of-the-game-called-psychological-science2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SAM - Science Abstract Model Simulation Framework" class="md-header__button md-logo" aria-label="SAM - Science Abstract Model Simulation Framework" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SAM - Science Abstract Model Simulation Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bakker et al., 2012
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/amirmasoudabdol/sam/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SAM - Science Abstract Model Simulation Framework" class="md-nav__button md-logo" aria-label="SAM - Science Abstract Model Simulation Framework" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    SAM - Science Abstract Model Simulation Framework
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/amirmasoudabdol/sam/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Tutorial
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Design
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Design" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Design
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        Modules
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../execution-flow/" class="md-nav__link">
+        Execution Flow
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-workflow/" class="md-nav__link">
+        Research Workflow
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Configuration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration-file/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Experiment
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Experiment" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../experiment-configurations/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-strategies/" class="md-nav__link">
+        Data Strategies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-strategies/" class="md-nav__link">
+        Test Strategies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../effect-strategies/" class="md-nav__link">
+        Effect Strategies
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        Researcher
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Researcher" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Researcher
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../researcher-configurations/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../decision-strategies/" class="md-nav__link">
+        Decision Strategies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_3" type="checkbox" id="__nav_4_3_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3_3">
+        Hacking Strategies
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Hacking Strategies" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Hacking Strategies
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking-strategies/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking-behaviors/" class="md-nav__link">
+        Hacking Behaviors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking-strategies/selective-reporting/" class="md-nav__link">
+        Selective Reporting
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking-strategies/optional-stopping/" class="md-nav__link">
+        Optional Stopping
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking-strategies/outliers-removal/" class="md-nav__link">
+        Outliers Removal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking-strategies/subjective-outliers-removal/" class="md-nav__link">
+        Subjective Outliers Removal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking-strategies/falsifying-data/" class="md-nav__link">
+        Falsifying Data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking-strategies/fabricating-data/" class="md-nav__link">
+        Fabricating Data
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      <label class="md-nav__link" for="__nav_4_4">
+        Journal
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Journal" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Journal
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../journal-configurations/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../selection-strategies/" class="md-nav__link">
+        Selection Strategies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meta-analyses/" class="md-nav__link">
+        Meta Analysis
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation-configurations/" class="md-nav__link">
+        Simulation
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Frodo
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Frodo" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Frodo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frodo/frodo/" class="md-nav__link">
+        Frodo
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doxygen/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doxygen/Modules/" class="md-nav__link">
+        Modules
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doxygen/Classes/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        Examples
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Examples" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studies/studies/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studies/selection-variation/" class="md-nav__link">
+        Selection Variation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studies/sample-size-variation/" class="md-nav__link">
+        Sample Size Variation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studies/optional-stopping-variation/" class="md-nav__link">
+        Optional Stopping Variation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_5" type="checkbox" id="__nav_7_5" checked>
+      
+      <label class="md-nav__link" for="__nav_7_5">
+        Studies / Replications
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Studies / Replications" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Studies / Replications
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Bakker et al., 2012
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Bakker et al., 2012
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#experiment-design-model-description" class="md-nav__link">
+    Experiment Design / Model Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sam-configuration" class="md-nav__link">
+    SAM Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="SAM Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategy-1-and-3-without-qrps" class="md-nav__link">
+    Strategy 1, and 3 (Without QRPs)
+  </a>
+  
+    <nav class="md-nav" aria-label="Strategy 1, and 3 (Without QRPs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hacking-strategy" class="md-nav__link">
+    Hacking Strategy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-strategies" class="md-nav__link">
+    Decision Strategies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategy-2-and-4-with-qrps" class="md-nav__link">
+    Strategy 2, and 4 (With QRPs)
+  </a>
+  
+    <nav class="md-nav" aria-label="Strategy 2, and 4 (With QRPs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hacking-strategies" class="md-nav__link">
+    Hacking Strategies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-strategy" class="md-nav__link">
+    Decision Strategy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    Results
+  </a>
+  
+    <nav class="md-nav" aria-label="Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#original-vs-reproduction" class="md-nav__link">
+    Original vs. Reproduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Original vs. Reproduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-source-of-discrepency" class="md-nav__link">
+    The Source of Discrepency
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-extension-s-role" class="md-nav__link">
+    First Extension: α‘s Role
+  </a>
+  
+    <nav class="md-nav" aria-label="First Extension: α‘s Role">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#effect-of-replications" class="md-nav__link">
+    Effect of Replications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#second-extension-more-aggressive-qrps" class="md-nav__link">
+    Second Extension: More Aggressive QRPs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#third-extension-influence-of-publication-bias" class="md-nav__link">
+    Third Extension: Influence of Publication Bias
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bakker_et_al_2014/" class="md-nav__link">
+        Bakker et al., 2014
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../esther_first_year/" class="md-nav__link">
+        Maassen et al., 2016
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../friese_et_al_2020/" class="md-nav__link">
+        Friese et al., 2020
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#experiment-design-model-description" class="md-nav__link">
+    Experiment Design / Model Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sam-configuration" class="md-nav__link">
+    SAM Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="SAM Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategy-1-and-3-without-qrps" class="md-nav__link">
+    Strategy 1, and 3 (Without QRPs)
+  </a>
+  
+    <nav class="md-nav" aria-label="Strategy 1, and 3 (Without QRPs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hacking-strategy" class="md-nav__link">
+    Hacking Strategy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-strategies" class="md-nav__link">
+    Decision Strategies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategy-2-and-4-with-qrps" class="md-nav__link">
+    Strategy 2, and 4 (With QRPs)
+  </a>
+  
+    <nav class="md-nav" aria-label="Strategy 2, and 4 (With QRPs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hacking-strategies" class="md-nav__link">
+    Hacking Strategies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-strategy" class="md-nav__link">
+    Decision Strategy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    Results
+  </a>
+  
+    <nav class="md-nav" aria-label="Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#original-vs-reproduction" class="md-nav__link">
+    Original vs. Reproduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Original vs. Reproduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-source-of-discrepency" class="md-nav__link">
+    The Source of Discrepency
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-extension-s-role" class="md-nav__link">
+    First Extension: α‘s Role
+  </a>
+  
+    <nav class="md-nav" aria-label="First Extension: α‘s Role">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#effect-of-replications" class="md-nav__link">
+    Effect of Replications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#second-extension-more-aggressive-qrps" class="md-nav__link">
+    Second Extension: More Aggressive QRPs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#third-extension-influence-of-publication-bias" class="md-nav__link">
+    Third Extension: Influence of Publication Bias
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/amirmasoudabdol/sam/edit/master/docs/examples/bakker_et_al_2012.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Please check out Abdol et al., 2021<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> for the updated version of this project. In addition, you can find all the codes, and analysis on <a href="https://github.com/amirmasoudabdol/bakker-et-al-2012-reproduction-using-sam">GitHub</a>.</p>
+</div>
+<h1 id="the-rules-of-the-game-called-psychological-science2">The Rules of the Game Called Psychological Science<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup><a class="headerlink" href="#the-rules-of-the-game-called-psychological-science2" title="Permanent link">&para;</a></h1>
+<p>In this report, we will attempt to discuss the replication and reproduction of the simulation study conducted by Baker et al., 2012<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. The simulation is designed to recreate a common routine of applying a set of questionable research practices, and consequently evaluate their effects on the observed effect size bias, and chance of finding significance results.</p>
+<h2 id="experiment-design-model-description">Experiment Design / Model Description<a class="headerlink" href="#experiment-design-model-description" title="Permanent link">&para;</a></h2>
+<p>As described by Bakker, the simulation study is concerned about 4 distinct strategies as follow:</p>
+<blockquote>
+<p><strong>Strategy 1.</strong> Perform one large study (with N as the sample size) with sufficient power and publish it.</p>
+<p><strong>Strategy 2.</strong> Perform one large study and use some of the QRPs most popular in psychology (John et al., 2012). These QRPs may be performed sequentially until a significant result is found:
+- Test a second dependent variable that is correlated with the primary dependent variable (for which John et al. found a 65% admittance rate)
+ - Add 10 subjects (sequential testing; 57% admittance rate)
+ - Remove outliers (|<em>Z</em>| &gt; 2) and rerun analysis (41% admittance rate)</p>
+<p><strong>Strategy 3.</strong> Perform, at most, five small studies each with (N/5) as sample size. Players may stop data collection when they find a significant result in the expected direction and only publish the desired result (the other studies are denoted “failed”; 48% admittance rate).</p>
+<p><strong>Strategy 4.</strong> Perform, at most, five small studies and apply the QRPs described above in each of these small studies if the need arises. Players may report only the first study that “worked.”</p>
+<p><p style="text-align:right">  — Bakker et al., 2012</p></p>
+</blockquote>
+<p>Two main distinguishing factors in the simulation are sample size, <em>N</em>, and whether the pre-defined set of QRPs are applied on the study. When it comes to sample sizes, Bakker defines two size classes, small and large. Number of observations in small studies can be a value from {5, 10, 20}, and number of observation in large studies can be either of {25, 50, 100}. Basically, large studies are 5 times larger than small studies. Another difference between <em>small</em>, and <em>large</em> studies is the repetitive nature of conducting <em>small</em> studies. In strategy 3 and 4, each trial is <strong>almost</strong> an exact replication of the main study — that might or might not have been gone through the QRP procedure. Results from these trials will be collected and at the end, the researcher will get a chance to report the most desirable outcome.</p>
+<p>Following flowcharts are visualizing the simulation workflow designed by Bakker. Figure <a href="#fig:qrp_large" data-reference-type="ref" data-reference="fig:qrp_large">1</a> is an equivalent of 1st and 2nd strategies while Figure <a href="#fig:qrp_small" data-reference-type="ref" data-reference="fig:qrp_small">2</a> showcases 3rd and 4th strategies. Notice the "Perform the QRP Procedure" step in Figure 2 where a study goes through the entire process described in Figure 1 labeled as "QRP Procedure".</p>
+<figure>
+  <img src="/examples/figures/Bakker_2012/Marjan_2012_QRP_Large.png" id="fig:qrp_large" alt="Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable." />
+  <figcaption aria-hidden="true"><b>Figure 1.</b> Flowchart describing Strategy 1, and 2. In the case of Strategy 1, the simulation does not enter the QRP Procedure and reports the first dependent variable.</figcaption>
+</figure>
+
+<figure>
+  <img src="/examples/figures/Bakker_2012/Marjan_2012_QRP_Small.png" id="fig:qrp_small" alt="Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts." />
+  <figcaption aria-hidden="true"><b>Figure 2.</b> Flowchart describing Strategy 3, and 4. In the case of Strategy 3, the simulation skips the QRP Procedure but still collects the final outcome from each replication attempts.</figcaption>
+</figure>
+
+<p>There are several QRPs involved in strategies 2 and 4.</p>
+<ul>
+<li>
+<p>Every <em>small</em> or <em>large</em> study <strong>might</strong> go under the <em>Selective Reporting</em> process in which the researcher evaluates and reports the secondary outcome, if she does not find the primary outcome satisfactory.</p>
+</li>
+<li>
+<p>Every <em>small</em> or <em>large</em> study <strong>might</strong> go under the <em>Optional Stopping</em> routine in which the researcher adds 10 new subjects to each DV, and re-calculates her statistics in a quest to find a desirable result.</p>
+</li>
+<li>
+<p>Every study <strong>might</strong> go under the <em>Outliers Removal</em> process in which the researcher attempts to remove all subjects farther than 2 standard deviation from the sample mean in a quest to find a desirable result.</p>
+</li>
+<li>
+<p>In <em>large</em> studies, a simulation will stop as soon as the researcher find a significant result with positive effect. However, in <em>small</em> studies, while the researcher reports her finding after performing the set of QRPs (”QRP Procedure” in Fig. 1), she continues to repeat the same routine 5 times, and collects the outcome of each replication,</p>
+<ul>
+<li>
+<p>Later in the simulation, as shown in Fig 2., she will select the appropriate outcome from the pool of outcomes collected from all replications.</p>
+</li>
+<li>
+<p>→ <em>Strategy 3 follows the same logic with the only difference that each replication doesn’t go through the QRP routines, however, the researcher will <strong>still</strong> review her finding after performing 5 exact replications.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Besides individual strategies, Bakker et al., explored a wide range of parameters in order to capture the influence of their design. The list of parameters can be found below:</p>
+<ul>
+<li><em>μ</em> ∈ [0, 1]</li>
+<li><em>N</em> ∈ {5, 10, 20, 25, 50, 100}<ul>
+<li><em>Small</em> class, {5, 10, 20}</li>
+<li><em>Large</em> class, {25, 50, 100}</li>
+</ul>
+</li>
+<li><em>m</em>, <em>n</em> = 2</li>
+<li>4 scenarios/strategies</li>
+<li>2 with QRP</li>
+<li>2 without QRP</li>
+</ul>
+<p>The rest of this article focuses on simulating Bakker’s study using SAM, and consequently comparing two approach with each other. Further in the report, we will build on top of Bakker's study in order to investigate the nature of observed biases in more detail.</p>
+<h2 id="sam-configuration">SAM Configuration<a class="headerlink" href="#sam-configuration" title="Permanent link">&para;</a></h2>
+<p>In order to recreate Bakker's simulation using SAM, we start by planning <a href="/research-workflow.md">Researcher's Workflow</a> and translating that into a <a href="/configuration-file.md">configuration file</a>.</p>
+<p><picture>
+  <img width="300px" align="right" src="/examples/figures/Bakker_2012/Marjan_2012_Expriment_Design_Light.png" id="fig:marjan_2012_design"/>
+</picture></p>
+<p>Bakker's experiment is a 2x2 factorial design consists of two groups, Control (C) and Treatment (T) each measuring two dependent variables, as shown in Figure below. The sample population is a multivariate normal distribution with mean of <span><span class="MathJax_Preview">\hat{0}</span><script type="math/tex">\hat{0}</script></span> for control group, and <span><span class="MathJax_Preview">\hat{\mu}</span><script type="math/tex">\hat{\mu}</script></span> for treatment group; and standard deviation of <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>, and <span><span class="MathJax_Preview">0.5</span><script type="math/tex">0.5</script></span> covarinace between dependent variables. Therefore, <span><span class="MathJax_Preview">DV_{i} \in MN(\hat{\mu}, \Sigma)</span><script type="math/tex">DV_{i} \in MN(\hat{\mu}, \Sigma)</script></span> where <span><span class="MathJax_Preview">\hat{\mu} = (0, 0, \mu, \mu)</span><script type="math/tex">\hat{\mu} = (0, 0, \mu, \mu)</script></span> and </p>
+<div>
+<div class="MathJax_Preview">
+\Sigma =
+\begin{bmatrix}
+1 &amp; 0.5 &amp; 0 &amp; 0 \\
+0.5 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0.5 \\
+0 &amp; 0 &amp; 0.5 &amp; 1
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\Sigma =
+\begin{bmatrix}
+1 & 0.5 & 0 & 0 \\
+0.5 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0.5 \\
+0 & 0 & 0.5 & 1
+\end{bmatrix}
+</script>
+</div>
+<p>This design can be expressed using a Linear Model data strategy as follow: </p>
+<details class="datastrategy"><summary>Configuration: <em>Data Strategy</em></summary><div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="err">...</span>
+  <span class="nt">&quot;experiment_parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;n_obs&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="nt">&quot;n_conditions&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;n_dep_vars&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;data_strategy&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;LinearModel&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;measurements&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;dist&quot;</span><span class="p">:</span> <span class="s2">&quot;mvnorm_distribution&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;means&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="err">μ</span><span class="p">,</span> <span class="err">μ</span><span class="p">],</span>
+          <span class="nt">&quot;sigma&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="mf">1.0</span><span class="p">,</span>   <span class="mf">0.5</span><span class="p">,</span>   <span class="mf">0.0</span><span class="p">,</span>   <span class="mf">0.0</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span>   <span class="mf">1.0</span><span class="p">,</span>   <span class="mf">0.0</span><span class="p">,</span>   <span class="mf">0.0</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span>   <span class="mf">0.0</span><span class="p">,</span>   <span class="mf">1.0</span><span class="p">,</span>   <span class="mf">0.5</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span>   <span class="mf">0.0</span><span class="p">,</span>   <span class="mf">0.5</span><span class="p">,</span>   <span class="mf">1.0</span><span class="p">]]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="err">...</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<p>Bakker's Researcher uses TTest to asses the significant of its findings. This choice can be expressed with Test Strategy's setting as follow:</p>
+<details class="teststrategy"><summary>Configuration: <em>Test Strategy</em></summary><div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="err">...</span>
+  <span class="nt">&quot;experiment_parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="err">...</span>
+    <span class="nt">&quot;test_strategy&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;TTest&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;alpha&quot;</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">,</span>
+      <span class="nt">&quot;alternative&quot;</span><span class="p">:</span> <span class="s2">&quot;TwoSided&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;var_equal&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="err">...</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<p>For effect size measure, Bakker computed the standardized effect size different between two effect. In order to equip SAM with this method, we can use the following configuration of the <a href="/effect-strategies.md">Effect Strategy</a>:</p>
+<details class="experiment"><summary>Configuration: <em>Effect Strategy</em></summary><div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="err">...</span>
+  <span class="nt">&quot;experiment_parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="err">...</span>
+    <span class="nt">&quot;effect_strategy&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;StandardizedMeanDifference&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="err">...</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<p>After fully configuring Experiment's parameters, we can start translating the simulation logic from a <a href="/research-workflow.md">Research Workflow</a> to Decision Strategy's configuration, and thereafter preparing the list of Hacking Strategies.</p>
+<h3 id="strategy-1-and-3-without-qrps">Strategy 1, and 3 (Without QRPs)<a class="headerlink" href="#strategy-1-and-3-without-qrps" title="Permanent link">&para;</a></h3>
+<h4 id="hacking-strategy">Hacking Strategy<a class="headerlink" href="#hacking-strategy" title="Permanent link">&para;</a></h4>
+<p>In 1st and 3rd strategies, researchers will NOT commit any QRPs, therefore the <code>probability_of_being_a_hacker</code> should be set to <code>0</code>. This is enough for configuring a researcher who does not explore the <a href="/hacking-workflow.md">Hacking Workflow</a>.</p>
+<h4 id="decision-strategies">Decision Strategies<a class="headerlink" href="#decision-strategies" title="Permanent link">&para;</a></h4>
+<p>Following the workflow depicted in Figure 1, we are able to set different decision and selection policies in place for the researcher to achieve the exact path described by Bakker.</p>
+<p>The researcher always starts by checking the primary outcome, if the selected outcome is not significant and does not have a positive effect (i.e.<code>"initial_selection_policies": [["id == 2"]]</code>), she executes the first hacking strategy. Since in 1st and 3rd strategies, we are not performing any QRPs, this path will not be taken. </p>
+<p>In the case of small studies, the researcher will replicate 5 exact studies. At the end of each replication, the researcher stores the first outcome variable (as indicated by <code>initial_selection_policies</code>) in a dataset of <strong>All Reported Outcome</strong>, Figure 2. Finally, she revisits this dataset, and chooses the most desirable outcome among them. Her preferences can be seen under <code>between_replications_selection_policies</code> parameter. This setup is in place to capture the main idea behind Bakker's simulation, that is, "beneficial to a researcher to run 5 small studies instead of one large study."</p>
+<details class="decisionstrategy"><summary>Configuration: <em>Decision Strategy</em></summary><div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="err">...</span>
+  <span class="nt">&quot;researcher_parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="err">...</span>
+    <span class="nt">&quot;probability_of_being_a_hacker&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;decision_strategy&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;DefaultDecisionMaker&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;initial_selection_policies&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s2">&quot;id == 2&quot;</span><span class="p">]</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;will_start_hacking_decision_policies&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;effect &lt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;!sig&quot;</span><span class="p">],</span>
+      <span class="nt">&quot;between_hacks_selection_policies&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s2">&quot;effect &gt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;min(pvalue)&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;effect &lt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;max(pvalue)&quot;</span><span class="p">]</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;stashing_policy&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;all&quot;</span><span class="p">],</span>
+      <span class="nt">&quot;between_replications_selection_policies&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s2">&quot;effect &gt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;sig&quot;</span><span class="p">,</span> <span class="s2">&quot;first&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;effect &gt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;min(pvalue)&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;effect &lt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;max(pvalue)&quot;</span><span class="p">]</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;will_continue_replicating_decision_policy&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
+      <span class="nt">&quot;submission_decision_policies&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
+    <span class="p">}</span>
+  <span class="err">...</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<h3 id="strategy-2-and-4-with-qrps">Strategy 2, and 4 (With QRPs)<a class="headerlink" href="#strategy-2-and-4-with-qrps" title="Permanent link">&para;</a></h3>
+<h4 id="hacking-strategies">Hacking Strategies<a class="headerlink" href="#hacking-strategies" title="Permanent link">&para;</a></h4>
+<p>In 2nd and 4th strategies, the researcher will execute at least one of the listed strategies. After each QRP, the researcher gets to select an outcome from the altered Experiment, after her selection, she can decide on whether she is going to stop there, or applies the next hacking strategy. In Bakker’s case, the <em>selection → decision</em> is simple. The researcher selects the outcome with positive effect and minimum <em>p</em>-value; then, she checks the availability desirability of the selected outcome, if the outcome is not desirable, she executes the next QRP. These settings are highlighted in the following configuration.</p>
+<details class="hackingstrategy"><summary>Configuration: <em>Hacking Strategy</em></summary><div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;researcher_parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;hacking_strategies&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;OptionalStopping&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;Both&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;max_attempts&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;n_attempts&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;num&quot;</span><span class="p">:</span> <span class="mi">10</span>
+        <span class="p">},</span>
+        <span class="p">[</span>
+          <span class="p">[</span><span class="s2">&quot;effect &gt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;min(pvalue)&quot;</span> <span class="p">]</span>
+        <span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;effect &lt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;!sig&quot;</span><span class="p">]</span>
+      <span class="p">],</span>
+      <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;OutliersRemoval&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;Both&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;max_attempts&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;min_observations&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;multipliers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+          <span class="nt">&quot;n_attempts&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;num&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+          <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;random&quot;</span>
+        <span class="p">},</span>
+        <span class="p">[</span>
+          <span class="p">[</span><span class="s2">&quot;effect &gt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;min(pvalue)&quot;</span> <span class="p">]</span>
+        <span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;effect &lt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;!sig&quot;</span><span class="p">]</span>
+      <span class="p">]</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<h4 id="decision-strategy">Decision Strategy<a class="headerlink" href="#decision-strategy" title="Permanent link">&para;</a></h4>
+<p>In Bakker’s simulation, the decision making process between strategies with and without QRPs are very similar. The main research workflow stays intact as shown in Figure 1, and 2. However, now that researchers can commit any QRPs, they will need to choose between all altered outcomes. Bakker’s players tend to collect their findings — regardless of being QRPed — throughout the simulation, and select the most desirable one at the end of their research. This process is shown in Figure 1 with dashed lines transferring results to a temporary dataset, and finally selecting for the most desirable outcome from the temporary database.</p>
+<p>As discussed, this process can be simulated in SAM as well. The  <code>stashing_policy</code> parameter indicates which of the outcomes will be collected by the researcher during its expedition. At the end of the <a href="/hacking-workflow.md">Hacking Workflow</a>, the <code>between_hacks_selection_policies</code> parameter indicates how is the researcher going to select between those outcomes, ie., Hacked DB, or <strong>All Outcomes Database</strong> as stated in Figure 1.</p>
+<details class="decisionstrategy"><summary>Configuration File: <em>Decision Strategy</em></summary><div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="err">...</span>
+  <span class="nt">&quot;researcher_parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="err">...</span>
+    <span class="nt">&quot;probability_of_being_a_hacker&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;decision_strategy&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;DefaultDecisionMaker&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;between_hacks_selection_policies&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s2">&quot;effect &gt; 0&quot;</span><span class="p">,</span><span class="s2">&quot;min(pvalue)&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;effect &lt; 0&quot;</span><span class="p">,</span><span class="s2">&quot;max(pvalue)&quot;</span><span class="p">]</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;between_replications_selection_policies&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s2">&quot;effect &gt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;sig&quot;</span><span class="p">,</span> <span class="s2">&quot;first&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;effect &gt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;min(pvalue)&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;effect &lt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;max(pvalue)&quot;</span><span class="p">]],</span>
+      <span class="nt">&quot;initial_selection_policies&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s2">&quot;id == 2&quot;</span><span class="p">,</span> <span class="s2">&quot;sig&quot;</span><span class="p">,</span> <span class="s2">&quot;effect &gt; 0&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;id == 3&quot;</span><span class="p">,</span> <span class="s2">&quot;sig&quot;</span><span class="p">,</span> <span class="s2">&quot;effect &gt; 0&quot;</span><span class="p">]</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;stashing_policy&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;all&quot;</span><span class="p">],</span>
+      <span class="nt">&quot;submission_decision_policies&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
+      <span class="nt">&quot;will_continue_replicating_decision_policy&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
+      <span class="nt">&quot;will_start_hacking_decision_policies&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;effect &lt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;!sig&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="err">...</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
+<p>We start by comparing the results between the original simulation and the reproduced study.</p>
+<h3 id="original-vs-reproduction">Original vs. Reproduction<a class="headerlink" href="#original-vs-reproduction" title="Permanent link">&para;</a></h3>
+<p>Figure <a href="#fig:original_vs_reproduced" data-reference-type="ref" data-reference="fig:original_vs_reproduced">4</a> compares the results of the original study and the reproduced simulation. As it can be seen, the reproduction simulation — distinguished by points — are mainly agreeing with the original simulation with exception of some minor discrepancies in <em>small</em> studies. In all cases, the reproduction simulation captures more bias in small studies with QRPs.</p>
+<figure>
+  <picture>
+    <source 
+        srcset="/examples/figures/Bakker_2012/Comparison_with_Original_Simulation_dark.png" 
+        media="(prefers-color-scheme: dark)">
+    <img src="/examples/figures/Bakker_2012/Comparison_with_Original_Simulation_light.png" id="fig:original_vs_reproduced" alt="Comparison between original and reproduced results (using SAM)." /><figcaption aria-hidden="true"><b>Figure 4. </b>Comparison between original and reproduced results (using SAM).</figcaption>
+  </picture>
+</figure>
+
+<h4 id="the-source-of-discrepency">The Source of Discrepency<a class="headerlink" href="#the-source-of-discrepency" title="Permanent link">&para;</a></h4>
+<p>Further investigation led to the finding of a minor bug in Bakker et al., code where a typo resulted in insertion of a wrong <strong>large</strong> study in the replication pool of  <em>small</em> simulation. This polluted the pool of small studies and reduced the overall observed bias, due to the wrongly inserted large study having lower bias among all other small studies. Figure <a href="#fig:patched_vs_reproduced" data-reference-type="ref" data-reference="fig:patched_vs_reproduced">5</a>, shows the comparison of results from the patched script, and SAM's results. As it is shown, patching Bakker's code accounted for the minor discrepancy and consequently we gets a perfect replication.</p>
+<figure>
+  <picture>
+    <source 
+        srcset="/examples/figures/Bakker_2012/Comparison_with_Patched_Simulation_dark.png" 
+        media="(prefers-color-scheme: dark)">
+    <img src="/examples/figures/Bakker_2012/Comparison_with_Patched_Simulation_light.png" id="fig:patched_vs_reproduced" alt="Comparison between original and reproduced results (using SAM)." /><figcaption aria-hidden="true"><b>Figure 5. </b>Comparison between results from the patched script and results from SAM.</figcaption>
+  </picture>
+</figure>
+
+<h2 id="first-extension-s-role">First Extension: α‘s Role<a class="headerlink" href="#first-extension-s-role" title="Permanent link">&para;</a></h2>
+<p>Building on top of Bakker’s simulation and using SAM’s flexibility we can extend their simulation to study the observed effect size bias, <em>ES Bias</em>, under different values of <em>α</em> ∈ {0.0005, 0.005, 0.05}.</p>
+<p>The main body of the simulation is identical to the original simulation performed by Bakker. Therefore, we start from the final configuration file and in order to enforce different alpha levels, the only parameters that needs to be changes is <code>test_alpha</code>. </p>
+<details class="teststrategy"><summary>Configuration: <em>Test Strategy</em></summary><div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="err">...</span>
+  <span class="nt">&quot;experiment_parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="err">...</span>
+    <span class="nt">&quot;test_strategy&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;TTest&quot;</span><span class="p">,</span>
+<span class="hll">      <span class="nt">&quot;alpha&quot;</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">,</span>
+</span>      <span class="nt">&quot;alternative&quot;</span><span class="p">:</span> <span class="s2">&quot;TwoSided&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;var_equal&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="err">...</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<p>By running the simulation under selected range of parameters, we will be able summarize our results for different levels of alpha in Figure <a href="#fig:extended_sim_proportion_plot" data-reference-type="ref" data-reference="fig:extended_sim_proportion_plot">6</a> and <a href="#fig:extended_sim_bias_plot" data-reference-type="ref" data-reference="fig:extended_sim_bias_plot">7</a>. Here we can follow the effect of alpha on probability of finding significance and the amount of induced biased under Bakker’s rules. </p>
+<p>Figure <a href="#fig:extended_sim_proportion_plot" data-reference-type="ref" data-reference="fig:extended_sim_proportion_plot">6</a> shows the chance of finding at least one significant result. As expected, from left to right, the chance of finding significant result — in all cases — increases as we increase <em>α</em> but not so drastically. </p>
+<p>Figure <a href="#fig:extended_sim_bias_plot" data-reference-type="ref" data-reference="fig:extended_sim_bias_plot">7</a> shows the level of bias in the estimated effect. The effect of lowering the <em>α</em> on ES bias is not as obvious as it is on the chance of finding significant results. In almost all cases, the largest <em>α</em> leads to less bias in the effect as the true effect size increases. In 4th strategy, where the researcher applies a set of QRPs on <em>small</em> studies, the bias rises even more drastically as we lower <em>α</em>. It’s worth mentioning that the researcher has not adoptted his strategies to the adjusted values of <em>α</em>. In all cases, she still adds 10 new subjects and removes subjects with values further than 2 standard deviations.</p>
+<!-- Check Figure <a href="#fig:extended_sim_proportion_vs_bias" data-reference-type="ref" data-reference="fig:extended_sim_proportion_vs_bias">6</a> for more clear comparison. -->
+<!-- This is shown more clearly in Figure <a href="#fig:extended_sim_proportion_vs_bias" data-reference-type="ref" data-reference="fig:extended_sim_proportion_vs_bias">6</a>. -->
+
+<figure>
+  <picture>
+    <source 
+        srcset="/examples/figures/Bakker_2012/First_Extension_Different_Alpha_Levels_Sig_dark.png" 
+        media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/First_Extension_Different_Alpha_Levels_Sig_light.png" id="fig:extended_sim_proportion_plot" alt="Chance of finding a significant result with regards to different values of \alpha." /><figcaption aria-hidden="true"><b>Figure 6. </b>Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+  </picture> 
+</figure>
+
+<figure>
+  <picture>
+    <source 
+        srcset="/examples/figures/Bakker_2012/First_Extension_Different_Alpha_Levels_ES_dark.png" 
+        media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/First_Extension_Different_Alpha_Levels_ES_light.png" id="fig:extended_sim_bias_plot" alt="ES Bias with regards to different values of \alpha." /><figcaption aria-hidden="true"><b>Figure 7. </b>ES Bias with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+  </picture>
+</figure>
+
+<p>The effect of <em>α</em> on the chance of finding a significant result and ES bias can be visualized using a heatmap as well. Figure <a href="#fig:extended_sim_heatmap_prop" data-reference-type="ref" data-reference="fig:extended_sim_heatmap_prop">7</a> and <a href="#fig:extended_sim_heatmap_bias" data-reference-type="ref" data-reference="fig:extended_sim_heatmap_bias">8</a> showcase the trends and patterns more vividly. With regards to <em>chance of finding a significant result</em>, as discussed before, we can see a clear decline as we decrease <em>α</em>. This can be seen by the movement of the dark region (lower probability) to the right side (higher effects).</p>
+<p>While we can see a clear change in the probability of finding a significant result, the heatmap of ES bias looks very scattered and with no clear patterns or trends. This is the indication of a non-linear relation between <em>α</em> and ES bias. While decreasing alpha makes it harder to find a significant results, a weak experiment design carries its bias with it anyway.</p>
+<h3 id="effect-of-replications">Effect of Replications<a class="headerlink" href="#effect-of-replications" title="Permanent link">&para;</a></h3>
+<p>Before we end the first extension, we studied the effect of number of replications in Bakker et al. simulation. Figures below showcase the effect that different number of replications has on the chance of finding significant and also on the bias accumulated in effect size. While these figures might look crowded, the only thing we are trying to emphasize is the fact that more replications lead to more bias in our studies. This can be seen by tracing points' shapes in each plots. </p>
+<p><strong>In fact we believe this is the only source of bias in Bakker et al. simulation, and the effect of QRP is minimal in comparison to drastic level of bias induced by only running the same study several times.</strong> The next extension put this hypothesis to test by replacing Bakker et al. QRPs with more aggressive methods and parameters.</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Chance of Finding Sig.</label><div class="tabbed-content">
+<p><figure>
+  <picture>
+    <source 
+        srcset="/examples/figures/Bakker_2012/First_and_Half_Extension_Different_Reps_Levels_Sig_dark.png" 
+        media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/First_and_Half_Extension_Different_Reps_Levels_Sig_light.png" id="fig:extended_sim_proportion_plot" alt="Chance of finding a significant result with regards to different number of replications." /><figcaption aria-hidden="true">Chance of finding a significant result with regards to different number of replications.</figcaption>
+  </picture> 
+</figure></p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">ES Bias</label><div class="tabbed-content">
+<p><figure>
+  <picture>
+    <source 
+        srcset="/examples/figures/Bakker_2012/First_and_Half_Extension_Different_Reps_Levels_ES_dark.png" 
+        media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/First_and_Half_Extension_Different_Reps_Levels_ES_light.png" id="fig:extended_sim_bias_plot" alt="ES Bias with regards to different number of replications." /><figcaption aria-hidden="true">ES Bias with regards to different number of replications.</figcaption>
+  </picture>
+</figure></p>
+</div>
+</div>
+<h2 id="second-extension-more-aggressive-qrps">Second Extension: More Aggressive QRPs<a class="headerlink" href="#second-extension-more-aggressive-qrps" title="Permanent link">&para;</a></h2>
+<p>Another extension of this model could investigate the effect of more aggressive QRPs when stricter <em>α</em>’s are introduced. For instance, we could adjust Optional Stopping such that the researcher adds new subjects one by one until she finds a significance result. Furthermore, the Outliers Removal procedure can be replaced by a Subjective Outliers Removal method where the researcher continuously lowers <em>k</em> and remove corresponding outliers until she finds a significant results. These two changes can be added to the configuration file as following: </p>
+<details class="hackingstrategy"><summary>Hacking Strategy: <em>Advance Hacker</em></summary><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="err">...</span>
+  <span class="nt">&quot;hacking_strategies&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;OptionalStopping&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;Both&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;prevalence&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="nt">&quot;defensibility&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="nt">&quot;max_attempts&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;n_attempts&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="nt">&quot;num&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="hll">        <span class="nt">&quot;stopping_condition&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sig&quot;</span><span class="p">]</span>
+</span>      <span class="p">},</span>
+      <span class="p">[</span>
+        <span class="p">[</span><span class="s2">&quot;effect &gt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;min(pvalue)&quot;</span> <span class="p">]</span>
+      <span class="p">],</span>
+      <span class="p">[</span><span class="s2">&quot;effect &lt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;!sig&quot;</span><span class="p">]</span>
+    <span class="p">],</span>
+    <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SubjectiveOutlierRemoval&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;min_observations&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="nt">&quot;range&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+        <span class="nt">&quot;step_size&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;Both&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;prevalence&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="nt">&quot;defensibility&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+<span class="hll">        <span class="nt">&quot;stopping_condition&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sig&quot;</span><span class="p">]</span>
+</span>      <span class="p">},</span>
+      <span class="p">[</span>
+        <span class="p">[</span><span class="s2">&quot;effect &gt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;min(pvalue)&quot;</span> <span class="p">]</span>
+      <span class="p">],</span>
+      <span class="p">[</span><span class="s2">&quot;effect &lt; 0&quot;</span><span class="p">,</span> <span class="s2">&quot;!sig&quot;</span><span class="p">]</span>
+    <span class="p">]</span>
+  <span class="p">]</span>
+<span class="err">...</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</details>
+<p>Figures below show the results of these modifications. As it is shown, while these adjustments introduce slightly more bias into publications; their effect is not as drastic as one would assume. Combining there results with results of previous extension, we are more certain that the effect of QRPs is minimal. </p>
+<blockquote>
+<p>This in fact strengthen Bakker et al. hypothesis by showcasing the immense effect and advantage of running small studies over larger studies. Studies with low sample size are volatile enough that a researcher could easily achieve significant results with unrealistic effect sizes throughout the realistic effect size spectrum.</p>
+</blockquote>
+<figure>
+  <picture>
+    <source 
+        srcset="/examples/figures/Bakker_2012/Second_Extension_Different_Alpha_Levels_Sig_dark.png" 
+        media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Second_Extension_Different_Alpha_Levels_Sig_light.png" id="fig:extended_sim_proportion_plot" alt="Chance of finding a significant result with regards to different values of \alpha." /><figcaption aria-hidden="true">Chance of finding a significant result with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+  </picture> 
+</figure>
+
+<figure>
+  <picture>
+    <source 
+        srcset="/examples/figures/Bakker_2012/Second_Extension_Different_Alpha_Levels_ES_dark.png" 
+        media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Second_Extension_Different_Alpha_Levels_ES_light.png" id="fig:extended_sim_bias_plot" alt="ES Bias with regards to different values of \alpha." /><figcaption aria-hidden="true">ES Bias with regards to different values of <span class="math inline"><em>α</em></span>.</figcaption>
+  </picture>
+</figure>
+
+<h2 id="third-extension-influence-of-publication-bias">Third Extension: Influence of Publication Bias<a class="headerlink" href="#third-extension-influence-of-publication-bias" title="Permanent link">&para;</a></h2>
+<p>In our last extension, we will explore the effect of publication bias on the level of effect size bias; moreover, we investigated the power of Egger's<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> test under different publication bias levels.</p>
+<p>In order to incorporate the effect of publication bias to our simulation, we equip the Journal module with a <a href="/journal.md#selection-strategies">Selection Strategies</a> that mimics this effect. The <a href="/selection-strategies.md#significant-selection">Significant Selection</a> allows us to set adjust the publication bias of the Journal, <code>pub_bias</code> and induce different level of publication bias into our simulation. For this study, we use different values of publication bias, <em>{0., 0.1, ..., 0.9, 1.0}</em>.</p>
+<details class="journal"><summary>Journal: <em>Publication Bias</em></summary><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="err">...</span>
+  <span class="nt">&quot;journal_parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;max_pubs&quot;</span><span class="p">:</span> <span class="err">k</span><span class="p">,</span>
+<span class="hll">    <span class="nt">&quot;selection_strategy&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SignificantSelection&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="nt">&quot;pub_bias&quot;</span><span class="p">:</span> <span class="err">p</span><span class="p">,</span>
+</span><span class="hll">        <span class="nt">&quot;alpha&quot;</span><span class="p">:</span> <span class="err">ɑ</span><span class="p">,</span>
+</span><span class="hll">        <span class="nt">&quot;side&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class="hll">    <span class="p">},</span>
+</span>    <span class="nt">&quot;meta_analysis_metrics&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;RandomEffectEstimator&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;estimator&quot;</span><span class="p">:</span> <span class="s2">&quot;DL&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;EggersTestEstimator&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;alpha&quot;</span><span class="p">:</span> <span class="mf">0.1</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+  <span class="err">...</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</details>
+<p>In this setup, we would like to run our meta analysis methods publication pool size of <em>K = 24</em>. This can be done by setting  <code>max_pubs</code> parameters of <code>journal_parameters</code>. With this configuration, after journal max-ed out its publications list, it calculates <code>RandomEffectEstimator</code> and <code>EggersTestEstimator</code>, and writes the results into different files for further analysis. </p>
+<p>Starting by our general plots, we can observer the effect of publication bias on proportion of significant results in our publications pool.</p>
+<div class="tabbed-set" data-tabs="2:11"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">0.0</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0001.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0001.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">0.1</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0001.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0001.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">0.2</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0002.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0002.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><label for="__tabbed_2_4">0.3</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0003.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0003.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><label for="__tabbed_2_5">0.4</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0004.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0004.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><label for="__tabbed_2_6">0.5</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0005.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0005.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_2_7" name="__tabbed_2" type="radio" /><label for="__tabbed_2_7">0.6</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0006.png" 
+      media="(prefers-color-scheme: dark)">
+ <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0006.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_2_8" name="__tabbed_2" type="radio" /><label for="__tabbed_2_8">0.7</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0007.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0007.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_2_9" name="__tabbed_2" type="radio" /><label for="__tabbed_2_9">0.8</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0008.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0008.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_2_10" name="__tabbed_2" type="radio" /><label for="__tabbed_2_10">0.9</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0009.png" 
+      media="(prefers-color-scheme: dark)">
+ <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0009.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_2_11" name="__tabbed_2" type="radio" /><label for="__tabbed_2_11">1.0</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_dark_0010.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Sig_Mean_vs_Pub_Bias_light_0010.png"/>
+</picture> </p>
+</div>
+</div>
+<p>Moreover, the level of bias can be seen below. As expected, raising the publicatoin bias raises the level of bias accross all our configurations, with sharper swell in lower true effect sizes.</p>
+<div class="tabbed-set" data-tabs="3:11"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">0.0</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0001.png" 
+      media="(prefers-color-scheme: dark)">
+ <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0001.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">0.1</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0001.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0001.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><label for="__tabbed_3_3">0.2</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0002.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0002.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><label for="__tabbed_3_4">0.3</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0003.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0003.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_3_5" name="__tabbed_3" type="radio" /><label for="__tabbed_3_5">0.4</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0004.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0004.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_3_6" name="__tabbed_3" type="radio" /><label for="__tabbed_3_6">0.5</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0005.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0005.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_3_7" name="__tabbed_3" type="radio" /><label for="__tabbed_3_7">0.6</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0006.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0006.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_3_8" name="__tabbed_3" type="radio" /><label for="__tabbed_3_8">0.7</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0007.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0007.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_3_9" name="__tabbed_3" type="radio" /><label for="__tabbed_3_9">0.8</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0008.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0008.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_3_10" name="__tabbed_3" type="radio" /><label for="__tabbed_3_10">0.9</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0009.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0009.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_3_11" name="__tabbed_3" type="radio" /><label for="__tabbed_3_11">1.0</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_dark_0010.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_ES_Bias_vs_Pub_Bias_light_0010.png"/>
+</picture></p>
+</div>
+</div>
+<p>Figures below showcase the power of Egger's test in detecting publication bias. The average performance of the test is accepetable within most parameter configurations. However, we see large regions of false positives where Egger's test overestimate the presence of the publication bias, especially within smaller true effect sizes. It is also worth mentioning that Egger's test performs quite poorly within a pool of studies with larger sample sizes, <em>L; N = 40</em>, even with publication bias as high as %90.</p>
+<div class="tabbed-set" data-tabs="4:11"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">0.0</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0001.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0001.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">0.1</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0001.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0001.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><label for="__tabbed_4_3">0.2</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0002.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0002.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><label for="__tabbed_4_4">0.3</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0003.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0003.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_4_5" name="__tabbed_4" type="radio" /><label for="__tabbed_4_5">0.4</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0004.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0004.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_4_6" name="__tabbed_4" type="radio" /><label for="__tabbed_4_6">0.5</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0005.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0005.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_4_7" name="__tabbed_4" type="radio" /><label for="__tabbed_4_7">0.6</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0006.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0006.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_4_8" name="__tabbed_4" type="radio" /><label for="__tabbed_4_8">0.7</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0007.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0007.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_4_9" name="__tabbed_4" type="radio" /><label for="__tabbed_4_9">0.8</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0008.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0008.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_4_10" name="__tabbed_4" type="radio" /><label for="__tabbed_4_10">0.9</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0009.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0009.png"/>
+</picture> </p>
+</div>
+<input id="__tabbed_4_11" name="__tabbed_4" type="radio" /><label for="__tabbed_4_11">1.0</label><div class="tabbed-content">
+<p><picture>
+  <source 
+      srcset="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_dark_0010.png" 
+      media="(prefers-color-scheme: dark)">
+  <img src="/examples/figures/Bakker_2012/Third_Extension_Eggers_Test_Pub_Bias_light_0010.png"/>
+</picture></p>
+</div>
+</div>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>In this example, we discussed the process of translating an existing project into SAM. We started by replicating the original simulation, fine-tunning our configuration and comparing our results. Consequently, after successfully replicating the original results, we built on top Bakker et al., simulation.</p>
+<p>In our first extension, we showed that while lowering the alpha decreases the chance of finding significant results it does not necessarily help with the reduction of bias. Moreover, we showed that the number of replications directly influence the level of bias.</p>
+<p>In the second extension, we showed that more aggressive QRPs do not proportionally contribute to higher effect size biases. Together with our results from first extension, we believe that the main source of bias in Bakker et al., is the number of replications and the role of QRPs are almost negligible.</p>
+<p>In our third and last extension, we investigated the effect of publication bias on the overall bias and the power of Egger’s test in defecting publication bias. We showed that while Egger's test generally provide a good measure of publication bias in the presence of publication bias, it consistently overestimate the level of bias when there is not publication bias is present.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Amir M. Abdol and Jelte M. Wicherts. Science Abstract Model Simulation Framework. <em>PsyArXiv</em>, 09 2021. URL: <a href="https://psyarxiv.com/zy29t">https://psyarxiv.com/zy29t</a>, <a href="https://doi.org/10.31234/osf.io/zy29t">doi:10.31234/osf.io/zy29t</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Marjan Bakker, Annette van Dijk, and Jelte M. Wicherts. The rules of the game called psychological science. <em>Perspectives on Psychological Science</em>, 7<span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span>:543–554, nov 2012. URL: <a href="https://doi.org/10.1177%2F1745691612459060">https://doi.org/10.1177%2F1745691612459060</a>, <a href="https://doi.org/10.1177/1745691612459060">doi:10.1177/1745691612459060</a>.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Matthias Egger, George Davey Smith, Martin Schneider, and Christoph Minder. Bias in meta-analysis detected by a simple, graphical test. <em>BMJ</em>, 315<span><span class="MathJax_Preview">7109</span><script type="math/tex">7109</script></span>:629–634, 1997.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2021-09-18
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Introduction
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../bakker_et_al_2014/" class="md-footer__link md-footer__link--next" aria-label="Next: Bakker et al., 2014" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Bakker et al., 2014
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Amir Masoud Abdol
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/amirmasoudabdol" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/amirmasoudabdol" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://linkedin.com/amirmasoudabdol" target="_blank" rel="noopener" title="linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tab", "instant", "header.hide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

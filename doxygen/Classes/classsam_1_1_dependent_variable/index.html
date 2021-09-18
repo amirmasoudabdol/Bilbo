@@ -1,0 +1,1814 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A modular, flexible, and extensible C++ simulation framework for systematically studying Researcher's questionable research practices as well as Journal's questionable review practices.">
+      
+      
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>sam::DependentVariable - SAM - Science Abstract Model Simulation Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../custom.css">
+    
+    
+  <script async defer data-domain="sam.amirmasoudabdol.name" src="https://stats.sam.amirmasoudabdol.name/js/index.js"></script>
+
+    
+  
+  
+    
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="amirmasoudabdol" />
+  <meta name="twitter:creator" content="amirmasoudabdol" />
+  <meta name="twitter:title" content="SAM - Science Abstract Model Simulation Framework - sam::DependentVariable" />
+  <meta name="twitter:description" content="A modular, flexible, and extensible C++ simulation framework for systematically studying Researcher's questionable research practices as well as Journal's questionable review practices." />
+  <meta name="twitter:image" content="https://sam.amirmasoudabdol.name/img/twitter_large_image.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SAM - Science Abstract Model Simulation Framework - sam::DependentVariable" />
+  <meta property="og:description" content="A modular, flexible, and extensible C++ simulation framework for systematically studying Researcher's questionable research practices as well as Journal's questionable review practices." />
+  <meta property="og:url" content="None" />
+  <meta property="og:image" content="https://sam.amirmasoudabdol.name/img/twitter_large_image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#samdependentvariable" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="SAM - Science Abstract Model Simulation Framework" class="md-header__button md-logo" aria-label="SAM - Science Abstract Model Simulation Framework" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SAM - Science Abstract Model Simulation Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              sam::DependentVariable
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/amirmasoudabdol/sam/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SAM - Science Abstract Model Simulation Framework" class="md-nav__button md-logo" aria-label="SAM - Science Abstract Model Simulation Framework" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    SAM - Science Abstract Model Simulation Framework
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/amirmasoudabdol/sam/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Tutorial
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorial/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorial/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Design
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Design" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Design
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../modules/" class="md-nav__link">
+        Modules
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../execution-flow/" class="md-nav__link">
+        Execution Flow
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research-workflow/" class="md-nav__link">
+        Research Workflow
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Configuration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration-file/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Experiment
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Experiment" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../experiment-configurations/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-strategies/" class="md-nav__link">
+        Data Strategies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-strategies/" class="md-nav__link">
+        Test Strategies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../effect-strategies/" class="md-nav__link">
+        Effect Strategies
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        Researcher
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Researcher" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Researcher
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../researcher-configurations/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../decision-strategies/" class="md-nav__link">
+        Decision Strategies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_3" type="checkbox" id="__nav_4_3_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3_3">
+        Hacking Strategies
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Hacking Strategies" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Hacking Strategies
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacking-strategies/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacking-behaviors/" class="md-nav__link">
+        Hacking Behaviors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacking-strategies/selective-reporting/" class="md-nav__link">
+        Selective Reporting
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacking-strategies/optional-stopping/" class="md-nav__link">
+        Optional Stopping
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacking-strategies/outliers-removal/" class="md-nav__link">
+        Outliers Removal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacking-strategies/subjective-outliers-removal/" class="md-nav__link">
+        Subjective Outliers Removal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacking-strategies/falsifying-data/" class="md-nav__link">
+        Falsifying Data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacking-strategies/fabricating-data/" class="md-nav__link">
+        Fabricating Data
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      <label class="md-nav__link" for="__nav_4_4">
+        Journal
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Journal" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Journal
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../journal-configurations/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../selection-strategies/" class="md-nav__link">
+        Selection Strategies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../meta-analyses/" class="md-nav__link">
+        Meta Analysis
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../simulation-configurations/" class="md-nav__link">
+        Simulation
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Frodo
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Frodo" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Frodo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../frodo/frodo/" class="md-nav__link">
+        Frodo
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/" class="md-nav__link">
+        Modules
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Examples
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Examples" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../studies/studies/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../studies/selection-variation/" class="md-nav__link">
+        Selection Variation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../studies/sample-size-variation/" class="md-nav__link">
+        Sample Size Variation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../studies/optional-stopping-variation/" class="md-nav__link">
+        Optional Stopping Variation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_5" type="checkbox" id="__nav_7_5" >
+      
+      <label class="md-nav__link" for="__nav_7_5">
+        Studies / Replications
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Studies / Replications" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Studies / Replications
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/bakker_et_al_2012/" class="md-nav__link">
+        Bakker et al., 2012
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/bakker_et_al_2014/" class="md-nav__link">
+        Bakker et al., 2014
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/esther_first_year/" class="md-nav__link">
+        Maassen et al., 2016
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/friese_et_al_2020/" class="md-nav__link">
+        Friese et al., 2020
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions" class="md-nav__link">
+    Public Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes" class="md-nav__link">
+    Public Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    Detailed Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-documentation" class="md-nav__link">
+    Public Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-ismodified" class="md-nav__link">
+    function isModified
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-ishacked" class="md-nav__link">
+    function isHacked
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-iscandidate" class="md-nav__link">
+    function isCandidate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-begin" class="md-nav__link">
+    function begin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-end" class="md-nav__link">
+    function end
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-operator" class="md-nav__link">
+    function operator[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-operator_1" class="md-nav__link">
+    function operator[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-dependentvariable" class="md-nav__link">
+    function DependentVariable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-dependentvariable_1" class="md-nav__link">
+    function DependentVariable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-sethackedstatus" class="md-nav__link">
+    function setHackedStatus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setcandidatestatus" class="md-nav__link">
+    function setCandidateStatus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-measurements" class="md-nav__link">
+    function measurements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-measurements_1" class="md-nav__link">
+    function measurements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setmeasurements" class="md-nav__link">
+    function setMeasurements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-addnewmeasurements" class="md-nav__link">
+    function addNewMeasurements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-removemeasurements" class="md-nav__link">
+    function removeMeasurements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-updatestats" class="md-nav__link">
+    function updateStats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-clear" class="md-nav__link">
+    function clear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-columns" class="md-nav__link">
+    function Columns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes-documentation" class="md-nav__link">
+    Public Attributes Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Attributes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-true_nobs_" class="md-nav__link">
+    variable true_nobs_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-true_mean_" class="md-nav__link">
+    variable true_mean_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-true_std_" class="md-nav__link">
+    variable true_std_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-nobs_" class="md-nav__link">
+    variable nobs_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-mean_" class="md-nav__link">
+    variable mean_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-var_" class="md-nav__link">
+    variable var_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-stddev_" class="md-nav__link">
+    variable stddev_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-sei_" class="md-nav__link">
+    variable sei_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-stats_" class="md-nav__link">
+    variable stats_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-pvalue_" class="md-nav__link">
+    variable pvalue_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-sig_" class="md-nav__link">
+    variable sig_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-effect_" class="md-nav__link">
+    variable effect_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-var_effect_" class="md-nav__link">
+    variable var_effect_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-se_effect_" class="md-nav__link">
+    variable se_effect_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-eff_side_" class="md-nav__link">
+    variable eff_side_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_hacked_" class="md-nav__link">
+    variable is_hacked_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-n_added_obs" class="md-nav__link">
+    variable n_added_obs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-n_removed_obs" class="md-nav__link">
+    variable n_removed_obs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-id_" class="md-nav__link">
+    variable id_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_candidate_" class="md-nav__link">
+    variable is_candidate_
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/amirmasoudabdol/sam/edit/master/docs/doxygen/Classes/classsam_1_1_dependent_variable.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="samdependentvariable">sam::DependentVariable<a class="headerlink" href="#samdependentvariable" title="Permanent link">&para;</a></h1>
+<p>Declaration of <a href="">DependentVariable</a> class.  <a href="#detailed-description">More...</a></p>
+<p><code>#include &lt;DependentVariable.h&gt;</code></p>
+<h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bool</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-ismodified">isModified</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-ishacked">isHacked</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-iscandidate">isCandidate</a></strong>() const</td>
+</tr>
+<tr>
+<td>auto</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-begin">begin</a></strong>()</td>
+</tr>
+<tr>
+<td>auto</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-end">end</a></strong>()</td>
+</tr>
+<tr>
+<td>float &amp;</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-operator[]">operator[]</a></strong>(std::size_t idx)</td>
+</tr>
+<tr>
+<td>const float &amp;</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-operator[]">operator[]</a></strong>(std::size_t idx) const</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-dependentvariable">DependentVariable</a></strong>() =default</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-dependentvariable">DependentVariable</a></strong>(const arma::Row&lt; float &gt; &amp; data)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-sethackedstatus">setHackedStatus</a></strong>(const bool status)<br>Sets the hacking status.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-setcandidatestatus">setCandidateStatus</a></strong>(const bool status)<br>Sets the candidacy status.</td>
+</tr>
+<tr>
+<td>arma::Row&lt; float &gt; &amp;</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-measurements">measurements</a></strong>()<br>Getter / Setter.</td>
+</tr>
+<tr>
+<td>const arma::Row&lt; float &gt; &amp;</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-measurements">measurements</a></strong>() const</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-setmeasurements">setMeasurements</a></strong>(const arma::Row&lt; float &gt; &amp; meas)<br>Sets the raw measurements values.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-addnewmeasurements">addNewMeasurements</a></strong>(const arma::Row&lt; float &gt; &amp; new_meas)<br>Adds new measurements to the currently available data.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-removemeasurements">removeMeasurements</a></strong>(const arma::uvec &amp; idxs)<br>Removes the measurements by their indices.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-updatestats">updateStats</a></strong>()<br>Updates the descriptive statistics of the dependent variable.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-clear">clear</a></strong>()<br>Reset the internal state of the dependent variable.</td>
+</tr>
+<tr>
+<td>std::vector&lt; std::string &gt;</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#function-columns">Columns</a></strong>()<br>List the name of all avaliable variables.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-attributes">Public Attributes<a class="headerlink" href="#public-attributes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-true_nobs_">true_nobs_</a></strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-true_mean_">true_mean_</a></strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-true_std_">true_std_</a></strong></td>
+</tr>
+<tr>
+<td>int</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-nobs_">nobs_</a></strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-mean_">mean_</a></strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-var_">var_</a></strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-stddev_">stddev_</a></strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-sei_">sei_</a></strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-stats_">stats_</a></strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-pvalue_">pvalue_</a></strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-sig_">sig_</a></strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-effect_">effect_</a></strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-var_effect_">var_effect_</a></strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-se_effect_">se_effect_</a></strong></td>
+</tr>
+<tr>
+<td>int</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-eff_side_">eff_side_</a></strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-is_hacked_">is_hacked_</a></strong></td>
+</tr>
+<tr>
+<td>int</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-n_added_obs">n_added_obs</a></strong></td>
+</tr>
+<tr>
+<td>int</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-n_removed_obs">n_removed_obs</a></strong></td>
+</tr>
+<tr>
+<td>int</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-id_">id_</a></strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_dependent_variable/#variable-is_candidate_">is_candidate_</a></strong> <br><a href="">Submission</a> Meta Data.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">sam</span><span class="o">::</span><span class="n">DependentVariable</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Declaration of <a href="">DependentVariable</a> class. </p>
+<p>This class is an abstract representation of a dependant variable. It contains raw data, test statistics, and effect size measurements as well as some meta data for keeping track of true nobs, mean, and std values. </p>
+<h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="function-ismodified">function isModified<a class="headerlink" href="#function-ismodified" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isModified</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-ishacked">function isHacked<a class="headerlink" href="#function-ishacked" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isHacked</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-iscandidate">function isCandidate<a class="headerlink" href="#function-iscandidate" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isCandidate</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-begin">function begin<a class="headerlink" href="#function-begin" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">begin</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-end">function end<a class="headerlink" href="#function-end" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">end</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-operator">function operator[]<a class="headerlink" href="#function-operator" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="p">[](</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">idx</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-operator_1">function operator[]<a class="headerlink" href="#function-operator_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="p">[](</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">idx</span><span class="w"></span>
+<span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-dependentvariable">function DependentVariable<a class="headerlink" href="#function-dependentvariable" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">DependentVariable</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="k">default</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-dependentvariable_1">function DependentVariable<a class="headerlink" href="#function-dependentvariable_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">explicit</span><span class="w"> </span><span class="n">DependentVariable</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">arma</span><span class="o">::</span><span class="n">Row</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">data</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-sethackedstatus">function setHackedStatus<a class="headerlink" href="#function-sethackedstatus" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">setHackedStatus</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">status</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Sets the hacking status. </p>
+<h3 id="function-setcandidatestatus">function setCandidateStatus<a class="headerlink" href="#function-setcandidatestatus" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">setCandidateStatus</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">status</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Sets the candidacy status. </p>
+<h3 id="function-measurements">function measurements<a class="headerlink" href="#function-measurements" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">arma</span><span class="o">::</span><span class="n">Row</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">measurements</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Getter / Setter. </p>
+<h3 id="function-measurements_1">function measurements<a class="headerlink" href="#function-measurements_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">arma</span><span class="o">::</span><span class="n">Row</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">measurements</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-setmeasurements">function setMeasurements<a class="headerlink" href="#function-setmeasurements" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">setMeasurements</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">arma</span><span class="o">::</span><span class="n">Row</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">meas</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Sets the raw measurements values. </p>
+<h3 id="function-addnewmeasurements">function addNewMeasurements<a class="headerlink" href="#function-addnewmeasurements" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">addNewMeasurements</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">arma</span><span class="o">::</span><span class="n">Row</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">new_meas</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Adds new measurements to the currently available data. </p>
+<h3 id="function-removemeasurements">function removeMeasurements<a class="headerlink" href="#function-removemeasurements" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">removeMeasurements</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">arma</span><span class="o">::</span><span class="n">uvec</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">idxs</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Removes the measurements by their indices. </p>
+<h3 id="function-updatestats">function updateStats<a class="headerlink" href="#function-updatestats" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">updateStats</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Updates the descriptive statistics of the dependent variable. </p>
+<p>This updates all the descriptive statistics of the dependent variable. </p>
+<h3 id="function-clear">function clear<a class="headerlink" href="#function-clear" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">clear</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Reset the internal state of the dependent variable. </p>
+<p>This clears and resets the internal state of the class. </p>
+<h3 id="function-columns">function Columns<a class="headerlink" href="#function-columns" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Columns</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>List the name of all avaliable variables. </p>
+<p>This is being used by the <a href="/doxygen/Classes/classsam_1_1_persistence_manager_1_1_writer/">PersistenceManager::Writer</a> to determine the name and number of columns </p>
+<h2 id="public-attributes-documentation">Public Attributes Documentation<a class="headerlink" href="#public-attributes-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="variable-true_nobs_">variable true_nobs_<a class="headerlink" href="#variable-true_nobs_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">true_nobs_</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-true_mean_">variable true_mean_<a class="headerlink" href="#variable-true_mean_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">true_mean_</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-true_std_">variable true_std_<a class="headerlink" href="#variable-true_std_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">true_std_</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-nobs_">variable nobs_<a class="headerlink" href="#variable-nobs_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">nobs_</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-mean_">variable mean_<a class="headerlink" href="#variable-mean_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">mean_</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-var_">variable var_<a class="headerlink" href="#variable-var_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">var_</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-stddev_">variable stddev_<a class="headerlink" href="#variable-stddev_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">stddev_</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-sei_">variable sei_<a class="headerlink" href="#variable-sei_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">sei_</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-stats_">variable stats_<a class="headerlink" href="#variable-stats_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">stats_</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-pvalue_">variable pvalue_<a class="headerlink" href="#variable-pvalue_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">pvalue_</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-sig_">variable sig_<a class="headerlink" href="#variable-sig_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">sig_</span><span class="w"> </span><span class="p">{</span><span class="nb">false</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-effect_">variable effect_<a class="headerlink" href="#variable-effect_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">effect_</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-var_effect_">variable var_effect_<a class="headerlink" href="#variable-var_effect_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">var_effect_</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-se_effect_">variable se_effect_<a class="headerlink" href="#variable-se_effect_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">se_effect_</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-eff_side_">variable eff_side_<a class="headerlink" href="#variable-eff_side_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">eff_side_</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-is_hacked_">variable is_hacked_<a class="headerlink" href="#variable-is_hacked_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">is_hacked_</span><span class="w"> </span><span class="p">{</span><span class="nb">false</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-n_added_obs">variable n_added_obs<a class="headerlink" href="#variable-n_added_obs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">n_added_obs</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-n_removed_obs">variable n_removed_obs<a class="headerlink" href="#variable-n_removed_obs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">n_removed_obs</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-id_">variable id_<a class="headerlink" href="#variable-id_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">id_</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Dependent variable's ID. This is being used by <a href="/doxygen/Classes/structsam_1_1_policy/">Policy</a> to perform some searches </p>
+<h3 id="variable-is_candidate_">variable is_candidate_<a class="headerlink" href="#variable-is_candidate_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">is_candidate_</span><span class="w"> </span><span class="p">{</span><span class="nb">false</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p><a href="">Submission</a> Meta Data. </p>
+<hr />
+<p>Updated on 29 June 2021 at 16:13:46 CEST</p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2021-09-18
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Amir Masoud Abdol
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/amirmasoudabdol" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/amirmasoudabdol" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://linkedin.com/amirmasoudabdol" target="_blank" rel="noopener" title="linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["tab", "instant", "header.hide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

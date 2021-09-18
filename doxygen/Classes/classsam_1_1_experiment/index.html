@@ -1,0 +1,1994 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A modular, flexible, and extensible C++ simulation framework for systematically studying Researcher's questionable research practices as well as Journal's questionable review practices.">
+      
+      
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>sam::Experiment - SAM - Science Abstract Model Simulation Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../custom.css">
+    
+    
+  <script async defer data-domain="sam.amirmasoudabdol.name" src="https://stats.sam.amirmasoudabdol.name/js/index.js"></script>
+
+    
+  
+  
+    
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="amirmasoudabdol" />
+  <meta name="twitter:creator" content="amirmasoudabdol" />
+  <meta name="twitter:title" content="SAM - Science Abstract Model Simulation Framework - sam::Experiment" />
+  <meta name="twitter:description" content="A modular, flexible, and extensible C++ simulation framework for systematically studying Researcher's questionable research practices as well as Journal's questionable review practices." />
+  <meta name="twitter:image" content="https://sam.amirmasoudabdol.name/img/twitter_large_image.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SAM - Science Abstract Model Simulation Framework - sam::Experiment" />
+  <meta property="og:description" content="A modular, flexible, and extensible C++ simulation framework for systematically studying Researcher's questionable research practices as well as Journal's questionable review practices." />
+  <meta property="og:url" content="None" />
+  <meta property="og:image" content="https://sam.amirmasoudabdol.name/img/twitter_large_image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#samexperiment" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="SAM - Science Abstract Model Simulation Framework" class="md-header__button md-logo" aria-label="SAM - Science Abstract Model Simulation Framework" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SAM - Science Abstract Model Simulation Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              sam::Experiment
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/amirmasoudabdol/sam/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SAM - Science Abstract Model Simulation Framework" class="md-nav__button md-logo" aria-label="SAM - Science Abstract Model Simulation Framework" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    SAM - Science Abstract Model Simulation Framework
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/amirmasoudabdol/sam/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Tutorial
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorial/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorial/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Design
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Design" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Design
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../modules/" class="md-nav__link">
+        Modules
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../execution-flow/" class="md-nav__link">
+        Execution Flow
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research-workflow/" class="md-nav__link">
+        Research Workflow
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Configuration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration-file/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Experiment
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Experiment" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../experiment-configurations/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-strategies/" class="md-nav__link">
+        Data Strategies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-strategies/" class="md-nav__link">
+        Test Strategies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../effect-strategies/" class="md-nav__link">
+        Effect Strategies
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        Researcher
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Researcher" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Researcher
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../researcher-configurations/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../decision-strategies/" class="md-nav__link">
+        Decision Strategies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_3" type="checkbox" id="__nav_4_3_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3_3">
+        Hacking Strategies
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Hacking Strategies" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Hacking Strategies
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacking-strategies/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacking-behaviors/" class="md-nav__link">
+        Hacking Behaviors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacking-strategies/selective-reporting/" class="md-nav__link">
+        Selective Reporting
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacking-strategies/optional-stopping/" class="md-nav__link">
+        Optional Stopping
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacking-strategies/outliers-removal/" class="md-nav__link">
+        Outliers Removal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacking-strategies/subjective-outliers-removal/" class="md-nav__link">
+        Subjective Outliers Removal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacking-strategies/falsifying-data/" class="md-nav__link">
+        Falsifying Data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacking-strategies/fabricating-data/" class="md-nav__link">
+        Fabricating Data
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      <label class="md-nav__link" for="__nav_4_4">
+        Journal
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Journal" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Journal
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../journal-configurations/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../selection-strategies/" class="md-nav__link">
+        Selection Strategies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../meta-analyses/" class="md-nav__link">
+        Meta Analysis
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../simulation-configurations/" class="md-nav__link">
+        Simulation
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Frodo
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Frodo" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Frodo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../frodo/frodo/" class="md-nav__link">
+        Frodo
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/" class="md-nav__link">
+        Modules
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Examples
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Examples" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../studies/studies/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../studies/selection-variation/" class="md-nav__link">
+        Selection Variation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../studies/sample-size-variation/" class="md-nav__link">
+        Sample Size Variation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../studies/optional-stopping-variation/" class="md-nav__link">
+        Optional Stopping Variation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_5" type="checkbox" id="__nav_7_5" >
+      
+      <label class="md-nav__link" for="__nav_7_5">
+        Studies / Replications
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Studies / Replications" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Studies / Replications
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/bakker_et_al_2012/" class="md-nav__link">
+        Bakker et al., 2012
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/bakker_et_al_2014/" class="md-nav__link">
+        Bakker et al., 2014
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/esther_first_year/" class="md-nav__link">
+        Maassen et al., 2016
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/friese_et_al_2020/" class="md-nav__link">
+        Friese et al., 2020
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions" class="md-nav__link">
+    Public Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes" class="md-nav__link">
+    Public Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    Detailed Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-documentation" class="md-nav__link">
+    Public Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-operator" class="md-nav__link">
+    function operator[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-operator_1" class="md-nav__link">
+    function operator[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-begin" class="md-nav__link">
+    function begin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-end" class="md-nav__link">
+    function end
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-begin_1" class="md-nav__link">
+    function begin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-end_1" class="md-nav__link">
+    function end
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-experiment" class="md-nav__link">
+    function Experiment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-experiment_1" class="md-nav__link">
+    function Experiment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-experiment_2" class="md-nav__link">
+    function Experiment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-experiment_3" class="md-nav__link">
+    function Experiment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-addnewcondition" class="md-nav__link">
+    function addNewCondition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-addnewcondition_1" class="md-nav__link">
+    function addNewCondition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-addnewdependentvariable" class="md-nav__link">
+    function addNewDependentVariable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-addnewcandidates" class="md-nav__link">
+    function addNewCandidates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-sethackedstatus" class="md-nav__link">
+    function setHackedStatus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setpublishedstatus" class="md-nav__link">
+    function setPublishedStatus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-sethackedstatusof" class="md-nav__link">
+    function setHackedStatusOf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setcandidatestatusof" class="md-nav__link">
+    function setCandidateStatusOf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-ishacked" class="md-nav__link">
+    function isHacked
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-ismodified" class="md-nav__link">
+    function isModified
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-hascandidates" class="md-nav__link">
+    function hasCandidates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-hascovariants" class="md-nav__link">
+    function hasCovariants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-ispublished" class="md-nav__link">
+    function isPublished
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-ncandidates" class="md-nav__link">
+    function nCandidates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-ncovariants" class="md-nav__link">
+    function nCovariants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-reset" class="md-nav__link">
+    function reset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-generatedata" class="md-nav__link">
+    function generateData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-generatecovariants" class="md-nav__link">
+    function generateCovariants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-calculatestatistics" class="md-nav__link">
+    function calculateStatistics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-calculatetests" class="md-nav__link">
+    function calculateTests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-calculateeffects" class="md-nav__link">
+    function calculateEffects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-recalculateeverything" class="md-nav__link">
+    function recalculateEverything
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-clear" class="md-nav__link">
+    function clear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setteststrategy" class="md-nav__link">
+    function setTestStrategy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setdatastrategy" class="md-nav__link">
+    function setDataStrategy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-seteffectsizeestimator" class="md-nav__link">
+    function setEffectSizeEstimator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes-documentation" class="md-nav__link">
+    Public Attributes Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Attributes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-simid" class="md-nav__link">
+    variable simid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-exprid" class="md-nav__link">
+    variable exprid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-repid" class="md-nav__link">
+    variable repid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-n_covariants" class="md-nav__link">
+    variable n_covariants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-covariants" class="md-nav__link">
+    variable covariants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-setup" class="md-nav__link">
+    variable setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-data_strategy" class="md-nav__link">
+    variable data_strategy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-test_strategy" class="md-nav__link">
+    variable test_strategy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-effect_strategy" class="md-nav__link">
+    variable effect_strategy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-dvs_" class="md-nav__link">
+    variable dvs_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-candidates" class="md-nav__link">
+    variable candidates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/amirmasoudabdol/sam/edit/master/docs/doxygen/Classes/classsam_1_1_experiment.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="samexperiment">sam::Experiment<a class="headerlink" href="#samexperiment" title="Permanent link">&para;</a></h1>
+<p><strong>Module:</strong> <strong><a href="/doxygen/Modules/group___experiment/">Experiment Modules</a></strong></p>
+<p><a href="">Experiment</a> encapsulates data and methods needed by the <a href="">Researcher</a> to conduct its research.  <a href="#detailed-description">More...</a></p>
+<p><code>#include &lt;Experiment.h&gt;</code></p>
+<h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/doxygen/Classes/classsam_1_1_dependent_variable/">DependentVariable</a> &amp;</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-operator[]">operator[]</a></strong>(std::size_t idx)</td>
+</tr>
+<tr>
+<td>const <a href="/doxygen/Classes/classsam_1_1_dependent_variable/">DependentVariable</a> &amp;</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-operator[]">operator[]</a></strong>(std::size_t idx) const</td>
+</tr>
+<tr>
+<td>auto</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-begin">begin</a></strong>()</td>
+</tr>
+<tr>
+<td>auto</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-end">end</a></strong>()</td>
+</tr>
+<tr>
+<td>auto</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-begin">begin</a></strong>() const</td>
+</tr>
+<tr>
+<td>auto</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-end">end</a></strong>() const</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-experiment">Experiment</a></strong>() =default<br>Default constructor.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-experiment">Experiment</a></strong>(json &amp; experiment_config)<br>Constructs an <a href="/doxygen/Classes/classsam_1_1_experiment/">Experiment</a> object using the given JSON configuration.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-experiment">Experiment</a></strong>(<a href="/doxygen/Classes/classsam_1_1_experiment_setup/">ExperimentSetup</a> &amp; e)<br>Constructs an <a href="/doxygen/Classes/classsam_1_1_experiment/">Experiment</a> using an already initialized <a href="">ExperimentSetup</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-experiment">Experiment</a></strong>(<a href="/doxygen/Classes/classsam_1_1_experiment_setup/">ExperimentSetup</a> &amp; e, std::shared_ptr&lt; <a href="/doxygen/Classes/classsam_1_1_data_strategy/">DataStrategy</a> &gt; &amp; ds, std::shared_ptr&lt; <a href="/doxygen/Classes/classsam_1_1_test_strategy/">TestStrategy</a> &gt; &amp; ts, std::shared_ptr&lt; <a href="/doxygen/Classes/classsam_1_1_effect_strategy/">EffectStrategy</a> &gt; &amp; es)<br>Directly constructs an <a href="/doxygen/Classes/classsam_1_1_experiment/">Experiment</a> from its components.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-addnewcondition">addNewCondition</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-addnewcondition">addNewCondition</a></strong>(const std::vector&lt; <a href="/doxygen/Classes/classsam_1_1_dependent_variable/">DependentVariable</a> &gt; &amp; dvs)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-addnewdependentvariable">addNewDependentVariable</a></strong>(const <a href="/doxygen/Classes/classsam_1_1_dependent_variable/">DependentVariable</a> &amp; dv)<br>Adds a new dependent variable to the list.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-addnewcandidates">addNewCandidates</a></strong>(const std::vector&lt; <a href="/doxygen/Classes/classsam_1_1_submission/">Submission</a> &gt; &amp; subs)<br>Adds new submissions to the list of submissions.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-sethackedstatus">setHackedStatus</a></strong>(const bool status)<br>Sets the hacked status of the experiment.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-setpublishedstatus">setPublishedStatus</a></strong>(const bool status)<br>Sets the published status of the experiment.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-sethackedstatusof">setHackedStatusOf</a></strong>(const std::vector&lt; size_t &gt; &amp; idxs, const bool status)<br>Sets the hacked status of a group of dvs.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-setcandidatestatusof">setCandidateStatusOf</a></strong>(const std::vector&lt; size_t &gt; &amp; idxs, const bool status)<br>Sets the candidate status of a group of dvs.</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-ishacked">isHacked</a></strong>() const<br>Returns true if the experiment is hacked.</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-ismodified">isModified</a></strong>() const<br>Returns true if the experiment has been modified in anyway.</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-hascandidates">hasCandidates</a></strong>() const<br>Returns true if there is an candidate in the experiment.</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-hascovariants">hasCovariants</a></strong>() const<br>Returns true if there is an candidate in the experiment.</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-ispublished">isPublished</a></strong>() const<br>Returns true if the experiment has been published by the <a href="">Journal</a>.</td>
+</tr>
+<tr>
+<td>size_t</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-ncandidates">nCandidates</a></strong>() const<br>Returns the number of candidate DVs.</td>
+</tr>
+<tr>
+<td>int</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-ncovariants">nCovariants</a></strong>() const</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-reset">reset</a></strong>()<br>Clears and re-initializes the dependent variables.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-generatedata">generateData</a></strong>()<br>Uses the <a href="/doxygen/Classes/classsam_1_1_data_strategy/">DataStrategy</a> to populate every DVs with raw the data.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-generatecovariants">generateCovariants</a></strong>()<br>Generates covariants data.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-calculatestatistics">calculateStatistics</a></strong>()<br>Asks each <a href="/doxygen/Classes/classsam_1_1_dependent_variable/">DependentVariable</a> to update its general statistics, e.g., mean, var.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-calculatetests">calculateTests</a></strong>()<br>Uses the <a href="">TestStrategy</a> to run the statistical test.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-calculateeffects">calculateEffects</a></strong>()<br>Uses the <a href="/doxygen/Classes/classsam_1_1_effect_strategy/">EffectStrategy</a> to calculates the effect sizes.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-recalculateeverything">recalculateEverything</a></strong>()<br>Runs <a href="/doxygen/Classes/classsam_1_1_experiment/#function-calculatestatistics">calculateStatistics()</a>, <a href="/doxygen/Classes/classsam_1_1_experiment/#function-calculatetests">calculateTests()</a>, and <a href="/doxygen/Classes/classsam_1_1_experiment/#function-calculateeffects">calculateEffects()</a> in order.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-clear">clear</a></strong>()<br>Clears the content of the experiment.</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-setteststrategy">setTestStrategy</a></strong>(std::shared_ptr&lt; <a href="/doxygen/Classes/classsam_1_1_test_strategy/">TestStrategy</a> &gt; &amp; ts)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-setdatastrategy">setDataStrategy</a></strong>(std::shared_ptr&lt; <a href="/doxygen/Classes/classsam_1_1_data_strategy/">DataStrategy</a> &gt; &amp; ds)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#function-seteffectsizeestimator">setEffectSizeEstimator</a></strong>(std::shared_ptr&lt; <a href="/doxygen/Classes/classsam_1_1_effect_strategy/">EffectStrategy</a> &gt; &amp; es)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-attributes">Public Attributes<a class="headerlink" href="#public-attributes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#variable-simid">simid</a></strong></td>
+</tr>
+<tr>
+<td>int</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#variable-exprid">exprid</a></strong></td>
+</tr>
+<tr>
+<td>int</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#variable-repid">repid</a></strong></td>
+</tr>
+<tr>
+<td>int</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#variable-n_covariants">n_covariants</a></strong> <br>Indicates the number of covariants.</td>
+</tr>
+<tr>
+<td>arma::Mat&lt; int &gt;</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#variable-covariants">covariants</a></strong></td>
+</tr>
+<tr>
+<td><a href="/doxygen/Classes/classsam_1_1_experiment_setup/">ExperimentSetup</a></td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#variable-setup">setup</a></strong></td>
+</tr>
+<tr>
+<td>std::shared_ptr&lt; <a href="/doxygen/Classes/classsam_1_1_data_strategy/">DataStrategy</a> &gt;</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#variable-data_strategy">data_strategy</a></strong></td>
+</tr>
+<tr>
+<td>std::shared_ptr&lt; <a href="/doxygen/Classes/classsam_1_1_test_strategy/">TestStrategy</a> &gt;</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#variable-test_strategy">test_strategy</a></strong></td>
+</tr>
+<tr>
+<td>std::shared_ptr&lt; <a href="/doxygen/Classes/classsam_1_1_effect_strategy/">EffectStrategy</a> &gt;</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#variable-effect_strategy">effect_strategy</a></strong></td>
+</tr>
+<tr>
+<td>std::vector&lt; <a href="/doxygen/Classes/classsam_1_1_dependent_variable/">DependentVariable</a> &gt;</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#variable-dvs_">dvs_</a></strong></td>
+</tr>
+<tr>
+<td>std::optional&lt; std::vector&lt; <a href="/doxygen/Classes/classsam_1_1_submission/">Submission</a> &gt; &gt;</td>
+<td><strong><a href="/doxygen/Classes/classsam_1_1_experiment/#variable-candidates">candidates</a></strong> <br>List of all possible candidates from this experiment so far!</td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">sam</span><span class="o">::</span><span class="n">Experiment</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p><a href="">Experiment</a> encapsulates data and methods needed by the <a href="">Researcher</a> to conduct its research. </p>
+<p><a href="/doxygen/Classes/classsam_1_1_experiment/">Experiment</a> has a full access to all data-related strategies, e.g., <a href="/doxygen/Classes/classsam_1_1_data_strategy/">DataStrategy</a>, <a href="/doxygen/Classes/classsam_1_1_test_strategy/">TestStrategy</a>, and <a href="/doxygen/Classes/classsam_1_1_effect_strategy/">EffectStrategy</a>. It also contains the raw research data in the form of list of DependentVariable(s). Moreover, the <a href="/doxygen/Classes/classsam_1_1_experiment/">Experiment</a> stores a copy of the <a href="/doxygen/Classes/classsam_1_1_experiment_setup/">ExperimentSetup</a> where most study parameters are stored in. </p>
+<h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="function-operator">function operator[]<a class="headerlink" href="#function-operator" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">DependentVariable</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="p">[](</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">idx</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Todo</strong>: I'm not the fan of this <code>find_if</code> here, and I think I can do better. </p>
+<p>I think I can avoid this search if I use std::reference_wrapper </p>
+<p>These operators are returning the correct group, even if the group list is not sorted.</p>
+<h3 id="function-operator_1">function operator[]<a class="headerlink" href="#function-operator_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">DependentVariable</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="p">[](</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">idx</span><span class="w"></span>
+<span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-begin">function begin<a class="headerlink" href="#function-begin" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">begin</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-end">function end<a class="headerlink" href="#function-end" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">end</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-begin_1">function begin<a class="headerlink" href="#function-begin_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">begin</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-end_1">function end<a class="headerlink" href="#function-end_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">end</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-experiment">function Experiment<a class="headerlink" href="#function-experiment" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">Experiment</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="k">default</span><span class="w"></span>
+</code></pre></div>
+<p>Default constructor. </p>
+<h3 id="function-experiment_1">function Experiment<a class="headerlink" href="#function-experiment_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">Experiment</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">json</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">experiment_config</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Constructs an <a href="/doxygen/Classes/classsam_1_1_experiment/">Experiment</a> object using the given JSON configuration. </p>
+<p>This constructs an <a href="/doxygen/Classes/classsam_1_1_experiment/">Experiment</a>, and allocates the resources necessary for the experiment to setup its dependent variables, etc. Using the config parameters of the Data, Test, and Effect strategies, it also initializes those to be used by the <a href="/doxygen/Classes/classsam_1_1_researcher/">Researcher</a> or the <a href="/doxygen/Classes/classsam_1_1_experiment/">Experiment</a> itself </p>
+<h3 id="function-experiment_2">function Experiment<a class="headerlink" href="#function-experiment_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">Experiment</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">ExperimentSetup</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Constructs an <a href="/doxygen/Classes/classsam_1_1_experiment/">Experiment</a> using an already initialized <a href="">ExperimentSetup</a>. </p>
+<p><strong>Note</strong>: This can be used in cases where the underlying strategies should be preserved while some experiment parameters needs to be modified. </p>
+<p>Since <a href="/doxygen/Classes/classsam_1_1_experiment_setup/">ExperimentSetup</a> already contains the definition of Data, Test, and Effect strategies, this method accepts the <a href="/doxygen/Classes/classsam_1_1_experiment_setup/">ExperimentSetup</a> as it is, and only initialize those strategies.</p>
+<h3 id="function-experiment_3">function Experiment<a class="headerlink" href="#function-experiment_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">Experiment</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">ExperimentSetup</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">DataStrategy</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ds</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">TestStrategy</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ts</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">EffectStrategy</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">es</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Directly constructs an <a href="/doxygen/Classes/classsam_1_1_experiment/">Experiment</a> from its components. </p>
+<p><strong>Note</strong>: This is mainly used by the ExperimentBuilder </p>
+<p>This directly constructs the experiment by directly constructing its internal based on the set of given parameters.</p>
+<h3 id="function-addnewcondition">function addNewCondition<a class="headerlink" href="#function-addnewcondition" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">addNewCondition</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Adds a new condition @TODO TO BE IMPLEMENTED! </p>
+<h3 id="function-addnewcondition_1">function addNewCondition<a class="headerlink" href="#function-addnewcondition_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">addNewCondition</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">DependentVariable</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">dvs</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Adds a new condition @TODO TO BE IMPLEMENTED! </p>
+<h3 id="function-addnewdependentvariable">function addNewDependentVariable<a class="headerlink" href="#function-addnewdependentvariable" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">addNewDependentVariable</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">DependentVariable</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">dv</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Adds a new dependent variable to the list. </p>
+<h3 id="function-addnewcandidates">function addNewCandidates<a class="headerlink" href="#function-addnewcandidates" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">addNewCandidates</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Submission</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">subs</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Adds new submissions to the list of submissions. </p>
+<p>Adds new candidates to the list of selected candidates </p>
+<h3 id="function-sethackedstatus">function setHackedStatus<a class="headerlink" href="#function-sethackedstatus" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">setHackedStatus</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">status</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Sets the hacked status of the experiment. </p>
+<p><strong>Attention</strong>: Setting this to <code>true</code> will make the <code>[isHacked()](/doxygen/Classes/classsam_1_1_experiment/#function-ishacked)</code> to return <code>true</code>. Basically, this overrules the status of the dependent variables, but it doesn't overwrite them! </p>
+<p>It sets the overall hacked status of the experiment to status.</p>
+<h3 id="function-setpublishedstatus">function setPublishedStatus<a class="headerlink" href="#function-setpublishedstatus" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">setPublishedStatus</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">status</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Sets the published status of the experiment. </p>
+<h3 id="function-sethackedstatusof">function setHackedStatusOf<a class="headerlink" href="#function-sethackedstatusof" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">setHackedStatusOf</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">idxs</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">status</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Sets the hacked status of a group of dvs. </p>
+<h3 id="function-setcandidatestatusof">function setCandidateStatusOf<a class="headerlink" href="#function-setcandidatestatusof" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">setCandidateStatusOf</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">idxs</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">status</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Sets the candidate status of a group of dvs. </p>
+<h3 id="function-ishacked">function isHacked<a class="headerlink" href="#function-ishacked" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">isHacked</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>Returns true if the experiment is hacked. </p>
+<p>An experiment is hacked if its hacked status has been set to <code>true</code>, or one of its dependent variables has been flagged as hacked </p>
+<h3 id="function-ismodified">function isModified<a class="headerlink" href="#function-ismodified" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">isModified</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>Returns true if the experiment has been modified in anyway. </p>
+<h3 id="function-hascandidates">function hasCandidates<a class="headerlink" href="#function-hascandidates" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">hasCandidates</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>Returns true if there is an candidate in the experiment. </p>
+<h3 id="function-hascovariants">function hasCovariants<a class="headerlink" href="#function-hascovariants" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">hasCovariants</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>Returns true if there is an candidate in the experiment. </p>
+<h3 id="function-ispublished">function isPublished<a class="headerlink" href="#function-ispublished" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">isPublished</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>Returns true if the experiment has been published by the <a href="">Journal</a>. </p>
+<h3 id="function-ncandidates">function nCandidates<a class="headerlink" href="#function-ncandidates" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">size_t</span><span class="w"> </span><span class="n">nCandidates</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>Returns the number of candidate DVs. </p>
+<h3 id="function-ncovariants">function nCovariants<a class="headerlink" href="#function-ncovariants" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">nCovariants</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-reset">function reset<a class="headerlink" href="#function-reset" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">reset</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Clears and re-initializes the dependent variables. </p>
+<p>This cleanup the <a href="/doxygen/Classes/classsam_1_1_experiment/">Experiment</a>, and reallocate its memory again. Technically, preparing the experiment for a new run. </p>
+<h3 id="function-generatedata">function generateData<a class="headerlink" href="#function-generatedata" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">generateData</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Uses the <a href="/doxygen/Classes/classsam_1_1_data_strategy/">DataStrategy</a> to populate every DVs with raw the data. </p>
+<h3 id="function-generatecovariants">function generateCovariants<a class="headerlink" href="#function-generatecovariants" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">generateCovariants</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Generates covariants data. </p>
+<p>@Todo Check if all groups are the same size</p>
+<h3 id="function-calculatestatistics">function calculateStatistics<a class="headerlink" href="#function-calculatestatistics" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">calculateStatistics</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Asks each <a href="/doxygen/Classes/classsam_1_1_dependent_variable/">DependentVariable</a> to update its general statistics, e.g., mean, var. </p>
+<h3 id="function-calculatetests">function calculateTests<a class="headerlink" href="#function-calculatetests" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">calculateTests</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Uses the <a href="">TestStrategy</a> to run the statistical test. </p>
+<h3 id="function-calculateeffects">function calculateEffects<a class="headerlink" href="#function-calculateeffects" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">calculateEffects</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Uses the <a href="/doxygen/Classes/classsam_1_1_effect_strategy/">EffectStrategy</a> to calculates the effect sizes. </p>
+<h3 id="function-recalculateeverything">function recalculateEverything<a class="headerlink" href="#function-recalculateeverything" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">recalculateEverything</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Runs <a href="/doxygen/Classes/classsam_1_1_experiment/#function-calculatestatistics">calculateStatistics()</a>, <a href="/doxygen/Classes/classsam_1_1_experiment/#function-calculatetests">calculateTests()</a>, and <a href="/doxygen/Classes/classsam_1_1_experiment/#function-calculateeffects">calculateEffects()</a> in order. </p>
+<h3 id="function-clear">function clear<a class="headerlink" href="#function-clear" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">clear</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Clears the content of the experiment. </p>
+<p><strong>Todo</strong>: I think this is a bad implementation, and I should probably just discard the list of DVs and recreate them for the new <a href="/doxygen/Classes/classsam_1_1_experiment/">Experiment</a>, which is probably safer! Something like <code>dvs_.clear()</code></p>
+<p>It clears every DVs individually, and also sort them back into the correct order.</p>
+<h3 id="function-setteststrategy">function setTestStrategy<a class="headerlink" href="#function-setteststrategy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">setTestStrategy</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">TestStrategy</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ts</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>t</strong> A reference to a Test Strategy instance </li>
+</ul>
+<p>Set or re-set the Test Strategy</p>
+<h3 id="function-setdatastrategy">function setDataStrategy<a class="headerlink" href="#function-setdatastrategy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">setDataStrategy</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">DataStrategy</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ds</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>d</strong> A reference to a Data Strategy instance </li>
+</ul>
+<p>Set or re-set the Data Strategy</p>
+<h3 id="function-seteffectsizeestimator">function setEffectSizeEstimator<a class="headerlink" href="#function-seteffectsizeestimator" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">setEffectSizeEstimator</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">EffectStrategy</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">es</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>es</strong> A reference to an Effect Strategy instance. </li>
+</ul>
+<p>Set or re-set the Effect Strategy</p>
+<h2 id="public-attributes-documentation">Public Attributes Documentation<a class="headerlink" href="#public-attributes-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="variable-simid">variable simid<a class="headerlink" href="#variable-simid" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">simid</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-exprid">variable exprid<a class="headerlink" href="#variable-exprid" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">exprid</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-repid">variable repid<a class="headerlink" href="#variable-repid" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">repid</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-n_covariants">variable n_covariants<a class="headerlink" href="#variable-n_covariants" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">n_covariants</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Indicates the number of covariants. </p>
+<h3 id="variable-covariants">variable covariants<a class="headerlink" href="#variable-covariants" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">arma</span><span class="o">::</span><span class="n">Mat</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">covariants</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-setup">variable setup<a class="headerlink" href="#variable-setup" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">ExperimentSetup</span><span class="w"> </span><span class="n">setup</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>An instance of the <a href="/doxygen/Classes/classsam_1_1_experiment_setup/">ExperimentSetup</a>. All other strategies can access and query it for meta information about the <a href="/doxygen/Classes/classsam_1_1_experiment/">Experiment</a></p>
+<h3 id="variable-data_strategy">variable data_strategy<a class="headerlink" href="#variable-data_strategy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">DataStrategy</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">data_strategy</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-test_strategy">variable test_strategy<a class="headerlink" href="#variable-test_strategy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">TestStrategy</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">test_strategy</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-effect_strategy">variable effect_strategy<a class="headerlink" href="#variable-effect_strategy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">EffectStrategy</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">effect_strategy</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-dvs_">variable dvs_<a class="headerlink" href="#variable-dvs_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">DependentVariable</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">dvs_</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-candidates">variable candidates<a class="headerlink" href="#variable-candidates" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Submission</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">candidates</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>List of all possible candidates from this experiment so far! </p>
+<p><strong>Note</strong>: This is not yet in use! </p>
+<p>This is a list of any dvs that has been flagged as submissions during the lifespan of this experiment</p>
+<hr />
+<p>Updated on 29 June 2021 at 16:13:47 CEST</p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2021-09-18
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Amir Masoud Abdol
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/amirmasoudabdol" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/amirmasoudabdol" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://linkedin.com/amirmasoudabdol" target="_blank" rel="noopener" title="linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["tab", "instant", "header.hide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

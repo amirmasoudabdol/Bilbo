@@ -1,0 +1,1614 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A modular, flexible, and extensible C++ simulation framework for systematically studying Researcher's questionable research practices as well as Journal's questionable review practices.">
+      
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>Introduction - SAM - Science Abstract Model Simulation Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../custom.css">
+    
+    
+  <script async defer data-domain="sam.amirmasoudabdol.name" src="https://stats.sam.amirmasoudabdol.name/js/index.js"></script>
+
+    
+  
+  
+    
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="amirmasoudabdol" />
+  <meta name="twitter:creator" content="amirmasoudabdol" />
+  <meta name="twitter:title" content="SAM - Science Abstract Model Simulation Framework - Introduction" />
+  <meta name="twitter:description" content="A modular, flexible, and extensible C++ simulation framework for systematically studying Researcher's questionable research practices as well as Journal's questionable review practices." />
+  <meta name="twitter:image" content="https://sam.amirmasoudabdol.name/img/twitter_large_image.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SAM - Science Abstract Model Simulation Framework - Introduction" />
+  <meta property="og:description" content="A modular, flexible, and extensible C++ simulation framework for systematically studying Researcher's questionable research practices as well as Journal's questionable review practices." />
+  <meta property="og:url" content="None" />
+  <meta property="og:image" content="https://sam.amirmasoudabdol.name/img/twitter_large_image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#frodo" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SAM - Science Abstract Model Simulation Framework" class="md-header__button md-logo" aria-label="SAM - Science Abstract Model Simulation Framework" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SAM - Science Abstract Model Simulation Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/amirmasoudabdol/sam/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SAM - Science Abstract Model Simulation Framework" class="md-nav__button md-logo" aria-label="SAM - Science Abstract Model Simulation Framework" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    SAM - Science Abstract Model Simulation Framework
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/amirmasoudabdol/sam/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Tutorial
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Design
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Design" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Design
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        Modules
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../execution-flow/" class="md-nav__link">
+        Execution Flow
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-workflow/" class="md-nav__link">
+        Research Workflow
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Configuration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration-file/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Experiment
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Experiment" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../experiment-configurations/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-strategies/" class="md-nav__link">
+        Data Strategies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-strategies/" class="md-nav__link">
+        Test Strategies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../effect-strategies/" class="md-nav__link">
+        Effect Strategies
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        Researcher
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Researcher" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Researcher
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../researcher-configurations/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../decision-strategies/" class="md-nav__link">
+        Decision Strategies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_3" type="checkbox" id="__nav_4_3_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3_3">
+        Hacking Strategies
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Hacking Strategies" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Hacking Strategies
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking-strategies/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking-behaviors/" class="md-nav__link">
+        Hacking Behaviors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking-strategies/selective-reporting/" class="md-nav__link">
+        Selective Reporting
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking-strategies/optional-stopping/" class="md-nav__link">
+        Optional Stopping
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking-strategies/outliers-removal/" class="md-nav__link">
+        Outliers Removal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking-strategies/subjective-outliers-removal/" class="md-nav__link">
+        Subjective Outliers Removal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking-strategies/falsifying-data/" class="md-nav__link">
+        Falsifying Data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking-strategies/fabricating-data/" class="md-nav__link">
+        Fabricating Data
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      <label class="md-nav__link" for="__nav_4_4">
+        Journal
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Journal" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Journal
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../journal-configurations/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../selection-strategies/" class="md-nav__link">
+        Selection Strategies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meta-analyses/" class="md-nav__link">
+        Meta Analysis
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation-configurations/" class="md-nav__link">
+        Simulation
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Frodo
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Frodo" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Frodo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Frodo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Frodo
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirement" class="md-nav__link">
+    Requirement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-frodo" class="md-nav__link">
+    Getting Started with Frodo
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started with Frodo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-commands" class="md-nav__link">
+    Primary Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Primary Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-prepare-command" class="md-nav__link">
+    The prepare command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-load-command-and-templates-folder" class="md-nav__link">
+    The load Command and templates/ folder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-frodo" class="md-nav__link">
+    Project Frodo
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Frodo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-project-frodo" class="md-nav__link">
+    Using the Project Frodo
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Project Frodo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cleaning-up-your-project" class="md-nav__link">
+    Cleaning Up Your Project
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-simulations-in-parallel" class="md-nav__link">
+    Running the Simulations in Parallel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-processing" class="md-nav__link">
+    Post Processing
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doxygen/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doxygen/Modules/" class="md-nav__link">
+        Modules
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doxygen/Classes/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Examples
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Examples" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studies/studies/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studies/selection-variation/" class="md-nav__link">
+        Selection Variation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studies/sample-size-variation/" class="md-nav__link">
+        Sample Size Variation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studies/optional-stopping-variation/" class="md-nav__link">
+        Optional Stopping Variation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_5" type="checkbox" id="__nav_7_5" >
+      
+      <label class="md-nav__link" for="__nav_7_5">
+        Studies / Replications
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Studies / Replications" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Studies / Replications
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/bakker_et_al_2012/" class="md-nav__link">
+        Bakker et al., 2012
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/bakker_et_al_2014/" class="md-nav__link">
+        Bakker et al., 2014
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/esther_first_year/" class="md-nav__link">
+        Maassen et al., 2016
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/friese_et_al_2020/" class="md-nav__link">
+        Friese et al., 2020
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirement" class="md-nav__link">
+    Requirement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-frodo" class="md-nav__link">
+    Getting Started with Frodo
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started with Frodo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-commands" class="md-nav__link">
+    Primary Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Primary Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-prepare-command" class="md-nav__link">
+    The prepare command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-load-command-and-templates-folder" class="md-nav__link">
+    The load Command and templates/ folder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-frodo" class="md-nav__link">
+    Project Frodo
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Frodo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-project-frodo" class="md-nav__link">
+    Using the Project Frodo
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Project Frodo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cleaning-up-your-project" class="md-nav__link">
+    Cleaning Up Your Project
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-simulations-in-parallel" class="md-nav__link">
+    Running the Simulations in Parallel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-processing" class="md-nav__link">
+    Post Processing
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/amirmasoudabdol/sam/edit/master/docs/frodo/frodo.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="frodo">Frodo<a class="headerlink" href="#frodo" title="Permanent link">&para;</a></h1>
+<p><img src="/img/frodo-logo.png" width="120" align="right"/></p>
+<p>Frodo is a collection of scripts that facilitates the process of creating, managing and running SAM projects. With Frodo, you can create, remove, or archive your projects. In addition, when within your project, Frodo offers several useful tools to simplify the process of configuring and running your project.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Frodo has developed as an internal tool to help us test and develop SAM with greater speed and precision. As the project grew, we realized that some of the tools might be useful to other developers too; so, we decided to package and release it as well.</p>
+</div>
+<h2 id="requirement">Requirement<a class="headerlink" href="#requirement" title="Permanent link">&para;</a></h2>
+<p>Frodo is mainly written in <a href="https://www.gnu.org/software/make/">GNU Make</a> and it should be available on most operation systems by default. On Windows, you may either install <a href="https://www.cygwin.com">Cygwin</a> or if you are running newer version of Windows, e.g., Windows 10, you may install the <a href="https://docs.microsoft.com/en-us/windows/wsl/">Windows Subsystem for Linux</a>. </p>
+<p>Alternatively, if you find the method above tedious, you may opt for installing the <a href="https://www.anaconda.com">Anaconda</a> package to get most of the tools needed to run Frodo and its dependent scripts. This is a valid alternative on all three mainstream operation systems if you do not currently have a development environment ready, or do not know how to set it up correctly. Often installing Anaconda is enough to get a proper and well-functioning scientific development environment.</p>
+<h2 id="getting-started-with-frodo">Getting Started with Frodo<a class="headerlink" href="#getting-started-with-frodo" title="Permanent link">&para;</a></h2>
+<p>After successfully preparing your system, you can download Frodo from GitHub using:</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/amirmasoudabdol/Frodo.git
+</code></pre></div>
+<p>You may now <code>cd</code> into the Frodo folder, and simply type <code>make</code> on the command line to run Frodo. This should show some helpful information about available commands and parameters.</p>
+<div class="highlight"><pre><span></span><code>This is Frodo, a handy toolset for preparing a new project using SAM.
+In the process of &#39;prepare&#39;-ing a new project, this Makefile produces
+several template files for configuring and running a SAM project on
+your local machine or on Lisa cluster.
+
+Make sure that this Makefile knows where SAM and other
+dependencies are located. You can set their path through the
+parameters defined in line 9 – 12 of the Makefile.
+
+Usage:
+  make &lt;target&gt; parameter=value
+  help             Display this help
+
+  [Parameters]
+  project          Project name
+  path             Project path, defaults to ./projects/
+
+-----------------------------------------------------------
+
+Build
+  prepare          Create a new project by running &lt;config&gt; and &lt;sam&gt;
+  config           Building necessary files and folders for a new project
+  sam              Build SAMrun executable. Note: This will update SAM source directory and rebuild it
+  compress         Zip everything in the &lt;project&gt;
+
+Cleanup
+  clean            Remove all output files, i.e., configs, outputs, logs, jobs
+  veryclean        Remove all project files
+  remove           Delete the entire project directory
+
+Example Usage:
+    make prepare project=apollo path=HOME/Projects/
+    make remove  project=apollo
+</code></pre></div>
+<p>Start by preparing a project, and observing the output, e.g., <code>make prepare project=apollo</code>. This creates a folder in the <code>projects/</code> folder named <code>apollo</code>, and populates it with files and scripts necessary for running a SAM simulation. Notice the messages produced by Frodo during this process.</p>
+<div class="admonition example">
+<p class="admonition-title">Sample output of <code>make prepare project=apollo</code></p>
+<p>An example output of Frodo's <code>prepare</code> command:</p>
+<div class="highlight"><pre><span></span><code>&gt; Preparing apollo...
+&gt; Prepare a copy of SAM for apollo...
+&gt; Preparing project files...
+&gt; Copying SAM...
+&gt; Configuring SAM...
+  ... some CMake messages ...
+&gt; Building SAM...
+  ... some CMake messages ...
+  [100%] Built target SAMrun
+&gt; Successfully prepared and saved &quot;apollo&quot; in &quot;/projects&quot; ...
+&gt; `cd` into the project folder and start with the `make` command ...
+</code></pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Frodo stores several template scripts in the <code>scripts/</code> folder, and it uses them to configure your projects correctly. It's recommended not to mess with these files unless you know what you are doing!</p>
+</div>
+<h3 id="primary-commands">Primary Commands<a class="headerlink" href="#primary-commands" title="Permanent link">&para;</a></h3>
+<p>While Frodo offers a range of commands, there are a few important ones that you should know about:</p>
+<h4 id="the-prepare-command">The <code>prepare</code> command<a class="headerlink" href="#the-prepare-command" title="Permanent link">&para;</a></h4>
+<p>Use the prepare command to create a new project, e.g., <code>make prepare project=your-project-name</code>. After using the <code>prepare</code> command, Frodo creates a new directory at <code>projects/your-project-name</code> and fill it with all the necessary files. Two files are particularity important:</p>
+<ul>
+<li><code>your-project-name_prepare_config_files.py</code> is a project-specific script that describe the specification of your parameters space. You can find and modify this file at <code>projects/your-project-name/scripts/your-project-name_prepare_config_files.py</code></li>
+<li><code>your-project-name_post_processing.R</code> is another project-specific script that is being used by Frodo to perform post-processing analysis on SAM's output. You can find and modify this file at <code>projects/your-project-name/scripts/your-project-name_prepare_config_files.py</code></li>
+</ul>
+<p><a href="#project-frodo"><em>Project Frodo</em></a> will cover the full list of these files and folders.</p>
+<h4 id="the-load-command-and-templates-folder">The <code>load</code> Command and <code>templates/</code> folder<a class="headerlink" href="#the-load-command-and-templates-folder" title="Permanent link">&para;</a></h4>
+<p>With the <code>load</code> command, you are telling Frodo that you like to load your projects with some of your customized script files. </p>
+<p>The <code>templates/</code> folder is where Frodo looks for project-specific files and templates. Two of the most important template files that you should prepare for your projects are: <code>your-project-name_prepare_config_files.py</code> and <code>your-project-name_post_processing.R</code>. </p>
+<p>If you have created and placed these files for your projects in the <code>templates/</code> folder, running <code>make load project=your-project-name</code> will replace the default scripts with these two user-defined templates.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>You may use the template folder for quickly setting up new projects. The general procedure looks something like this:</p>
+<ul>
+<li><code>make prepare project=discovery</code> to create a new project</li>
+<li>Create two project-specific template files, e.g., <code>discovery_prepare_config_files.py</code> and <code>discovery_post_processing.R</code></li>
+<li><code>make load project=discovery</code> </li>
+<li><code>cd projects/discovery</code> to go into your project folder</li>
+<li><code>make parameters</code> to generate new configuration files based on the <code>discovery_prepare_config_files.py</code></li>
+</ul>
+</div>
+<h2 id="project-frodo">Project Frodo<a class="headerlink" href="#project-frodo" title="Permanent link">&para;</a></h2>
+<p>After preparing a project, you can head into the <code>projects/your-project-name</code>, and observe all the files created by Frodo for your projects. </p>
+<ul>
+<li><strong><code>Makefile</code></strong>, this is the <em>Project Frodo</em>!</li>
+<li><strong><code>SAMrun</code></strong>, an instance of SAM program that you can use to run your simulation. Run <code>./SAMrun --help</code> for more info.</li>
+<li><strong><code>configfilenames.pool</code></strong>, a list of all the configuration files to run using SAM.</li>
+<li><strong><code>SAM/</code></strong>, a folder containing SAM's code and its dependencies.</li>
+<li><strong><code>configs/</code></strong>, a folder containing all the configuration files.</li>
+<li><strong><code>dbs/</code></strong>, a folder containing databases generated by Frodo.</li>
+<li><strong><code>jobs/</code></strong>, a folder containing job scripts for running SAM on SURFSara's Lisa Cluster.</li>
+<li><strong><code>logs/</code></strong>, a folder containing log files produced by SAM.</li>
+<li><strong><code>outputs/</code></strong>, a folder containing output files produced by SAM.</li>
+<li><strong><code>scripts/</code></strong>, a folder containing scripts used by Frodo to run, configure, and summarize SAM's results.</li>
+</ul>
+<p>As you can see, each file and folder has its purpose and unless you know what you are doing you should not mess with them. The <code>SAMrun</code> executable is the most important item of this list. You can either use this file manually to run your simulation, <code>./SAMrun --config=your-config-file.json</code>, or use the <em>Project Frodo</em> to run a batch of configuration files.</p>
+<h3 id="using-the-project-frodo">Using the Project Frodo<a class="headerlink" href="#using-the-project-frodo" title="Permanent link">&para;</a></h3>
+<p>You can run the <em>Project Frodo</em> as before by running the <code>make</code> command inside your project folder. Executing the <code>make</code> command again shows a list of commands and parameters offered by Project Frodo.</p>
+<div class="highlight"><pre><span></span><code>This is Project Frodo, you can control your project using this Makefile. There are several commands are available for running your simulation locally or on a
+cluster. It&#39;s also possible to run the simulation sequentially or in
+parallel on your local machine.
+
+Usage:
+  make &lt;target&gt;
+  help             Display this help
+
+[Paramters]
+  using            Path to a new parameter generator
+  name             The name of the archive
+
+--------------------------------------------------------------
+
+Build
+  sam-build        Rebuild the binaries, run this if you&#39;ve modified the code
+  parameters       Preparing config files for SAM
+
+Post-processing
+  csv              Create a set of files `*_prepared.csv` by adding all keys/values to them. Use this when the database is too big
+  stack            Stack several CSV files into one CSV file
+  stacker          Faster version of stacker. Use this for lager data files
+  database         Aggregate output files into a SQLite database
+  summary          Runinng the `post-processing.R` script on every file in output/ folder
+
+Run
+  run-seq-local    Running the simulation sequentially on the local machine
+  run-par-local    Running the simulation in parallel on the local machine
+  run-par-lisa     Running the simulation in parallel on the Lisa cluster
+  run-par-lisa-batch  Running the simulation in parallel on the Lisa cluster
+
+Packaging
+  archive          Archiving the entire project directory to ../marjan_2012_all_test_archive/archive/CUREENT_DATE_TIME or ../marjan_2012_all_test_analysis/archive/&lt;name&gt;
+  compress         Compress the outputs/*, logs/* and configs/*
+
+Cleanup
+  clean            Remove most project specific files, configs, jobs, logs, etc.
+  veryclean        Remove all project files, including outputs
+
+Example Usage:
+    make parameters using=~/projects_config/2012_project.py
+    make run-seq-local; make archive name=Feb_5.zip
+</code></pre></div>
+<p>Here, Frodo turns into a project-specific helper tool and helps you configure and run your simulation, as well as exporting and archiving your results. In order to run a big simulation with lots of configuration files using the Project Frodo, you first need to create a list of configuration files using <code>parameters</code>, and then execute SAM on every one of them using the <code>run-seq-local</code> command.</p>
+<div class="highlight"><pre><span></span><code>make parameters
+make run-seq-local
+</code></pre></div>
+<ul>
+<li>The <code>make parameters</code> first runs the <code>your-project-name_prepare_config_files.py</code> file to generates all your configuration files and store them into the <code>configs/</code> folder.</li>
+<li>In addition, Frodo stores a list of all the generated configuration files into the <code>configfilenames.pool</code> file.</li>
+<li>After successfully running the <code>make parameters</code>, you can run your simulation on every files using <code>make run-seq-local</code>, or by manually running SAM on any of the available configuration files using <code>./SAMrun --config=configs/your-selected-config-file.json</code>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Frodo assumes that you have already prepared the <code>your-project-name_prepare_config_files.py</code> file beforehand. If you have not, you may head into the <code>scripts/</code> folder, modify it based on your preferences and head back and run the <code>make parameters</code> again.</p>
+</div>
+<p>If you have already placed a customized version of the <code>your-project-name_prepare_config_files.py</code> script in the <code>templates/</code> folder, then you may simply <code>load</code> it to the project and speed up your process. </p>
+<div class="highlight"><pre><span></span><code>make prepare <span class="nv">project</span><span class="o">=</span>discovery
+make load <span class="nv">project</span><span class="o">=</span>discovery
+<span class="nb">cd</span> projects/discovery
+make parameters
+make run-seq-local
+</code></pre></div>
+<p>This is specially a useful approach if you are planning to iterate over your design. In this case, you can run your simulation, process your results, then modify the <code>your-project-name_prepare_config_files.py</code> file, and head back to your project to repeat the process with new set of parameters and simulation specification.</p>
+<h4 id="cleaning-up-your-project">Cleaning Up Your Project<a class="headerlink" href="#cleaning-up-your-project" title="Permanent link">&para;</a></h4>
+<p>You should be aware that after each run, most of the folders are filled with your project files, e.g., <code>configs/</code>, <code>outputs/</code>, <code>logs/</code>. If you plan to re-run your project, it is recommended to clean up the project before running Frodo/SAM again. This guarantees that your output files are corresponding to your configuration files, and no file from the previous run is lurking around in your project folder.</p>
+<ul>
+<li><code>make clean</code> command removes all your project specific files but leaves the <code>outputs/</code> files intact.</li>
+<li><code>make veryclean</code> command removes all your project files, <strong>including your <code>outputs/</code> files.</strong></li>
+</ul>
+<h3 id="running-the-simulations-in-parallel">Running the Simulations in Parallel<a class="headerlink" href="#running-the-simulations-in-parallel" title="Permanent link">&para;</a></h3>
+<p>As you may have noticed, Frodo offers several run commands. The second part of the command indicates whether the simulations will be run sequentially; or they can run in parallel (e.g., 8 simulation at a time). </p>
+<ul>
+<li><code>run-seq-local</code>, runs </li>
+<li><code>run-par-local</code></li>
+<li><code>run-par-lisa</code></li>
+</ul>
+<p>In addition, if you are using the SURFsara Lisa cluster, you may use the last command to fully take advantage of the cluster system and distribute your simulation across the Lisa cluster. This command automatically creates a temporary folder on Lisa, request several nodes, distribute and run SAM across the cluster and finally collects all the output data and stores them into the <code>outputs/</code> folder.</p>
+<h2 id="post-processing">Post Processing<a class="headerlink" href="#post-processing" title="Permanent link">&para;</a></h2>
+<p>After running your simulation, Frodo stores all of the output files generated by SAM into the <code>outputs/</code> folder. At this stage, you may start extracting the output files and analyze your simulation data. While you can simply copy the files and process them using R, or any other programming language. The <em>Project Frodo</em> offers a few utilities to make your life a bit easier.</p>
+<ul>
+<li><code>csv</code></li>
+<li><code>stack</code></li>
+<li><code>stacker</code></li>
+<li><code>database</code></li>
+<li><code>summary</code></li>
+</ul>
+<p>The <code>csv</code> command is maybe one of the most useful commands in Frodo. It essentially combines your configuration file with your outputs. This is very useful for when you are working with a large grid of parameters. For instance, if you are running a re-running your simulation setup for 10 different values of true effect size, μ, you will at least have 10 output files. While SAM names your output files similar to your config files, you simulation parameters are not listed in the output files. The <code>csv</code> command basically merge each configuration file with its appropriate output file. This is is very handy especially when you want to group your output files in R.</p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2021-09-18
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../simulation-configurations/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Simulation" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Simulation
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../doxygen/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Introduction
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Amir Masoud Abdol
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/amirmasoudabdol" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/amirmasoudabdol" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://linkedin.com/amirmasoudabdol" target="_blank" rel="noopener" title="linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tab", "instant", "header.hide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
