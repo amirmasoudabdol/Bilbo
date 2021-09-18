@@ -2,6 +2,10 @@
 title: Introduction
 ---
 
+!!! attention
+	All examples and studies in this section are performed with slightly older version of SAM, and they were part of series of tests and experiments that we ran for validation and exploration.
+	
+
 # Experimental Studies
 
 In this section, we present several experimental studies, each targeting different aspects of conducting research. We start by investigating the effects of [Selective Reporting](selective-reporting.md) on probability of finding significant results, followed by an experiment showcasing the effects of [Sample Size Variation](sample-size-variation.md) on known metrics of quality and bias. 

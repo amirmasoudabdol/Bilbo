@@ -2,6 +2,9 @@
 title: Bakker et al., 2012
 ---
 
+!!! attention
+    Please check out Abdol et al., 2021[@Abdol_2021] for the updated version of this project. In addition, you can find all the codes, and analysis on [GitHub](https://github.com/amirmasoudabdol/bakker-et-al-2012-reproduction-using-sam).
+
 # The Rules of the Game Called Psychological Science[@Bakker_2012]
 
 In this report, we will attempt to discuss the replication and reproduction of the simulation study conducted by Baker et al., 2012[@Bakker_2012]. The simulation is designed to recreate a common routine of applying a set of questionable research practices, and consequently evaluate their effects on the observed effect size bias, and chance of finding significance results.

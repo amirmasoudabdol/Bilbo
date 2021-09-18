@@ -2,7 +2,7 @@
 title: Introduction
 ---
 
-!!! note
+!!! attention
 	The contents of this documentation might slightly differ from the information published by Abdol et al., 2021 [@Abdol_2021]. For general introduction to SAM, please refer to the main publication while we sync the two sources.
 
 # Design
